@@ -54,6 +54,7 @@ namespace Project
             this.TB_MatKhau.Name = "TB_MatKhau";
             this.TB_MatKhau.Size = new System.Drawing.Size(245, 22);
             this.TB_MatKhau.TabIndex = 0;
+            this.TB_MatKhau.UseSystemPasswordChar = true;
             // 
             // panel1
             // 
@@ -94,7 +95,7 @@ namespace Project
             this.label4.ForeColor = System.Drawing.Color.DimGray;
             this.label4.Location = new System.Drawing.Point(267, 311);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 16);
+            this.label4.Size = new System.Drawing.Size(87, 15);
             this.label4.TabIndex = 10;
             this.label4.Text = "Quên mật khẩu";
             // 
@@ -112,11 +113,11 @@ namespace Project
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("VNI-Auchon", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(117, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(228, 41);
+            this.label3.Size = new System.Drawing.Size(253, 38);
             this.label3.TabIndex = 8;
             this.label3.Text = "TasMana Ver.0";
             // 
@@ -169,10 +170,11 @@ namespace Project
             this.VB_HienMatKhau.ForeColor = System.Drawing.Color.DimGray;
             this.VB_HienMatKhau.Location = new System.Drawing.Point(116, 213);
             this.VB_HienMatKhau.Name = "VB_HienMatKhau";
-            this.VB_HienMatKhau.Size = new System.Drawing.Size(111, 20);
+            this.VB_HienMatKhau.Size = new System.Drawing.Size(105, 19);
             this.VB_HienMatKhau.TabIndex = 3;
             this.VB_HienMatKhau.Text = "Hiện mật khẩu";
             this.VB_HienMatKhau.UseVisualStyleBackColor = true;
+            this.VB_HienMatKhau.CheckedChanged += new System.EventHandler(this.VB_HienMatKhau_CheckedChanged);
             // 
             // TB_TaiKhoan
             // 
