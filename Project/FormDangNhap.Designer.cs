@@ -162,7 +162,6 @@ namespace Project
             this.label1.Size = new System.Drawing.Size(97, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "Mã người dùng";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // VB_HienMatKhau
             // 
