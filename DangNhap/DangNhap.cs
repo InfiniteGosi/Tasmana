@@ -8,23 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Project
+namespace DangNhap
 {
-    public partial class Exit : Form
+    public partial class DangNhap : Form
     {
-        public Exit()
+        public DangNhap()
         {
             InitializeComponent();
         }
-
-        private void BT_KetThuc_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void BT_Huy_Click(object sender, EventArgs e)
+        private void btn_close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BT_DangNhap_Click(object sender, EventArgs e)
+        {
+            Home f = new Home();
+            f.Show();
         }
     }
 }
