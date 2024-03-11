@@ -84,7 +84,8 @@ namespace DangNhap
             // 
             // BT_DangNhap
             // 
-            this.BT_DangNhap.AnimationHoverSpeed = 0.07F;
+            this.BT_DangNhap.Animated = true;
+            this.BT_DangNhap.AnimationHoverSpeed = 0.5F;
             this.BT_DangNhap.AnimationSpeed = 0.03F;
             this.BT_DangNhap.BaseColor = System.Drawing.Color.Transparent;
             this.BT_DangNhap.BorderColor = System.Drawing.Color.DarkGray;
@@ -315,7 +316,7 @@ namespace DangNhap
             this.btn_close.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
-            // Form1
+            // DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -325,7 +326,7 @@ namespace DangNhap
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "DangNhap";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
