@@ -40,7 +40,8 @@ namespace DangNhap
             // 
             // btn_compose
             // 
-            this.btn_compose.AnimationHoverSpeed = 0.07F;
+            this.btn_compose.Animated = true;
+            this.btn_compose.AnimationHoverSpeed = 0.5F;
             this.btn_compose.AnimationSpeed = 0.03F;
             this.btn_compose.BackColor = System.Drawing.Color.Transparent;
             this.btn_compose.BaseColor1 = System.Drawing.Color.WhiteSmoke;
@@ -68,7 +69,8 @@ namespace DangNhap
             // 
             // btn_inbox
             // 
-            this.btn_inbox.AnimationHoverSpeed = 0.07F;
+            this.btn_inbox.Animated = true;
+            this.btn_inbox.AnimationHoverSpeed = 0.5F;
             this.btn_inbox.AnimationSpeed = 0.03F;
             this.btn_inbox.BackColor = System.Drawing.Color.Transparent;
             this.btn_inbox.BaseColor = System.Drawing.Color.Transparent;
@@ -84,7 +86,7 @@ namespace DangNhap
             this.btn_inbox.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn_inbox.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_inbox.OnHoverForeColor = System.Drawing.Color.Black;
-            this.btn_inbox.OnHoverImage = null;
+            this.btn_inbox.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btn_inbox.OnHoverImage")));
             this.btn_inbox.OnPressedColor = System.Drawing.Color.Black;
             this.btn_inbox.Radius = 10;
             this.btn_inbox.Size = new System.Drawing.Size(160, 42);
@@ -93,7 +95,8 @@ namespace DangNhap
             // 
             // btn_sent
             // 
-            this.btn_sent.AnimationHoverSpeed = 0.07F;
+            this.btn_sent.Animated = true;
+            this.btn_sent.AnimationHoverSpeed = 0.5F;
             this.btn_sent.AnimationSpeed = 0.03F;
             this.btn_sent.BackColor = System.Drawing.Color.Transparent;
             this.btn_sent.BaseColor = System.Drawing.Color.Transparent;
@@ -109,7 +112,7 @@ namespace DangNhap
             this.btn_sent.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn_sent.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_sent.OnHoverForeColor = System.Drawing.Color.Black;
-            this.btn_sent.OnHoverImage = null;
+            this.btn_sent.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btn_sent.OnHoverImage")));
             this.btn_sent.OnPressedColor = System.Drawing.Color.Black;
             this.btn_sent.Radius = 10;
             this.btn_sent.Size = new System.Drawing.Size(160, 42);

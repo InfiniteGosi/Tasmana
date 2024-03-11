@@ -55,5 +55,11 @@ namespace DangNhap
         {
             OpenChildForm(new CongViecChung());
         }
+
+        private void btn_xem_Click(object sender, EventArgs e)
+        {
+            HeThongBanDo htbd = new HeThongBanDo();
+            htbd.Show();
+        }
     }
 }
