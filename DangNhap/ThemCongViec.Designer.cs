@@ -47,6 +47,7 @@ namespace DangNhap
             this.pn_line = new Guna.UI.WinForms.GunaGradientPanel();
             this.rbtn_bophan = new System.Windows.Forms.RadioButton();
             this.rbtn_toanct = new System.Windows.Forms.RadioButton();
+            this.btn_thoat = new Guna.UI.WinForms.GunaGradientButton();
             this.SuspendLayout();
             // 
             // lb_mnv
@@ -183,7 +184,8 @@ namespace DangNhap
             // 
             // btn_ok
             // 
-            this.btn_ok.AnimationHoverSpeed = 0.07F;
+            this.btn_ok.Animated = true;
+            this.btn_ok.AnimationHoverSpeed = 0.5F;
             this.btn_ok.AnimationSpeed = 0.03F;
             this.btn_ok.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn_ok.BaseColor2 = System.Drawing.Color.Gray;
@@ -210,7 +212,8 @@ namespace DangNhap
             // 
             // btn_huy
             // 
-            this.btn_huy.AnimationHoverSpeed = 0.07F;
+            this.btn_huy.Animated = true;
+            this.btn_huy.AnimationHoverSpeed = 0.5F;
             this.btn_huy.AnimationSpeed = 0.03F;
             this.btn_huy.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn_huy.BaseColor2 = System.Drawing.Color.Gray;
@@ -275,12 +278,42 @@ namespace DangNhap
             this.rbtn_toanct.Text = "Toàn công ty";
             this.rbtn_toanct.UseVisualStyleBackColor = true;
             // 
+            // btn_thoat
+            // 
+            this.btn_thoat.Animated = true;
+            this.btn_thoat.AnimationHoverSpeed = 0.5F;
+            this.btn_thoat.AnimationSpeed = 0.03F;
+            this.btn_thoat.BaseColor1 = System.Drawing.Color.Red;
+            this.btn_thoat.BaseColor2 = System.Drawing.Color.Maroon;
+            this.btn_thoat.BorderColor = System.Drawing.Color.Maroon;
+            this.btn_thoat.BorderSize = 3;
+            this.btn_thoat.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_thoat.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_thoat.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_thoat.ForeColor = System.Drawing.Color.White;
+            this.btn_thoat.Image = null;
+            this.btn_thoat.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_thoat.Location = new System.Drawing.Point(8, 580);
+            this.btn_thoat.Name = "btn_thoat";
+            this.btn_thoat.OnHoverBaseColor1 = System.Drawing.Color.Silver;
+            this.btn_thoat.OnHoverBaseColor2 = System.Drawing.Color.DimGray;
+            this.btn_thoat.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_thoat.OnHoverForeColor = System.Drawing.Color.Black;
+            this.btn_thoat.OnHoverImage = null;
+            this.btn_thoat.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_thoat.Size = new System.Drawing.Size(60, 33);
+            this.btn_thoat.TabIndex = 18;
+            this.btn_thoat.Text = "Thoát";
+            this.btn_thoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
+            // 
             // ThemCongViec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(463, 625);
+            this.Controls.Add(this.btn_thoat);
             this.Controls.Add(this.rbtn_toanct);
             this.Controls.Add(this.rbtn_bophan);
             this.Controls.Add(this.pn_line);
@@ -298,6 +331,7 @@ namespace DangNhap
             this.Controls.Add(this.lb_tennv);
             this.Controls.Add(this.txb_mnv);
             this.Controls.Add(this.lb_mnv);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ThemCongViec";
             this.Text = "ThemCongViec";
             this.ResumeLayout(false);
@@ -324,5 +358,6 @@ namespace DangNhap
         private Guna.UI.WinForms.GunaGradientPanel pn_line;
         private System.Windows.Forms.RadioButton rbtn_bophan;
         private System.Windows.Forms.RadioButton rbtn_toanct;
+        private Guna.UI.WinForms.GunaGradientButton btn_thoat;
     }
 }
