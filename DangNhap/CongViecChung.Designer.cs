@@ -42,6 +42,7 @@ namespace DangNhap
             this.btn_themcv = new Guna.UI.WinForms.GunaGradientButton();
             this.tS = new System.Windows.Forms.ToolStrip();
             this.space = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_in = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_download = new System.Windows.Forms.ToolStripButton();
@@ -51,7 +52,6 @@ namespace DangNhap
             this.toànBộToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phòngBanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhómToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.pn_hienthicv.SuspendLayout();
             this.tS.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -255,7 +255,7 @@ namespace DangNhap
             this.btn_themcv.ForeColor = System.Drawing.Color.Black;
             this.btn_themcv.Image = ((System.Drawing.Image)(resources.GetObject("btn_themcv.Image")));
             this.btn_themcv.ImageSize = new System.Drawing.Size(10, 10);
-            this.btn_themcv.Location = new System.Drawing.Point(16, 25);
+            this.btn_themcv.Location = new System.Drawing.Point(1217, 21);
             this.btn_themcv.Name = "btn_themcv";
             this.btn_themcv.OnHoverBaseColor1 = System.Drawing.Color.Lime;
             this.btn_themcv.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -294,6 +294,11 @@ namespace DangNhap
             this.space.Size = new System.Drawing.Size(37, 24);
             this.space.Text = "       ";
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
+            // 
             // btn_in
             // 
             this.btn_in.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -331,7 +336,7 @@ namespace DangNhap
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(1247, 25);
+            this.toolStrip1.Location = new System.Drawing.Point(19, 25);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(70, 25);
             this.toolStrip1.TabIndex = 10;
@@ -358,7 +363,7 @@ namespace DangNhap
             this.toànBộToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toànBộToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.toànBộToolStripMenuItem.Name = "toànBộToolStripMenuItem";
-            this.toànBộToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.toànBộToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
             this.toànBộToolStripMenuItem.Text = "Toàn bộ";
             // 
             // phòngBanToolStripMenuItem
@@ -367,7 +372,7 @@ namespace DangNhap
             this.phòngBanToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phòngBanToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.phòngBanToolStripMenuItem.Name = "phòngBanToolStripMenuItem";
-            this.phòngBanToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.phòngBanToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
             this.phòngBanToolStripMenuItem.Text = "Phòng ban";
             // 
             // nhómToolStripMenuItem
@@ -376,13 +381,8 @@ namespace DangNhap
             this.nhómToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nhómToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.nhómToolStripMenuItem.Name = "nhómToolStripMenuItem";
-            this.nhómToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.nhómToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
             this.nhómToolStripMenuItem.Text = "Nhóm";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // CongViecChung
             // 

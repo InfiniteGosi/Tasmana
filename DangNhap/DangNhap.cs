@@ -57,5 +57,10 @@ namespace DangNhap
                 TB_MatKhau.UseSystemPasswordChar = true;
             }
         }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
