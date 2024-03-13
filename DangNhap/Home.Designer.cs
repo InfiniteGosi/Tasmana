@@ -46,7 +46,12 @@ namespace DangNhap
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.pic_avt = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.pn_main = new Guna.UI.WinForms.GunaPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lb_cd = new System.Windows.Forms.Label();
+            this.gunaPanel3 = new Guna.UI.WinForms.GunaPanel();
+            this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
             this.pn_right = new Guna.UI.WinForms.GunaGradientPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pn_frame1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pn_pic = new Guna.UI.WinForms.GunaPanel();
@@ -61,11 +66,6 @@ namespace DangNhap
             this.tas = new Guna.UI.WinForms.GunaElipse(this.components);
             this.frame1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.right = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lb_cd = new System.Windows.Forms.Label();
-            this.gunaPanel3 = new Guna.UI.WinForms.GunaPanel();
-            this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -75,10 +75,10 @@ namespace DangNhap
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_avt)).BeginInit();
             this.pn_main.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.pn_right.SuspendLayout();
             this.pn_frame1.SuspendLayout();
             this.pn_nentas.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaPanel1
@@ -319,6 +319,66 @@ namespace DangNhap
             this.pn_main.Size = new System.Drawing.Size(1332, 695);
             this.pn_main.TabIndex = 2;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.panel2.Controls.Add(this.lb_cd);
+            this.panel2.Controls.Add(this.gunaPanel3);
+            this.panel2.Controls.Add(this.gunaGradientButton1);
+            this.panel2.Location = new System.Drawing.Point(32, 419);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(239, 68);
+            this.panel2.TabIndex = 23;
+            // 
+            // lb_cd
+            // 
+            this.lb_cd.AutoSize = true;
+            this.lb_cd.BackColor = System.Drawing.Color.Transparent;
+            this.lb_cd.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_cd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_cd.Location = new System.Drawing.Point(69, 24);
+            this.lb_cd.Name = "lb_cd";
+            this.lb_cd.Size = new System.Drawing.Size(64, 19);
+            this.lb_cd.TabIndex = 16;
+            this.lb_cd.Text = "Cư Dân";
+            // 
+            // gunaPanel3
+            // 
+            this.gunaPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaPanel3.BackgroundImage")));
+            this.gunaPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaPanel3.Location = new System.Drawing.Point(3, 3);
+            this.gunaPanel3.Name = "gunaPanel3";
+            this.gunaPanel3.Size = new System.Drawing.Size(60, 60);
+            this.gunaPanel3.TabIndex = 0;
+            // 
+            // gunaGradientButton1
+            // 
+            this.gunaGradientButton1.Animated = true;
+            this.gunaGradientButton1.AnimationHoverSpeed = 1F;
+            this.gunaGradientButton1.AnimationSpeed = 1F;
+            this.gunaGradientButton1.BaseColor1 = System.Drawing.Color.Silver;
+            this.gunaGradientButton1.BaseColor2 = System.Drawing.Color.DimGray;
+            this.gunaGradientButton1.BorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton1.BorderSize = 2;
+            this.gunaGradientButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaGradientButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaGradientButton1.Font = new System.Drawing.Font("GMV DIN Pro Cond", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaGradientButton1.ForeColor = System.Drawing.Color.Black;
+            this.gunaGradientButton1.Image = null;
+            this.gunaGradientButton1.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaGradientButton1.Location = new System.Drawing.Point(169, 39);
+            this.gunaGradientButton1.Name = "gunaGradientButton1";
+            this.gunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.Silver;
+            this.gunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.Silver;
+            this.gunaGradientButton1.OnHoverBorderColor = System.Drawing.Color.White;
+            this.gunaGradientButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaGradientButton1.OnHoverImage = null;
+            this.gunaGradientButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaGradientButton1.Size = new System.Drawing.Size(65, 25);
+            this.gunaGradientButton1.TabIndex = 15;
+            this.gunaGradientButton1.Text = "Xem ngay";
+            this.gunaGradientButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // pn_right
             // 
             this.pn_right.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -335,6 +395,13 @@ namespace DangNhap
             this.pn_right.Size = new System.Drawing.Size(242, 672);
             this.pn_right.TabIndex = 23;
             this.pn_right.Text = "right";
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(6, 59);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(230, 230);
+            this.panel1.TabIndex = 0;
             // 
             // pn_frame1
             // 
@@ -446,7 +513,7 @@ namespace DangNhap
             this.lb_tasmana.BackColor = System.Drawing.Color.Transparent;
             this.lb_tasmana.Font = new System.Drawing.Font("Calisto MT", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_tasmana.ForeColor = System.Drawing.Color.White;
-            this.lb_tasmana.Location = new System.Drawing.Point(355, 72);
+            this.lb_tasmana.Location = new System.Drawing.Point(355, 73);
             this.lb_tasmana.Name = "lb_tasmana";
             this.lb_tasmana.Size = new System.Drawing.Size(193, 38);
             this.lb_tasmana.TabIndex = 2;
@@ -506,73 +573,6 @@ namespace DangNhap
             this.right.Radius = 10;
             this.right.TargetControl = this.pn_right;
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(6, 59);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(230, 230);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.panel2.Controls.Add(this.lb_cd);
-            this.panel2.Controls.Add(this.gunaPanel3);
-            this.panel2.Controls.Add(this.gunaGradientButton1);
-            this.panel2.Location = new System.Drawing.Point(32, 419);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(239, 68);
-            this.panel2.TabIndex = 23;
-            // 
-            // lb_cd
-            // 
-            this.lb_cd.AutoSize = true;
-            this.lb_cd.BackColor = System.Drawing.Color.Transparent;
-            this.lb_cd.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_cd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lb_cd.Location = new System.Drawing.Point(69, 24);
-            this.lb_cd.Name = "lb_cd";
-            this.lb_cd.Size = new System.Drawing.Size(64, 19);
-            this.lb_cd.TabIndex = 16;
-            this.lb_cd.Text = "Cư Dân";
-            // 
-            // gunaPanel3
-            // 
-            this.gunaPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaPanel3.BackgroundImage")));
-            this.gunaPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gunaPanel3.Location = new System.Drawing.Point(3, 3);
-            this.gunaPanel3.Name = "gunaPanel3";
-            this.gunaPanel3.Size = new System.Drawing.Size(60, 60);
-            this.gunaPanel3.TabIndex = 0;
-            // 
-            // gunaGradientButton1
-            // 
-            this.gunaGradientButton1.Animated = true;
-            this.gunaGradientButton1.AnimationHoverSpeed = 1F;
-            this.gunaGradientButton1.AnimationSpeed = 1F;
-            this.gunaGradientButton1.BaseColor1 = System.Drawing.Color.Silver;
-            this.gunaGradientButton1.BaseColor2 = System.Drawing.Color.DimGray;
-            this.gunaGradientButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.BorderSize = 2;
-            this.gunaGradientButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton1.Font = new System.Drawing.Font("GMV DIN Pro Cond", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaGradientButton1.ForeColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.Image = null;
-            this.gunaGradientButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaGradientButton1.Location = new System.Drawing.Point(169, 39);
-            this.gunaGradientButton1.Name = "gunaGradientButton1";
-            this.gunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.Silver;
-            this.gunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.Silver;
-            this.gunaGradientButton1.OnHoverBorderColor = System.Drawing.Color.White;
-            this.gunaGradientButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton1.OnHoverImage = null;
-            this.gunaGradientButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.Size = new System.Drawing.Size(65, 25);
-            this.gunaGradientButton1.TabIndex = 15;
-            this.gunaGradientButton1.Text = "Xem ngay";
-            this.gunaGradientButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -593,13 +593,13 @@ namespace DangNhap
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_avt)).EndInit();
             this.pn_main.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.pn_right.ResumeLayout(false);
             this.pn_frame1.ResumeLayout(false);
             this.pn_frame1.PerformLayout();
             this.pn_nentas.ResumeLayout(false);
             this.pn_nentas.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
