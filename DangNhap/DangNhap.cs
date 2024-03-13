@@ -19,7 +19,7 @@ namespace DangNhap
         }
         private void BT_DangNhap_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-0QABGUL\SQLEXPRESS;Initial Catalog=QL_TKNhanVien;Integrated Security=True;TrustServerCertificate=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QL_TKNhanVien;Integrated Security=True;TrustServerCertificate=True");
             try
             {
                 conn.Open();
