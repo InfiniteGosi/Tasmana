@@ -55,6 +55,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CanHo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CanHo.Designer.cs">
+      <DependentUpon>CanHo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietCanHo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTietCanHo.Designer.cs">
+      <DependentUpon>ChiTietCanHo.cs</DependentUpon>
+    </Compile>
     <Compile Include="CongViecChung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +90,12 @@
     </Compile>
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LichSuCanHo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LichSuCanHo.Designer.cs">
+      <DependentUpon>LichSuCanHo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -105,6 +123,12 @@
     <Compile Include="ThongTinCaNhan.Designer.cs">
       <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CanHo.resx">
+      <DependentUpon>CanHo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietCanHo.resx">
+      <DependentUpon>ChiTietCanHo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CongViecChung.resx">
       <DependentUpon>CongViecChung.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LichSuCanHo.resx">
+      <DependentUpon>LichSuCanHo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -134,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThongKe.resx">
       <DependentUpon>ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinCaNhan.resx">
+      <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
