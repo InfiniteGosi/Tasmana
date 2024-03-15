@@ -211,7 +211,7 @@ CREATE TABLE Congviec_Canho
 -- Insert thông tin tài khoản
 INSERT INTO NhanVien VALUES('GD-001', 'jd@gmail.com', 'Ho', 'Khang', '111111111', '1/1/2002', 'M', 'TP.HCM', '123456', 'Full-time', N'Chưa cưới', '1111111', 1, '1/1/2024', NULL, 'TP.HCM', NULL, N'Tốt', NULL, NULL)
 
-INSERT INTO TaiKhoan VALUES('U0001', '123', 'GD-001')
+INSERT INTO TaiKhoan VALUES('GD-001.KHANG.111111111', '123', 'GD-001')
 
 SELECT * FROM TaiKhoan
 SELECT * FROM NhanVien
