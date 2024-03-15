@@ -217,4 +217,4 @@ SELECT * FROM TaiKhoan
 SELECT * FROM NhanVien
 
 delete from NhanVien where maNhanVien = 'GD-001'
-delete from TaiKhoan where maNguoiDung = 'U0001'
+delete from TaiKhoan where maNguoiDung = 'GD-001.KHANG.111111111'
