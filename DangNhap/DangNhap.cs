@@ -25,7 +25,7 @@ namespace DangNhap
                 conn.Open();
                 string tk = TB_TaiKhoan.Text;
                 string mk = TB_MatKhau.Text;
-                string sql = "select * from Taikhoan where UserID = '" + tk + "' and Password = '" + mk + "'";
+                string sql = "select * from Taikhoan where maNguoiDung = '" + tk + "' and matKhau = '" + mk + "'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataReader data = cmd.ExecuteReader();
                 if (data.Read() == true)
