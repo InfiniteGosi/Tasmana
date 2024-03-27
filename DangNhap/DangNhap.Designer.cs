@@ -33,14 +33,14 @@ namespace DangNhap
             this.panel1 = new System.Windows.Forms.Panel();
             this.BT_DangNhap = new Guna.UI.WinForms.GunaButton();
             this.pic_apm = new System.Windows.Forms.PictureBox();
-            this.lb_quenpw = new System.Windows.Forms.Label();
+            this.LB_quenpw = new System.Windows.Forms.Label();
             this.VB_HienMatKhau = new System.Windows.Forms.CheckBox();
             this.pic_lock = new System.Windows.Forms.PictureBox();
             this.pic_mail = new System.Windows.Forms.PictureBox();
             this.TB_MatKhau = new System.Windows.Forms.TextBox();
             this.TB_TaiKhoan = new System.Windows.Forms.TextBox();
-            this.lb_pw = new System.Windows.Forms.Label();
-            this.lb_id = new System.Windows.Forms.Label();
+            this.LB_pw = new System.Windows.Forms.Label();
+            this.LB_id = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -49,8 +49,8 @@ namespace DangNhap
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lb_tasmana = new System.Windows.Forms.Label();
-            this.btn_close = new Guna.UI.WinForms.GunaButton();
+            this.LB_tasmana = new System.Windows.Forms.Label();
+            this.BTN_close = new Guna.UI.WinForms.GunaButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_apm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_lock)).BeginInit();
@@ -66,17 +66,17 @@ namespace DangNhap
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.panel1.Controls.Add(this.BT_DangNhap);
             this.panel1.Controls.Add(this.pic_apm);
-            this.panel1.Controls.Add(this.lb_quenpw);
+            this.panel1.Controls.Add(this.LB_quenpw);
             this.panel1.Controls.Add(this.VB_HienMatKhau);
             this.panel1.Controls.Add(this.pic_lock);
             this.panel1.Controls.Add(this.pic_mail);
             this.panel1.Controls.Add(this.TB_MatKhau);
             this.panel1.Controls.Add(this.TB_TaiKhoan);
-            this.panel1.Controls.Add(this.lb_pw);
-            this.panel1.Controls.Add(this.lb_id);
+            this.panel1.Controls.Add(this.LB_pw);
+            this.panel1.Controls.Add(this.LB_id);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.lb_tasmana);
+            this.panel1.Controls.Add(this.LB_tasmana);
             this.panel1.Location = new System.Drawing.Point(0, 21);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1129, 670);
@@ -120,16 +120,16 @@ namespace DangNhap
             this.pic_apm.TabIndex = 14;
             this.pic_apm.TabStop = false;
             // 
-            // lb_quenpw
+            // LB_quenpw
             // 
-            this.lb_quenpw.AutoSize = true;
-            this.lb_quenpw.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_quenpw.ForeColor = System.Drawing.Color.DarkGray;
-            this.lb_quenpw.Location = new System.Drawing.Point(323, 452);
-            this.lb_quenpw.Name = "lb_quenpw";
-            this.lb_quenpw.Size = new System.Drawing.Size(100, 17);
-            this.lb_quenpw.TabIndex = 13;
-            this.lb_quenpw.Text = "Quên mật khẩu?";
+            this.LB_quenpw.AutoSize = true;
+            this.LB_quenpw.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_quenpw.ForeColor = System.Drawing.Color.DarkGray;
+            this.LB_quenpw.Location = new System.Drawing.Point(323, 452);
+            this.LB_quenpw.Name = "LB_quenpw";
+            this.LB_quenpw.Size = new System.Drawing.Size(100, 17);
+            this.LB_quenpw.TabIndex = 13;
+            this.LB_quenpw.Text = "Quên mật khẩu?";
             // 
             // VB_HienMatKhau
             // 
@@ -188,27 +188,27 @@ namespace DangNhap
             this.TB_TaiKhoan.Size = new System.Drawing.Size(342, 26);
             this.TB_TaiKhoan.TabIndex = 7;
             // 
-            // lb_pw
+            // LB_pw
             // 
-            this.lb_pw.AutoSize = true;
-            this.lb_pw.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_pw.ForeColor = System.Drawing.Color.DarkGray;
-            this.lb_pw.Location = new System.Drawing.Point(74, 385);
-            this.lb_pw.Name = "lb_pw";
-            this.lb_pw.Size = new System.Drawing.Size(77, 21);
-            this.lb_pw.TabIndex = 6;
-            this.lb_pw.Text = "Mật khẩu";
+            this.LB_pw.AutoSize = true;
+            this.LB_pw.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_pw.ForeColor = System.Drawing.Color.DarkGray;
+            this.LB_pw.Location = new System.Drawing.Point(74, 385);
+            this.LB_pw.Name = "LB_pw";
+            this.LB_pw.Size = new System.Drawing.Size(77, 21);
+            this.LB_pw.TabIndex = 6;
+            this.LB_pw.Text = "Mật khẩu";
             // 
-            // lb_id
+            // LB_id
             // 
-            this.lb_id.AutoSize = true;
-            this.lb_id.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_id.ForeColor = System.Drawing.Color.DarkGray;
-            this.lb_id.Location = new System.Drawing.Point(74, 286);
-            this.lb_id.Name = "lb_id";
-            this.lb_id.Size = new System.Drawing.Size(119, 21);
-            this.lb_id.TabIndex = 5;
-            this.lb_id.Text = "Mã người dùng";
+            this.LB_id.AutoSize = true;
+            this.LB_id.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_id.ForeColor = System.Drawing.Color.DarkGray;
+            this.LB_id.Location = new System.Drawing.Point(74, 286);
+            this.LB_id.Name = "LB_id";
+            this.LB_id.Size = new System.Drawing.Size(119, 21);
+            this.LB_id.TabIndex = 5;
+            this.LB_id.Text = "Mã người dùng";
             // 
             // panel6
             // 
@@ -280,41 +280,41 @@ namespace DangNhap
             this.panel3.Size = new System.Drawing.Size(300, 1);
             this.panel3.TabIndex = 3;
             // 
-            // lb_tasmana
+            // LB_tasmana
             // 
-            this.lb_tasmana.AutoSize = true;
-            this.lb_tasmana.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_tasmana.ForeColor = System.Drawing.Color.White;
-            this.lb_tasmana.Location = new System.Drawing.Point(71, 178);
-            this.lb_tasmana.Name = "lb_tasmana";
-            this.lb_tasmana.Size = new System.Drawing.Size(237, 49);
-            this.lb_tasmana.TabIndex = 1;
-            this.lb_tasmana.Text = "TASMANA";
+            this.LB_tasmana.AutoSize = true;
+            this.LB_tasmana.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_tasmana.ForeColor = System.Drawing.Color.White;
+            this.LB_tasmana.Location = new System.Drawing.Point(71, 178);
+            this.LB_tasmana.Name = "LB_tasmana";
+            this.LB_tasmana.Size = new System.Drawing.Size(237, 49);
+            this.LB_tasmana.TabIndex = 1;
+            this.LB_tasmana.Text = "TASMANA";
             // 
-            // btn_close
+            // BTN_close
             // 
-            this.btn_close.AnimationHoverSpeed = 0.07F;
-            this.btn_close.AnimationSpeed = 0.03F;
-            this.btn_close.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.btn_close.BorderColor = System.Drawing.Color.Black;
-            this.btn_close.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_close.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_close.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_close.ForeColor = System.Drawing.Color.White;
-            this.btn_close.Image = null;
-            this.btn_close.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_close.Location = new System.Drawing.Point(1107, 0);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.OnHoverBaseColor = System.Drawing.Color.Red;
-            this.btn_close.OnHoverBorderColor = System.Drawing.Color.Maroon;
-            this.btn_close.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_close.OnHoverImage = null;
-            this.btn_close.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_close.Size = new System.Drawing.Size(20, 20);
-            this.btn_close.TabIndex = 1;
-            this.btn_close.Text = "X";
-            this.btn_close.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            this.BTN_close.AnimationHoverSpeed = 0.07F;
+            this.BTN_close.AnimationSpeed = 0.03F;
+            this.BTN_close.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.BTN_close.BorderColor = System.Drawing.Color.Black;
+            this.BTN_close.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_close.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_close.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_close.ForeColor = System.Drawing.Color.White;
+            this.BTN_close.Image = null;
+            this.BTN_close.ImageSize = new System.Drawing.Size(20, 20);
+            this.BTN_close.Location = new System.Drawing.Point(1107, 0);
+            this.BTN_close.Name = "BTN_close";
+            this.BTN_close.OnHoverBaseColor = System.Drawing.Color.Red;
+            this.BTN_close.OnHoverBorderColor = System.Drawing.Color.Maroon;
+            this.BTN_close.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_close.OnHoverImage = null;
+            this.BTN_close.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_close.Size = new System.Drawing.Size(20, 20);
+            this.BTN_close.TabIndex = 1;
+            this.BTN_close.Text = "X";
+            this.BTN_close.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // DangNhap
             // 
@@ -323,7 +323,7 @@ namespace DangNhap
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1129, 691);
-            this.Controls.Add(this.btn_close);
+            this.Controls.Add(this.BTN_close);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DangNhap";
@@ -344,13 +344,13 @@ namespace DangNhap
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lb_tasmana;
+        private System.Windows.Forms.Label LB_tasmana;
         private System.Windows.Forms.PictureBox pic_lock;
         private System.Windows.Forms.PictureBox pic_mail;
         private System.Windows.Forms.TextBox TB_MatKhau;
         private System.Windows.Forms.TextBox TB_TaiKhoan;
-        private System.Windows.Forms.Label lb_pw;
-        private System.Windows.Forms.Label lb_id;
+        private System.Windows.Forms.Label LB_pw;
+        private System.Windows.Forms.Label LB_id;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
@@ -360,10 +360,10 @@ namespace DangNhap
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.CheckBox VB_HienMatKhau;
-        private System.Windows.Forms.Label lb_quenpw;
+        private System.Windows.Forms.Label LB_quenpw;
         private System.Windows.Forms.PictureBox pic_apm;
         private Guna.UI.WinForms.GunaButton BT_DangNhap;
-        private Guna.UI.WinForms.GunaButton btn_close;
+        private Guna.UI.WinForms.GunaButton BTN_close;
     }
 }
 

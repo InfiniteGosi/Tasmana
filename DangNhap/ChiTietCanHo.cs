@@ -22,7 +22,7 @@ namespace DangNhap
             this.Close();
         }
 
-        private void btn_chitiet_Click(object sender, EventArgs e)
+        private void BTN_chitiet_Click(object sender, EventArgs e)
         {
             LichSuCanHo lsch = new LichSuCanHo();
             lsch.Show();

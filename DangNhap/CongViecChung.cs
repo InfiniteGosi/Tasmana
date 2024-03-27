@@ -16,11 +16,5 @@ namespace DangNhap
         {
             InitializeComponent();
         }
-
-        private void btn_themcv_Click(object sender, EventArgs e)
-        {
-            ThemCongViec tcv = new ThemCongViec();
-            tcv.Show();
-        }
     }
 }
