@@ -384,7 +384,7 @@ namespace DangNhap
             this.BTN_chitiet.TabIndex = 35;
             this.BTN_chitiet.Text = "Chi tiết";
             this.BTN_chitiet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.BTN_chitiet.Click += new System.EventHandler(this.btn_chitiet_Click);
+            this.BTN_chitiet.Click += new System.EventHandler(this.BTN_chitiet_Click);
             // 
             // pic_canho
             // 

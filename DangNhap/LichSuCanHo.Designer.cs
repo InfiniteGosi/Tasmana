@@ -235,7 +235,7 @@ namespace DangNhap
             this.BTN_thoat.TabIndex = 35;
             this.BTN_thoat.Text = "Thoát";
             this.BTN_thoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.BTN_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
+            this.BTN_thoat.Click += new System.EventHandler(this.BTN_thoat_Click);
             // 
             // LichSuCanHo
             // 

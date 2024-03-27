@@ -116,10 +116,10 @@ namespace DangNhap
             this.toolStripSeparator1,
             this.btn_download,
             this.toolStripSeparator2});
-            this.tS.Location = new System.Drawing.Point(0, 708);
+            this.tS.Location = new System.Drawing.Point(0, 755);
             this.tS.Name = "tS";
             this.tS.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.tS.Size = new System.Drawing.Size(1358, 27);
+            this.tS.Size = new System.Drawing.Size(1376, 27);
             this.tS.TabIndex = 13;
             this.tS.Text = "toolStrip1";
             // 
@@ -138,11 +138,13 @@ namespace DangNhap
             this.pn_hienthicanho.Location = new System.Drawing.Point(16, 64);
             this.pn_hienthicanho.Name = "pn_hienthicanho";
             this.pn_hienthicanho.Quality = 10;
-            this.pn_hienthicanho.Size = new System.Drawing.Size(1330, 643);
+            this.pn_hienthicanho.Size = new System.Drawing.Size(1348, 690);
             this.pn_hienthicanho.TabIndex = 11;
             // 
             // pn_hienthitungcanho
             // 
+            this.pn_hienthitungcanho.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pn_hienthitungcanho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pn_hienthitungcanho.Controls.Add(this.TXB_yeucau);
             this.pn_hienthitungcanho.Controls.Add(this.LB_yeucau);
@@ -160,7 +162,7 @@ namespace DangNhap
             this.pn_hienthitungcanho.Controls.Add(this.BTN_chinhsua);
             this.pn_hienthitungcanho.Location = new System.Drawing.Point(7, 11);
             this.pn_hienthitungcanho.Name = "pn_hienthitungcanho";
-            this.pn_hienthitungcanho.Size = new System.Drawing.Size(1315, 189);
+            this.pn_hienthitungcanho.Size = new System.Drawing.Size(1333, 189);
             this.pn_hienthitungcanho.TabIndex = 0;
             // 
             // TXB_yeucau
@@ -325,7 +327,7 @@ namespace DangNhap
             this.BTN_chinhsua.Image = ((System.Drawing.Image)(resources.GetObject("BTN_chinhsua.Image")));
             this.BTN_chinhsua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_chinhsua.ImageSize = new System.Drawing.Size(13, 13);
-            this.BTN_chinhsua.Location = new System.Drawing.Point(1276, 147);
+            this.BTN_chinhsua.Location = new System.Drawing.Point(1294, 147);
             this.BTN_chinhsua.Name = "BTN_chinhsua";
             this.BTN_chinhsua.OnHoverBaseColor1 = System.Drawing.Color.Cyan;
             this.BTN_chinhsua.OnHoverBaseColor2 = System.Drawing.Color.Blue;
@@ -410,7 +412,7 @@ namespace DangNhap
             this.BTN_themcanho.Image = ((System.Drawing.Image)(resources.GetObject("BTN_themcanho.Image")));
             this.BTN_themcanho.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_themcanho.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_themcanho.Location = new System.Drawing.Point(1298, 21);
+            this.BTN_themcanho.Location = new System.Drawing.Point(1316, 21);
             this.BTN_themcanho.Name = "BTN_themcanho";
             this.BTN_themcanho.OnHoverBaseColor1 = System.Drawing.Color.Lime;
             this.BTN_themcanho.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -426,7 +428,7 @@ namespace DangNhap
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(1358, 735);
+            this.ClientSize = new System.Drawing.Size(1376, 782);
             this.Controls.Add(this.BTN_themcanho);
             this.Controls.Add(this.btn_timkiem);
             this.Controls.Add(this.comboBox3);
@@ -434,6 +436,7 @@ namespace DangNhap
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.tS);
             this.Controls.Add(this.pn_hienthicanho);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CanHo";
             this.Text = "CanHo";
             this.tS.ResumeLayout(false);

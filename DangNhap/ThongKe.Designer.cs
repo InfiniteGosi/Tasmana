@@ -78,8 +78,7 @@ namespace DangNhap
             // 
             // PN_tk
             // 
-            this.PN_tk.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.PN_tk.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PN_tk.BackColor = System.Drawing.Color.Silver;
             this.PN_tk.Location = new System.Drawing.Point(538, 12);

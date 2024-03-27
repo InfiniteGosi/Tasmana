@@ -13,6 +13,10 @@ namespace DangNhap
 {
     public partial class DangNhap : Form
     {
+        //
+        int mov;
+        int movX;
+        int movY;
         public DangNhap()
         {
             InitializeComponent();
@@ -30,13 +34,13 @@ namespace DangNhap
                 SqlDataReader data = cmd.ExecuteReader();
                 if (data.Read() == true)
                 {
-                    MessageBox.Show("Login successfully");
+                    MessageBox.Show("Đăng nhập thành công");
                     Home formTrangChu = new Home();
                     formTrangChu.Show();
                 }
                 else
                 {
-                    MessageBox.Show("Failed to login");
+                    LB_error.Text = "Sai tài khoản hoặc mật khẩu";
                 }
             }
 
@@ -61,6 +65,26 @@ namespace DangNhap
         private void BTN_close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void DangNhap_MouseDown(object sender, MouseEventArgs e)
+        {
+            mov = 1;
+            movX = e.X;
+            movY = e.Y;
+        }
+
+        private void DangNhap_MouseMove(object sender, MouseEventArgs e)
+        {
+            if(mov == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - movX, MousePosition.Y - movY);
+            }
+        }
+
+        private void DangNhap_MouseUp(object sender, MouseEventArgs e)
+        {
+            mov = 0;
         }
     }
 }

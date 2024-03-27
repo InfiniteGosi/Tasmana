@@ -165,6 +165,9 @@
     <EmbeddedResource Include="ChiTietCanHo.resx">
       <DependentUpon>ChiTietCanHo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietCongViec.resx">
+      <DependentUpon>ChiTietCongViec.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CongViecChung.resx">
       <DependentUpon>CongViecChung.cs</DependentUpon>
     </EmbeddedResource>
