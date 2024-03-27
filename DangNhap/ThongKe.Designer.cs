@@ -31,105 +31,87 @@ namespace DangNhap
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThongKe));
-            this.pn_blue = new Guna.UI.WinForms.GunaGradientPanel();
-            this.pn_red = new Guna.UI.WinForms.GunaGradientPanel();
-            this.pn_green = new Guna.UI.WinForms.GunaGradientPanel();
-            this.timeday = new Guna.UI.WinForms.GunaDateTimePicker();
-            this.pn_tk = new System.Windows.Forms.Panel();
+            this.PN_blue = new Guna.UI.WinForms.GunaGradientPanel();
+            this.DT_ngaythong = new Guna.UI.WinForms.GunaDateTimePicker();
+            this.PN_tk = new System.Windows.Forms.Panel();
             this.elipse_blue = new Guna.UI.WinForms.GunaElipse(this.components);
             this.elipse_red = new Guna.UI.WinForms.GunaElipse(this.components);
             this.elipse_green = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.PN_tk2 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // pn_blue
+            // PN_blue
             // 
-            this.pn_blue.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pn_blue.BackgroundImage")));
-            this.pn_blue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pn_blue.GradientColor1 = System.Drawing.Color.Blue;
-            this.pn_blue.GradientColor2 = System.Drawing.Color.Blue;
-            this.pn_blue.GradientColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pn_blue.GradientColor4 = System.Drawing.Color.Aqua;
-            this.pn_blue.Location = new System.Drawing.Point(33, 55);
-            this.pn_blue.Name = "pn_blue";
-            this.pn_blue.Size = new System.Drawing.Size(267, 133);
-            this.pn_blue.TabIndex = 0;
-            this.pn_blue.Text = "gunaGradientPanel1";
+            this.PN_blue.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PN_blue.BackgroundImage")));
+            this.PN_blue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PN_blue.GradientColor1 = System.Drawing.Color.Blue;
+            this.PN_blue.GradientColor2 = System.Drawing.Color.Blue;
+            this.PN_blue.GradientColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.PN_blue.GradientColor4 = System.Drawing.Color.Aqua;
+            this.PN_blue.Location = new System.Drawing.Point(33, 12);
+            this.PN_blue.Name = "PN_blue";
+            this.PN_blue.Size = new System.Drawing.Size(474, 221);
+            this.PN_blue.TabIndex = 0;
+            this.PN_blue.Text = "gunaGradientPanel1";
             // 
-            // pn_red
+            // DT_ngaythong
             // 
-            this.pn_red.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pn_red.BackgroundImage")));
-            this.pn_red.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pn_red.GradientColor1 = System.Drawing.Color.Red;
-            this.pn_red.GradientColor2 = System.Drawing.Color.Maroon;
-            this.pn_red.GradientColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.pn_red.GradientColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.pn_red.Location = new System.Drawing.Point(366, 55);
-            this.pn_red.Name = "pn_red";
-            this.pn_red.Size = new System.Drawing.Size(267, 133);
-            this.pn_red.TabIndex = 1;
-            this.pn_red.Text = "gunaGradientPanel2";
+            this.DT_ngaythong.BaseColor = System.Drawing.Color.White;
+            this.DT_ngaythong.BorderColor = System.Drawing.Color.Silver;
+            this.DT_ngaythong.CustomFormat = null;
+            this.DT_ngaythong.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.DT_ngaythong.FocusedColor = System.Drawing.Color.Black;
+            this.DT_ngaythong.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DT_ngaythong.ForeColor = System.Drawing.Color.Black;
+            this.DT_ngaythong.Location = new System.Drawing.Point(33, 248);
+            this.DT_ngaythong.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DT_ngaythong.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DT_ngaythong.Name = "DT_ngaythong";
+            this.DT_ngaythong.OnHoverBaseColor = System.Drawing.Color.White;
+            this.DT_ngaythong.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.DT_ngaythong.OnHoverForeColor = System.Drawing.Color.Black;
+            this.DT_ngaythong.OnPressedColor = System.Drawing.Color.Black;
+            this.DT_ngaythong.Size = new System.Drawing.Size(267, 27);
+            this.DT_ngaythong.TabIndex = 3;
+            this.DT_ngaythong.Text = "Saturday, March 9, 2024";
+            this.DT_ngaythong.Value = new System.DateTime(2024, 3, 9, 1, 50, 45, 501);
             // 
-            // pn_green
+            // PN_tk
             // 
-            this.pn_green.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pn_green.BackgroundImage")));
-            this.pn_green.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pn_green.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.pn_green.GradientColor2 = System.Drawing.Color.Green;
-            this.pn_green.GradientColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.pn_green.GradientColor4 = System.Drawing.Color.Lime;
-            this.pn_green.Location = new System.Drawing.Point(705, 55);
-            this.pn_green.Name = "pn_green";
-            this.pn_green.Size = new System.Drawing.Size(267, 133);
-            this.pn_green.TabIndex = 2;
-            this.pn_green.Text = "gunaGradientPanel3";
-            // 
-            // timeday
-            // 
-            this.timeday.BaseColor = System.Drawing.Color.White;
-            this.timeday.BorderColor = System.Drawing.Color.Silver;
-            this.timeday.CustomFormat = null;
-            this.timeday.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.timeday.FocusedColor = System.Drawing.Color.Black;
-            this.timeday.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.timeday.ForeColor = System.Drawing.Color.Black;
-            this.timeday.Location = new System.Drawing.Point(33, 221);
-            this.timeday.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.timeday.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.timeday.Name = "timeday";
-            this.timeday.OnHoverBaseColor = System.Drawing.Color.White;
-            this.timeday.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.timeday.OnHoverForeColor = System.Drawing.Color.Black;
-            this.timeday.OnPressedColor = System.Drawing.Color.Black;
-            this.timeday.Size = new System.Drawing.Size(267, 45);
-            this.timeday.TabIndex = 3;
-            this.timeday.Text = "Saturday, March 9, 2024";
-            this.timeday.Value = new System.DateTime(2024, 3, 9, 1, 50, 45, 501);
-            // 
-            // pn_tk
-            // 
-            this.pn_tk.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.PN_tk.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pn_tk.BackColor = System.Drawing.Color.Silver;
-            this.pn_tk.Location = new System.Drawing.Point(34, 275);
-            this.pn_tk.Name = "pn_tk";
-            this.pn_tk.Size = new System.Drawing.Size(938, 279);
-            this.pn_tk.TabIndex = 4;
+            this.PN_tk.BackColor = System.Drawing.Color.Silver;
+            this.PN_tk.Location = new System.Drawing.Point(538, 12);
+            this.PN_tk.Name = "PN_tk";
+            this.PN_tk.Size = new System.Drawing.Size(454, 542);
+            this.PN_tk.TabIndex = 4;
             // 
             // elipse_blue
             // 
             this.elipse_blue.Radius = 10;
-            this.elipse_blue.TargetControl = this.pn_blue;
+            this.elipse_blue.TargetControl = this.PN_blue;
             // 
             // elipse_red
             // 
             this.elipse_red.Radius = 10;
-            this.elipse_red.TargetControl = this.pn_red;
+            this.elipse_red.TargetControl = this;
             // 
             // elipse_green
             // 
             this.elipse_green.Radius = 10;
-            this.elipse_green.TargetControl = this.pn_green;
+            this.elipse_green.TargetControl = this;
+            // 
+            // PN_tk2
+            // 
+            this.PN_tk2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PN_tk2.BackColor = System.Drawing.Color.Silver;
+            this.PN_tk2.Location = new System.Drawing.Point(33, 290);
+            this.PN_tk2.Name = "PN_tk2";
+            this.PN_tk2.Size = new System.Drawing.Size(474, 264);
+            this.PN_tk2.TabIndex = 5;
             // 
             // ThongKe
             // 
@@ -137,11 +119,10 @@ namespace DangNhap
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(1004, 566);
-            this.Controls.Add(this.pn_tk);
-            this.Controls.Add(this.timeday);
-            this.Controls.Add(this.pn_green);
-            this.Controls.Add(this.pn_red);
-            this.Controls.Add(this.pn_blue);
+            this.Controls.Add(this.PN_tk2);
+            this.Controls.Add(this.PN_tk);
+            this.Controls.Add(this.DT_ngaythong);
+            this.Controls.Add(this.PN_blue);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ThongKe";
             this.Text = "ThongKe";
@@ -151,13 +132,12 @@ namespace DangNhap
 
         #endregion
 
-        private Guna.UI.WinForms.GunaGradientPanel pn_blue;
-        private Guna.UI.WinForms.GunaGradientPanel pn_red;
-        private Guna.UI.WinForms.GunaGradientPanel pn_green;
-        private Guna.UI.WinForms.GunaDateTimePicker timeday;
-        private System.Windows.Forms.Panel pn_tk;
+        private Guna.UI.WinForms.GunaGradientPanel PN_blue;
+        private Guna.UI.WinForms.GunaDateTimePicker DT_ngaythong;
+        private System.Windows.Forms.Panel PN_tk;
         private Guna.UI.WinForms.GunaElipse elipse_blue;
         private Guna.UI.WinForms.GunaElipse elipse_red;
         private Guna.UI.WinForms.GunaElipse elipse_green;
+        private System.Windows.Forms.Panel PN_tk2;
     }
 }

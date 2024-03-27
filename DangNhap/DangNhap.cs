@@ -58,7 +58,7 @@ namespace DangNhap
             }
         }
 
-        private void btn_close_Click(object sender, EventArgs e)
+        private void BTN_close_Click(object sender, EventArgs e)
         {
             this.Close();
         }
