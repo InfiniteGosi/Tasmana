@@ -49,7 +49,6 @@ namespace DangNhap
             this.TXB_manhanvien = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BTN_chinhsua = new Guna.UI.WinForms.GunaGradientButton();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.tS.SuspendLayout();
             this.pn_hienthinhanvien.SuspendLayout();
             this.pn_hienthitungcanho.SuspendLayout();
@@ -74,7 +73,7 @@ namespace DangNhap
             this.BTN_thue.Image = ((System.Drawing.Image)(resources.GetObject("BTN_thue.Image")));
             this.BTN_thue.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_thue.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_thue.Location = new System.Drawing.Point(1226, 21);
+            this.BTN_thue.Location = new System.Drawing.Point(1203, 54);
             this.BTN_thue.Name = "BTN_thue";
             this.BTN_thue.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTN_thue.OnHoverBaseColor2 = System.Drawing.Color.Gray;
@@ -103,7 +102,7 @@ namespace DangNhap
             this.BTN_sathai.Image = ((System.Drawing.Image)(resources.GetObject("BTN_sathai.Image")));
             this.BTN_sathai.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_sathai.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_sathai.Location = new System.Drawing.Point(1298, 21);
+            this.BTN_sathai.Location = new System.Drawing.Point(1275, 54);
             this.BTN_sathai.Name = "BTN_sathai";
             this.BTN_sathai.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTN_sathai.OnHoverBaseColor2 = System.Drawing.Color.Gray;
@@ -190,7 +189,7 @@ namespace DangNhap
             this.BTN_timkiem.Image = ((System.Drawing.Image)(resources.GetObject("BTN_timkiem.Image")));
             this.BTN_timkiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_timkiem.ImageSize = new System.Drawing.Size(13, 13);
-            this.BTN_timkiem.Location = new System.Drawing.Point(409, 21);
+            this.BTN_timkiem.Location = new System.Drawing.Point(458, 54);
             this.BTN_timkiem.Name = "BTN_timkiem";
             this.BTN_timkiem.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTN_timkiem.OnHoverBaseColor2 = System.Drawing.Color.Gray;
@@ -204,7 +203,7 @@ namespace DangNhap
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(270, 21);
+            this.comboBox3.Location = new System.Drawing.Point(319, 54);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 24);
             this.comboBox3.TabIndex = 33;
@@ -213,7 +212,7 @@ namespace DangNhap
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(143, 21);
+            this.comboBox2.Location = new System.Drawing.Point(192, 54);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 24);
             this.comboBox2.TabIndex = 32;
@@ -222,7 +221,7 @@ namespace DangNhap
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(16, 21);
+            this.comboBox1.Location = new System.Drawing.Point(65, 54);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 31;
@@ -240,14 +239,16 @@ namespace DangNhap
             this.pn_hienthinhanvien.GradientBottomRight = System.Drawing.Color.Gainsboro;
             this.pn_hienthinhanvien.GradientTopLeft = System.Drawing.Color.DarkGray;
             this.pn_hienthinhanvien.GradientTopRight = System.Drawing.Color.White;
-            this.pn_hienthinhanvien.Location = new System.Drawing.Point(16, 64);
+            this.pn_hienthinhanvien.Location = new System.Drawing.Point(65, 115);
             this.pn_hienthinhanvien.Name = "pn_hienthinhanvien";
             this.pn_hienthinhanvien.Quality = 10;
-            this.pn_hienthinhanvien.Size = new System.Drawing.Size(1330, 641);
+            this.pn_hienthinhanvien.Size = new System.Drawing.Size(1263, 562);
             this.pn_hienthinhanvien.TabIndex = 29;
             // 
             // pn_hienthitungcanho
             // 
+            this.pn_hienthitungcanho.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pn_hienthitungcanho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pn_hienthitungcanho.Controls.Add(this.TXB_hoten);
             this.pn_hienthitungcanho.Controls.Add(this.TXB_manhanvien);
@@ -255,7 +256,7 @@ namespace DangNhap
             this.pn_hienthitungcanho.Controls.Add(this.BTN_chinhsua);
             this.pn_hienthitungcanho.Location = new System.Drawing.Point(3, 37);
             this.pn_hienthitungcanho.Name = "pn_hienthitungcanho";
-            this.pn_hienthitungcanho.Size = new System.Drawing.Size(1320, 37);
+            this.pn_hienthitungcanho.Size = new System.Drawing.Size(1253, 37);
             this.pn_hienthitungcanho.TabIndex = 1;
             // 
             // TXB_hoten
@@ -308,7 +309,7 @@ namespace DangNhap
             this.BTN_chinhsua.Image = ((System.Drawing.Image)(resources.GetObject("BTN_chinhsua.Image")));
             this.BTN_chinhsua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_chinhsua.ImageSize = new System.Drawing.Size(13, 13);
-            this.BTN_chinhsua.Location = new System.Drawing.Point(1289, 5);
+            this.BTN_chinhsua.Location = new System.Drawing.Point(1222, 5);
             this.BTN_chinhsua.Name = "BTN_chinhsua";
             this.BTN_chinhsua.OnHoverBaseColor1 = System.Drawing.Color.Cyan;
             this.BTN_chinhsua.OnHoverBaseColor2 = System.Drawing.Color.Blue;
@@ -319,21 +320,12 @@ namespace DangNhap
             this.BTN_chinhsua.Size = new System.Drawing.Size(27, 27);
             this.BTN_chinhsua.TabIndex = 15;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Lavender;
-            this.panel1.Location = new System.Drawing.Point(16, 64);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1330, 31);
-            this.panel1.TabIndex = 27;
-            // 
             // NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(1358, 735);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tS);
             this.Controls.Add(this.BTN_timkiem);
             this.Controls.Add(this.comboBox3);
@@ -375,6 +367,5 @@ namespace DangNhap
         private Guna.UI.WinForms.GunaGradientButton BTN_chinhsua;
         private System.Windows.Forms.TextBox TXB_manhanvien;
         private System.Windows.Forms.TextBox TXB_hoten;
-        private System.Windows.Forms.Panel panel1;
     }
 }

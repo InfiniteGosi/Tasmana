@@ -51,6 +51,7 @@ namespace DangNhap
             this.panel3 = new System.Windows.Forms.Panel();
             this.LB_tasmana = new System.Windows.Forms.Label();
             this.BTN_close = new Guna.UI.WinForms.GunaButton();
+            this.LB_error = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_apm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_lock)).BeginInit();
@@ -64,6 +65,7 @@ namespace DangNhap
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.panel1.Controls.Add(this.LB_error);
             this.panel1.Controls.Add(this.BT_DangNhap);
             this.panel1.Controls.Add(this.pic_apm);
             this.panel1.Controls.Add(this.LB_quenpw);
@@ -314,7 +316,17 @@ namespace DangNhap
             this.BTN_close.TabIndex = 1;
             this.BTN_close.Text = "X";
             this.BTN_close.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.BTN_close.Click += new System.EventHandler(this.btn_close_Click);
+            this.BTN_close.Click += new System.EventHandler(this.BTN_close_Click);
+            // 
+            // LB_error
+            // 
+            this.LB_error.AutoSize = true;
+            this.LB_error.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_error.ForeColor = System.Drawing.Color.Maroon;
+            this.LB_error.Location = new System.Drawing.Point(76, 488);
+            this.LB_error.Name = "LB_error";
+            this.LB_error.Size = new System.Drawing.Size(0, 17);
+            this.LB_error.TabIndex = 18;
             // 
             // DangNhap
             // 
@@ -328,6 +340,9 @@ namespace DangNhap
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DangNhap";
             this.Text = "Form1";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DangNhap_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DangNhap_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DangNhap_MouseUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_apm)).EndInit();
@@ -364,6 +379,7 @@ namespace DangNhap
         private System.Windows.Forms.PictureBox pic_apm;
         private Guna.UI.WinForms.GunaButton BT_DangNhap;
         private Guna.UI.WinForms.GunaButton BTN_close;
+        private System.Windows.Forms.Label LB_error;
     }
 }
 

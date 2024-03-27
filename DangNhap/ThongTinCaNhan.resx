@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_chinhsua.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BTN_chinhsua.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAAMlJREFUOE+l0sEKAUEcx/FJkiR5BDl4AHk0Obo6ycHJ2UNIcnB0kvYgJzk4yUEO
@@ -127,7 +127,7 @@
         lIq9euMr6xBb+Jm/yg0El5UZgsvKFcFlRT/LDQvoLHLEmBf71FJfnbla2wAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btn_chinhsua.OnHoverImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BTN_chinhsua.OnHoverImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAAOhJREFUOE+lkr0OwWAYhZtGRETEJUgHFyAuTYxWkxhMZhchIgajScQgJjGYxCAG
@@ -137,7 +137,7 @@
         O86I590A3ua5BqHWVLkAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btn_yeucauchinhsua.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BTN_yeucauchinhsua.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAAO9JREFUOE+V0qGKAlEUxvHJImIQg8lo8CFElmUQMW/wGQwGg4jFuGkfZxExiFnE
@@ -147,7 +147,7 @@
         k+7ulSH0zHnxnwnCByClT/6xG6VDAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btn_yeucauchinhsua.OnHoverImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BTN_yeucauchinhsua.OnHoverImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAAQpJREFUOE+VkrFKw1AUhjuHEhyCQydHhz6ElCJBxLmDz+DQwUFKl45OPo6IOEhn

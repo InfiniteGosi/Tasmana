@@ -31,11 +31,11 @@ namespace DangNhap
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CuDan));
             this.pn_hienthicudan = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.btn_timkiem = new Guna.UI.WinForms.GunaGradientButton();
+            this.BTN_timkiem = new Guna.UI.WinForms.GunaGradientButton();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btn_themcv = new Guna.UI.WinForms.GunaGradientButton();
+            this.BTN_themcudan = new Guna.UI.WinForms.GunaGradientButton();
             this.tS = new System.Windows.Forms.ToolStrip();
             this.space = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -57,44 +57,44 @@ namespace DangNhap
             this.pn_hienthicudan.GradientBottomRight = System.Drawing.Color.Gainsboro;
             this.pn_hienthicudan.GradientTopLeft = System.Drawing.Color.DarkGray;
             this.pn_hienthicudan.GradientTopRight = System.Drawing.Color.White;
-            this.pn_hienthicudan.Location = new System.Drawing.Point(16, 64);
+            this.pn_hienthicudan.Location = new System.Drawing.Point(54, 111);
             this.pn_hienthicudan.Name = "pn_hienthicudan";
             this.pn_hienthicudan.Quality = 10;
-            this.pn_hienthicudan.Size = new System.Drawing.Size(1330, 641);
+            this.pn_hienthicudan.Size = new System.Drawing.Size(1265, 594);
             this.pn_hienthicudan.TabIndex = 13;
             // 
-            // btn_timkiem
+            // BTN_timkiem
             // 
-            this.btn_timkiem.Animated = true;
-            this.btn_timkiem.AnimationHoverSpeed = 1F;
-            this.btn_timkiem.AnimationSpeed = 0.03F;
-            this.btn_timkiem.BackColor = System.Drawing.Color.Transparent;
-            this.btn_timkiem.BaseColor1 = System.Drawing.Color.White;
-            this.btn_timkiem.BaseColor2 = System.Drawing.Color.Silver;
-            this.btn_timkiem.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_timkiem.BorderSize = 2;
-            this.btn_timkiem.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_timkiem.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_timkiem.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_timkiem.ForeColor = System.Drawing.Color.Black;
-            this.btn_timkiem.Image = ((System.Drawing.Image)(resources.GetObject("btn_timkiem.Image")));
-            this.btn_timkiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_timkiem.ImageSize = new System.Drawing.Size(13, 13);
-            this.btn_timkiem.Location = new System.Drawing.Point(409, 21);
-            this.btn_timkiem.Name = "btn_timkiem";
-            this.btn_timkiem.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_timkiem.OnHoverBaseColor2 = System.Drawing.Color.Gray;
-            this.btn_timkiem.OnHoverBorderColor = System.Drawing.Color.White;
-            this.btn_timkiem.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_timkiem.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btn_timkiem.OnHoverImage")));
-            this.btn_timkiem.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_timkiem.Size = new System.Drawing.Size(46, 27);
-            this.btn_timkiem.TabIndex = 27;
+            this.BTN_timkiem.Animated = true;
+            this.BTN_timkiem.AnimationHoverSpeed = 1F;
+            this.BTN_timkiem.AnimationSpeed = 0.03F;
+            this.BTN_timkiem.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_timkiem.BaseColor1 = System.Drawing.Color.White;
+            this.BTN_timkiem.BaseColor2 = System.Drawing.Color.Silver;
+            this.BTN_timkiem.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_timkiem.BorderSize = 2;
+            this.BTN_timkiem.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_timkiem.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_timkiem.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_timkiem.ForeColor = System.Drawing.Color.Black;
+            this.BTN_timkiem.Image = ((System.Drawing.Image)(resources.GetObject("BTN_timkiem.Image")));
+            this.BTN_timkiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_timkiem.ImageSize = new System.Drawing.Size(13, 13);
+            this.BTN_timkiem.Location = new System.Drawing.Point(445, 52);
+            this.BTN_timkiem.Name = "BTN_timkiem";
+            this.BTN_timkiem.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BTN_timkiem.OnHoverBaseColor2 = System.Drawing.Color.Gray;
+            this.BTN_timkiem.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_timkiem.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_timkiem.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("BTN_timkiem.OnHoverImage")));
+            this.BTN_timkiem.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_timkiem.Size = new System.Drawing.Size(46, 27);
+            this.BTN_timkiem.TabIndex = 27;
             // 
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(272, 21);
+            this.comboBox3.Location = new System.Drawing.Point(308, 52);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 24);
             this.comboBox3.TabIndex = 26;
@@ -103,7 +103,7 @@ namespace DangNhap
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(145, 21);
+            this.comboBox2.Location = new System.Drawing.Point(181, 52);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 24);
             this.comboBox2.TabIndex = 25;
@@ -112,40 +112,40 @@ namespace DangNhap
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(18, 21);
+            this.comboBox1.Location = new System.Drawing.Point(54, 52);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 24;
             this.comboBox1.Text = "All";
             // 
-            // btn_themcv
+            // BTN_themcudan
             // 
-            this.btn_themcv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_themcv.Animated = true;
-            this.btn_themcv.AnimationHoverSpeed = 1F;
-            this.btn_themcv.AnimationSpeed = 0.03F;
-            this.btn_themcv.BackColor = System.Drawing.Color.Transparent;
-            this.btn_themcv.BaseColor1 = System.Drawing.Color.White;
-            this.btn_themcv.BaseColor2 = System.Drawing.Color.Silver;
-            this.btn_themcv.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_themcv.BorderSize = 2;
-            this.btn_themcv.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_themcv.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_themcv.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_themcv.ForeColor = System.Drawing.Color.Black;
-            this.btn_themcv.Image = ((System.Drawing.Image)(resources.GetObject("btn_themcv.Image")));
-            this.btn_themcv.ImageSize = new System.Drawing.Size(10, 10);
-            this.btn_themcv.Location = new System.Drawing.Point(1242, 21);
-            this.btn_themcv.Name = "btn_themcv";
-            this.btn_themcv.OnHoverBaseColor1 = System.Drawing.Color.Lime;
-            this.btn_themcv.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btn_themcv.OnHoverBorderColor = System.Drawing.Color.White;
-            this.btn_themcv.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_themcv.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btn_themcv.OnHoverImage")));
-            this.btn_themcv.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_themcv.Size = new System.Drawing.Size(100, 37);
-            this.btn_themcv.TabIndex = 23;
-            this.btn_themcv.Text = "Thêm";
+            this.BTN_themcudan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_themcudan.Animated = true;
+            this.BTN_themcudan.AnimationHoverSpeed = 1F;
+            this.BTN_themcudan.AnimationSpeed = 0.03F;
+            this.BTN_themcudan.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_themcudan.BaseColor1 = System.Drawing.Color.White;
+            this.BTN_themcudan.BaseColor2 = System.Drawing.Color.Silver;
+            this.BTN_themcudan.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_themcudan.BorderSize = 2;
+            this.BTN_themcudan.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_themcudan.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_themcudan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_themcudan.ForeColor = System.Drawing.Color.Black;
+            this.BTN_themcudan.Image = ((System.Drawing.Image)(resources.GetObject("BTN_themcudan.Image")));
+            this.BTN_themcudan.ImageSize = new System.Drawing.Size(10, 10);
+            this.BTN_themcudan.Location = new System.Drawing.Point(1213, 52);
+            this.BTN_themcudan.Name = "BTN_themcudan";
+            this.BTN_themcudan.OnHoverBaseColor1 = System.Drawing.Color.Lime;
+            this.BTN_themcudan.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BTN_themcudan.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_themcudan.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_themcudan.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("BTN_themcudan.OnHoverImage")));
+            this.BTN_themcudan.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_themcudan.Size = new System.Drawing.Size(106, 37);
+            this.BTN_themcudan.TabIndex = 23;
+            this.BTN_themcudan.Text = "Thêm";
             // 
             // tS
             // 
@@ -213,11 +213,11 @@ namespace DangNhap
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(1358, 735);
             this.Controls.Add(this.tS);
-            this.Controls.Add(this.btn_timkiem);
+            this.Controls.Add(this.BTN_timkiem);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.btn_themcv);
+            this.Controls.Add(this.BTN_themcudan);
             this.Controls.Add(this.pn_hienthicudan);
             this.Name = "CuDan";
             this.Text = "CuDan";
@@ -231,11 +231,11 @@ namespace DangNhap
         #endregion
 
         private Bunifu.Framework.UI.BunifuGradientPanel pn_hienthicudan;
-        private Guna.UI.WinForms.GunaGradientButton btn_timkiem;
+        private Guna.UI.WinForms.GunaGradientButton BTN_timkiem;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
-        private Guna.UI.WinForms.GunaGradientButton btn_themcv;
+        private Guna.UI.WinForms.GunaGradientButton BTN_themcudan;
         private System.Windows.Forms.ToolStrip tS;
         private System.Windows.Forms.ToolStripLabel space;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;

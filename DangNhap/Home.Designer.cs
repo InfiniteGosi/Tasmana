@@ -46,7 +46,7 @@ namespace DangNhap
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LB_tendangnhap = new System.Windows.Forms.Label();
             this.PN_main = new Guna.UI.WinForms.GunaPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lb_slg2 = new System.Windows.Forms.Label();
@@ -55,14 +55,10 @@ namespace DangNhap
             this.lb_tasmana = new System.Windows.Forms.Label();
             this.lb_chaomung = new System.Windows.Forms.Label();
             this.pn_right = new Guna.UI.WinForms.GunaGradientPanel();
-            this.pn_frame1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pn_pic = new Guna.UI.WinForms.GunaPanel();
-            this.btn_xem = new Guna.UI.WinForms.GunaGradientButton();
             this.tas = new Guna.UI.WinForms.GunaElipse(this.components);
             this.frame1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.right = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
+            this.PN_tool = new Guna.UI.WinForms.GunaPanel();
             this.btn_line = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_square = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_x = new Guna.UI.WinForms.GunaGradientButton();
@@ -75,8 +71,7 @@ namespace DangNhap
             this.PN_main.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pn_right.SuspendLayout();
-            this.pn_frame1.SuspendLayout();
-            this.gunaPanel2.SuspendLayout();
+            this.PN_tool.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaPanel1
@@ -97,7 +92,7 @@ namespace DangNhap
             this.gunaPanel1.Controls.Add(this.BTN_congviec);
             this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(129, 805);
+            this.gunaPanel1.Size = new System.Drawing.Size(142, 805);
             this.gunaPanel1.TabIndex = 0;
             // 
             // BTN_nhanvien
@@ -119,7 +114,7 @@ namespace DangNhap
             this.BTN_nhanvien.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_nhanvien.OnHoverImage = null;
             this.BTN_nhanvien.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BTN_nhanvien.Size = new System.Drawing.Size(129, 34);
+            this.BTN_nhanvien.Size = new System.Drawing.Size(142, 34);
             this.BTN_nhanvien.TabIndex = 24;
             this.BTN_nhanvien.Text = "Nhân Viên";
             this.BTN_nhanvien.Click += new System.EventHandler(this.BTN_nhanvien_Click);
@@ -143,7 +138,7 @@ namespace DangNhap
             this.BTN_thongtin.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_thongtin.OnHoverImage = null;
             this.BTN_thongtin.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BTN_thongtin.Size = new System.Drawing.Size(129, 34);
+            this.BTN_thongtin.Size = new System.Drawing.Size(142, 34);
             this.BTN_thongtin.TabIndex = 18;
             this.BTN_thongtin.Text = "Thông Tin";
             this.BTN_thongtin.Click += new System.EventHandler(this.BTN_thongtin_Click);
@@ -167,9 +162,10 @@ namespace DangNhap
             this.BTN_logout.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_logout.OnHoverImage = null;
             this.BTN_logout.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BTN_logout.Size = new System.Drawing.Size(129, 34);
+            this.BTN_logout.Size = new System.Drawing.Size(142, 34);
             this.BTN_logout.TabIndex = 17;
             this.BTN_logout.Text = "Đăng Xuất";
+            this.BTN_logout.Click += new System.EventHandler(this.BTN_logout_Click);
             // 
             // BTN_canho
             // 
@@ -190,7 +186,7 @@ namespace DangNhap
             this.BTN_canho.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_canho.OnHoverImage = null;
             this.BTN_canho.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BTN_canho.Size = new System.Drawing.Size(129, 34);
+            this.BTN_canho.Size = new System.Drawing.Size(142, 34);
             this.BTN_canho.TabIndex = 16;
             this.BTN_canho.Text = "Căn Hộ";
             this.BTN_canho.Click += new System.EventHandler(this.BTN_canho_Click);
@@ -214,7 +210,7 @@ namespace DangNhap
             this.BTN_cudan.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_cudan.OnHoverImage = null;
             this.BTN_cudan.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BTN_cudan.Size = new System.Drawing.Size(129, 34);
+            this.BTN_cudan.Size = new System.Drawing.Size(142, 34);
             this.BTN_cudan.TabIndex = 15;
             this.BTN_cudan.Text = "Cư Dân";
             this.BTN_cudan.Click += new System.EventHandler(this.BTN_cudan_Click);
@@ -238,7 +234,7 @@ namespace DangNhap
             this.BTN_thongbao.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_thongbao.OnHoverImage = null;
             this.BTN_thongbao.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BTN_thongbao.Size = new System.Drawing.Size(129, 34);
+            this.BTN_thongbao.Size = new System.Drawing.Size(142, 34);
             this.BTN_thongbao.TabIndex = 1;
             this.BTN_thongbao.Text = "Thông Báo";
             this.BTN_thongbao.Click += new System.EventHandler(this.BTN_thongbao_Click);
@@ -248,7 +244,7 @@ namespace DangNhap
             this.gunaPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.gunaPictureBox2.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox2.Image")));
-            this.gunaPictureBox2.Location = new System.Drawing.Point(3, 752);
+            this.gunaPictureBox2.Location = new System.Drawing.Point(3, 766);
             this.gunaPictureBox2.Name = "gunaPictureBox2";
             this.gunaPictureBox2.Size = new System.Drawing.Size(27, 27);
             this.gunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -261,7 +257,7 @@ namespace DangNhap
             this.LOGOishere.Image = ((System.Drawing.Image)(resources.GetObject("LOGOishere.Image")));
             this.LOGOishere.Location = new System.Drawing.Point(-10, 0);
             this.LOGOishere.Name = "LOGOishere";
-            this.LOGOishere.Size = new System.Drawing.Size(139, 82);
+            this.LOGOishere.Size = new System.Drawing.Size(152, 89);
             this.LOGOishere.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LOGOishere.TabIndex = 14;
             this.LOGOishere.TabStop = false;
@@ -285,7 +281,7 @@ namespace DangNhap
             this.BTN_thongke.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_thongke.OnHoverImage = null;
             this.BTN_thongke.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BTN_thongke.Size = new System.Drawing.Size(129, 34);
+            this.BTN_thongke.Size = new System.Drawing.Size(142, 34);
             this.BTN_thongke.TabIndex = 2;
             this.BTN_thongke.Text = "Thống Kê";
             this.BTN_thongke.Click += new System.EventHandler(this.BTN_thongke_Click);
@@ -294,13 +290,13 @@ namespace DangNhap
             // 
             this.BTN_trangchu.AnimationHoverSpeed = 0.07F;
             this.BTN_trangchu.AnimationSpeed = 0.03F;
-            this.BTN_trangchu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BTN_trangchu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.BTN_trangchu.BaseColor = System.Drawing.Color.Transparent;
             this.BTN_trangchu.BorderColor = System.Drawing.Color.Black;
             this.BTN_trangchu.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_trangchu.FocusedColor = System.Drawing.Color.Empty;
             this.BTN_trangchu.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_trangchu.ForeColor = System.Drawing.Color.Black;
+            this.BTN_trangchu.ForeColor = System.Drawing.Color.White;
             this.BTN_trangchu.Image = ((System.Drawing.Image)(resources.GetObject("BTN_trangchu.Image")));
             this.BTN_trangchu.ImageSize = new System.Drawing.Size(15, 15);
             this.BTN_trangchu.Location = new System.Drawing.Point(0, 110);
@@ -310,7 +306,7 @@ namespace DangNhap
             this.BTN_trangchu.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_trangchu.OnHoverImage = null;
             this.BTN_trangchu.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BTN_trangchu.Size = new System.Drawing.Size(129, 34);
+            this.BTN_trangchu.Size = new System.Drawing.Size(142, 34);
             this.BTN_trangchu.TabIndex = 3;
             this.BTN_trangchu.Text = "Trang Chủ";
             this.BTN_trangchu.Click += new System.EventHandler(this.BTN_trangchu_Click);
@@ -334,7 +330,7 @@ namespace DangNhap
             this.BTN_congviec.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_congviec.OnHoverImage = null;
             this.BTN_congviec.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BTN_congviec.Size = new System.Drawing.Size(129, 34);
+            this.BTN_congviec.Size = new System.Drawing.Size(142, 34);
             this.BTN_congviec.TabIndex = 0;
             this.BTN_congviec.Text = "Công Việc";
             this.BTN_congviec.Click += new System.EventHandler(this.BTN_congviec_Click);
@@ -344,7 +340,7 @@ namespace DangNhap
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(11, 18);
+            this.pictureBox3.Location = new System.Drawing.Point(3, 8);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(42, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -356,7 +352,7 @@ namespace DangNhap
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(93, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(51, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(53, 41);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -368,24 +364,24 @@ namespace DangNhap
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(186, 18);
+            this.pictureBox2.Location = new System.Drawing.Point(110, 10);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(31, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
-            // label1
+            // LB_tendangnhap
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(7, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 18);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Xin Chào, NAME!";
+            this.LB_tendangnhap.AutoSize = true;
+            this.LB_tendangnhap.BackColor = System.Drawing.Color.Transparent;
+            this.LB_tendangnhap.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_tendangnhap.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LB_tendangnhap.Location = new System.Drawing.Point(20, 2);
+            this.LB_tendangnhap.Name = "LB_tendangnhap";
+            this.LB_tendangnhap.Size = new System.Drawing.Size(112, 18);
+            this.LB_tendangnhap.TabIndex = 13;
+            this.LB_tendangnhap.Text = "Xin Chào, NAME!";
             // 
             // PN_main
             // 
@@ -397,23 +393,25 @@ namespace DangNhap
             this.PN_main.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PN_main.Controls.Add(this.panel2);
             this.PN_main.Controls.Add(this.pn_right);
-            this.PN_main.Controls.Add(this.pn_frame1);
-            this.PN_main.Location = new System.Drawing.Point(128, 23);
+            this.PN_main.Location = new System.Drawing.Point(142, 23);
             this.PN_main.Name = "PN_main";
-            this.PN_main.Size = new System.Drawing.Size(1376, 782);
+            this.PN_main.Size = new System.Drawing.Size(1362, 782);
             this.PN_main.TabIndex = 2;
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.panel2.Controls.Add(this.lb_denvoi);
+            this.panel2.Controls.Add(this.lb_chaomung);
             this.panel2.Controls.Add(this.lb_slg2);
             this.panel2.Controls.Add(this.lb_slg1);
-            this.panel2.Controls.Add(this.lb_denvoi);
             this.panel2.Controls.Add(this.lb_tasmana);
-            this.panel2.Controls.Add(this.lb_chaomung);
-            this.panel2.Location = new System.Drawing.Point(0, 72);
+            this.panel2.Location = new System.Drawing.Point(0, 67);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1376, 291);
+            this.panel2.Size = new System.Drawing.Size(1362, 291);
             this.panel2.TabIndex = 23;
             // 
             // lb_slg2
@@ -423,7 +421,7 @@ namespace DangNhap
             this.lb_slg2.BackColor = System.Drawing.Color.Transparent;
             this.lb_slg2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_slg2.ForeColor = System.Drawing.Color.White;
-            this.lb_slg2.Location = new System.Drawing.Point(586, 214);
+            this.lb_slg2.Location = new System.Drawing.Point(579, 214);
             this.lb_slg2.Name = "lb_slg2";
             this.lb_slg2.Size = new System.Drawing.Size(495, 26);
             this.lb_slg2.TabIndex = 11;
@@ -436,7 +434,7 @@ namespace DangNhap
             this.lb_slg1.BackColor = System.Drawing.Color.Transparent;
             this.lb_slg1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_slg1.ForeColor = System.Drawing.Color.White;
-            this.lb_slg1.Location = new System.Drawing.Point(197, 182);
+            this.lb_slg1.Location = new System.Drawing.Point(190, 182);
             this.lb_slg1.Name = "lb_slg1";
             this.lb_slg1.Size = new System.Drawing.Size(421, 26);
             this.lb_slg1.TabIndex = 10;
@@ -449,7 +447,7 @@ namespace DangNhap
             this.lb_denvoi.BackColor = System.Drawing.Color.Transparent;
             this.lb_denvoi.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_denvoi.ForeColor = System.Drawing.Color.White;
-            this.lb_denvoi.Location = new System.Drawing.Point(311, 77);
+            this.lb_denvoi.Location = new System.Drawing.Point(304, 77);
             this.lb_denvoi.Name = "lb_denvoi";
             this.lb_denvoi.Size = new System.Drawing.Size(156, 37);
             this.lb_denvoi.TabIndex = 13;
@@ -462,7 +460,7 @@ namespace DangNhap
             this.lb_tasmana.BackColor = System.Drawing.Color.Transparent;
             this.lb_tasmana.Font = new System.Drawing.Font("Calisto MT", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_tasmana.ForeColor = System.Drawing.Color.White;
-            this.lb_tasmana.Location = new System.Drawing.Point(457, 75);
+            this.lb_tasmana.Location = new System.Drawing.Point(466, 79);
             this.lb_tasmana.Name = "lb_tasmana";
             this.lb_tasmana.Size = new System.Drawing.Size(463, 90);
             this.lb_tasmana.TabIndex = 2;
@@ -475,7 +473,7 @@ namespace DangNhap
             this.lb_chaomung.BackColor = System.Drawing.Color.Transparent;
             this.lb_chaomung.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_chaomung.ForeColor = System.Drawing.Color.White;
-            this.lb_chaomung.Location = new System.Drawing.Point(306, 42);
+            this.lb_chaomung.Location = new System.Drawing.Point(299, 42);
             this.lb_chaomung.Name = "lb_chaomung";
             this.lb_chaomung.Size = new System.Drawing.Size(231, 37);
             this.lb_chaomung.TabIndex = 12;
@@ -483,8 +481,7 @@ namespace DangNhap
             // 
             // pn_right
             // 
-            this.pn_right.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pn_right.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pn_right.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pn_right.BackgroundImage")));
             this.pn_right.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pn_right.Controls.Add(this.pictureBox2);
@@ -494,72 +491,11 @@ namespace DangNhap
             this.pn_right.GradientColor2 = System.Drawing.Color.Black;
             this.pn_right.GradientColor3 = System.Drawing.Color.DimGray;
             this.pn_right.GradientColor4 = System.Drawing.Color.Black;
-            this.pn_right.Location = new System.Drawing.Point(1133, 703);
+            this.pn_right.Location = new System.Drawing.Point(1207, 727);
             this.pn_right.Name = "pn_right";
-            this.pn_right.Size = new System.Drawing.Size(228, 67);
+            this.pn_right.Size = new System.Drawing.Size(149, 52);
             this.pn_right.TabIndex = 23;
             this.pn_right.Text = "right";
-            // 
-            // pn_frame1
-            // 
-            this.pn_frame1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.pn_frame1.Controls.Add(this.label3);
-            this.pn_frame1.Controls.Add(this.pn_pic);
-            this.pn_frame1.Controls.Add(this.btn_xem);
-            this.pn_frame1.Location = new System.Drawing.Point(10, 398);
-            this.pn_frame1.Name = "pn_frame1";
-            this.pn_frame1.Size = new System.Drawing.Size(239, 68);
-            this.pn_frame1.TabIndex = 22;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(69, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 19);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Bản Đồ";
-            // 
-            // pn_pic
-            // 
-            this.pn_pic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pn_pic.BackgroundImage")));
-            this.pn_pic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pn_pic.Location = new System.Drawing.Point(3, 3);
-            this.pn_pic.Name = "pn_pic";
-            this.pn_pic.Size = new System.Drawing.Size(60, 60);
-            this.pn_pic.TabIndex = 0;
-            // 
-            // btn_xem
-            // 
-            this.btn_xem.Animated = true;
-            this.btn_xem.AnimationHoverSpeed = 1F;
-            this.btn_xem.AnimationSpeed = 1F;
-            this.btn_xem.BaseColor1 = System.Drawing.Color.Silver;
-            this.btn_xem.BaseColor2 = System.Drawing.Color.DimGray;
-            this.btn_xem.BorderColor = System.Drawing.Color.Black;
-            this.btn_xem.BorderSize = 2;
-            this.btn_xem.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_xem.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_xem.Font = new System.Drawing.Font("GMV DIN Pro Cond", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xem.ForeColor = System.Drawing.Color.Black;
-            this.btn_xem.Image = null;
-            this.btn_xem.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_xem.Location = new System.Drawing.Point(169, 39);
-            this.btn_xem.Name = "btn_xem";
-            this.btn_xem.OnHoverBaseColor1 = System.Drawing.Color.Silver;
-            this.btn_xem.OnHoverBaseColor2 = System.Drawing.Color.Silver;
-            this.btn_xem.OnHoverBorderColor = System.Drawing.Color.White;
-            this.btn_xem.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_xem.OnHoverImage = null;
-            this.btn_xem.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_xem.Size = new System.Drawing.Size(65, 25);
-            this.btn_xem.TabIndex = 15;
-            this.btn_xem.Text = "Xem ngay";
-            this.btn_xem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_xem.Click += new System.EventHandler(this.BTN_xem_Click);
             // 
             // tas
             // 
@@ -569,26 +505,28 @@ namespace DangNhap
             // frame1
             // 
             this.frame1.Radius = 3;
-            this.frame1.TargetControl = this.pn_frame1;
             // 
             // right
             // 
             this.right.Radius = 10;
             this.right.TargetControl = this.pn_right;
             // 
-            // gunaPanel2
+            // PN_tool
             // 
-            this.gunaPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.PN_tool.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.gunaPanel2.Controls.Add(this.label1);
-            this.gunaPanel2.Controls.Add(this.btn_line);
-            this.gunaPanel2.Controls.Add(this.BTN_square);
-            this.gunaPanel2.Controls.Add(this.BTN_x);
-            this.gunaPanel2.Location = new System.Drawing.Point(128, 0);
-            this.gunaPanel2.Name = "gunaPanel2";
-            this.gunaPanel2.Size = new System.Drawing.Size(1379, 23);
-            this.gunaPanel2.TabIndex = 1;
+            this.PN_tool.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.PN_tool.Controls.Add(this.LB_tendangnhap);
+            this.PN_tool.Controls.Add(this.btn_line);
+            this.PN_tool.Controls.Add(this.BTN_square);
+            this.PN_tool.Controls.Add(this.BTN_x);
+            this.PN_tool.Location = new System.Drawing.Point(128, 0);
+            this.PN_tool.Name = "PN_tool";
+            this.PN_tool.Size = new System.Drawing.Size(1379, 23);
+            this.PN_tool.TabIndex = 1;
+            this.PN_tool.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PN_tool_MouseDown);
+            this.PN_tool.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PN_tool_MouseMove);
+            this.PN_tool.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PN_tool_MouseUp);
             // 
             // btn_line
             // 
@@ -606,7 +544,7 @@ namespace DangNhap
             this.btn_line.Image = null;
             this.btn_line.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_line.ImageSize = new System.Drawing.Size(10, 10);
-            this.btn_line.Location = new System.Drawing.Point(1301, 0);
+            this.btn_line.Location = new System.Drawing.Point(1298, 0);
             this.btn_line.Name = "btn_line";
             this.btn_line.OnHoverBaseColor1 = System.Drawing.Color.Silver;
             this.btn_line.OnHoverBaseColor2 = System.Drawing.Color.Silver;
@@ -635,7 +573,7 @@ namespace DangNhap
             this.BTN_square.Image = ((System.Drawing.Image)(resources.GetObject("BTN_square.Image")));
             this.BTN_square.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_square.ImageSize = new System.Drawing.Size(10, 10);
-            this.BTN_square.Location = new System.Drawing.Point(1325, 0);
+            this.BTN_square.Location = new System.Drawing.Point(1322, 0);
             this.BTN_square.Name = "BTN_square";
             this.BTN_square.OnHoverBaseColor1 = System.Drawing.Color.Silver;
             this.BTN_square.OnHoverBaseColor2 = System.Drawing.Color.Silver;
@@ -664,7 +602,7 @@ namespace DangNhap
             this.BTN_x.Image = ((System.Drawing.Image)(resources.GetObject("BTN_x.Image")));
             this.BTN_x.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_x.ImageSize = new System.Drawing.Size(10, 10);
-            this.BTN_x.Location = new System.Drawing.Point(1348, 0);
+            this.BTN_x.Location = new System.Drawing.Point(1345, 0);
             this.BTN_x.Name = "BTN_x";
             this.BTN_x.OnHoverBaseColor1 = System.Drawing.Color.Silver;
             this.BTN_x.OnHoverBaseColor2 = System.Drawing.Color.Silver;
@@ -684,7 +622,7 @@ namespace DangNhap
             this.ClientSize = new System.Drawing.Size(1504, 805);
             this.Controls.Add(this.gunaPanel1);
             this.Controls.Add(this.PN_main);
-            this.Controls.Add(this.gunaPanel2);
+            this.Controls.Add(this.PN_tool);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -700,10 +638,8 @@ namespace DangNhap
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.pn_right.ResumeLayout(false);
-            this.pn_frame1.ResumeLayout(false);
-            this.pn_frame1.PerformLayout();
-            this.gunaPanel2.ResumeLayout(false);
-            this.gunaPanel2.PerformLayout();
+            this.PN_tool.ResumeLayout(false);
+            this.PN_tool.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -720,25 +656,21 @@ namespace DangNhap
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LB_tendangnhap;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox2;
         private System.Windows.Forms.Label lb_chaomung;
         private Guna.UI.WinForms.GunaPictureBox LOGOishere;
-        private Guna.UI.WinForms.GunaPanel pn_pic;
-        private Guna.UI.WinForms.GunaGradientButton btn_xem;
         private System.Windows.Forms.Label lb_denvoi;
         private System.Windows.Forms.Label lb_tasmana;
         private System.Windows.Forms.Label lb_slg2;
         private Guna.UI.WinForms.GunaElipse tas;
         private Guna.UI.WinForms.GunaElipse frame1;
-        private System.Windows.Forms.Panel pn_frame1;
-        private System.Windows.Forms.Label label3;
         private Guna.UI.WinForms.GunaElipse right;
         private Guna.UI.WinForms.GunaGradientPanel pn_right;
         private Guna.UI.WinForms.GunaButton BTN_canho;
         private Guna.UI.WinForms.GunaButton BTN_cudan;
         private Guna.UI.WinForms.GunaButton BTN_logout;
-        private Guna.UI.WinForms.GunaPanel gunaPanel2;
+        private Guna.UI.WinForms.GunaPanel PN_tool;
         private Guna.UI.WinForms.GunaGradientButton btn_line;
         private Guna.UI.WinForms.GunaGradientButton BTN_square;
         private Guna.UI.WinForms.GunaGradientButton BTN_x;

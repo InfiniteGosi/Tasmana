@@ -16,5 +16,17 @@ namespace DangNhap
         {
             InitializeComponent();
         }
+
+        private void BTN_themcongviec_Click(object sender, EventArgs e)
+        {
+            ThemCongViecNhanVien tcv = new ThemCongViecNhanVien();
+            tcv.Show();
+        }
+
+        private void BTN_chitiet_Click(object sender, EventArgs e)
+        {
+            ChiTietCongViec ctcv = new ChiTietCongViec();
+            ctcv.Show();
+        }
     }
 }

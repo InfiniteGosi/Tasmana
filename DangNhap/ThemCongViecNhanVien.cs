@@ -12,6 +12,10 @@ namespace DangNhap
 {
     public partial class ThemCongViecNhanVien : Form
     {
+        //
+        int mov;
+        int movX;
+        int movY;
         public ThemCongViecNhanVien()
         {
             InitializeComponent();
@@ -44,10 +48,10 @@ namespace DangNhap
             {
                 currentFormChild.Close();
             }
-            BTN_nhom.BackColor = Color.Silver;
-            BTN_nhom.ForeColor = Color.Black;
-            BTN_nhanvien.BackColor = Color.FromArgb(40, 40, 40);
-            BTN_nhanvien.ForeColor = Color.White;
+            BTN_nhanvien.BackColor = Color.Silver;
+            BTN_nhanvien.ForeColor = Color.Black;
+            BTN_nhom.BackColor = Color.FromArgb(40, 40, 40);
+            BTN_nhom.ForeColor = Color.White;
             BTN_phongban.BackColor = Color.FromArgb(40, 40, 40);
             BTN_phongban.ForeColor = Color.White;
         }
@@ -72,6 +76,26 @@ namespace DangNhap
             BTN_phongban.ForeColor = Color.White;
             BTN_nhanvien.BackColor = Color.FromArgb(40, 40, 40);
             BTN_nhanvien.ForeColor = Color.White;
+        }
+
+        private void ThemCongViecNhanVien_MouseDown(object sender, MouseEventArgs e)
+        {
+            mov = 1;
+            movX = e.X;
+            movY = e.Y;
+        }
+
+        private void ThemCongViecNhanVien_MousMove(object sender, MouseEventArgs e)
+        {
+            if (mov == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - movX, MousePosition.Y - movY);
+            }
+        }
+
+        private void ThemCongViecNhanVien_MouseUp(object sender, MouseEventArgs e)
+        {
+            mov = 0;
         }
     }
 }

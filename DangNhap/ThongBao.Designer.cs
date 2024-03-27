@@ -38,6 +38,9 @@ namespace DangNhap
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.PN_hinethithongbao = new System.Windows.Forms.Panel();
+            this.BTN_trangsau = new System.Windows.Forms.Button();
+            this.BTN_trangtruoc = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.gunaGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +58,7 @@ namespace DangNhap
             this.BTN_chuadoc.ForeColor = System.Drawing.Color.White;
             this.BTN_chuadoc.Image = ((System.Drawing.Image)(resources.GetObject("BTN_chuadoc.Image")));
             this.BTN_chuadoc.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_chuadoc.Location = new System.Drawing.Point(12, 114);
+            this.BTN_chuadoc.Location = new System.Drawing.Point(9, 114);
             this.BTN_chuadoc.Name = "BTN_chuadoc";
             this.BTN_chuadoc.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BTN_chuadoc.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -65,7 +68,7 @@ namespace DangNhap
             this.BTN_chuadoc.Radius = 10;
             this.BTN_chuadoc.Size = new System.Drawing.Size(160, 42);
             this.BTN_chuadoc.TabIndex = 1;
-            this.BTN_chuadoc.Text = "Hộp thư đến";
+            this.BTN_chuadoc.Text = "Chưa đọc";
             // 
             // BTN_dadoc
             // 
@@ -81,7 +84,7 @@ namespace DangNhap
             this.BTN_dadoc.ForeColor = System.Drawing.Color.White;
             this.BTN_dadoc.Image = ((System.Drawing.Image)(resources.GetObject("BTN_dadoc.Image")));
             this.BTN_dadoc.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_dadoc.Location = new System.Drawing.Point(12, 172);
+            this.BTN_dadoc.Location = new System.Drawing.Point(9, 172);
             this.BTN_dadoc.Name = "BTN_dadoc";
             this.BTN_dadoc.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BTN_dadoc.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -98,8 +101,11 @@ namespace DangNhap
             this.gunaGradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel1.BackgroundImage")));
+            this.gunaGradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.gunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaGradientPanel1.Controls.Add(this.textBox1);
+            this.gunaGradientPanel1.Controls.Add(this.BTN_trangtruoc);
+            this.gunaGradientPanel1.Controls.Add(this.BTN_trangsau);
             this.gunaGradientPanel1.Controls.Add(this.BTN_timkiem);
             this.gunaGradientPanel1.Controls.Add(this.comboBox3);
             this.gunaGradientPanel1.Controls.Add(this.comboBox2);
@@ -134,7 +140,7 @@ namespace DangNhap
             this.BTN_timkiem.Image = ((System.Drawing.Image)(resources.GetObject("BTN_timkiem.Image")));
             this.BTN_timkiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_timkiem.ImageSize = new System.Drawing.Size(13, 13);
-            this.BTN_timkiem.Location = new System.Drawing.Point(571, 12);
+            this.BTN_timkiem.Location = new System.Drawing.Point(571, 35);
             this.BTN_timkiem.Name = "BTN_timkiem";
             this.BTN_timkiem.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTN_timkiem.OnHoverBaseColor2 = System.Drawing.Color.Gray;
@@ -148,7 +154,7 @@ namespace DangNhap
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(432, 12);
+            this.comboBox3.Location = new System.Drawing.Point(432, 35);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 24);
             this.comboBox3.TabIndex = 37;
@@ -157,7 +163,7 @@ namespace DangNhap
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(305, 12);
+            this.comboBox2.Location = new System.Drawing.Point(305, 35);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 24);
             this.comboBox2.TabIndex = 36;
@@ -166,7 +172,7 @@ namespace DangNhap
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(178, 12);
+            this.comboBox1.Location = new System.Drawing.Point(178, 35);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 35;
@@ -174,11 +180,53 @@ namespace DangNhap
             // 
             // PN_hinethithongbao
             // 
+            this.PN_hinethithongbao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PN_hinethithongbao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.PN_hinethithongbao.Location = new System.Drawing.Point(178, 47);
+            this.PN_hinethithongbao.Location = new System.Drawing.Point(178, 84);
             this.PN_hinethithongbao.Name = "PN_hinethithongbao";
-            this.PN_hinethithongbao.Size = new System.Drawing.Size(1140, 601);
+            this.PN_hinethithongbao.Size = new System.Drawing.Size(1108, 493);
             this.PN_hinethithongbao.TabIndex = 3;
+            // 
+            // BTN_trangsau
+            // 
+            this.BTN_trangsau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_trangsau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_trangsau.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_trangsau.ForeColor = System.Drawing.Color.White;
+            this.BTN_trangsau.Location = new System.Drawing.Point(1210, 593);
+            this.BTN_trangsau.Name = "BTN_trangsau";
+            this.BTN_trangsau.Size = new System.Drawing.Size(75, 31);
+            this.BTN_trangsau.TabIndex = 39;
+            this.BTN_trangsau.Text = "Sau";
+            this.BTN_trangsau.UseVisualStyleBackColor = true;
+            // 
+            // BTN_trangtruoc
+            // 
+            this.BTN_trangtruoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_trangtruoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_trangtruoc.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_trangtruoc.ForeColor = System.Drawing.Color.White;
+            this.BTN_trangtruoc.Location = new System.Drawing.Point(1020, 593);
+            this.BTN_trangtruoc.Name = "BTN_trangtruoc";
+            this.BTN_trangtruoc.Size = new System.Drawing.Size(75, 31);
+            this.BTN_trangtruoc.TabIndex = 40;
+            this.BTN_trangtruoc.Text = "Trước";
+            this.BTN_trangtruoc.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.BackColor = System.Drawing.SystemColors.MenuText;
+            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(1132, 593);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(41, 31);
+            this.textBox1.TabIndex = 41;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ThongBao
             // 
@@ -190,6 +238,7 @@ namespace DangNhap
             this.Name = "ThongBao";
             this.Text = "ThongBao";
             this.gunaGradientPanel1.ResumeLayout(false);
+            this.gunaGradientPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -203,5 +252,8 @@ namespace DangNhap
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button BTN_trangtruoc;
+        private System.Windows.Forms.Button BTN_trangsau;
     }
 }
