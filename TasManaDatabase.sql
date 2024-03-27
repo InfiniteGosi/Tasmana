@@ -3,7 +3,6 @@ GO
 USE QL_TKNhanVien
 GO
 
-USE master
 
 CREATE TABLE PhongBan
 (
@@ -215,6 +214,3 @@ INSERT INTO TaiKhoan VALUES('GD-001.KHANG.111111111', '123', 'GD-001')
 
 SELECT * FROM TaiKhoan
 SELECT * FROM NhanVien
-
-delete from NhanVien where maNhanVien = 'GD-001'
-delete from TaiKhoan where maNguoiDung = 'GD-001.KHANG.111111111'
