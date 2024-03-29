@@ -69,7 +69,7 @@ CREATE TABLE NhanVien
   ten NVARCHAR(100) NOT NULL,
   SDT VARCHAR(20) NOT NULL,
   ngaySinh DATE NOT NULL,
-  gioiTinh BIT NOT NULL,
+  gioiTinh BIT NOT NULL, -- 1 nam, 0 nu
   queQuan NVARCHAR(100) NOT NULL,
   maDinhDanh VARCHAR(20) NOT NULL,
   loaiNhanVien NVARCHAR(20) NOT NULL,
