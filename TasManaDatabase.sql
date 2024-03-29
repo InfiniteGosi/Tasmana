@@ -1,6 +1,6 @@
-﻿CREATE DATABASE QL_TKNhanVien
+﻿CREATE DATABASE Tasmana
 GO
-USE QL_TKNhanVien
+USE Tasmana
 GO
 
 
@@ -69,7 +69,7 @@ CREATE TABLE NhanVien
   ten NVARCHAR(100) NOT NULL,
   SDT VARCHAR(20) NOT NULL,
   ngaySinh DATE NOT NULL,
-  gioiTinh CHAR NOT NULL,
+  gioiTinh BIT NOT NULL,
   queQuan NVARCHAR(100) NOT NULL,
   maDinhDanh VARCHAR(20) NOT NULL,
   loaiNhanVien NVARCHAR(20) NOT NULL,
@@ -208,7 +208,7 @@ CREATE TABLE Congviec_Canho
 
 
 -- Insert thông tin tài khoản
-INSERT INTO NhanVien VALUES('GD-001', 'jd@gmail.com', 'Ho', 'Khang', '111111111', '1/1/2002', 'M', 'TP.HCM', '123456', 'Full-time', N'Chưa cưới', '1111111', 1, '1/1/2024', NULL, 'TP.HCM', NULL, N'Tốt', NULL, NULL)
+INSERT INTO NhanVien VALUES('GD-001', 'jd@gmail.com', 'Ho', 'Khang', '111111111', '1/1/2002', 1, 'TP.HCM', '123456', 'Full-time', N'Chưa cưới', '1111111', 1, '1/1/2024', NULL, 'TP.HCM', NULL, N'Tốt', NULL, NULL)
 
 INSERT INTO TaiKhoan VALUES('GD-001.KHANG.111111111', '123', 'GD-001')
 

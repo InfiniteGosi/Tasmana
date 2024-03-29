@@ -8,12 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DangNhap.Model;
 
 namespace DangNhap
 {
     public partial class DangNhap : Form
     {
-        //
+        public static Account currentAccount;
         int mov;
         int movX;
         int movY;
@@ -23,30 +24,62 @@ namespace DangNhap
         }
         private void BT_DangNhap_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QL_TKNhanVien;Integrated Security=True;TrustServerCertificate=True");
-            try
+            string userId = TB_TaiKhoan.Text;
+            string pwd = TB_MatKhau.Text;
+
+            if (string.IsNullOrEmpty(userId))
             {
-                conn.Open();
-                string tk = TB_TaiKhoan.Text;
-                string mk = TB_MatKhau.Text;
-                string sql = "select * from Taikhoan where maNguoiDung = '" + tk + "' and matKhau = '" + mk + "'";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                SqlDataReader data = cmd.ExecuteReader();
-                if (data.Read() == true)
+                MessageBox.Show("Vui lòng nhập mã người dùng");
+                return;
+            }
+            if (string.IsNullOrEmpty(pwd))
+            {
+                MessageBox.Show("Vui lòng nhập mật khẩu");
+                return;
+            }
+
+            string password = "";
+            string employeeId = "";
+
+            string query = $"select * from TaiKhoan where maNguoiDung = '{userId}'";
+            using (SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=Tasmana;Integrated Security=True;TrustServerCertificate=True"))
+            {
+
+                try
                 {
-                    MessageBox.Show("Đăng nhập thành công");
-                    Home formTrangChu = new Home();
-                    formTrangChu.Show();
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    conn.Open();
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        password = reader["matKhau"].ToString();
+                        employeeId = reader["maNhanVien"].ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tài khoản không tồn tại");
+                        return;
+                    }
                 }
-                else
+                catch
                 {
-                    LB_error.Text = "Sai tài khoản hoặc mật khẩu";
+                    MessageBox.Show("Kết nối thất bại");
+                    return;
                 }
             }
 
-            catch (Exception)
+            if (password.Equals(pwd))
             {
-                throw new Exception("Connection Error");
+                currentAccount = new Account(userId, pwd, employeeId);
+                MessageBox.Show("Đăng nhập thành công");
+                Home formTrangChu = new Home();
+                formTrangChu.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Mật khẩu hoặc tên đăng nhập không đúng");
             }
         }
 
