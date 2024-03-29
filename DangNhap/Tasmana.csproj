@@ -109,6 +109,7 @@
     <Compile Include="LichSuCanHo.Designer.cs">
       <DependentUpon>LichSuCanHo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Account.cs" />
     <Compile Include="NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -49,11 +49,11 @@ namespace DangNhap
             this.LB_tendangnhap = new System.Windows.Forms.Label();
             this.PN_main = new Guna.UI.WinForms.GunaPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lb_denvoi = new System.Windows.Forms.Label();
+            this.lb_chaomung = new System.Windows.Forms.Label();
             this.lb_slg2 = new System.Windows.Forms.Label();
             this.lb_slg1 = new System.Windows.Forms.Label();
-            this.lb_denvoi = new System.Windows.Forms.Label();
             this.lb_tasmana = new System.Windows.Forms.Label();
-            this.lb_chaomung = new System.Windows.Forms.Label();
             this.pn_right = new Guna.UI.WinForms.GunaGradientPanel();
             this.tas = new Guna.UI.WinForms.GunaElipse(this.components);
             this.frame1 = new Guna.UI.WinForms.GunaElipse(this.components);
@@ -414,32 +414,6 @@ namespace DangNhap
             this.panel2.Size = new System.Drawing.Size(1362, 291);
             this.panel2.TabIndex = 23;
             // 
-            // lb_slg2
-            // 
-            this.lb_slg2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lb_slg2.AutoSize = true;
-            this.lb_slg2.BackColor = System.Drawing.Color.Transparent;
-            this.lb_slg2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_slg2.ForeColor = System.Drawing.Color.White;
-            this.lb_slg2.Location = new System.Drawing.Point(579, 214);
-            this.lb_slg2.Name = "lb_slg2";
-            this.lb_slg2.Size = new System.Drawing.Size(495, 26);
-            this.lb_slg2.TabIndex = 11;
-            this.lb_slg2.Text = "But Facing the Change can change everything\"";
-            // 
-            // lb_slg1
-            // 
-            this.lb_slg1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lb_slg1.AutoSize = true;
-            this.lb_slg1.BackColor = System.Drawing.Color.Transparent;
-            this.lb_slg1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_slg1.ForeColor = System.Drawing.Color.White;
-            this.lb_slg1.Location = new System.Drawing.Point(190, 182);
-            this.lb_slg1.Name = "lb_slg1";
-            this.lb_slg1.Size = new System.Drawing.Size(421, 26);
-            this.lb_slg1.TabIndex = 10;
-            this.lb_slg1.Text = "\"Changing the Face can change nothing";
-            // 
             // lb_denvoi
             // 
             this.lb_denvoi.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -453,19 +427,6 @@ namespace DangNhap
             this.lb_denvoi.TabIndex = 13;
             this.lb_denvoi.Text = "ĐẾN VỚI";
             // 
-            // lb_tasmana
-            // 
-            this.lb_tasmana.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lb_tasmana.AutoSize = true;
-            this.lb_tasmana.BackColor = System.Drawing.Color.Transparent;
-            this.lb_tasmana.Font = new System.Drawing.Font("Calisto MT", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_tasmana.ForeColor = System.Drawing.Color.White;
-            this.lb_tasmana.Location = new System.Drawing.Point(466, 79);
-            this.lb_tasmana.Name = "lb_tasmana";
-            this.lb_tasmana.Size = new System.Drawing.Size(463, 90);
-            this.lb_tasmana.TabIndex = 2;
-            this.lb_tasmana.Text = "TASMANA";
-            // 
             // lb_chaomung
             // 
             this.lb_chaomung.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -478,6 +439,45 @@ namespace DangNhap
             this.lb_chaomung.Size = new System.Drawing.Size(231, 37);
             this.lb_chaomung.TabIndex = 12;
             this.lb_chaomung.Text = "CHÀO MỪNG";
+            // 
+            // lb_slg2
+            // 
+            this.lb_slg2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lb_slg2.AutoSize = true;
+            this.lb_slg2.BackColor = System.Drawing.Color.Transparent;
+            this.lb_slg2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_slg2.ForeColor = System.Drawing.Color.White;
+            this.lb_slg2.Location = new System.Drawing.Point(579, 214);
+            this.lb_slg2.Name = "lb_slg2";
+            this.lb_slg2.Size = new System.Drawing.Size(489, 25);
+            this.lb_slg2.TabIndex = 11;
+            this.lb_slg2.Text = "But Facing the Change can change everything\"";
+            // 
+            // lb_slg1
+            // 
+            this.lb_slg1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lb_slg1.AutoSize = true;
+            this.lb_slg1.BackColor = System.Drawing.Color.Transparent;
+            this.lb_slg1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_slg1.ForeColor = System.Drawing.Color.White;
+            this.lb_slg1.Location = new System.Drawing.Point(190, 182);
+            this.lb_slg1.Name = "lb_slg1";
+            this.lb_slg1.Size = new System.Drawing.Size(417, 25);
+            this.lb_slg1.TabIndex = 10;
+            this.lb_slg1.Text = "\"Changing the Face can change nothing";
+            // 
+            // lb_tasmana
+            // 
+            this.lb_tasmana.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lb_tasmana.AutoSize = true;
+            this.lb_tasmana.BackColor = System.Drawing.Color.Transparent;
+            this.lb_tasmana.Font = new System.Drawing.Font("Calisto MT", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_tasmana.ForeColor = System.Drawing.Color.White;
+            this.lb_tasmana.Location = new System.Drawing.Point(466, 79);
+            this.lb_tasmana.Name = "lb_tasmana";
+            this.lb_tasmana.Size = new System.Drawing.Size(463, 90);
+            this.lb_tasmana.TabIndex = 2;
+            this.lb_tasmana.Text = "TASMANA";
             // 
             // pn_right
             // 
@@ -505,6 +505,7 @@ namespace DangNhap
             // frame1
             // 
             this.frame1.Radius = 3;
+            this.frame1.TargetControl = this;
             // 
             // right
             // 
@@ -568,7 +569,7 @@ namespace DangNhap
             this.BTN_square.BorderColor = System.Drawing.Color.Black;
             this.BTN_square.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_square.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_square.Font = new System.Drawing.Font("GMV DIN Pro Cond", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_square.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_square.ForeColor = System.Drawing.Color.Black;
             this.BTN_square.Image = ((System.Drawing.Image)(resources.GetObject("BTN_square.Image")));
             this.BTN_square.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -597,7 +598,7 @@ namespace DangNhap
             this.BTN_x.BorderColor = System.Drawing.Color.Black;
             this.BTN_x.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_x.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_x.Font = new System.Drawing.Font("GMV DIN Pro Cond", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_x.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_x.ForeColor = System.Drawing.Color.Black;
             this.BTN_x.Image = ((System.Drawing.Image)(resources.GetObject("BTN_x.Image")));
             this.BTN_x.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
