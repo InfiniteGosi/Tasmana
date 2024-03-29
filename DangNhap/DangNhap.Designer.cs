@@ -31,6 +31,7 @@ namespace DangNhap
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangNhap));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LB_error = new System.Windows.Forms.Label();
             this.BT_DangNhap = new Guna.UI.WinForms.GunaButton();
             this.pic_apm = new System.Windows.Forms.PictureBox();
             this.LB_quenpw = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@ namespace DangNhap
             this.panel3 = new System.Windows.Forms.Panel();
             this.LB_tasmana = new System.Windows.Forms.Label();
             this.BTN_close = new Guna.UI.WinForms.GunaButton();
-            this.LB_error = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_apm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_lock)).BeginInit();
@@ -83,6 +83,16 @@ namespace DangNhap
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1129, 670);
             this.panel1.TabIndex = 0;
+            // 
+            // LB_error
+            // 
+            this.LB_error.AutoSize = true;
+            this.LB_error.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_error.ForeColor = System.Drawing.Color.Maroon;
+            this.LB_error.Location = new System.Drawing.Point(76, 488);
+            this.LB_error.Name = "LB_error";
+            this.LB_error.Size = new System.Drawing.Size(0, 17);
+            this.LB_error.TabIndex = 18;
             // 
             // BT_DangNhap
             // 
@@ -129,7 +139,7 @@ namespace DangNhap
             this.LB_quenpw.ForeColor = System.Drawing.Color.DarkGray;
             this.LB_quenpw.Location = new System.Drawing.Point(323, 452);
             this.LB_quenpw.Name = "LB_quenpw";
-            this.LB_quenpw.Size = new System.Drawing.Size(100, 17);
+            this.LB_quenpw.Size = new System.Drawing.Size(96, 15);
             this.LB_quenpw.TabIndex = 13;
             this.LB_quenpw.Text = "Quên mật khẩu?";
             // 
@@ -141,7 +151,7 @@ namespace DangNhap
             this.VB_HienMatKhau.ForeColor = System.Drawing.Color.Silver;
             this.VB_HienMatKhau.Location = new System.Drawing.Point(79, 464);
             this.VB_HienMatKhau.Name = "VB_HienMatKhau";
-            this.VB_HienMatKhau.Size = new System.Drawing.Size(112, 21);
+            this.VB_HienMatKhau.Size = new System.Drawing.Size(104, 19);
             this.VB_HienMatKhau.TabIndex = 12;
             this.VB_HienMatKhau.Text = "Hiện mật khẩu";
             this.VB_HienMatKhau.UseVisualStyleBackColor = true;
@@ -317,16 +327,6 @@ namespace DangNhap
             this.BTN_close.Text = "X";
             this.BTN_close.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_close.Click += new System.EventHandler(this.BTN_close_Click);
-            // 
-            // LB_error
-            // 
-            this.LB_error.AutoSize = true;
-            this.LB_error.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_error.ForeColor = System.Drawing.Color.Maroon;
-            this.LB_error.Location = new System.Drawing.Point(76, 488);
-            this.LB_error.Name = "LB_error";
-            this.LB_error.Size = new System.Drawing.Size(0, 17);
-            this.LB_error.TabIndex = 18;
             // 
             // DangNhap
             // 

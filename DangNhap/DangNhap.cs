@@ -79,7 +79,7 @@ namespace DangNhap
             }
             else
             {
-                MessageBox.Show("Mật khẩu hoặc tên đăng nhập không đúng");
+                LB_error.Text = "Mật khẩu hoặc tên đăng nhập không đúng";
             }
         }
 
