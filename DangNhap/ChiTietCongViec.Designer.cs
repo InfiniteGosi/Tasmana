@@ -32,7 +32,6 @@ namespace DangNhap
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChiTietCongViec));
             this.CBB_macanho = new System.Windows.Forms.ComboBox();
             this.CBB_manhanvien = new System.Windows.Forms.ComboBox();
-            this.TXB_gio = new System.Windows.Forms.TextBox();
             this.BTN_file = new System.Windows.Forms.Button();
             this.CB_thoihan = new System.Windows.Forms.CheckBox();
             this.RBTN_toancongty = new System.Windows.Forms.RadioButton();
@@ -45,7 +44,7 @@ namespace DangNhap
             this.BTN_luu = new Guna.UI.WinForms.GunaGradientButton();
             this.LB_macanho = new System.Windows.Forms.Label();
             this.LB_thoihan = new System.Windows.Forms.Label();
-            this.DT_thoihan = new System.Windows.Forms.DateTimePicker();
+            this.DTP_ngay = new System.Windows.Forms.DateTimePicker();
             this.LB_tepdinhkem = new System.Windows.Forms.Label();
             this.LB_themcongviec = new System.Windows.Forms.Label();
             this.CBB_nhom = new System.Windows.Forms.ComboBox();
@@ -62,48 +61,40 @@ namespace DangNhap
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.DTP_gio = new System.Windows.Forms.DateTimePicker();
+            this.BTN_highlight = new Guna.UI.WinForms.GunaGradientButton();
             this.SuspendLayout();
             // 
             // CBB_macanho
             // 
-            this.CBB_macanho.BackColor = System.Drawing.Color.Black;
+            this.CBB_macanho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.CBB_macanho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CBB_macanho.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBB_macanho.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBB_macanho.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.CBB_macanho.FormattingEnabled = true;
-            this.CBB_macanho.Location = new System.Drawing.Point(398, 322);
+            this.CBB_macanho.Location = new System.Drawing.Point(434, 374);
             this.CBB_macanho.Name = "CBB_macanho";
-            this.CBB_macanho.Size = new System.Drawing.Size(121, 27);
+            this.CBB_macanho.Size = new System.Drawing.Size(121, 28);
             this.CBB_macanho.TabIndex = 111;
             // 
             // CBB_manhanvien
             // 
-            this.CBB_manhanvien.BackColor = System.Drawing.Color.Black;
+            this.CBB_manhanvien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.CBB_manhanvien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CBB_manhanvien.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBB_manhanvien.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBB_manhanvien.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.CBB_manhanvien.FormattingEnabled = true;
-            this.CBB_manhanvien.Location = new System.Drawing.Point(61, 241);
+            this.CBB_manhanvien.Location = new System.Drawing.Point(99, 275);
             this.CBB_manhanvien.Name = "CBB_manhanvien";
-            this.CBB_manhanvien.Size = new System.Drawing.Size(456, 27);
+            this.CBB_manhanvien.Size = new System.Drawing.Size(456, 28);
             this.CBB_manhanvien.TabIndex = 110;
-            // 
-            // TXB_gio
-            // 
-            this.TXB_gio.BackColor = System.Drawing.Color.Black;
-            this.TXB_gio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TXB_gio.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_gio.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_gio.Location = new System.Drawing.Point(398, 509);
-            this.TXB_gio.Name = "TXB_gio";
-            this.TXB_gio.Size = new System.Drawing.Size(119, 28);
-            this.TXB_gio.TabIndex = 109;
             // 
             // BTN_file
             // 
             this.BTN_file.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_file.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.BTN_file.Location = new System.Drawing.Point(247, 597);
+            this.BTN_file.ForeColor = System.Drawing.Color.White;
+            this.BTN_file.Location = new System.Drawing.Point(282, 638);
             this.BTN_file.Name = "BTN_file";
             this.BTN_file.Size = new System.Drawing.Size(75, 33);
             this.BTN_file.TabIndex = 108;
@@ -113,7 +104,7 @@ namespace DangNhap
             // CB_thoihan
             // 
             this.CB_thoihan.AutoSize = true;
-            this.CB_thoihan.Location = new System.Drawing.Point(223, 515);
+            this.CB_thoihan.Location = new System.Drawing.Point(259, 553);
             this.CB_thoihan.Name = "CB_thoihan";
             this.CB_thoihan.Size = new System.Drawing.Size(18, 17);
             this.CB_thoihan.TabIndex = 107;
@@ -123,8 +114,8 @@ namespace DangNhap
             // 
             this.RBTN_toancongty.AutoSize = true;
             this.RBTN_toancongty.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBTN_toancongty.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.RBTN_toancongty.Location = new System.Drawing.Point(357, 697);
+            this.RBTN_toancongty.ForeColor = System.Drawing.Color.White;
+            this.RBTN_toancongty.Location = new System.Drawing.Point(393, 732);
             this.RBTN_toancongty.Name = "RBTN_toancongty";
             this.RBTN_toancongty.Size = new System.Drawing.Size(131, 26);
             this.RBTN_toancongty.TabIndex = 105;
@@ -136,8 +127,8 @@ namespace DangNhap
             // 
             this.LB_quyentruycap.AutoSize = true;
             this.LB_quyentruycap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_quyentruycap.ForeColor = System.Drawing.Color.Silver;
-            this.LB_quyentruycap.Location = new System.Drawing.Point(57, 701);
+            this.LB_quyentruycap.ForeColor = System.Drawing.Color.White;
+            this.LB_quyentruycap.Location = new System.Drawing.Point(93, 734);
             this.LB_quyentruycap.Name = "LB_quyentruycap";
             this.LB_quyentruycap.Size = new System.Drawing.Size(128, 22);
             this.LB_quyentruycap.TabIndex = 106;
@@ -147,8 +138,8 @@ namespace DangNhap
             // 
             this.RBTN_bophan.AutoSize = true;
             this.RBTN_bophan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBTN_bophan.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.RBTN_bophan.Location = new System.Drawing.Point(246, 697);
+            this.RBTN_bophan.ForeColor = System.Drawing.Color.White;
+            this.RBTN_bophan.Location = new System.Drawing.Point(282, 732);
             this.RBTN_bophan.Name = "RBTN_bophan";
             this.RBTN_bophan.Size = new System.Drawing.Size(96, 26);
             this.RBTN_bophan.TabIndex = 104;
@@ -160,8 +151,8 @@ namespace DangNhap
             // 
             this.LB_manhanvien.AutoSize = true;
             this.LB_manhanvien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_manhanvien.ForeColor = System.Drawing.Color.Silver;
-            this.LB_manhanvien.Location = new System.Drawing.Point(57, 216);
+            this.LB_manhanvien.ForeColor = System.Drawing.Color.White;
+            this.LB_manhanvien.Location = new System.Drawing.Point(93, 250);
             this.LB_manhanvien.Name = "LB_manhanvien";
             this.LB_manhanvien.Size = new System.Drawing.Size(116, 22);
             this.LB_manhanvien.TabIndex = 94;
@@ -171,8 +162,8 @@ namespace DangNhap
             // 
             this.LB_noidung.AutoSize = true;
             this.LB_noidung.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_noidung.ForeColor = System.Drawing.Color.Silver;
-            this.LB_noidung.Location = new System.Drawing.Point(57, 297);
+            this.LB_noidung.ForeColor = System.Drawing.Color.White;
+            this.LB_noidung.Location = new System.Drawing.Point(95, 349);
             this.LB_noidung.Name = "LB_noidung";
             this.LB_noidung.Size = new System.Drawing.Size(82, 22);
             this.LB_noidung.TabIndex = 96;
@@ -185,7 +176,7 @@ namespace DangNhap
             this.BTN_huy.AnimationSpeed = 0.03F;
             this.BTN_huy.BaseColor1 = System.Drawing.Color.Firebrick;
             this.BTN_huy.BaseColor2 = System.Drawing.Color.Red;
-            this.BTN_huy.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_huy.BorderColor = System.Drawing.Color.Black;
             this.BTN_huy.BorderSize = 2;
             this.BTN_huy.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_huy.FocusedColor = System.Drawing.Color.Empty;
@@ -193,7 +184,7 @@ namespace DangNhap
             this.BTN_huy.ForeColor = System.Drawing.Color.Black;
             this.BTN_huy.Image = null;
             this.BTN_huy.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_huy.Location = new System.Drawing.Point(467, 788);
+            this.BTN_huy.Location = new System.Drawing.Point(518, 831);
             this.BTN_huy.Name = "BTN_huy";
             this.BTN_huy.OnHoverBaseColor1 = System.Drawing.Color.WhiteSmoke;
             this.BTN_huy.OnHoverBaseColor2 = System.Drawing.Color.DarkRed;
@@ -208,14 +199,13 @@ namespace DangNhap
             // 
             // TXB_noidung
             // 
-            this.TXB_noidung.BackColor = System.Drawing.Color.Black;
-            this.TXB_noidung.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_noidung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.TXB_noidung.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_noidung.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_noidung.Location = new System.Drawing.Point(61, 322);
+            this.TXB_noidung.Location = new System.Drawing.Point(97, 374);
             this.TXB_noidung.Multiline = true;
             this.TXB_noidung.Name = "TXB_noidung";
-            this.TXB_noidung.Size = new System.Drawing.Size(296, 61);
+            this.TXB_noidung.Size = new System.Drawing.Size(296, 28);
             this.TXB_noidung.TabIndex = 97;
             // 
             // BTN_luu
@@ -225,7 +215,7 @@ namespace DangNhap
             this.BTN_luu.AnimationSpeed = 0.03F;
             this.BTN_luu.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.BTN_luu.BaseColor2 = System.Drawing.Color.Green;
-            this.BTN_luu.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_luu.BorderColor = System.Drawing.Color.Black;
             this.BTN_luu.BorderSize = 2;
             this.BTN_luu.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_luu.FocusedColor = System.Drawing.Color.Empty;
@@ -233,7 +223,7 @@ namespace DangNhap
             this.BTN_luu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.BTN_luu.Image = null;
             this.BTN_luu.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_luu.Location = new System.Drawing.Point(533, 788);
+            this.BTN_luu.Location = new System.Drawing.Point(584, 831);
             this.BTN_luu.Name = "BTN_luu";
             this.BTN_luu.OnHoverBaseColor1 = System.Drawing.Color.WhiteSmoke;
             this.BTN_luu.OnHoverBaseColor2 = System.Drawing.Color.ForestGreen;
@@ -250,8 +240,8 @@ namespace DangNhap
             // 
             this.LB_macanho.AutoSize = true;
             this.LB_macanho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_macanho.ForeColor = System.Drawing.Color.Silver;
-            this.LB_macanho.Location = new System.Drawing.Point(396, 297);
+            this.LB_macanho.ForeColor = System.Drawing.Color.White;
+            this.LB_macanho.Location = new System.Drawing.Point(432, 349);
             this.LB_macanho.Name = "LB_macanho";
             this.LB_macanho.Size = new System.Drawing.Size(92, 22);
             this.LB_macanho.TabIndex = 98;
@@ -261,30 +251,30 @@ namespace DangNhap
             // 
             this.LB_thoihan.AutoSize = true;
             this.LB_thoihan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_thoihan.ForeColor = System.Drawing.Color.Silver;
-            this.LB_thoihan.Location = new System.Drawing.Point(57, 515);
+            this.LB_thoihan.ForeColor = System.Drawing.Color.White;
+            this.LB_thoihan.Location = new System.Drawing.Point(93, 550);
             this.LB_thoihan.Name = "LB_thoihan";
             this.LB_thoihan.Size = new System.Drawing.Size(80, 22);
             this.LB_thoihan.TabIndex = 99;
             this.LB_thoihan.Text = "Thời hạn";
             // 
-            // DT_thoihan
+            // DTP_ngay
             // 
-            this.DT_thoihan.CalendarMonthBackground = System.Drawing.Color.Black;
-            this.DT_thoihan.CalendarTitleBackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.DT_thoihan.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.DT_thoihan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DT_thoihan.Location = new System.Drawing.Point(247, 512);
-            this.DT_thoihan.Name = "DT_thoihan";
-            this.DT_thoihan.Size = new System.Drawing.Size(110, 22);
-            this.DT_thoihan.TabIndex = 100;
+            this.DTP_ngay.CalendarMonthBackground = System.Drawing.Color.Black;
+            this.DTP_ngay.CalendarTitleBackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.DTP_ngay.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.DTP_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DTP_ngay.Location = new System.Drawing.Point(283, 550);
+            this.DTP_ngay.Name = "DTP_ngay";
+            this.DTP_ngay.Size = new System.Drawing.Size(110, 22);
+            this.DTP_ngay.TabIndex = 100;
             // 
             // LB_tepdinhkem
             // 
             this.LB_tepdinhkem.AutoSize = true;
             this.LB_tepdinhkem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_tepdinhkem.ForeColor = System.Drawing.Color.Silver;
-            this.LB_tepdinhkem.Location = new System.Drawing.Point(57, 608);
+            this.LB_tepdinhkem.ForeColor = System.Drawing.Color.White;
+            this.LB_tepdinhkem.Location = new System.Drawing.Point(93, 642);
             this.LB_tepdinhkem.Name = "LB_tepdinhkem";
             this.LB_tepdinhkem.Size = new System.Drawing.Size(117, 22);
             this.LB_tepdinhkem.TabIndex = 101;
@@ -295,30 +285,30 @@ namespace DangNhap
             this.LB_themcongviec.AutoSize = true;
             this.LB_themcongviec.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_themcongviec.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.LB_themcongviec.Location = new System.Drawing.Point(172, 9);
+            this.LB_themcongviec.Location = new System.Drawing.Point(199, 9);
             this.LB_themcongviec.Name = "LB_themcongviec";
-            this.LB_themcongviec.Size = new System.Drawing.Size(260, 26);
+            this.LB_themcongviec.Size = new System.Drawing.Size(255, 25);
             this.LB_themcongviec.TabIndex = 113;
             this.LB_themcongviec.Text = "CHI TIẾT CÔNG VIỆC";
             // 
             // CBB_nhom
             // 
-            this.CBB_nhom.BackColor = System.Drawing.Color.Black;
+            this.CBB_nhom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.CBB_nhom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CBB_nhom.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBB_nhom.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBB_nhom.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.CBB_nhom.FormattingEnabled = true;
-            this.CBB_nhom.Location = new System.Drawing.Point(61, 160);
+            this.CBB_nhom.Location = new System.Drawing.Point(97, 183);
             this.CBB_nhom.Name = "CBB_nhom";
-            this.CBB_nhom.Size = new System.Drawing.Size(458, 27);
+            this.CBB_nhom.Size = new System.Drawing.Size(458, 28);
             this.CBB_nhom.TabIndex = 118;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Silver;
-            this.label1.Location = new System.Drawing.Point(57, 135);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(93, 158);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 22);
             this.label1.TabIndex = 117;
@@ -326,22 +316,22 @@ namespace DangNhap
             // 
             // CBB_phongban
             // 
-            this.CBB_phongban.BackColor = System.Drawing.Color.Black;
+            this.CBB_phongban.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.CBB_phongban.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CBB_phongban.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBB_phongban.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBB_phongban.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.CBB_phongban.FormattingEnabled = true;
-            this.CBB_phongban.Location = new System.Drawing.Point(61, 79);
+            this.CBB_phongban.Location = new System.Drawing.Point(97, 91);
             this.CBB_phongban.Name = "CBB_phongban";
-            this.CBB_phongban.Size = new System.Drawing.Size(458, 27);
+            this.CBB_phongban.Size = new System.Drawing.Size(458, 28);
             this.CBB_phongban.TabIndex = 116;
             // 
             // LB_maphongban
             // 
             this.LB_maphongban.AutoSize = true;
             this.LB_maphongban.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_maphongban.ForeColor = System.Drawing.Color.Silver;
-            this.LB_maphongban.Location = new System.Drawing.Point(57, 54);
+            this.LB_maphongban.ForeColor = System.Drawing.Color.White;
+            this.LB_maphongban.Location = new System.Drawing.Point(93, 66);
             this.LB_maphongban.Name = "LB_maphongban";
             this.LB_maphongban.Size = new System.Drawing.Size(91, 22);
             this.LB_maphongban.TabIndex = 115;
@@ -356,7 +346,7 @@ namespace DangNhap
             this.BTN_themcongviec.BackColor = System.Drawing.Color.Transparent;
             this.BTN_themcongviec.BaseColor1 = System.Drawing.Color.DarkGreen;
             this.BTN_themcongviec.BaseColor2 = System.Drawing.Color.SpringGreen;
-            this.BTN_themcongviec.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_themcongviec.BorderColor = System.Drawing.Color.Black;
             this.BTN_themcongviec.BorderSize = 2;
             this.BTN_themcongviec.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_themcongviec.FocusedColor = System.Drawing.Color.Empty;
@@ -364,7 +354,7 @@ namespace DangNhap
             this.BTN_themcongviec.ForeColor = System.Drawing.Color.Black;
             this.BTN_themcongviec.Image = null;
             this.BTN_themcongviec.ImageSize = new System.Drawing.Size(10, 10);
-            this.BTN_themcongviec.Location = new System.Drawing.Point(79, 788);
+            this.BTN_themcongviec.Location = new System.Drawing.Point(77, 831);
             this.BTN_themcongviec.Name = "BTN_themcongviec";
             this.BTN_themcongviec.OnHoverBaseColor1 = System.Drawing.Color.WhiteSmoke;
             this.BTN_themcongviec.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -382,8 +372,8 @@ namespace DangNhap
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(59, 435);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(95, 458);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 22);
             this.label2.TabIndex = 120;
@@ -391,11 +381,12 @@ namespace DangNhap
             // 
             // comboBox1
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.Black;
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(223, 433);
+            this.comboBox1.Location = new System.Drawing.Point(259, 458);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(296, 28);
             this.comboBox1.TabIndex = 122;
@@ -405,8 +396,8 @@ namespace DangNhap
             this.BTN_thoat.Animated = true;
             this.BTN_thoat.AnimationHoverSpeed = 0.5F;
             this.BTN_thoat.AnimationSpeed = 0.03F;
-            this.BTN_thoat.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.BTN_thoat.BaseColor2 = System.Drawing.Color.Gray;
+            this.BTN_thoat.BaseColor1 = System.Drawing.Color.Transparent;
+            this.BTN_thoat.BaseColor2 = System.Drawing.Color.Transparent;
             this.BTN_thoat.BorderColor = System.Drawing.Color.DimGray;
             this.BTN_thoat.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_thoat.FocusedColor = System.Drawing.Color.Empty;
@@ -415,7 +406,7 @@ namespace DangNhap
             this.BTN_thoat.Image = ((System.Drawing.Image)(resources.GetObject("BTN_thoat.Image")));
             this.BTN_thoat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_thoat.ImageSize = new System.Drawing.Size(15, 15);
-            this.BTN_thoat.Location = new System.Drawing.Point(575, 3);
+            this.BTN_thoat.Location = new System.Drawing.Point(623, 5);
             this.BTN_thoat.Name = "BTN_thoat";
             this.BTN_thoat.OnHoverBaseColor1 = System.Drawing.Color.Red;
             this.BTN_thoat.OnHoverBaseColor2 = System.Drawing.Color.Maroon;
@@ -432,12 +423,12 @@ namespace DangNhap
             // 
             this.LB_macongviec.AutoSize = true;
             this.LB_macongviec.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_macongviec.ForeColor = System.Drawing.Color.Silver;
-            this.LB_macongviec.Location = new System.Drawing.Point(134, 297);
+            this.LB_macongviec.ForeColor = System.Drawing.Color.White;
+            this.LB_macongviec.Location = new System.Drawing.Point(209, 349);
             this.LB_macongviec.Name = "LB_macongviec";
-            this.LB_macongviec.Size = new System.Drawing.Size(79, 22);
+            this.LB_macongviec.Size = new System.Drawing.Size(67, 22);
             this.LB_macongviec.TabIndex = 124;
-            this.LB_macongviec.Text = "- Mã CV";
+            this.LB_macongviec.Text = "Mã CV";
             // 
             // gunaGradientButton1
             // 
@@ -448,7 +439,7 @@ namespace DangNhap
             this.gunaGradientButton1.BackColor = System.Drawing.Color.Transparent;
             this.gunaGradientButton1.BaseColor1 = System.Drawing.Color.Maroon;
             this.gunaGradientButton1.BaseColor2 = System.Drawing.Color.Red;
-            this.gunaGradientButton1.BorderColor = System.Drawing.Color.DarkGray;
+            this.gunaGradientButton1.BorderColor = System.Drawing.Color.Black;
             this.gunaGradientButton1.BorderSize = 2;
             this.gunaGradientButton1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.gunaGradientButton1.FocusedColor = System.Drawing.Color.Empty;
@@ -456,7 +447,7 @@ namespace DangNhap
             this.gunaGradientButton1.ForeColor = System.Drawing.Color.Black;
             this.gunaGradientButton1.Image = null;
             this.gunaGradientButton1.ImageSize = new System.Drawing.Size(10, 10);
-            this.gunaGradientButton1.Location = new System.Drawing.Point(12, 788);
+            this.gunaGradientButton1.Location = new System.Drawing.Point(10, 831);
             this.gunaGradientButton1.Name = "gunaGradientButton1";
             this.gunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.Crimson;
             this.gunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.WhiteSmoke;
@@ -475,7 +466,7 @@ namespace DangNhap
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(3, 834);
+            this.panel1.Size = new System.Drawing.Size(3, 876);
             this.panel1.TabIndex = 126;
             // 
             // panel2
@@ -484,33 +475,86 @@ namespace DangNhap
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(3, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(602, 3);
+            this.panel2.Size = new System.Drawing.Size(650, 3);
             this.panel2.TabIndex = 127;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(3, 831);
+            this.panel3.Location = new System.Drawing.Point(3, 873);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(602, 3);
+            this.panel3.Size = new System.Drawing.Size(650, 3);
             this.panel3.TabIndex = 128;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(602, 3);
+            this.panel4.Location = new System.Drawing.Point(650, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(3, 828);
+            this.panel4.Size = new System.Drawing.Size(3, 870);
             this.panel4.TabIndex = 129;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Silver;
+            this.label3.Location = new System.Drawing.Point(183, 349);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(17, 22);
+            this.label3.TabIndex = 130;
+            this.label3.Text = "-";
+            // 
+            // DTP_gio
+            // 
+            this.DTP_gio.CalendarMonthBackground = System.Drawing.Color.Black;
+            this.DTP_gio.CalendarTitleBackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.DTP_gio.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.DTP_gio.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.DTP_gio.Location = new System.Drawing.Point(434, 550);
+            this.DTP_gio.Name = "DTP_gio";
+            this.DTP_gio.Size = new System.Drawing.Size(121, 22);
+            this.DTP_gio.TabIndex = 131;
+            // 
+            // BTN_highlight
+            // 
+            this.BTN_highlight.Animated = true;
+            this.BTN_highlight.AnimationHoverSpeed = 0.5F;
+            this.BTN_highlight.AnimationSpeed = 0.03F;
+            this.BTN_highlight.BaseColor1 = System.Drawing.Color.Olive;
+            this.BTN_highlight.BaseColor2 = System.Drawing.Color.Yellow;
+            this.BTN_highlight.BorderColor = System.Drawing.Color.Black;
+            this.BTN_highlight.BorderSize = 2;
+            this.BTN_highlight.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_highlight.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_highlight.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_highlight.ForeColor = System.Drawing.Color.White;
+            this.BTN_highlight.Image = null;
+            this.BTN_highlight.ImageSize = new System.Drawing.Size(20, 20);
+            this.BTN_highlight.Location = new System.Drawing.Point(297, 831);
+            this.BTN_highlight.Name = "BTN_highlight";
+            this.BTN_highlight.OnHoverBaseColor1 = System.Drawing.Color.Black;
+            this.BTN_highlight.OnHoverBaseColor2 = System.Drawing.Color.Black;
+            this.BTN_highlight.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.BTN_highlight.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_highlight.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("BTN_highlight.OnHoverImage")));
+            this.BTN_highlight.OnPressedColor = System.Drawing.Color.White;
+            this.BTN_highlight.Size = new System.Drawing.Size(60, 33);
+            this.BTN_highlight.TabIndex = 132;
+            this.BTN_highlight.Text = "SOS";
+            this.BTN_highlight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ChiTietCongViec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(605, 834);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.ClientSize = new System.Drawing.Size(653, 876);
+            this.Controls.Add(this.BTN_highlight);
+            this.Controls.Add(this.DTP_gio);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -528,7 +572,6 @@ namespace DangNhap
             this.Controls.Add(this.LB_themcongviec);
             this.Controls.Add(this.CBB_macanho);
             this.Controls.Add(this.CBB_manhanvien);
-            this.Controls.Add(this.TXB_gio);
             this.Controls.Add(this.BTN_file);
             this.Controls.Add(this.CB_thoihan);
             this.Controls.Add(this.RBTN_toancongty);
@@ -541,10 +584,11 @@ namespace DangNhap
             this.Controls.Add(this.BTN_luu);
             this.Controls.Add(this.LB_macanho);
             this.Controls.Add(this.LB_thoihan);
-            this.Controls.Add(this.DT_thoihan);
+            this.Controls.Add(this.DTP_ngay);
             this.Controls.Add(this.LB_tepdinhkem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ChiTietCongViec";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChiTietCongViec";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ChiTietCongViec_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ChiTietCongViec_MouseMove);
@@ -558,7 +602,6 @@ namespace DangNhap
 
         private System.Windows.Forms.ComboBox CBB_macanho;
         private System.Windows.Forms.ComboBox CBB_manhanvien;
-        private System.Windows.Forms.TextBox TXB_gio;
         private System.Windows.Forms.Button BTN_file;
         private System.Windows.Forms.CheckBox CB_thoihan;
         private System.Windows.Forms.RadioButton RBTN_toancongty;
@@ -571,7 +614,7 @@ namespace DangNhap
         private Guna.UI.WinForms.GunaGradientButton BTN_luu;
         private System.Windows.Forms.Label LB_macanho;
         private System.Windows.Forms.Label LB_thoihan;
-        private System.Windows.Forms.DateTimePicker DT_thoihan;
+        private System.Windows.Forms.DateTimePicker DTP_ngay;
         private System.Windows.Forms.Label LB_tepdinhkem;
         private System.Windows.Forms.Label LB_themcongviec;
         private System.Windows.Forms.ComboBox CBB_nhom;
@@ -588,5 +631,8 @@ namespace DangNhap
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker DTP_gio;
+        private Guna.UI.WinForms.GunaGradientButton BTN_highlight;
     }
 }
