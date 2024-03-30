@@ -16,5 +16,11 @@ namespace DangNhap
         {
             InitializeComponent();
         }
+
+        private void BTN_biensoan_Click(object sender, EventArgs e)
+        {
+            SoanThongBao stb = new SoanThongBao();
+            stb.Show();
+        }
     }
 }
