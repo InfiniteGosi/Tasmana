@@ -12,23 +12,20 @@ namespace DangNhap
 {
     public partial class Home : Form
     {
-        //
-        int mov;
-        int movX;
-        int movY;
+        private int mov;
+        private int movX;
+        private int movY;
         public Home()
         {
             InitializeComponent();
+            LB_tendangnhap.Text = $"Xin chào {DangNhap.currentAccount.EmployeeId}";
         }
 
         private Form currentFormChild;
 
         private void OpenChildForm(Form childForm)
         {
-            if (currentFormChild != null)
-            {
-                currentFormChild.Close();
-            }
+            currentFormChild?.Close();
             currentFormChild = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -41,10 +38,7 @@ namespace DangNhap
 
         private void BTN_trangchu_Click(object sender, EventArgs e)
         {
-            if (currentFormChild != null)
-            {
-                currentFormChild.Close();
-            }
+            currentFormChild?.Close();
         }
 
         private void BTN_thongbao_Click(object sender, EventArgs e)
