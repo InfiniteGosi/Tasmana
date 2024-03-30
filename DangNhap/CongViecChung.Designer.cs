@@ -33,7 +33,6 @@ namespace DangNhap
             this.BTN_themcongviec = new Guna.UI.WinForms.GunaGradientButton();
             this.PN_hienthicongviec = new System.Windows.Forms.Panel();
             this.BTN_chitietcongviec = new Guna.UI.WinForms.GunaGradientButton();
-            this.BTN_timkiem = new Guna.UI.WinForms.GunaGradientButton();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
@@ -119,34 +118,6 @@ namespace DangNhap
             this.BTN_chitietcongviec.Size = new System.Drawing.Size(37, 33);
             this.BTN_chitietcongviec.TabIndex = 94;
             this.BTN_chitietcongviec.Click += new System.EventHandler(this.BTN_chitietcongviec_Click);
-            // 
-            // BTN_timkiem
-            // 
-            this.BTN_timkiem.Animated = true;
-            this.BTN_timkiem.AnimationHoverSpeed = 1F;
-            this.BTN_timkiem.AnimationSpeed = 0.03F;
-            this.BTN_timkiem.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_timkiem.BaseColor1 = System.Drawing.Color.White;
-            this.BTN_timkiem.BaseColor2 = System.Drawing.Color.Silver;
-            this.BTN_timkiem.BorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_timkiem.BorderSize = 2;
-            this.BTN_timkiem.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.BTN_timkiem.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_timkiem.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_timkiem.ForeColor = System.Drawing.Color.Black;
-            this.BTN_timkiem.Image = ((System.Drawing.Image)(resources.GetObject("BTN_timkiem.Image")));
-            this.BTN_timkiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.BTN_timkiem.ImageSize = new System.Drawing.Size(13, 13);
-            this.BTN_timkiem.Location = new System.Drawing.Point(599, 123);
-            this.BTN_timkiem.Name = "BTN_timkiem";
-            this.BTN_timkiem.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BTN_timkiem.OnHoverBaseColor2 = System.Drawing.Color.Gray;
-            this.BTN_timkiem.OnHoverBorderColor = System.Drawing.Color.White;
-            this.BTN_timkiem.OnHoverForeColor = System.Drawing.Color.White;
-            this.BTN_timkiem.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("BTN_timkiem.OnHoverImage")));
-            this.BTN_timkiem.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_timkiem.Size = new System.Drawing.Size(46, 27);
-            this.BTN_timkiem.TabIndex = 79;
             // 
             // comboBox4
             // 
@@ -309,7 +280,6 @@ namespace DangNhap
             this.Controls.Add(this.PN_hienthicongviec);
             this.Controls.Add(this.gunaGradientButton1);
             this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.BTN_timkiem);
             this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.BTN_themcongviec);
@@ -326,7 +296,6 @@ namespace DangNhap
 
         private Guna.UI.WinForms.GunaGradientButton BTN_themcongviec;
         private System.Windows.Forms.Panel PN_hienthicongviec;
-        private Guna.UI.WinForms.GunaGradientButton BTN_timkiem;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.ComboBox comboBox6;

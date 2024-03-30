@@ -30,154 +30,87 @@ namespace DangNhap
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NhanVien));
-            this.BTN_thue = new Guna.UI.WinForms.GunaGradientButton();
-            this.BTN_sathai = new Guna.UI.WinForms.GunaGradientButton();
             this.PN_hienthinhanvien = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.BTN_themcongviec = new Guna.UI.WinForms.GunaGradientButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.TXB_sotrang = new System.Windows.Forms.TextBox();
             this.BTN_trangtruoc = new System.Windows.Forms.Button();
             this.BTN_trangsau = new System.Windows.Forms.Button();
             this.BTN_in = new Guna.UI.WinForms.GunaGradientButton();
-            this.BTN_timkiem = new Guna.UI.WinForms.GunaGradientButton();
+            this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // BTN_thue
-            // 
-            this.BTN_thue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_thue.Animated = true;
-            this.BTN_thue.AnimationHoverSpeed = 1F;
-            this.BTN_thue.AnimationSpeed = 0.03F;
-            this.BTN_thue.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_thue.BaseColor1 = System.Drawing.Color.White;
-            this.BTN_thue.BaseColor2 = System.Drawing.Color.Silver;
-            this.BTN_thue.BorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_thue.BorderSize = 2;
-            this.BTN_thue.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.BTN_thue.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_thue.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_thue.ForeColor = System.Drawing.Color.Black;
-            this.BTN_thue.Image = ((System.Drawing.Image)(resources.GetObject("BTN_thue.Image")));
-            this.BTN_thue.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.BTN_thue.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_thue.Location = new System.Drawing.Point(1200, 41);
-            this.BTN_thue.Name = "BTN_thue";
-            this.BTN_thue.OnHoverBaseColor1 = System.Drawing.Color.Green;
-            this.BTN_thue.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.BTN_thue.OnHoverBorderColor = System.Drawing.Color.White;
-            this.BTN_thue.OnHoverForeColor = System.Drawing.Color.White;
-            this.BTN_thue.OnHoverImage = null;
-            this.BTN_thue.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_thue.Size = new System.Drawing.Size(46, 27);
-            this.BTN_thue.TabIndex = 19;
-            // 
-            // BTN_sathai
-            // 
-            this.BTN_sathai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_sathai.Animated = true;
-            this.BTN_sathai.AnimationHoverSpeed = 1F;
-            this.BTN_sathai.AnimationSpeed = 0.03F;
-            this.BTN_sathai.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_sathai.BaseColor1 = System.Drawing.Color.White;
-            this.BTN_sathai.BaseColor2 = System.Drawing.Color.Silver;
-            this.BTN_sathai.BorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_sathai.BorderSize = 2;
-            this.BTN_sathai.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.BTN_sathai.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_sathai.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_sathai.ForeColor = System.Drawing.Color.Black;
-            this.BTN_sathai.Image = ((System.Drawing.Image)(resources.GetObject("BTN_sathai.Image")));
-            this.BTN_sathai.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.BTN_sathai.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_sathai.Location = new System.Drawing.Point(1272, 41);
-            this.BTN_sathai.Name = "BTN_sathai";
-            this.BTN_sathai.OnHoverBaseColor1 = System.Drawing.Color.Red;
-            this.BTN_sathai.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.BTN_sathai.OnHoverBorderColor = System.Drawing.Color.White;
-            this.BTN_sathai.OnHoverForeColor = System.Drawing.Color.White;
-            this.BTN_sathai.OnHoverImage = null;
-            this.BTN_sathai.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_sathai.Size = new System.Drawing.Size(46, 27);
-            this.BTN_sathai.TabIndex = 20;
             // 
             // PN_hienthinhanvien
             // 
             this.PN_hienthinhanvien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PN_hienthinhanvien.AutoScrollMargin = new System.Drawing.Size(20, 0);
+            this.PN_hienthinhanvien.AutoScroll = true;
+            this.PN_hienthinhanvien.AutoScrollMargin = new System.Drawing.Size(2, 0);
             this.PN_hienthinhanvien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.PN_hienthinhanvien.Location = new System.Drawing.Point(65, 103);
             this.PN_hienthinhanvien.Name = "PN_hienthinhanvien";
-            this.PN_hienthinhanvien.Size = new System.Drawing.Size(1300, 401);
-            this.PN_hienthinhanvien.TabIndex = 68;
+            this.PN_hienthinhanvien.Size = new System.Drawing.Size(1248, 401);
+            this.PN_hienthinhanvien.TabIndex = 100;
             // 
-            // panel1
+            // BTN_themcongviec
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.AutoScrollMargin = new System.Drawing.Size(20, 0);
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Location = new System.Drawing.Point(61, 100);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1307, 408);
-            this.panel1.TabIndex = 70;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.BackColor = System.Drawing.Color.Black;
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.ForeColor = System.Drawing.Color.White;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(315, 41);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 27);
-            this.comboBox3.TabIndex = 66;
-            this.comboBox3.Text = "All";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.Black;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.White;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(188, 41);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 27);
-            this.comboBox2.TabIndex = 65;
-            this.comboBox2.Text = "All";
+            this.BTN_themcongviec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_themcongviec.Animated = true;
+            this.BTN_themcongviec.AnimationHoverSpeed = 1F;
+            this.BTN_themcongviec.AnimationSpeed = 0.03F;
+            this.BTN_themcongviec.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_themcongviec.BaseColor1 = System.Drawing.Color.DarkGreen;
+            this.BTN_themcongviec.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTN_themcongviec.BorderColor = System.Drawing.Color.White;
+            this.BTN_themcongviec.BorderSize = 1;
+            this.BTN_themcongviec.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_themcongviec.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_themcongviec.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_themcongviec.ForeColor = System.Drawing.Color.White;
+            this.BTN_themcongviec.Image = ((System.Drawing.Image)(resources.GetObject("BTN_themcongviec.Image")));
+            this.BTN_themcongviec.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_themcongviec.ImageSize = new System.Drawing.Size(20, 20);
+            this.BTN_themcongviec.Location = new System.Drawing.Point(1273, 57);
+            this.BTN_themcongviec.Name = "BTN_themcongviec";
+            this.BTN_themcongviec.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTN_themcongviec.OnHoverBaseColor2 = System.Drawing.Color.DarkGreen;
+            this.BTN_themcongviec.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_themcongviec.OnHoverForeColor = System.Drawing.Color.Black;
+            this.BTN_themcongviec.OnHoverImage = null;
+            this.BTN_themcongviec.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_themcongviec.Size = new System.Drawing.Size(40, 40);
+            this.BTN_themcongviec.TabIndex = 94;
+            this.BTN_themcongviec.Click += new System.EventHandler(this.BTN_themcongviec_Click);
             // 
             // comboBox1
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.Black;
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(61, 41);
+            this.comboBox1.Location = new System.Drawing.Point(446, 67);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 27);
-            this.comboBox1.TabIndex = 64;
+            this.comboBox1.TabIndex = 105;
             this.comboBox1.Text = "All";
             // 
             // TXB_sotrang
             // 
             this.TXB_sotrang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.TXB_sotrang.BackColor = System.Drawing.SystemColors.MenuText;
+            this.TXB_sotrang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.TXB_sotrang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TXB_sotrang.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_sotrang.ForeColor = System.Drawing.Color.White;
-            this.TXB_sotrang.Location = new System.Drawing.Point(1301, 529);
+            this.TXB_sotrang.Location = new System.Drawing.Point(1246, 527);
             this.TXB_sotrang.Multiline = true;
             this.TXB_sotrang.Name = "TXB_sotrang";
             this.TXB_sotrang.Size = new System.Drawing.Size(30, 30);
-            this.TXB_sotrang.TabIndex = 92;
+            this.TXB_sotrang.TabIndex = 104;
             this.TXB_sotrang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // BTN_trangtruoc
@@ -186,10 +119,10 @@ namespace DangNhap
             this.BTN_trangtruoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_trangtruoc.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_trangtruoc.ForeColor = System.Drawing.Color.White;
-            this.BTN_trangtruoc.Location = new System.Drawing.Point(1264, 529);
+            this.BTN_trangtruoc.Location = new System.Drawing.Point(1209, 527);
             this.BTN_trangtruoc.Name = "BTN_trangtruoc";
             this.BTN_trangtruoc.Size = new System.Drawing.Size(30, 30);
-            this.BTN_trangtruoc.TabIndex = 91;
+            this.BTN_trangtruoc.TabIndex = 103;
             this.BTN_trangtruoc.Text = "<";
             this.BTN_trangtruoc.UseVisualStyleBackColor = true;
             // 
@@ -199,10 +132,10 @@ namespace DangNhap
             this.BTN_trangsau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_trangsau.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_trangsau.ForeColor = System.Drawing.Color.White;
-            this.BTN_trangsau.Location = new System.Drawing.Point(1338, 529);
+            this.BTN_trangsau.Location = new System.Drawing.Point(1283, 527);
             this.BTN_trangsau.Name = "BTN_trangsau";
             this.BTN_trangsau.Size = new System.Drawing.Size(30, 30);
-            this.BTN_trangsau.TabIndex = 90;
+            this.BTN_trangsau.TabIndex = 102;
             this.BTN_trangsau.Text = ">";
             this.BTN_trangsau.UseVisualStyleBackColor = true;
             // 
@@ -221,78 +154,102 @@ namespace DangNhap
             this.BTN_in.ForeColor = System.Drawing.Color.White;
             this.BTN_in.Image = ((System.Drawing.Image)(resources.GetObject("BTN_in.Image")));
             this.BTN_in.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_in.Location = new System.Drawing.Point(61, 529);
+            this.BTN_in.Location = new System.Drawing.Point(65, 527);
             this.BTN_in.Name = "BTN_in";
             this.BTN_in.OnHoverBaseColor1 = System.Drawing.Color.DimGray;
             this.BTN_in.OnHoverBaseColor2 = System.Drawing.Color.DimGray;
             this.BTN_in.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.BTN_in.OnHoverForeColor = System.Drawing.Color.DimGray;
+            this.BTN_in.OnHoverForeColor = System.Drawing.Color.Black;
             this.BTN_in.OnHoverImage = null;
             this.BTN_in.OnPressedColor = System.Drawing.Color.Black;
             this.BTN_in.Size = new System.Drawing.Size(77, 31);
-            this.BTN_in.TabIndex = 93;
+            this.BTN_in.TabIndex = 101;
             this.BTN_in.Text = "In";
             // 
-            // BTN_timkiem
+            // gunaGradientButton1
             // 
-            this.BTN_timkiem.Animated = true;
-            this.BTN_timkiem.AnimationHoverSpeed = 1F;
-            this.BTN_timkiem.AnimationSpeed = 0.03F;
-            this.BTN_timkiem.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_timkiem.BaseColor1 = System.Drawing.Color.White;
-            this.BTN_timkiem.BaseColor2 = System.Drawing.Color.Silver;
-            this.BTN_timkiem.BorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_timkiem.BorderSize = 2;
-            this.BTN_timkiem.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.BTN_timkiem.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_timkiem.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_timkiem.ForeColor = System.Drawing.Color.Black;
-            this.BTN_timkiem.Image = ((System.Drawing.Image)(resources.GetObject("BTN_timkiem.Image")));
-            this.BTN_timkiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.BTN_timkiem.ImageSize = new System.Drawing.Size(13, 13);
-            this.BTN_timkiem.Location = new System.Drawing.Point(569, 41);
-            this.BTN_timkiem.Name = "BTN_timkiem";
-            this.BTN_timkiem.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BTN_timkiem.OnHoverBaseColor2 = System.Drawing.Color.Gray;
-            this.BTN_timkiem.OnHoverBorderColor = System.Drawing.Color.White;
-            this.BTN_timkiem.OnHoverForeColor = System.Drawing.Color.White;
-            this.BTN_timkiem.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("BTN_timkiem.OnHoverImage")));
-            this.BTN_timkiem.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_timkiem.Size = new System.Drawing.Size(46, 27);
-            this.BTN_timkiem.TabIndex = 67;
+            this.gunaGradientButton1.Animated = true;
+            this.gunaGradientButton1.AnimationHoverSpeed = 1F;
+            this.gunaGradientButton1.AnimationSpeed = 0.03F;
+            this.gunaGradientButton1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradientButton1.BaseColor1 = System.Drawing.Color.White;
+            this.gunaGradientButton1.BaseColor2 = System.Drawing.Color.Silver;
+            this.gunaGradientButton1.BorderColor = System.Drawing.Color.DarkGray;
+            this.gunaGradientButton1.BorderSize = 2;
+            this.gunaGradientButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaGradientButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaGradientButton1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaGradientButton1.ForeColor = System.Drawing.Color.Black;
+            this.gunaGradientButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton1.Image")));
+            this.gunaGradientButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaGradientButton1.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaGradientButton1.Location = new System.Drawing.Point(573, 67);
+            this.gunaGradientButton1.Name = "gunaGradientButton1";
+            this.gunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.Gray;
+            this.gunaGradientButton1.OnHoverBorderColor = System.Drawing.Color.White;
+            this.gunaGradientButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaGradientButton1.OnHoverImage = null;
+            this.gunaGradientButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaGradientButton1.Size = new System.Drawing.Size(46, 27);
+            this.gunaGradientButton1.TabIndex = 98;
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox6.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox6.ForeColor = System.Drawing.Color.White;
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(319, 67);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(121, 27);
+            this.comboBox6.TabIndex = 97;
+            this.comboBox6.Text = "All";
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.comboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox5.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox5.ForeColor = System.Drawing.Color.White;
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(192, 67);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(121, 27);
+            this.comboBox5.TabIndex = 96;
+            this.comboBox5.Text = "All";
             // 
             // comboBox4
             // 
-            this.comboBox4.BackColor = System.Drawing.Color.Black;
+            this.comboBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox4.ForeColor = System.Drawing.Color.White;
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(442, 41);
+            this.comboBox4.Location = new System.Drawing.Point(65, 67);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(121, 27);
-            this.comboBox4.TabIndex = 94;
+            this.comboBox4.TabIndex = 95;
             this.comboBox4.Text = "All";
             // 
             // NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1376, 782);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.BTN_in);
+            this.Controls.Add(this.PN_hienthinhanvien);
+            this.Controls.Add(this.BTN_themcongviec);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.TXB_sotrang);
             this.Controls.Add(this.BTN_trangtruoc);
             this.Controls.Add(this.BTN_trangsau);
-            this.Controls.Add(this.PN_hienthinhanvien);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.BTN_timkiem);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.BTN_sathai);
-            this.Controls.Add(this.BTN_thue);
+            this.Controls.Add(this.BTN_in);
+            this.Controls.Add(this.gunaGradientButton1);
+            this.Controls.Add(this.comboBox6);
+            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.comboBox4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NhanVien";
             this.Text = "NhanVien";
@@ -303,18 +260,16 @@ namespace DangNhap
 
         #endregion
 
-        private Guna.UI.WinForms.GunaGradientButton BTN_thue;
-        private Guna.UI.WinForms.GunaGradientButton BTN_sathai;
         private System.Windows.Forms.Panel PN_hienthinhanvien;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private Guna.UI.WinForms.GunaGradientButton BTN_themcongviec;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox TXB_sotrang;
         private System.Windows.Forms.Button BTN_trangtruoc;
         private System.Windows.Forms.Button BTN_trangsau;
         private Guna.UI.WinForms.GunaGradientButton BTN_in;
-        private Guna.UI.WinForms.GunaGradientButton BTN_timkiem;
+        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton1;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.ComboBox comboBox4;
     }
 }
