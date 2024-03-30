@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace DangNhap
 {
-    public partial class LichSuCanHo : Form
+    public partial class NhanVien : Form
     {
-        public LichSuCanHo()
+        public NhanVien()
         {
             InitializeComponent();
-        }
-
-        private void BTN_thoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

@@ -67,11 +67,23 @@
     <Compile Include="ChiTietCanHo.Designer.cs">
       <DependentUpon>ChiTietCanHo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChiTietCongViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTietCongViec.Designer.cs">
+      <DependentUpon>ChiTietCongViec.cs</DependentUpon>
+    </Compile>
     <Compile Include="CongViecChung.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CongViecChung.Designer.cs">
       <DependentUpon>CongViecChung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CuDan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CuDan.Designer.cs">
+      <DependentUpon>CuDan.cs</DependentUpon>
     </Compile>
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
@@ -97,13 +109,31 @@
     <Compile Include="LichSuCanHo.Designer.cs">
       <DependentUpon>LichSuCanHo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ThemCongViec.cs">
+    <Compile Include="NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThemCongViec.Designer.cs">
-      <DependentUpon>ThemCongViec.cs</DependentUpon>
+    <Compile Include="NhanVien.Designer.cs">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThemCongViecNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemCongViecNhanVien.Designer.cs">
+      <DependentUpon>ThemCongViecNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemCongViecNhom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemCongViecNhom.Designer.cs">
+      <DependentUpon>ThemCongViecNhom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemCongViecPhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemCongViecPhongBan.Designer.cs">
+      <DependentUpon>ThemCongViecPhongBan.cs</DependentUpon>
     </Compile>
     <Compile Include="ThongBao.cs">
       <SubType>Form</SubType>
@@ -123,14 +153,26 @@
     <Compile Include="ThongTinCaNhan.Designer.cs">
       <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongTinCuDan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinCuDan.Designer.cs">
+      <DependentUpon>ThongTinCuDan.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CanHo.resx">
       <DependentUpon>CanHo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChiTietCanHo.resx">
       <DependentUpon>ChiTietCanHo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietCongViec.resx">
+      <DependentUpon>ChiTietCongViec.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CongViecChung.resx">
       <DependentUpon>CongViecChung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CuDan.resx">
+      <DependentUpon>CuDan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
@@ -144,6 +186,9 @@
     <EmbeddedResource Include="LichSuCanHo.resx">
       <DependentUpon>LichSuCanHo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien.resx">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -153,8 +198,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ThemCongViec.resx">
-      <DependentUpon>ThemCongViec.cs</DependentUpon>
+    <EmbeddedResource Include="ThemCongViecNhanVien.resx">
+      <DependentUpon>ThemCongViecNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemCongViecNhom.resx">
+      <DependentUpon>ThemCongViecNhom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemCongViecPhongBan.resx">
+      <DependentUpon>ThemCongViecPhongBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongBao.resx">
       <DependentUpon>ThongBao.cs</DependentUpon>

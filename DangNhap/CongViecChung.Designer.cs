@@ -30,405 +30,307 @@ namespace DangNhap
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CongViecChung));
-            this.pn_hienthicv = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.txb_mach = new Guna.UI.WinForms.GunaTextBox();
-            this.txb_stt = new Guna.UI.WinForms.GunaTextBox();
-            this.txb_thoihan = new Guna.UI.WinForms.GunaTextBox();
-            this.txb_trangthai = new Guna.UI.WinForms.GunaTextBox();
-            this.txb_noidung = new Guna.UI.WinForms.GunaTextBox();
-            this.txb_macv = new Guna.UI.WinForms.GunaTextBox();
-            this.txb_tennv = new Guna.UI.WinForms.GunaTextBox();
-            this.txb_manv = new Guna.UI.WinForms.GunaTextBox();
-            this.btn_themcv = new Guna.UI.WinForms.GunaGradientButton();
-            this.tS = new System.Windows.Forms.ToolStrip();
-            this.space = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.btn_in = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btn_download = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.toànBộToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.phòngBanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nhómToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pn_hienthicv.SuspendLayout();
-            this.tS.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
+            this.BTN_themcongviec = new Guna.UI.WinForms.GunaGradientButton();
+            this.PN_hienthicongviec = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.BTN_timkiem = new Guna.UI.WinForms.GunaGradientButton();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.BTN_in = new Guna.UI.WinForms.GunaGradientButton();
+            this.TXB_sotrang = new System.Windows.Forms.TextBox();
+            this.BTN_trangtruoc = new System.Windows.Forms.Button();
+            this.BTN_trangsau = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // pn_hienthicv
+            // BTN_themcongviec
             // 
-            this.pn_hienthicv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.BTN_themcongviec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_themcongviec.Animated = true;
+            this.BTN_themcongviec.AnimationHoverSpeed = 1F;
+            this.BTN_themcongviec.AnimationSpeed = 0.03F;
+            this.BTN_themcongviec.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_themcongviec.BaseColor1 = System.Drawing.Color.DarkGreen;
+            this.BTN_themcongviec.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTN_themcongviec.BorderColor = System.Drawing.Color.White;
+            this.BTN_themcongviec.BorderSize = 1;
+            this.BTN_themcongviec.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_themcongviec.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_themcongviec.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_themcongviec.ForeColor = System.Drawing.Color.White;
+            this.BTN_themcongviec.Image = ((System.Drawing.Image)(resources.GetObject("BTN_themcongviec.Image")));
+            this.BTN_themcongviec.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_themcongviec.ImageSize = new System.Drawing.Size(15, 15);
+            this.BTN_themcongviec.Location = new System.Drawing.Point(1607, 38);
+            this.BTN_themcongviec.Name = "BTN_themcongviec";
+            this.BTN_themcongviec.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTN_themcongviec.OnHoverBaseColor2 = System.Drawing.Color.DarkGreen;
+            this.BTN_themcongviec.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_themcongviec.OnHoverForeColor = System.Drawing.Color.Black;
+            this.BTN_themcongviec.OnHoverImage = null;
+            this.BTN_themcongviec.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_themcongviec.Size = new System.Drawing.Size(30, 30);
+            this.BTN_themcongviec.TabIndex = 8;
+            this.BTN_themcongviec.Click += new System.EventHandler(this.BTN_themcongviec_Click);
+            // 
+            // PN_hienthicongviec
+            // 
+            this.PN_hienthicongviec.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pn_hienthicv.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pn_hienthicv.BackgroundImage")));
-            this.pn_hienthicv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pn_hienthicv.Controls.Add(this.txb_mach);
-            this.pn_hienthicv.Controls.Add(this.txb_stt);
-            this.pn_hienthicv.Controls.Add(this.txb_thoihan);
-            this.pn_hienthicv.Controls.Add(this.txb_trangthai);
-            this.pn_hienthicv.Controls.Add(this.txb_noidung);
-            this.pn_hienthicv.Controls.Add(this.txb_macv);
-            this.pn_hienthicv.Controls.Add(this.txb_tennv);
-            this.pn_hienthicv.Controls.Add(this.txb_manv);
-            this.pn_hienthicv.GradientBottomLeft = System.Drawing.Color.Silver;
-            this.pn_hienthicv.GradientBottomRight = System.Drawing.Color.Gainsboro;
-            this.pn_hienthicv.GradientTopLeft = System.Drawing.Color.DarkGray;
-            this.pn_hienthicv.GradientTopRight = System.Drawing.Color.White;
-            this.pn_hienthicv.Location = new System.Drawing.Point(16, 77);
-            this.pn_hienthicv.Name = "pn_hienthicv";
-            this.pn_hienthicv.Quality = 10;
-            this.pn_hienthicv.Size = new System.Drawing.Size(1301, 566);
-            this.pn_hienthicv.TabIndex = 7;
+            this.PN_hienthicongviec.AutoScroll = true;
+            this.PN_hienthicongviec.AutoScrollMargin = new System.Drawing.Size(2, 0);
+            this.PN_hienthicongviec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.PN_hienthicongviec.Location = new System.Drawing.Point(65, 103);
+            this.PN_hienthicongviec.Name = "PN_hienthicongviec";
+            this.PN_hienthicongviec.Size = new System.Drawing.Size(1569, 595);
+            this.PN_hienthicongviec.TabIndex = 80;
             // 
-            // txb_mach
+            // panel1
             // 
-            this.txb_mach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txb_mach.BaseColor = System.Drawing.Color.Gray;
-            this.txb_mach.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.txb_mach.BorderSize = 1;
-            this.txb_mach.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_mach.FocusedBaseColor = System.Drawing.Color.White;
-            this.txb_mach.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txb_mach.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txb_mach.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_mach.Location = new System.Drawing.Point(884, 0);
-            this.txb_mach.Name = "txb_mach";
-            this.txb_mach.PasswordChar = '\0';
-            this.txb_mach.SelectedText = "";
-            this.txb_mach.Size = new System.Drawing.Size(135, 32);
-            this.txb_mach.TabIndex = 7;
-            this.txb_mach.Text = "Mã căn hộ";
-            this.txb_mach.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txb_stt
-            // 
-            this.txb_stt.BaseColor = System.Drawing.Color.Gray;
-            this.txb_stt.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.txb_stt.BorderSize = 1;
-            this.txb_stt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_stt.FocusedBaseColor = System.Drawing.Color.White;
-            this.txb_stt.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txb_stt.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txb_stt.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_stt.Location = new System.Drawing.Point(0, 0);
-            this.txb_stt.Name = "txb_stt";
-            this.txb_stt.PasswordChar = '\0';
-            this.txb_stt.SelectedText = "";
-            this.txb_stt.Size = new System.Drawing.Size(73, 32);
-            this.txb_stt.TabIndex = 6;
-            this.txb_stt.Text = "STT";
-            this.txb_stt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txb_thoihan
-            // 
-            this.txb_thoihan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txb_thoihan.BaseColor = System.Drawing.Color.Gray;
-            this.txb_thoihan.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.txb_thoihan.BorderSize = 1;
-            this.txb_thoihan.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_thoihan.FocusedBaseColor = System.Drawing.Color.White;
-            this.txb_thoihan.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txb_thoihan.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txb_thoihan.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_thoihan.Location = new System.Drawing.Point(1143, 0);
-            this.txb_thoihan.Name = "txb_thoihan";
-            this.txb_thoihan.PasswordChar = '\0';
-            this.txb_thoihan.SelectedText = "";
-            this.txb_thoihan.Size = new System.Drawing.Size(158, 32);
-            this.txb_thoihan.TabIndex = 5;
-            this.txb_thoihan.Text = "Thời hạn";
-            this.txb_thoihan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txb_trangthai
-            // 
-            this.txb_trangthai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txb_trangthai.BaseColor = System.Drawing.Color.Gray;
-            this.txb_trangthai.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.txb_trangthai.BorderSize = 1;
-            this.txb_trangthai.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_trangthai.FocusedBaseColor = System.Drawing.Color.White;
-            this.txb_trangthai.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txb_trangthai.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txb_trangthai.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_trangthai.Location = new System.Drawing.Point(1018, 0);
-            this.txb_trangthai.Name = "txb_trangthai";
-            this.txb_trangthai.PasswordChar = '\0';
-            this.txb_trangthai.SelectedText = "";
-            this.txb_trangthai.Size = new System.Drawing.Size(126, 32);
-            this.txb_trangthai.TabIndex = 4;
-            this.txb_trangthai.Text = "Trạng thái";
-            this.txb_trangthai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txb_noidung
-            // 
-            this.txb_noidung.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txb_noidung.BaseColor = System.Drawing.Color.Gray;
-            this.txb_noidung.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.txb_noidung.BorderSize = 1;
-            this.txb_noidung.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_noidung.FocusedBaseColor = System.Drawing.Color.White;
-            this.txb_noidung.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txb_noidung.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txb_noidung.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_noidung.Location = new System.Drawing.Point(575, 0);
-            this.txb_noidung.Name = "txb_noidung";
-            this.txb_noidung.PasswordChar = '\0';
-            this.txb_noidung.SelectedText = "";
-            this.txb_noidung.Size = new System.Drawing.Size(310, 32);
-            this.txb_noidung.TabIndex = 3;
-            this.txb_noidung.Text = "Nội dung công việc";
-            this.txb_noidung.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.panel1.AutoScrollMargin = new System.Drawing.Size(20, 0);
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Location = new System.Drawing.Point(61, 100);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1576, 602);
+            this.panel1.TabIndex = 82;
             // 
-            // txb_macv
+            // BTN_timkiem
             // 
-            this.txb_macv.BaseColor = System.Drawing.Color.Gray;
-            this.txb_macv.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.txb_macv.BorderSize = 1;
-            this.txb_macv.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_macv.FocusedBaseColor = System.Drawing.Color.White;
-            this.txb_macv.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txb_macv.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txb_macv.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_macv.Location = new System.Drawing.Point(441, 0);
-            this.txb_macv.Name = "txb_macv";
-            this.txb_macv.PasswordChar = '\0';
-            this.txb_macv.SelectedText = "";
-            this.txb_macv.Size = new System.Drawing.Size(135, 32);
-            this.txb_macv.TabIndex = 2;
-            this.txb_macv.Text = "Mã công việc";
-            this.txb_macv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_timkiem.Animated = true;
+            this.BTN_timkiem.AnimationHoverSpeed = 1F;
+            this.BTN_timkiem.AnimationSpeed = 0.03F;
+            this.BTN_timkiem.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_timkiem.BaseColor1 = System.Drawing.Color.White;
+            this.BTN_timkiem.BaseColor2 = System.Drawing.Color.Silver;
+            this.BTN_timkiem.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_timkiem.BorderSize = 2;
+            this.BTN_timkiem.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_timkiem.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_timkiem.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_timkiem.ForeColor = System.Drawing.Color.Black;
+            this.BTN_timkiem.Image = ((System.Drawing.Image)(resources.GetObject("BTN_timkiem.Image")));
+            this.BTN_timkiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_timkiem.ImageSize = new System.Drawing.Size(13, 13);
+            this.BTN_timkiem.Location = new System.Drawing.Point(599, 123);
+            this.BTN_timkiem.Name = "BTN_timkiem";
+            this.BTN_timkiem.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BTN_timkiem.OnHoverBaseColor2 = System.Drawing.Color.Gray;
+            this.BTN_timkiem.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_timkiem.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_timkiem.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("BTN_timkiem.OnHoverImage")));
+            this.BTN_timkiem.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_timkiem.Size = new System.Drawing.Size(46, 27);
+            this.BTN_timkiem.TabIndex = 79;
             // 
-            // txb_tennv
+            // comboBox4
             // 
-            this.txb_tennv.BaseColor = System.Drawing.Color.Gray;
-            this.txb_tennv.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.txb_tennv.BorderSize = 1;
-            this.txb_tennv.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_tennv.FocusedBaseColor = System.Drawing.Color.White;
-            this.txb_tennv.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txb_tennv.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txb_tennv.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_tennv.Location = new System.Drawing.Point(206, 0);
-            this.txb_tennv.Name = "txb_tennv";
-            this.txb_tennv.PasswordChar = '\0';
-            this.txb_tennv.SelectedText = "";
-            this.txb_tennv.Size = new System.Drawing.Size(236, 32);
-            this.txb_tennv.TabIndex = 1;
-            this.txb_tennv.Text = "Tên nhân viên";
-            this.txb_tennv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.comboBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4.ForeColor = System.Drawing.Color.White;
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(61, 38);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(121, 27);
+            this.comboBox4.TabIndex = 76;
+            this.comboBox4.Text = "All";
             // 
-            // txb_manv
+            // comboBox5
             // 
-            this.txb_manv.BaseColor = System.Drawing.Color.Gray;
-            this.txb_manv.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.txb_manv.BorderSize = 1;
-            this.txb_manv.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_manv.FocusedBaseColor = System.Drawing.Color.White;
-            this.txb_manv.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txb_manv.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txb_manv.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_manv.Location = new System.Drawing.Point(72, 0);
-            this.txb_manv.Name = "txb_manv";
-            this.txb_manv.PasswordChar = '\0';
-            this.txb_manv.SelectedText = "";
-            this.txb_manv.Size = new System.Drawing.Size(135, 32);
-            this.txb_manv.TabIndex = 0;
-            this.txb_manv.Text = "Mã nhân viên";
-            this.txb_manv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.comboBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.comboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox5.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox5.ForeColor = System.Drawing.Color.White;
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(188, 38);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(121, 27);
+            this.comboBox5.TabIndex = 77;
+            this.comboBox5.Text = "All";
             // 
-            // btn_themcv
+            // comboBox6
             // 
-            this.btn_themcv.Animated = true;
-            this.btn_themcv.AnimationHoverSpeed = 1F;
-            this.btn_themcv.AnimationSpeed = 0.03F;
-            this.btn_themcv.BackColor = System.Drawing.Color.Transparent;
-            this.btn_themcv.BaseColor1 = System.Drawing.Color.White;
-            this.btn_themcv.BaseColor2 = System.Drawing.Color.Silver;
-            this.btn_themcv.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_themcv.BorderSize = 2;
-            this.btn_themcv.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_themcv.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_themcv.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_themcv.ForeColor = System.Drawing.Color.Black;
-            this.btn_themcv.Image = ((System.Drawing.Image)(resources.GetObject("btn_themcv.Image")));
-            this.btn_themcv.ImageSize = new System.Drawing.Size(10, 10);
-            this.btn_themcv.Location = new System.Drawing.Point(1217, 21);
-            this.btn_themcv.Name = "btn_themcv";
-            this.btn_themcv.OnHoverBaseColor1 = System.Drawing.Color.Lime;
-            this.btn_themcv.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btn_themcv.OnHoverBorderColor = System.Drawing.Color.White;
-            this.btn_themcv.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_themcv.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btn_themcv.OnHoverImage")));
-            this.btn_themcv.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_themcv.Size = new System.Drawing.Size(100, 37);
-            this.btn_themcv.TabIndex = 8;
-            this.btn_themcv.Text = "Thêm";
-            this.btn_themcv.Click += new System.EventHandler(this.btn_themcv_Click);
+            this.comboBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox6.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox6.ForeColor = System.Drawing.Color.White;
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(315, 38);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(121, 27);
+            this.comboBox6.TabIndex = 78;
+            this.comboBox6.Text = "All";
             // 
-            // tS
+            // gunaGradientButton1
             // 
-            this.tS.BackColor = System.Drawing.Color.Black;
-            this.tS.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tS.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.tS.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.tS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.space,
-            this.toolStripSeparator3,
-            this.btn_in,
-            this.toolStripSeparator1,
-            this.btn_download,
-            this.toolStripSeparator2});
-            this.tS.Location = new System.Drawing.Point(0, 668);
-            this.tS.Name = "tS";
-            this.tS.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.tS.Size = new System.Drawing.Size(1329, 27);
-            this.tS.TabIndex = 9;
-            this.tS.Text = "toolStrip1";
+            this.gunaGradientButton1.Animated = true;
+            this.gunaGradientButton1.AnimationHoverSpeed = 1F;
+            this.gunaGradientButton1.AnimationSpeed = 0.03F;
+            this.gunaGradientButton1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradientButton1.BaseColor1 = System.Drawing.Color.White;
+            this.gunaGradientButton1.BaseColor2 = System.Drawing.Color.Silver;
+            this.gunaGradientButton1.BorderColor = System.Drawing.Color.DarkGray;
+            this.gunaGradientButton1.BorderSize = 2;
+            this.gunaGradientButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaGradientButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaGradientButton1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaGradientButton1.ForeColor = System.Drawing.Color.Black;
+            this.gunaGradientButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton1.Image")));
+            this.gunaGradientButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaGradientButton1.ImageSize = new System.Drawing.Size(13, 13);
+            this.gunaGradientButton1.Location = new System.Drawing.Point(569, 38);
+            this.gunaGradientButton1.Name = "gunaGradientButton1";
+            this.gunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.Gray;
+            this.gunaGradientButton1.OnHoverBorderColor = System.Drawing.Color.White;
+            this.gunaGradientButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaGradientButton1.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton1.OnHoverImage")));
+            this.gunaGradientButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaGradientButton1.Size = new System.Drawing.Size(46, 27);
+            this.gunaGradientButton1.TabIndex = 79;
             // 
-            // space
+            // panel2
             // 
-            this.space.Name = "space";
-            this.space.Size = new System.Drawing.Size(37, 24);
-            this.space.Text = "       ";
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.AutoScrollMargin = new System.Drawing.Size(20, 0);
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Location = new System.Drawing.Point(61, 100);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1576, 602);
+            this.panel2.TabIndex = 82;
             // 
-            // toolStripSeparator3
+            // BTN_in
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
+            this.BTN_in.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BTN_in.AnimationHoverSpeed = 0.07F;
+            this.BTN_in.AnimationSpeed = 0.03F;
+            this.BTN_in.BaseColor1 = System.Drawing.Color.Transparent;
+            this.BTN_in.BaseColor2 = System.Drawing.Color.Transparent;
+            this.BTN_in.BorderColor = System.Drawing.Color.White;
+            this.BTN_in.BorderSize = 1;
+            this.BTN_in.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_in.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_in.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_in.ForeColor = System.Drawing.Color.White;
+            this.BTN_in.Image = ((System.Drawing.Image)(resources.GetObject("BTN_in.Image")));
+            this.BTN_in.ImageSize = new System.Drawing.Size(20, 20);
+            this.BTN_in.Location = new System.Drawing.Point(61, 722);
+            this.BTN_in.Name = "BTN_in";
+            this.BTN_in.OnHoverBaseColor1 = System.Drawing.Color.DimGray;
+            this.BTN_in.OnHoverBaseColor2 = System.Drawing.Color.DimGray;
+            this.BTN_in.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.BTN_in.OnHoverForeColor = System.Drawing.Color.Black;
+            this.BTN_in.OnHoverImage = null;
+            this.BTN_in.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_in.Size = new System.Drawing.Size(77, 31);
+            this.BTN_in.TabIndex = 83;
+            this.BTN_in.Text = "In";
             // 
-            // btn_in
+            // TXB_sotrang
             // 
-            this.btn_in.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btn_in.Image = ((System.Drawing.Image)(resources.GetObject("btn_in.Image")));
-            this.btn_in.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_in.Name = "btn_in";
-            this.btn_in.Size = new System.Drawing.Size(29, 24);
-            this.btn_in.Text = "Printer";
+            this.TXB_sotrang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.TXB_sotrang.BackColor = System.Drawing.SystemColors.MenuText;
+            this.TXB_sotrang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_sotrang.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_sotrang.ForeColor = System.Drawing.Color.White;
+            this.TXB_sotrang.Location = new System.Drawing.Point(1570, 722);
+            this.TXB_sotrang.Multiline = true;
+            this.TXB_sotrang.Name = "TXB_sotrang";
+            this.TXB_sotrang.Size = new System.Drawing.Size(30, 30);
+            this.TXB_sotrang.TabIndex = 92;
+            this.TXB_sotrang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // toolStripSeparator1
+            // BTN_trangtruoc
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.BTN_trangtruoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_trangtruoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_trangtruoc.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_trangtruoc.ForeColor = System.Drawing.Color.White;
+            this.BTN_trangtruoc.Location = new System.Drawing.Point(1533, 722);
+            this.BTN_trangtruoc.Name = "BTN_trangtruoc";
+            this.BTN_trangtruoc.Size = new System.Drawing.Size(30, 30);
+            this.BTN_trangtruoc.TabIndex = 91;
+            this.BTN_trangtruoc.Text = "<";
+            this.BTN_trangtruoc.UseVisualStyleBackColor = true;
             // 
-            // btn_download
+            // BTN_trangsau
             // 
-            this.btn_download.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btn_download.Image = ((System.Drawing.Image)(resources.GetObject("btn_download.Image")));
-            this.btn_download.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_download.Name = "btn_download";
-            this.btn_download.Size = new System.Drawing.Size(29, 24);
-            this.btn_download.Text = "Download";
+            this.BTN_trangsau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_trangsau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_trangsau.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_trangsau.ForeColor = System.Drawing.Color.White;
+            this.BTN_trangsau.Location = new System.Drawing.Point(1607, 722);
+            this.BTN_trangsau.Name = "BTN_trangsau";
+            this.BTN_trangsau.Size = new System.Drawing.Size(30, 30);
+            this.BTN_trangsau.TabIndex = 90;
+            this.BTN_trangsau.Text = ">";
+            this.BTN_trangsau.UseVisualStyleBackColor = true;
             // 
-            // toolStripSeparator2
+            // comboBox1
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(19, 25);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(70, 25);
-            this.toolStrip1.TabIndex = 10;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toànBộToolStripMenuItem,
-            this.phòngBanToolStripMenuItem,
-            this.nhómToolStripMenuItem});
-            this.toolStripButton1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(67, 25);
-            this.toolStripButton1.Text = "Lọc";
-            // 
-            // toànBộToolStripMenuItem
-            // 
-            this.toànBộToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.toànBộToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toànBộToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.toànBộToolStripMenuItem.Name = "toànBộToolStripMenuItem";
-            this.toànBộToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
-            this.toànBộToolStripMenuItem.Text = "Toàn bộ";
-            // 
-            // phòngBanToolStripMenuItem
-            // 
-            this.phòngBanToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.phòngBanToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phòngBanToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.phòngBanToolStripMenuItem.Name = "phòngBanToolStripMenuItem";
-            this.phòngBanToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
-            this.phòngBanToolStripMenuItem.Text = "Phòng ban";
-            // 
-            // nhómToolStripMenuItem
-            // 
-            this.nhómToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.nhómToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nhómToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.nhómToolStripMenuItem.Name = "nhómToolStripMenuItem";
-            this.nhómToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
-            this.nhómToolStripMenuItem.Text = "Nhóm";
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(442, 38);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 27);
+            this.comboBox1.TabIndex = 93;
+            this.comboBox1.Text = "All";
             // 
             // CongViecChung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(1329, 695);
-            this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.tS);
-            this.Controls.Add(this.btn_themcv);
-            this.Controls.Add(this.pn_hienthicv);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.ClientSize = new System.Drawing.Size(1703, 976);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.TXB_sotrang);
+            this.Controls.Add(this.BTN_trangtruoc);
+            this.Controls.Add(this.BTN_trangsau);
+            this.Controls.Add(this.BTN_in);
+            this.Controls.Add(this.PN_hienthicongviec);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.gunaGradientButton1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.comboBox6);
+            this.Controls.Add(this.BTN_timkiem);
+            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.BTN_themcongviec);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CongViecChung";
             this.Text = "CongViecChung";
-            this.pn_hienthicv.ResumeLayout(false);
-            this.tS.ResumeLayout(false);
-            this.tS.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private Bunifu.Framework.UI.BunifuGradientPanel pn_hienthicv;
-        private Guna.UI.WinForms.GunaGradientButton btn_themcv;
-        private System.Windows.Forms.ToolStrip tS;
-        private System.Windows.Forms.ToolStripButton btn_in;
-        private System.Windows.Forms.ToolStripButton btn_download;
-        private System.Windows.Forms.ToolStripLabel space;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private Guna.UI.WinForms.GunaTextBox txb_mach;
-        private Guna.UI.WinForms.GunaTextBox txb_stt;
-        private Guna.UI.WinForms.GunaTextBox txb_thoihan;
-        private Guna.UI.WinForms.GunaTextBox txb_trangthai;
-        private Guna.UI.WinForms.GunaTextBox txb_noidung;
-        private Guna.UI.WinForms.GunaTextBox txb_macv;
-        private Guna.UI.WinForms.GunaTextBox txb_tennv;
-        private Guna.UI.WinForms.GunaTextBox txb_manv;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripButton1;
-        private System.Windows.Forms.ToolStripMenuItem toànBộToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem phòngBanToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nhómToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+
+        private Guna.UI.WinForms.GunaGradientButton BTN_themcongviec;
+        private System.Windows.Forms.Panel PN_hienthicongviec;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI.WinForms.GunaGradientButton BTN_timkiem;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton1;
+        private System.Windows.Forms.Panel panel2;
+        private Guna.UI.WinForms.GunaGradientButton BTN_in;
+        private System.Windows.Forms.TextBox TXB_sotrang;
+        private System.Windows.Forms.Button BTN_trangtruoc;
+        private System.Windows.Forms.Button BTN_trangsau;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
