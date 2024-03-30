@@ -18,7 +18,7 @@ namespace DangNhap
         public Home()
         {
             InitializeComponent();
-            LB_tendangnhap.Text = $"Xin chào {DangNhap.currentAccount.EmployeeId}";
+            LB_tendangnhap.Text = $"Xin chào {DangNhap.currentAccount.EmployeeId} bạn là {DangNhap.currentAccount.Level}";
         }
 
         private Form currentFormChild;

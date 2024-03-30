@@ -20,5 +20,14 @@ namespace DangNhap.Model
             Password = password;
             EmployeeId = employeeId;
         }
+
+        public Account(string userId, string password, string employeeId, string level)
+        {
+            UserId = userId;
+            Password = password;
+            EmployeeId = employeeId;
+            Level = level;
+        }
+
     }
 }
