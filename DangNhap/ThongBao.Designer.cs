@@ -32,7 +32,7 @@ namespace DangNhap
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThongBao));
             this.BTN_chuadoc = new Guna.UI.WinForms.GunaButton();
             this.BTN_dadoc = new Guna.UI.WinForms.GunaButton();
-            this.PN_hienthinhanvien = new System.Windows.Forms.Panel();
+            this.PN_hienthithongbao = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.TXB_sotrang = new System.Windows.Forms.TextBox();
             this.BTN_trangtruoc = new System.Windows.Forms.Button();
@@ -99,18 +99,18 @@ namespace DangNhap
             this.BTN_dadoc.TabIndex = 2;
             this.BTN_dadoc.Text = "Đã gửi";
             // 
-            // PN_hienthinhanvien
+            // PN_hienthithongbao
             // 
-            this.PN_hienthinhanvien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.PN_hienthithongbao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PN_hienthinhanvien.AutoScroll = true;
-            this.PN_hienthinhanvien.AutoScrollMargin = new System.Drawing.Size(2, 0);
-            this.PN_hienthinhanvien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.PN_hienthinhanvien.Location = new System.Drawing.Point(226, 103);
-            this.PN_hienthinhanvien.Name = "PN_hienthinhanvien";
-            this.PN_hienthinhanvien.Size = new System.Drawing.Size(1087, 401);
-            this.PN_hienthinhanvien.TabIndex = 111;
+            this.PN_hienthithongbao.AutoScroll = true;
+            this.PN_hienthithongbao.AutoScrollMargin = new System.Drawing.Size(2, 0);
+            this.PN_hienthithongbao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.PN_hienthithongbao.Location = new System.Drawing.Point(226, 103);
+            this.PN_hienthithongbao.Name = "PN_hienthithongbao";
+            this.PN_hienthithongbao.Size = new System.Drawing.Size(1087, 401);
+            this.PN_hienthithongbao.TabIndex = 111;
             // 
             // comboBox1
             // 
@@ -295,7 +295,7 @@ namespace DangNhap
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1376, 782);
             this.Controls.Add(this.BTN_biensoan);
-            this.Controls.Add(this.PN_hienthinhanvien);
+            this.Controls.Add(this.PN_hienthithongbao);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.TXB_sotrang);
             this.Controls.Add(this.BTN_trangtruoc);
@@ -322,7 +322,7 @@ namespace DangNhap
 
         private Guna.UI.WinForms.GunaButton BTN_chuadoc;
         private Guna.UI.WinForms.GunaButton BTN_dadoc;
-        private System.Windows.Forms.Panel PN_hienthinhanvien;
+        private System.Windows.Forms.Panel PN_hienthithongbao;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox TXB_sotrang;
         private System.Windows.Forms.Button BTN_trangtruoc;
