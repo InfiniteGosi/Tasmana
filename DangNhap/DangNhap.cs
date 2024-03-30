@@ -5,10 +5,13 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DangNhap.Model;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace DangNhap
 {
@@ -72,7 +75,8 @@ namespace DangNhap
 
             if (password.Equals(pwd))
             {
-                currentAccount = new Account(userId, pwd, employeeId);
+                string level = phanQuyen(userId);
+                currentAccount = new Account(userId, pwd, employeeId, level);
                 MessageBox.Show("Đăng nhập thành công");
                 Home formTrangChu = new Home();
                 formTrangChu.ShowDialog();
@@ -118,6 +122,42 @@ namespace DangNhap
         private void DangNhap_MouseUp(object sender, MouseEventArgs e)
         {
             mov = 0;
+        }
+
+        private static string phanQuyen(string userID)
+        {
+            string level = "";
+            string[] temp = userID.Split('.');
+            if (!string.IsNullOrEmpty(temp[0]))
+            {
+                string loaiNV = temp[0].Substring(0,2);
+                switch (loaiNV) {
+                    case "GD":
+                        level = "CEO";
+                        break;
+                    case "DV":
+                        level = "DV";
+                        break;
+                    case "TC":
+                        level = "TaiChinh";
+                        break;
+                    case "VS":
+                        level = "VeSinh";
+                        break;
+                    case "AN":
+                        level = "AnNinh";
+                        break;
+                    case "KT":
+                        level = "KyThuat";
+                        break;
+                    case "XD":
+                        level = "XayDung";
+                        break;
+                    default:
+                        break;
+                }
+            }
+            return level;
         }
     }
 }
