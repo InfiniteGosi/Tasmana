@@ -16,5 +16,11 @@ namespace DangNhap
         {
             InitializeComponent();
         }
+
+        private void BTN_themcongviec_Click(object sender, EventArgs e)
+        {
+            ThongTinCaNhan ttcn = new ThongTinCaNhan();
+            ttcn.Show();
+        }
     }
 }
