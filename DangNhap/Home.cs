@@ -36,39 +36,70 @@ namespace DangNhap
             childForm.Show();
         }
 
-        private void BTN_trangchu_Click(object sender, EventArgs e)
-        {
-            currentFormChild?.Close();
-        }
-
         private void BTN_thongbao_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ThongBao());
+            BTN_thongbao.BackColor = Color.Gray;
+            BTN_congviec.BackColor = Color.Transparent;
+            BTN_thongke.BackColor = Color.Transparent;
+            BTN_nhanvien.BackColor = Color.Transparent;
+            BTN_cudan.BackColor = Color.Transparent;
+            BTN_canho.BackColor = Color.Transparent;
         }
 
         private void BTN_thongke_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ThongKe());
+            BTN_thongke.BackColor = Color.Gray;
+            BTN_congviec.BackColor = Color.Transparent;
+            BTN_thongbao.BackColor = Color.Transparent;
+            BTN_nhanvien.BackColor = Color.Transparent;
+            BTN_cudan.BackColor = Color.Transparent;
+            BTN_canho.BackColor = Color.Transparent;
         }
 
         private void BTN_congviec_Click(object sender, EventArgs e)
         {
             OpenChildForm(new CongViecChung());
+            BTN_congviec.BackColor = Color.Gray;
+            BTN_thongbao.BackColor = Color.Transparent;
+            BTN_thongke.BackColor = Color.Transparent;
+            BTN_nhanvien.BackColor = Color.Transparent;
+            BTN_cudan.BackColor = Color.Transparent;
+            BTN_canho.BackColor = Color.Transparent;
         }
 
         private void BTN_canho_Click(object sender, EventArgs e)
         {
             OpenChildForm(new CanHo());
+            BTN_canho.BackColor = Color.Gray;
+            BTN_thongbao.BackColor = Color.Transparent;
+            BTN_thongke.BackColor = Color.Transparent;
+            BTN_nhanvien.BackColor = Color.Transparent;
+            BTN_cudan.BackColor = Color.Transparent;
+            BTN_congviec.BackColor = Color.Transparent;
         }
 
         private void BTN_cudan_Click(object sender, EventArgs e)
         {
             OpenChildForm(new CuDan());
+            BTN_cudan.BackColor = Color.Gray;
+            BTN_thongbao.BackColor = Color.Transparent;
+            BTN_thongke.BackColor = Color.Transparent;
+            BTN_nhanvien.BackColor = Color.Transparent;
+            BTN_canho.BackColor = Color.Transparent;
+            BTN_congviec.BackColor = Color.Transparent;
         }
 
         private void BTN_nhanvien_Click(object sender, EventArgs e)
         {
             OpenChildForm(new NhanVien());
+            BTN_nhanvien.BackColor = Color.Gray;
+            BTN_thongbao.BackColor = Color.Transparent;
+            BTN_thongke.BackColor = Color.Transparent;
+            BTN_cudan.BackColor = Color.Transparent;
+            BTN_canho.BackColor = Color.Transparent;
+            BTN_congviec.BackColor = Color.Transparent;
         }
 
         private void BTN_thongtin_Click(object sender, EventArgs e)
@@ -116,6 +147,14 @@ namespace DangNhap
         private void Home_MouseUp(object sender, MouseEventArgs e)
         {
             mov = 0;
+        }
+
+        private void LOGOishere_Click(object sender, EventArgs e)
+        {
+            if(currentFormChild != null)
+            {
+                currentFormChild.Close();
+            }
         }
     }
 }
