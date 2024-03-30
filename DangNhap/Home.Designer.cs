@@ -61,7 +61,6 @@ namespace DangNhap
             this.lb_slg1 = new System.Windows.Forms.Label();
             this.lb_tasmana = new System.Windows.Forms.Label();
             this.PN_main = new Guna.UI.WinForms.GunaPanel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pn_right.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -623,23 +622,12 @@ namespace DangNhap
             this.PN_main.Size = new System.Drawing.Size(1330, 733);
             this.PN_main.TabIndex = 2;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(328, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 16);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Hello Khang";
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1504, 805);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.PN_tag);
             this.Controls.Add(this.LB_tendangnhap);
             this.Controls.Add(this.btn_line);
@@ -701,6 +689,5 @@ namespace DangNhap
         private Guna.UI.WinForms.GunaGradientButton BTN_x;
         private Guna.UI.WinForms.GunaElipse frame1;
         private Guna.UI.WinForms.GunaElipse right;
-        private System.Windows.Forms.Label label1;
     }
 }
