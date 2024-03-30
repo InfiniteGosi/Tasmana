@@ -33,17 +33,17 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel5.SuspendLayout();
+            this.TXB_guiden = new System.Windows.Forms.TextBox();
+            this.LB_den = new System.Windows.Forms.Label();
+            this.PN_hienthi = new System.Windows.Forms.Panel();
+            this.BTN_thoat = new System.Windows.Forms.Button();
+            this.BTN_themtep = new System.Windows.Forms.Button();
+            this.BTN_gui = new System.Windows.Forms.Button();
+            this.TXB_noidung = new System.Windows.Forms.TextBox();
+            this.TXB_tieude = new System.Windows.Forms.TextBox();
+            this.LB_soantin = new System.Windows.Forms.Label();
+            this.LB_tieude = new System.Windows.Forms.Label();
+            this.PN_hienthi.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -82,124 +82,124 @@
             this.panel4.Size = new System.Drawing.Size(906, 5);
             this.panel4.TabIndex = 3;
             // 
-            // textBox1
+            // TXB_guiden
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(123, 62);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(769, 28);
-            this.textBox1.TabIndex = 4;
+            this.TXB_guiden.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.TXB_guiden.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_guiden.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_guiden.ForeColor = System.Drawing.Color.White;
+            this.TXB_guiden.Location = new System.Drawing.Point(123, 62);
+            this.TXB_guiden.Name = "TXB_guiden";
+            this.TXB_guiden.Size = new System.Drawing.Size(769, 28);
+            this.TXB_guiden.TabIndex = 4;
             // 
-            // label1
+            // LB_den
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(18, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 22);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Đến";
+            this.LB_den.AutoSize = true;
+            this.LB_den.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_den.ForeColor = System.Drawing.Color.White;
+            this.LB_den.Location = new System.Drawing.Point(18, 64);
+            this.LB_den.Name = "LB_den";
+            this.LB_den.Size = new System.Drawing.Size(42, 22);
+            this.LB_den.TabIndex = 5;
+            this.LB_den.Text = "Đến";
             // 
-            // panel5
+            // PN_hienthi
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.panel5.Controls.Add(this.button3);
-            this.panel5.Controls.Add(this.button2);
-            this.panel5.Controls.Add(this.button1);
-            this.panel5.Controls.Add(this.textBox2);
-            this.panel5.Location = new System.Drawing.Point(3, 198);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(913, 482);
-            this.panel5.TabIndex = 7;
+            this.PN_hienthi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.PN_hienthi.Controls.Add(this.BTN_thoat);
+            this.PN_hienthi.Controls.Add(this.BTN_themtep);
+            this.PN_hienthi.Controls.Add(this.BTN_gui);
+            this.PN_hienthi.Controls.Add(this.TXB_noidung);
+            this.PN_hienthi.Location = new System.Drawing.Point(3, 198);
+            this.PN_hienthi.Name = "PN_hienthi";
+            this.PN_hienthi.Size = new System.Drawing.Size(913, 482);
+            this.PN_hienthi.TabIndex = 7;
             // 
-            // textBox3
+            // BTN_thoat
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(123, 142);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(769, 30);
-            this.textBox3.TabIndex = 8;
+            this.BTN_thoat.BackColor = System.Drawing.Color.IndianRed;
+            this.BTN_thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_thoat.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_thoat.ForeColor = System.Drawing.Color.White;
+            this.BTN_thoat.Image = ((System.Drawing.Image)(resources.GetObject("BTN_thoat.Image")));
+            this.BTN_thoat.Location = new System.Drawing.Point(843, 434);
+            this.BTN_thoat.Name = "BTN_thoat";
+            this.BTN_thoat.Size = new System.Drawing.Size(60, 39);
+            this.BTN_thoat.TabIndex = 12;
+            this.BTN_thoat.UseVisualStyleBackColor = false;
+            this.BTN_thoat.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label2
+            // BTN_themtep
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(10, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 34);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "SOẠN TIN";
+            this.BTN_themtep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_themtep.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_themtep.ForeColor = System.Drawing.Color.White;
+            this.BTN_themtep.Location = new System.Drawing.Point(89, 434);
+            this.BTN_themtep.Name = "BTN_themtep";
+            this.BTN_themtep.Size = new System.Drawing.Size(96, 39);
+            this.BTN_themtep.TabIndex = 11;
+            this.BTN_themtep.Text = "Thêm tệp";
+            this.BTN_themtep.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // BTN_gui
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(18, 150);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 22);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Tiêu đề";
+            this.BTN_gui.BackColor = System.Drawing.Color.Gray;
+            this.BTN_gui.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_gui.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_gui.ForeColor = System.Drawing.Color.White;
+            this.BTN_gui.Location = new System.Drawing.Point(8, 434);
+            this.BTN_gui.Name = "BTN_gui";
+            this.BTN_gui.Size = new System.Drawing.Size(75, 39);
+            this.BTN_gui.TabIndex = 10;
+            this.BTN_gui.Text = "Gửi";
+            this.BTN_gui.UseVisualStyleBackColor = false;
             // 
-            // textBox2
+            // TXB_noidung
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(3, 3);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(905, 393);
-            this.textBox2.TabIndex = 10;
+            this.TXB_noidung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.TXB_noidung.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_noidung.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_noidung.ForeColor = System.Drawing.Color.White;
+            this.TXB_noidung.Location = new System.Drawing.Point(3, 3);
+            this.TXB_noidung.Multiline = true;
+            this.TXB_noidung.Name = "TXB_noidung";
+            this.TXB_noidung.Size = new System.Drawing.Size(905, 393);
+            this.TXB_noidung.TabIndex = 10;
             // 
-            // button1
+            // TXB_tieude
             // 
-            this.button1.BackColor = System.Drawing.Color.Gray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(8, 434);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 39);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Gửi";
-            this.button1.UseVisualStyleBackColor = false;
+            this.TXB_tieude.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.TXB_tieude.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_tieude.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_tieude.ForeColor = System.Drawing.Color.White;
+            this.TXB_tieude.Location = new System.Drawing.Point(123, 142);
+            this.TXB_tieude.Multiline = true;
+            this.TXB_tieude.Name = "TXB_tieude";
+            this.TXB_tieude.Size = new System.Drawing.Size(769, 30);
+            this.TXB_tieude.TabIndex = 8;
             // 
-            // button2
+            // LB_soantin
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(89, 434);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 39);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Thêm tệp";
-            this.button2.UseVisualStyleBackColor = true;
+            this.LB_soantin.AutoSize = true;
+            this.LB_soantin.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_soantin.ForeColor = System.Drawing.Color.White;
+            this.LB_soantin.Location = new System.Drawing.Point(10, 9);
+            this.LB_soantin.Name = "LB_soantin";
+            this.LB_soantin.Size = new System.Drawing.Size(154, 34);
+            this.LB_soantin.TabIndex = 8;
+            this.LB_soantin.Text = "SOẠN TIN";
             // 
-            // button3
+            // LB_tieude
             // 
-            this.button3.BackColor = System.Drawing.Color.IndianRed;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(843, 434);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(60, 39);
-            this.button3.TabIndex = 12;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.LB_tieude.AutoSize = true;
+            this.LB_tieude.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_tieude.ForeColor = System.Drawing.Color.White;
+            this.LB_tieude.Location = new System.Drawing.Point(18, 150);
+            this.LB_tieude.Name = "LB_tieude";
+            this.LB_tieude.Size = new System.Drawing.Size(69, 22);
+            this.LB_tieude.TabIndex = 9;
+            this.LB_tieude.Text = "Tiêu đề";
             // 
             // SoanThongBao
             // 
@@ -207,21 +207,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(916, 683);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.LB_tieude);
+            this.Controls.Add(this.LB_soantin);
+            this.Controls.Add(this.TXB_tieude);
+            this.Controls.Add(this.LB_den);
+            this.Controls.Add(this.TXB_guiden);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.PN_hienthi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SoanThongBao";
             this.Text = "SoanThongBao";
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.PN_hienthi.ResumeLayout(false);
+            this.PN_hienthi.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,15 +233,15 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox TXB_guiden;
+        private System.Windows.Forms.Label LB_den;
+        private System.Windows.Forms.Panel PN_hienthi;
+        private System.Windows.Forms.TextBox TXB_tieude;
+        private System.Windows.Forms.TextBox TXB_noidung;
+        private System.Windows.Forms.Label LB_soantin;
+        private System.Windows.Forms.Label LB_tieude;
+        private System.Windows.Forms.Button BTN_gui;
+        private System.Windows.Forms.Button BTN_themtep;
+        private System.Windows.Forms.Button BTN_thoat;
     }
 }
