@@ -98,14 +98,14 @@ namespace DangNhap
             this.Close();
         }
 
-        private void PN_tool_MouseDown(object sender, MouseEventArgs e)
+        private void Home_MouseDown(object sender, MouseEventArgs e)
         {
             mov = 1;
             movX = e.X;
             movY = e.Y;
         }
 
-        private void PN_tool_MouseMove(object sender, MouseEventArgs e)
+        private void Home_MouseMove(object sender, MouseEventArgs e)
         {
             if (mov == 1)
             {
@@ -113,7 +113,7 @@ namespace DangNhap
             }
         }
 
-        private void PN_tool_MouseUp(object sender, MouseEventArgs e)
+        private void Home_MouseUp(object sender, MouseEventArgs e)
         {
             mov = 0;
         }
