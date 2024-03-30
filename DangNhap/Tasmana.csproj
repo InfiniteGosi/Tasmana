@@ -168,9 +168,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChiTietCongViec.resx">
       <DependentUpon>ChiTietCongViec.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CongViecChung.resx">
       <DependentUpon>CongViecChung.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CuDan.resx">
       <DependentUpon>CuDan.cs</DependentUpon>
@@ -202,6 +204,7 @@
     </Compile>
     <EmbeddedResource Include="ThemCongViecNhanVien.resx">
       <DependentUpon>ThemCongViecNhanVien.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemCongViecNhom.resx">
       <DependentUpon>ThemCongViecNhom.cs</DependentUpon>
