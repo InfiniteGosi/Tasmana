@@ -33,7 +33,6 @@ namespace DangNhap
             this.CB_uyquyen = new System.Windows.Forms.CheckBox();
             this.CBB_nhom = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.CBB_macanho = new System.Windows.Forms.ComboBox();
             this.CBB_phongban = new System.Windows.Forms.ComboBox();
             this.BTN_file = new System.Windows.Forms.Button();
             this.CB_thoihan = new System.Windows.Forms.CheckBox();
@@ -49,6 +48,7 @@ namespace DangNhap
             this.LB_thoihan = new System.Windows.Forms.Label();
             this.DTP_ngay = new System.Windows.Forms.DateTimePicker();
             this.LB_tepdinhkem = new System.Windows.Forms.Label();
+            this.TXB_macanho = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // DTP_gio
@@ -97,18 +97,6 @@ namespace DangNhap
             this.label1.Size = new System.Drawing.Size(57, 22);
             this.label1.TabIndex = 177;
             this.label1.Text = "Nhóm";
-            // 
-            // CBB_macanho
-            // 
-            this.CBB_macanho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.CBB_macanho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CBB_macanho.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CBB_macanho.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CBB_macanho.FormattingEnabled = true;
-            this.CBB_macanho.Location = new System.Drawing.Point(390, 257);
-            this.CBB_macanho.Name = "CBB_macanho";
-            this.CBB_macanho.Size = new System.Drawing.Size(121, 28);
-            this.CBB_macanho.TabIndex = 176;
             // 
             // CBB_phongban
             // 
@@ -313,17 +301,28 @@ namespace DangNhap
             this.LB_tepdinhkem.TabIndex = 167;
             this.LB_tepdinhkem.Text = "Tệp đính kèm";
             // 
+            // TXB_macanho
+            // 
+            this.TXB_macanho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.TXB_macanho.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_macanho.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_macanho.Location = new System.Drawing.Point(390, 257);
+            this.TXB_macanho.Multiline = true;
+            this.TXB_macanho.Name = "TXB_macanho";
+            this.TXB_macanho.Size = new System.Drawing.Size(121, 28);
+            this.TXB_macanho.TabIndex = 183;
+            // 
             // ThemCongViecNhom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(595, 797);
+            this.Controls.Add(this.TXB_macanho);
             this.Controls.Add(this.DTP_gio);
             this.Controls.Add(this.CB_uyquyen);
             this.Controls.Add(this.CBB_nhom);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.CBB_macanho);
             this.Controls.Add(this.CBB_phongban);
             this.Controls.Add(this.BTN_file);
             this.Controls.Add(this.CB_thoihan);
@@ -353,7 +352,6 @@ namespace DangNhap
         private System.Windows.Forms.CheckBox CB_uyquyen;
         private System.Windows.Forms.ComboBox CBB_nhom;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox CBB_macanho;
         private System.Windows.Forms.ComboBox CBB_phongban;
         private System.Windows.Forms.Button BTN_file;
         private System.Windows.Forms.CheckBox CB_thoihan;
@@ -369,5 +367,6 @@ namespace DangNhap
         private System.Windows.Forms.Label LB_thoihan;
         private System.Windows.Forms.DateTimePicker DTP_ngay;
         private System.Windows.Forms.Label LB_tepdinhkem;
+        private System.Windows.Forms.TextBox TXB_macanho;
     }
 }
