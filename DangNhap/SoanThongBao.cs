@@ -17,7 +17,7 @@ namespace DangNhap
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void BTN_thoat_Click(object sender, EventArgs e)
         {
             this.Close();
         }

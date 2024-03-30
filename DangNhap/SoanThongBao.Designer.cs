@@ -128,7 +128,7 @@
             this.BTN_thoat.Size = new System.Drawing.Size(60, 39);
             this.BTN_thoat.TabIndex = 12;
             this.BTN_thoat.UseVisualStyleBackColor = false;
-            this.BTN_thoat.Click += new System.EventHandler(this.button3_Click);
+            this.BTN_thoat.Click += new System.EventHandler(this.BTN_thoat_Click);
             // 
             // BTN_themtep
             // 
