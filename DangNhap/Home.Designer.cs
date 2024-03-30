@@ -35,6 +35,10 @@ namespace DangNhap
             this.tas = new Guna.UI.WinForms.GunaElipse(this.components);
             this.frame1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.right = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.pn_right = new Guna.UI.WinForms.GunaGradientPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_line = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_square = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_x = new Guna.UI.WinForms.GunaGradientButton();
@@ -50,24 +54,21 @@ namespace DangNhap
             this.BTN_canho = new Guna.UI.WinForms.GunaButton();
             this.BTN_thongbao = new Guna.UI.WinForms.GunaButton();
             this.BTN_cudan = new Guna.UI.WinForms.GunaButton();
-            this.pn_right = new Guna.UI.WinForms.GunaGradientPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lb_tasmana = new System.Windows.Forms.Label();
-            this.lb_slg1 = new System.Windows.Forms.Label();
-            this.lb_slg2 = new System.Windows.Forms.Label();
-            this.lb_chaomung = new System.Windows.Forms.Label();
             this.lb_denvoi = new System.Windows.Forms.Label();
+            this.lb_chaomung = new System.Windows.Forms.Label();
+            this.lb_slg2 = new System.Windows.Forms.Label();
+            this.lb_slg1 = new System.Windows.Forms.Label();
+            this.lb_tasmana = new System.Windows.Forms.Label();
             this.PN_main = new Guna.UI.WinForms.GunaPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pn_right.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PN_tag.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LOGOishere)).BeginInit();
-            this.pn_right.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             this.PN_main.SuspendLayout();
             this.SuspendLayout();
@@ -98,6 +99,60 @@ namespace DangNhap
             // 
             this.right.Radius = 10;
             this.right.TargetControl = this.pn_right;
+            // 
+            // pn_right
+            // 
+            this.pn_right.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pn_right.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pn_right.BackgroundImage")));
+            this.pn_right.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pn_right.Controls.Add(this.pictureBox2);
+            this.pn_right.Controls.Add(this.pictureBox3);
+            this.pn_right.Controls.Add(this.pictureBox1);
+            this.pn_right.GradientColor1 = System.Drawing.Color.Black;
+            this.pn_right.GradientColor2 = System.Drawing.Color.Black;
+            this.pn_right.GradientColor3 = System.Drawing.Color.DarkBlue;
+            this.pn_right.GradientColor4 = System.Drawing.Color.Black;
+            this.pn_right.Location = new System.Drawing.Point(1175, 678);
+            this.pn_right.Name = "pn_right";
+            this.pn_right.Size = new System.Drawing.Size(149, 52);
+            this.pn_right.TabIndex = 23;
+            this.pn_right.Text = "right";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(110, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(31, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(3, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(42, 32);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(51, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(53, 41);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // btn_line
             // 
@@ -139,7 +194,7 @@ namespace DangNhap
             this.BTN_square.BorderColor = System.Drawing.Color.Black;
             this.BTN_square.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_square.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_square.Font = new System.Drawing.Font("GMV DIN Pro Cond", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_square.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_square.ForeColor = System.Drawing.Color.Black;
             this.BTN_square.Image = ((System.Drawing.Image)(resources.GetObject("BTN_square.Image")));
             this.BTN_square.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -168,7 +223,7 @@ namespace DangNhap
             this.BTN_x.BorderColor = System.Drawing.Color.Black;
             this.BTN_x.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_x.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_x.Font = new System.Drawing.Font("GMV DIN Pro Cond", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_x.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_x.ForeColor = System.Drawing.Color.Black;
             this.BTN_x.Image = ((System.Drawing.Image)(resources.GetObject("BTN_x.Image")));
             this.BTN_x.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -473,60 +528,6 @@ namespace DangNhap
             this.BTN_cudan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_cudan.Click += new System.EventHandler(this.BTN_cudan_Click);
             // 
-            // pn_right
-            // 
-            this.pn_right.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pn_right.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pn_right.BackgroundImage")));
-            this.pn_right.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pn_right.Controls.Add(this.pictureBox2);
-            this.pn_right.Controls.Add(this.pictureBox3);
-            this.pn_right.Controls.Add(this.pictureBox1);
-            this.pn_right.GradientColor1 = System.Drawing.Color.Black;
-            this.pn_right.GradientColor2 = System.Drawing.Color.Black;
-            this.pn_right.GradientColor3 = System.Drawing.Color.DarkBlue;
-            this.pn_right.GradientColor4 = System.Drawing.Color.Black;
-            this.pn_right.Location = new System.Drawing.Point(1175, 678);
-            this.pn_right.Name = "pn_right";
-            this.pn_right.Size = new System.Drawing.Size(149, 52);
-            this.pn_right.TabIndex = 23;
-            this.pn_right.Text = "right";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(51, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(53, 41);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(3, 8);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(42, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(110, 10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(31, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -543,44 +544,18 @@ namespace DangNhap
             this.panel2.Size = new System.Drawing.Size(1330, 242);
             this.panel2.TabIndex = 23;
             // 
-            // lb_tasmana
+            // lb_denvoi
             // 
-            this.lb_tasmana.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lb_tasmana.AutoSize = true;
-            this.lb_tasmana.BackColor = System.Drawing.Color.Transparent;
-            this.lb_tasmana.Font = new System.Drawing.Font("Calisto MT", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_tasmana.ForeColor = System.Drawing.Color.White;
-            this.lb_tasmana.Location = new System.Drawing.Point(451, 55);
-            this.lb_tasmana.Name = "lb_tasmana";
-            this.lb_tasmana.Size = new System.Drawing.Size(463, 90);
-            this.lb_tasmana.TabIndex = 2;
-            this.lb_tasmana.Text = "TASMANA";
-            // 
-            // lb_slg1
-            // 
-            this.lb_slg1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lb_slg1.AutoSize = true;
-            this.lb_slg1.BackColor = System.Drawing.Color.Transparent;
-            this.lb_slg1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_slg1.ForeColor = System.Drawing.Color.White;
-            this.lb_slg1.Location = new System.Drawing.Point(174, 158);
-            this.lb_slg1.Name = "lb_slg1";
-            this.lb_slg1.Size = new System.Drawing.Size(421, 26);
-            this.lb_slg1.TabIndex = 10;
-            this.lb_slg1.Text = "\"Changing the Face can change nothing";
-            // 
-            // lb_slg2
-            // 
-            this.lb_slg2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lb_slg2.AutoSize = true;
-            this.lb_slg2.BackColor = System.Drawing.Color.Transparent;
-            this.lb_slg2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_slg2.ForeColor = System.Drawing.Color.White;
-            this.lb_slg2.Location = new System.Drawing.Point(563, 190);
-            this.lb_slg2.Name = "lb_slg2";
-            this.lb_slg2.Size = new System.Drawing.Size(495, 26);
-            this.lb_slg2.TabIndex = 11;
-            this.lb_slg2.Text = "But Facing the Change can change everything\"";
+            this.lb_denvoi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lb_denvoi.AutoSize = true;
+            this.lb_denvoi.BackColor = System.Drawing.Color.Transparent;
+            this.lb_denvoi.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_denvoi.ForeColor = System.Drawing.Color.White;
+            this.lb_denvoi.Location = new System.Drawing.Point(288, 53);
+            this.lb_denvoi.Name = "lb_denvoi";
+            this.lb_denvoi.Size = new System.Drawing.Size(156, 37);
+            this.lb_denvoi.TabIndex = 13;
+            this.lb_denvoi.Text = "ĐẾN VỚI";
             // 
             // lb_chaomung
             // 
@@ -595,18 +570,44 @@ namespace DangNhap
             this.lb_chaomung.TabIndex = 12;
             this.lb_chaomung.Text = "CHÀO MỪNG";
             // 
-            // lb_denvoi
+            // lb_slg2
             // 
-            this.lb_denvoi.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lb_denvoi.AutoSize = true;
-            this.lb_denvoi.BackColor = System.Drawing.Color.Transparent;
-            this.lb_denvoi.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_denvoi.ForeColor = System.Drawing.Color.White;
-            this.lb_denvoi.Location = new System.Drawing.Point(288, 53);
-            this.lb_denvoi.Name = "lb_denvoi";
-            this.lb_denvoi.Size = new System.Drawing.Size(156, 37);
-            this.lb_denvoi.TabIndex = 13;
-            this.lb_denvoi.Text = "ĐẾN VỚI";
+            this.lb_slg2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lb_slg2.AutoSize = true;
+            this.lb_slg2.BackColor = System.Drawing.Color.Transparent;
+            this.lb_slg2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_slg2.ForeColor = System.Drawing.Color.White;
+            this.lb_slg2.Location = new System.Drawing.Point(563, 190);
+            this.lb_slg2.Name = "lb_slg2";
+            this.lb_slg2.Size = new System.Drawing.Size(489, 25);
+            this.lb_slg2.TabIndex = 11;
+            this.lb_slg2.Text = "But Facing the Change can change everything\"";
+            // 
+            // lb_slg1
+            // 
+            this.lb_slg1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lb_slg1.AutoSize = true;
+            this.lb_slg1.BackColor = System.Drawing.Color.Transparent;
+            this.lb_slg1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_slg1.ForeColor = System.Drawing.Color.White;
+            this.lb_slg1.Location = new System.Drawing.Point(174, 158);
+            this.lb_slg1.Name = "lb_slg1";
+            this.lb_slg1.Size = new System.Drawing.Size(417, 25);
+            this.lb_slg1.TabIndex = 10;
+            this.lb_slg1.Text = "\"Changing the Face can change nothing";
+            // 
+            // lb_tasmana
+            // 
+            this.lb_tasmana.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lb_tasmana.AutoSize = true;
+            this.lb_tasmana.BackColor = System.Drawing.Color.Transparent;
+            this.lb_tasmana.Font = new System.Drawing.Font("Calisto MT", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_tasmana.ForeColor = System.Drawing.Color.White;
+            this.lb_tasmana.Location = new System.Drawing.Point(451, 55);
+            this.lb_tasmana.Name = "lb_tasmana";
+            this.lb_tasmana.Size = new System.Drawing.Size(463, 90);
+            this.lb_tasmana.TabIndex = 2;
+            this.lb_tasmana.Text = "TASMANA";
             // 
             // PN_main
             // 
@@ -622,12 +623,23 @@ namespace DangNhap
             this.PN_main.Size = new System.Drawing.Size(1330, 733);
             this.PN_main.TabIndex = 2;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(328, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 16);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Hello Khang";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1504, 805);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.PN_tag);
             this.Controls.Add(this.LB_tendangnhap);
             this.Controls.Add(this.btn_line);
@@ -642,13 +654,13 @@ namespace DangNhap
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Home_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Home_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Home_MouseUp);
+            this.pn_right.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PN_tag.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LOGOishere)).EndInit();
-            this.pn_right.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.PN_main.ResumeLayout(false);
@@ -689,5 +701,6 @@ namespace DangNhap
         private Guna.UI.WinForms.GunaGradientButton BTN_x;
         private Guna.UI.WinForms.GunaElipse frame1;
         private Guna.UI.WinForms.GunaElipse right;
+        private System.Windows.Forms.Label label1;
     }
 }
