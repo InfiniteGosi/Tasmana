@@ -368,3 +368,5 @@ FodyWeavers.xsd
 /DangNhap/bin/Debug/DangNhap.exe
 /DangNhap/obj/Debug/DangNhap.exe
 /DangNhap/obj/Debug/DangNhap.Home.resources
+/DangNhap/obj/Debug/DangNhap.CongViecChung.resources
+/DangNhap/obj/Debug/DangNhap.ThongBao.resources
