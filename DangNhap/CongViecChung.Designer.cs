@@ -31,8 +31,6 @@ namespace DangNhap
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CongViecChung));
             this.BTN_themcongviec = new Guna.UI.WinForms.GunaGradientButton();
-            this.PN_hienthicongviec = new System.Windows.Forms.Panel();
-            this.BTN_chitietcongviec = new Guna.UI.WinForms.GunaGradientButton();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
@@ -42,7 +40,17 @@ namespace DangNhap
             this.BTN_trangtruoc = new System.Windows.Forms.Button();
             this.BTN_trangsau = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.PN_hienthicongviec.SuspendLayout();
+            this.DGV_hienthicongviec = new System.Windows.Forms.DataGridView();
+            this.C_manhanvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.C_tennhanvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.C_noidung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.C_macanho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.C_ngaygiao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.C_thoihan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.C_trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.C_ghichu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.C_chitiet = new System.Windows.Forms.DataGridViewImageColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_hienthicongviec)).BeginInit();
             this.SuspendLayout();
             // 
             // BTN_themcongviec
@@ -74,50 +82,6 @@ namespace DangNhap
             this.BTN_themcongviec.Size = new System.Drawing.Size(40, 40);
             this.BTN_themcongviec.TabIndex = 8;
             this.BTN_themcongviec.Click += new System.EventHandler(this.BTN_themcongviec_Click);
-            // 
-            // PN_hienthicongviec
-            // 
-            this.PN_hienthicongviec.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PN_hienthicongviec.AutoScroll = true;
-            this.PN_hienthicongviec.AutoScrollMargin = new System.Drawing.Size(2, 0);
-            this.PN_hienthicongviec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.PN_hienthicongviec.Controls.Add(this.BTN_chitietcongviec);
-            this.PN_hienthicongviec.Location = new System.Drawing.Point(65, 103);
-            this.PN_hienthicongviec.Name = "PN_hienthicongviec";
-            this.PN_hienthicongviec.Size = new System.Drawing.Size(1248, 401);
-            this.PN_hienthicongviec.TabIndex = 80;
-            // 
-            // BTN_chitietcongviec
-            // 
-            this.BTN_chitietcongviec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_chitietcongviec.Animated = true;
-            this.BTN_chitietcongviec.AnimationHoverSpeed = 1F;
-            this.BTN_chitietcongviec.AnimationSpeed = 0.03F;
-            this.BTN_chitietcongviec.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_chitietcongviec.BaseColor1 = System.Drawing.Color.Navy;
-            this.BTN_chitietcongviec.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BTN_chitietcongviec.BorderColor = System.Drawing.Color.White;
-            this.BTN_chitietcongviec.BorderSize = 1;
-            this.BTN_chitietcongviec.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.BTN_chitietcongviec.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_chitietcongviec.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_chitietcongviec.ForeColor = System.Drawing.Color.White;
-            this.BTN_chitietcongviec.Image = ((System.Drawing.Image)(resources.GetObject("BTN_chitietcongviec.Image")));
-            this.BTN_chitietcongviec.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.BTN_chitietcongviec.ImageSize = new System.Drawing.Size(15, 15);
-            this.BTN_chitietcongviec.Location = new System.Drawing.Point(1208, 89);
-            this.BTN_chitietcongviec.Name = "BTN_chitietcongviec";
-            this.BTN_chitietcongviec.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.BTN_chitietcongviec.OnHoverBaseColor2 = System.Drawing.Color.Black;
-            this.BTN_chitietcongviec.OnHoverBorderColor = System.Drawing.Color.White;
-            this.BTN_chitietcongviec.OnHoverForeColor = System.Drawing.Color.Black;
-            this.BTN_chitietcongviec.OnHoverImage = null;
-            this.BTN_chitietcongviec.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_chitietcongviec.Size = new System.Drawing.Size(37, 33);
-            this.BTN_chitietcongviec.TabIndex = 94;
-            this.BTN_chitietcongviec.Click += new System.EventHandler(this.BTN_chitietcongviec_Click);
             // 
             // comboBox4
             // 
@@ -266,18 +230,106 @@ namespace DangNhap
             this.comboBox1.TabIndex = 93;
             this.comboBox1.Text = "All";
             // 
+            // DGV_hienthicongviec
+            // 
+            this.DGV_hienthicongviec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_hienthicongviec.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.C_manhanvien,
+            this.C_tennhanvien,
+            this.C_noidung,
+            this.C_macanho,
+            this.C_ngaygiao,
+            this.C_thoihan,
+            this.C_trangthai,
+            this.C_ghichu,
+            this.C_chitiet});
+            this.DGV_hienthicongviec.Location = new System.Drawing.Point(65, 103);
+            this.DGV_hienthicongviec.Name = "DGV_hienthicongviec";
+            this.DGV_hienthicongviec.RowHeadersWidth = 51;
+            this.DGV_hienthicongviec.RowTemplate.Height = 24;
+            this.DGV_hienthicongviec.Size = new System.Drawing.Size(1248, 401);
+            this.DGV_hienthicongviec.TabIndex = 94;
+            // 
+            // C_manhanvien
+            // 
+            this.C_manhanvien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.C_manhanvien.HeaderText = "Mã nhân viên";
+            this.C_manhanvien.MinimumWidth = 6;
+            this.C_manhanvien.Name = "C_manhanvien";
+            this.C_manhanvien.Width = 115;
+            // 
+            // C_tennhanvien
+            // 
+            this.C_tennhanvien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.C_tennhanvien.HeaderText = "Tên nhân viên";
+            this.C_tennhanvien.MinimumWidth = 6;
+            this.C_tennhanvien.Name = "C_tennhanvien";
+            // 
+            // C_noidung
+            // 
+            this.C_noidung.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.C_noidung.HeaderText = "Nội Dung";
+            this.C_noidung.MinimumWidth = 6;
+            this.C_noidung.Name = "C_noidung";
+            // 
+            // C_macanho
+            // 
+            this.C_macanho.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.C_macanho.HeaderText = "Mã căn hộ";
+            this.C_macanho.MinimumWidth = 6;
+            this.C_macanho.Name = "C_macanho";
+            this.C_macanho.Width = 98;
+            // 
+            // C_ngaygiao
+            // 
+            this.C_ngaygiao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.C_ngaygiao.HeaderText = "Ngày Giao";
+            this.C_ngaygiao.MinimumWidth = 6;
+            this.C_ngaygiao.Name = "C_ngaygiao";
+            this.C_ngaygiao.Width = 101;
+            // 
+            // C_thoihan
+            // 
+            this.C_thoihan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.C_thoihan.HeaderText = "Thời hạn";
+            this.C_thoihan.MinimumWidth = 6;
+            this.C_thoihan.Name = "C_thoihan";
+            this.C_thoihan.Width = 88;
+            // 
+            // C_trangthai
+            // 
+            this.C_trangthai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.C_trangthai.HeaderText = "Trạng Thái";
+            this.C_trangthai.MinimumWidth = 6;
+            this.C_trangthai.Name = "C_trangthai";
+            this.C_trangthai.Width = 102;
+            // 
+            // C_ghichu
+            // 
+            this.C_ghichu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.C_ghichu.HeaderText = "Ghi chú";
+            this.C_ghichu.MinimumWidth = 6;
+            this.C_ghichu.Name = "C_ghichu";
+            // 
+            // C_chitiet
+            // 
+            this.C_chitiet.HeaderText = "Chi tiết";
+            this.C_chitiet.MinimumWidth = 6;
+            this.C_chitiet.Name = "C_chitiet";
+            this.C_chitiet.Width = 125;
+            // 
             // CongViecChung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1376, 782);
+            this.Controls.Add(this.DGV_hienthicongviec);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.TXB_sotrang);
             this.Controls.Add(this.BTN_trangtruoc);
             this.Controls.Add(this.BTN_trangsau);
             this.Controls.Add(this.BTN_in);
-            this.Controls.Add(this.PN_hienthicongviec);
             this.Controls.Add(this.gunaGradientButton1);
             this.Controls.Add(this.comboBox6);
             this.Controls.Add(this.comboBox5);
@@ -286,7 +338,7 @@ namespace DangNhap
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CongViecChung";
             this.Text = "CongViecChung";
-            this.PN_hienthicongviec.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_hienthicongviec)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,7 +347,6 @@ namespace DangNhap
         #endregion
 
         private Guna.UI.WinForms.GunaGradientButton BTN_themcongviec;
-        private System.Windows.Forms.Panel PN_hienthicongviec;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.ComboBox comboBox6;
@@ -305,6 +356,15 @@ namespace DangNhap
         private System.Windows.Forms.Button BTN_trangtruoc;
         private System.Windows.Forms.Button BTN_trangsau;
         private System.Windows.Forms.ComboBox comboBox1;
-        private Guna.UI.WinForms.GunaGradientButton BTN_chitietcongviec;
+        private System.Windows.Forms.DataGridView DGV_hienthicongviec;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C_manhanvien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C_tennhanvien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C_noidung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C_macanho;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C_ngaygiao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C_thoihan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C_trangthai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C_ghichu;
+        private System.Windows.Forms.DataGridViewImageColumn C_chitiet;
     }
 }
