@@ -16,11 +16,5 @@ namespace DangNhap
         {
             InitializeComponent();
         }
-
-        private void btn_chinhsua_Click(object sender, EventArgs e)
-        {
-            ChiTietCanHo ctch = new ChiTietCanHo();
-            ctch.Show();
-        }
     }
 }

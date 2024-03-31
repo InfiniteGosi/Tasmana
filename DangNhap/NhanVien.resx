@@ -118,23 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="BTN_themcongviec.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BTN_themnhanvien.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGTSURBVEhL7ZWxSgNBFEVTiKQWC7GwEBELsQiWIhb5AAvx
-        C6zFDxCb4AdYWIQUKURErPIBFhYWFikkRQoRCysrkWAlyXruy5tls4YxbNocuLzJ3Tt3dmAhpRlTMRgM
-        ltFxkiQNVNcaLfrj6aBwFXVRng5a8VhxKNFb/4EbaFx4rDgUvYRCL03XqO2x4tD3Zq3j6XisOJTYDUS4
-        gfAbPHmsOJQ8Zwqz5Vo+eqw4FN1a6xh41vSYgTWHFlxlt+MQ3Ed9lN5AsO6jqscM7E28d6Z04nYcgmU2
-        tVUuCZ8PaOQt8SshA2duxyGojQfMH9sG/NaNRt5e4FUsAGTiBxDQhi10ybrrpYav68oxdXjN1eAZw9AN
-        g39qpQGMbYItFYUNmrl1y7M3kUxY9xSU1lETfaP/yB6gFzENH40g/0vBKvqQg6ERhYwdwNxAu64j5Ink
-        Gu0h+Ts64FWuAiEUW8M9U+VB8yj7FZ3rBVIwPof+xOir6mW0htKvCGpePQTjitPvmKawzs68l9MSvv47
-        wu9Dr54xCaXSL8T/pnL5BZVvAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wgAADsIBFShKgAAAAZNJREFUSEvtlbFKA0EURVOIpBYLsbAQEQuxCJYiFvkAC/ELrMUPEJvgB1hYhBQp
+        RESs8gEWFhYWKSRFChELKyuRYCXJeu7Lm2WzhjFs2hy4vMndO3d2YCGlGVMxGAyW0XGSJA1U1xot+uPp
+        oHAVdVGeDlrxWHEo0Vv/gRtoXHisOBS9hEIvTdeo7bHi0PdmrePpeKw4lNgNRLiB8Bs8eaw4lDxnCrPl
+        Wj56rDgU3VrrGHjW9JiBNYcWXGW34xDcR32U3kCw7qOqxwzsTbx3pnTidhyCZTa1VS4Jnw9o5C3xKyED
+        Z27HIaiNB8wf2wb81o1G3l7gVSwAZOIHENCGLXTJuuulhq/ryjF1eM3V4BnD0A2Df2qlAYxtgi0VhQ2a
+        uXXLszeRTFj3FJTWURN9o//IHqAXMQ0fjSD/S8Eq+pCDoRGFjB3A3EC7riPkieQa7SH5OzrgVa4CIRRb
+        wz1T5UHzKPsVnesFUjA+h/7E6KvqZbSG0q8Ial49BOOK0++YprDOzryX0xK+/jvC70OvnjEJpdIvxP+m
+        cvkFlW8AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="BTN_in.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAALlJREFUOE/NkzEKwkAQRS1ExGN4npDTWNp4BvEIwdraI3gKsU4ZUlis/zETY9zo
+        vQAADr0BR/uQrQAAALlJREFUOE/NkzEKwkAQRS1ExGN4npDTWNp4BvEIwdraI3gKsU4ZUlis/zETY9zo
         rmLhgw+TmT+fbJZMOkIIhVRLbUJ4Cl/rUbOS4CQdXogZVL7WQ9NmYeGtCM3mZnkfMPNWhGZTs/wyQA+l
         tJfOTEROAF52Spp81UeW7o9gZpY7NU2u5lva/wrYSM9nTDEIOEprK7OJjnDNVMcgYOW3lQSvrVhAY3W4
         SGM/0JjwQkPAlkLiTT6RdsLuBi/l8dPiV91yAAAAAElFTkSuQmCC
@@ -143,7 +143,7 @@
   <data name="gunaGradientButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAAhRJREFUSEutlk9HpWEYh18jGUmSzCIjI0mSZLQYYyQZaZEkLZKkRTKLJEnGGJEk
+        vwAADr8BOAVTJAAAAhRJREFUSEutlk9HpWEYh18jGUmSzCIjI0mSZLQYYyQZaZEkLZKkRTKLJEnGGJEk
         SZIkSYsWLVu2Sp+iD9BXmes659wcZ877nLecH5fec8p9P7/7z/OW1VE7LMAhnMF5hRNYh0/wbk3ABUxD
         p19UqQ3G4BRWoAXepCXYhY+lT1k2Dgegi2PQlUk+wCL4u8L6CQZXg3AFyxAuTOrfXIPulD+3yo9pdYBl
         McgAWO8emIcHmIRQK3iQ2dKnLNsDD5SUdj2dMtFnMMkrGMzP1bL29sFD9MJfSOoIdDEKv8DSvEAX5GkI
@@ -155,4 +155,22 @@
         T07wLPsHnCpLXJ9NG98AAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="C_manhanvien.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="C_maphongban.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="C_manhom.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="C_sdt.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="C_email.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="C_chitiet.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>
