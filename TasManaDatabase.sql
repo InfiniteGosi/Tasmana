@@ -3,8 +3,6 @@ GO
 USE Tasmana
 GO
 
-use master
-
 CREATE TABLE PhongBan
 (
   maBoPhan VARCHAR(10) NOT NULL,
@@ -27,7 +25,7 @@ CREATE TABLE CongViec
 (
   maCongViec VARCHAR(10) NOT NULL,
   noiDung NVARCHAR(100) NOT NULL,
-  thoiHan DATE NOT NULL,
+  thoiHan SMALLDATETime NOT NULL,
   trangThai NVARCHAR(100) NOT NULL,
   PRIMARY KEY (maCongViec)
 );
@@ -178,7 +176,7 @@ CREATE TABLE CanHo
   viTriTang INT NOT NULL,
   soLuongPhongNgu INT NOT NULL,
   soLuongToilet INT NOT NULL,
-  soDoMatBang IMAGE NOT NULL,
+  soDoMatBang IMAGE,
   mucPhiQLHangThang INT NOT NULL,
   soLuongTheThangMay INT NOT NULL,
   lichSuGiaoDich DATE NOT NULL,
@@ -233,11 +231,39 @@ CREATE TABLE CuDan_sdtNguoiThan
   FOREIGN KEY (maCuDan) REFERENCES CuDan(maCuDan)
 );
 
-
+go
 
 -- Insert thông tin tài khoản
 INSERT INTO NhanVien VALUES('GD-001', 'jd@gmail.com', 'Ho', 'Khang', '111111111', '1/1/2002', 1, 'TP.HCM', '123456', 'Full-time', N'Độc thân', '1111111', 1, '1/1/2024', NULL, 'TP.HCM', NULL, N'Tốt', NULL)
 INSERT INTO TaiKhoan VALUES('GD-001.KHANG.111111111', '123', 'GD-001')
 
+-- Insert thông tin nhóm
+INSERT INTO Nhom VALUES('VSN01', 'VS-002', 'VS')
+INSERT INTO Nhom VALUES('VSN02', 'VS-002', 'VS')
+
+-- Insert thông tin NV
+INSERT INTO NhanVien VALUES('VS-002', 'VS002@gmail.com', 'Vu', 'Minh Quang', '1321312', '1/2/2004', 1, 'TP.HCM', '1234576', 'Full-time', N'Độc thân', '1111211', 1, '1/1/2024', NULL, 'TP.HCM', NULL, N'Tốt', NULL)
+INSERT INTO TaiKhoan VALUES('VS-002.MinhQuang.1321312', '123', 'VS-002')
+INSERT INTO NhanVien VALUES('VS-003', 'email_nv001@example.com', N'Trần', N'A', '0123456669', '2000-01-01', 1, N'Hà Nội', '072947182653', 'Full-time', N'Độc thân', '01231230213', 1, '2024-01-01', NULL, N'Địa chỉ thường trú NV001', NULL, N'Tốt', 'VSN01')
+
+-- Insert thông tin phòng ban
+INSERT INTO PhongBan VALUES('HCNS', N'Hành chính Nhân sự & Dịch vụ Cư dân','0123456789','BCMP_HCNS@gmail.com')
+INSERT INTO PhongBan VALUES('VS', N'Vệ Sinh','0123456889','BCMP_VS@gmail.com')
+INSERT INTO PhongBan VALUES('TCKT', N'Tài chính kế toán', '01234444444' ,'BCMP_TCKT@gmail.com')
+INSERT INTO PhongBan VALUES('AN', N'An Ninh', '0133333333', 'BCMP_AN@gmail.com')
+INSERT INTO PhongBan VALUES('KT', N'Kỹ Thuật Bảo Trì', '01234567912', '@BCM_KT@gmail.com')
+INSERT INTO PhongBan VALUES('XD', N'Xây Dựng', '02645816328', '@BCMP_XD@gmail.com')
+
 SELECT * FROM TaiKhoan
 SELECT * FROM NhanVien
+
+-- Insert mẫu công việc
+INSERT INTO CongViec VALUES('CVVS1', N'Quét nhà', '2024-04-04 12:30:00', N'Chưa bắt đầu')
+Insert into CongViec_NhanVien Values ('VS-003', 'CVVS1')
+Insert INTO YeuCau VALUES('CVVS1', 'WPHA')
+
+-- Insert Dữ liệu thử của căn hộ
+INSERT INTO CanHo VALUES ('WPHA', 100.5, 5, 3, 2, NULL, 200, 2, '2024-01-01', N'Còn trống', NULL);
+INSERT INTO CanHo VALUES ('WPHB', 90.2, 8, 2, 1, NULL, 150, 1, '2024-01-01', N'Còn trống', NULL);
+INSERT INTO CanHo VALUES ('WPHC', 110.8, 3, 4, 2, NULL, 250, 2, '2024-01-01', N'Còn trống', NULL);
+INSERT INTO CanHo VALUES ('WPHD', 80.0, 10, 1, 1, NULL, 180, 1, '2024-01-01', N'Còn trống', NULL);
