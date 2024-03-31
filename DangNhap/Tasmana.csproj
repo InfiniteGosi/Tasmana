@@ -110,6 +110,14 @@
       <DependentUpon>LichSuCanHo.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Account.cs" />
+    <Compile Include="Model\Apartment.cs" />
+    <Compile Include="Model\CEO.cs" />
+    <Compile Include="Model\Division.cs" />
+    <Compile Include="Model\Employee.cs" />
+    <Compile Include="Model\Group.cs" />
+    <Compile Include="Model\Job.cs" />
+    <Compile Include="Model\KhachThueKhuThuongMai.cs" />
+    <Compile Include="Model\Manager.cs" />
     <Compile Include="NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>

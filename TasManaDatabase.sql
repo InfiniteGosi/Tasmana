@@ -3,12 +3,12 @@ GO
 USE Tasmana
 GO
 
+use master
 
 CREATE TABLE PhongBan
 (
   maBoPhan VARCHAR(10) NOT NULL,
   tenPB NVARCHAR(50) NOT NULL,
-  maTruongPhong VARCHAR(10) NOT NULL,
   SDT VARCHAR(20) NOT NULL,
   email VARCHAR(100) NOT NULL,
   PRIMARY KEY (maBoPhan)
@@ -32,33 +32,22 @@ CREATE TABLE CongViec
   PRIMARY KEY (maCongViec)
 );
 
-CREATE TABLE KhachThueKhuThuongMai
-(
-  maKhuVucThue VARCHAR(10) NOT NULL,
-  hoTen NVARCHAR(100) NOT NULL,
-  ngaySinh DATE NOT NULL,
-  maDinhDanh VARCHAR(20) NOT NULL,
-  SDT VARCHAR(20) NOT NULL,
-  email VARCHAR(100) NOT NULL,
-  quocTich NVARCHAR(50) NOT NULL,
-  soTheTamTru VARCHAR(20) NOT NULL,
-  ngayChuyenVao DATE NOT NULL,
-  ngayChuyenDi DATE NOT NULL,
-  soLieuDienNuocHangThang FLOAT NOT NULL,
-  phiQuanLyHangThang FLOAT NOT NULL,
-  phiDichVuKhac FLOAT NOT NULL,
-  sdtNguoiThan VARCHAR(20) NOT NULL,
-  tinhTrangCongNo FLOAT NOT NULL,
-  PRIMARY KEY (maKhuVucThue)
-);
-
-CREATE TABLE Congviec_phongban
+CREATE TABLE Congviec_PhongBan
 (
   maCongViec VARCHAR(10) NOT NULL,
   maBoPhan VARCHAR(10) NOT NULL,
   PRIMARY KEY (maCongViec, maBoPhan),
   FOREIGN KEY (maCongViec) REFERENCES congViec(maCongViec),
-  FOREIGN KEY (maBoPhan) REFERENCES phongBan(maBoPhan)
+  FOREIGN KEY (maBoPhan) REFERENCES PhongBan(maBoPhan)
+);
+
+CREATE TABLE CongViec_Nhom
+(
+  maNhom VARCHAR(10) NOT NULL,
+  maCongViec VARCHAR(10) NOT NULL,
+  PRIMARY KEY (maNhom, maCongViec),
+  FOREIGN KEY (maNhom) REFERENCES Nhom(maNhom),
+  FOREIGN KEY (maCongViec) REFERENCES congViec(maCongViec)
 );
 
 CREATE TABLE NhanVien
@@ -81,11 +70,11 @@ CREATE TABLE NhanVien
   dChiThuongTru NVARCHAR(100) NOT NULL,
   dChiTamTru NVARCHAR(100),
   tinhTrangHDLD NVARCHAR(100) NOT NULL,
-  maBoPhan VARCHAR(10),
   maNhom VARCHAR(10),
   PRIMARY KEY (maNhanVien),
-  FOREIGN KEY (maBoPhan) REFERENCES phongBan(maBoPhan),
-  FOREIGN KEY (maNhom) REFERENCES nhom(maNhom)
+  FOREIGN KEY (maNhom) REFERENCES nhom(maNhom),
+  UNIQUE (maDinhDanh),
+  UNIQUE (maSoBHXH)
 );
 
 CREATE TABLE TaiKhoan
@@ -107,8 +96,10 @@ CREATE TABLE CEO
 CREATE TABLE QuanLy
 (
   maNhanVien VARCHAR(10) NOT NULL,
+  maBoPhan VARCHAR(10) NOT NULL,
   PRIMARY KEY (maNhanVien),
-  FOREIGN KEY (maNhanVien) REFERENCES nhanVien(maNhanVien)
+  FOREIGN KEY (maNhanVien) REFERENCES nhanVien(maNhanVien),
+  FOREIGN KEY (maBoPhan) REFERENCES phongBan(maBoPhan)
 );
 
 CREATE TABLE Congviec_Nhanvien
@@ -133,28 +124,13 @@ CREATE TABLE CuDan
   ngayChuyenDi DATE NOT NULL,
   soDienNuocHangThang FLOAT NOT NULL,
   tinhTrangCongNo FLOAT NOT NULL,
-  sdtNguoiThan VARCHAR(20) NOT NULL,
   duLieuDangKyThuNuoi NVARCHAR(100) NOT NULL,
   quocTich NVARCHAR(50) NOT NULL,
-  la_nguoi_than_maCuDan VARCHAR(10) NOT NULL,
+  maCuDanNguoiThan VARCHAR(10) NOT NULL,
   PRIMARY KEY (maCuDan),
-  FOREIGN KEY (la_nguoi_than_maCuDan) REFERENCES cuDan(maCuDan)
-);
-
-CREATE TABLE KhachNganNgay
-(
-  maCuDan VARCHAR(10) NOT NULL,
-  PRIMARY KEY (maCuDan),
-  FOREIGN KEY (maCuDan) REFERENCES cuDan(maCuDan)
-);
-
-CREATE TABLE NguoiDcUyQuyenChuHo
-(
-  maCuDan VARCHAR(10) NOT NULL,
-  nguoiUyQuyen VARCHAR(10) NOT NULL,
-  soLieuChotDienNuocHangThang FLOAT NOT NULL,
-  PRIMARY KEY (maCuDan),
-  FOREIGN KEY (maCuDan) REFERENCES cuDan(maCuDan)
+  FOREIGN KEY (maCuDanNguoiThan) REFERENCES CuDan(maCuDan),
+  UNIQUE (maDinhDanh),
+  UNIQUE (soTheTamTru)
 );
 
 CREATE TABLE ChuHo
@@ -163,9 +139,36 @@ CREATE TABLE ChuHo
   ngayNhanBanGiaoCanHo DATE NOT NULL,
   soDienNuocNgayBanGiao FLOAT NOT NULL,
   ngayChuyenNhuongChoChuMoi DATE NOT NULL,
-  thongTinChuHoMoi VARCHAR(10) NOT NULL,
+  banGiao_maCuDan VARCHAR(10) NOT NULL,
   PRIMARY KEY (maCuDan),
-  FOREIGN KEY (maCuDan) REFERENCES cuDan(maCuDan)
+  FOREIGN KEY (maCuDan) REFERENCES CuDan(maCuDan),
+  FOREIGN KEY (banGiao_maCuDan) REFERENCES ChuHo(maCuDan)
+);
+
+CREATE TABLE KhachNganNgay
+(
+  maCuDan VARCHAR(10) NOT NULL,
+  maCuDanChuHo VARCHAR(10) NOT NULL,
+  PRIMARY KEY (maCuDan),
+  FOREIGN KEY (maCuDan) REFERENCES cuDan(maCuDan),
+  FOREIGN KEY (maCuDanChuHo) REFERENCES chuHo(maCuDan)
+);
+
+CREATE TABLE NguoiDcUyQuyenChuHo
+(
+  maCuDan VARCHAR(10) NOT NULL,
+  maCuDanChuHo VARCHAR(10) NOT NULL,
+  PRIMARY KEY (maCuDan),
+  FOREIGN KEY (maCuDan) REFERENCES cuDan(maCuDan),
+  FOREIGN KEY (maCuDanChuHo) REFERENCES chuHo(maCuDan)
+);
+
+CREATE TABLE KhachThueKhuThuongMai
+(
+  tenCongTy NVARCHAR(100) NOT NULL,
+  maCuDan VARCHAR(10) NOT NULL,
+  PRIMARY KEY (maCuDan),
+  FOREIGN KEY (maCuDan) REFERENCES CuDan(maCuDan)
 );
 
 CREATE TABLE CanHo
@@ -181,10 +184,8 @@ CREATE TABLE CanHo
   lichSuGiaoDich DATE NOT NULL,
   tinhTrangGDHienTai NVARCHAR(100) NOT NULL,
   maCuDan VARCHAR(10),
-  maKhuVucThue VARCHAR(10),
   PRIMARY KEY (maCanHo),
-  FOREIGN KEY (maCuDan) REFERENCES cuDan(maCuDan),
-  FOREIGN KEY (maKhuVucThue) REFERENCES khachThueKhuThuongMai(maKhuVucThue)
+  FOREIGN KEY (maCuDan) REFERENCES cuDan(maCuDan)
 );
 
 CREATE TABLE PhuongTien
@@ -193,11 +194,29 @@ CREATE TABLE PhuongTien
   chungLoai NVARCHAR(50) NOT NULL,
   tinhTrangSoHuu NVARCHAR(50) NOT NULL,
   maCuDan VARCHAR(10) NOT NULL,
-  PRIMARY KEY (bienSo),
+  PRIMARY KEY (bienSo, maCuDan),
   FOREIGN KEY (maCuDan) REFERENCES cuDan(maCuDan)
 );
 
-CREATE TABLE Congviec_Canho
+CREATE TABLE NhanVienCuaChuHo
+(
+  maCuDan VARCHAR(10) NOT NULL,
+  maCuDanChuHo VARCHAR(10) NOT NULL,
+  PRIMARY KEY (maCuDan),
+  FOREIGN KEY (maCuDan) REFERENCES CuDan(maCuDan),
+  FOREIGN KEY (maCuDanChuHo) REFERENCES chuHo(maCuDan)
+);
+
+CREATE TABLE KhuThuongMai
+(
+  maCanHo VARCHAR(10) NOT NULL,
+  maNhanVien VARCHAR(10) NOT NULL,
+  PRIMARY KEY (maCanHo),
+  FOREIGN KEY (maCanHo) REFERENCES CanHo(maCanHo),
+  FOREIGN KEY (maNhanVien) REFERENCES NhanVien(maNhanVien)
+);
+
+CREATE TABLE YeuCau
 (
   maCongViec VARCHAR(10) NOT NULL,
   maCanHo VARCHAR(10) NOT NULL,
@@ -206,10 +225,18 @@ CREATE TABLE Congviec_Canho
   FOREIGN KEY (maCanHo) REFERENCES canHo(maCanHo)
 );
 
+CREATE TABLE CuDan_sdtNguoiThan
+(
+  sdtNguoiThan VARCHAR(20) NOT NULL,
+  maCuDan VARCHAR(10) NOT NULL,
+  PRIMARY KEY (sdtNguoiThan, maCuDan),
+  FOREIGN KEY (maCuDan) REFERENCES CuDan(maCuDan)
+);
+
+
 
 -- Insert thông tin tài khoản
-INSERT INTO NhanVien VALUES('GD-001', 'jd@gmail.com', 'Ho', 'Khang', '111111111', '1/1/2002', 1, 'TP.HCM', '123456', 'Full-time', N'Chưa cưới', '1111111', 1, '1/1/2024', NULL, 'TP.HCM', NULL, N'Tốt', NULL, NULL)
-
+INSERT INTO NhanVien VALUES('GD-001', 'jd@gmail.com', 'Ho', 'Khang', '111111111', '1/1/2002', 1, 'TP.HCM', '123456', 'Full-time', N'Độc thân', '1111111', 1, '1/1/2024', NULL, 'TP.HCM', NULL, N'Tốt', NULL)
 INSERT INTO TaiKhoan VALUES('GD-001.KHANG.111111111', '123', 'GD-001')
 
 SELECT * FROM TaiKhoan
