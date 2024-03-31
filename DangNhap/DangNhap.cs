@@ -65,12 +65,15 @@ namespace DangNhap
                         MessageBox.Show("Tài khoản không tồn tại");
                         return;
                     }
+                    reader.Close();
+                    cmd.Dispose();
                 }
                 catch
                 {
                     MessageBox.Show("Kết nối thất bại");
                     return;
                 }
+                finally { conn.Close(); }
             }
 
             if (password.Equals(pwd))
