@@ -24,9 +24,11 @@ CREATE TABLE Nhom
 CREATE TABLE CongViec
 (
   maCongViec VARCHAR(10) NOT NULL,
-  noiDung NVARCHAR(100) NOT NULL,
+  noiDung NVARCHAR(200) NOT NULL,
   thoiHan SMALLDATETime NOT NULL,
+  ngayHoanThanh SMALLDATETIME,
   trangThai NVARCHAR(100) NOT NULL,
+  ghiChu NVARCHAR(200),
   PRIMARY KEY (maCongViec)
 );
 
@@ -52,7 +54,8 @@ CREATE TABLE NhanVien
 (
   maNhanVien VARCHAR(10) NOT NULL,
   email VARCHAR(100) NOT NULL,
-  hoTen NVARCHAR(100) NOT NULL,
+  ho NVARCHAR(100) NOT NULL,
+  ten NVARCHAR(100) NOT NULL,
   SDT VARCHAR(20) NOT NULL,
   ngaySinh DATE NOT NULL,
   gioiTinh BIT NOT NULL, -- 1 nam, 0 nu
@@ -234,6 +237,10 @@ go
 
 
 
+-- Insert thông tin nhóm
+INSERT INTO Nhom VALUES('VSN01', 'VS-002', 'VS')
+INSERT INTO Nhom VALUES('VSN02', 'VS-002', 'VS')
+
 -- Insert thông tin phòng ban
 INSERT INTO PhongBan VALUES('HCNS', N'Hành chính Nhân sự & Dịch vụ Cư dân','0123456789','BCMP_HCNS@gmail.com')
 INSERT INTO PhongBan VALUES('VS', N'Vệ Sinh','0123456889','BCMP_VS@gmail.com')
@@ -259,6 +266,10 @@ INSERT INTO NhanVien VALUES('VS-003', 'email_nv001@example.com', N'Trần An', '
 SELECT * FROM TaiKhoan
 SELECT * FROM NhanVien
 
+-- Insert mẫu công việc
+INSERT INTO CongViec VALUES('CVVS1', N'Quét nhà', '2024-04-04 12:30:00',null, N'Chưa bắt đầu',null)
+Insert into CongViec_NhanVien Values ('VS-003', 'CVVS1')
+Insert INTO YeuCau VALUES('CVVS1', 'WPHA')
 
 -- Insert Dữ liệu thử của căn hộ
 INSERT INTO CanHo VALUES ('WPHA', 100.5, 5, 3, 2, NULL, 200, 2, '2024-01-01', N'Còn trống', NULL);
@@ -338,3 +349,14 @@ exec SP_ThemNhanVien
         @dChiTamTru = '',
         @tinhTrangHDLD = 'ok',
         @maNhom = 'VSN01'
+
+SELECT * FROM CanHo
+SELECT * FROM CongViec
+
+CREATE procedure [dbo].[SP_LayCV]
+as 
+begin
+	SELECT Congviec_Nhanvien.maNhanVien, (NhanVien.ho + NhanVien.ten) as hoTen, CongViec.noiDung,YeuCau.maCanHo, CongViec.thoiHan, CongViec.ngayHoanThanh, CongViec.trangThai, CongViec.ghiChu
+	from NhanVien, CongViec, Congviec_Nhanvien, YeuCau
+	WHERE NhanVien.maNhanVien = Congviec_Nhanvien.maNhanVien and Congviec_Nhanvien.maCongViec=CongViec.maCongViec and YeuCau.maCongViec = CongViec.maCongViec
+END
