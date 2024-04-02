@@ -8,10 +8,9 @@ namespace DangNhap.Model
 {
     public class Employee
     {
-        public string Email { get; set; }
-        public string Ho {  get; set; }
-        public string Ten { get; set; }
         public string MaNhanVien { get; set; }
+        public string Email { get; set; }
+        public string HoTen {  get; set; }
         public string SoDienThoai { get; set; }
         public DateTime NgaySinh { get; set; }
         public bool GioiTinh { get; set; }
@@ -20,15 +19,35 @@ namespace DangNhap.Model
         public string LoaiNhanVien { get; set; }
         public string TinhTrangHonNhan {  get; set; }
         public string MaSoBHXH {  get; set; }
+        public bool DaTungLamNhanVien { get; set; }
         public DateTime NgayKyHDLD { get; set; }
         public DateTime NgayHetHDLD { get; set; }
         public string DiaChiThuongTru {  get; set; }
         public string DiaChiTamTru { get; set; }
-        public string TinhTranHDLD { get; set; }
-        public string MaBoPhan {  get; set; }
+        public string TinhTrangHDLD { get; set; }
         public string MaNhom {  get; set; }
         public Account TaiKhoanNguoiDung {  get; set; }
         public List<Job> CongViec {  get; set; }
-
+        public Employee(string maNhanVien, string email, string hoTen, string soDienThoai, DateTime ngaySinh, bool gioiTinh, string queQuan, string maDinhDanh, string loaiNhanVien, string tinhTrangHonNhan, string maSoBHXH, bool daTungLamNhanVien, DateTime ngayKyHDLD, DateTime ngayHetHDLD, string diaChiThuongTru, string diaChiTamTru, string tinhTrangHDLD, string maNhom)
+        {
+            MaNhanVien = maNhanVien;
+            Email = email;
+            HoTen = hoTen;
+            SoDienThoai = soDienThoai;
+            NgaySinh = ngaySinh;
+            GioiTinh = gioiTinh;
+            QueQuan = queQuan;
+            MaDinhDanh = maDinhDanh;
+            LoaiNhanVien = loaiNhanVien;
+            TinhTrangHonNhan = tinhTrangHonNhan;
+            MaSoBHXH = maSoBHXH;
+            DaTungLamNhanVien = daTungLamNhanVien;
+            NgayKyHDLD = ngayKyHDLD;
+            NgayHetHDLD = ngayHetHDLD;
+            DiaChiThuongTru = diaChiThuongTru;
+            DiaChiTamTru = diaChiTamTru;
+            TinhTrangHDLD = tinhTrangHDLD;
+            MaNhom = maNhom;
+        }
     }
 }

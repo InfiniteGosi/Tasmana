@@ -147,7 +147,7 @@ namespace DangNhap
             CBB_nhom.Enabled = true;
             CBB_nhom.Items.Clear();
             string maBoPhan = CBB_phongban.SelectedItem.ToString().Split('-')[0];
-            string query = $"Select * from Nhom N where N.maBoPhan = '" + maBoPhan + "'";
+            string query = $"Select * from Nhom N where N.maBoPhan = {maBoPhan}";
             using (SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=Tasmana;Integrated Security=True;TrustServerCertificate=True"))
             {
 

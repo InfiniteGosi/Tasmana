@@ -42,7 +42,7 @@ namespace DangNhap
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.DGV_hienthinhanvien = new System.Windows.Forms.DataGridView();
             this.C_manhanvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.C_maphongban = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.C_HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_manhom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -232,7 +232,7 @@ namespace DangNhap
             this.DGV_hienthinhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_hienthinhanvien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.C_manhanvien,
-            this.C_maphongban,
+            this.C_HoTen,
             this.C_manhom,
             this.C_sdt,
             this.C_email,
@@ -252,13 +252,12 @@ namespace DangNhap
             this.C_manhanvien.Name = "C_manhanvien";
             this.C_manhanvien.Width = 115;
             // 
-            // C_maphongban
+            // C_HoTen
             // 
-            this.C_maphongban.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.C_maphongban.HeaderText = "Mã phòng ban";
-            this.C_maphongban.MinimumWidth = 6;
-            this.C_maphongban.Name = "C_maphongban";
-            this.C_maphongban.Width = 122;
+            this.C_HoTen.HeaderText = "Họ Và Tên";
+            this.C_HoTen.MinimumWidth = 6;
+            this.C_HoTen.Name = "C_HoTen";
+            this.C_HoTen.Width = 250;
             // 
             // C_manhom
             // 
@@ -328,7 +327,7 @@ namespace DangNhap
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.DataGridView DGV_hienthinhanvien;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_manhanvien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C_maphongban;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C_HoTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_manhom;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_sdt;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_email;
