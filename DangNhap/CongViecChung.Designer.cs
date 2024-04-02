@@ -176,6 +176,7 @@ namespace DangNhap
             this.BTN_in.Size = new System.Drawing.Size(77, 31);
             this.BTN_in.TabIndex = 83;
             this.BTN_in.Text = "In";
+            this.BTN_in.Click += new System.EventHandler(this.BTN_in_Click);
             // 
             // TXB_sotrang
             // 
@@ -249,6 +250,7 @@ namespace DangNhap
             this.DGV_hienthicongviec.RowTemplate.Height = 24;
             this.DGV_hienthicongviec.Size = new System.Drawing.Size(1248, 401);
             this.DGV_hienthicongviec.TabIndex = 94;
+            
             // 
             // C_manhanvien
             // 
