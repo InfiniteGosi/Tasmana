@@ -232,14 +232,8 @@ CREATE TABLE CuDan_sdtNguoiThan
   PRIMARY KEY (sdtNguoiThan, maCuDan),
   FOREIGN KEY (maCuDan) REFERENCES CuDan(maCuDan)
 );
-
 go
 
-
-
--- Insert thông tin nhóm
-INSERT INTO Nhom VALUES('VSN01', 'VS-002', 'VS')
-INSERT INTO Nhom VALUES('VSN02', 'VS-002', 'VS')
 
 -- Insert thông tin phòng ban
 INSERT INTO PhongBan VALUES('HCNS', N'Hành chính Nhân sự & Dịch vụ Cư dân','0123456789','BCMP_HCNS@gmail.com')
@@ -282,7 +276,7 @@ go
 
 
 --Procedure thêm một nhân viên mới
-create procedure SP_ThemNhanVien
+create procedure [dbo].[SP_ThemNhanVien]
 	@maNhanVien varchar(10),
 	@email varchar(100),
 	@ho nvarchar(100),
@@ -333,6 +327,7 @@ SELECT * FROM CanHo
 SELECT * FROM CongViec
 go
 
+-- Procedure lấy công việc
 CREATE procedure [dbo].[SP_LayCV]
 as 
 begin
