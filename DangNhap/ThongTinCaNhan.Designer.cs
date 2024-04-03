@@ -42,7 +42,7 @@ namespace DangNhap
             this.TXB_tamtru = new System.Windows.Forms.TextBox();
             this.TXB_thuongtru = new System.Windows.Forms.TextBox();
             this.TXB_matkhau = new System.Windows.Forms.TextBox();
-            this.TXB_taikhoan = new System.Windows.Forms.TextBox();
+            this.TXB_manguoidung = new System.Windows.Forms.TextBox();
             this.LB_matkhau = new System.Windows.Forms.Label();
             this.LB_taikhoan = new System.Windows.Forms.Label();
             this.LB_honnhan = new System.Windows.Forms.Label();
@@ -77,8 +77,6 @@ namespace DangNhap
             this.LB_hovaten = new System.Windows.Forms.Label();
             this.LB_manv = new System.Windows.Forms.Label();
             this.LB_ngaysinh = new System.Windows.Forms.Label();
-            this.TXB_quoctich = new System.Windows.Forms.TextBox();
-            this.LB_quoctich = new System.Windows.Forms.Label();
             this.PIC_avatar = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.BTN_luu = new System.Windows.Forms.Button();
             this.BTN_huy = new System.Windows.Forms.Button();
@@ -164,9 +162,9 @@ namespace DangNhap
             this.LB_BHXH.ForeColor = System.Drawing.Color.White;
             this.LB_BHXH.Location = new System.Drawing.Point(43, 121);
             this.LB_BHXH.Name = "LB_BHXH";
-            this.LB_BHXH.Size = new System.Drawing.Size(65, 22);
+            this.LB_BHXH.Size = new System.Drawing.Size(189, 22);
             this.LB_BHXH.TabIndex = 44;
-            this.LB_BHXH.Text = "BHXH";
+            this.LB_BHXH.Text = "Mã số bảo hiểm xã hội";
             // 
             // LB_thuongtru
             // 
@@ -186,9 +184,9 @@ namespace DangNhap
             this.LB_id.ForeColor = System.Drawing.Color.White;
             this.LB_id.Location = new System.Drawing.Point(43, 18);
             this.LB_id.Name = "LB_id";
-            this.LB_id.Size = new System.Drawing.Size(117, 22);
+            this.LB_id.Size = new System.Drawing.Size(183, 22);
             this.LB_id.TabIndex = 8;
-            this.LB_id.Text = "Mã định danh";
+            this.LB_id.Text = "Số căn cước công dân";
             // 
             // TXB_cccd
             // 
@@ -237,16 +235,16 @@ namespace DangNhap
             this.TXB_matkhau.Size = new System.Drawing.Size(419, 30);
             this.TXB_matkhau.TabIndex = 55;
             // 
-            // TXB_taikhoan
+            // TXB_manguoidung
             // 
-            this.TXB_taikhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_taikhoan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TXB_taikhoan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_taikhoan.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_taikhoan.Location = new System.Drawing.Point(25, 247);
-            this.TXB_taikhoan.Name = "TXB_taikhoan";
-            this.TXB_taikhoan.Size = new System.Drawing.Size(419, 30);
-            this.TXB_taikhoan.TabIndex = 54;
+            this.TXB_manguoidung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.TXB_manguoidung.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_manguoidung.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_manguoidung.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_manguoidung.Location = new System.Drawing.Point(25, 247);
+            this.TXB_manguoidung.Name = "TXB_manguoidung";
+            this.TXB_manguoidung.Size = new System.Drawing.Size(419, 30);
+            this.TXB_manguoidung.TabIndex = 54;
             // 
             // LB_matkhau
             // 
@@ -267,9 +265,9 @@ namespace DangNhap
             this.LB_taikhoan.ForeColor = System.Drawing.Color.White;
             this.LB_taikhoan.Location = new System.Drawing.Point(21, 224);
             this.LB_taikhoan.Name = "LB_taikhoan";
-            this.LB_taikhoan.Size = new System.Drawing.Size(88, 22);
+            this.LB_taikhoan.Size = new System.Drawing.Size(130, 22);
             this.LB_taikhoan.TabIndex = 52;
-            this.LB_taikhoan.Text = "Tài khoản";
+            this.LB_taikhoan.Text = "Mã người dùng";
             // 
             // LB_honnhan
             // 
@@ -300,9 +298,9 @@ namespace DangNhap
             this.LB_sdt.ForeColor = System.Drawing.Color.White;
             this.LB_sdt.Location = new System.Drawing.Point(21, 18);
             this.LB_sdt.Name = "LB_sdt";
-            this.LB_sdt.Size = new System.Drawing.Size(47, 22);
+            this.LB_sdt.Size = new System.Drawing.Size(114, 22);
             this.LB_sdt.TabIndex = 47;
-            this.LB_sdt.Text = "SĐT";
+            this.LB_sdt.Text = "Số điện thoại";
             // 
             // LB_email
             // 
@@ -325,6 +323,7 @@ namespace DangNhap
             this.TXB_sdt.Name = "TXB_sdt";
             this.TXB_sdt.Size = new System.Drawing.Size(419, 30);
             this.TXB_sdt.TabIndex = 48;
+            this.TXB_sdt.TextChanged += new System.EventHandler(this.TXB_sdt_TextChanged);
             // 
             // TXB_email
             // 
@@ -359,7 +358,7 @@ namespace DangNhap
             this.panel4.Controls.Add(this.TXB_matkhau);
             this.panel4.Controls.Add(this.LB_taikhoan);
             this.panel4.Controls.Add(this.LB_matkhau);
-            this.panel4.Controls.Add(this.TXB_taikhoan);
+            this.panel4.Controls.Add(this.TXB_manguoidung);
             this.panel4.Controls.Add(this.LB_sdt);
             this.panel4.Controls.Add(this.TXB_email);
             this.panel4.Controls.Add(this.LB_email);
@@ -534,6 +533,7 @@ namespace DangNhap
             this.TXB_ten.Name = "TXB_ten";
             this.TXB_ten.Size = new System.Drawing.Size(327, 30);
             this.TXB_ten.TabIndex = 56;
+            this.TXB_ten.TextChanged += new System.EventHandler(this.TXB_ten_TextChanged);
             // 
             // label1
             // 
@@ -613,6 +613,7 @@ namespace DangNhap
             this.TXB_manv.Name = "TXB_manv";
             this.TXB_manv.Size = new System.Drawing.Size(487, 30);
             this.TXB_manv.TabIndex = 23;
+            this.TXB_manv.TextChanged += new System.EventHandler(this.TXB_manv_TextChanged);
             // 
             // LB_hovaten
             // 
@@ -646,28 +647,6 @@ namespace DangNhap
             this.LB_ngaysinh.Size = new System.Drawing.Size(88, 22);
             this.LB_ngaysinh.TabIndex = 7;
             this.LB_ngaysinh.Text = "Ngày sinh";
-            // 
-            // TXB_quoctich
-            // 
-            this.TXB_quoctich.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_quoctich.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TXB_quoctich.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_quoctich.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_quoctich.Location = new System.Drawing.Point(279, 173);
-            this.TXB_quoctich.Name = "TXB_quoctich";
-            this.TXB_quoctich.Size = new System.Drawing.Size(245, 30);
-            this.TXB_quoctich.TabIndex = 50;
-            // 
-            // LB_quoctich
-            // 
-            this.LB_quoctich.AutoSize = true;
-            this.LB_quoctich.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_quoctich.ForeColor = System.Drawing.Color.White;
-            this.LB_quoctich.Location = new System.Drawing.Point(279, 148);
-            this.LB_quoctich.Name = "LB_quoctich";
-            this.LB_quoctich.Size = new System.Drawing.Size(86, 22);
-            this.LB_quoctich.TabIndex = 49;
-            this.LB_quoctich.Text = "Quốc tịch";
             // 
             // PIC_avatar
             // 
@@ -734,10 +713,8 @@ namespace DangNhap
             this.Controls.Add(this.BTN_yeucauchinhsua);
             this.Controls.Add(this.BTN_huy);
             this.Controls.Add(this.BTN_luu);
-            this.Controls.Add(this.LB_quoctich);
             this.Controls.Add(this.PIC_avatar);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.TXB_quoctich);
             this.Name = "ThongTinCaNhan";
             this.Text = "ThongTinCaNhan";
             this.panel2.ResumeLayout(false);
@@ -753,7 +730,6 @@ namespace DangNhap
             this.GB_gioitinh.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PIC_avatar)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -761,7 +737,7 @@ namespace DangNhap
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox TXB_matkhau;
-        private System.Windows.Forms.TextBox TXB_taikhoan;
+        private System.Windows.Forms.TextBox TXB_manguoidung;
         private System.Windows.Forms.Label LB_matkhau;
         private System.Windows.Forms.Label LB_taikhoan;
         private System.Windows.Forms.Label LB_honnhan;
@@ -782,8 +758,6 @@ namespace DangNhap
         private System.Windows.Forms.TextBox TXB_thuongtru;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox TXB_quoctich;
-        private System.Windows.Forms.Label LB_quoctich;
         private System.Windows.Forms.Label LB_vitri;
         private System.Windows.Forms.Label LB_manhom;
         private System.Windows.Forms.TextBox TXB_tinhtrangHDLD;

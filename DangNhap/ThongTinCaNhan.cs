@@ -13,6 +13,7 @@ namespace DangNhap
 {
     public partial class ThongTinCaNhan : Form
     {
+        private string userId = "";
         public ThongTinCaNhan()
         {
             InitializeComponent();
@@ -97,6 +98,17 @@ namespace DangNhap
             return true;
         }
 
+        private void CreateAccountForEmployee()
+        {
+            
+        }
+        // Tạo userId theo quy tắc trong file QA
+        private string GenerateUserId()
+        {
+            string ten = TXB_ten.Text.Substring(TXB_ten.Text.LastIndexOf(' ') + 1);
+            return TXB_manv.Text + "." + ten + "." + TXB_sdt;
+        }
+
         private void BTN_luu_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(TXB_manv.Text))
@@ -178,11 +190,27 @@ namespace DangNhap
             if (AddEmployee())
             {
                 MessageBox.Show("Thêm thành công");
+                CreateAccountForEmployee();
             }
             else
             {
                 MessageBox.Show("Thêm thất bại");
             }
+        }
+
+        private void TXB_manv_TextChanged(object sender, EventArgs e)
+        {
+            TXB_manguoidung.Text = GenerateUserId();
+        }
+
+        private void TXB_ten_TextChanged(object sender, EventArgs e)
+        {
+            TXB_manguoidung.Text = GenerateUserId();
+        }
+
+        private void TXB_sdt_TextChanged(object sender, EventArgs e)
+        {
+            TXB_manguoidung.Text = GenerateUserId();
         }
     }
 }
