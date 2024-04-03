@@ -35,7 +35,10 @@ namespace DangNhap
                         p = new SqlParameter("@email", TXB_email.Text);
                         cmd.Parameters.Add(p);
 
-                        p = new SqlParameter("@hoTen", TXB_hoten.Text);
+                        p = new SqlParameter("@ho", TXB_ho.Text);
+                        cmd.Parameters.Add(p);
+
+                        p = new SqlParameter("@ten", TXB_ten.Text);
                         cmd.Parameters.Add(p);
 
                         p = new SqlParameter("@SDT", TXB_sdt.Text);
@@ -106,9 +109,14 @@ namespace DangNhap
                 MessageBox.Show("Vui lòng nhập email");
                 return;
             }
-            if (string.IsNullOrEmpty(TXB_hoten.Text))
+            if (string.IsNullOrEmpty(TXB_ho.Text))
             {
-                MessageBox.Show("Vui lòng nhập họ tên");
+                MessageBox.Show("Vui lòng nhập họ");
+                return;
+            }
+            if (string.IsNullOrEmpty(TXB_ten.Text))
+            {
+                MessageBox.Show("Vui lòng nhập tên");
                 return;
             }
             if (string.IsNullOrEmpty(TXB_sdt.Text))

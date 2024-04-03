@@ -54,6 +54,8 @@ namespace DangNhap
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.DTP_ngaykyHDLD = new System.Windows.Forms.DateTimePicker();
+            this.DTP_ngayhetHDLD = new System.Windows.Forms.DateTimePicker();
             this.CHB_tunglanv = new System.Windows.Forms.CheckBox();
             this.LB_vitri = new System.Windows.Forms.Label();
             this.LB_manhom = new System.Windows.Forms.Label();
@@ -64,10 +66,13 @@ namespace DangNhap
             this.LB_ngaykyHDLD = new System.Windows.Forms.Label();
             this.TXB_manhom = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.TXB_ten = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.DTP_ngaysinh = new System.Windows.Forms.DateTimePicker();
             this.GB_gioitinh = new System.Windows.Forms.GroupBox();
             this.Rad_nu = new System.Windows.Forms.RadioButton();
             this.Rad_nam = new System.Windows.Forms.RadioButton();
-            this.TXB_hoten = new System.Windows.Forms.TextBox();
+            this.TXB_ho = new System.Windows.Forms.TextBox();
             this.TXB_manv = new System.Windows.Forms.TextBox();
             this.LB_hovaten = new System.Windows.Forms.Label();
             this.LB_manv = new System.Windows.Forms.Label();
@@ -78,9 +83,6 @@ namespace DangNhap
             this.BTN_luu = new System.Windows.Forms.Button();
             this.BTN_huy = new System.Windows.Forms.Button();
             this.BTN_yeucauchinhsua = new System.Windows.Forms.Button();
-            this.DTP_ngaysinh = new System.Windows.Forms.DateTimePicker();
-            this.DTP_ngayhetHDLD = new System.Windows.Forms.DateTimePicker();
-            this.DTP_ngaykyHDLD = new System.Windows.Forms.DateTimePicker();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -288,7 +290,7 @@ namespace DangNhap
             this.TXB_honnhan.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.TXB_honnhan.Location = new System.Drawing.Point(26, 362);
             this.TXB_honnhan.Name = "TXB_honnhan";
-            this.TXB_honnhan.Size = new System.Drawing.Size(419, 30);
+            this.TXB_honnhan.Size = new System.Drawing.Size(487, 30);
             this.TXB_honnhan.TabIndex = 51;
             // 
             // LB_sdt
@@ -387,6 +389,20 @@ namespace DangNhap
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(743, 404);
             this.panel1.TabIndex = 45;
+            // 
+            // DTP_ngaykyHDLD
+            // 
+            this.DTP_ngaykyHDLD.Location = new System.Drawing.Point(265, 256);
+            this.DTP_ngaykyHDLD.Name = "DTP_ngaykyHDLD";
+            this.DTP_ngaykyHDLD.Size = new System.Drawing.Size(200, 22);
+            this.DTP_ngaykyHDLD.TabIndex = 56;
+            // 
+            // DTP_ngayhetHDLD
+            // 
+            this.DTP_ngayhetHDLD.Location = new System.Drawing.Point(34, 256);
+            this.DTP_ngayhetHDLD.Name = "DTP_ngayhetHDLD";
+            this.DTP_ngayhetHDLD.Size = new System.Drawing.Size(200, 22);
+            this.DTP_ngayhetHDLD.TabIndex = 55;
             // 
             // CHB_tunglanv
             // 
@@ -492,9 +508,11 @@ namespace DangNhap
             // 
             this.panel3.AutoScroll = true;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.panel3.Controls.Add(this.TXB_ten);
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.DTP_ngaysinh);
             this.panel3.Controls.Add(this.GB_gioitinh);
-            this.panel3.Controls.Add(this.TXB_hoten);
+            this.panel3.Controls.Add(this.TXB_ho);
             this.panel3.Controls.Add(this.TXB_manv);
             this.panel3.Controls.Add(this.LB_hovaten);
             this.panel3.Controls.Add(this.LB_manv);
@@ -505,6 +523,35 @@ namespace DangNhap
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(532, 404);
             this.panel3.TabIndex = 53;
+            // 
+            // TXB_ten
+            // 
+            this.TXB_ten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.TXB_ten.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_ten.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_ten.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_ten.Location = new System.Drawing.Point(186, 146);
+            this.TXB_ten.Name = "TXB_ten";
+            this.TXB_ten.Size = new System.Drawing.Size(327, 30);
+            this.TXB_ten.TabIndex = 56;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(182, 121);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 22);
+            this.label1.TabIndex = 55;
+            this.label1.Text = "Tên";
+            // 
+            // DTP_ngaysinh
+            // 
+            this.DTP_ngaysinh.Location = new System.Drawing.Point(26, 260);
+            this.DTP_ngaysinh.Name = "DTP_ngaysinh";
+            this.DTP_ngaysinh.Size = new System.Drawing.Size(200, 22);
+            this.DTP_ngaysinh.TabIndex = 52;
             // 
             // GB_gioitinh
             // 
@@ -545,16 +592,16 @@ namespace DangNhap
             this.Rad_nam.Text = "Nam";
             this.Rad_nam.UseVisualStyleBackColor = true;
             // 
-            // TXB_hoten
+            // TXB_ho
             // 
-            this.TXB_hoten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_hoten.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TXB_hoten.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_hoten.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_hoten.Location = new System.Drawing.Point(26, 146);
-            this.TXB_hoten.Name = "TXB_hoten";
-            this.TXB_hoten.Size = new System.Drawing.Size(419, 30);
-            this.TXB_hoten.TabIndex = 24;
+            this.TXB_ho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.TXB_ho.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_ho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_ho.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_ho.Location = new System.Drawing.Point(26, 146);
+            this.TXB_ho.Name = "TXB_ho";
+            this.TXB_ho.Size = new System.Drawing.Size(124, 30);
+            this.TXB_ho.TabIndex = 24;
             // 
             // TXB_manv
             // 
@@ -564,7 +611,7 @@ namespace DangNhap
             this.TXB_manv.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.TXB_manv.Location = new System.Drawing.Point(26, 38);
             this.TXB_manv.Name = "TXB_manv";
-            this.TXB_manv.Size = new System.Drawing.Size(419, 30);
+            this.TXB_manv.Size = new System.Drawing.Size(487, 30);
             this.TXB_manv.TabIndex = 23;
             // 
             // LB_hovaten
@@ -574,9 +621,9 @@ namespace DangNhap
             this.LB_hovaten.ForeColor = System.Drawing.Color.White;
             this.LB_hovaten.Location = new System.Drawing.Point(25, 121);
             this.LB_hovaten.Name = "LB_hovaten";
-            this.LB_hovaten.Size = new System.Drawing.Size(86, 22);
+            this.LB_hovaten.Size = new System.Drawing.Size(34, 22);
             this.LB_hovaten.TabIndex = 4;
-            this.LB_hovaten.Text = "Họ và tên";
+            this.LB_hovaten.Text = "Họ";
             // 
             // LB_manv
             // 
@@ -677,27 +724,6 @@ namespace DangNhap
             this.BTN_yeucauchinhsua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_yeucauchinhsua.UseVisualStyleBackColor = true;
             // 
-            // DTP_ngaysinh
-            // 
-            this.DTP_ngaysinh.Location = new System.Drawing.Point(26, 260);
-            this.DTP_ngaysinh.Name = "DTP_ngaysinh";
-            this.DTP_ngaysinh.Size = new System.Drawing.Size(200, 22);
-            this.DTP_ngaysinh.TabIndex = 52;
-            // 
-            // DTP_ngayhetHDLD
-            // 
-            this.DTP_ngayhetHDLD.Location = new System.Drawing.Point(34, 256);
-            this.DTP_ngayhetHDLD.Name = "DTP_ngayhetHDLD";
-            this.DTP_ngayhetHDLD.Size = new System.Drawing.Size(200, 22);
-            this.DTP_ngayhetHDLD.TabIndex = 55;
-            // 
-            // DTP_ngaykyHDLD
-            // 
-            this.DTP_ngaykyHDLD.Location = new System.Drawing.Point(265, 256);
-            this.DTP_ngaykyHDLD.Name = "DTP_ngaykyHDLD";
-            this.DTP_ngaykyHDLD.Size = new System.Drawing.Size(200, 22);
-            this.DTP_ngaykyHDLD.TabIndex = 56;
-            // 
             // ThongTinCaNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -770,7 +796,7 @@ namespace DangNhap
         private System.Windows.Forms.TextBox TXB_manhom;
         private System.Windows.Forms.Label LB_hovaten;
         private System.Windows.Forms.TextBox TXB_manv;
-        private System.Windows.Forms.TextBox TXB_hoten;
+        private System.Windows.Forms.TextBox TXB_ho;
         private Guna.UI.WinForms.GunaCirclePictureBox PIC_avatar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
@@ -784,5 +810,7 @@ namespace DangNhap
         private System.Windows.Forms.DateTimePicker DTP_ngaysinh;
         private System.Windows.Forms.DateTimePicker DTP_ngayhetHDLD;
         private System.Windows.Forms.DateTimePicker DTP_ngaykyHDLD;
+        private System.Windows.Forms.TextBox TXB_ten;
+        private System.Windows.Forms.Label label1;
     }
 }
