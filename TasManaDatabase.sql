@@ -234,9 +234,6 @@ CREATE TABLE CuDan_sdtNguoiThan
 );
 go
 
--- Insert thông tin tài khoản
-INSERT INTO NhanVien VALUES('GD-001', 'jd@gmail.com', 'Ho', 'Khang', '111111111', '1/1/2002', 1, 'TP.HCM', '123456', 'Full-time', N'Độc thân', '1111111', 1, '1/1/2024', NULL, 'TP.HCM', NULL, N'Tốt', NULL)
-INSERT INTO TaiKhoan VALUES('GD-001.KHANG.111111111', '123', 'GD-001')
 
 -- Insert thông tin phòng ban
 INSERT INTO PhongBan VALUES('HCNS', N'Hành chính Nhân sự & Dịch vụ Cư dân','0123456789','BCMP_HCNS@gmail.com')
@@ -245,10 +242,6 @@ INSERT INTO PhongBan VALUES('TCKT', N'Tài chính kế toán', '01234444444' ,'B
 INSERT INTO PhongBan VALUES('AN', N'An Ninh', '0133333333', 'BCMP_AN@gmail.com')
 INSERT INTO PhongBan VALUES('KT', N'Kỹ Thuật Bảo Trì', '01234567912', '@BCM_KT@gmail.com')
 INSERT INTO PhongBan VALUES('XD', N'Xây Dựng', '02645816328', '@BCMP_XD@gmail.com')
-
--- Insert thông tin nhóm
-INSERT INTO Nhom VALUES('VSN01', 'VS-002', 'VS')
-INSERT INTO Nhom VALUES('VSN02', 'VS-002', 'VS')
 
 -- Insert thông tin nhóm
 INSERT INTO Nhom VALUES('VSN01', 'VS-002', 'VS')
@@ -267,14 +260,6 @@ INSERT INTO NhanVien VALUES('VS-003', 'email_nv001@example.com', 'Tran', 'An', '
 
 SELECT * FROM TaiKhoan
 SELECT * FROM NhanVien
-
-
-=========
--- Insert mẫu công việc
-INSERT INTO CongViec VALUES('CVVS1', N'Quét nhà', '2024-04-04 12:30:00',null, N'Chưa bắt đầu',null)
-Insert into CongViec_NhanVien Values ('VS-003', 'CVVS1')
-Insert INTO YeuCau VALUES('CVVS1', 'WPHA')
-
 
 -- Insert Dữ liệu thử của căn hộ
 INSERT INTO CanHo VALUES ('WPHA', 100.5, 5, 3, 2, NULL, 200, 2, '2024-01-01', N'Còn trống', NULL);
