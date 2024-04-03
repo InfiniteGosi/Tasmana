@@ -238,16 +238,6 @@ go
 INSERT INTO NhanVien VALUES('GD-001', 'jd@gmail.com', 'Ho', 'Khang', '111111111', '1/1/2002', 1, 'TP.HCM', '123456', 'Full-time', N'Độc thân', '1111111', 1, '1/1/2024', NULL, 'TP.HCM', NULL, N'Tốt', NULL)
 INSERT INTO TaiKhoan VALUES('GD-001.KHANG.111111111', '123', 'GD-001')
 
-
--- Insert thông tin nhóm
-INSERT INTO Nhom VALUES('VSN01', 'VS-002', 'VS')
-INSERT INTO Nhom VALUES('VSN02', 'VS-002', 'VS')
-
--- Insert thông tin NV
-INSERT INTO NhanVien VALUES('VS-002', 'VS002@gmail.com', 'Vu', 'Minh Quang', '1321312', '1/2/2004', 1, 'TP.HCM', '1234576', 'Full-time', N'Độc thân', '1111211', 1, '1/1/2024', NULL, 'TP.HCM', NULL, N'Tốt', NULL)
-INSERT INTO TaiKhoan VALUES('VS-002.MinhQuang.1321312', '123', 'VS-002')
-INSERT INTO NhanVien VALUES('VS-003', 'email_nv001@example.com', N'Trần', N'A', '0123456669', '2000-01-01', 1, N'Hà Nội', '072947182653', 'Full-time', N'Độc thân', '01231230213', 1, '2024-01-01', NULL, N'Địa chỉ thường trú NV001', NULL, N'Tốt', 'VSN01')
-
 -- Insert thông tin phòng ban
 INSERT INTO PhongBan VALUES('HCNS', N'Hành chính Nhân sự & Dịch vụ Cư dân','0123456789','BCMP_HCNS@gmail.com')
 INSERT INTO PhongBan VALUES('VS', N'Vệ Sinh','0123456889','BCMP_VS@gmail.com')
@@ -260,16 +250,20 @@ INSERT INTO PhongBan VALUES('XD', N'Xây Dựng', '02645816328', '@BCMP_XD@gmail
 INSERT INTO Nhom VALUES('VSN01', 'VS-002', 'VS')
 INSERT INTO Nhom VALUES('VSN02', 'VS-002', 'VS')
 
+-- Insert thông tin nhóm
+INSERT INTO Nhom VALUES('VSN01', 'VS-002', 'VS')
+INSERT INTO Nhom VALUES('VSN02', 'VS-002', 'VS')
+
 SELECT * FROM PhongBan
 SELECT * FROM Nhom
 
 -- Insert thông tin tài khoản
-INSERT INTO NhanVien VALUES('GD-001', 'jd@gmail.com', 'Ho', 'Khang', '111111111', '1/1/2002', 1, 'TP.HCM', '123456', 'Full-time', N'Độc thân', '1111111', 1, '1/1/2024', '1/1/2024', 'TP.HCM', N'Địa chỉ thường trú GD-001', N'Tốt', 'VSN01')
+INSERT INTO NhanVien VALUES('GD-001', 'jd@gmail.com', 'Ho', 'Khang', '111111111', '1/1/2002', 1, 'TP.HCM', '123456', 'Full-time', N'Độc thân', '1111111', 1, '2024-01-01', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú GD-001', N'Tốt', 'VSN01')
 INSERT INTO TaiKhoan VALUES('GD-001.KHANG.111111111', '123', 'GD-001')
 -- Insert thông tin NV
-INSERT INTO NhanVien VALUES('VS-002', 'VS002@gmail.com', 'Vu', 'Quang', '1321312', '1/2/2004', 1, 'TP.HCM', '1234576', 'Full-time', N'Độc thân', '1111211', 1, '1/1/2024', '1/1/2024', 'TP.HCM', 'Chua co', N'Tốt', 'VSN01')
+INSERT INTO NhanVien VALUES('VS-002', 'VS002@gmail.com', 'Vu', 'Quang', '1321312', '1/2/2004', 1, 'TP.HCM', '1234576', 'Full-time', N'Độc thân', '1111211', 1, '2024-01-01', '2025-12-31', 'TP.HCM', 'Chua co', N'Tốt', 'VSN01')
 INSERT INTO TaiKhoan VALUES('VS-002.MinhQuang.1321312', '123', 'VS-002')
-INSERT INTO NhanVien VALUES('VS-003', 'email_nv001@example.com', 'Tran', 'An', '0123456669', '2000-01-01', 1, N'Hà Nội', '072947182653', 'Full-time', N'Độc thân', '01231230213', 1, '2024-01-01', '1/1/2024', N'Địa chỉ thường trú NV001', 'Chua co', N'Tốt', 'VSN01')
+INSERT INTO NhanVien VALUES('VS-003', 'email_nv001@example.com', 'Tran', 'An', '0123456669', '2000-01-01', 1, N'Hà Nội', '072947182653', 'Full-time', N'Độc thân', '01231230213', 1, '2024-01-01', '2025-12-31', N'Địa chỉ thường trú NV001', 'Chua co', N'Tốt', 'VSN01')
 
 SELECT * FROM TaiKhoan
 SELECT * FROM NhanVien
@@ -293,8 +287,7 @@ INSERT INTO CongViec VALUES('CVVS1', N'Quét nhà', '2024-04-04 12:30:00',null, 
 Insert into CongViec_NhanVien Values ('VS-003', 'CVVS1')
 Insert INTO YeuCau VALUES('CVVS1', 'WPHA')
 go
-
-
+ select * from NhanVien
 
 --Procedure thêm một nhân viên mới
 create procedure [dbo].[SP_ThemNhanVien]
