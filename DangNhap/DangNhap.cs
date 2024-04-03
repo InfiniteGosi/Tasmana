@@ -10,8 +10,11 @@ using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DangNhap.Model;
+using DTO;
+using BLL;
 using Microsoft.VisualBasic.ApplicationServices;
+using Microsoft.Office.Interop.Excel;
+using System.Collections;
 
 namespace DangNhap
 {
@@ -25,6 +28,19 @@ namespace DangNhap
         {
             InitializeComponent();
         }
+        private bool CheckAccountExistence(string userId)
+        {
+            return AccountBLL.Instance.CheckAccountExistence(userId);
+        }
+        private bool CheckAccountPassword(string userId, string password)
+        {
+            return AccountBLL.Instance.CheckAccountPasword(userId, password);
+        }
+        private void GetAccount(string userId)
+        {
+            currentAccount = AccountBLL.Instance.GetAccount(userId);
+        }
+
         private void BT_DangNhap_Click(object sender, EventArgs e)
         {
             string userId = TB_TaiKhoan.Text;
@@ -41,52 +57,23 @@ namespace DangNhap
                 return;
             }
 
-            string password = "";
-            string employeeId = "";
-
-            string query = $"select * from TaiKhoan where maNguoiDung = '{userId}'";
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=Tasmana;Integrated Security=True;TrustServerCertificate=True"))
+            if (CheckAccountExistence(userId))
             {
-
-                try
+                if (CheckAccountPassword(userId, pwd))
                 {
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    conn.Open();
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    if (reader.Read())
-                    {
-                        password = reader["matKhau"].ToString();
-                        employeeId = reader["maNhanVien"].ToString();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Tài khoản không tồn tại");
-                        return;
-                    }
-                    reader.Close();
-                    cmd.Dispose();
+                    GetAccount(userId);
+                    MessageBox.Show("Đăng nhập thành công");
+                    TrangHienThi formTrangChu = new TrangHienThi();
+                    formTrangChu.ShowDialog();
                 }
-                catch
+                else
                 {
-                    MessageBox.Show("Kết nối thất bại");
-                    return;
+                    LB_error.Text = "Mật khẩu hoặc tên đăng nhập không đúng";
                 }
-                finally { conn.Close(); }
-            }
-
-            if (password.Equals(pwd))
-            {
-                string level = phanQuyen(userId);
-                currentAccount = new Account(userId, pwd, employeeId, level);
-                MessageBox.Show("Đăng nhập thành công");
-                TrangHienThi formTrangChu = new TrangHienThi();
-                formTrangChu.ShowDialog();
             }
             else
             {
-                LB_error.Text = "Mật khẩu hoặc tên đăng nhập không đúng";
+                LB_error.Text = "Tài khoản không tồn tại";
             }
         }
 
@@ -125,42 +112,6 @@ namespace DangNhap
         private void DangNhap_MouseUp(object sender, MouseEventArgs e)
         {
             mov = 0;
-        }
-
-        private static string phanQuyen(string userID)
-        {
-            string level = "";
-            string[] temp = userID.Split('.');
-            if (!string.IsNullOrEmpty(temp[0]))
-            {
-                string loaiNV = temp[0].Substring(0,2);
-                switch (loaiNV) {
-                    case "GD":
-                        level = "CEO";
-                        break;
-                    case "DV":
-                        level = "DV";
-                        break;
-                    case "TC":
-                        level = "TaiChinh";
-                        break;
-                    case "VS":
-                        level = "VeSinh";
-                        break;
-                    case "AN":
-                        level = "AnNinh";
-                        break;
-                    case "KT":
-                        level = "KyThuat";
-                        break;
-                    case "XD":
-                        level = "XayDung";
-                        break;
-                    default:
-                        break;
-                }
-            }
-            return level;
         }
     }
 }

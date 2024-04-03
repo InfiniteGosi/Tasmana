@@ -272,13 +272,6 @@
     <Compile Include="LichSuCanHo.Designer.cs">
       <DependentUpon>LichSuCanHo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Account.cs" />
-    <Compile Include="Model\Apartment.cs" />
-    <Compile Include="Model\Division.cs" />
-    <Compile Include="Model\Employee.cs" />
-    <Compile Include="Model\Group.cs" />
-    <Compile Include="Model\Job.cs" />
-    <Compile Include="Model\KhachThueKhuThuongMai.cs" />
     <Compile Include="NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -418,6 +411,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{94d59456-8972-4453-a645-f0b26f4e5c2f}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{a5587c10-6bdc-4b1f-aa86-4d5016ed5c0d}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\IronPdf.Native.Chrome.Windows.2024.3.24\build\net\IronPdf.Native.Chrome.Windows.targets" Condition="Exists('..\packages\IronPdf.Native.Chrome.Windows.2024.3.24\build\net\IronPdf.Native.Chrome.Windows.targets')" />

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DangNhap.Model
+namespace DTO
 {
     public class Account
     {
