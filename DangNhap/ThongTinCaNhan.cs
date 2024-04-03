@@ -8,12 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace DangNhap
 {
     public partial class ThongTinCaNhan : Form
     {
-        private string userId = "";
         public ThongTinCaNhan()
         {
             InitializeComponent();
@@ -103,10 +103,11 @@ namespace DangNhap
             
         }
         // Tạo userId theo quy tắc trong file QA
-        private string GenerateUserId()
+        private void GenerateUserId()
         {
             string ten = TXB_ten.Text.Substring(TXB_ten.Text.LastIndexOf(' ') + 1);
-            return TXB_manv.Text + "." + ten + "." + TXB_sdt;
+            string output = $"{TXB_manv.Text.Trim()}.{ten.Trim()}.{TXB_sdt.Text.Trim()}";
+            TXB_manguoidung.Text = output;
         }
 
         private void BTN_luu_Click(object sender, EventArgs e)
@@ -200,17 +201,17 @@ namespace DangNhap
 
         private void TXB_manv_TextChanged(object sender, EventArgs e)
         {
-            TXB_manguoidung.Text = GenerateUserId();
+            GenerateUserId();
         }
 
         private void TXB_ten_TextChanged(object sender, EventArgs e)
         {
-            TXB_manguoidung.Text = GenerateUserId();
+            GenerateUserId();
         }
 
         private void TXB_sdt_TextChanged(object sender, EventArgs e)
         {
-            TXB_manguoidung.Text = GenerateUserId();
+            GenerateUserId();
         }
     }
 }

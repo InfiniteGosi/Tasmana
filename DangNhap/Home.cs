@@ -15,6 +15,8 @@ namespace DangNhap
         private int mov;
         private int movX;
         private int movY;
+        public bool exited = true;
+        public event EventHandler DangXuat;
         public Home()
         {
             InitializeComponent();
@@ -109,7 +111,10 @@ namespace DangNhap
 
         private void BTN_x_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (exited)
+            {
+                Application.Exit();
+            }
         }
 
         private void BTN_square_Click(object sender, EventArgs e)
@@ -126,7 +131,7 @@ namespace DangNhap
 
         private void BTN_logout_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DangXuat(this, new EventArgs());
         }
 
         private void Home_MouseDown(object sender, MouseEventArgs e)

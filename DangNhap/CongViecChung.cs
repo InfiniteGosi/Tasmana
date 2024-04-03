@@ -38,6 +38,16 @@ namespace DangNhap
         
         private void CongViecChung_Load(object sender, EventArgs e)
         {
+            if (DangNhap.currentAccount.Level.Equals("CEO"))
+            {
+                BTN_themcongviec.Enabled = true;
+                BTN_themcongviec.Visible = true;
+            }
+            else
+            {
+                BTN_themcongviec.Enabled = false;
+                BTN_themcongviec.Visible = false;
+            }
             con = new SqlConnection(connectString);
             dt = new DataTable();
             con.Open();

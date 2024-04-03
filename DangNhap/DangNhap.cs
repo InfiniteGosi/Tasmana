@@ -82,12 +82,21 @@ namespace DangNhap
                 currentAccount = new Account(userId, pwd, employeeId, level);
                 MessageBox.Show("Đăng nhập thành công");
                 Home formTrangChu = new Home();
-                formTrangChu.ShowDialog();
+                formTrangChu.Show();
+                this.Hide();
+                formTrangChu.DangXuat += FormTrangChu_DangXuat;
             }
             else
             {
                 LB_error.Text = "Mật khẩu hoặc tên đăng nhập không đúng";
             }
+        }
+
+        private void FormTrangChu_DangXuat(object sender, EventArgs e)
+        {
+            (sender as Home).exited = false;
+            (sender as Home).Close();
+            this.Show();
         }
 
         private void VB_HienMatKhau_CheckedChanged(object sender, EventArgs e)
