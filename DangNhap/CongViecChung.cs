@@ -4,10 +4,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 
 namespace DangNhap
@@ -54,7 +57,71 @@ namespace DangNhap
 
         private void BTN_PDF_Click(object sender, EventArgs e)
         {
+            if (DGV_hienthicongviec.Rows.Count>0)
+            {
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "PDF (*.pdf|*.pdf)";
+                save.FileName = "CongViec";
+                bool ErrorMessage = false;
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    if(File.Exists(save.FileName))
+                    { 
+                        try
+                        {
+                            File.Delete(save.FileName);
+                        }
+                        catch (Exception ex)
+                        {
+                            ErrorMessage = true;
+                            MessageBox.Show("Unable to write data in disk" + ex.Message);
+                        }
+                    }
+                    if (!ErrorMessage)
+                    {
+                        try
+                        {
+                            PdfPTable pt = new PdfPTable(DGV_hienthicongviec.ColumnCount);
+                            pt.DefaultCell.Padding = 2;
+                            pt.WidthPercentage = 100;
+                            pt.HorizontalAlignment = Element.ALIGN_LEFT;
 
+                            foreach (DataGridViewColumn col in DGV_hienthicongviec.Columns)
+                            {
+                                PdfPCell pCell = new PdfPCell(new Phrase(col.HeaderText));
+                                pt.AddCell(pCell);
+                            }
+
+                            foreach (DataGridViewRow viewRow in DGV_hienthicongviec.Rows)
+                            {
+                                foreach (DataGridViewCell dCell in viewRow.Cells)
+                                {
+                                    pt.AddCell(dCell.Value.ToString());
+                                }
+                            }
+
+                            using (FileStream fileStream = new FileStream(save.FileName, FileMode.Create) )
+                            {
+                                var pgSize = new iTextSharp.text.Rectangle(60, 120);
+                                var doc = new iTextSharp.text.Document(pgSize, 8f, 16f, 16f, 8f);
+                                doc.Open();
+                                doc.Add(pt);
+                                doc.Close();
+                                fileStream.Close();
+                            }
+                            MessageBox.Show("Successful", "info");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error while exporting Data" + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No record found", "Info");
+            }
         }
 
         private void BTN_excel_Click(object sender, EventArgs e)

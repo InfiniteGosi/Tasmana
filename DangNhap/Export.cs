@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using IronPdf;
+
 
 namespace DangNhap
 {
@@ -166,6 +166,9 @@ namespace DangNhap
 
             // Center the table
             oSheet.get_Range(c1, c2).HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+        }
+        public void ToPDF(DataTable dataTable, string sheetName, string title)
+        {
         }
     }
 }
