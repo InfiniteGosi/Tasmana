@@ -266,12 +266,6 @@
     <Compile Include="HeThongBanDo.Designer.cs">
       <DependentUpon>HeThongBanDo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
-    </Compile>
     <Compile Include="LichSuCanHo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -341,6 +335,12 @@
     <Compile Include="ThongTinCuDan.Designer.cs">
       <DependentUpon>ThongTinCuDan.cs</DependentUpon>
     </Compile>
+    <Compile Include="TrangHienThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrangHienThi.Designer.cs">
+      <DependentUpon>TrangHienThi.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CanHo.resx">
       <DependentUpon>CanHo.cs</DependentUpon>
     </EmbeddedResource>
@@ -363,10 +363,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HeThongBanDo.resx">
       <DependentUpon>HeThongBanDo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="LichSuCanHo.resx">
       <DependentUpon>LichSuCanHo.cs</DependentUpon>
@@ -405,6 +401,9 @@
     <EmbeddedResource Include="ThongTinCaNhan.resx">
       <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrangHienThi.resx">
+      <DependentUpon>TrangHienThi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -41,7 +41,6 @@ namespace DangNhap
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.DGV_hienthinhanvien = new System.Windows.Forms.DataGridView();
-            this.BTN_refresh = new System.Windows.Forms.Button();
             this.C_manhanvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_Ho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +48,7 @@ namespace DangNhap
             this.C_sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_chitiet = new System.Windows.Forms.DataGridViewImageColumn();
+            this.BTN_refresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_hienthinhanvien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -231,7 +231,12 @@ namespace DangNhap
             // 
             // DGV_hienthinhanvien
             // 
-            this.DGV_hienthinhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_hienthinhanvien.AllowUserToAddRows = false;
+            this.DGV_hienthinhanvien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DGV_hienthinhanvien.ColumnHeadersHeight = 30;
+            this.DGV_hienthinhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGV_hienthinhanvien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.C_manhanvien,
             this.C_Ho,
@@ -247,19 +252,8 @@ namespace DangNhap
             this.DGV_hienthinhanvien.Size = new System.Drawing.Size(1248, 401);
             this.DGV_hienthinhanvien.TabIndex = 106;
             // 
-            // BTN_refresh
-            // 
-            this.BTN_refresh.Location = new System.Drawing.Point(886, 57);
-            this.BTN_refresh.Name = "BTN_refresh";
-            this.BTN_refresh.Size = new System.Drawing.Size(108, 37);
-            this.BTN_refresh.TabIndex = 107;
-            this.BTN_refresh.Text = "Tải lại";
-            this.BTN_refresh.UseVisualStyleBackColor = true;
-            this.BTN_refresh.Click += new System.EventHandler(this.BTN_refresh_Click);
-            // 
             // C_manhanvien
             // 
-            this.C_manhanvien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.C_manhanvien.HeaderText = "Mã nhân viên";
             this.C_manhanvien.MinimumWidth = 6;
             this.C_manhanvien.Name = "C_manhanvien";
@@ -267,9 +261,11 @@ namespace DangNhap
             // 
             // C_Ho
             // 
+            this.C_Ho.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.C_Ho.HeaderText = "Họ";
             this.C_Ho.MinimumWidth = 6;
             this.C_Ho.Name = "C_Ho";
+            this.C_Ho.Width = 125;
             // 
             // C_ten
             // 
@@ -280,7 +276,6 @@ namespace DangNhap
             // 
             // C_manhom
             // 
-            this.C_manhom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.C_manhom.HeaderText = "Mã nhóm";
             this.C_manhom.MinimumWidth = 6;
             this.C_manhom.Name = "C_manhom";
@@ -288,17 +283,17 @@ namespace DangNhap
             // 
             // C_sdt
             // 
-            this.C_sdt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.C_sdt.HeaderText = "Số điện thoại";
             this.C_sdt.MinimumWidth = 6;
             this.C_sdt.Name = "C_sdt";
+            this.C_sdt.Width = 245;
             // 
             // C_email
             // 
-            this.C_email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.C_email.HeaderText = "Email";
             this.C_email.MinimumWidth = 6;
             this.C_email.Name = "C_email";
+            this.C_email.Width = 244;
             // 
             // C_chitiet
             // 
@@ -306,6 +301,19 @@ namespace DangNhap
             this.C_chitiet.MinimumWidth = 6;
             this.C_chitiet.Name = "C_chitiet";
             this.C_chitiet.Width = 125;
+            // 
+            // BTN_refresh
+            // 
+            this.BTN_refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_refresh.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BTN_refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_refresh.Image = ((System.Drawing.Image)(resources.GetObject("BTN_refresh.Image")));
+            this.BTN_refresh.Location = new System.Drawing.Point(1223, 57);
+            this.BTN_refresh.Name = "BTN_refresh";
+            this.BTN_refresh.Size = new System.Drawing.Size(44, 40);
+            this.BTN_refresh.TabIndex = 107;
+            this.BTN_refresh.UseVisualStyleBackColor = true;
+            this.BTN_refresh.Click += new System.EventHandler(this.BTN_refresh_Click);
             // 
             // NhanVien
             // 
