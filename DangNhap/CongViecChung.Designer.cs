@@ -280,7 +280,7 @@ namespace DangNhap
             this.BTN_in.ForeColor = System.Drawing.Color.White;
             this.BTN_in.Image = ((System.Drawing.Image)(resources.GetObject("BTN_in.Image")));
             this.BTN_in.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_in.Location = new System.Drawing.Point(303, 527);
+            this.BTN_in.Location = new System.Drawing.Point(288, 527);
             this.BTN_in.Name = "BTN_in";
             this.BTN_in.OnHoverBaseColor1 = System.Drawing.Color.DimGray;
             this.BTN_in.OnHoverBaseColor2 = System.Drawing.Color.DimGray;
