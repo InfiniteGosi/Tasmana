@@ -13,7 +13,6 @@ namespace DangNhap
 {
     public partial class ThongTinCaNhan : Form
     {
-        private string userId = "";
         public ThongTinCaNhan()
         {
             InitializeComponent();
