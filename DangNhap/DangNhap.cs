@@ -81,7 +81,7 @@ namespace DangNhap
                 string level = phanQuyen(userId);
                 currentAccount = new Account(userId, pwd, employeeId, level);
                 MessageBox.Show("Đăng nhập thành công");
-                Home formTrangChu = new Home();
+                TrangHienThi formTrangChu = new TrangHienThi();
                 formTrangChu.ShowDialog();
             }
             else
