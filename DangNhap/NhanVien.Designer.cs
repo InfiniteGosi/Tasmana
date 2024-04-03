@@ -41,8 +41,10 @@ namespace DangNhap
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.DGV_hienthinhanvien = new System.Windows.Forms.DataGridView();
+            this.BTN_refresh = new System.Windows.Forms.Button();
             this.C_manhanvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.C_HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.C_Ho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.C_ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_manhom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -232,7 +234,8 @@ namespace DangNhap
             this.DGV_hienthinhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_hienthinhanvien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.C_manhanvien,
-            this.C_HoTen,
+            this.C_Ho,
+            this.C_ten,
             this.C_manhom,
             this.C_sdt,
             this.C_email,
@@ -244,6 +247,16 @@ namespace DangNhap
             this.DGV_hienthinhanvien.Size = new System.Drawing.Size(1248, 401);
             this.DGV_hienthinhanvien.TabIndex = 106;
             // 
+            // BTN_refresh
+            // 
+            this.BTN_refresh.Location = new System.Drawing.Point(886, 57);
+            this.BTN_refresh.Name = "BTN_refresh";
+            this.BTN_refresh.Size = new System.Drawing.Size(108, 37);
+            this.BTN_refresh.TabIndex = 107;
+            this.BTN_refresh.Text = "Tải lại";
+            this.BTN_refresh.UseVisualStyleBackColor = true;
+            this.BTN_refresh.Click += new System.EventHandler(this.BTN_refresh_Click);
+            // 
             // C_manhanvien
             // 
             this.C_manhanvien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -252,12 +265,18 @@ namespace DangNhap
             this.C_manhanvien.Name = "C_manhanvien";
             this.C_manhanvien.Width = 115;
             // 
-            // C_HoTen
+            // C_Ho
             // 
-            this.C_HoTen.HeaderText = "Họ Và Tên";
-            this.C_HoTen.MinimumWidth = 6;
-            this.C_HoTen.Name = "C_HoTen";
-            this.C_HoTen.Width = 250;
+            this.C_Ho.HeaderText = "Họ";
+            this.C_Ho.MinimumWidth = 6;
+            this.C_Ho.Name = "C_Ho";
+            // 
+            // C_ten
+            // 
+            this.C_ten.HeaderText = "Tên";
+            this.C_ten.MinimumWidth = 6;
+            this.C_ten.Name = "C_ten";
+            this.C_ten.Width = 250;
             // 
             // C_manhom
             // 
@@ -294,6 +313,7 @@ namespace DangNhap
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1376, 782);
+            this.Controls.Add(this.BTN_refresh);
             this.Controls.Add(this.DGV_hienthinhanvien);
             this.Controls.Add(this.BTN_themnhanvien);
             this.Controls.Add(this.comboBox1);
@@ -326,8 +346,10 @@ namespace DangNhap
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.DataGridView DGV_hienthinhanvien;
+        private System.Windows.Forms.Button BTN_refresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_manhanvien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C_HoTen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C_Ho;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C_ten;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_manhom;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_sdt;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_email;

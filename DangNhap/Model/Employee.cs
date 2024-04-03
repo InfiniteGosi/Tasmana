@@ -10,7 +10,8 @@ namespace DangNhap.Model
     {
         public string MaNhanVien { get; set; }
         public string Email { get; set; }
-        public string HoTen {  get; set; }
+        public string Ho {  get; set; }
+        public string Ten { get; set; }
         public string SoDienThoai { get; set; }
         public DateTime NgaySinh { get; set; }
         public bool GioiTinh { get; set; }
@@ -28,11 +29,12 @@ namespace DangNhap.Model
         public string MaNhom {  get; set; }
         public Account TaiKhoanNguoiDung {  get; set; }
         public List<Job> CongViec {  get; set; }
-        public Employee(string maNhanVien, string email, string hoTen, string soDienThoai, DateTime ngaySinh, bool gioiTinh, string queQuan, string maDinhDanh, string loaiNhanVien, string tinhTrangHonNhan, string maSoBHXH, bool daTungLamNhanVien, DateTime ngayKyHDLD, DateTime ngayHetHDLD, string diaChiThuongTru, string diaChiTamTru, string tinhTrangHDLD, string maNhom)
+        public Employee(string maNhanVien, string email, string ho, string ten, string soDienThoai, DateTime ngaySinh, bool gioiTinh, string queQuan, string maDinhDanh, string loaiNhanVien, string tinhTrangHonNhan, string maSoBHXH, bool daTungLamNhanVien, DateTime ngayKyHDLD, DateTime ngayHetHDLD, string diaChiThuongTru, string diaChiTamTru, string tinhTrangHDLD, string maNhom)
         {
             MaNhanVien = maNhanVien;
             Email = email;
-            HoTen = hoTen;
+            Ho = ho;
+            Ten = ten;
             SoDienThoai = soDienThoai;
             NgaySinh = ngaySinh;
             GioiTinh = gioiTinh;

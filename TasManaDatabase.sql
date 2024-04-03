@@ -253,6 +253,7 @@ INSERT INTO PhongBan VALUES('XD', N'Xây Dựng', '02645816328', '@BCMP_XD@gmail
 INSERT INTO Nhom VALUES('VSN01', 'VS-002', 'VS')
 INSERT INTO Nhom VALUES('VSN02', 'VS-002', 'VS')
 
+SELECT * FROM PhongBan
 SELECT * FROM Nhom
 
 -- Insert thông tin tài khoản
@@ -266,11 +267,6 @@ INSERT INTO NhanVien VALUES('VS-003', 'email_nv001@example.com', 'Tran', 'An', '
 SELECT * FROM TaiKhoan
 SELECT * FROM NhanVien
 
--- Insert mẫu công việc
-INSERT INTO CongViec VALUES('CVVS1', N'Quét nhà', '2024-04-04 12:30:00',null, N'Chưa bắt đầu',null)
-Insert into CongViec_NhanVien Values ('VS-003', 'CVVS1')
-Insert INTO YeuCau VALUES('CVVS1', 'WPHA')
-
 -- Insert Dữ liệu thử của căn hộ
 INSERT INTO CanHo VALUES ('WPHA', 100.5, 5, 3, 2, NULL, 200, 2, '2024-01-01', N'Còn trống', NULL);
 INSERT INTO CanHo VALUES ('WPHB', 90.2, 8, 2, 1, NULL, 150, 1, '2024-01-01', N'Còn trống', NULL);
@@ -278,17 +274,19 @@ INSERT INTO CanHo VALUES ('WPHC', 110.8, 3, 4, 2, NULL, 250, 2, '2024-01-01', N'
 INSERT INTO CanHo VALUES ('WPHD', 80.0, 10, 1, 1, NULL, 180, 1, '2024-01-01', N'Còn trống', NULL);
 
 -- Insert mẫu công việc
-INSERT INTO CongViec VALUES('CVVS1', N'Quét nhà', '2024-04-04 12:30:00', N'Chưa bắt đầu')
+INSERT INTO CongViec VALUES('CVVS1', N'Quét nhà', '2024-04-04 12:30:00',null, N'Chưa bắt đầu',null)
 Insert into CongViec_NhanVien Values ('VS-003', 'CVVS1')
 Insert INTO YeuCau VALUES('CVVS1', 'WPHA')
 go
+
 
 
 --Procedure thêm một nhân viên mới
 create procedure SP_ThemNhanVien
 	@maNhanVien varchar(10),
 	@email varchar(100),
-	@hoTen nvarchar(100),
+	@ho nvarchar(100),
+	@ten nvarchar(100),
 	@SDT varchar(20),
 	@ngaySinh date,
 	@gioiTinh bit,
@@ -310,7 +308,8 @@ begin
     values(
         @maNhanVien,
         @email,
-        @hoTen,
+        @ho,
+		@ten,
         @SDT,
         @ngaySinh,
         @gioiTinh,
@@ -330,28 +329,9 @@ begin
 end
 go
 
-exec SP_ThemNhanVien
-		@maNhanVien = 'VS-301',
-        @email = 'ok@gmail.com',
-        @hoTen = 'hihi',
-        @SDT = '11111',
-        @ngaySinh = '1/3/2000',
-        @gioiTinh = 1,
-        @queQuan = 'TP.HCM',
-        @maDinhDanh = '111111',
-        @loaiNhanVien = 'Full-time',
-        @tinhTrangHonNhan = N'Độc thân',
-        @maSoBHXH = '11111',
-        @daTungLamNV = 1,
-        @ngayKyHDLD = '1/1/2024',
-        @ngayHetHDLD = '1/1/2024',
-        @dChiThuongTru = 'TP.HCM',
-        @dChiTamTru = '',
-        @tinhTrangHDLD = 'ok',
-        @maNhom = 'VSN01'
-
 SELECT * FROM CanHo
 SELECT * FROM CongViec
+go
 
 CREATE procedure [dbo].[SP_LayCV]
 as 

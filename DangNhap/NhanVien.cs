@@ -20,8 +20,7 @@ namespace DangNhap
         public NhanVien()
         {
             InitializeComponent();
-            GetEmployees();
-            DisplayEmployeeListToDGV_hienthinhanvien();
+            AddEmployeeToDGV_hienthinhanvien();
         }
 
         private void GetEmployees()
@@ -40,7 +39,8 @@ namespace DangNhap
                     {
                         string maNhanVien = reader["maNhanVien"].ToString();
                         string email = reader["email"].ToString();
-                        string hoTen = reader["hoTen"].ToString();
+                        string ho = reader["ho"].ToString();
+                        string ten = reader["ten"].ToString();
                         string soDienThoai = reader["SDT"].ToString();
                         DateTime ngaySinh = (DateTime)reader["ngaySinh"];
                         bool gioiTinh = (bool)reader["gioiTinh"];
@@ -56,7 +56,7 @@ namespace DangNhap
                         string diaChiaTamTru = reader["dChiTamTru"].ToString();
                         string tinhTrangHDLD = reader["tinhTrangHDLD"].ToString();
                         string maNhom = reader["maNhom"].ToString();
-                        Employee employee = new Employee(maNhanVien, email, hoTen, soDienThoai, ngaySinh, gioiTinh, queQuan, maDinhDanh,
+                        Employee employee = new Employee(maNhanVien, email, ho, ten, soDienThoai, ngaySinh, gioiTinh, queQuan, maDinhDanh,
                                                          loaiNhanVien, tinhTrangHonNhan, maSoBHXH, daTungLamNV, ngayKyHDLD, ngayHetHDLD, 
                                                          diaChiThuongTru, diaChiaTamTru, tinhTrangHDLD, maNhom);
                         employees.Add(employee);
@@ -74,18 +74,19 @@ namespace DangNhap
                 }
             }
         }
-
-        private void DisplayEmployeeListToDGV_hienthinhanvien()
+        private void AddEmployeeToDGV_hienthinhanvien()
         {
+            GetEmployees();
             DGV_hienthinhanvien.Rows.Clear();
             foreach (var employee in employees)
             {
                 int rowIndex = DGV_hienthinhanvien.Rows.Add();
                 DGV_hienthinhanvien.Rows[rowIndex].Cells[0].Value = employee.MaNhanVien;
-                DGV_hienthinhanvien.Rows[rowIndex].Cells[1].Value = employee.HoTen;
-                DGV_hienthinhanvien.Rows[rowIndex].Cells[2].Value = employee.MaNhom;
-                DGV_hienthinhanvien.Rows[rowIndex].Cells[3].Value = employee.SoDienThoai;
-                DGV_hienthinhanvien.Rows[rowIndex].Cells[4].Value = employee.Email;
+                DGV_hienthinhanvien.Rows[rowIndex].Cells[1].Value = employee.Ho;
+                DGV_hienthinhanvien.Rows[rowIndex].Cells[2].Value = employee.Ten;
+                DGV_hienthinhanvien.Rows[rowIndex].Cells[3].Value = employee.MaNhom;
+                DGV_hienthinhanvien.Rows[rowIndex].Cells[4].Value = employee.SoDienThoai;
+                DGV_hienthinhanvien.Rows[rowIndex].Cells[5].Value = employee.Email;
             }
         }
 
@@ -93,6 +94,12 @@ namespace DangNhap
         {
             ThongTinCaNhan ttcn = new ThongTinCaNhan();
             ttcn.Show();
+        }
+
+        private void BTN_refresh_Click(object sender, EventArgs e)
+        {
+            employees = new List<Employee>();
+            AddEmployeeToDGV_hienthinhanvien();
         }
     }
 }
