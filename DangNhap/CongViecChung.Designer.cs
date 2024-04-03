@@ -158,7 +158,7 @@ namespace DangNhap
             this.BTN_excel.ForeColor = System.Drawing.Color.White;
             this.BTN_excel.Image = ((System.Drawing.Image)(resources.GetObject("BTN_excel.Image")));
             this.BTN_excel.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_excel.Location = new System.Drawing.Point(65, 527);
+            this.BTN_excel.Location = new System.Drawing.Point(65, 510);
             this.BTN_excel.Name = "BTN_excel";
             this.BTN_excel.OnHoverBaseColor1 = System.Drawing.Color.DimGray;
             this.BTN_excel.OnHoverBaseColor2 = System.Drawing.Color.DimGray;
@@ -166,9 +166,10 @@ namespace DangNhap
             this.BTN_excel.OnHoverForeColor = System.Drawing.Color.Black;
             this.BTN_excel.OnHoverImage = null;
             this.BTN_excel.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_excel.Size = new System.Drawing.Size(94, 31);
+            this.BTN_excel.Size = new System.Drawing.Size(107, 48);
             this.BTN_excel.TabIndex = 83;
             this.BTN_excel.Text = "Excel";
+            this.BTN_excel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.BTN_excel.Click += new System.EventHandler(this.BTN_excel_Click);
             // 
             // TXB_sotrang
@@ -226,10 +227,12 @@ namespace DangNhap
             // 
             // DGV_hienthicongviec
             // 
+            this.DGV_hienthicongviec.AllowUserToAddRows = false;
             this.DGV_hienthicongviec.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGV_hienthicongviec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_hienthicongviec.ColumnHeadersHeight = 30;
+            this.DGV_hienthicongviec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGV_hienthicongviec.Location = new System.Drawing.Point(65, 103);
             this.DGV_hienthicongviec.Name = "DGV_hienthicongviec";
             this.DGV_hienthicongviec.RowHeadersWidth = 51;
@@ -252,7 +255,7 @@ namespace DangNhap
             this.BTN_PDF.ForeColor = System.Drawing.Color.White;
             this.BTN_PDF.Image = ((System.Drawing.Image)(resources.GetObject("BTN_PDF.Image")));
             this.BTN_PDF.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_PDF.Location = new System.Drawing.Point(178, 527);
+            this.BTN_PDF.Location = new System.Drawing.Point(178, 510);
             this.BTN_PDF.Name = "BTN_PDF";
             this.BTN_PDF.OnHoverBaseColor1 = System.Drawing.Color.DimGray;
             this.BTN_PDF.OnHoverBaseColor2 = System.Drawing.Color.DimGray;
@@ -260,9 +263,10 @@ namespace DangNhap
             this.BTN_PDF.OnHoverForeColor = System.Drawing.Color.Black;
             this.BTN_PDF.OnHoverImage = null;
             this.BTN_PDF.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_PDF.Size = new System.Drawing.Size(95, 31);
+            this.BTN_PDF.Size = new System.Drawing.Size(107, 48);
             this.BTN_PDF.TabIndex = 95;
             this.BTN_PDF.Text = "PDF";
+            this.BTN_PDF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.BTN_PDF.Click += new System.EventHandler(this.BTN_PDF_Click);
             // 
             // BTN_in
@@ -280,7 +284,8 @@ namespace DangNhap
             this.BTN_in.ForeColor = System.Drawing.Color.White;
             this.BTN_in.Image = ((System.Drawing.Image)(resources.GetObject("BTN_in.Image")));
             this.BTN_in.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_in.Location = new System.Drawing.Point(303, 527);
+            this.BTN_in.Location = new System.Drawing.Point(291, 510);
+
             this.BTN_in.Name = "BTN_in";
             this.BTN_in.OnHoverBaseColor1 = System.Drawing.Color.DimGray;
             this.BTN_in.OnHoverBaseColor2 = System.Drawing.Color.DimGray;
@@ -288,9 +293,10 @@ namespace DangNhap
             this.BTN_in.OnHoverForeColor = System.Drawing.Color.Black;
             this.BTN_in.OnHoverImage = null;
             this.BTN_in.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_in.Size = new System.Drawing.Size(77, 31);
+            this.BTN_in.Size = new System.Drawing.Size(89, 48);
             this.BTN_in.TabIndex = 96;
             this.BTN_in.Text = "In";
+            this.BTN_in.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // CongViecChung
             // 

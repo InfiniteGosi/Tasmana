@@ -88,6 +88,7 @@ namespace DangNhap
                 DGV_hienthinhanvien.Rows[rowIndex].Cells[4].Value = employee.SoDienThoai;
                 DGV_hienthinhanvien.Rows[rowIndex].Cells[5].Value = employee.Email;
             }
+            DGV_hienthinhanvien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void BTN_themnhanvien_Click(object sender, EventArgs e)
