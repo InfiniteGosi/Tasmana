@@ -274,13 +274,13 @@ INSERT INTO NhanVien VALUES('VS-003', 'email_nv001@example.com', 'Tran', 'An', '
 SELECT * FROM TaiKhoan
 SELECT * FROM NhanVien
 
-<<<<<<<<< Temporary merge branch 1
+
 =========
 -- Insert mẫu công việc
 INSERT INTO CongViec VALUES('CVVS1', N'Quét nhà', '2024-04-04 12:30:00',null, N'Chưa bắt đầu',null)
 Insert into CongViec_NhanVien Values ('VS-003', 'CVVS1')
 Insert INTO YeuCau VALUES('CVVS1', 'WPHA')
->>>>>>>>> Temporary merge branch 2
+
 
 -- Insert Dữ liệu thử của căn hộ
 INSERT INTO CanHo VALUES ('WPHA', 100.5, 5, 3, 2, NULL, 200, 2, '2024-01-01', N'Còn trống', NULL);
@@ -349,11 +349,11 @@ SELECT * FROM CongViec
 go
 
 -- Procedure lấy công việc
+-- Procedure lấy công việc
 CREATE procedure [dbo].[SP_LayCV]
 as 
 begin
+	SELECT Congviec_Nhanvien.maNhanVien as N'Mã nhân viên', (NhanVien.ho + NhanVien.ten) as N'Họ và tên', CongViec.noiDung as N'Nội dung',YeuCau.maCanHo as N'Mã căn hộ' , CongViec.thoiHan as N'Thời hạn', CongViec.ngayHoanThanh as N'Ngày hoàn thành', CongViec.trangThai as N'Trạng thái', CongViec.ghiChu as N'Ghi chú'
+	from NhanVien, CongViec, Congviec_Nhanvien, YeuCau
+	WHERE NhanVien.maNhanVien = Congviec_Nhanvien.maNhanVien and Congviec_Nhanvien.maCongViec=CongViec.maCongViec and YeuCau.maCongViec = CongViec.maCongViec
 END
-
-drop procedure [dbo].[SP_LayCV]
-END
->>>>>>>>> Temporary merge branch 2
