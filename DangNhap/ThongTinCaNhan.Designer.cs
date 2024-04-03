@@ -77,7 +77,6 @@ namespace DangNhap
             this.LB_hovaten = new System.Windows.Forms.Label();
             this.LB_manv = new System.Windows.Forms.Label();
             this.LB_ngaysinh = new System.Windows.Forms.Label();
-            this.PIC_avatar = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.BTN_luu = new System.Windows.Forms.Button();
             this.BTN_huy = new System.Windows.Forms.Button();
             this.BTN_yeucauchinhsua = new System.Windows.Forms.Button();
@@ -87,7 +86,6 @@ namespace DangNhap
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.GB_gioitinh.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PIC_avatar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -347,9 +345,9 @@ namespace DangNhap
             this.panel5.Controls.Add(this.panel1);
             this.panel5.Controls.Add(this.panel3);
             this.panel5.Controls.Add(this.panel2);
-            this.panel5.Location = new System.Drawing.Point(0, 225);
+            this.panel5.Location = new System.Drawing.Point(0, 119);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1358, 598);
+            this.panel5.Size = new System.Drawing.Size(1358, 712);
             this.panel5.TabIndex = 52;
             // 
             // panel4
@@ -398,7 +396,7 @@ namespace DangNhap
             // 
             // DTP_ngayhetHDLD
             // 
-            this.DTP_ngayhetHDLD.Location = new System.Drawing.Point(34, 256);
+            this.DTP_ngayhetHDLD.Location = new System.Drawing.Point(34, 254);
             this.DTP_ngayhetHDLD.Name = "DTP_ngayhetHDLD";
             this.DTP_ngayhetHDLD.Size = new System.Drawing.Size(200, 22);
             this.DTP_ngayhetHDLD.TabIndex = 55;
@@ -408,7 +406,7 @@ namespace DangNhap
             this.CHB_tunglanv.AutoSize = true;
             this.CHB_tunglanv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CHB_tunglanv.ForeColor = System.Drawing.Color.White;
-            this.CHB_tunglanv.Location = new System.Drawing.Point(34, 38);
+            this.CHB_tunglanv.Location = new System.Drawing.Point(265, 36);
             this.CHB_tunglanv.Name = "CHB_tunglanv";
             this.CHB_tunglanv.Size = new System.Drawing.Size(190, 29);
             this.CHB_tunglanv.TabIndex = 49;
@@ -420,7 +418,7 @@ namespace DangNhap
             this.LB_vitri.AutoSize = true;
             this.LB_vitri.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_vitri.ForeColor = System.Drawing.Color.White;
-            this.LB_vitri.Location = new System.Drawing.Point(261, 14);
+            this.LB_vitri.Location = new System.Drawing.Point(30, 13);
             this.LB_vitri.Name = "LB_vitri";
             this.LB_vitri.Size = new System.Drawing.Size(126, 22);
             this.LB_vitri.TabIndex = 12;
@@ -431,7 +429,7 @@ namespace DangNhap
             this.LB_manhom.AutoSize = true;
             this.LB_manhom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_manhom.ForeColor = System.Drawing.Color.White;
-            this.LB_manhom.Location = new System.Drawing.Point(30, 109);
+            this.LB_manhom.Location = new System.Drawing.Point(32, 121);
             this.LB_manhom.Name = "LB_manhom";
             this.LB_manhom.Size = new System.Drawing.Size(83, 22);
             this.LB_manhom.TabIndex = 21;
@@ -443,7 +441,7 @@ namespace DangNhap
             this.TXB_tinhtrangHDLD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TXB_tinhtrangHDLD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_tinhtrangHDLD.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_tinhtrangHDLD.Location = new System.Drawing.Point(521, 229);
+            this.TXB_tinhtrangHDLD.Location = new System.Drawing.Point(520, 254);
             this.TXB_tinhtrangHDLD.Name = "TXB_tinhtrangHDLD";
             this.TXB_tinhtrangHDLD.Size = new System.Drawing.Size(154, 30);
             this.TXB_tinhtrangHDLD.TabIndex = 39;
@@ -453,7 +451,7 @@ namespace DangNhap
             this.LB_ngayhetHDLD.AutoSize = true;
             this.LB_ngayhetHDLD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_ngayhetHDLD.ForeColor = System.Drawing.Color.White;
-            this.LB_ngayhetHDLD.Location = new System.Drawing.Point(30, 206);
+            this.LB_ngayhetHDLD.Location = new System.Drawing.Point(32, 229);
             this.LB_ngayhetHDLD.Name = "LB_ngayhetHDLD";
             this.LB_ngayhetHDLD.Size = new System.Drawing.Size(137, 22);
             this.LB_ngayhetHDLD.TabIndex = 43;
@@ -465,7 +463,7 @@ namespace DangNhap
             this.TXB_loainv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TXB_loainv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_loainv.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_loainv.Location = new System.Drawing.Point(265, 38);
+            this.TXB_loainv.Location = new System.Drawing.Point(34, 38);
             this.TXB_loainv.Name = "TXB_loainv";
             this.TXB_loainv.Size = new System.Drawing.Size(180, 30);
             this.TXB_loainv.TabIndex = 33;
@@ -475,7 +473,7 @@ namespace DangNhap
             this.LB_HDLD.AutoSize = true;
             this.LB_HDLD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_HDLD.ForeColor = System.Drawing.Color.White;
-            this.LB_HDLD.Location = new System.Drawing.Point(517, 204);
+            this.LB_HDLD.Location = new System.Drawing.Point(516, 229);
             this.LB_HDLD.Name = "LB_HDLD";
             this.LB_HDLD.Size = new System.Drawing.Size(148, 22);
             this.LB_HDLD.TabIndex = 13;
@@ -486,7 +484,7 @@ namespace DangNhap
             this.LB_ngaykyHDLD.AutoSize = true;
             this.LB_ngaykyHDLD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_ngaykyHDLD.ForeColor = System.Drawing.Color.White;
-            this.LB_ngaykyHDLD.Location = new System.Drawing.Point(261, 204);
+            this.LB_ngaykyHDLD.Location = new System.Drawing.Point(261, 229);
             this.LB_ngaykyHDLD.Name = "LB_ngaykyHDLD";
             this.LB_ngaykyHDLD.Size = new System.Drawing.Size(133, 22);
             this.LB_ngaykyHDLD.TabIndex = 14;
@@ -498,7 +496,7 @@ namespace DangNhap
             this.TXB_manhom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TXB_manhom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_manhom.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_manhom.Location = new System.Drawing.Point(34, 135);
+            this.TXB_manhom.Location = new System.Drawing.Point(34, 146);
             this.TXB_manhom.Name = "TXB_manhom";
             this.TXB_manhom.Size = new System.Drawing.Size(180, 30);
             this.TXB_manhom.TabIndex = 37;
@@ -648,17 +646,6 @@ namespace DangNhap
             this.LB_ngaysinh.TabIndex = 7;
             this.LB_ngaysinh.Text = "Ngày sinh";
             // 
-            // PIC_avatar
-            // 
-            this.PIC_avatar.BaseColor = System.Drawing.Color.White;
-            this.PIC_avatar.Location = new System.Drawing.Point(93, 23);
-            this.PIC_avatar.Name = "PIC_avatar";
-            this.PIC_avatar.Size = new System.Drawing.Size(180, 180);
-            this.PIC_avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PIC_avatar.TabIndex = 2;
-            this.PIC_avatar.TabStop = false;
-            this.PIC_avatar.UseTransfarantBackground = false;
-            // 
             // BTN_luu
             // 
             this.BTN_luu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -666,7 +653,7 @@ namespace DangNhap
             this.BTN_luu.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.BTN_luu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_luu.Image = ((System.Drawing.Image)(resources.GetObject("BTN_luu.Image")));
-            this.BTN_luu.Location = new System.Drawing.Point(1291, 169);
+            this.BTN_luu.Location = new System.Drawing.Point(1291, 54);
             this.BTN_luu.Name = "BTN_luu";
             this.BTN_luu.Size = new System.Drawing.Size(45, 45);
             this.BTN_luu.TabIndex = 54;
@@ -680,7 +667,7 @@ namespace DangNhap
             this.BTN_huy.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.BTN_huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_huy.Image = ((System.Drawing.Image)(resources.GetObject("BTN_huy.Image")));
-            this.BTN_huy.Location = new System.Drawing.Point(1242, 169);
+            this.BTN_huy.Location = new System.Drawing.Point(1220, 54);
             this.BTN_huy.Name = "BTN_huy";
             this.BTN_huy.Size = new System.Drawing.Size(45, 45);
             this.BTN_huy.TabIndex = 55;
@@ -695,7 +682,7 @@ namespace DangNhap
             this.BTN_yeucauchinhsua.ForeColor = System.Drawing.Color.White;
             this.BTN_yeucauchinhsua.Image = ((System.Drawing.Image)(resources.GetObject("BTN_yeucauchinhsua.Image")));
             this.BTN_yeucauchinhsua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_yeucauchinhsua.Location = new System.Drawing.Point(1173, 65);
+            this.BTN_yeucauchinhsua.Location = new System.Drawing.Point(1175, 12);
             this.BTN_yeucauchinhsua.Name = "BTN_yeucauchinhsua";
             this.BTN_yeucauchinhsua.Size = new System.Drawing.Size(161, 36);
             this.BTN_yeucauchinhsua.TabIndex = 56;
@@ -713,7 +700,6 @@ namespace DangNhap
             this.Controls.Add(this.BTN_yeucauchinhsua);
             this.Controls.Add(this.BTN_huy);
             this.Controls.Add(this.BTN_luu);
-            this.Controls.Add(this.PIC_avatar);
             this.Controls.Add(this.panel5);
             this.Name = "ThongTinCaNhan";
             this.Text = "ThongTinCaNhan";
@@ -728,7 +714,6 @@ namespace DangNhap
             this.panel3.PerformLayout();
             this.GB_gioitinh.ResumeLayout(false);
             this.GB_gioitinh.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PIC_avatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -771,7 +756,6 @@ namespace DangNhap
         private System.Windows.Forms.Label LB_hovaten;
         private System.Windows.Forms.TextBox TXB_manv;
         private System.Windows.Forms.TextBox TXB_ho;
-        private Guna.UI.WinForms.GunaCirclePictureBox PIC_avatar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button BTN_luu;
