@@ -232,14 +232,8 @@ CREATE TABLE CuDan_sdtNguoiThan
   PRIMARY KEY (sdtNguoiThan, maCuDan),
   FOREIGN KEY (maCuDan) REFERENCES CuDan(maCuDan)
 );
-
 go
 
-
-
--- Insert thông tin nhóm
-INSERT INTO Nhom VALUES('VSN01', 'VS-002', 'VS')
-INSERT INTO Nhom VALUES('VSN02', 'VS-002', 'VS')
 
 -- Insert thông tin phòng ban
 INSERT INTO PhongBan VALUES('HCNS', N'Hành chính Nhân sự & Dịch vụ Cư dân','0123456789','BCMP_HCNS@gmail.com')
@@ -253,23 +247,19 @@ INSERT INTO PhongBan VALUES('XD', N'Xây Dựng', '02645816328', '@BCMP_XD@gmail
 INSERT INTO Nhom VALUES('VSN01', 'VS-002', 'VS')
 INSERT INTO Nhom VALUES('VSN02', 'VS-002', 'VS')
 
+SELECT * FROM PhongBan
 SELECT * FROM Nhom
 
 -- Insert thông tin tài khoản
-INSERT INTO NhanVien VALUES('GD-001', 'jd@gmail.com', 'Ho', 'Khang', '111111111', '1/1/2002', 1, 'TP.HCM', '123456', 'Full-time', N'Độc thân', '1111111', 1, '1/1/2024', '1/1/2024', 'TP.HCM', N'Địa chỉ thường trú GD-001', N'Tốt', 'VSN01')
+INSERT INTO NhanVien VALUES('GD-001', 'jd@gmail.com', 'Ho', 'Khang', '111111111', '1/1/2002', 1, 'TP.HCM', '123456', 'Full-time', N'Độc thân', '1111111', 1, '2024-01-01', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú GD-001', N'Tốt', 'VSN01')
 INSERT INTO TaiKhoan VALUES('GD-001.KHANG.111111111', '123', 'GD-001')
 -- Insert thông tin NV
-INSERT INTO NhanVien VALUES('VS-002', 'VS002@gmail.com', 'Vu', 'Quang', '1321312', '1/2/2004', 1, 'TP.HCM', '1234576', 'Full-time', N'Độc thân', '1111211', 1, '1/1/2024', '1/1/2024', 'TP.HCM', 'Chua co', N'Tốt', 'VSN01')
+INSERT INTO NhanVien VALUES('VS-002', 'VS002@gmail.com', 'Vu', 'Quang', '1321312', '1/2/2004', 1, 'TP.HCM', '1234576', 'Full-time', N'Độc thân', '1111211', 1, '2024-01-01', '2025-12-31', 'TP.HCM', 'Chua co', N'Tốt', 'VSN01')
 INSERT INTO TaiKhoan VALUES('VS-002.MinhQuang.1321312', '123', 'VS-002')
-INSERT INTO NhanVien VALUES('VS-003', 'email_nv001@example.com', 'Tran', 'An', '0123456669', '2000-01-01', 1, N'Hà Nội', '072947182653', 'Full-time', N'Độc thân', '01231230213', 1, '2024-01-01', '1/1/2024', N'Địa chỉ thường trú NV001', 'Chua co', N'Tốt', 'VSN01')
+INSERT INTO NhanVien VALUES('VS-003', 'email_nv001@example.com', 'Tran', 'An', '0123456669', '2000-01-01', 1, N'Hà Nội', '072947182653', 'Full-time', N'Độc thân', '01231230213', 1, '2024-01-01', '2025-12-31', N'Địa chỉ thường trú NV001', 'Chua co', N'Tốt', 'VSN01')
 
 SELECT * FROM TaiKhoan
 SELECT * FROM NhanVien
-
--- Insert mẫu công việc
-INSERT INTO CongViec VALUES('CVVS1', N'Quét nhà', '2024-04-04 12:30:00',null, N'Chưa bắt đầu',null)
-Insert into CongViec_NhanVien Values ('VS-003', 'CVVS1')
-Insert INTO YeuCau VALUES('CVVS1', 'WPHA')
 
 -- Insert Dữ liệu thử của căn hộ
 INSERT INTO CanHo VALUES ('WPHA', 100.5, 5, 3, 2, NULL, 200, 2, '2024-01-01', N'Còn trống', NULL);
@@ -278,17 +268,18 @@ INSERT INTO CanHo VALUES ('WPHC', 110.8, 3, 4, 2, NULL, 250, 2, '2024-01-01', N'
 INSERT INTO CanHo VALUES ('WPHD', 80.0, 10, 1, 1, NULL, 180, 1, '2024-01-01', N'Còn trống', NULL);
 
 -- Insert mẫu công việc
-INSERT INTO CongViec VALUES('CVVS1', N'Quét nhà', '2024-04-04 12:30:00', N'Chưa bắt đầu')
+INSERT INTO CongViec VALUES('CVVS1', N'Quét nhà', '2024-04-04 12:30:00',null, N'Chưa bắt đầu',null)
 Insert into CongViec_NhanVien Values ('VS-003', 'CVVS1')
 Insert INTO YeuCau VALUES('CVVS1', 'WPHA')
 go
-
+ select * from NhanVien
 
 --Procedure thêm một nhân viên mới
-create procedure SP_ThemNhanVien
+create procedure [dbo].[SP_ThemNhanVien]
 	@maNhanVien varchar(10),
 	@email varchar(100),
-	@hoTen nvarchar(100),
+	@ho nvarchar(100),
+	@ten nvarchar(100),
 	@SDT varchar(20),
 	@ngaySinh date,
 	@gioiTinh bit,
@@ -310,7 +301,8 @@ begin
     values(
         @maNhanVien,
         @email,
-        @hoTen,
+        @ho,
+		@ten,
         @SDT,
         @ngaySinh,
         @gioiTinh,
@@ -330,33 +322,16 @@ begin
 end
 go
 
-exec SP_ThemNhanVien
-		@maNhanVien = 'VS-301',
-        @email = 'ok@gmail.com',
-        @hoTen = 'hihi',
-        @SDT = '11111',
-        @ngaySinh = '1/3/2000',
-        @gioiTinh = 1,
-        @queQuan = 'TP.HCM',
-        @maDinhDanh = '111111',
-        @loaiNhanVien = 'Full-time',
-        @tinhTrangHonNhan = N'Độc thân',
-        @maSoBHXH = '11111',
-        @daTungLamNV = 1,
-        @ngayKyHDLD = '1/1/2024',
-        @ngayHetHDLD = '1/1/2024',
-        @dChiThuongTru = 'TP.HCM',
-        @dChiTamTru = '',
-        @tinhTrangHDLD = 'ok',
-        @maNhom = 'VSN01'
-
 SELECT * FROM CanHo
 SELECT * FROM CongViec
+go
 
+-- Procedure lấy công việc
+-- Procedure lấy công việc
 CREATE procedure [dbo].[SP_LayCV]
 as 
 begin
-	SELECT Congviec_Nhanvien.maNhanVien, (NhanVien.ho + NhanVien.ten) as hoTen, CongViec.noiDung,YeuCau.maCanHo, CongViec.thoiHan, CongViec.ngayHoanThanh, CongViec.trangThai, CongViec.ghiChu
+	SELECT Congviec_Nhanvien.maNhanVien as N'Mã nhân viên', (NhanVien.ho + NhanVien.ten) as N'Họ và tên', CongViec.noiDung as N'Nội dung',YeuCau.maCanHo as N'Mã căn hộ' , CongViec.thoiHan as N'Thời hạn', CongViec.ngayHoanThanh as N'Ngày hoàn thành', CongViec.trangThai as N'Trạng thái', CongViec.ghiChu as N'Ghi chú'
 	from NhanVien, CongViec, Congviec_Nhanvien, YeuCau
 	WHERE NhanVien.maNhanVien = Congviec_Nhanvien.maNhanVien and Congviec_Nhanvien.maCongViec=CongViec.maCongViec and YeuCau.maCongViec = CongViec.maCongViec
 END
