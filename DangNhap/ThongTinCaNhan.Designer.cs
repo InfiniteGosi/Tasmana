@@ -80,6 +80,8 @@ namespace DangNhap
             this.BTN_luu = new System.Windows.Forms.Button();
             this.BTN_huy = new System.Windows.Forms.Button();
             this.BTN_yeucauchinhsua = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -371,6 +373,8 @@ namespace DangNhap
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.DTP_ngaykyHDLD);
             this.panel1.Controls.Add(this.DTP_ngayhetHDLD);
             this.panel1.Controls.Add(this.CHB_tunglanv);
@@ -441,7 +445,7 @@ namespace DangNhap
             this.TXB_tinhtrangHDLD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TXB_tinhtrangHDLD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_tinhtrangHDLD.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_tinhtrangHDLD.Location = new System.Drawing.Point(520, 254);
+            this.TXB_tinhtrangHDLD.Location = new System.Drawing.Point(521, 248);
             this.TXB_tinhtrangHDLD.Name = "TXB_tinhtrangHDLD";
             this.TXB_tinhtrangHDLD.Size = new System.Drawing.Size(154, 30);
             this.TXB_tinhtrangHDLD.TabIndex = 39;
@@ -690,6 +694,22 @@ namespace DangNhap
             this.BTN_yeucauchinhsua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_yeucauchinhsua.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(300, 153);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 57;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(488, 143);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 24);
+            this.comboBox2.TabIndex = 58;
+            // 
             // ThongTinCaNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -770,5 +790,7 @@ namespace DangNhap
         private System.Windows.Forms.DateTimePicker DTP_ngaykyHDLD;
         private System.Windows.Forms.TextBox TXB_ten;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

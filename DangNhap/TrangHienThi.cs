@@ -12,7 +12,12 @@ namespace DangNhap
 {
     public partial class TrangHienThi : Form
     {
-        public TrangHienThi()
+        private int mov;
+        private int movX;
+        private int movY;
+        public bool exited = true;
+        public event EventHandler DangXuat;
+        public Home()
         {
             InitializeComponent();
             LB_tendangnhap.Text = $"Xin chào, {DangNhap.currentAccount.EmployeeId} - {DangNhap.currentAccount.Level}";
@@ -100,12 +105,15 @@ namespace DangNhap
 
         private void BTN_logout_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (exited)
+            {
+                Application.Exit();
+            }
         }
 
         private void BTN_thongtin_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinCaNhan());
+            DangXuat(this, new EventArgs());
         }
 
         //MoveForm
