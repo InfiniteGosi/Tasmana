@@ -8,93 +8,109 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using DTO;
 
 namespace DangNhap
 {
     public partial class ThongTinCaNhan : Form
     {
+        List<Division> divisions = new List<Division>();
+        List<Group> groups = new List<Group>();
         public ThongTinCaNhan()
         {
             InitializeComponent();
         }
 
-        private bool AddEmployee()
+        // Hàm khởi tạo danh sách giá trị truyền vào SP
+        private object[] values;
+        public void InitializeValues()
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=Tasmana;Integrated Security=True;TrustServerCertificate=True"))
+            values = new object[] {
+                TXB_manv.Text,
+                TXB_email.Text,
+                TXB_ho.Text,
+                TXB_ten.Text,
+                TXB_sdt.Text,
+                DTP_ngaysinh.Value,
+                Rad_nam.Checked ? 1 : 0,
+                TXB_quequan.Text,
+                TXB_cccd.Text,
+                CBB_loainv.SelectedItem.ToString(),
+                TXB_honnhan.Text,
+                TXB_bhxh.Text,
+                CHB_tunglanv.Checked ? 1 : 0,
+                DTP_ngaykyHDLD.Value,
+                DTP_ngayhetHDLD.Value,
+                TXB_thuongtru.Text,
+                TXB_tamtru.Text,
+                TXB_tinhtrangHDLD.Text,
+                CBB_nhom.SelectedItem.ToString()
+            };
+        }
+
+        // Tạo dictionary để truyền vào DataProvider
+        private Dictionary<string, object> AddParameter()
+        {
+            Dictionary<string, object> dict = new Dictionary<string, object>
             {
-                try
-                {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("SP_ThemNhanVien", conn))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        SqlParameter p;
-                        p = new SqlParameter("@maNhanVien", TXB_manv.Text);
-                        cmd.Parameters.Add(p);
+                { "@maNhanVien", values[0] },
+                { "@email", values[1] },
+                { "@ho", values[2] },
+                { "@ten", values[3] },
+                { "@SDT", values[4] },
+                { "@ngaySinh", values[5] },
+                { "@gioiTinh", values[6] },
+                { "@queQuan", values[7] },
+                { "@maDinhDanh", values[8] },
+                { "@loaiNhanVien", values[9] },
+                { "@tinhTrangHonNhan", values[10] },
+                { "@maSoBHXH", values[11] },
+                { "@daTungLamNV", values[12] },
+                { "@ngayKyHDLD", values[13] },
+                { "@ngayHetHDLD", values[14] },
+                { "@dChiThuongTru", values[15] },
+                { "@dChiTamTru", values[16] },
+                { "@tinhTrangHDLD", values[17] },
+                { "@maNhom", values[18] }
+            };
+            return dict;
+        }
 
-                        p = new SqlParameter("@email", TXB_email.Text);
-                        cmd.Parameters.Add(p);
+        private string AddEmployee(Dictionary<string, object> parameters)
+        {
+            return EmployeeBLL.Instance.AddEmployee(parameters);
+        }
 
-                        p = new SqlParameter("@ho", TXB_ho.Text);
-                        cmd.Parameters.Add(p);
-
-                        p = new SqlParameter("@ten", TXB_ten.Text);
-                        cmd.Parameters.Add(p);
-
-                        p = new SqlParameter("@SDT", TXB_sdt.Text);
-                        cmd.Parameters.Add(p);
-
-                        p = new SqlParameter("@ngaySinh", DTP_ngaysinh.Value); 
-                        cmd.Parameters.Add(p);
-
-                        p = new SqlParameter("@gioiTinh", Rad_nam.Checked ? 1 : 0);
-                        cmd.Parameters.Add(p);
-
-                        p = new SqlParameter("@queQuan", TXB_quequan.Text);
-                        cmd.Parameters.Add(p);
-
-                        p = new SqlParameter("@maDinhDanh", TXB_cccd.Text);
-                        cmd.Parameters.Add(p);
-
-                        p = new SqlParameter("@loaiNhanVien", TXB_loainv.Text);
-                        cmd.Parameters.Add(p);
-
-                        p = new SqlParameter("@tinhTrangHonNhan", TXB_honnhan.Text);
-                        cmd.Parameters.Add(p);
-
-                        p = new SqlParameter("@maSoBHXH", TXB_bhxh.Text);
-                        cmd.Parameters.Add(p);
-
-                        p = new SqlParameter("@daTungLamNV", CHB_tunglanv.Checked ? 1 : 0);
-                        cmd.Parameters.Add(p);
-
-                        p = new SqlParameter("@ngayKyHDLD", DTP_ngaykyHDLD.Value);
-                        cmd.Parameters.Add(p);
-
-                        p = new SqlParameter("@ngayHetHDLD", DTP_ngayhetHDLD.Value);
-                        cmd.Parameters.Add(p);
-
-                        p = new SqlParameter("@dChiThuongTru", TXB_thuongtru.Text);
-                        cmd.Parameters.Add(p);
-
-                        p = new SqlParameter("@dChiTamTru", TXB_tamtru.Text);
-                        cmd.Parameters.Add(p);
-
-                        p = new SqlParameter("@tinhTrangHDLD", TXB_tinhtrangHDLD.Text);
-                        cmd.Parameters.Add(p);
-
-                        p = new SqlParameter("@maNhom", TXB_manhom.Text);
-                        cmd.Parameters.Add(p);
-
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                catch
-                {
-                    return false;
-                }
+        private void GetDivisionList()
+        {
+            divisions = DivisionBLL.Instance.GetDivisionList();
+        }
+        
+        private void DisplayDivisionsToCBB_phongban()
+        {
+            CBB_phongban.Enabled = true;
+            CBB_phongban.Items.Clear();
+            GetDivisionList();
+            foreach (var division in divisions)
+            {
+                CBB_phongban.Items.Add(division.MaBoPhan + "-" + division.TenBoPhan);
             }
-            return true;
+        }
+        private void GetGroupList()
+        {
+            string maBoPhan = CBB_phongban.SelectedItem.ToString().Split('-')[0];
+            groups = GroupBLL.Instance.GetGroupListByDivisionId(maBoPhan);
+        }
+        private void DisplayGroupToCBB_nhom()
+        {
+            CBB_nhom.Enabled = true;
+            CBB_nhom.Items.Clear();
+            GetGroupList();
+            foreach (var group in groups)
+            {
+                CBB_nhom.Items.Add(group.MaNhom);
+            }
         }
 
         private void CreateAccountForEmployee()
@@ -115,11 +131,6 @@ namespace DangNhap
                 MessageBox.Show("Vui lòng nhập mã nhân viên");
                 return;
             }
-            if (string.IsNullOrEmpty(TXB_email.Text))
-            {
-                MessageBox.Show("Vui lòng nhập email");
-                return;
-            }
             if (string.IsNullOrEmpty(TXB_ho.Text))
             {
                 MessageBox.Show("Vui lòng nhập họ");
@@ -130,29 +141,9 @@ namespace DangNhap
                 MessageBox.Show("Vui lòng nhập tên");
                 return;
             }
-            if (string.IsNullOrEmpty(TXB_sdt.Text))
-            {
-                MessageBox.Show("Vui lòng nhập số điện thoại");
-                return;
-            }
             if (!Rad_nam.Checked && !Rad_nu.Checked)
             {
                 MessageBox.Show("Vui lòng chọn giới tính");
-                return;
-            }
-            if (string.IsNullOrEmpty(TXB_quequan.Text))
-            {
-                MessageBox.Show("Vui lòng nhập quê quán");
-                return;
-            }
-            if (string.IsNullOrEmpty(TXB_cccd.Text))
-            {
-                MessageBox.Show("Vui lòng nhập mã định danh");
-                return;
-            }
-            if (string.IsNullOrEmpty(TXB_loainv.Text))
-            {
-                MessageBox.Show("Vui lòng nhập loại nhân viên");
                 return;
             }
             if (string.IsNullOrEmpty(TXB_honnhan.Text))
@@ -160,9 +151,44 @@ namespace DangNhap
                 MessageBox.Show("Vui lòng nhập tình trạng hôn nhân");
                 return;
             }
+            if (CBB_phongban.SelectedIndex == -1)
+            {
+                MessageBox.Show("Vui lòng chọn phòng ban");
+                return;
+            }
+            if (CBB_phongban.SelectedIndex == -1)
+            {
+                MessageBox.Show("Vui lòng chọn mã nhóm");
+                return;
+            }
+            if (string.IsNullOrEmpty(TXB_tinhtrangHDLD.Text))
+            {
+                MessageBox.Show("Vui lòng nhập tình trạng hợp đồng lao động");
+                return;
+            }
+            if (string.IsNullOrEmpty(TXB_sdt.Text))
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại");
+                return;
+            }
+            if (string.IsNullOrEmpty(TXB_email.Text))
+            {
+                MessageBox.Show("Vui lòng nhập email");
+                return;
+            }
+            if (string.IsNullOrEmpty(TXB_cccd.Text))
+            {
+                MessageBox.Show("Vui lòng nhập mã định danh");
+                return;
+            }
             if (string.IsNullOrEmpty(TXB_bhxh.Text))
             {
                 MessageBox.Show("Vui lòng nhập mã số bảo hiểm xã hội");
+                return;
+            }
+            if (string.IsNullOrEmpty(TXB_quequan.Text))
+            {
+                MessageBox.Show("Vui lòng nhập quê quán");
                 return;
             }
             if (string.IsNullOrEmpty(TXB_thuongtru.Text))
@@ -176,25 +202,8 @@ namespace DangNhap
             //    MessageBox.Show("Vui lòng nhập địa chỉ tạm trú");
             //    return;
             //}
-            if (string.IsNullOrEmpty(TXB_tinhtrangHDLD.Text))
-            {
-                MessageBox.Show("Vui lòng nhập tình trạng hợp đồng lao động");
-                return;
-            }
-            if (string.IsNullOrEmpty(TXB_manhom.Text))
-            {
-                MessageBox.Show("Vui lòng nhập mã nhóm");
-                return;
-            }
-            if (AddEmployee())
-            {
-                MessageBox.Show("Thêm thành công");
-                CreateAccountForEmployee();
-            }
-            else
-            {
-                MessageBox.Show("Thêm thất bại");
-            }
+            InitializeValues();
+            MessageBox.Show(AddEmployee(AddParameter()));
         }
 
         private void TXB_manv_TextChanged(object sender, EventArgs e)
@@ -210,6 +219,21 @@ namespace DangNhap
         private void TXB_sdt_TextChanged(object sender, EventArgs e)
         {
             TXB_manguoidung.Text = GenerateUserId();
+        }
+
+        private void CBB_phongban_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CBB_phongban.SelectedIndex != -1)
+            {
+                DisplayGroupToCBB_nhom();
+            }
+        }
+
+        private void ThongTinCaNhan_Load(object sender, EventArgs e)
+        {
+            DisplayDivisionsToCBB_phongban();
+            string[] loaiNV = { "Intern / Trainne", "Part-time", "Full-time" };
+            CBB_loainv.DataSource = loaiNV;
         }
     }
 }

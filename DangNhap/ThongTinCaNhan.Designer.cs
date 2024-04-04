@@ -54,6 +54,9 @@ namespace DangNhap
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.CBB_phongban = new System.Windows.Forms.ComboBox();
+            this.CBB_nhom = new System.Windows.Forms.ComboBox();
             this.DTP_ngaykyHDLD = new System.Windows.Forms.DateTimePicker();
             this.DTP_ngayhetHDLD = new System.Windows.Forms.DateTimePicker();
             this.CHB_tunglanv = new System.Windows.Forms.CheckBox();
@@ -61,10 +64,8 @@ namespace DangNhap
             this.LB_manhom = new System.Windows.Forms.Label();
             this.TXB_tinhtrangHDLD = new System.Windows.Forms.TextBox();
             this.LB_ngayhetHDLD = new System.Windows.Forms.Label();
-            this.TXB_loainv = new System.Windows.Forms.TextBox();
             this.LB_HDLD = new System.Windows.Forms.Label();
             this.LB_ngaykyHDLD = new System.Windows.Forms.Label();
-            this.TXB_manhom = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.TXB_ten = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -80,6 +81,7 @@ namespace DangNhap
             this.BTN_luu = new System.Windows.Forms.Button();
             this.BTN_huy = new System.Windows.Forms.Button();
             this.BTN_yeucauchinhsua = new System.Windows.Forms.Button();
+            this.CBB_loainv = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -371,6 +373,10 @@ namespace DangNhap
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.panel1.Controls.Add(this.CBB_loainv);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.CBB_phongban);
+            this.panel1.Controls.Add(this.CBB_nhom);
             this.panel1.Controls.Add(this.DTP_ngaykyHDLD);
             this.panel1.Controls.Add(this.DTP_ngayhetHDLD);
             this.panel1.Controls.Add(this.CHB_tunglanv);
@@ -378,25 +384,52 @@ namespace DangNhap
             this.panel1.Controls.Add(this.LB_manhom);
             this.panel1.Controls.Add(this.TXB_tinhtrangHDLD);
             this.panel1.Controls.Add(this.LB_ngayhetHDLD);
-            this.panel1.Controls.Add(this.TXB_loainv);
             this.panel1.Controls.Add(this.LB_HDLD);
             this.panel1.Controls.Add(this.LB_ngaykyHDLD);
-            this.panel1.Controls.Add(this.TXB_manhom);
             this.panel1.Location = new System.Drawing.Point(612, 10);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(743, 404);
             this.panel1.TabIndex = 45;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(32, 198);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 22);
+            this.label2.TabIndex = 59;
+            this.label2.Text = "Nhóm";
+            // 
+            // CBB_phongban
+            // 
+            this.CBB_phongban.FormattingEnabled = true;
+            this.CBB_phongban.Location = new System.Drawing.Point(36, 149);
+            this.CBB_phongban.Name = "CBB_phongban";
+            this.CBB_phongban.Size = new System.Drawing.Size(303, 24);
+            this.CBB_phongban.TabIndex = 58;
+            this.CBB_phongban.SelectedIndexChanged += new System.EventHandler(this.CBB_phongban_SelectedIndexChanged);
+            // 
+            // CBB_nhom
+            // 
+            this.CBB_nhom.Enabled = false;
+            this.CBB_nhom.FormattingEnabled = true;
+            this.CBB_nhom.Location = new System.Drawing.Point(36, 229);
+            this.CBB_nhom.Name = "CBB_nhom";
+            this.CBB_nhom.Size = new System.Drawing.Size(303, 24);
+            this.CBB_nhom.TabIndex = 57;
+            // 
             // DTP_ngaykyHDLD
             // 
-            this.DTP_ngaykyHDLD.Location = new System.Drawing.Point(265, 256);
+            this.DTP_ngaykyHDLD.Location = new System.Drawing.Point(264, 337);
             this.DTP_ngaykyHDLD.Name = "DTP_ngaykyHDLD";
             this.DTP_ngaykyHDLD.Size = new System.Drawing.Size(200, 22);
             this.DTP_ngaykyHDLD.TabIndex = 56;
             // 
             // DTP_ngayhetHDLD
             // 
-            this.DTP_ngayhetHDLD.Location = new System.Drawing.Point(34, 254);
+            this.DTP_ngayhetHDLD.Location = new System.Drawing.Point(33, 335);
             this.DTP_ngayhetHDLD.Name = "DTP_ngayhetHDLD";
             this.DTP_ngayhetHDLD.Size = new System.Drawing.Size(200, 22);
             this.DTP_ngayhetHDLD.TabIndex = 55;
@@ -431,9 +464,9 @@ namespace DangNhap
             this.LB_manhom.ForeColor = System.Drawing.Color.White;
             this.LB_manhom.Location = new System.Drawing.Point(32, 121);
             this.LB_manhom.Name = "LB_manhom";
-            this.LB_manhom.Size = new System.Drawing.Size(83, 22);
+            this.LB_manhom.Size = new System.Drawing.Size(91, 22);
             this.LB_manhom.TabIndex = 21;
-            this.LB_manhom.Text = "Mã nhóm";
+            this.LB_manhom.Text = "Phòng ban";
             // 
             // TXB_tinhtrangHDLD
             // 
@@ -441,7 +474,7 @@ namespace DangNhap
             this.TXB_tinhtrangHDLD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TXB_tinhtrangHDLD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_tinhtrangHDLD.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_tinhtrangHDLD.Location = new System.Drawing.Point(520, 254);
+            this.TXB_tinhtrangHDLD.Location = new System.Drawing.Point(519, 335);
             this.TXB_tinhtrangHDLD.Name = "TXB_tinhtrangHDLD";
             this.TXB_tinhtrangHDLD.Size = new System.Drawing.Size(154, 30);
             this.TXB_tinhtrangHDLD.TabIndex = 39;
@@ -451,29 +484,18 @@ namespace DangNhap
             this.LB_ngayhetHDLD.AutoSize = true;
             this.LB_ngayhetHDLD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_ngayhetHDLD.ForeColor = System.Drawing.Color.White;
-            this.LB_ngayhetHDLD.Location = new System.Drawing.Point(32, 229);
+            this.LB_ngayhetHDLD.Location = new System.Drawing.Point(31, 310);
             this.LB_ngayhetHDLD.Name = "LB_ngayhetHDLD";
             this.LB_ngayhetHDLD.Size = new System.Drawing.Size(137, 22);
             this.LB_ngayhetHDLD.TabIndex = 43;
             this.LB_ngayhetHDLD.Text = "Ngày hết HDLD";
-            // 
-            // TXB_loainv
-            // 
-            this.TXB_loainv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_loainv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TXB_loainv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_loainv.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_loainv.Location = new System.Drawing.Point(34, 38);
-            this.TXB_loainv.Name = "TXB_loainv";
-            this.TXB_loainv.Size = new System.Drawing.Size(180, 30);
-            this.TXB_loainv.TabIndex = 33;
             // 
             // LB_HDLD
             // 
             this.LB_HDLD.AutoSize = true;
             this.LB_HDLD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_HDLD.ForeColor = System.Drawing.Color.White;
-            this.LB_HDLD.Location = new System.Drawing.Point(516, 229);
+            this.LB_HDLD.Location = new System.Drawing.Point(515, 310);
             this.LB_HDLD.Name = "LB_HDLD";
             this.LB_HDLD.Size = new System.Drawing.Size(148, 22);
             this.LB_HDLD.TabIndex = 13;
@@ -484,22 +506,11 @@ namespace DangNhap
             this.LB_ngaykyHDLD.AutoSize = true;
             this.LB_ngaykyHDLD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_ngaykyHDLD.ForeColor = System.Drawing.Color.White;
-            this.LB_ngaykyHDLD.Location = new System.Drawing.Point(261, 229);
+            this.LB_ngaykyHDLD.Location = new System.Drawing.Point(260, 310);
             this.LB_ngaykyHDLD.Name = "LB_ngaykyHDLD";
             this.LB_ngaykyHDLD.Size = new System.Drawing.Size(133, 22);
             this.LB_ngaykyHDLD.TabIndex = 14;
             this.LB_ngaykyHDLD.Text = "Ngày ký HDLD";
-            // 
-            // TXB_manhom
-            // 
-            this.TXB_manhom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_manhom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TXB_manhom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_manhom.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_manhom.Location = new System.Drawing.Point(34, 146);
-            this.TXB_manhom.Name = "TXB_manhom";
-            this.TXB_manhom.Size = new System.Drawing.Size(180, 30);
-            this.TXB_manhom.TabIndex = 37;
             // 
             // panel3
             // 
@@ -690,6 +701,14 @@ namespace DangNhap
             this.BTN_yeucauchinhsua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_yeucauchinhsua.UseVisualStyleBackColor = true;
             // 
+            // CBB_loainv
+            // 
+            this.CBB_loainv.FormattingEnabled = true;
+            this.CBB_loainv.Location = new System.Drawing.Point(33, 44);
+            this.CBB_loainv.Name = "CBB_loainv";
+            this.CBB_loainv.Size = new System.Drawing.Size(181, 24);
+            this.CBB_loainv.TabIndex = 60;
+            // 
             // ThongTinCaNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -703,6 +722,7 @@ namespace DangNhap
             this.Controls.Add(this.panel5);
             this.Name = "ThongTinCaNhan";
             this.Text = "ThongTinCaNhan";
+            this.Load += new System.EventHandler(this.ThongTinCaNhan_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -747,12 +767,10 @@ namespace DangNhap
         private System.Windows.Forms.Label LB_manhom;
         private System.Windows.Forms.TextBox TXB_tinhtrangHDLD;
         private System.Windows.Forms.Label LB_ngayhetHDLD;
-        private System.Windows.Forms.TextBox TXB_loainv;
         private System.Windows.Forms.Label LB_HDLD;
         private System.Windows.Forms.Label LB_manv;
         private System.Windows.Forms.Label LB_ngaykyHDLD;
         private System.Windows.Forms.Label LB_ngaysinh;
-        private System.Windows.Forms.TextBox TXB_manhom;
         private System.Windows.Forms.Label LB_hovaten;
         private System.Windows.Forms.TextBox TXB_manv;
         private System.Windows.Forms.TextBox TXB_ho;
@@ -770,5 +788,9 @@ namespace DangNhap
         private System.Windows.Forms.DateTimePicker DTP_ngaykyHDLD;
         private System.Windows.Forms.TextBox TXB_ten;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox CBB_phongban;
+        private System.Windows.Forms.ComboBox CBB_nhom;
+        private System.Windows.Forms.ComboBox CBB_loainv;
     }
 }
