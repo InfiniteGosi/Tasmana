@@ -272,7 +272,6 @@ INSERT INTO CongViec VALUES('CVVS1', N'Quét nhà', '2024-04-04 12:30:00',null, 
 Insert into CongViec_NhanVien Values ('VS-003', 'CVVS1')
 Insert INTO YeuCau VALUES('CVVS1', 'WPHA')
 go
- select * from NhanVien
 
 --Procedure thêm một nhân viên mới
 create procedure [dbo].[SP_ThemNhanVien]

@@ -43,6 +43,9 @@
   <ItemGroup>
     <Compile Include="AccountDAO.cs" />
     <Compile Include="DataProvider.cs" />
+    <Compile Include="DivisionDAO.cs" />
+    <Compile Include="EmployeeDAO.cs" />
+    <Compile Include="GroupDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

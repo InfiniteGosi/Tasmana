@@ -1,4 +1,5 @@
-﻿using DTO;
+﻿using BLL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,54 +26,7 @@ namespace DangNhap
 
         private void GetEmployees()
         {
-            string query = "select * from NhanVien";
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=Tasmana;Integrated Security=True;TrustServerCertificate=True"))
-            {
-                try
-                {
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    conn.Open();
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        string maNhanVien = reader["maNhanVien"].ToString();
-                        string email = reader["email"].ToString();
-                        string ho = reader["ho"].ToString();
-                        string ten = reader["ten"].ToString();
-                        string soDienThoai = reader["SDT"].ToString();
-                        DateTime ngaySinh = (DateTime)reader["ngaySinh"];
-                        bool gioiTinh = (bool)reader["gioiTinh"];
-                        string queQuan = reader["queQuan"].ToString();
-                        string maDinhDanh = reader["maDinhDanh"].ToString();
-                        string loaiNhanVien = reader["loaiNhanVien"].ToString();
-                        string tinhTrangHonNhan = reader["tinhTrangHonNhan"].ToString();
-                        string maSoBHXH = reader["maSoBHXH"].ToString();
-                        bool daTungLamNV = (bool)reader["daTungLamNV"];
-                        DateTime ngayKyHDLD = (DateTime)reader["ngayKyHDLD"];
-                        DateTime ngayHetHDLD = (DateTime)reader["ngayHetHDLD"];
-                        string diaChiThuongTru = reader["dChiThuongTru"].ToString();
-                        string diaChiaTamTru = reader["dChiTamTru"].ToString();
-                        string tinhTrangHDLD = reader["tinhTrangHDLD"].ToString();
-                        string maNhom = reader["maNhom"].ToString();
-                        Employee employee = new Employee(maNhanVien, email, ho, ten, soDienThoai, ngaySinh, gioiTinh, queQuan, maDinhDanh,
-                                                         loaiNhanVien, tinhTrangHonNhan, maSoBHXH, daTungLamNV, ngayKyHDLD, ngayHetHDLD, 
-                                                         diaChiThuongTru, diaChiaTamTru, tinhTrangHDLD, maNhom);
-                        employees.Add(employee);
-                    }
-                    reader.Close();
-                    cmd.Dispose();
-                }
-                catch
-                {
-                    MessageBox.Show("Connection error");
-                }
-                finally
-                {
-                    conn.Close();
-                }
-            }
+            employees = EmployeeBLL.Instance.GetEmployeeLíst();
         }
         private void AddEmployeeToDGV_hienthinhanvien()
         {

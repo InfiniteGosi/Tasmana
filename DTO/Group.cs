@@ -20,5 +20,12 @@ namespace DTO
             MaBoPhan = maBoPhan;
             DanhSachNhanVien = danhSachNhanVien;
         }
+
+        public Group(string maNhom, string maTruongNhom, string maBoPhan)
+        {
+            MaNhom = maNhom;
+            MaTruongNhom = maTruongNhom;
+            MaBoPhan = maBoPhan;
+        }
     }
 }
