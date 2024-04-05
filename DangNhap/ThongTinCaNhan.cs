@@ -15,11 +15,20 @@ namespace DangNhap
 {
     public partial class ThongTinCaNhan : Form
     {
-        List<Division> divisions = new List<Division>();
-        List<Group> groups = new List<Group>();
+        private List<Division> divisions = new List<Division>();
+        private List<Group> groups = new List<Group>();
+        private Employee employee = null;
+        private Group group;
+        private Division division;
         public ThongTinCaNhan()
         {
             InitializeComponent();
+        }
+
+        public ThongTinCaNhan(Employee employee)
+        {
+            InitializeComponent();
+            this.employee = employee;
         }
 
         // Hàm khởi tạo danh sách giá trị truyền vào SP
@@ -80,6 +89,11 @@ namespace DangNhap
         private string AddEmployee(Dictionary<string, object> parameters)
         {
             return EmployeeBLL.Instance.AddEmployee(parameters);
+        }
+
+        private string UpdateEmployee(Dictionary<string, object> parameters)
+        {
+            return EmployeeBLL.Instance.UpdateEmployee(parameters);
         }
 
         private void GetDivisionList()
@@ -203,7 +217,10 @@ namespace DangNhap
             //    return;
             //}
             InitializeValues();
-            MessageBox.Show(AddEmployee(AddParameter()));
+            if (employee == null)
+                MessageBox.Show(AddEmployee(AddParameter()));
+            else
+                MessageBox.Show(UpdateEmployee(AddParameter()));
         }
 
         private void TXB_manv_TextChanged(object sender, EventArgs e)
@@ -228,12 +245,67 @@ namespace DangNhap
                 DisplayGroupToCBB_nhom();
             }
         }
+        private void GetGroupByEmployeeId()
+        {
+            group = EmployeeBLL.Instance.GetGroupByEmployeeId(employee.MaNhanVien);
+        }
+        private void GetDivisionByGroupId()
+        {
+            division = GroupBLL.Instance.GetDivsionByGroupId(group.MaNhom);
+        }
+        private void DisplayEmployeeeInfo()
+        {
+            GetGroupByEmployeeId();
+            GetDivisionByGroupId();
+            TXB_manv.Text = employee.MaNhanVien;
+            TXB_ho.Text = employee.Ho;
+            TXB_ten.Text = employee.Ten;
+            DTP_ngaysinh.Value = employee.NgaySinh;
+            if (employee.GioiTinh == true)
+            {
+                Rad_nam.Checked = true;
+            }
+            else
+            {
+                Rad_nu.Checked = true;
+            }
+            TXB_honnhan.Text = employee.TinhTrangHonNhan;
+            CBB_loainv.SelectedIndex = Array.IndexOf(loaiNV, employee.LoaiNhanVien);
+            if (employee.DaTungLamNhanVien)
+            {
+                CHB_tunglanv.Checked = true;
+            }
+            CBB_phongban.SelectedIndex = CBB_phongban.Items.IndexOf(division.MaBoPhan + "-" + division.TenBoPhan);
+            CBB_nhom.Enabled = true;
+            CBB_nhom.SelectedIndex = CBB_nhom.Items.IndexOf(group.MaNhom);
+            DTP_ngayhetHDLD.Value = employee.NgayHetHDLD;
+            DTP_ngaykyHDLD.Value = employee.NgayKyHDLD;
+            TXB_tinhtrangHDLD.Text = employee.TinhTrangHDLD;
+            TXB_sdt.Text = employee.SoDienThoai;
+            TXB_email.Text = employee.Email;
+            TXB_cccd.Text = employee.MaDinhDanh;
+            TXB_bhxh.Text = employee.MaSoBHXH;
+            TXB_quequan.Text = employee.QueQuan;
+            TXB_thuongtru.Text = employee.DiaChiThuongTru;
+            TXB_tamtru.Text = employee.DiaChiTamTru;
+            TXB_manv.Enabled = false;
+        }
+        string[] loaiNV = { "Intern / Trainne", "Part-time", "Full-time" };
+        private void DisplayEmployeeType()
+        {
+            CBB_loainv.DataSource = loaiNV;
+            CBB_loainv.SelectedIndex = -1;
+        }
 
         private void ThongTinCaNhan_Load(object sender, EventArgs e)
         {
+            // Nếu ấn nút chi tiết
             DisplayDivisionsToCBB_phongban();
-            string[] loaiNV = { "Intern / Trainne", "Part-time", "Full-time" };
-            CBB_loainv.DataSource = loaiNV;
+            DisplayEmployeeType();
+            if (employee != null)
+            {
+                DisplayEmployeeeInfo();
+            }
         }
     }
 }

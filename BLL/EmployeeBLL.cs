@@ -62,5 +62,51 @@ namespace BLL
             }
             return employees;
         }
+        public Employee GetEmployeeByEmployeeId(string maNhanVien)
+        {
+            DataTable dt = EmployeeDAO.Instance.GetEmployeeByEmployeeId(maNhanVien);
+            string email = dt.Rows[0]["email"].ToString();
+            string ho = dt.Rows[0]["ho"].ToString();
+            string ten = dt.Rows[0]["ten"].ToString();
+            string soDienThoai = dt.Rows[0]["SDT"].ToString();
+            DateTime ngaySinh = (DateTime)dt.Rows[0]["ngaySinh"];
+            bool gioiTinh = (bool)dt.Rows[0]["gioiTinh"];
+            string queQuan = dt.Rows[0]["queQuan"].ToString();
+            string maDinhDanh = dt.Rows[0]["maDinhDanh"].ToString();
+            string loaiNhanVien = dt.Rows[0]["loaiNhanVien"].ToString();
+            string tinhTrangHonNhan = dt.Rows[0]["tinhTrangHonNhan"].ToString();
+            string maSoBHXH = dt.Rows[0]["maSoBHXH"].ToString();
+            bool daTungLamNV = (bool)dt.Rows[0]["daTungLamNV"];
+            DateTime ngayKyHDLD = (DateTime)dt.Rows[0]["ngayKyHDLD"];
+            DateTime ngayHetHDLD = (DateTime)dt.Rows[0]["ngayHetHDLD"];
+            string diaChiThuongTru = dt.Rows[0]["dChiThuongTru"].ToString();
+            string diaChiaTamTru = dt.Rows[0]["dChiTamTru"].ToString();
+            string tinhTrangHDLD = dt.Rows[0]["tinhTrangHDLD"].ToString();
+            string maNhom = dt.Rows[0]["maNhom"].ToString();
+            Employee employee = new Employee(maNhanVien, email, ho, ten, soDienThoai, ngaySinh, gioiTinh, queQuan, maDinhDanh,
+                                             loaiNhanVien, tinhTrangHonNhan, maSoBHXH, daTungLamNV, ngayKyHDLD, ngayHetHDLD,
+                                             diaChiThuongTru, diaChiaTamTru, tinhTrangHDLD, maNhom);
+            return employee;
+        }
+        public Group GetGroupByEmployeeId(string maNhanVien)
+        {
+            DataTable dt = EmployeeDAO.Instance.GetGroupByEmployeeId(maNhanVien);
+            string maNhom = dt.Rows[0]["maNhom"].ToString();
+            string maTruongNhom = dt.Rows[0]["maTruongNhom"].ToString();
+            string maBoPhan = dt.Rows[0]["maBoPhan"].ToString();
+            Group group = new Group(maNhom, maTruongNhom, maBoPhan);
+            return group;
+        }
+        public string UpdateEmployee(Dictionary<string, object> parameters)
+        {
+            if (EmployeeDAO.Instance.UpdateEmployee(parameters))
+            {
+                return "Sửa thành công";
+            }
+            else
+            {
+                return "Sửa thất bại";
+            }
+        }
     }
 }

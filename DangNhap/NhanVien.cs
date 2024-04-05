@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace DangNhap
 {
     public partial class NhanVien : Form
     {
+        private Employee nhanVienChiTiet;
         private List<Employee> employees = new List<Employee>();
         public NhanVien()
         {
@@ -47,11 +49,32 @@ namespace DangNhap
 
         private void BTN_themnhanvien_Click(object sender, EventArgs e)
         {
+            // Gọi timer để refresh lại dgv
+            TM_nhanvien.Start();
             ThongTinCaNhan ttcn = new ThongTinCaNhan();
-            ttcn.Show();
+            ttcn.ShowDialog();
+            TM_nhanvien.Stop();
         }
 
-        private void BTN_refresh_Click(object sender, EventArgs e)
+        private Employee GetEmployeeByEmployeeId(string maNhanVien)
+        {
+            return EmployeeBLL.Instance.GetEmployeeByEmployeeId(maNhanVien);
+        }
+        private void DGV_hienthinhanvien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == DGV_hienthinhanvien.Columns["C_chitiet"].Index && e.RowIndex >= 0)
+            {
+                DataGridViewRow clickedRow = DGV_hienthinhanvien.Rows[e.RowIndex];
+                string maNhanVien = clickedRow.Cells[0].Value.ToString();
+                nhanVienChiTiet = GetEmployeeByEmployeeId(maNhanVien);
+                TM_nhanvien.Start();
+                ThongTinCaNhan ttcn = new ThongTinCaNhan(nhanVienChiTiet);
+                ttcn.ShowDialog();
+                TM_nhanvien.Stop();
+            }
+        }
+
+        private void TM_nhanvien_Tick(object sender, EventArgs e)
         {
             employees = new List<Employee>();
             AddEmployeeToDGV_hienthinhanvien();
