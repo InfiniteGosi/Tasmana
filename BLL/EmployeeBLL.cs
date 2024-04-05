@@ -110,7 +110,7 @@ namespace BLL
         }
         public List<Employee> GetEmployeesByGoup(string maNhom)
         {
-            DataTable dt = EmployeeDAO.Instance.GetAllEmployee();
+            DataTable dt = EmployeeDAO.Instance.GetEmployeeByGroup(maNhom);
 
             List<Employee> employees = new List<Employee>();
             for (int i = 0; i < dt.Rows.Count; i++)
