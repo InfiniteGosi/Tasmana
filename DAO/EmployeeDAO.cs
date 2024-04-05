@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
@@ -20,7 +20,7 @@ namespace DAO
 
         public bool AddEmployee(Dictionary<string, object> parameters)
         {
-            int result = DataProvider.Instance.ExecuteStoredProcedure("SP_ThemNhanVien",parameters);
+            int result = DataProvider.Instance.ExecuteStoredProcedure("SP_ThemNhanVien", parameters);
             return result > 0;
         }
         public DataTable GetAllEmployee()
@@ -49,6 +49,5 @@ namespace DAO
             string query = $"select * from NhanVien where maNhom = '{maNhom}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
-
     }
 }

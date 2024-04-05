@@ -21,5 +21,10 @@ namespace DAO
             string query = $"select * from Nhom where maBoPhan = '{maBoPhan}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetDivisionByGroupId(string maNhom)
+        {
+            string query = "exec SP_LayPhongBanTheoMaNhom @maNhom";
+            return DataProvider.Instance.ExecuteQuery(query, new object[] { maNhom });
+        }
     }
 }

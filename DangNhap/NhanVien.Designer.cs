@@ -29,6 +29,7 @@ namespace DangNhap
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NhanVien));
             this.BTN_themnhanvien = new Guna.UI.WinForms.GunaGradientButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -48,7 +49,7 @@ namespace DangNhap
             this.C_sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_chitiet = new System.Windows.Forms.DataGridViewImageColumn();
-            this.BTN_refresh = new System.Windows.Forms.Button();
+            this.TM_nhanvien = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_hienthinhanvien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -251,6 +252,7 @@ namespace DangNhap
             this.DGV_hienthinhanvien.RowTemplate.Height = 24;
             this.DGV_hienthinhanvien.Size = new System.Drawing.Size(1248, 401);
             this.DGV_hienthinhanvien.TabIndex = 106;
+            this.DGV_hienthinhanvien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_hienthinhanvien_CellClick);
             // 
             // C_manhanvien
             // 
@@ -302,18 +304,9 @@ namespace DangNhap
             this.C_chitiet.Name = "C_chitiet";
             this.C_chitiet.Width = 125;
             // 
-            // BTN_refresh
+            // TM_nhanvien
             // 
-            this.BTN_refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_refresh.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.BTN_refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_refresh.Image = ((System.Drawing.Image)(resources.GetObject("BTN_refresh.Image")));
-            this.BTN_refresh.Location = new System.Drawing.Point(1223, 57);
-            this.BTN_refresh.Name = "BTN_refresh";
-            this.BTN_refresh.Size = new System.Drawing.Size(44, 40);
-            this.BTN_refresh.TabIndex = 107;
-            this.BTN_refresh.UseVisualStyleBackColor = true;
-            this.BTN_refresh.Click += new System.EventHandler(this.BTN_refresh_Click);
+            this.TM_nhanvien.Tick += new System.EventHandler(this.TM_nhanvien_Tick);
             // 
             // NhanVien
             // 
@@ -321,7 +314,6 @@ namespace DangNhap
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1376, 782);
-            this.Controls.Add(this.BTN_refresh);
             this.Controls.Add(this.DGV_hienthinhanvien);
             this.Controls.Add(this.BTN_themnhanvien);
             this.Controls.Add(this.comboBox1);
@@ -354,7 +346,6 @@ namespace DangNhap
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.DataGridView DGV_hienthinhanvien;
-        private System.Windows.Forms.Button BTN_refresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_manhanvien;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_Ho;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_ten;
@@ -362,5 +353,6 @@ namespace DangNhap
         private System.Windows.Forms.DataGridViewTextBoxColumn C_sdt;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_email;
         private System.Windows.Forms.DataGridViewImageColumn C_chitiet;
+        private System.Windows.Forms.Timer TM_nhanvien;
     }
 }

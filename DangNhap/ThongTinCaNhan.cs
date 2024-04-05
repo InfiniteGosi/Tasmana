@@ -15,11 +15,20 @@ namespace DangNhap
 {
     public partial class ThongTinCaNhan : Form
     {
-        List<Division> divisions = new List<Division>();
-        List<Group> groups = new List<Group>();
+        private List<Division> divisions = new List<Division>();
+        private List<Group> groups = new List<Group>();
+        private Employee employee = null;
+        private Group group;
+        private Division division;
         public ThongTinCaNhan()
         {
             InitializeComponent();
+        }
+
+        public ThongTinCaNhan(Employee employee)
+        {
+            InitializeComponent();
+            this.employee = employee;
         }
 
         // Hàm khởi tạo danh sách giá trị truyền vào SP
@@ -76,17 +85,22 @@ namespace DangNhap
             };
             return dict;
         }
-
+        // Thêm nhân viên vào CSDL
         private string AddEmployee(Dictionary<string, object> parameters)
         {
             return EmployeeBLL.Instance.AddEmployee(parameters);
         }
-
+        // Cập nhật thông tin nhân viên vào CSDL
+        private string UpdateEmployee(Dictionary<string, object> parameters)
+        {
+            return EmployeeBLL.Instance.UpdateEmployee(parameters);
+        }
+        // Lấy danh sách phòng ban
         private void GetDivisionList()
         {
             divisions = DivisionBLL.Instance.GetDivisionList();
         }
-        
+        // Hiện danh sách phòng ban lên CBB_phongban
         private void DisplayDivisionsToCBB_phongban()
         {
             CBB_phongban.Enabled = true;
@@ -97,11 +111,13 @@ namespace DangNhap
                 CBB_phongban.Items.Add(division.MaBoPhan + "-" + division.TenBoPhan);
             }
         }
+        // Lấy danh sách nhóm
         private void GetGroupList()
         {
             string maBoPhan = CBB_phongban.SelectedItem.ToString().Split('-')[0];
             groups = GroupBLL.Instance.GetGroupListByDivisionId(maBoPhan);
         }
+        // Hiện danh sách nhóm lên CBB_nhom
         private void DisplayGroupToCBB_nhom()
         {
             CBB_nhom.Enabled = true;
@@ -123,7 +139,7 @@ namespace DangNhap
             string ten = TXB_ten.Text.Substring(TXB_ten.Text.LastIndexOf(' ') + 1);
             return TXB_manv.Text + "." + ten + "." + TXB_sdt;
         }
-
+        // Kiểm tra các trường hợp khi ấn nút lưu
         private void BTN_luu_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(TXB_manv.Text))
@@ -203,7 +219,11 @@ namespace DangNhap
             //    return;
             //}
             InitializeValues();
-            MessageBox.Show(AddEmployee(AddParameter()));
+            // Trường hợp tạo nhân viên mới
+            if (employee == null)
+                MessageBox.Show(AddEmployee(AddParameter()));
+            else // Trường hợp chỉnh sửa nhân viên
+                MessageBox.Show(UpdateEmployee(AddParameter()));
         }
 
         private void TXB_manv_TextChanged(object sender, EventArgs e)
@@ -228,12 +248,70 @@ namespace DangNhap
                 DisplayGroupToCBB_nhom();
             }
         }
+        private void GetGroupByEmployeeId()
+        {
+            group = EmployeeBLL.Instance.GetGroupByEmployeeId(employee.MaNhanVien);
+        }
+        private void GetDivisionByGroupId()
+        {
+            division = GroupBLL.Instance.GetDivsionByGroupId(group.MaNhom);
+        }
+        // Hiện thông tin chỉnh sửa lên các input tương ứng
+        private void DisplayEmployeeeInfo()
+        {
+            GetGroupByEmployeeId();
+            GetDivisionByGroupId();
+            TXB_manv.Text = employee.MaNhanVien;
+            TXB_ho.Text = employee.Ho;
+            TXB_ten.Text = employee.Ten;
+            DTP_ngaysinh.Value = employee.NgaySinh;
+            if (employee.GioiTinh == true)
+            {
+                Rad_nam.Checked = true;
+            }
+            else
+            {
+                Rad_nu.Checked = true;
+            }
+            TXB_honnhan.Text = employee.TinhTrangHonNhan;
+            CBB_loainv.SelectedIndex = Array.IndexOf(loaiNV, employee.LoaiNhanVien);
+            if (employee.DaTungLamNhanVien)
+            {
+                CHB_tunglanv.Checked = true;
+            }
+            CBB_phongban.SelectedIndex = CBB_phongban.Items.IndexOf(division.MaBoPhan + "-" + division.TenBoPhan);
+            CBB_nhom.Enabled = true;
+            CBB_nhom.SelectedIndex = CBB_nhom.Items.IndexOf(group.MaNhom);
+            DTP_ngayhetHDLD.Value = employee.NgayHetHDLD;
+            DTP_ngaykyHDLD.Value = employee.NgayKyHDLD;
+            TXB_tinhtrangHDLD.Text = employee.TinhTrangHDLD;
+            TXB_sdt.Text = employee.SoDienThoai;
+            TXB_email.Text = employee.Email;
+            TXB_cccd.Text = employee.MaDinhDanh;
+            TXB_bhxh.Text = employee.MaSoBHXH;
+            TXB_quequan.Text = employee.QueQuan;
+            TXB_thuongtru.Text = employee.DiaChiThuongTru;
+            TXB_tamtru.Text = employee.DiaChiTamTru;
+            // Không cho chỉnh sửa mã nhân viên
+            TXB_manv.Enabled = false;
+        }
+        // Hiện loại nhân viên từ mảng loaiNV vào CBB_loainv
+        string[] loaiNV = { "Intern / Trainne", "Part-time", "Full-time" };
+        private void DisplayEmployeeType()
+        {
+            CBB_loainv.DataSource = loaiNV;
+            CBB_loainv.SelectedIndex = -1;
+        }
 
         private void ThongTinCaNhan_Load(object sender, EventArgs e)
         {
+            // Nếu ấn nút chi tiết
             DisplayDivisionsToCBB_phongban();
-            string[] loaiNV = { "Intern / Trainne", "Part-time", "Full-time" };
-            CBB_loainv.DataSource = loaiNV;
+            DisplayEmployeeType();
+            if (employee != null)
+            {
+                DisplayEmployeeeInfo();
+            }
         }
     }
 }
