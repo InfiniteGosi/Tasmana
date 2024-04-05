@@ -31,5 +31,16 @@ namespace BLL
             }
             return groups;
         }
+
+        public Division GetDivsionByGroupId(string maNhom)
+        {
+            DataTable dt = GroupDAO.Instance.GetDivisionByGroupId(maNhom);
+            string maBoPhan = dt.Rows[0]["maBoPhan"].ToString();
+            string tenBoPhan = dt.Rows[0]["tenPB"].ToString();
+            string soDienThoai = dt.Rows[0]["SDT"].ToString();
+            string email = dt.Rows[0]["email"].ToString();
+            Division division = new Division(maBoPhan, tenBoPhan, soDienThoai, email);
+            return division;
+        }
     }
 }
