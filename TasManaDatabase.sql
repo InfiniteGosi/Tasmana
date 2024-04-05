@@ -425,7 +425,7 @@ BEGIN
            @ghiChu
     )
 END
-
+go
 -- Procedure Thêm CongViec_NhanVien
 CREATE PROCEDURE [dbo].[ThemCongViec_NhanVien]
            @maNhanVien varchar(10),
@@ -438,7 +438,7 @@ BEGIN
 		   @maCongViec
     )
 END
-
+go
 -- Procedure Thêm CongViec_Nhom
 Create PROCEDURE [dbo].[ThemCongViec_Nhom]
            @maNhom varchar(10),
@@ -451,7 +451,7 @@ BEGIN
 		   @maCongViec
     )
 END
-
+go
 -- Procedure Thêm CongViec_PhongBan
 Create Procedure [dbo].[ThemCongViec_PhongBan]
            @maPhongBan varchar(10),
@@ -464,4 +464,16 @@ BEGIN
 		   @maCongViec
     )
 END
+Create Procedure [dbo].[ThemyeuCau]
+			@maCongViec varchar(10),
+			@maCanHo varchar(10)
+AS
+BEGIN
+	INSERT INTO YeuCau
+    VALUES (
+		   @maCongViec,
+		   @maCanHo
+    )
+END
 go
+
