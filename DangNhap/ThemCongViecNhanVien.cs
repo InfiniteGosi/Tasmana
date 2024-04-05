@@ -229,9 +229,9 @@ namespace DangNhap
                 {"@maCongViec", TXB_MaCongViec.Text},
                 {"@noiDung", TXB_noidung.Text},
                 {"@thoihan",  DTP_ngay.Value.ToString("yyyy-MM-dd") + " " + DTP_gio.Text.Split(' ')[0].ToString()},
-                {"@ngayHoanThanh", "NULL"},
+                {"@ngayHoanThanh", null},
                 {"@trangThai", "Chưa bắt đầu"},
-                {"@ghiChu", "NULL"}
+                {"@ghiChu", null}
             };
             return dict;
         }
