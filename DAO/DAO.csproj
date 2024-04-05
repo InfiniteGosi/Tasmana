@@ -46,6 +46,7 @@
     <Compile Include="DivisionDAO.cs" />
     <Compile Include="EmployeeDAO.cs" />
     <Compile Include="GroupDAO.cs" />
+    <Compile Include="JobDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

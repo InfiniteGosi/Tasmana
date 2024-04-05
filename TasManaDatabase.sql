@@ -326,11 +326,139 @@ SELECT * FROM CongViec
 go
 
 -- Procedure lấy công việc
--- Procedure lấy công việc
 CREATE procedure [dbo].[SP_LayCV]
 as 
 begin
 	SELECT Congviec_Nhanvien.maNhanVien as N'Mã nhân viên', (NhanVien.ho + NhanVien.ten) as N'Họ và tên', CongViec.noiDung as N'Nội dung',YeuCau.maCanHo as N'Mã căn hộ' , CongViec.thoiHan as N'Thời hạn', CongViec.ngayHoanThanh as N'Ngày hoàn thành', CongViec.trangThai as N'Trạng thái', CongViec.ghiChu as N'Ghi chú'
 	from NhanVien, CongViec, Congviec_Nhanvien, YeuCau
 	WHERE NhanVien.maNhanVien = Congviec_Nhanvien.maNhanVien and Congviec_Nhanvien.maCongViec=CongViec.maCongViec and YeuCau.maCongViec = CongViec.maCongViec
+END
+go
+
+create procedure [dbo].[SP_LayNhomTheoMaNhanVien]
+	@maNhanVien varchar(10)
+as
+begin
+	select n.*
+	from NhanVien nv
+	inner join Nhom n on n.maNhom = nv.maNhom
+	where nv.maNhanVien = @maNhanVien
+end
+go
+
+create procedure [dbo].[SP_LayPhongBanTheoMaNhom]
+	@maNhom varchar(10)
+as
+begin
+	select pb.*
+	from Nhom n
+	inner join PhongBan pb on pb.maBoPhan = n.maBoPhan
+	where n.maNhom = @maNhom
+end
+go
+
+create procedure [dbo].[SP_CapNhatNhanVien]
+    @maNhanVien varchar(10),
+    @email varchar(100),
+    @ho nvarchar(100),
+    @ten nvarchar(100),
+    @SDT varchar(20),
+    @ngaySinh date,
+    @gioiTinh bit,
+    @queQuan nvarchar(100),
+    @maDinhDanh varchar(20),
+    @loaiNhanVien nvarchar(20),
+    @tinhTrangHonNhan nvarchar(20),
+    @maSoBHXH varchar(20),
+    @daTungLamNV bit,
+    @ngayKyHDLD date,
+    @ngayHetHDLD date,
+    @dChiThuongTru nvarchar(100),
+    @dChiTamTru nvarchar(100),
+    @tinhTrangHDLD nvarchar(100),
+    @maNhom varchar(10)
+as
+begin
+    update NhanVien
+    set email = @email,
+        ho = @ho,
+        ten = @ten,
+        SDT = @SDT,
+        ngaySinh = @ngaySinh,
+        gioiTinh = @gioiTinh,
+        queQuan = @queQuan,
+        maDinhDanh = @maDinhDanh,
+        loaiNhanVien = @loaiNhanVien,
+        tinhTrangHonNhan = @tinhTrangHonNhan,
+        maSoBHXH = @maSoBHXH,
+        daTungLamNV = @daTungLamNV,
+        ngayKyHDLD = @ngayKyHDLD,
+        ngayHetHDLD = @ngayHetHDLD,
+        dChiThuongTru = @dChiThuongTru,
+        dChiTamTru = @dChiTamTru,
+        tinhTrangHDLD = @tinhTrangHDLD,
+        maNhom = @maNhom
+    where maNhanVien = @maNhanVien;
+end
+go
+
+
+-- Procedure Thêm Công Việc
+CREATE PROCEDURE [dbo].[SP_ThemCongViec]
+           @maCongViec VARCHAR(10),
+           @noiDung NVARCHAR(200),
+           @thoiHan SMALLDATETIME,
+           @ngayHoanThanh SMALLDATETIME,
+           @trangThai NVARCHAR(100),
+           @ghiChu NVARCHAR(200)
+AS
+BEGIN
+    INSERT INTO CongViec
+    VALUES (
+           @maCongViec,
+           @noiDung,
+           @thoiHan,
+           @ngayHoanThanh,
+           @trangThai,
+           @ghiChu
+    )
+END
+
+-- Procedure Thêm CongViec_NhanVien
+CREATE PROCEDURE [dbo].[ThemCongViec_NhanVien]
+           @maNhanVien varchar(10),
+		   @maCongViec varchar(10)
+AS
+BEGIN
+    INSERT INTO Congviec_Nhanvien
+    VALUES (
+           @maNhanVien,
+		   @maCongViec
+    )
+END
+
+-- Procedure Thêm CongViec_Nhom
+Create PROCEDURE [dbo].[ThemCongViec_Nhom]
+           @maNhom varchar(10),
+		   @maCongViec varchar(10)
+AS
+BEGIN
+    INSERT INTO CongViec_Nhom
+    VALUES (
+           @maNhom,
+		   @maCongViec
+    )
+END
+
+-- Procedure Thêm CongViec_PhongBan
+Create Procedure [dbo].[ThemCongViec_PhongBan]
+           @maPhongBan varchar(10),
+		   @maCongViec varchar(10)
+AS
+BEGIN
+    INSERT INTO Congviec_PhongBan
+    VALUES (
+           @maPhongBan,
+		   @maCongViec
+    )
 END
