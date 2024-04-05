@@ -85,22 +85,22 @@ namespace DangNhap
             };
             return dict;
         }
-
+        // Thêm nhân viên vào CSDL
         private string AddEmployee(Dictionary<string, object> parameters)
         {
             return EmployeeBLL.Instance.AddEmployee(parameters);
         }
-
+        // Cập nhật thông tin nhân viên vào CSDL
         private string UpdateEmployee(Dictionary<string, object> parameters)
         {
             return EmployeeBLL.Instance.UpdateEmployee(parameters);
         }
-
+        // Lấy danh sách phòng ban
         private void GetDivisionList()
         {
             divisions = DivisionBLL.Instance.GetDivisionList();
         }
-        
+        // Hiện danh sách phòng ban lên CBB_phongban
         private void DisplayDivisionsToCBB_phongban()
         {
             CBB_phongban.Enabled = true;
@@ -111,11 +111,13 @@ namespace DangNhap
                 CBB_phongban.Items.Add(division.MaBoPhan + "-" + division.TenBoPhan);
             }
         }
+        // Lấy danh sách nhóm
         private void GetGroupList()
         {
             string maBoPhan = CBB_phongban.SelectedItem.ToString().Split('-')[0];
             groups = GroupBLL.Instance.GetGroupListByDivisionId(maBoPhan);
         }
+        // Hiện danh sách nhóm lên CBB_nhom
         private void DisplayGroupToCBB_nhom()
         {
             CBB_nhom.Enabled = true;
@@ -137,7 +139,7 @@ namespace DangNhap
             string ten = TXB_ten.Text.Substring(TXB_ten.Text.LastIndexOf(' ') + 1);
             return TXB_manv.Text + "." + ten + "." + TXB_sdt;
         }
-
+        // Kiểm tra các trường hợp khi ấn nút lưu
         private void BTN_luu_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(TXB_manv.Text))
@@ -217,9 +219,10 @@ namespace DangNhap
             //    return;
             //}
             InitializeValues();
+            // Trường hợp tạo nhân viên mới
             if (employee == null)
                 MessageBox.Show(AddEmployee(AddParameter()));
-            else
+            else // Trường hợp chỉnh sửa nhân viên
                 MessageBox.Show(UpdateEmployee(AddParameter()));
         }
 
@@ -253,6 +256,7 @@ namespace DangNhap
         {
             division = GroupBLL.Instance.GetDivsionByGroupId(group.MaNhom);
         }
+        // Hiện thông tin chỉnh sửa lên các input tương ứng
         private void DisplayEmployeeeInfo()
         {
             GetGroupByEmployeeId();
@@ -288,8 +292,10 @@ namespace DangNhap
             TXB_quequan.Text = employee.QueQuan;
             TXB_thuongtru.Text = employee.DiaChiThuongTru;
             TXB_tamtru.Text = employee.DiaChiTamTru;
+            // Không cho chỉnh sửa mã nhân viên
             TXB_manv.Enabled = false;
         }
+        // Hiện loại nhân viên từ mảng loaiNV vào CBB_loainv
         string[] loaiNV = { "Intern / Trainne", "Part-time", "Full-time" };
         private void DisplayEmployeeType()
         {
