@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
@@ -43,6 +43,11 @@ namespace DAO
         {
             int result = DataProvider.Instance.ExecuteStoredProcedure("SP_CapNhatNhanVien", parameters);
             return result > 0;
+        }
+        public DataTable GetEmployeeByGroup(string maNhom) 
+        {
+            string query = $"select * from NhanVien where maNhom = '{maNhom}'";
+            return DataProvider.Instance.ExecuteQuery(query);
         }
     }
 }

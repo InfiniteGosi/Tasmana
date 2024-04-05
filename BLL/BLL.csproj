@@ -45,6 +45,7 @@
     <Compile Include="DivisionBLL.cs" />
     <Compile Include="EmployeeBLL.cs" />
     <Compile Include="GroupBLL.cs" />
+    <Compile Include="JobBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,5 @@
-﻿using DTO;
+﻿using BLL;
+using DTO;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,16 +8,14 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace DangNhap
 {
     public partial class ThemCongViecNhanVien : Form
     {
-        //
-        public List<Division> listMaBP = new List<Division>();
         int mov;
         int movX;
         int movY;
@@ -102,129 +101,71 @@ namespace DangNhap
             mov = 0;
         }
 
-        private void readPhongBan()
+        public List<Division> GetPhongBan()
         {
+            List<Division> listMaPB = new List<Division>();
+            listMaPB = DivisionBLL.Instance.GetDivisionList();
+            return listMaPB;
+        }
+        private void ReadPhongBan()
+        {
+            List<Division> listPB = new List<Division>();
             CBB_phongban.Enabled = true;
             CBB_phongban.Items.Clear();
-            string query = $"Select * from PhongBan";
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=Tasmana;Integrated Security=True;TrustServerCertificate=True"))
+            listPB = GetPhongBan();
+            for (int i = 0; i < listPB.Count; i++)
             {
-
-                try
-                {
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    conn.Open();
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        string maBoPhan = reader["maBoPhan"].ToString();
-                        string tenBP = reader["tenPB"].ToString();
-                        string sdt = reader["sdt"].ToString();
-                        string email = reader["email"].ToString();
-                        Division boPhan = new Division(maBoPhan, tenBP, sdt, email);
-                        listMaBP.Add(boPhan);
-                        CBB_phongban.Items.Add(maBoPhan + "-" + tenBP);
-                    }
-                    reader.Close();
-                    cmd.Dispose();
-                }
-                catch
-                {
-                    MessageBox.Show("Kết nối thất bại");
-                    return;
-                }
-                finally
-                {
-                    conn.Close();
-                }
+                CBB_phongban.Items.Add(listPB[i].MaBoPhan + "-" + listPB[i].TenBoPhan);
             }
         }
 
-        private void readNhom()
+        private List<Group> GetNhom(string maBoPhan)
+        {
+            List<Group> list = new List<Group>();
+            list = GroupBLL.Instance.GetGroupListByDivisionId(maBoPhan);
+            return list;
+        }
+        private void ReadNhom()
         {
             CBB_nhom.Enabled = true;
             CBB_nhom.Items.Clear();
             string maBoPhan = CBB_phongban.SelectedItem.ToString().Split('-')[0];
-            string query = $"Select * from Nhom N where N.maBoPhan = '{maBoPhan}'";
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=Tasmana;Integrated Security=True;TrustServerCertificate=True"))
+            List<Group> listNhom = new List<Group>();
+            listNhom = GetNhom(maBoPhan);
+            for (int i = 0; i < listNhom.Count; i++)
             {
-
-                try
-                {
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    conn.Open();
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        string nhom = reader["maNhom"].ToString();
-                        CBB_nhom.Items.Add(nhom);
-                    }
-                    reader.Close();
-                    cmd.Dispose();
-                }
-                catch
-                {
-                    MessageBox.Show("Kết nối thất bại");
-                    return;
-                }
-                finally
-                {
-                    conn.Close();
-                }
+                CBB_nhom.Items.Add((listNhom[i].MaNhom));
             }
         }
 
+
+        private List<Employee> GetNV(string maNhom)
+        {
+            List<Employee> list = new List<Employee>();
+            list = EmployeeBLL.Instance.GetEmployeesByGoup(maNhom);
+            return list;
+        }
         private void readNV()
         {
             CBB_manhanvien.Enabled = true;
-            CBB_manhanvien.Items.Clear();   
-            string query = $"Select * from NhanVien NV where NV.maNhom = '" + CBB_nhom.SelectedItem.ToString() +"'";
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=Tasmana;Integrated Security=True;TrustServerCertificate=True"))
+            CBB_manhanvien.Items.Clear();
+            List<Employee> listNV = new List<Employee>();
+            listNV = GetNV(CBB_nhom.SelectedItem.ToString());
+            for (int i = 0; i < listNV.Count; i++)
             {
-
-                try
-                {
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    conn.Open();
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        string maNV = reader["maNhanVien"].ToString();
-                        string ho = reader["ho"].ToString();
-                        string ten = reader["ten"].ToString();
-                        string NV = maNV + "_" + ho + " " + ten; 
-                        CBB_manhanvien.Items.Add(NV);
-                    }
-                    reader.Close();
-                    cmd.Dispose();
-                }
-                catch
-                {
-                    MessageBox.Show("Kết nối thất bại");
-                    return;
-                }
-                finally
-                {
-                    conn.Close();
-                }
+                CBB_manhanvien.Items.Add(listNV[i].MaNhanVien + "_" + listNV[i].Ten);
             }
         }
 
         private void ThemCongViecNhanVien_Load(object sender, EventArgs e)
         {
-            readPhongBan();
+            ReadPhongBan();
         }
 
 
         private void CBB_nhom_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(CBB_nhom.SelectedIndex != -1)
+            if (CBB_nhom.SelectedIndex != -1)
             {
                 readNV();
             }
@@ -232,15 +173,15 @@ namespace DangNhap
 
         private void CBB_phongban_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(CBB_phongban.SelectedIndex != -1)
+            if (CBB_phongban.SelectedIndex != -1)
             {
-                readNhom();
+                ReadNhom();
             }
         }
 
         private void CBB_manhanvien_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(CBB_manhanvien.SelectedIndex != -1) 
+            if (CBB_manhanvien.SelectedIndex != -1)
             {
                 TXB_noidung.Enabled = true;
                 TXB_macanho.Enabled = true;
@@ -268,7 +209,7 @@ namespace DangNhap
             {
                 CBB_nhom.SelectedIndex = -1;
                 CBB_manhanvien.SelectedIndex = -1;
-                readNhom();
+                ReadNhom();
             }
         }
 
@@ -280,45 +221,57 @@ namespace DangNhap
                 readNV();
             }
         }
-
-        private bool saveCongViec()
+        // Tạo tham số cho bảng CongViec để truyền vào DataProvider
+        private Dictionary<string, object> AddParameterCongViec()
         {
-            string query = @"INSERT INTO CongViec VALUES (@maCongViec, @noiDung, @thoiHan, @trangThai); INSERT INTO CongViec_NhanVien (maNhanVien, maCongViec) VALUES (@maNhanVien, @maCongViec); INSERT INTO YeuCau (maCongViec, maCanHo) VALUES (@maCongViec, @maCanHo);";
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=Tasmana;Integrated Security=True;TrustServerCertificate=True"))
+            Dictionary<string, object> dict = new Dictionary<string, object>
             {
-                try
-                {
-                    string thoiHan = DTP_ngay.Value.ToString("yyyy-MM-dd") + " " + DTP_gio.Text.Split(' ')[0].ToString();
-                    string maNV = CBB_manhanvien.SelectedItem.ToString().Split('_')[0].ToString();
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@maCongViec", TXB_MaCongViec.Text);
-                        cmd.Parameters.AddWithValue("@noiDung", TXB_noidung.Text);
-                        cmd.Parameters.AddWithValue("@thoiHan", thoiHan);
-                        cmd.Parameters.AddWithValue("@trangThai", "Chưa bắt đầu");
-                        cmd.Parameters.AddWithValue("@maNhanVien", maNV);
-                        cmd.Parameters.AddWithValue("@maCanHo", TXB_macanho.Text);
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                catch
-                {
-                    return false;
-                }
-                finally
-                {
-                    conn.Close();
+                {"@maCongViec", TXB_MaCongViec.Text},
+                {"@noiDung", TXB_noidung.Text},
+                {"@thoihan",  DTP_ngay.Value.ToString("yyyy-MM-dd") + " " + DTP_gio.Text.Split(' ')[0].ToString()},
+                {"@ngayHoanThanh", "NULL"},
+                {"@trangThai", "Chưa bắt đầu"},
+                {"@ghiChu", "NULL"}
+            };
+            return dict;
+        }
+
+        // Tạo tham số cho bảng CongViec_NhanVien để truyền vào DataProvider
+        private Dictionary<string, object> AddParameterCongViec_NhanVien()
+        {
+            Dictionary<string, object> dict = new Dictionary<string, object>
+            {
+                {"@maNhanVien",  CBB_manhanvien.SelectedItem.ToString().Split('_')[0].ToString()},
+                {"@maCongViec", TXB_MaCongViec.Text},
+            };
+            return dict;
+        }
+        // Tạo tham số cho bảng YeuCau để truyền vào DataProvider
+        private Dictionary<string, object> AddParameterYeuCau()
+        {
+            Dictionary<string, object> dict = new Dictionary<string, object>
+            {
+                {"@maCongViec", TXB_MaCongViec.Text},
+                {"@maCanHo", TXB_macanho.Text}
+            };
+            return dict;
+        }
+        private bool SaveCongViec()
+        {
+            if (JobBLL.Instance.AddJob(AddParameterCongViec())){
+                if (JobBLL.Instance.AddJob_Employee(AddParameterCongViec_NhanVien())){
+                    if (JobBLL.Instance.AddRequestFromCustom(AddParameterYeuCau()))
+                        return true;
                 }
             }
-            return true;
+            return false;
         }
 
         private void BTN_ok_Click(object sender, EventArgs e)
         {
             if (TXB_MaCongViec != null & TXB_macanho != null & TXB_noidung != null)
             {
-                if (saveCongViec()) 
+                if (SaveCongViec())
                 {
                     MessageBox.Show("Thêm thành công");
                 }

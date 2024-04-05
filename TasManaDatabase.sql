@@ -1,4 +1,4 @@
-﻿CREATE DATABASE Tasmana
+CREATE DATABASE Tasmana
 GO
 USE Tasmana
 GO
@@ -328,7 +328,6 @@ SELECT * FROM CongViec
 go
 
 -- Procedure lấy công việc
--- Procedure lấy công việc
 CREATE procedure [dbo].[SP_LayCV]
 as 
 begin
@@ -403,4 +402,66 @@ begin
         maNhom = @maNhom
     where maNhanVien = @maNhanVien;
 end
+go
+
+
+-- Procedure Thêm Công Việc
+CREATE PROCEDURE [dbo].[SP_ThemCongViec]
+           @maCongViec VARCHAR(10),
+           @noiDung NVARCHAR(200),
+           @thoiHan SMALLDATETIME,
+           @ngayHoanThanh SMALLDATETIME,
+           @trangThai NVARCHAR(100),
+           @ghiChu NVARCHAR(200)
+AS
+BEGIN
+    INSERT INTO CongViec
+    VALUES (
+           @maCongViec,
+           @noiDung,
+           @thoiHan,
+           @ngayHoanThanh,
+           @trangThai,
+           @ghiChu
+    )
+END
+
+-- Procedure Thêm CongViec_NhanVien
+CREATE PROCEDURE [dbo].[ThemCongViec_NhanVien]
+           @maNhanVien varchar(10),
+		   @maCongViec varchar(10)
+AS
+BEGIN
+    INSERT INTO Congviec_Nhanvien
+    VALUES (
+           @maNhanVien,
+		   @maCongViec
+    )
+END
+
+-- Procedure Thêm CongViec_Nhom
+Create PROCEDURE [dbo].[ThemCongViec_Nhom]
+           @maNhom varchar(10),
+		   @maCongViec varchar(10)
+AS
+BEGIN
+    INSERT INTO CongViec_Nhom
+    VALUES (
+           @maNhom,
+		   @maCongViec
+    )
+END
+
+-- Procedure Thêm CongViec_PhongBan
+Create Procedure [dbo].[ThemCongViec_PhongBan]
+           @maPhongBan varchar(10),
+		   @maCongViec varchar(10)
+AS
+BEGIN
+    INSERT INTO Congviec_PhongBan
+    VALUES (
+           @maPhongBan,
+		   @maCongViec
+    )
+END
 go
