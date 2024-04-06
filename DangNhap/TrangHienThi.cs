@@ -164,11 +164,17 @@ namespace DangNhap
 
             if (appTime < Constraint.NotifyTime)
                 return;
-
+            int curUnfJob = 0;
             string maNV = DangNhap.currentAccount.EmployeeId;
             List<Job> tomorowJobs = new List<Job>();
             tomorowJobs = JobBLL.Instance.GetJobOfEmployeeByDate(maNV, tomorrowDay.Date.ToString("yyyy-MM-dd"));
-            if (tomorowJobs.Count > 0 && soCongViec != tomorowJobs.Count)
+            foreach (Job job in tomorowJobs)
+            {
+                if (!job.TrangThai.Equals("Hoàn thành")){
+                    curUnfJob++;
+                }
+            }
+            if (curUnfJob > 0 && soCongViec != curUnfJob)
             {
                 soCongViec = tomorowJobs.Count;
                 NTFIcon_ThongBaoCV.ShowBalloonTip(Constraint.NotifyTimeOut, "Thông báo công việc chưa hoàn thành", string.Format("Bạn có {0} công việc sắp đến hạn vào ngày mai", soCongViec), ToolTipIcon.Info);
