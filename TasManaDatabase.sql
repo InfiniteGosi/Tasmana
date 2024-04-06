@@ -454,16 +454,17 @@ END
 go
 -- Procedure Thêm CongViec_PhongBan
 Create Procedure [dbo].[ThemCongViec_PhongBan]
-           @maPhongBan varchar(10),
-		   @maCongViec varchar(10)
+		   @maCongViec varchar(10),
+		   @maBoPhan varchar(10)
 AS
 BEGIN
     INSERT INTO Congviec_PhongBan
     VALUES (
-           @maPhongBan,
-		   @maCongViec
+		   @maCongViec,
+		   @maBoPhan
     )
 END
+go
 Create Procedure [dbo].[ThemyeuCau]
 			@maCongViec varchar(10),
 			@maCanHo varchar(10)
