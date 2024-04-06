@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +14,14 @@ namespace DangNhap
 {
     public partial class TrangHienThi : Form
     {
+        // Khởi tạo các giá trị, biến
+        private int appTime; 
         public TrangHienThi()
         {
             InitializeComponent();
             LB_tendangnhap.Text = $"Xin chào, {DangNhap.currentAccount.EmployeeId} - {DangNhap.currentAccount.Level}";
+            Timer_KTCongViec.Start();
+            appTime = 0;
         }
         private Form currentFormChild;
 
@@ -147,6 +153,29 @@ namespace DangNhap
             {
                 WindowState = FormWindowState.Maximized;
             }
+        }
+
+        // Thông báo khi sắp tới thời hạn hoàn thành công việc
+        public DateTime tomorrowDay = DateTime.Today.AddDays(1); // Lấy thời gian là 1 ngày sau đó là mốc kiểm tra gaanf tới hạn hoàn thành
+        int soCongViec = 0;
+        private void Timer_KTCongViec_Tick(object sender, EventArgs e)
+        {
+            appTime++;
+
+            if (appTime < Constraint.NotifyTime)
+                return;
+
+            string maNV = DangNhap.currentAccount.EmployeeId;
+            List<Job> tomorowJobs = new List<Job>();
+            tomorowJobs = JobBLL.Instance.GetJobOfEmployeeByDate(maNV, tomorrowDay.Date.ToString("yyyy-MM-dd"));
+            if (tomorowJobs.Count > 0 && soCongViec != tomorowJobs.Count)
+            {
+                soCongViec = tomorowJobs.Count;
+                NTFIcon_ThongBaoCV.ShowBalloonTip(Constraint.NotifyTimeOut, "Thông báo công việc chưa hoàn thành", string.Format("Bạn có {0} công việc sắp đến hạn vào ngày mai", soCongViec), ToolTipIcon.Info);
+            }
+
+            // reset timer
+            appTime = 0;
         }
     }
 }

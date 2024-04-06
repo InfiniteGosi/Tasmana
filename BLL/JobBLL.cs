@@ -76,5 +76,23 @@ namespace BLL
                 return false;
             }
         }
+        // Lấy danh sách công việc nhân viên theo ngày thời hạn hoàn thành công việc
+        public List<Job> GetJobOfEmployeeByDate(string maNV, string thoiHan)
+        {
+            List<Job> jobs = new List<Job>();
+            DataTable dt = JobDAO.Instance.GetJobOfEmployeeByDate(maNV, thoiHan);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                string maCongViec = dt.Rows[i]["maCongViec"].ToString();
+                string noiDung = dt.Rows[i]["noiDung"].ToString();
+                DateTime thoihan = (DateTime)dt.Rows[i]["thoiHan"];
+                DateTime ngayHoanThanh = (DateTime)dt.Rows[i]["ngayHoanThanh"];
+                string trangThai = dt.Rows[i]["trangThai"].ToString();
+                string ghiChu = dt.Rows[i]["ghiChu"].ToString();
+                Job job = new Job(maCongViec, noiDung, thoihan, ngayHoanThanh, trangThai, ghiChu);
+                jobs.Add(job);
+            }
+            return jobs;
+        }
     }
 }
