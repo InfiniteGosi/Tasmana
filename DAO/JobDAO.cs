@@ -53,5 +53,12 @@ namespace DAO
             int result = DataProvider.Instance.ExecuteStoredProcedure("ThemYeuCau", parameters);
             return result > 0;
         }
+
+        // Lấy Công việc của NV theo thời hạn hoàn thành công việc
+        public DataTable GetJobOfEmployeeByDate(string maNV, string thoiHan)
+        {
+            string query = $"Select CV.* From CongViec CV, Congviec_Nhanvien CNV Where CV.maCongViec = CNV.maCongViec and CNV.maNhanVien = '{maNV}' and CONVERT(date, CV.thoiHan) = '{thoiHan}'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

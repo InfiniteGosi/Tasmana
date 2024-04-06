@@ -325,6 +325,7 @@ go
 
 SELECT * FROM CanHo
 SELECT * FROM CongViec
+SELECT * FROM Congviec_Nhanvien
 go
 
 -- Procedure lấy công việc
@@ -475,6 +476,17 @@ BEGIN
 		   @maCongViec,
 		   @maCanHo
     )
+END
+go
+-- Procedure Lấy dữ liệu công việc của nhân viên theo ngày
+Create Procedure [dbo].[LayCongViecNVTheoNgay]
+           @maNhanVien varchar(10),
+		   @thoiHan SmallDateTime
+AS
+BEGIN
+    Select CV.*
+	From CongViec CV, Congviec_Nhanvien CNV
+	Where CV.maCongViec = CNV.maCongViec and CNV.maNhanVien = @maNhanVien and CONVERT(date, CV.thoiHan) = @thoiHan
 END
 go
 
