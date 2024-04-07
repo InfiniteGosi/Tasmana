@@ -94,5 +94,23 @@ namespace BLL
             }
             return jobs;
         }
+        // Lấy toàn bộ danh sách công việc của một nhân viên
+        public List<Job> GetAllJobOfEmployee(string maNV)
+        {
+            List<Job> jobs = new List<Job>();
+            DataTable dt = JobDAO.Instance.GetAllJobOfEmployee(maNV);
+            for (int i = 0;i < dt.Rows.Count; i++)
+            {
+                string maCongViec = dt.Rows[i]["maCongViec"].ToString();
+                string noiDung = dt.Rows[i]["noiDung"].ToString();
+                DateTime thoihan = (DateTime)dt.Rows[i]["thoiHan"];
+                DateTime ngayHoanThanh = (DateTime)dt.Rows[i]["ngayHoanThanh"];
+                string trangThai = dt.Rows[i]["trangThai"].ToString();
+                string ghiChu = dt.Rows[i]["ghiChu"].ToString();
+                Job job = new Job(maCongViec, noiDung, thoihan, ngayHoanThanh, trangThai, ghiChu);
+                jobs.Add(job);
+            }
+            return jobs;
+        }
     }
 }

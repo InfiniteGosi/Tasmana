@@ -157,13 +157,16 @@ namespace DangNhap
 
         // Thông báo khi sắp tới thời hạn hoàn thành công việc
         public DateTime tomorrowDay = DateTime.Today.AddDays(1); // Lấy thời gian là 1 ngày sau đó là mốc kiểm tra gaanf tới hạn hoàn thành
+        public DateTime curDay = DateTime.Today;
         int soCongViec = 0;
+        int undoJob = 0;
         private void Timer_KTCongViec_Tick(object sender, EventArgs e)
         {
             appTime++;
 
             if (appTime < Constraint.NotifyTime)
                 return;
+            // Kiểm tra những công việc gần đến hạn nhưng chưa hoàn thành
             int curUnfJob = 0;
             string maNV = DangNhap.currentAccount.EmployeeId;
             List<Job> tomorowJobs = new List<Job>();
@@ -180,6 +183,28 @@ namespace DangNhap
                 NTFIcon_ThongBaoCV.ShowBalloonTip(Constraint.NotifyTimeOut, "Thông báo công việc chưa hoàn thành", string.Format("Bạn có {0} công việc sắp đến hạn vào ngày mai", soCongViec), ToolTipIcon.Info);
             }
 
+            // Kiểm tra những công việc của NHÂN VIÊN chưa bắt đầu làm
+            // Chỉ thông báo cho nhân viên như yêu cầu 10
+            if (!DangNhap.currentAccount.Level.Equals("CEO"))
+            {
+                return;
+            }
+
+            List<Job> allJobs = new List<Job>();
+            allJobs = JobBLL.Instance.GetAllJobOfEmployee(maNV);
+            int curUndoJob = 0;
+            foreach (Job job in allJobs)
+            {
+                if(job.TrangThai.Equals("Chưa bắt đầu"))
+                {
+                    curUndoJob++;
+                }
+            }
+            if(curUndoJob > 0 && curUndoJob != undoJob)
+            {
+                undoJob = curUndoJob;
+                NTFIcon_ThongBaoCV.ShowBalloonTip(Constraint.NotifyTimeOut, "Thông báo công việc chưa bắt đầu", string.Format("Bạn có {0} công việc chưa bắt đầu", curUndoJob), ToolTipIcon.Info);
+            }
             // reset timer
             appTime = 0;
         }
