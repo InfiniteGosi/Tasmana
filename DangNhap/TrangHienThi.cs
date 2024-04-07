@@ -185,7 +185,7 @@ namespace DangNhap
 
             // Kiểm tra những công việc của NHÂN VIÊN chưa bắt đầu làm
             // Chỉ thông báo cho nhân viên như yêu cầu 10
-            if (!DangNhap.currentAccount.Level.Equals("CEO"))
+            if (DangNhap.currentAccount.Level.Equals("CEO"))
             {
                 return;
             }
