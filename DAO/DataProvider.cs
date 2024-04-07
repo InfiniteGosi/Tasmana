@@ -17,7 +17,7 @@ namespace DAO
         public static DataProvider Instance
         {
             get { if (instance == null) instance = new DataProvider(); return instance; }
-            private set { DataProvider.instance = value; }
+            private set { instance = value; }
         }
         private DataProvider() { }
 
