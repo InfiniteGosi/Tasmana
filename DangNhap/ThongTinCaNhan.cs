@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using BLL;
 using DTO;
 
@@ -17,7 +18,7 @@ namespace DangNhap
     {
         private List<Division> divisions = new List<Division>();
         private List<Group> groups = new List<Group>();
-        private Employee employee = null;
+        private readonly Employee employee = null;
         private Group group;
         private Division division;
         public ThongTinCaNhan()
@@ -134,10 +135,11 @@ namespace DangNhap
             
         }
         // Tạo userId theo quy tắc trong file QA
-        private string GenerateUserId()
+        private void GenerateUserId()
         {
-            string ten = TXB_ten.Text.Substring(TXB_ten.Text.LastIndexOf(' ') + 1);
-            return TXB_manv.Text + "." + ten + "." + TXB_sdt;
+            string ten = TXB_ten.Text.Substring(TXB_ten.Text.LastIndexOf(' ') + 1).ToUpper();
+            string output = $"{TXB_manv.Text.Trim()}.{ten.Trim()}.{TXB_sdt.Text.Trim()}";
+            TXB_manguoidung.Text = output;
         }
         // Kiểm tra các trường hợp khi ấn nút lưu
         private void BTN_luu_Click(object sender, EventArgs e)
@@ -228,17 +230,17 @@ namespace DangNhap
 
         private void TXB_manv_TextChanged(object sender, EventArgs e)
         {
-            TXB_manguoidung.Text = GenerateUserId();
+            GenerateUserId();
         }
 
         private void TXB_ten_TextChanged(object sender, EventArgs e)
         {
-            TXB_manguoidung.Text = GenerateUserId();
+            GenerateUserId();
         }
 
         private void TXB_sdt_TextChanged(object sender, EventArgs e)
         {
-            TXB_manguoidung.Text = GenerateUserId();
+            GenerateUserId();
         }
 
         private void CBB_phongban_SelectedIndexChanged(object sender, EventArgs e)
@@ -296,7 +298,7 @@ namespace DangNhap
             TXB_manv.Enabled = false;
         }
         // Hiện loại nhân viên từ mảng loaiNV vào CBB_loainv
-        string[] loaiNV = { "Intern / Trainne", "Part-time", "Full-time" };
+        private readonly string[] loaiNV = { "Intern / Trainne", "Part-time", "Full-time" };
         private void DisplayEmployeeType()
         {
             CBB_loainv.DataSource = loaiNV;
