@@ -25,8 +25,10 @@ CREATE TABLE CongViec
 (
   maCongViec VARCHAR(10) NOT NULL,
   noiDung NVARCHAR(200) NOT NULL,
+  ngayGiao SMALLDATETIME NOT NULL,
   thoiHan SMALLDATETime NOT NULL,
   ngayHoanThanh SMALLDATETIME,
+  ngayCapNhat SMALLDATETIME,
   trangThai NVARCHAR(100) NOT NULL,
   ghiChu NVARCHAR(200),
   PRIMARY KEY (maCongViec)
@@ -82,6 +84,7 @@ CREATE TABLE TaiKhoan
   maNguoiDung VARCHAR(30) NOT NULL,
   matKhau VARCHAR(100) NOT NULL,
   maNhanVien VARCHAR(10) NOT NULL,
+  Disable BIT NOT NULL,
   PRIMARY KEY (maNguoiDung),
   FOREIGN KEY (maNhanVien) REFERENCES nhanVien(maNhanVien)
 );
