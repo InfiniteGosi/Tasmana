@@ -11,8 +11,10 @@ namespace DTO
     {
         public string MaCongViec {  get; set; }
         public string NoiDung { get; set; }
+        public DateTime NgayGiao { get; set; }
         public DateTime ThoiHan {  get; set; }
         public DateTime NgayHoanThanh { get; set; }
+        public DateTime NgayCapNhat { get; set; }
         public string TrangThai { get; set; }
         public string GhiChu {  get; set; }
         public Job(string maCongViec, string noiDung, DateTime thoiHan, DateTime ngayHoanThanh ,string trangThai, string ghiChu)
@@ -21,6 +23,17 @@ namespace DTO
             NoiDung = noiDung;
             ThoiHan = thoiHan;
             NgayHoanThanh = ngayHoanThanh;
+            TrangThai = trangThai;
+            GhiChu = ghiChu;
+        }
+        public Job(string maCongViec, string noiDung, DateTime ngayGiao, DateTime thoiHan, DateTime ngayHoanThanh, DateTime ngayCapNhat, string trangThai, string ghiChu)
+        {
+            MaCongViec = maCongViec;
+            NoiDung = noiDung;
+            NgayGiao = ngayGiao;
+            ThoiHan = thoiHan;
+            NgayHoanThanh = ngayHoanThanh;
+            NgayCapNhat = ngayCapNhat;
             TrangThai = trangThai;
             GhiChu = ghiChu;
         }
