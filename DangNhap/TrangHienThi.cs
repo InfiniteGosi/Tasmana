@@ -160,6 +160,7 @@ namespace DangNhap
         public DateTime curDay = DateTime.Today;
         int soCongViec = 0;
         int undoJob = 0;
+        int AllUndoJob = 0;
         private void Timer_KTCongViec_Tick(object sender, EventArgs e)
         {
             appTime++;
@@ -187,24 +188,41 @@ namespace DangNhap
             // Chỉ thông báo cho nhân viên như yêu cầu 10
             if (DangNhap.currentAccount.Level.Equals("CEO"))
             {
-                return;
-            }
-
-            List<Job> allJobs = new List<Job>();
-            allJobs = JobBLL.Instance.GetAllJobOfEmployee(maNV);
-            int curUndoJob = 0;
-            foreach (Job job in allJobs)
-            {
-                if(job.TrangThai.Equals("Chưa bắt đầu"))
+                List<Job> allJobs = new List<Job>();
+                allJobs = JobBLL.Instance.GetAllJob();
+                int curAllJobs = 0; // số công việc chưa cập nhật tình trạng
+                foreach (Job job in allJobs)
                 {
-                    curUndoJob++;
+                    if(!job.TrangThai.Equals("Hoàn thành"))
+                    {
+                        curAllJobs++;
+                    }
+                }
+                if(curAllJobs > 0 && curAllJobs != AllUndoJob)
+                {
+                    AllUndoJob = curAllJobs;
+                    NTFIcon_ThongBaoCV.ShowBalloonTip(Constraint.NotifyTimeOut, "Thông báo công việc chưa cập nhật của toàn bộ Nhân viên", string.Format("Có {0} công việc chưa được cập nhật tình trạng", curAllJobs), ToolTipIcon.Info);
                 }
             }
-            if(curUndoJob > 0 && curUndoJob != undoJob)
+            else
             {
-                undoJob = curUndoJob;
-                NTFIcon_ThongBaoCV.ShowBalloonTip(Constraint.NotifyTimeOut, "Thông báo công việc chưa bắt đầu", string.Format("Bạn có {0} công việc chưa bắt đầu", curUndoJob), ToolTipIcon.Info);
+                List<Job> allJobs = new List<Job>();
+                allJobs = JobBLL.Instance.GetAllJobOfEmployee(maNV);
+                int curUndoJob = 0;
+                foreach (Job job in allJobs)
+                {
+                    if (job.TrangThai.Equals("Chưa bắt đầu"))
+                    {
+                        curUndoJob++;
+                    }
+                }
+                if (curUndoJob > 0 && curUndoJob != undoJob)
+                {
+                    undoJob = curUndoJob;
+                    NTFIcon_ThongBaoCV.ShowBalloonTip(Constraint.NotifyTimeOut, "Thông báo công việc chưa bắt đầu", string.Format("Bạn có {0} công việc chưa bắt đầu", curUndoJob), ToolTipIcon.Info);
+                }
             }
+
             // reset timer
             appTime = 0;
         }
