@@ -112,5 +112,22 @@ namespace BLL
             }
             return jobs;
         }
+        public List<Job> GetAllJob()
+        {
+            List <Job> jobs = new List<Job>();
+            DataTable dt = JobDAO.Instance.GetAllJob();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                string maCongViec = dt.Rows[i]["maCongViec"].ToString();
+                string noiDung = dt.Rows[i]["noiDung"].ToString();
+                DateTime thoihan = (DateTime)dt.Rows[i]["thoiHan"];
+                DateTime ngayHoanThanh = dt.Rows[i]["ngayHoanThanh"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["ngayHoanThanh"].ToString());
+                string trangThai = dt.Rows[i]["trangThai"].ToString();
+                string ghiChu = dt.Rows[i]["ghiChu"].ToString();
+                Job job = new Job(maCongViec, noiDung, thoihan, ngayHoanThanh, trangThai, ghiChu);
+                jobs.Add(job);
+            }
+            return jobs;
+        }
     }
 }
