@@ -85,11 +85,13 @@ namespace BLL
             {
                 string maCongViec = dt.Rows[i]["maCongViec"].ToString();
                 string noiDung = dt.Rows[i]["noiDung"].ToString();
+                DateTime ngayGiao = (DateTime)dt.Rows[i]["ngayGiao"];
                 DateTime thoihan = (DateTime)dt.Rows[i]["thoiHan"];
-                DateTime ngayHoanThanh = (DateTime)dt.Rows[i]["ngayHoanThanh"];
+                DateTime ngayHoanThanh = dt.Rows[i]["ngayHoanThanh"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["ngayHoanThanh"].ToString());
+                DateTime ngayCapNhat = (DateTime)dt.Rows[i]["ngayCapNhat"];
                 string trangThai = dt.Rows[i]["trangThai"].ToString();
                 string ghiChu = dt.Rows[i]["ghiChu"].ToString();
-                Job job = new Job(maCongViec, noiDung, thoihan, ngayHoanThanh, trangThai, ghiChu);
+                Job job = new Job(maCongViec, noiDung, ngayGiao, thoihan, ngayHoanThanh, ngayCapNhat, trangThai, ghiChu);
                 jobs.Add(job);
             }
             return jobs;
@@ -99,15 +101,17 @@ namespace BLL
         {
             List<Job> jobs = new List<Job>();
             DataTable dt = JobDAO.Instance.GetAllJobOfEmployee(maNV);
-            for (int i = 0;i < dt.Rows.Count; i++)
+            for (int i = 0; i < dt.Rows.Count; i++)
             {
                 string maCongViec = dt.Rows[i]["maCongViec"].ToString();
                 string noiDung = dt.Rows[i]["noiDung"].ToString();
+                DateTime ngayGiao = (DateTime)dt.Rows[i]["ngayGiao"];
                 DateTime thoihan = (DateTime)dt.Rows[i]["thoiHan"];
-                DateTime ngayHoanThanh = (DateTime)dt.Rows[i]["ngayHoanThanh"];
+                DateTime ngayHoanThanh = dt.Rows[i]["ngayHoanThanh"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["ngayHoanThanh"].ToString());
+                DateTime ngayCapNhat = (DateTime)dt.Rows[i]["ngayCapNhat"];
                 string trangThai = dt.Rows[i]["trangThai"].ToString();
                 string ghiChu = dt.Rows[i]["ghiChu"].ToString();
-                Job job = new Job(maCongViec, noiDung, thoihan, ngayHoanThanh, trangThai, ghiChu);
+                Job job = new Job(maCongViec, noiDung, ngayGiao, thoihan, ngayHoanThanh, ngayCapNhat, trangThai, ghiChu);
                 jobs.Add(job);
             }
             return jobs;
@@ -120,11 +124,13 @@ namespace BLL
             {
                 string maCongViec = dt.Rows[i]["maCongViec"].ToString();
                 string noiDung = dt.Rows[i]["noiDung"].ToString();
+                DateTime ngayGiao = (DateTime)dt.Rows[i]["ngayGiao"];
                 DateTime thoihan = (DateTime)dt.Rows[i]["thoiHan"];
                 DateTime ngayHoanThanh = dt.Rows[i]["ngayHoanThanh"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["ngayHoanThanh"].ToString());
+                DateTime ngayCapNhat = (DateTime)dt.Rows[i]["ngayCapNhat"];
                 string trangThai = dt.Rows[i]["trangThai"].ToString();
                 string ghiChu = dt.Rows[i]["ghiChu"].ToString();
-                Job job = new Job(maCongViec, noiDung, thoihan, ngayHoanThanh, trangThai, ghiChu);
+                Job job = new Job(maCongViec, noiDung, ngayGiao, thoihan, ngayHoanThanh, ngayCapNhat, trangThai, ghiChu);
                 jobs.Add(job);
             }
             return jobs;

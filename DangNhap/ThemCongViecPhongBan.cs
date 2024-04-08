@@ -41,8 +41,10 @@ namespace DangNhap
             {
                 {"@maCongViec", TXB_MaCongViec.Text},
                 {"@noiDung", TXB_noidung.Text},
+                {"@ngayGiao", DateTime.Now.ToString("yyyy-MM-dd")},
                 {"@thoihan",  DTP_ngay.Value.ToString("yyyy-MM-dd") + " " + DTP_gio.Text.Split(' ')[0].ToString()},
                 {"@ngayHoanThanh", null},
+                {"@ngayCapNhat", DateTime.Now.ToString("yyyy-MM-dd")},
                 {"@trangThai", "Chưa bắt đầu"},
                 {"@ghiChu", null}
             };
