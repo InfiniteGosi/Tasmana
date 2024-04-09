@@ -33,10 +33,11 @@ namespace DangNhap
         }
 
         // Hàm khởi tạo danh sách giá trị truyền vào SP
-        private object[] values;
-        public void InitializeValues()
+        private object[] values_nv;
+        private void InitializeValues_NV()
         {
-            values = new object[] {
+            values_nv = new object[] 
+            {
                 TXB_manv.Text,
                 TXB_email.Text,
                 TXB_ho.Text,
@@ -60,29 +61,51 @@ namespace DangNhap
         }
 
         // Tạo dictionary để truyền vào DataProvider
-        private Dictionary<string, object> AddParameter()
+        private Dictionary<string, object> AddParameter_NV()
         {
             Dictionary<string, object> dict = new Dictionary<string, object>
             {
-                { "@maNhanVien", values[0] },
-                { "@email", values[1] },
-                { "@ho", values[2] },
-                { "@ten", values[3] },
-                { "@SDT", values[4] },
-                { "@ngaySinh", values[5] },
-                { "@gioiTinh", values[6] },
-                { "@queQuan", values[7] },
-                { "@maDinhDanh", values[8] },
-                { "@loaiNhanVien", values[9] },
-                { "@tinhTrangHonNhan", values[10] },
-                { "@maSoBHXH", values[11] },
-                { "@daTungLamNV", values[12] },
-                { "@ngayKyHDLD", values[13] },
-                { "@ngayHetHDLD", values[14] },
-                { "@dChiThuongTru", values[15] },
-                { "@dChiTamTru", values[16] },
-                { "@tinhTrangHDLD", values[17] },
-                { "@maNhom", values[18] }
+                { "@maNhanVien", values_nv[0] },
+                { "@email", values_nv[1] },
+                { "@ho", values_nv[2] },
+                { "@ten", values_nv[3] },
+                { "@SDT", values_nv[4] },
+                { "@ngaySinh", values_nv[5] },
+                { "@gioiTinh", values_nv[6] },
+                { "@queQuan", values_nv[7] },
+                { "@maDinhDanh", values_nv[8] },
+                { "@loaiNhanVien", values_nv[9] },
+                { "@tinhTrangHonNhan", values_nv[10] },
+                { "@maSoBHXH", values_nv[11] },
+                { "@daTungLamNV", values_nv[12] },
+                { "@ngayKyHDLD", values_nv[13] },
+                { "@ngayHetHDLD", values_nv[14] },
+                { "@dChiThuongTru", values_nv[15] },
+                { "@dChiTamTru", values_nv[16] },
+                { "@tinhTrangHDLD", values_nv[17] },
+                { "@maNhom", values_nv[18] }
+            };
+            return dict;
+        }
+        private object[] values_tk;
+        private void InitializeValues_Tk()
+        {
+            values_tk = new object[] 
+            {
+                TXB_manguoidung.Text,
+                TXB_matkhau.Text,
+                TXB_manv.Text,
+                0 // Khi tạo tài khoản mặc định disabled là 0
+            };
+        }
+        private Dictionary<string, object> AddParameter_TK()
+        {
+            Dictionary<string, object> dict = new Dictionary<string, object>
+            {
+                { "@maNguoiDung", values_tk[0] },
+                { "@matKhau", values_tk[1] },
+                { "@maNhanVien", values_tk[2] },
+                { "@disable", values_tk[3] }
             };
             return dict;
         }
@@ -90,6 +113,10 @@ namespace DangNhap
         private string AddEmployee(Dictionary<string, object> parameters)
         {
             return EmployeeBLL.Instance.AddEmployee(parameters);
+        }
+        private bool AddAccount(Dictionary<string, object> parameters)
+        {
+            return AccountBLL.Instance.AddAccount(parameters);
         }
         // Cập nhật thông tin nhân viên vào CSDL
         private string UpdateEmployee(Dictionary<string, object> parameters)
@@ -130,10 +157,6 @@ namespace DangNhap
             }
         }
 
-        private void CreateAccountForEmployee()
-        {
-            
-        }
         // Tạo userId theo quy tắc trong file QA
         private void GenerateUserId()
         {
@@ -167,6 +190,11 @@ namespace DangNhap
             if (string.IsNullOrEmpty(TXB_honnhan.Text))
             {
                 MessageBox.Show("Vui lòng nhập tình trạng hôn nhân");
+                return;
+            }
+            if (CBB_loainv.SelectedIndex == -1)
+            {
+                MessageBox.Show("Vui lòng chọn loại nhân viên");
                 return;
             }
             if (CBB_phongban.SelectedIndex == -1)
@@ -214,18 +242,34 @@ namespace DangNhap
                 MessageBox.Show("Vui lòng nhập địa chỉ thường trú");
                 return;
             }
+            if (string.IsNullOrEmpty(TXB_matkhau.Text))
+            {
+                MessageBox.Show("Vui lòng nhập mật khẩu mặc định cho tài khoản nhân viên");
+                return;
+            }
             // Địa chỉ tạm trú không cần check
             //if (string.IsNullOrEmpty(TXB_tamtru.Text))
             //{
             //    MessageBox.Show("Vui lòng nhập địa chỉ tạm trú");
             //    return;
             //}
-            InitializeValues();
+
+
+            InitializeValues_NV();
             // Trường hợp tạo nhân viên mới
             if (employee == null)
-                MessageBox.Show(AddEmployee(AddParameter()));
+            {
+                MessageBox.Show(AddEmployee(AddParameter_NV()));
+                InitializeValues_Tk();
+                AddAccount(AddParameter_TK());
+            }
             else // Trường hợp chỉnh sửa nhân viên
-                MessageBox.Show(UpdateEmployee(AddParameter()));
+            {
+                MessageBox.Show(UpdateEmployee(AddParameter_NV()));
+                CHB_vohieuhoa.Enabled = true;
+                CHB_vohieuhoa.Visible = true;
+            }
+                
         }
 
         private void TXB_manv_TextChanged(object sender, EventArgs e)

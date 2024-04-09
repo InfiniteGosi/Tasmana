@@ -68,7 +68,7 @@ namespace DangNhap
                 }
                 else
                 {
-                    LB_error.Text = "Mật khẩu hoặc tên đăng nhập không đúng";
+                    LB_error.Text = "Mật khẩu không đúng";
                 }
             }
             else

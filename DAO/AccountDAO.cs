@@ -35,6 +35,10 @@ namespace DAO
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             return result;
         }
-
+        public bool AddAccount(Dictionary<string, object> parameters)
+        {
+            int result = DataProvider.Instance.ExecuteStoredProcedure("SP_ThemTaiKhoan", parameters);
+            return result > 0;
+        }
     }
 }
