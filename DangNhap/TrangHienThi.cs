@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +14,14 @@ namespace DangNhap
 {
     public partial class TrangHienThi : Form
     {
+        // Khởi tạo các giá trị, biến
+        private int appTime; 
         public TrangHienThi()
         {
             InitializeComponent();
             LB_tendangnhap.Text = $"Xin chào, {DangNhap.currentAccount.EmployeeId} - {DangNhap.currentAccount.Level}";
+            Timer_KTCongViec.Start();
+            appTime = 0;
         }
         private Form currentFormChild;
 
@@ -147,6 +153,78 @@ namespace DangNhap
             {
                 WindowState = FormWindowState.Maximized;
             }
+        }
+
+        // Thông báo khi sắp tới thời hạn hoàn thành công việc
+        public DateTime tomorrowDay = DateTime.Today.AddDays(1); // Lấy thời gian là 1 ngày sau đó là mốc kiểm tra gaanf tới hạn hoàn thành
+        public DateTime curDay = DateTime.Today;
+        int soCongViec = 0;
+        int undoJob = 0;
+        int AllUndoJob = 0;
+        private void Timer_KTCongViec_Tick(object sender, EventArgs e)
+        {
+            appTime++;
+
+            if (appTime < Constraint.NotifyTime)
+                return;
+            // Kiểm tra những công việc gần đến hạn nhưng chưa hoàn thành
+            int curUnfJob = 0;
+            string maNV = DangNhap.currentAccount.EmployeeId;
+            List<Job> tomorowJobs = new List<Job>();
+            tomorowJobs = JobBLL.Instance.GetJobOfEmployeeByDate(maNV, tomorrowDay.Date.ToString("yyyy-MM-dd"));
+            foreach (Job job in tomorowJobs)
+            {
+                if (!job.TrangThai.Equals("Hoàn thành")){
+                    curUnfJob++;
+                }
+            }
+            if (curUnfJob > 0 && soCongViec != curUnfJob)
+            {
+                soCongViec = tomorowJobs.Count;
+                NTFIcon_ThongBaoCV.ShowBalloonTip(Constraint.NotifyTimeOut, "Thông báo công việc chưa hoàn thành", string.Format("Bạn có {0} công việc sắp đến hạn vào ngày mai", soCongViec), ToolTipIcon.Info);
+            }
+
+            // Kiểm tra những công việc của NHÂN VIÊN chưa bắt đầu làm
+            // Chỉ thông báo cho nhân viên như yêu cầu 10
+            if (DangNhap.currentAccount.Level.Equals("CEO"))
+            {
+                List<Job> allJobs = new List<Job>();
+                allJobs = JobBLL.Instance.GetAllJob();
+                int curAllJobs = 0; // số công việc chưa cập nhật tình trạng
+                foreach (Job job in allJobs)
+                {
+                    if(!job.TrangThai.Equals("Hoàn thành"))
+                    {
+                        curAllJobs++;
+                    }
+                }
+                if(curAllJobs > 0 && curAllJobs != AllUndoJob)
+                {
+                    AllUndoJob = curAllJobs;
+                    NTFIcon_ThongBaoCV.ShowBalloonTip(Constraint.NotifyTimeOut, "Thông báo công việc chưa cập nhật của toàn bộ Nhân viên", string.Format("Có {0} công việc chưa được cập nhật tình trạng", curAllJobs), ToolTipIcon.Info);
+                }
+            }
+            else
+            {
+                List<Job> allJobs = new List<Job>();
+                allJobs = JobBLL.Instance.GetAllJobOfEmployee(maNV);
+                int curUndoJob = 0;
+                foreach (Job job in allJobs)
+                {
+                    if (job.TrangThai.Equals("Chưa bắt đầu"))
+                    {
+                        curUndoJob++;
+                    }
+                }
+                if (curUndoJob > 0 && curUndoJob != undoJob)
+                {
+                    undoJob = curUndoJob;
+                    NTFIcon_ThongBaoCV.ShowBalloonTip(Constraint.NotifyTimeOut, "Thông báo công việc chưa bắt đầu", string.Format("Bạn có {0} công việc chưa bắt đầu", curUndoJob), ToolTipIcon.Info);
+                }
+            }
+
+            // reset timer
+            appTime = 0;
         }
     }
 }

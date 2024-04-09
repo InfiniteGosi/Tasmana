@@ -25,8 +25,10 @@ CREATE TABLE CongViec
 (
   maCongViec VARCHAR(10) NOT NULL,
   noiDung NVARCHAR(200) NOT NULL,
+  ngayGiao SMALLDATETIME NOT NULL,
   thoiHan SMALLDATETime NOT NULL,
   ngayHoanThanh SMALLDATETIME,
+  ngayCapNhat SMALLDATETIME,
   trangThai NVARCHAR(100) NOT NULL,
   ghiChu NVARCHAR(200),
   PRIMARY KEY (maCongViec)
@@ -82,6 +84,7 @@ CREATE TABLE TaiKhoan
   maNguoiDung VARCHAR(30) NOT NULL,
   matKhau VARCHAR(100) NOT NULL,
   maNhanVien VARCHAR(10) NOT NULL,
+  Disable BIT NOT NULL,
   PRIMARY KEY (maNguoiDung),
   FOREIGN KEY (maNhanVien) REFERENCES nhanVien(maNhanVien)
 );
@@ -253,12 +256,12 @@ SELECT * FROM Nhom
 
 -- Insert thông tin tài khoản
 INSERT INTO NhanVien VALUES('GD-001', 'jd@gmail.com', 'Ho', 'Khang', '111111111', '1/1/2002', 1, 'TP.HCM', '123456', 'Full-time', N'Độc thân', '1111111', 1, '2024-01-01', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú GD-001', N'Tốt', 'VSN01')
-INSERT INTO TaiKhoan VALUES('GD-001.KHANG.111111111', '123', 'GD-001')
+INSERT INTO TaiKhoan VALUES('GD-001.KHANG.111111111', '123', 'GD-001', 0)
 -- Insert thông tin NV
 INSERT INTO NhanVien VALUES('VS-002', 'VS002@gmail.com', 'Vu', 'Quang', '1321312', '1/2/2004', 1, 'TP.HCM', '1234576', 'Part-time', N'Độc thân', '1111211', 1, '2024-01-01', '2025-12-31', 'TP.HCM', 'Chua co', N'Tốt', 'VSN02')
-INSERT INTO TaiKhoan VALUES('VS-002.MinhQuang.1321312', '123', 'VS-002')
+INSERT INTO TaiKhoan VALUES('VS-002.MinhQuang.1321312', '123', 'VS-002', 0)
 INSERT INTO NhanVien VALUES('VS-003', 'email_nv001@example.com', 'Tran', 'An', '0123456669', '2000-01-01', 0, N'Hà Nội', '072947182653', 'Full-time', N'Độc thân', '01231230213', 1, '2024-01-01', '2025-12-31', N'Địa chỉ thường trú NV001', 'Chua co', N'Tốt', 'VSN01')
-
+INSERT INTO TaiKhoan VALUES('VS-003.MinhQuang.0123456669', '123', 'VS-003', 0)
 SELECT * FROM TaiKhoan
 SELECT * FROM NhanVien
 
@@ -270,7 +273,7 @@ INSERT INTO CanHo VALUES ('WPHC', 110.8, 3, 4, 2, NULL, 250, 2, '2024-01-01', N'
 INSERT INTO CanHo VALUES ('WPHD', 80.0, 10, 1, 1, NULL, 180, 1, '2024-01-01', N'Còn trống', NULL);
 
 -- Insert mẫu công việc
-INSERT INTO CongViec VALUES('CVVS1', N'Quét nhà', '2024-04-04 12:30:00',null, N'Chưa bắt đầu',null)
+INSERT INTO CongViec VALUES('CVVS1', N'Quét nhà', '2024-04-08 9:12:00','2024-04-04 12:30:00',null, '2024-04-08 9:12:00',N'Chưa bắt đầu',null)
 Insert into CongViec_NhanVien Values ('VS-003', 'CVVS1')
 Insert INTO YeuCau VALUES('CVVS1', 'WPHA')
 go
@@ -325,6 +328,7 @@ go
 
 SELECT * FROM CanHo
 SELECT * FROM CongViec
+SELECT * FROM Congviec_Nhanvien
 go
 
 -- Procedure lấy công việc
@@ -409,8 +413,10 @@ go
 CREATE PROCEDURE [dbo].[SP_ThemCongViec]
            @maCongViec VARCHAR(10),
            @noiDung NVARCHAR(200),
+		   @ngayGiao SMALLDATETIME,
            @thoiHan SMALLDATETIME,
            @ngayHoanThanh SMALLDATETIME,
+		   @ngayCapNhat SMALLDATETIME,
            @trangThai NVARCHAR(100),
            @ghiChu NVARCHAR(200)
 AS
@@ -419,8 +425,10 @@ BEGIN
     VALUES (
            @maCongViec,
            @noiDung,
+		   @ngayGiao,
            @thoiHan,
            @ngayHoanThanh,
+		   @ngayCapNhat,
            @trangThai,
            @ghiChu
     )
@@ -454,16 +462,17 @@ END
 go
 -- Procedure Thêm CongViec_PhongBan
 Create Procedure [dbo].[ThemCongViec_PhongBan]
-           @maPhongBan varchar(10),
-		   @maCongViec varchar(10)
+		   @maCongViec varchar(10),
+		   @maBoPhan varchar(10)
 AS
 BEGIN
     INSERT INTO Congviec_PhongBan
     VALUES (
-           @maPhongBan,
-		   @maCongViec
+		   @maCongViec,
+		   @maBoPhan
     )
 END
+go
 Create Procedure [dbo].[ThemyeuCau]
 			@maCongViec varchar(10),
 			@maCanHo varchar(10)
@@ -474,6 +483,17 @@ BEGIN
 		   @maCongViec,
 		   @maCanHo
     )
+END
+go
+-- Procedure Lấy dữ liệu công việc của nhân viên theo ngày
+Create Procedure [dbo].[LayCongViecNVTheoNgay]
+           @maNhanVien varchar(10),
+		   @thoiHan SmallDateTime
+AS
+BEGIN
+    Select CV.*
+	From CongViec CV, Congviec_Nhanvien CNV
+	Where CV.maCongViec = CNV.maCongViec and CNV.maNhanVien = @maNhanVien and CONVERT(date, CV.thoiHan) = @thoiHan
 END
 go
 

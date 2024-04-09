@@ -76,5 +76,64 @@ namespace BLL
                 return false;
             }
         }
+        // Lấy danh sách công việc nhân viên theo ngày thời hạn hoàn thành công việc
+        public List<Job> GetJobOfEmployeeByDate(string maNV, string thoiHan)
+        {
+            List<Job> jobs = new List<Job>();
+            DataTable dt = JobDAO.Instance.GetJobOfEmployeeByDate(maNV, thoiHan);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                string maCongViec = dt.Rows[i]["maCongViec"].ToString();
+                string noiDung = dt.Rows[i]["noiDung"].ToString();
+                DateTime ngayGiao = (DateTime)dt.Rows[i]["ngayGiao"];
+                DateTime thoihan = (DateTime)dt.Rows[i]["thoiHan"];
+                DateTime ngayHoanThanh = dt.Rows[i]["ngayHoanThanh"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["ngayHoanThanh"].ToString());
+                DateTime ngayCapNhat = (DateTime)dt.Rows[i]["ngayCapNhat"];
+                string trangThai = dt.Rows[i]["trangThai"].ToString();
+                string ghiChu = dt.Rows[i]["ghiChu"].ToString();
+                Job job = new Job(maCongViec, noiDung, ngayGiao, thoihan, ngayHoanThanh, ngayCapNhat, trangThai, ghiChu);
+                jobs.Add(job);
+            }
+            return jobs;
+        }
+        // Lấy toàn bộ danh sách công việc của một nhân viên
+        public List<Job> GetAllJobOfEmployee(string maNV)
+        {
+            List<Job> jobs = new List<Job>();
+            DataTable dt = JobDAO.Instance.GetAllJobOfEmployee(maNV);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                string maCongViec = dt.Rows[i]["maCongViec"].ToString();
+                string noiDung = dt.Rows[i]["noiDung"].ToString();
+                DateTime ngayGiao = (DateTime)dt.Rows[i]["ngayGiao"];
+                DateTime thoihan = (DateTime)dt.Rows[i]["thoiHan"];
+                DateTime ngayHoanThanh = dt.Rows[i]["ngayHoanThanh"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["ngayHoanThanh"].ToString());
+                DateTime ngayCapNhat = (DateTime)dt.Rows[i]["ngayCapNhat"];
+                string trangThai = dt.Rows[i]["trangThai"].ToString();
+                string ghiChu = dt.Rows[i]["ghiChu"].ToString();
+                Job job = new Job(maCongViec, noiDung, ngayGiao, thoihan, ngayHoanThanh, ngayCapNhat, trangThai, ghiChu);
+                jobs.Add(job);
+            }
+            return jobs;
+        }
+        public List<Job> GetAllJob()
+        {
+            List <Job> jobs = new List<Job>();
+            DataTable dt = JobDAO.Instance.GetAllJob();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                string maCongViec = dt.Rows[i]["maCongViec"].ToString();
+                string noiDung = dt.Rows[i]["noiDung"].ToString();
+                DateTime ngayGiao = (DateTime)dt.Rows[i]["ngayGiao"];
+                DateTime thoihan = (DateTime)dt.Rows[i]["thoiHan"];
+                DateTime ngayHoanThanh = dt.Rows[i]["ngayHoanThanh"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["ngayHoanThanh"].ToString());
+                DateTime ngayCapNhat = (DateTime)dt.Rows[i]["ngayCapNhat"];
+                string trangThai = dt.Rows[i]["trangThai"].ToString();
+                string ghiChu = dt.Rows[i]["ghiChu"].ToString();
+                Job job = new Job(maCongViec, noiDung, ngayGiao, thoihan, ngayHoanThanh, ngayCapNhat, trangThai, ghiChu);
+                jobs.Add(job);
+            }
+            return jobs;
+        }
     }
 }

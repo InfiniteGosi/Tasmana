@@ -256,6 +256,7 @@
     <Compile Include="CongViecChung.Designer.cs">
       <DependentUpon>CongViecChung.cs</DependentUpon>
     </Compile>
+    <Compile Include="Constraint.cs" />
     <Compile Include="CuDan.cs">
       <SubType>Form</SubType>
     </Compile>

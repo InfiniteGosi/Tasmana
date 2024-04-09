@@ -49,6 +49,12 @@ namespace DangNhap
             DGV_hienthicongviec.DataSource = dt;
             DGV_hienthicongviec.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             con.Close();
+
+            if (!DangNhap.currentAccount.Level.Equals("CEO"))
+            {
+                BTN_themcongviec.Enabled = false;
+                BTN_themcongviec.Visible = false;
+            }
         }
 
 

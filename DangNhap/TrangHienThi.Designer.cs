@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrangHienThi));
             this.PN_main = new Guna.UI.WinForms.GunaPanel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -55,6 +56,8 @@
             this.BTN_thongtin = new Guna.UI.WinForms.GunaButton();
             this.BTN_square = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_x = new Guna.UI.WinForms.GunaGradientButton();
+            this.Timer_KTCongViec = new System.Windows.Forms.Timer(this.components);
+            this.NTFIcon_ThongBaoCV = new System.Windows.Forms.NotifyIcon(this.components);
             this.PN_main.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pn_right.SuspendLayout();
@@ -547,6 +550,19 @@
             this.BTN_x.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_x.Click += new System.EventHandler(this.BTN_x_Click);
             // 
+            // Timer_KTCongViec
+            // 
+            this.Timer_KTCongViec.Enabled = true;
+            this.Timer_KTCongViec.Interval = 1000;
+            this.Timer_KTCongViec.Tick += new System.EventHandler(this.Timer_KTCongViec_Tick);
+            // 
+            // NTFIcon_ThongBaoCV
+            // 
+            this.NTFIcon_ThongBaoCV.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.NTFIcon_ThongBaoCV.Icon = ((System.Drawing.Icon)(resources.GetObject("NTFIcon_ThongBaoCV.Icon")));
+            this.NTFIcon_ThongBaoCV.Text = "NotiJobdeadline";
+            this.NTFIcon_ThongBaoCV.Visible = true;
+            // 
             // TrangHienThi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -613,5 +629,7 @@
         private Guna.UI.WinForms.GunaButton BTN_thongtin;
         private Guna.UI.WinForms.GunaGradientButton BTN_square;
         private Guna.UI.WinForms.GunaGradientButton BTN_x;
+        private System.Windows.Forms.Timer Timer_KTCongViec;
+        private System.Windows.Forms.NotifyIcon NTFIcon_ThongBaoCV;
     }
 }
