@@ -135,7 +135,7 @@ namespace DAO
         }
         // Dùng để chạy stored procedure
         // Param + storedprocedure: Tên của stored procedure muốn chạy
-        //       + parameters: hashmap chứ biến và giá trị tương ứng của biến đó, ví dụ 1 poir {"@ho", "Trump"} 
+        //       + parameters: hashmap chứa biến và giá trị tương ứng của biến đó, ví dụ 1 pair {"@ho", "Trump"} 
         public int ExecuteStoredProcedure(string storedprocedure, Dictionary<string, object> parameters) 
         {
             int data = 0;
@@ -149,10 +149,9 @@ namespace DAO
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         SqlParameter p;
-                        int i = 0;
                         foreach (var pair in parameters)
                         {
-                            Console.WriteLine($"Parameter: {pair.Key}, Value: {pair.Key?.ToString() ?? "null"}");
+                            Console.WriteLine($"Parameter: {pair.Key}, Value: {pair.Value?.ToString() ?? "null"}");
                             // Get the value of each object
                             object value = pair.Value;
                             if (value != null)
@@ -180,7 +179,6 @@ namespace DAO
                             }
 
                             cmd.Parameters.Add(p);
-                            i++;
                         }
 
                         data = cmd.ExecuteNonQuery();

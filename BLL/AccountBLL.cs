@@ -33,7 +33,17 @@ namespace BLL
 
             return new Account(userId, dt.Rows[0]["matKhau"].ToString(), dt.Rows[0]["maNhanVien"].ToString(), PhanQuyen(userId));
         }
-
+        public bool AddAccount(Dictionary<string, object> parameters)
+        {
+            if (AccountDAO.Instance.AddAccount(parameters))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         private string PhanQuyen(string userID)
         {
             string level = "";

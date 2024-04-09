@@ -84,7 +84,7 @@ CREATE TABLE TaiKhoan
   maNguoiDung VARCHAR(30) NOT NULL,
   matKhau VARCHAR(100) NOT NULL,
   maNhanVien VARCHAR(10) NOT NULL,
-  Disable BIT NOT NULL,
+  disable BIT NOT NULL,
   PRIMARY KEY (maNguoiDung),
   FOREIGN KEY (maNhanVien) REFERENCES nhanVien(maNhanVien)
 );
@@ -265,6 +265,9 @@ INSERT INTO TaiKhoan VALUES('VS-003.MinhQuang.0123456669', '123', 'VS-003', 0)
 SELECT * FROM TaiKhoan
 SELECT * FROM NhanVien
 
+delete from TaiKhoan where maNguoiDung = 'VS-111.TOI.33333'
+delete from NhanVien where maNhanVien = 'VS-111'
+
 
 -- Insert Dữ liệu thử của căn hộ
 INSERT INTO CanHo VALUES ('WPHA', 100.5, 5, 3, 2, NULL, 200, 2, '2024-01-01', N'Còn trống', NULL);
@@ -341,6 +344,7 @@ begin
 END
 go
 
+-- Procedure lấy thông tin nhóm theo mã nhân viên
 create procedure [dbo].[SP_LayNhomTheoMaNhanVien]
 	@maNhanVien varchar(10)
 as
@@ -352,6 +356,7 @@ begin
 end
 go
 
+-- Procedure lấy thông tin phòng ban theo mã phòng ban
 create procedure [dbo].[SP_LayPhongBanTheoMaNhom]
 	@maNhom varchar(10)
 as
@@ -363,6 +368,7 @@ begin
 end
 go
 
+-- Procedure cập nhật thông tin nhân viên
 create procedure [dbo].[SP_CapNhatNhanVien]
     @maNhanVien varchar(10),
     @email varchar(100),
@@ -496,4 +502,22 @@ BEGIN
 	Where CV.maCongViec = CNV.maCongViec and CNV.maNhanVien = @maNhanVien and CONVERT(date, CV.thoiHan) = @thoiHan
 END
 go
+
+-- Procedure thêm tài khoản
+create procedure [dbo].[SP_ThemTaiKhoan]
+	@maNguoiDung varchar(30),
+	@matKhau varchar(100),
+	@maNhanVien varchar(10),
+	@disable bit
+as
+begin
+	insert into TaiKhoan
+	values(@maNguoiDung,
+		   @matKhau,
+		   @maNhanVien,
+		   @disable)
+end
+go
+
+
 

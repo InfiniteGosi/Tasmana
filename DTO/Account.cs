@@ -14,6 +14,8 @@ namespace DTO
         public string EmployeeId { get; set; }
         public string Level { get; set; } // Phân quyền
 
+        public bool IsDisabled { get; set; }
+
         public Account(string userId, string password, string employeeId)
         {
             UserId = userId;
@@ -29,5 +31,9 @@ namespace DTO
             Level = level;
         }
 
+        public Account(string userId, string password, string employeeId, bool isDisabled) : this(userId, password, employeeId)
+        {
+            IsDisabled = isDisabled;
+        }
     }
 }
