@@ -29,7 +29,7 @@ namespace DTO
         public string MaNhom {  get; set; }
         public Account TaiKhoanNguoiDung {  get; set; }
         public List<Job> CongViec {  get; set; }
-        public Employee(string maNhanVien, string email, string ho, string ten, string soDienThoai, DateTime ngaySinh, bool gioiTinh, string queQuan, string maDinhDanh, string loaiNhanVien, string tinhTrangHonNhan, string maSoBHXH, bool daTungLamNhanVien, DateTime ngayKyHDLD, DateTime ngayHetHDLD, string diaChiThuongTru, string diaChiTamTru, string tinhTrangHDLD, string maNhom)
+        public Employee(string maNhanVien, string email, string ho, string ten, string soDienThoai, DateTime ngaySinh, bool gioiTinh, string queQuan, string maDinhDanh, string loaiNhanVien, string tinhTrangHonNhan, string maSoBHXH, bool daTungLamNhanVien, DateTime ngayKyHDLD, DateTime ngayHetHDLD, string diaChiThuongTru, string diaChiTamTru, string tinhTrangHDLD, string maNhom, Account account)
         {
             MaNhanVien = maNhanVien;
             Email = email;
@@ -50,6 +50,7 @@ namespace DTO
             DiaChiTamTru = diaChiTamTru;
             TinhTrangHDLD = tinhTrangHDLD;
             MaNhom = maNhom;
+            TaiKhoanNguoiDung = account;
         }
     }
 }

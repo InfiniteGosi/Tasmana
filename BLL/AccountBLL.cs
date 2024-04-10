@@ -31,54 +31,15 @@ namespace BLL
         {
             DataTable dt = AccountDAO.Instance.GetAccount(userId);
 
-            return new Account(userId, dt.Rows[0]["matKhau"].ToString(), dt.Rows[0]["maNhanVien"].ToString(), PhanQuyen(userId));
+            return new Account(userId, dt.Rows[0]["matKhau"].ToString(), dt.Rows[0]["maNhanVien"].ToString(), (bool)dt.Rows[0]["disable"]);
         }
         public bool AddAccount(Dictionary<string, object> parameters)
         {
-            if (AccountDAO.Instance.AddAccount(parameters))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return AccountDAO.Instance.AddAccount(parameters);
         }
-        private string PhanQuyen(string userID)
+        public bool UpdateAccount(Dictionary<string, object> parameters)
         {
-            string level = "";
-            string[] temp = userID.Split('.');
-            if (!string.IsNullOrEmpty(temp[0]))
-            {
-                string loaiNV = temp[0].Substring(0, 2);
-                switch (loaiNV)
-                {
-                    case "GD":
-                        level = "CEO";
-                        break;
-                    case "DV":
-                        level = "DV";
-                        break;
-                    case "TC":
-                        level = "TaiChinh";
-                        break;
-                    case "VS":
-                        level = "VeSinh";
-                        break;
-                    case "AN":
-                        level = "AnNinh";
-                        break;
-                    case "KT":
-                        level = "KyThuat";
-                        break;
-                    case "XD":
-                        level = "XayDung";
-                        break;
-                    default:
-                        break;
-                }
-            }
-            return level;
+            return AccountDAO.Instance.UpdateAccount(parameters);
         }
     }
 }

@@ -23,15 +23,14 @@ namespace DangNhap
         public NhanVien()
         {
             InitializeComponent();
-            AddEmployeeToDGV_hienthinhanvien();
         }
         // Gọi hàm lấy nhân viên
         private void GetEmployees()
         {
-            employees = EmployeeBLL.Instance.GetEmployeeLíst();
+            employees = EmployeeBLL.Instance.GetEmployeeList();
         }
         // Hiển thị nhân viên lên DGV
-        private void AddEmployeeToDGV_hienthinhanvien()
+        private void DisplayDGV_hienthinhanvien()
         {
             GetEmployees();
             DGV_hienthinhanvien.Rows.Clear();
@@ -50,11 +49,8 @@ namespace DangNhap
         // Nhấn nút thêm nhân viên sẽ mở cửa sổ thông tin nhân viên
         private void BTN_themnhanvien_Click(object sender, EventArgs e)
         {
-            // Gọi timer để refresh lại dgv
-            TM_nhanvien.Start();
-            ThongTinCaNhan ttcn = new ThongTinCaNhan();
+            ThongTinCaNhan ttcn = new ThongTinCaNhan(this);
             ttcn.ShowDialog();
-            TM_nhanvien.Stop();
         }
         // Lấy thông tin nhân viên bằng mã nhân viên
         private Employee GetEmployeeByEmployeeId(string maNhanVien)
@@ -70,7 +66,7 @@ namespace DangNhap
                 string maNhanVien = clickedRow.Cells[0].Value.ToString();
                 nhanVienChiTiet = GetEmployeeByEmployeeId(maNhanVien);
                 TM_nhanvien.Start();
-                ThongTinCaNhan ttcn = new ThongTinCaNhan(nhanVienChiTiet);
+                ThongTinCaNhan ttcn = new ThongTinCaNhan(this, nhanVienChiTiet);
                 ttcn.ShowDialog();
                 TM_nhanvien.Stop();
             }
@@ -78,8 +74,19 @@ namespace DangNhap
         // Set timer để tự động refresh lại dgv
         private void TM_nhanvien_Tick(object sender, EventArgs e)
         {
+            //employees = new List<Employee>();
+            //DisplayDGV_hienthinhanvien();
+        }
+
+        public override void Refresh()
+        {
             employees = new List<Employee>();
-            AddEmployeeToDGV_hienthinhanvien();
+            DisplayDGV_hienthinhanvien();
+        }
+
+        private void NhanVien_Load(object sender, EventArgs e)
+        {
+            Refresh();
         }
     }
 }

@@ -53,6 +53,7 @@ namespace DangNhap
             this.TXB_email = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.CHB_vohieuhoa = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TXB_tinhtrangHDLD = new System.Windows.Forms.TextBox();
             this.CBB_loainv = new System.Windows.Forms.ComboBox();
@@ -82,13 +83,14 @@ namespace DangNhap
             this.BTN_luu = new System.Windows.Forms.Button();
             this.BTN_huy = new System.Windows.Forms.Button();
             this.BTN_yeucauchinhsua = new System.Windows.Forms.Button();
-            this.CHB_vohieuhoa = new System.Windows.Forms.CheckBox();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.GB_gioitinh.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -106,9 +108,9 @@ namespace DangNhap
             this.panel2.Controls.Add(this.TXB_cccd);
             this.panel2.Controls.Add(this.TXB_tamtru);
             this.panel2.Controls.Add(this.TXB_thuongtru);
-            this.panel2.Location = new System.Drawing.Point(612, 483);
+            this.panel2.Location = new System.Drawing.Point(57, 441);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(743, 519);
+            this.panel2.Size = new System.Drawing.Size(574, 519);
             this.panel2.TabIndex = 46;
             // 
             // TXB_bhxh
@@ -231,7 +233,7 @@ namespace DangNhap
             this.TXB_matkhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TXB_matkhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_matkhau.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_matkhau.Location = new System.Drawing.Point(25, 350);
+            this.TXB_matkhau.Location = new System.Drawing.Point(25, 127);
             this.TXB_matkhau.Name = "TXB_matkhau";
             this.TXB_matkhau.Size = new System.Drawing.Size(419, 30);
             this.TXB_matkhau.TabIndex = 55;
@@ -240,9 +242,10 @@ namespace DangNhap
             // 
             this.TXB_manguoidung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.TXB_manguoidung.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_manguoidung.Enabled = false;
             this.TXB_manguoidung.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_manguoidung.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_manguoidung.Location = new System.Drawing.Point(25, 247);
+            this.TXB_manguoidung.Location = new System.Drawing.Point(23, 38);
             this.TXB_manguoidung.Name = "TXB_manguoidung";
             this.TXB_manguoidung.Size = new System.Drawing.Size(419, 30);
             this.TXB_manguoidung.TabIndex = 54;
@@ -253,18 +256,18 @@ namespace DangNhap
             this.LB_matkhau.AutoSize = true;
             this.LB_matkhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_matkhau.ForeColor = System.Drawing.Color.White;
-            this.LB_matkhau.Location = new System.Drawing.Point(21, 327);
+            this.LB_matkhau.Location = new System.Drawing.Point(21, 104);
             this.LB_matkhau.Name = "LB_matkhau";
-            this.LB_matkhau.Size = new System.Drawing.Size(158, 22);
+            this.LB_matkhau.Size = new System.Drawing.Size(82, 22);
             this.LB_matkhau.TabIndex = 53;
-            this.LB_matkhau.Text = "Mật khẩu mặc định";
+            this.LB_matkhau.Text = "Mật khẩu";
             // 
             // LB_taikhoan
             // 
             this.LB_taikhoan.AutoSize = true;
             this.LB_taikhoan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_taikhoan.ForeColor = System.Drawing.Color.White;
-            this.LB_taikhoan.Location = new System.Drawing.Point(21, 224);
+            this.LB_taikhoan.Location = new System.Drawing.Point(19, 15);
             this.LB_taikhoan.Name = "LB_taikhoan";
             this.LB_taikhoan.Size = new System.Drawing.Size(130, 22);
             this.LB_taikhoan.TabIndex = 52;
@@ -344,6 +347,7 @@ namespace DangNhap
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.AutoScroll = true;
             this.panel5.AutoScrollMargin = new System.Drawing.Size(20, 20);
+            this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.panel4);
             this.panel5.Controls.Add(this.panel1);
             this.panel5.Controls.Add(this.panel3);
@@ -356,19 +360,28 @@ namespace DangNhap
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.panel4.Controls.Add(this.CHB_vohieuhoa);
-            this.panel4.Controls.Add(this.TXB_matkhau);
-            this.panel4.Controls.Add(this.LB_taikhoan);
-            this.panel4.Controls.Add(this.LB_matkhau);
-            this.panel4.Controls.Add(this.TXB_manguoidung);
             this.panel4.Controls.Add(this.LB_sdt);
             this.panel4.Controls.Add(this.TXB_email);
             this.panel4.Controls.Add(this.LB_email);
             this.panel4.Controls.Add(this.TXB_sdt);
-            this.panel4.Location = new System.Drawing.Point(12, 483);
+            this.panel4.Location = new System.Drawing.Point(658, 316);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(531, 519);
+            this.panel4.Size = new System.Drawing.Size(631, 210);
             this.panel4.TabIndex = 53;
+            // 
+            // CHB_vohieuhoa
+            // 
+            this.CHB_vohieuhoa.AutoSize = true;
+            this.CHB_vohieuhoa.Enabled = false;
+            this.CHB_vohieuhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CHB_vohieuhoa.ForeColor = System.Drawing.Color.White;
+            this.CHB_vohieuhoa.Location = new System.Drawing.Point(25, 211);
+            this.CHB_vohieuhoa.Name = "CHB_vohieuhoa";
+            this.CHB_vohieuhoa.Size = new System.Drawing.Size(223, 29);
+            this.CHB_vohieuhoa.TabIndex = 61;
+            this.CHB_vohieuhoa.Text = "Vô hiệu hóa tài khoản";
+            this.CHB_vohieuhoa.UseVisualStyleBackColor = true;
+            this.CHB_vohieuhoa.Visible = false;
             // 
             // panel1
             // 
@@ -388,9 +401,9 @@ namespace DangNhap
             this.panel1.Controls.Add(this.LB_ngayhetHDLD);
             this.panel1.Controls.Add(this.LB_HDLD);
             this.panel1.Controls.Add(this.LB_ngaykyHDLD);
-            this.panel1.Location = new System.Drawing.Point(612, 10);
+            this.panel1.Location = new System.Drawing.Point(658, 552);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(743, 404);
+            this.panel1.Size = new System.Drawing.Size(631, 408);
             this.panel1.TabIndex = 45;
             // 
             // TXB_tinhtrangHDLD
@@ -537,9 +550,9 @@ namespace DangNhap
             this.panel3.Controls.Add(this.LB_honnhan);
             this.panel3.Controls.Add(this.TXB_honnhan);
             this.panel3.Controls.Add(this.LB_ngaysinh);
-            this.panel3.Location = new System.Drawing.Point(11, 10);
+            this.panel3.Location = new System.Drawing.Point(57, 10);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(532, 404);
+            this.panel3.Size = new System.Drawing.Size(574, 404);
             this.panel3.TabIndex = 53;
             // 
             // TXB_ten
@@ -711,19 +724,18 @@ namespace DangNhap
             this.BTN_yeucauchinhsua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_yeucauchinhsua.UseVisualStyleBackColor = true;
             // 
-            // CHB_vohieuhoa
+            // panel6
             // 
-            this.CHB_vohieuhoa.AutoSize = true;
-            this.CHB_vohieuhoa.Enabled = false;
-            this.CHB_vohieuhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CHB_vohieuhoa.ForeColor = System.Drawing.Color.White;
-            this.CHB_vohieuhoa.Location = new System.Drawing.Point(31, 423);
-            this.CHB_vohieuhoa.Name = "CHB_vohieuhoa";
-            this.CHB_vohieuhoa.Size = new System.Drawing.Size(223, 29);
-            this.CHB_vohieuhoa.TabIndex = 61;
-            this.CHB_vohieuhoa.Text = "Vô hiệu hóa tài khoản";
-            this.CHB_vohieuhoa.UseVisualStyleBackColor = true;
-            this.CHB_vohieuhoa.Visible = false;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.panel6.Controls.Add(this.CHB_vohieuhoa);
+            this.panel6.Controls.Add(this.TXB_matkhau);
+            this.panel6.Controls.Add(this.TXB_manguoidung);
+            this.panel6.Controls.Add(this.LB_taikhoan);
+            this.panel6.Controls.Add(this.LB_matkhau);
+            this.panel6.Location = new System.Drawing.Point(658, 14);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(631, 282);
+            this.panel6.TabIndex = 54;
             // 
             // ThongTinCaNhan
             // 
@@ -738,6 +750,7 @@ namespace DangNhap
             this.Controls.Add(this.panel5);
             this.Name = "ThongTinCaNhan";
             this.Text = "ThongTinCaNhan";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ThongTinCaNhan_FormClosing);
             this.Load += new System.EventHandler(this.ThongTinCaNhan_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -750,6 +763,8 @@ namespace DangNhap
             this.panel3.PerformLayout();
             this.GB_gioitinh.ResumeLayout(false);
             this.GB_gioitinh.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -809,5 +824,6 @@ namespace DangNhap
         private System.Windows.Forms.ComboBox CBB_loainv;
         private System.Windows.Forms.TextBox TXB_tinhtrangHDLD;
         private System.Windows.Forms.CheckBox CHB_vohieuhoa;
+        private System.Windows.Forms.Panel panel6;
     }
 }
