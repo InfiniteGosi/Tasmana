@@ -16,6 +16,7 @@ namespace DangNhap
 {
     public partial class ThongTinCaNhan : Form
     {
+        NhanVien parent;
         private List<Division> divisions = new List<Division>();
         private List<Group> groups = new List<Group>();
         private readonly Employee employee = null;
@@ -25,11 +26,18 @@ namespace DangNhap
         {
             InitializeComponent();
         }
+        public ThongTinCaNhan(NhanVien parent)
+        {
+            InitializeComponent();
+            this.parent = parent;
+        }
 
-        public ThongTinCaNhan(Employee employee)
+        public ThongTinCaNhan(NhanVien parent, Employee employee)
         {
             InitializeComponent();
             this.employee = employee;
+            this.parent = parent;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ThongTinCaNhan_FormClosing);
         }
 
         // Hàm khởi tạo danh sách giá trị truyền vào SP
@@ -88,14 +96,14 @@ namespace DangNhap
             return dict;
         }
         private object[] values_tk;
-        private void InitializeValues_Tk()
+        private void InitializeValues_TK()
         {
-            values_tk = new object[] 
+            values_tk = new object[]
             {
                 TXB_manguoidung.Text,
                 TXB_matkhau.Text,
                 TXB_manv.Text,
-                0 // Khi tạo tài khoản mặc định disabled là 0
+                CHB_vohieuhoa.Checked ? 1 : 0 // Khi tạo tài khoản mặc định disabled là 0
             };
         }
         private Dictionary<string, object> AddParameter_TK()
@@ -117,6 +125,10 @@ namespace DangNhap
         private bool AddAccount(Dictionary<string, object> parameters)
         {
             return AccountBLL.Instance.AddAccount(parameters);
+        }
+        private bool UpdateAccount(Dictionary<string, object> parameters)
+        {
+            return AccountBLL.Instance.UpdateAccount(parameters);
         }
         // Cập nhật thông tin nhân viên vào CSDL
         private string UpdateEmployee(Dictionary<string, object> parameters)
@@ -244,7 +256,7 @@ namespace DangNhap
             }
             if (string.IsNullOrEmpty(TXB_matkhau.Text))
             {
-                MessageBox.Show("Vui lòng nhập mật khẩu mặc định cho tài khoản nhân viên");
+                MessageBox.Show("Vui lòng nhập mật khẩu cho tài khoản nhân viên");
                 return;
             }
             // Địa chỉ tạm trú không cần check
@@ -253,25 +265,20 @@ namespace DangNhap
             //    MessageBox.Show("Vui lòng nhập địa chỉ tạm trú");
             //    return;
             //}
-
-
             InitializeValues_NV();
+            InitializeValues_TK();
             // Trường hợp tạo nhân viên mới
             if (employee == null)
             {
                 MessageBox.Show(AddEmployee(AddParameter_NV()));
-                InitializeValues_Tk();
                 AddAccount(AddParameter_TK());
             }
             else // Trường hợp chỉnh sửa nhân viên
             {
                 MessageBox.Show(UpdateEmployee(AddParameter_NV()));
-                CHB_vohieuhoa.Enabled = true;
-                CHB_vohieuhoa.Visible = true;
+                UpdateAccount(AddParameter_TK());
             }
-                
         }
-
         private void TXB_manv_TextChanged(object sender, EventArgs e)
         {
             GenerateUserId();
@@ -302,9 +309,10 @@ namespace DangNhap
         {
             division = GroupBLL.Instance.GetDivsionByGroupId(group.MaNhom);
         }
-        // Hiện thông tin chỉnh sửa lên các input tương ứng
+        // Hiện thông tin chỉnh sửa nhân viên và tài khoản của nhân viên này lên các input tương ứng
         private void DisplayEmployeeeInfo()
         {
+            // Hiện thông tin nhân viên
             GetGroupByEmployeeId();
             GetDivisionByGroupId();
             TXB_manv.Text = employee.MaNhanVien;
@@ -340,6 +348,10 @@ namespace DangNhap
             TXB_tamtru.Text = employee.DiaChiTamTru;
             // Không cho chỉnh sửa mã nhân viên
             TXB_manv.Enabled = false;
+
+            // Hiện thông tin tài khoản
+            Account account = employee.TaiKhoanNguoiDung;
+            TXB_matkhau.Text = account.Password;
         }
         // Hiện loại nhân viên từ mảng loaiNV vào CBB_loainv
         private readonly string[] loaiNV = { "Intern / Trainne", "Part-time", "Full-time" };
@@ -348,7 +360,6 @@ namespace DangNhap
             CBB_loainv.DataSource = loaiNV;
             CBB_loainv.SelectedIndex = -1;
         }
-
         private void ThongTinCaNhan_Load(object sender, EventArgs e)
         {
             // Nếu ấn nút chi tiết
@@ -357,7 +368,14 @@ namespace DangNhap
             if (employee != null)
             {
                 DisplayEmployeeeInfo();
+                CHB_vohieuhoa.Enabled = true;
+                CHB_vohieuhoa.Visible = true;
             }
+        }
+
+        private void ThongTinCaNhan_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            parent.Refresh();
         }
     }
 }

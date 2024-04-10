@@ -23,17 +23,49 @@ namespace DTO
             EmployeeId = employeeId;
         }
 
-        public Account(string userId, string password, string employeeId, string level)
+        public Account(string userId, string password, string employeeId, bool isDisabled)
         {
             UserId = userId;
             Password = password;
             EmployeeId = employeeId;
-            Level = level;
-        }
-
-        public Account(string userId, string password, string employeeId, bool isDisabled) : this(userId, password, employeeId)
-        {
+            Level = PhanQuyen(UserId);
             IsDisabled = isDisabled;
+        }
+        private string PhanQuyen(string userID)
+        {
+            string level = "";
+            string[] temp = userID.Split('.');
+            if (!string.IsNullOrEmpty(temp[0]))
+            {
+                string loaiNV = temp[0].Substring(0, 2);
+                switch (loaiNV)
+                {
+                    case "GD":
+                        level = "CEO";
+                        break;
+                    case "DV":
+                        level = "DV";
+                        break;
+                    case "TC":
+                        level = "TaiChinh";
+                        break;
+                    case "VS":
+                        level = "VeSinh";
+                        break;
+                    case "AN":
+                        level = "AnNinh";
+                        break;
+                    case "KT":
+                        level = "KyThuat";
+                        break;
+                    case "XD":
+                        level = "XayDung";
+                        break;
+                    default:
+                        break;
+                }
+            }
+            return level;
         }
     }
 }

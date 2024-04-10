@@ -253,7 +253,6 @@ INSERT INTO Nhom VALUES('VSN02', 'VS-002', 'VS')
 SELECT * FROM PhongBan
 SELECT * FROM Nhom
 
-
 -- Insert thông tin tài khoản
 INSERT INTO NhanVien VALUES('GD-001', 'jd@gmail.com', 'Ho', 'Khang', '111111111', '1/1/2002', 1, 'TP.HCM', '123456', 'Full-time', N'Độc thân', '1111111', 1, '2024-01-01', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú GD-001', N'Tốt', 'VSN01')
 INSERT INTO TaiKhoan VALUES('GD-001.KHANG.111111111', '123', 'GD-001', 0)
@@ -264,10 +263,6 @@ INSERT INTO NhanVien VALUES('VS-003', 'email_nv001@example.com', 'Tran', 'An', '
 INSERT INTO TaiKhoan VALUES('VS-003.MinhQuang.0123456669', '123', 'VS-003', 0)
 SELECT * FROM TaiKhoan
 SELECT * FROM NhanVien
-
-delete from TaiKhoan where maNguoiDung = 'VS-111.TOI.33333'
-delete from NhanVien where maNhanVien = 'VS-111'
-
 
 -- Insert Dữ liệu thử của căn hộ
 INSERT INTO CanHo VALUES ('WPHA', 100.5, 5, 3, 2, NULL, 200, 2, '2024-01-01', N'Còn trống', NULL);
@@ -519,5 +514,17 @@ begin
 end
 go
 
-
-
+-- Procedure sửa tài khoản nhân viên
+create procedure [dbo].[SP_SuaTaiKhoan]
+	@maNguoiDung varchar(30),
+	@matKhau varchar(100),
+	@maNhanVien varchar(10),
+	@disable bit
+as
+begin
+	update TaiKhoan
+	set maNguoiDung = @maNguoiDung,
+		matKhau = @matKhau,
+		disable = @disable
+	where maNhanVien = @maNhanVien
+end

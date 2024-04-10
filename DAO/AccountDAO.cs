@@ -35,9 +35,19 @@ namespace DAO
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             return result;
         }
+        public DataTable GetAccountByEmployeeId(string maNhanVien)
+        {
+            string query = $"select * from TaiKhoan where maNhanVien = '{maNhanVien}'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public bool AddAccount(Dictionary<string, object> parameters)
         {
             int result = DataProvider.Instance.ExecuteStoredProcedure("SP_ThemTaiKhoan", parameters);
+            return result > 0;
+        }
+        public bool UpdateAccount(Dictionary<string, object> parameters)
+        {
+            int result = DataProvider.Instance.ExecuteStoredProcedure("SP_SuaTaiKhoan", parameters);
             return result > 0;
         }
     }

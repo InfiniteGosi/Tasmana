@@ -142,7 +142,7 @@ namespace DangNhap
         private List<Employee> GetNV(string maNhom)
         {
             List<Employee> list = new List<Employee>();
-            list = EmployeeBLL.Instance.GetEmployeesByGoup(maNhom);
+            list = EmployeeBLL.Instance.GetEmployeesByGroup(maNhom);
             return list;
         }
         private void readNV()

@@ -50,6 +50,7 @@ namespace DangNhap
             this.C_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_chitiet = new System.Windows.Forms.DataGridViewImageColumn();
             this.TM_nhanvien = new System.Windows.Forms.Timer(this.components);
+            this.BTN_refresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_hienthinhanvien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -308,12 +309,22 @@ namespace DangNhap
             // 
             this.TM_nhanvien.Tick += new System.EventHandler(this.TM_nhanvien_Tick);
             // 
+            // BTN_refresh
+            // 
+            this.BTN_refresh.Location = new System.Drawing.Point(802, 68);
+            this.BTN_refresh.Name = "BTN_refresh";
+            this.BTN_refresh.Size = new System.Drawing.Size(75, 23);
+            this.BTN_refresh.TabIndex = 107;
+            this.BTN_refresh.Text = "Refresh";
+            this.BTN_refresh.UseVisualStyleBackColor = true;
+            // 
             // NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1376, 782);
+            this.Controls.Add(this.BTN_refresh);
             this.Controls.Add(this.DGV_hienthinhanvien);
             this.Controls.Add(this.BTN_themnhanvien);
             this.Controls.Add(this.comboBox1);
@@ -328,6 +339,7 @@ namespace DangNhap
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NhanVien";
             this.Text = "NhanVien";
+            this.Load += new System.EventHandler(this.NhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_hienthinhanvien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -354,5 +366,6 @@ namespace DangNhap
         private System.Windows.Forms.DataGridViewTextBoxColumn C_email;
         private System.Windows.Forms.DataGridViewImageColumn C_chitiet;
         private System.Windows.Forms.Timer TM_nhanvien;
+        private System.Windows.Forms.Button BTN_refresh;
     }
 }
