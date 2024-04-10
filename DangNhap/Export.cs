@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using Syncfusion.Grouping;
+using Syncfusion.Windows.Forms.Grid.Grouping;
 namespace DangNhap
 {
     internal class Export
@@ -113,7 +117,7 @@ namespace DangNhap
 
             // Setting background color
 
-            rowHead.Interior.ColorIndex = 7;
+            rowHead.Interior.ColorIndex = 6;
 
             rowHead.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
 
@@ -139,7 +143,7 @@ namespace DangNhap
 
             int columnStart = 1;
 
-            int rowEnd = rowStart + dataTable.Rows.Count - 2;
+            int rowEnd = rowStart + dataTable.Rows.Count - 1;
 
             int columnEnd = dataTable.Columns.Count;
 
@@ -165,6 +169,48 @@ namespace DangNhap
 
             // Center the table
             oSheet.get_Range(c1, c2).HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+        }
+
+        public void ToPDF(GridGroupingControl ggc, String path)
+        {
+            // Tạo một đối tượng Document
+            Document document = new Document(PageSize.LETTER, 10, 10, 42, 35);
+
+            // Tạo một đối tượng PdfWriter để ghi dữ liệu vào file PDF
+            PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(path, FileMode.Create));
+
+            // Mở Document để bắt đầu viết dữ liệu
+            document.Open();
+
+            // Tạo một PdfPTable với số cột bằng với số cột trong GridGroupingControl
+            PdfPTable table = new PdfPTable(ggc.TableDescriptor.Columns.Count);
+
+            // Thêm tiêu đề cho bảng
+            foreach (GridColumnDescriptor column in ggc.TableDescriptor.Columns)
+            {
+                table.AddCell(new Phrase(column.Name));
+            }
+
+            // Thiết lập số hàng đầu tiên là hàng tiêu đề
+            table.HeaderRows = 1;
+
+            // Duyệt qua từng bản ghi trong GridGroupingControl và thêm dữ liệu vào bảng
+            foreach (Record record in ggc.Table.Records)
+            {
+                foreach (GridColumnDescriptor column in ggc.TableDescriptor.Columns)
+                {
+                    if (record.GetValue(column.MappingName) != null)
+                    {
+                        table.AddCell(new Phrase(record.GetValue(column.MappingName).ToString()));
+                    }
+                }
+            }
+
+            // Thêm bảng vào Document
+            document.Add(table);
+
+            // Đóng Document sau khi đã hoàn thành việc ghi dữ liệu
+            document.Close();
         }
     }
 }

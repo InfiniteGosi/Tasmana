@@ -40,10 +40,12 @@ namespace DangNhap
             this.BTN_trangtruoc = new System.Windows.Forms.Button();
             this.BTN_trangsau = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.DGV_hienthicongviec = new System.Windows.Forms.DataGridView();
             this.BTN_PDF = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_in = new Guna.UI.WinForms.GunaGradientButton();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_hienthicongviec)).BeginInit();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.GGC_hienthicongviec = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
+            ((System.ComponentModel.ISupportInitialize)(this.GGC_hienthicongviec)).BeginInit();
             this.SuspendLayout();
             // 
             // BTN_themcongviec
@@ -225,21 +227,6 @@ namespace DangNhap
             this.comboBox1.TabIndex = 93;
             this.comboBox1.Text = "All";
             // 
-            // DGV_hienthicongviec
-            // 
-            this.DGV_hienthicongviec.AllowUserToAddRows = false;
-            this.DGV_hienthicongviec.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGV_hienthicongviec.ColumnHeadersHeight = 30;
-            this.DGV_hienthicongviec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.DGV_hienthicongviec.Location = new System.Drawing.Point(65, 103);
-            this.DGV_hienthicongviec.Name = "DGV_hienthicongviec";
-            this.DGV_hienthicongviec.RowHeadersWidth = 51;
-            this.DGV_hienthicongviec.RowTemplate.Height = 24;
-            this.DGV_hienthicongviec.Size = new System.Drawing.Size(1248, 401);
-            this.DGV_hienthicongviec.TabIndex = 94;
-            // 
             // BTN_PDF
             // 
             this.BTN_PDF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -296,6 +283,35 @@ namespace DangNhap
             this.BTN_in.TabIndex = 96;
             this.BTN_in.Text = "In";
             this.BTN_in.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.BTN_in.Click += new System.EventHandler(this.BTN_in_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // GGC_hienthicongviec
+            // 
+            this.GGC_hienthicongviec.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.GGC_hienthicongviec.BackColor = System.Drawing.SystemColors.Window;
+            this.GGC_hienthicongviec.Location = new System.Drawing.Point(65, 100);
+            this.GGC_hienthicongviec.Name = "GGC_hienthicongviec";
+            this.GGC_hienthicongviec.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
+            this.GGC_hienthicongviec.Size = new System.Drawing.Size(1248, 404);
+            this.GGC_hienthicongviec.TabIndex = 97;
+            this.GGC_hienthicongviec.Text = "gridGroupingControl1";
+            this.GGC_hienthicongviec.UseRightToLeftCompatibleTextBox = true;
+            this.GGC_hienthicongviec.VersionInfo = "25.1462.39";
             // 
             // CongViecChung
             // 
@@ -303,9 +319,9 @@ namespace DangNhap
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1376, 782);
+            this.Controls.Add(this.GGC_hienthicongviec);
             this.Controls.Add(this.BTN_in);
             this.Controls.Add(this.BTN_PDF);
-            this.Controls.Add(this.DGV_hienthicongviec);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.TXB_sotrang);
             this.Controls.Add(this.BTN_trangtruoc);
@@ -320,7 +336,7 @@ namespace DangNhap
             this.Name = "CongViecChung";
             this.Text = "CongViecChung";
             this.Load += new System.EventHandler(this.CongViecChung_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_hienthicongviec)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GGC_hienthicongviec)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,8 +354,10 @@ namespace DangNhap
         private System.Windows.Forms.Button BTN_trangtruoc;
         private System.Windows.Forms.Button BTN_trangsau;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView DGV_hienthicongviec;
         private Guna.UI.WinForms.GunaGradientButton BTN_PDF;
         private Guna.UI.WinForms.GunaGradientButton BTN_in;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl GGC_hienthicongviec;
     }
 }

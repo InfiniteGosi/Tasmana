@@ -1,13 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Syncfusion.Windows.Forms.Grid.Grouping;
+using Syncfusion.Windows.Forms.Grid;
+using Syncfusion.GridHelperClasses;
+using Syncfusion.Grouping;
+using Syncfusion.Licensing;
+
 
 
 namespace DangNhap
@@ -19,9 +24,12 @@ namespace DangNhap
         SqlCommand cmd;
         SqlDataAdapter adt;
         DataTable dt;
+        DataSet dataSet;
         public CongViecChung()
         {
+            SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NBaF5cXmZCekx3Qnxbf1x0ZFREalxWTndfUiweQnxTdEFjXX5ecHRVQWFcWUN+WA==");
             InitializeComponent();
+            
         }
 
         private void BTN_themcongviec_Click(object sender, EventArgs e)
@@ -46,9 +54,32 @@ namespace DangNhap
 
             adt = new SqlDataAdapter(cmd);
             adt.Fill(dt);
-            DGV_hienthicongviec.DataSource = dt;
-            DGV_hienthicongviec.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            //DGV_hienthicongviec.DataSource = dt;
+            //DGV_hienthicongviec.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             con.Close();
+
+            // Gán DataTable làm nguồn dữ liệu cho GridGroupingControl
+            GGC_hienthicongviec.DataSource = dt;
+            GGC_hienthicongviec.TopLevelGroupOptions.ShowFilterBar = true;
+
+            // Tạo đối tượng GridColumnDescriptorCollection để quản lý các cột
+            GridColumnDescriptorCollection columns = GGC_hienthicongviec.TableDescriptor.Columns;
+            foreach (GridColumnDescriptor column in columns)
+            {
+                column.AllowFilter = true;
+            }
+            GridDynamicFilter dynamicFilter = new GridDynamicFilter();
+            dynamicFilter.WireGrid(GGC_hienthicongviec);
+
+            GridExcelFilter excelFilter = new GridExcelFilter();
+            excelFilter.WireGrid(GGC_hienthicongviec);
+            // Thiết lập AutoSizeMode cho mỗi cột
+            foreach (GridColumnDescriptor column in columns)
+            {
+                column.Appearance.AnyRecordFieldCell.AutoSize = true;
+                column.Appearance.AnyRecordFieldCell.CellType = "TextBox";
+            }
+            
 
             if (!DangNhap.currentAccount.Level.Equals("CEO"))
             {
@@ -60,7 +91,46 @@ namespace DangNhap
 
         private void BTN_PDF_Click(object sender, EventArgs e)
         {
+            if (GGC_hienthicongviec.Table.Records.Count > 0)
+            {
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "PDF (*.pdf)|*.pdf";
+                save.FileName = "CongViec.pdf";
+                bool ErrorMessage = false;
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(save.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(save.FileName);
+                        }
+                        catch (Exception ex)
+                        {
+                            ErrorMessage = true;
+                            MessageBox.Show("Unable to write data in disk" + ex.Message);
+                        }
+                    }
+                    if (!ErrorMessage)
+                    {
+                        try
+                        {
+                            Export export = new Export();
+                            export.ToPDF(GGC_hienthicongviec, save.FileName);
 
+                            MessageBox.Show("Successful", "Info");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error while exporting Data" + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No record found", "Info");
+            }
         }
 
         private void BTN_excel_Click(object sender, EventArgs e)
@@ -85,23 +155,44 @@ namespace DangNhap
             dataTable.Columns.Add(col7);
             dataTable.Columns.Add(col8);
 
-            foreach (DataGridViewRow dtgvRow in DGV_hienthicongviec.Rows)
+            foreach (Record record in GGC_hienthicongviec.Table.Records)
             {
                 DataRow dtRow = dataTable.NewRow();
 
-                dtRow[0] = dtgvRow.Cells[0].Value;
-                dtRow[1] = dtgvRow.Cells[1].Value;
-                dtRow[2] = dtgvRow.Cells[2].Value;
-                dtRow[3] = dtgvRow.Cells[3].Value;
-                dtRow[4] = dtgvRow.Cells[4].Value;
-                dtRow[5] = dtgvRow.Cells[5].Value;
-                dtRow[6] = dtgvRow.Cells[6].Value;
-                dtRow[7] = dtgvRow.Cells[7].Value;
+                dtRow[0] = record.GetValue("Mã nhân viên");
+                dtRow[1] = record.GetValue("Họ và tên");
+                dtRow[2] = record.GetValue("Nội dung");
+                dtRow[3] = record.GetValue("Mã căn hộ");
+                dtRow[4] = record.GetValue("Thời hạn");
+                dtRow[5] = record.GetValue("Ngày hoàn thành");
+                dtRow[6] = record.GetValue("Trạng thái");
+                dtRow[7] = record.GetValue("Ghi chú");
 
                 dataTable.Rows.Add(dtRow);
             }
             Export export = new Export();
             export.ToExcel(dataTable, "Cong_viec", "CÔNG VIỆC CHUNG");
+        }
+
+        private void BTN_in_Click(object sender, EventArgs e)
+        {
+            //Create the Grid as printing document
+            GridPrintDocumentAdv gpd = new GridPrintDocumentAdv(GGC_hienthicongviec.TableControl);
+            PrintDialog pd = new PrintDialog();
+            //Scale all columns to fit within a page
+            gpd.ScaleColumnsToFitPage = true;
+            pd.Document = gpd;
+            //Print the contents of the Grid
+            gpd.Print();
+
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            /*Bitmap bitmap = new Bitmap(DGV_hienthicongviec.Width, DGV_hienthicongviec.Height);
+            DGV_hienthicongviec.DrawToBitmap(bitmap, new System.Drawing.Rectangle(0, 0, DGV_hienthicongviec.Width, DGV_hienthicongviec.Height));
+            
+            e.Graphics.DrawImage(bitmap, 0, 0);*/
         }
     }
 }
