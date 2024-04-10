@@ -351,6 +351,10 @@ namespace DangNhap
 
             // Hiện thông tin tài khoản
             Account account = employee.TaiKhoanNguoiDung;
+            if (account.IsDisabled)
+            {
+                CHB_vohieuhoa.Checked = true;
+            }
             TXB_matkhau.Text = account.Password;
         }
         // Hiện loại nhân viên từ mảng loaiNV vào CBB_loainv

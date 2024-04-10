@@ -62,9 +62,16 @@ namespace DangNhap
                 if (CheckAccountPassword(userId, pwd))
                 {
                     GetAccount(userId);
-                    MessageBox.Show("Đăng nhập thành công");
-                    TrangHienThi formTrangChu = new TrangHienThi();
-                    formTrangChu.ShowDialog();
+                    if (!currentAccount.IsDisabled)
+                    {
+                        MessageBox.Show("Đăng nhập thành công");
+                        TrangHienThi formTrangChu = new TrangHienThi();
+                        formTrangChu.ShowDialog();
+                    }
+                    else
+                    {
+                        LB_error.Text = "Tài khoản đã bị vô hiệu hóa";
+                    }
                 }
                 else
                 {
