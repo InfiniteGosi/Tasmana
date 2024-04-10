@@ -111,7 +111,7 @@ namespace DangNhap
 
         private void BTN_thongtin_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinCaNhan());
+            OpenChildForm(new ThongTinNhanVien());
         }
 
         //MoveForm

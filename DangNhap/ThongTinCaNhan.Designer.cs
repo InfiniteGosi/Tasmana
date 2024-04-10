@@ -52,8 +52,9 @@ namespace DangNhap
             this.TXB_sdt = new System.Windows.Forms.TextBox();
             this.TXB_email = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.CHB_vohieuhoa = new System.Windows.Forms.CheckBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TXB_tinhtrangHDLD = new System.Windows.Forms.TextBox();
             this.CBB_loainv = new System.Windows.Forms.ComboBox();
@@ -83,20 +84,17 @@ namespace DangNhap
             this.BTN_luu = new System.Windows.Forms.Button();
             this.BTN_huy = new System.Windows.Forms.Button();
             this.BTN_yeucauchinhsua = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.GB_gioitinh.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.panel2.Controls.Add(this.TXB_bhxh);
             this.panel2.Controls.Add(this.TXB_quequan);
@@ -110,7 +108,7 @@ namespace DangNhap
             this.panel2.Controls.Add(this.TXB_thuongtru);
             this.panel2.Location = new System.Drawing.Point(57, 441);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(574, 519);
+            this.panel2.Size = new System.Drawing.Size(574, 399);
             this.panel2.TabIndex = 46;
             // 
             // TXB_bhxh
@@ -228,7 +226,6 @@ namespace DangNhap
             // 
             // TXB_matkhau
             // 
-            this.TXB_matkhau.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TXB_matkhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.TXB_matkhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TXB_matkhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -252,7 +249,6 @@ namespace DangNhap
             // 
             // LB_matkhau
             // 
-            this.LB_matkhau.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LB_matkhau.AutoSize = true;
             this.LB_matkhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_matkhau.ForeColor = System.Drawing.Color.White;
@@ -342,8 +338,7 @@ namespace DangNhap
             // 
             // panel5
             // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.AutoScroll = true;
             this.panel5.AutoScrollMargin = new System.Drawing.Size(20, 20);
@@ -357,17 +352,18 @@ namespace DangNhap
             this.panel5.Size = new System.Drawing.Size(1358, 712);
             this.panel5.TabIndex = 52;
             // 
-            // panel4
+            // panel6
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.panel4.Controls.Add(this.LB_sdt);
-            this.panel4.Controls.Add(this.TXB_email);
-            this.panel4.Controls.Add(this.LB_email);
-            this.panel4.Controls.Add(this.TXB_sdt);
-            this.panel4.Location = new System.Drawing.Point(658, 316);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(631, 210);
-            this.panel4.TabIndex = 53;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.panel6.Controls.Add(this.CHB_vohieuhoa);
+            this.panel6.Controls.Add(this.TXB_matkhau);
+            this.panel6.Controls.Add(this.TXB_manguoidung);
+            this.panel6.Controls.Add(this.LB_taikhoan);
+            this.panel6.Controls.Add(this.LB_matkhau);
+            this.panel6.Location = new System.Drawing.Point(658, 14);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(631, 282);
+            this.panel6.TabIndex = 54;
             // 
             // CHB_vohieuhoa
             // 
@@ -383,10 +379,20 @@ namespace DangNhap
             this.CHB_vohieuhoa.UseVisualStyleBackColor = true;
             this.CHB_vohieuhoa.Visible = false;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.panel4.Controls.Add(this.LB_sdt);
+            this.panel4.Controls.Add(this.TXB_email);
+            this.panel4.Controls.Add(this.LB_email);
+            this.panel4.Controls.Add(this.TXB_sdt);
+            this.panel4.Location = new System.Drawing.Point(658, 316);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(631, 210);
+            this.panel4.TabIndex = 53;
+            // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.panel1.Controls.Add(this.TXB_tinhtrangHDLD);
             this.panel1.Controls.Add(this.CBB_loainv);
@@ -401,9 +407,9 @@ namespace DangNhap
             this.panel1.Controls.Add(this.LB_ngayhetHDLD);
             this.panel1.Controls.Add(this.LB_HDLD);
             this.panel1.Controls.Add(this.LB_ngaykyHDLD);
-            this.panel1.Location = new System.Drawing.Point(658, 552);
+            this.panel1.Location = new System.Drawing.Point(658, 551);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(631, 408);
+            this.panel1.Size = new System.Drawing.Size(631, 289);
             this.panel1.TabIndex = 45;
             // 
             // TXB_tinhtrangHDLD
@@ -724,19 +730,6 @@ namespace DangNhap
             this.BTN_yeucauchinhsua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_yeucauchinhsua.UseVisualStyleBackColor = true;
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.panel6.Controls.Add(this.CHB_vohieuhoa);
-            this.panel6.Controls.Add(this.TXB_matkhau);
-            this.panel6.Controls.Add(this.TXB_manguoidung);
-            this.panel6.Controls.Add(this.LB_taikhoan);
-            this.panel6.Controls.Add(this.LB_matkhau);
-            this.panel6.Location = new System.Drawing.Point(658, 14);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(631, 282);
-            this.panel6.TabIndex = 54;
-            // 
             // ThongTinCaNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -755,6 +748,8 @@ namespace DangNhap
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -763,8 +758,6 @@ namespace DangNhap
             this.panel3.PerformLayout();
             this.GB_gioitinh.ResumeLayout(false);
             this.GB_gioitinh.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
