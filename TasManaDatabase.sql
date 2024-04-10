@@ -409,32 +409,38 @@ begin
 end
 go
 
+-- Procedure auto tự tạo mã công việc
+CREATE PROCEDURE [dbo].[Auto_Create_Job]
+    @nextJobId VARCHAR(10) OUTPUT
+AS
+BEGIN
+    DECLARE @curNumOfJob INT;
+    SELECT @curNumOfJob = COUNT(maCongViec) FROM CongViec;
 
+    SET @nextJobId = 'CV' + CAST(@curNumOfJob + 1 AS VARCHAR(3));
+END
+go
 -- Procedure Thêm Công Việc
 CREATE PROCEDURE [dbo].[SP_ThemCongViec]
-           @maCongViec VARCHAR(10),
            @noiDung NVARCHAR(200),
-		   @ngayGiao SMALLDATETIME,
+           @ngayGiao SMALLDATETIME,
            @thoiHan SMALLDATETIME,
            @ngayHoanThanh SMALLDATETIME,
-		   @ngayCapNhat SMALLDATETIME,
+           @ngayCapNhat SMALLDATETIME,
            @trangThai NVARCHAR(100),
            @ghiChu NVARCHAR(200)
 AS
 BEGIN
-    INSERT INTO CongViec
-    VALUES (
-           @maCongViec,
-           @noiDung,
-		   @ngayGiao,
-           @thoiHan,
-           @ngayHoanThanh,
-		   @ngayCapNhat,
-           @trangThai,
-           @ghiChu
-    )
+    DECLARE @maCongViec VARCHAR(10);
+    -- Execute Auto_Create_Job to generate the next job ID
+    EXEC [dbo].[Auto_Create_Job] @nextJobId = @maCongViec OUTPUT;
+    
+    -- Insert the new job into the CongViec table
+    INSERT INTO CongViec (maCongViec, noiDung, ngayGiao, thoiHan, ngayHoanThanh, ngayCapNhat, trangThai, ghiChu)
+    VALUES (@maCongViec, @noiDung, @ngayGiao, @thoiHan, @ngayHoanThanh, @ngayCapNhat, @trangThai, @ghiChu);
 END
 go
+	
 -- Procedure Thêm CongViec_NhanVien
 CREATE PROCEDURE [dbo].[ThemCongViec_NhanVien]
            @maNhanVien varchar(10),
