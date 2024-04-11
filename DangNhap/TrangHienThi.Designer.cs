@@ -43,7 +43,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BTN_nhanvien = new Guna.UI.WinForms.GunaButton();
-            this.LOGOishere = new Guna.UI.WinForms.GunaPictureBox();
             this.BTN_congviec = new Guna.UI.WinForms.GunaButton();
             this.BTN_cudan = new Guna.UI.WinForms.GunaButton();
             this.BTN_thongbao = new Guna.UI.WinForms.GunaButton();
@@ -65,7 +64,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LOGOishere)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -224,7 +222,6 @@
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.BTN_nhanvien);
-            this.panel1.Controls.Add(this.LOGOishere);
             this.panel1.Controls.Add(this.BTN_congviec);
             this.panel1.Controls.Add(this.BTN_cudan);
             this.panel1.Controls.Add(this.BTN_thongbao);
@@ -262,17 +259,6 @@
             this.BTN_nhanvien.Text = "Nhân Viên";
             this.BTN_nhanvien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_nhanvien.Click += new System.EventHandler(this.BTN_nhanvien_Click);
-            // 
-            // LOGOishere
-            // 
-            this.LOGOishere.BaseColor = System.Drawing.Color.White;
-            this.LOGOishere.Image = ((System.Drawing.Image)(resources.GetObject("LOGOishere.Image")));
-            this.LOGOishere.Location = new System.Drawing.Point(0, 3);
-            this.LOGOishere.Name = "LOGOishere";
-            this.LOGOishere.Size = new System.Drawing.Size(242, 114);
-            this.LOGOishere.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.LOGOishere.TabIndex = 14;
-            this.LOGOishere.TabStop = false;
             // 
             // BTN_congviec
             // 
@@ -593,7 +579,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LOGOishere)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -622,7 +607,6 @@
         private Guna.UI.WinForms.GunaButton BTN_canho;
         private Guna.UI.WinForms.GunaButton BTN_logout;
         private Guna.UI.WinForms.GunaButton BTN_thongke;
-        private Guna.UI.WinForms.GunaPictureBox LOGOishere;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox2;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
         private System.Windows.Forms.Label LB_tendangnhap;

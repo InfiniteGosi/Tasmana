@@ -305,10 +305,6 @@ namespace DangNhap
             this.C_chitiet.Name = "C_chitiet";
             this.C_chitiet.Width = 125;
             // 
-            // TM_nhanvien
-            // 
-            this.TM_nhanvien.Tick += new System.EventHandler(this.TM_nhanvien_Tick);
-            // 
             // BTN_refresh
             // 
             this.BTN_refresh.Location = new System.Drawing.Point(802, 68);

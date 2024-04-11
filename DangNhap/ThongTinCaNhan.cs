@@ -309,6 +309,8 @@ namespace DangNhap
         {
             division = GroupBLL.Instance.GetDivsionByGroupId(group.MaNhom);
         }
+        // Hiện loại nhân viên từ mảng loaiNV vào CBB_loainv
+        private readonly string[] loaiNV = { "Intern / Trainne", "Part-time", "Full-time" };
         // Hiện thông tin chỉnh sửa nhân viên và tài khoản của nhân viên này lên các input tương ứng
         private void DisplayEmployeeeInfo()
         {
@@ -357,8 +359,7 @@ namespace DangNhap
             }
             TXB_matkhau.Text = account.Password;
         }
-        // Hiện loại nhân viên từ mảng loaiNV vào CBB_loainv
-        private readonly string[] loaiNV = { "Intern / Trainne", "Part-time", "Full-time" };
+        
         private void DisplayEmployeeType()
         {
             CBB_loainv.DataSource = loaiNV;
