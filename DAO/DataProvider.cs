@@ -192,5 +192,58 @@ namespace DAO
             }
             return data;
         }
+
+        public Dictionary<string, object> ExecuteStoredProcedureWithOutput(string storedProcedure, Dictionary<string, SqlDbType> outputParameters)
+        {
+            Dictionary<string, object> outputValues = new Dictionary<string, object>();
+
+            using (SqlConnection conn = new SqlConnection(connectionSTR))
+            {
+                try
+                {
+                    conn.Open();
+
+                    using (SqlCommand cmd = new SqlCommand(storedProcedure, conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        // Add output parameters
+                        foreach (var param in outputParameters)
+                        {
+                            SqlParameter outputParam = new SqlParameter(param.Key, param.Value);
+                            outputParam.Direction = ParameterDirection.Output;
+
+                            // Set the size for string parameters
+                            if (param.Value == SqlDbType.VarChar || param.Value == SqlDbType.NVarChar)
+                            {
+                                // Set an appropriate size, e.g., 100 for VARCHAR(100)
+                                outputParam.Size = 300; // You may adjust the size based on your requirements
+                            }
+
+                            cmd.Parameters.Add(outputParam);
+                        }
+
+                        cmd.ExecuteNonQuery();
+
+                        // Retrieve the values of the output parameters
+                        foreach (SqlParameter parameter in cmd.Parameters)
+                        {
+                            if (parameter.Direction == ParameterDirection.Output)
+                            {
+                                outputValues.Add(parameter.ParameterName, parameter.Value);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.Write(ex.ToString());
+                }
+            }
+
+            return outputValues;
+        }
+
+
     }
 }

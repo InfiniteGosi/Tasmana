@@ -39,7 +39,6 @@ namespace DangNhap
         {
             Dictionary<string, object> dict = new Dictionary<string, object>
             {
-                {"@maCongViec", TXB_MaCongViec.Text},
                 {"@noiDung", TXB_noidung.Text},
                 {"@ngayGiao", DateTime.Now.ToString("yyyy-MM-dd")},
                 {"@thoihan",  DTP_ngay.Value.ToString("yyyy-MM-dd") + " " + DTP_gio.Text.Split(' ')[0].ToString()},
@@ -71,16 +70,22 @@ namespace DangNhap
             return dict;
         }
 
+        private string maCongViec;
+        private void GetNewestJobID()
+        {
+            maCongViec = JobBLL.Instance.GetNewJobID();
+            TXB_MaCongViec.Text = maCongViec;
+        }
         private void CBB_phongban_SelectedValueChanged(object sender, EventArgs e)
         {
             if(CBB_phongban.SelectedIndex != -1)
             {
                 TXB_macanho.Enabled = true;
-                TXB_MaCongViec.Enabled = true;
                 TXB_noidung.Enabled = true;
                 DTP_gio.Enabled = true;
                 DTP_ngay.Enabled = true;
                 BTN_ok.Enabled = true;
+                GetNewestJobID();
             }
         }
 

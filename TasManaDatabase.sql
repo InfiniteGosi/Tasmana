@@ -419,6 +419,7 @@ BEGIN
 
     SET @nextJobId = 'CV' + CAST(@curNumOfJob + 1 AS VARCHAR(3));
 END
+--Declare @maCongViec Varchar(10) Exec Auto_Create_Job @maCongViec OUTPUT Print @maCongViec
 go
 -- Procedure Thêm Công Việc
 CREATE PROCEDURE [dbo].[SP_ThemCongViec]
