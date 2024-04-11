@@ -30,6 +30,12 @@ namespace BLL
                 return false;
             }
         }
+
+        public string GetNewJobID()
+        {
+            string newJobID = JobDAO.Instance.GetNewJobID();
+            return newJobID;
+        }
         public bool AddJob_Employee(Dictionary<string, object> parameters)
         {
             if(JobDAO.Instance.AddJob_Employee(parameters))

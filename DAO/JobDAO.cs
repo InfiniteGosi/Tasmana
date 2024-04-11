@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Remoting.Messaging;
 
 namespace DAO
 {
@@ -28,6 +29,20 @@ namespace DAO
         {
             int result = DataProvider.Instance.ExecuteStoredProcedure("SP_ThemCongViec", parameters);
             return result > 0;
+        }
+
+        public string GetNewJobID()
+        {
+            // Define the output parameter dictionary
+            Dictionary<string, SqlDbType> outputParams = new Dictionary<string, SqlDbType>();
+            outputParams.Add("@nextJobId", SqlDbType.VarChar);
+
+            // Call the method to execute the stored procedure and retrieve output parameters
+            Dictionary<string, object> outputValues = DataProvider.Instance.ExecuteStoredProcedureWithOutput("[dbo].[Auto_Create_Job]", outputParams);
+
+            // Retrieve the value of the output parameter '@nextJobId'
+            string nextJobId = outputValues["@nextJobId"].ToString();
+            return nextJobId;
         }
 
         public bool AddJob_Employee(Dictionary<string, object> parameters)

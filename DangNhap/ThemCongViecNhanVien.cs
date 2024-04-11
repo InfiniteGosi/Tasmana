@@ -179,13 +179,19 @@ namespace DangNhap
             }
         }
 
+        public string maCongViec;
+        private void GetNewestJobID()
+        {
+            maCongViec = JobBLL.Instance.GetNewJobID();
+            TXB_MaCongViec.Text = maCongViec;
+        }
         private void CBB_manhanvien_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (CBB_manhanvien.SelectedIndex != -1)
             {
                 TXB_noidung.Enabled = true;
                 TXB_macanho.Enabled = true;
-                TXB_MaCongViec.Enabled = true;
+                GetNewestJobID();
             }
         }
 
@@ -221,12 +227,12 @@ namespace DangNhap
                 readNV();
             }
         }
+
         // Tạo tham số cho bảng CongViec để truyền vào DataProvider
         private Dictionary<string, object> AddParameterCongViec()
         {
             Dictionary<string, object> dict = new Dictionary<string, object>
             {
-                {"@maCongViec", TXB_MaCongViec.Text},
                 {"@noiDung", TXB_noidung.Text},
                 {"@ngayGiao", DateTime.Now.ToString("yyyy-MM-dd")},
                 {"@thoihan",  DTP_ngay.Value.ToString("yyyy-MM-dd") + " " + DTP_gio.Text.Split(' ')[0].ToString()},

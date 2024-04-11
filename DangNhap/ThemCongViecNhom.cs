@@ -64,6 +64,12 @@ namespace DangNhap
             }
         }
 
+        private string maCongViec;
+        private void GetNewestJobID()
+        {
+            maCongViec = JobBLL.Instance.GetNewJobID();
+            TXB_MaCongViec.Text = maCongViec;
+        }
         private void CBB_nhom_SelectedValueChanged(object sender, EventArgs e)
         {
             if(CBB_nhom.SelectedIndex != -1)
@@ -73,7 +79,7 @@ namespace DangNhap
                 DTP_gio.Enabled = true;
                 DTP_ngay.Enabled = true;
                 BTN_ok.Enabled = true;
-                TXB_MaCongViec.Enabled = true;
+                GetNewestJobID();
             }
         }
 
@@ -82,7 +88,6 @@ namespace DangNhap
         {
             Dictionary<string, object> dict = new Dictionary<string, object>
             {
-                {"@maCongViec", TXB_MaCongViec.Text},
                 {"@noiDung", TXB_noidung.Text},
                 {"@ngayGiao", DateTime.Now.ToString("yyyy-MM-dd")},
                 {"@thoihan",  DTP_ngay.Value.ToString("yyyy-MM-dd") + " " + DTP_gio.Text.Split(' ')[0].ToString()},
