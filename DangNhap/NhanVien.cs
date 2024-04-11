@@ -71,12 +71,6 @@ namespace DangNhap
                 TM_nhanvien.Stop();
             }
         }
-        // Set timer để tự động refresh lại dgv
-        private void TM_nhanvien_Tick(object sender, EventArgs e)
-        {
-            //employees = new List<Employee>();
-            //DisplayDGV_hienthinhanvien();
-        }
 
         public override void Refresh()
         {
