@@ -42,6 +42,9 @@
             this.LB_email = new System.Windows.Forms.Label();
             this.TXB_sdt = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TXB_nhom = new System.Windows.Forms.TextBox();
+            this.TXB_phongban = new System.Windows.Forms.TextBox();
+            this.TXB_loainv = new System.Windows.Forms.TextBox();
             this.TXB_tinhtrangHDLD = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.DTP_ngaykyHDLD = new System.Windows.Forms.DateTimePicker();
@@ -53,6 +56,8 @@
             this.LB_HDLD = new System.Windows.Forms.Label();
             this.LB_ngaykyHDLD = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.TXB_gioitinh = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.TXB_ten = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.DTP_ngaysinh = new System.Windows.Forms.DateTimePicker();
@@ -77,11 +82,6 @@
             this.BTN_huy = new System.Windows.Forms.Button();
             this.BTN_luu = new System.Windows.Forms.Button();
             this.BTN_yeucauchinhsua = new System.Windows.Forms.Button();
-            this.TXB_loainv = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.TXB_gioitinh = new System.Windows.Forms.TextBox();
-            this.TXB_phongban = new System.Windows.Forms.TextBox();
-            this.TXB_nhom = new System.Windows.Forms.TextBox();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -253,10 +253,43 @@
             this.panel1.Controls.Add(this.LB_ngayhetHDLD);
             this.panel1.Controls.Add(this.LB_HDLD);
             this.panel1.Controls.Add(this.LB_ngaykyHDLD);
-            this.panel1.Location = new System.Drawing.Point(658, 551);
+            this.panel1.Location = new System.Drawing.Point(658, 542);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(631, 289);
+            this.panel1.Size = new System.Drawing.Size(631, 451);
             this.panel1.TabIndex = 45;
+            // 
+            // TXB_nhom
+            // 
+            this.TXB_nhom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.TXB_nhom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_nhom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_nhom.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_nhom.Location = new System.Drawing.Point(25, 240);
+            this.TXB_nhom.Name = "TXB_nhom";
+            this.TXB_nhom.Size = new System.Drawing.Size(225, 30);
+            this.TXB_nhom.TabIndex = 61;
+            // 
+            // TXB_phongban
+            // 
+            this.TXB_phongban.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.TXB_phongban.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_phongban.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_phongban.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_phongban.Location = new System.Drawing.Point(25, 146);
+            this.TXB_phongban.Name = "TXB_phongban";
+            this.TXB_phongban.Size = new System.Drawing.Size(225, 30);
+            this.TXB_phongban.TabIndex = 60;
+            // 
+            // TXB_loainv
+            // 
+            this.TXB_loainv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.TXB_loainv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_loainv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_loainv.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_loainv.Location = new System.Drawing.Point(23, 50);
+            this.TXB_loainv.Name = "TXB_loainv";
+            this.TXB_loainv.Size = new System.Drawing.Size(225, 30);
+            this.TXB_loainv.TabIndex = 50;
             // 
             // TXB_tinhtrangHDLD
             // 
@@ -381,6 +414,29 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(574, 404);
             this.panel3.TabIndex = 53;
+            // 
+            // TXB_gioitinh
+            // 
+            this.TXB_gioitinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.TXB_gioitinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_gioitinh.Enabled = false;
+            this.TXB_gioitinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_gioitinh.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_gioitinh.Location = new System.Drawing.Point(309, 259);
+            this.TXB_gioitinh.Name = "TXB_gioitinh";
+            this.TXB_gioitinh.Size = new System.Drawing.Size(204, 30);
+            this.TXB_gioitinh.TabIndex = 60;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(305, 229);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 22);
+            this.label3.TabIndex = 57;
+            this.label3.Text = "Giới tính";
             // 
             // TXB_ten
             // 
@@ -508,7 +564,7 @@
             this.panel2.Controls.Add(this.TXB_thuongtru);
             this.panel2.Location = new System.Drawing.Point(57, 441);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(574, 399);
+            this.panel2.Size = new System.Drawing.Size(574, 552);
             this.panel2.TabIndex = 46;
             // 
             // TXB_bhxh
@@ -666,62 +722,6 @@
             this.BTN_yeucauchinhsua.Text = "Gửi yêu cầu";
             this.BTN_yeucauchinhsua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_yeucauchinhsua.UseVisualStyleBackColor = true;
-            // 
-            // TXB_loainv
-            // 
-            this.TXB_loainv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_loainv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TXB_loainv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_loainv.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_loainv.Location = new System.Drawing.Point(23, 50);
-            this.TXB_loainv.Name = "TXB_loainv";
-            this.TXB_loainv.Size = new System.Drawing.Size(225, 30);
-            this.TXB_loainv.TabIndex = 50;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(305, 229);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 22);
-            this.label3.TabIndex = 57;
-            this.label3.Text = "Giới tính";
-            // 
-            // TXB_gioitinh
-            // 
-            this.TXB_gioitinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_gioitinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TXB_gioitinh.Enabled = false;
-            this.TXB_gioitinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_gioitinh.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_gioitinh.Location = new System.Drawing.Point(309, 259);
-            this.TXB_gioitinh.Name = "TXB_gioitinh";
-            this.TXB_gioitinh.Size = new System.Drawing.Size(204, 30);
-            this.TXB_gioitinh.TabIndex = 60;
-            // 
-            // TXB_phongban
-            // 
-            this.TXB_phongban.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_phongban.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TXB_phongban.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_phongban.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_phongban.Location = new System.Drawing.Point(25, 146);
-            this.TXB_phongban.Name = "TXB_phongban";
-            this.TXB_phongban.Size = new System.Drawing.Size(225, 30);
-            this.TXB_phongban.TabIndex = 60;
-            // 
-            // TXB_nhom
-            // 
-            this.TXB_nhom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_nhom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TXB_nhom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_nhom.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_nhom.Location = new System.Drawing.Point(25, 240);
-            this.TXB_nhom.Name = "TXB_nhom";
-            this.TXB_nhom.Size = new System.Drawing.Size(225, 30);
-            this.TXB_nhom.TabIndex = 61;
             // 
             // ThongTinNhanVien
             // 

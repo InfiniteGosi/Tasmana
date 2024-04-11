@@ -108,7 +108,7 @@ namespace DangNhap
             this.panel2.Controls.Add(this.TXB_thuongtru);
             this.panel2.Location = new System.Drawing.Point(57, 441);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(574, 399);
+            this.panel2.Size = new System.Drawing.Size(574, 561);
             this.panel2.TabIndex = 46;
             // 
             // TXB_bhxh
@@ -409,7 +409,7 @@ namespace DangNhap
             this.panel1.Controls.Add(this.LB_ngaykyHDLD);
             this.panel1.Location = new System.Drawing.Point(658, 551);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(631, 289);
+            this.panel1.Size = new System.Drawing.Size(631, 451);
             this.panel1.TabIndex = 45;
             // 
             // TXB_tinhtrangHDLD
