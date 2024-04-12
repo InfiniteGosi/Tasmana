@@ -31,17 +31,20 @@ namespace DangNhap
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NhanVien));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BTN_themnhanvien = new Guna.UI.WinForms.GunaGradientButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.TXB_sotrang = new System.Windows.Forms.TextBox();
             this.BTN_trangtruoc = new System.Windows.Forms.Button();
             this.BTN_trangsau = new System.Windows.Forms.Button();
-            this.BTN_in = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.DGV_hienthinhanvien = new System.Windows.Forms.DataGridView();
+            this.TM_nhanvien = new System.Windows.Forms.Timer(this.components);
             this.C_manhanvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_Ho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +52,9 @@ namespace DangNhap
             this.C_sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_chitiet = new System.Windows.Forms.DataGridViewImageColumn();
-            this.TM_nhanvien = new System.Windows.Forms.Timer(this.components);
+            this.BTN_in = new Guna.UI.WinForms.GunaGradientButton();
+            this.BTN_PDF = new Guna.UI.WinForms.GunaGradientButton();
+            this.BTN_excel = new Guna.UI.WinForms.GunaGradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_hienthinhanvien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,33 +141,6 @@ namespace DangNhap
             this.BTN_trangsau.Text = ">";
             this.BTN_trangsau.UseVisualStyleBackColor = true;
             // 
-            // BTN_in
-            // 
-            this.BTN_in.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BTN_in.AnimationHoverSpeed = 0.07F;
-            this.BTN_in.AnimationSpeed = 0.03F;
-            this.BTN_in.BaseColor1 = System.Drawing.Color.Transparent;
-            this.BTN_in.BaseColor2 = System.Drawing.Color.Transparent;
-            this.BTN_in.BorderColor = System.Drawing.Color.White;
-            this.BTN_in.BorderSize = 1;
-            this.BTN_in.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.BTN_in.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_in.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_in.ForeColor = System.Drawing.Color.White;
-            this.BTN_in.Image = ((System.Drawing.Image)(resources.GetObject("BTN_in.Image")));
-            this.BTN_in.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_in.Location = new System.Drawing.Point(65, 527);
-            this.BTN_in.Name = "BTN_in";
-            this.BTN_in.OnHoverBaseColor1 = System.Drawing.Color.DimGray;
-            this.BTN_in.OnHoverBaseColor2 = System.Drawing.Color.DimGray;
-            this.BTN_in.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.BTN_in.OnHoverForeColor = System.Drawing.Color.Black;
-            this.BTN_in.OnHoverImage = null;
-            this.BTN_in.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_in.Size = new System.Drawing.Size(77, 31);
-            this.BTN_in.TabIndex = 101;
-            this.BTN_in.Text = "In";
-            // 
             // gunaGradientButton1
             // 
             this.gunaGradientButton1.Animated = true;
@@ -236,7 +214,15 @@ namespace DangNhap
             this.DGV_hienthinhanvien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGV_hienthinhanvien.ColumnHeadersHeight = 30;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_hienthinhanvien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.DGV_hienthinhanvien.ColumnHeadersHeight = 35;
             this.DGV_hienthinhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGV_hienthinhanvien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.C_manhanvien,
@@ -246,9 +232,24 @@ namespace DangNhap
             this.C_sdt,
             this.C_email,
             this.C_chitiet});
+            this.DGV_hienthinhanvien.EnableHeadersVisualStyles = false;
             this.DGV_hienthinhanvien.Location = new System.Drawing.Point(65, 120);
             this.DGV_hienthinhanvien.Name = "DGV_hienthinhanvien";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_hienthinhanvien.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.DGV_hienthinhanvien.RowHeadersVisible = false;
             this.DGV_hienthinhanvien.RowHeadersWidth = 51;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            this.DGV_hienthinhanvien.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.DGV_hienthinhanvien.RowTemplate.Height = 24;
             this.DGV_hienthinhanvien.Size = new System.Drawing.Size(1248, 401);
             this.DGV_hienthinhanvien.TabIndex = 106;
@@ -300,23 +301,112 @@ namespace DangNhap
             // C_chitiet
             // 
             this.C_chitiet.HeaderText = "Chi tiết";
+            this.C_chitiet.Image = ((System.Drawing.Image)(resources.GetObject("C_chitiet.Image")));
+            this.C_chitiet.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.C_chitiet.MinimumWidth = 6;
             this.C_chitiet.Name = "C_chitiet";
             this.C_chitiet.Width = 125;
+            // 
+            // BTN_in
+            // 
+            this.BTN_in.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BTN_in.AnimationHoverSpeed = 0.07F;
+            this.BTN_in.AnimationSpeed = 0.03F;
+            this.BTN_in.BaseColor1 = System.Drawing.Color.Silver;
+            this.BTN_in.BaseColor2 = System.Drawing.Color.DimGray;
+            this.BTN_in.BorderColor = System.Drawing.Color.White;
+            this.BTN_in.BorderSize = 1;
+            this.BTN_in.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_in.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_in.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_in.ForeColor = System.Drawing.Color.White;
+            this.BTN_in.Image = ((System.Drawing.Image)(resources.GetObject("BTN_in.Image")));
+            this.BTN_in.ImageSize = new System.Drawing.Size(20, 20);
+            this.BTN_in.Location = new System.Drawing.Point(291, 527);
+            this.BTN_in.Name = "BTN_in";
+            this.BTN_in.OnHoverBaseColor1 = System.Drawing.Color.DimGray;
+            this.BTN_in.OnHoverBaseColor2 = System.Drawing.Color.Silver;
+            this.BTN_in.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_in.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_in.OnHoverImage = null;
+            this.BTN_in.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_in.Size = new System.Drawing.Size(89, 48);
+            this.BTN_in.TabIndex = 109;
+            this.BTN_in.Text = "In";
+            this.BTN_in.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // BTN_PDF
+            // 
+            this.BTN_PDF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BTN_PDF.AnimationHoverSpeed = 0.07F;
+            this.BTN_PDF.AnimationSpeed = 0.03F;
+            this.BTN_PDF.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(131)))), ((int)(((byte)(18)))));
+            this.BTN_PDF.BaseColor2 = System.Drawing.Color.Coral;
+            this.BTN_PDF.BorderColor = System.Drawing.Color.White;
+            this.BTN_PDF.BorderSize = 1;
+            this.BTN_PDF.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_PDF.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_PDF.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_PDF.ForeColor = System.Drawing.Color.White;
+            this.BTN_PDF.Image = ((System.Drawing.Image)(resources.GetObject("BTN_PDF.Image")));
+            this.BTN_PDF.ImageSize = new System.Drawing.Size(20, 20);
+            this.BTN_PDF.Location = new System.Drawing.Point(178, 527);
+            this.BTN_PDF.Name = "BTN_PDF";
+            this.BTN_PDF.OnHoverBaseColor1 = System.Drawing.Color.Coral;
+            this.BTN_PDF.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(131)))), ((int)(((byte)(18)))));
+            this.BTN_PDF.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_PDF.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_PDF.OnHoverImage = null;
+            this.BTN_PDF.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_PDF.Size = new System.Drawing.Size(107, 48);
+            this.BTN_PDF.TabIndex = 108;
+            this.BTN_PDF.Text = "PDF";
+            this.BTN_PDF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // BTN_excel
+            // 
+            this.BTN_excel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BTN_excel.AnimationHoverSpeed = 0.07F;
+            this.BTN_excel.AnimationSpeed = 0.03F;
+            this.BTN_excel.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(95)))), ((int)(((byte)(45)))));
+            this.BTN_excel.BaseColor2 = System.Drawing.Color.Green;
+            this.BTN_excel.BorderColor = System.Drawing.Color.White;
+            this.BTN_excel.BorderSize = 1;
+            this.BTN_excel.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_excel.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_excel.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_excel.ForeColor = System.Drawing.Color.White;
+            this.BTN_excel.Image = ((System.Drawing.Image)(resources.GetObject("BTN_excel.Image")));
+            this.BTN_excel.ImageSize = new System.Drawing.Size(20, 20);
+            this.BTN_excel.Location = new System.Drawing.Point(65, 527);
+            this.BTN_excel.Name = "BTN_excel";
+            this.BTN_excel.OnHoverBaseColor1 = System.Drawing.Color.Green;
+            this.BTN_excel.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(95)))), ((int)(((byte)(45)))));
+            this.BTN_excel.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_excel.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_excel.OnHoverImage = null;
+            this.BTN_excel.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_excel.Size = new System.Drawing.Size(107, 48);
+            this.BTN_excel.TabIndex = 107;
+            this.BTN_excel.Text = "Excel";
+            this.BTN_excel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1376, 782);
+            this.Controls.Add(this.BTN_in);
+            this.Controls.Add(this.BTN_PDF);
+            this.Controls.Add(this.BTN_excel);
             this.Controls.Add(this.DGV_hienthinhanvien);
             this.Controls.Add(this.BTN_themnhanvien);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.TXB_sotrang);
             this.Controls.Add(this.BTN_trangtruoc);
             this.Controls.Add(this.BTN_trangsau);
-            this.Controls.Add(this.BTN_in);
             this.Controls.Add(this.gunaGradientButton1);
             this.Controls.Add(this.comboBox6);
             this.Controls.Add(this.comboBox5);
@@ -337,12 +427,12 @@ namespace DangNhap
         private System.Windows.Forms.TextBox TXB_sotrang;
         private System.Windows.Forms.Button BTN_trangtruoc;
         private System.Windows.Forms.Button BTN_trangsau;
-        private Guna.UI.WinForms.GunaGradientButton BTN_in;
         private Guna.UI.WinForms.GunaGradientButton gunaGradientButton1;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.DataGridView DGV_hienthinhanvien;
+        private System.Windows.Forms.Timer TM_nhanvien;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_manhanvien;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_Ho;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_ten;
@@ -350,6 +440,8 @@ namespace DangNhap
         private System.Windows.Forms.DataGridViewTextBoxColumn C_sdt;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_email;
         private System.Windows.Forms.DataGridViewImageColumn C_chitiet;
-        private System.Windows.Forms.Timer TM_nhanvien;
+        private Guna.UI.WinForms.GunaGradientButton BTN_in;
+        private Guna.UI.WinForms.GunaGradientButton BTN_PDF;
+        private Guna.UI.WinForms.GunaGradientButton BTN_excel;
     }
 }

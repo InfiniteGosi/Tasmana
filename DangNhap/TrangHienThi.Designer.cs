@@ -74,12 +74,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PN_main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.PN_main.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PN_main.BackgroundImage")));
             this.PN_main.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PN_main.Controls.Add(this.panel2);
             this.PN_main.Controls.Add(this.pn_right);
-            this.PN_main.Location = new System.Drawing.Point(240, 91);
+            this.PN_main.Location = new System.Drawing.Point(240, 87);
             this.PN_main.Name = "PN_main";
-            this.PN_main.Size = new System.Drawing.Size(1680, 989);
+            this.PN_main.Size = new System.Drawing.Size(1265, 845);
             this.PN_main.TabIndex = 3;
             // 
             // panel2
@@ -93,9 +94,9 @@
             this.panel2.Controls.Add(this.lb_slg2);
             this.panel2.Controls.Add(this.lb_slg1);
             this.panel2.Controls.Add(this.lb_tasmana);
-            this.panel2.Location = new System.Drawing.Point(0, 68);
+            this.panel2.Location = new System.Drawing.Point(1, 152);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1680, 458);
+            this.panel2.Size = new System.Drawing.Size(1265, 314);
             this.panel2.TabIndex = 23;
             // 
             // lb_denvoi
@@ -105,7 +106,7 @@
             this.lb_denvoi.BackColor = System.Drawing.Color.Transparent;
             this.lb_denvoi.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_denvoi.ForeColor = System.Drawing.Color.White;
-            this.lb_denvoi.Location = new System.Drawing.Point(467, 134);
+            this.lb_denvoi.Location = new System.Drawing.Point(259, 62);
             this.lb_denvoi.Name = "lb_denvoi";
             this.lb_denvoi.Size = new System.Drawing.Size(156, 37);
             this.lb_denvoi.TabIndex = 13;
@@ -118,7 +119,7 @@
             this.lb_chaomung.BackColor = System.Drawing.Color.Transparent;
             this.lb_chaomung.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_chaomung.ForeColor = System.Drawing.Color.White;
-            this.lb_chaomung.Location = new System.Drawing.Point(462, 99);
+            this.lb_chaomung.Location = new System.Drawing.Point(254, 27);
             this.lb_chaomung.Name = "lb_chaomung";
             this.lb_chaomung.Size = new System.Drawing.Size(231, 37);
             this.lb_chaomung.TabIndex = 12;
@@ -131,7 +132,7 @@
             this.lb_slg2.BackColor = System.Drawing.Color.Transparent;
             this.lb_slg2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_slg2.ForeColor = System.Drawing.Color.White;
-            this.lb_slg2.Location = new System.Drawing.Point(742, 271);
+            this.lb_slg2.Location = new System.Drawing.Point(534, 199);
             this.lb_slg2.Name = "lb_slg2";
             this.lb_slg2.Size = new System.Drawing.Size(489, 25);
             this.lb_slg2.TabIndex = 11;
@@ -144,7 +145,7 @@
             this.lb_slg1.BackColor = System.Drawing.Color.Transparent;
             this.lb_slg1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_slg1.ForeColor = System.Drawing.Color.White;
-            this.lb_slg1.Location = new System.Drawing.Point(353, 239);
+            this.lb_slg1.Location = new System.Drawing.Point(145, 167);
             this.lb_slg1.Name = "lb_slg1";
             this.lb_slg1.Size = new System.Drawing.Size(417, 25);
             this.lb_slg1.TabIndex = 10;
@@ -157,7 +158,7 @@
             this.lb_tasmana.BackColor = System.Drawing.Color.Transparent;
             this.lb_tasmana.Font = new System.Drawing.Font("Calisto MT", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_tasmana.ForeColor = System.Drawing.Color.White;
-            this.lb_tasmana.Location = new System.Drawing.Point(630, 136);
+            this.lb_tasmana.Location = new System.Drawing.Point(422, 64);
             this.lb_tasmana.Name = "lb_tasmana";
             this.lb_tasmana.Size = new System.Drawing.Size(463, 90);
             this.lb_tasmana.TabIndex = 2;
@@ -175,7 +176,7 @@
             this.pn_right.GradientColor2 = System.Drawing.Color.Black;
             this.pn_right.GradientColor3 = System.Drawing.Color.SlateGray;
             this.pn_right.GradientColor4 = System.Drawing.Color.Black;
-            this.pn_right.Location = new System.Drawing.Point(1525, 934);
+            this.pn_right.Location = new System.Drawing.Point(1104, 740);
             this.pn_right.Name = "pn_right";
             this.pn_right.Size = new System.Drawing.Size(149, 52);
             this.pn_right.TabIndex = 23;
@@ -231,7 +232,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(242, 1080);
+            this.panel1.Size = new System.Drawing.Size(242, 932);
             this.panel1.TabIndex = 25;
             // 
             // BTN_nhanvien
@@ -243,11 +244,11 @@
             this.BTN_nhanvien.BorderColor = System.Drawing.Color.Black;
             this.BTN_nhanvien.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_nhanvien.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_nhanvien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_nhanvien.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_nhanvien.ForeColor = System.Drawing.Color.White;
             this.BTN_nhanvien.Image = ((System.Drawing.Image)(resources.GetObject("BTN_nhanvien.Image")));
             this.BTN_nhanvien.ImageSize = new System.Drawing.Size(30, 30);
-            this.BTN_nhanvien.Location = new System.Drawing.Point(1, 447);
+            this.BTN_nhanvien.Location = new System.Drawing.Point(1, 499);
             this.BTN_nhanvien.Name = "BTN_nhanvien";
             this.BTN_nhanvien.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.BTN_nhanvien.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -269,7 +270,7 @@
             this.BTN_congviec.BorderColor = System.Drawing.Color.Black;
             this.BTN_congviec.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_congviec.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_congviec.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_congviec.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_congviec.ForeColor = System.Drawing.Color.White;
             this.BTN_congviec.Image = ((System.Drawing.Image)(resources.GetObject("BTN_congviec.Image")));
             this.BTN_congviec.ImageSize = new System.Drawing.Size(30, 30);
@@ -295,11 +296,11 @@
             this.BTN_cudan.BorderColor = System.Drawing.Color.Black;
             this.BTN_cudan.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_cudan.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_cudan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_cudan.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_cudan.ForeColor = System.Drawing.Color.White;
             this.BTN_cudan.Image = ((System.Drawing.Image)(resources.GetObject("BTN_cudan.Image")));
             this.BTN_cudan.ImageSize = new System.Drawing.Size(30, 30);
-            this.BTN_cudan.Location = new System.Drawing.Point(1, 535);
+            this.BTN_cudan.Location = new System.Drawing.Point(1, 606);
             this.BTN_cudan.Name = "BTN_cudan";
             this.BTN_cudan.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.BTN_cudan.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -321,11 +322,11 @@
             this.BTN_thongbao.BorderColor = System.Drawing.Color.Black;
             this.BTN_thongbao.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_thongbao.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_thongbao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_thongbao.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_thongbao.ForeColor = System.Drawing.Color.White;
             this.BTN_thongbao.Image = ((System.Drawing.Image)(resources.GetObject("BTN_thongbao.Image")));
             this.BTN_thongbao.ImageSize = new System.Drawing.Size(30, 30);
-            this.BTN_thongbao.Location = new System.Drawing.Point(1, 271);
+            this.BTN_thongbao.Location = new System.Drawing.Point(1, 285);
             this.BTN_thongbao.Name = "BTN_thongbao";
             this.BTN_thongbao.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.BTN_thongbao.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -347,11 +348,11 @@
             this.BTN_canho.BorderColor = System.Drawing.Color.Black;
             this.BTN_canho.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_canho.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_canho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_canho.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_canho.ForeColor = System.Drawing.Color.White;
             this.BTN_canho.Image = ((System.Drawing.Image)(resources.GetObject("BTN_canho.Image")));
             this.BTN_canho.ImageSize = new System.Drawing.Size(30, 30);
-            this.BTN_canho.Location = new System.Drawing.Point(1, 623);
+            this.BTN_canho.Location = new System.Drawing.Point(1, 713);
             this.BTN_canho.Name = "BTN_canho";
             this.BTN_canho.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.BTN_canho.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -374,11 +375,11 @@
             this.BTN_logout.BorderColor = System.Drawing.Color.Black;
             this.BTN_logout.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_logout.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_logout.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_logout.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_logout.ForeColor = System.Drawing.Color.Red;
             this.BTN_logout.Image = ((System.Drawing.Image)(resources.GetObject("BTN_logout.Image")));
             this.BTN_logout.ImageSize = new System.Drawing.Size(30, 30);
-            this.BTN_logout.Location = new System.Drawing.Point(1, 1017);
+            this.BTN_logout.Location = new System.Drawing.Point(1, 869);
             this.BTN_logout.Name = "BTN_logout";
             this.BTN_logout.OnHoverBaseColor = System.Drawing.Color.Red;
             this.BTN_logout.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -400,11 +401,11 @@
             this.BTN_thongke.BorderColor = System.Drawing.Color.Black;
             this.BTN_thongke.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_thongke.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_thongke.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_thongke.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_thongke.ForeColor = System.Drawing.Color.White;
             this.BTN_thongke.Image = ((System.Drawing.Image)(resources.GetObject("BTN_thongke.Image")));
             this.BTN_thongke.ImageSize = new System.Drawing.Size(30, 30);
-            this.BTN_thongke.Location = new System.Drawing.Point(1, 359);
+            this.BTN_thongke.Location = new System.Drawing.Point(1, 392);
             this.BTN_thongke.Name = "BTN_thongke";
             this.BTN_thongke.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.BTN_thongke.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -494,7 +495,7 @@
             this.BTN_square.Image = ((System.Drawing.Image)(resources.GetObject("BTN_square.Image")));
             this.BTN_square.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_square.ImageSize = new System.Drawing.Size(15, 15);
-            this.BTN_square.Location = new System.Drawing.Point(1866, 0);
+            this.BTN_square.Location = new System.Drawing.Point(1443, 1);
             this.BTN_square.Name = "BTN_square";
             this.BTN_square.OnHoverBaseColor1 = System.Drawing.Color.Silver;
             this.BTN_square.OnHoverBaseColor2 = System.Drawing.Color.Silver;
@@ -523,7 +524,7 @@
             this.BTN_x.Image = ((System.Drawing.Image)(resources.GetObject("BTN_x.Image")));
             this.BTN_x.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_x.ImageSize = new System.Drawing.Size(15, 15);
-            this.BTN_x.Location = new System.Drawing.Point(1895, 0);
+            this.BTN_x.Location = new System.Drawing.Point(1479, 1);
             this.BTN_x.Name = "BTN_x";
             this.BTN_x.OnHoverBaseColor1 = System.Drawing.Color.Red;
             this.BTN_x.OnHoverBaseColor2 = System.Drawing.Color.Red;
@@ -553,8 +554,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.ClientSize = new System.Drawing.Size(1505, 932);
             this.Controls.Add(this.BTN_square);
             this.Controls.Add(this.BTN_x);
             this.Controls.Add(this.gunaPictureBox2);
@@ -567,7 +568,6 @@
             this.Name = "TrangHienThi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrangHienThi";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TrangHienThi_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TrangHienThi_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TrangHienThi_MouseUp);

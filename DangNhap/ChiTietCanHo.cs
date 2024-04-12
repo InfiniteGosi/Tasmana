@@ -16,16 +16,5 @@ namespace DangNhap
         {
             InitializeComponent();
         }
-
-        private void btn_thoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void BTN_chitiet_Click(object sender, EventArgs e)
-        {
-            LichSuCanHo lsch = new LichSuCanHo();
-            lsch.Show();
-        }
     }
 }

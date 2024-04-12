@@ -53,6 +53,7 @@ namespace DangNhap
             this.TXB_email = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.CHB_vohieuhoa = new System.Windows.Forms.CheckBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -85,7 +86,6 @@ namespace DangNhap
             this.BTN_huy = new System.Windows.Forms.Button();
             this.BTN_yeucauchinhsua = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -340,8 +340,7 @@ namespace DangNhap
             // 
             // panel5
             // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.panel5.AutoScroll = true;
             this.panel5.AutoScrollMargin = new System.Drawing.Size(20, 20);
             this.panel5.Controls.Add(this.panel6);
@@ -367,6 +366,17 @@ namespace DangNhap
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(631, 282);
             this.panel6.TabIndex = 54;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(180, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(257, 25);
+            this.label4.TabIndex = 58;
+            this.label4.Text = "THÔNG TIN TÀI KHOẢN";
             // 
             // CHB_vohieuhoa
             // 
@@ -696,7 +706,7 @@ namespace DangNhap
             this.BTN_luu.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.BTN_luu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_luu.Image = ((System.Drawing.Image)(resources.GetObject("BTN_luu.Image")));
-            this.BTN_luu.Location = new System.Drawing.Point(1291, 54);
+            this.BTN_luu.Location = new System.Drawing.Point(1295, 60);
             this.BTN_luu.Name = "BTN_luu";
             this.BTN_luu.Size = new System.Drawing.Size(45, 45);
             this.BTN_luu.TabIndex = 54;
@@ -710,7 +720,7 @@ namespace DangNhap
             this.BTN_huy.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.BTN_huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_huy.Image = ((System.Drawing.Image)(resources.GetObject("BTN_huy.Image")));
-            this.BTN_huy.Location = new System.Drawing.Point(1220, 54);
+            this.BTN_huy.Location = new System.Drawing.Point(1211, 60);
             this.BTN_huy.Name = "BTN_huy";
             this.BTN_huy.Size = new System.Drawing.Size(45, 45);
             this.BTN_huy.TabIndex = 55;
@@ -723,11 +733,10 @@ namespace DangNhap
             this.BTN_yeucauchinhsua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_yeucauchinhsua.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_yeucauchinhsua.ForeColor = System.Drawing.Color.White;
-            this.BTN_yeucauchinhsua.Image = ((System.Drawing.Image)(resources.GetObject("BTN_yeucauchinhsua.Image")));
             this.BTN_yeucauchinhsua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_yeucauchinhsua.Location = new System.Drawing.Point(1175, 12);
+            this.BTN_yeucauchinhsua.Location = new System.Drawing.Point(1211, 8);
             this.BTN_yeucauchinhsua.Name = "BTN_yeucauchinhsua";
-            this.BTN_yeucauchinhsua.Size = new System.Drawing.Size(161, 36);
+            this.BTN_yeucauchinhsua.Size = new System.Drawing.Size(129, 36);
             this.BTN_yeucauchinhsua.TabIndex = 56;
             this.BTN_yeucauchinhsua.Text = "Gửi yêu cầu";
             this.BTN_yeucauchinhsua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -740,20 +749,9 @@ namespace DangNhap
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(361, 31);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(511, 51);
+            this.label3.Size = new System.Drawing.Size(500, 49);
             this.label3.TabIndex = 57;
             this.label3.Text = "THÔNG TIN NHÂN VIÊN";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(180, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(265, 26);
-            this.label4.TabIndex = 58;
-            this.label4.Text = "THÔNG TIN TÀI KHOẢN";
             // 
             // ThongTinCaNhan
             // 
