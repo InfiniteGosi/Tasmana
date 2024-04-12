@@ -41,5 +41,13 @@ namespace BLL
         {
             return AccountDAO.Instance.UpdateAccount(parameters);
         }
+        public string UpdatePassword(Dictionary<string, object> parameters)
+        {
+            if (AccountDAO.Instance.UpdatePassword(parameters))
+            {
+                return "Cập nhật mật khẩu thành công";
+            }
+            return "Cập nhật mật khẩu thất bại";
+        }
     }
 }

@@ -64,23 +64,26 @@ namespace DangNhap
                     GetAccount(userId);
                     if (!currentAccount.IsDisabled)
                     {
-                        MessageBox.Show("Đăng nhập thành công");
                         TrangHienThi formTrangChu = new TrangHienThi();
-                        formTrangChu.ShowDialog();
+                        formTrangChu.Show();
+                        this.Hide();
                     }
                     else
                     {
                         LB_error.Text = "Tài khoản đã bị vô hiệu hóa";
+                        return;
                     }
                 }
                 else
                 {
                     LB_error.Text = "Mật khẩu không đúng";
+                    return;
                 }
             }
             else
             {
                 LB_error.Text = "Tài khoản không tồn tại";
+                return;
             }
         }
 
@@ -98,7 +101,7 @@ namespace DangNhap
 
         private void BTN_close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void DangNhap_MouseDown(object sender, MouseEventArgs e)

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThongTinNhanVien));
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.CHB_vohieuhoa = new System.Windows.Forms.CheckBox();
             this.TXB_matkhau = new System.Windows.Forms.TextBox();
             this.TXB_manguoidung = new System.Windows.Forms.TextBox();
             this.LB_taikhoan = new System.Windows.Forms.Label();
@@ -42,13 +41,13 @@
             this.LB_email = new System.Windows.Forms.Label();
             this.TXB_sdt = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TXB_ngaykyHDLD = new System.Windows.Forms.TextBox();
+            this.TXB_ngayhetHDLD = new System.Windows.Forms.TextBox();
             this.TXB_nhom = new System.Windows.Forms.TextBox();
             this.TXB_phongban = new System.Windows.Forms.TextBox();
             this.TXB_loainv = new System.Windows.Forms.TextBox();
             this.TXB_tinhtrangHDLD = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.DTP_ngaykyHDLD = new System.Windows.Forms.DateTimePicker();
-            this.DTP_ngayhetHDLD = new System.Windows.Forms.DateTimePicker();
             this.CHB_tunglanv = new System.Windows.Forms.CheckBox();
             this.LB_vitri = new System.Windows.Forms.Label();
             this.LB_manhom = new System.Windows.Forms.Label();
@@ -56,11 +55,11 @@
             this.LB_HDLD = new System.Windows.Forms.Label();
             this.LB_ngaykyHDLD = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.TXB_ngaysinh = new System.Windows.Forms.TextBox();
             this.TXB_gioitinh = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.TXB_ten = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.DTP_ngaysinh = new System.Windows.Forms.DateTimePicker();
             this.TXB_ho = new System.Windows.Forms.TextBox();
             this.TXB_manv = new System.Windows.Forms.TextBox();
             this.LB_hovaten = new System.Windows.Forms.Label();
@@ -82,6 +81,9 @@
             this.BTN_huy = new System.Windows.Forms.Button();
             this.BTN_luu = new System.Windows.Forms.Button();
             this.BTN_yeucauchinhsua = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.BTN_doimatkhau = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -109,7 +111,8 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.panel6.Controls.Add(this.CHB_vohieuhoa);
+            this.panel6.Controls.Add(this.BTN_doimatkhau);
+            this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.TXB_matkhau);
             this.panel6.Controls.Add(this.TXB_manguoidung);
             this.panel6.Controls.Add(this.LB_taikhoan);
@@ -119,20 +122,6 @@
             this.panel6.Size = new System.Drawing.Size(631, 282);
             this.panel6.TabIndex = 54;
             // 
-            // CHB_vohieuhoa
-            // 
-            this.CHB_vohieuhoa.AutoSize = true;
-            this.CHB_vohieuhoa.Enabled = false;
-            this.CHB_vohieuhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CHB_vohieuhoa.ForeColor = System.Drawing.Color.White;
-            this.CHB_vohieuhoa.Location = new System.Drawing.Point(25, 211);
-            this.CHB_vohieuhoa.Name = "CHB_vohieuhoa";
-            this.CHB_vohieuhoa.Size = new System.Drawing.Size(223, 29);
-            this.CHB_vohieuhoa.TabIndex = 61;
-            this.CHB_vohieuhoa.Text = "Vô hiệu hóa tài khoản";
-            this.CHB_vohieuhoa.UseVisualStyleBackColor = true;
-            this.CHB_vohieuhoa.Visible = false;
-            // 
             // TXB_matkhau
             // 
             this.TXB_matkhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -140,7 +129,7 @@
             this.TXB_matkhau.Enabled = false;
             this.TXB_matkhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_matkhau.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_matkhau.Location = new System.Drawing.Point(25, 127);
+            this.TXB_matkhau.Location = new System.Drawing.Point(110, 181);
             this.TXB_matkhau.Name = "TXB_matkhau";
             this.TXB_matkhau.Size = new System.Drawing.Size(419, 30);
             this.TXB_matkhau.TabIndex = 55;
@@ -152,7 +141,7 @@
             this.TXB_manguoidung.Enabled = false;
             this.TXB_manguoidung.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_manguoidung.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_manguoidung.Location = new System.Drawing.Point(23, 38);
+            this.TXB_manguoidung.Location = new System.Drawing.Point(108, 92);
             this.TXB_manguoidung.Name = "TXB_manguoidung";
             this.TXB_manguoidung.Size = new System.Drawing.Size(419, 30);
             this.TXB_manguoidung.TabIndex = 54;
@@ -162,7 +151,7 @@
             this.LB_taikhoan.AutoSize = true;
             this.LB_taikhoan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_taikhoan.ForeColor = System.Drawing.Color.White;
-            this.LB_taikhoan.Location = new System.Drawing.Point(19, 15);
+            this.LB_taikhoan.Location = new System.Drawing.Point(104, 69);
             this.LB_taikhoan.Name = "LB_taikhoan";
             this.LB_taikhoan.Size = new System.Drawing.Size(130, 22);
             this.LB_taikhoan.TabIndex = 52;
@@ -173,7 +162,7 @@
             this.LB_matkhau.AutoSize = true;
             this.LB_matkhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_matkhau.ForeColor = System.Drawing.Color.White;
-            this.LB_matkhau.Location = new System.Drawing.Point(21, 104);
+            this.LB_matkhau.Location = new System.Drawing.Point(106, 158);
             this.LB_matkhau.Name = "LB_matkhau";
             this.LB_matkhau.Size = new System.Drawing.Size(82, 22);
             this.LB_matkhau.TabIndex = 53;
@@ -240,13 +229,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.panel1.Controls.Add(this.TXB_ngaykyHDLD);
+            this.panel1.Controls.Add(this.TXB_ngayhetHDLD);
             this.panel1.Controls.Add(this.TXB_nhom);
             this.panel1.Controls.Add(this.TXB_phongban);
             this.panel1.Controls.Add(this.TXB_loainv);
             this.panel1.Controls.Add(this.TXB_tinhtrangHDLD);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.DTP_ngaykyHDLD);
-            this.panel1.Controls.Add(this.DTP_ngayhetHDLD);
             this.panel1.Controls.Add(this.CHB_tunglanv);
             this.panel1.Controls.Add(this.LB_vitri);
             this.panel1.Controls.Add(this.LB_manhom);
@@ -258,10 +247,35 @@
             this.panel1.Size = new System.Drawing.Size(631, 451);
             this.panel1.TabIndex = 45;
             // 
+            // TXB_ngaykyHDLD
+            // 
+            this.TXB_ngaykyHDLD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.TXB_ngaykyHDLD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_ngaykyHDLD.Enabled = false;
+            this.TXB_ngaykyHDLD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_ngaykyHDLD.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_ngaykyHDLD.Location = new System.Drawing.Point(346, 349);
+            this.TXB_ngaykyHDLD.Name = "TXB_ngaykyHDLD";
+            this.TXB_ngaykyHDLD.Size = new System.Drawing.Size(225, 30);
+            this.TXB_ngaykyHDLD.TabIndex = 63;
+            // 
+            // TXB_ngayhetHDLD
+            // 
+            this.TXB_ngayhetHDLD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.TXB_ngayhetHDLD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_ngayhetHDLD.Enabled = false;
+            this.TXB_ngayhetHDLD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_ngayhetHDLD.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_ngayhetHDLD.Location = new System.Drawing.Point(35, 349);
+            this.TXB_ngayhetHDLD.Name = "TXB_ngayhetHDLD";
+            this.TXB_ngayhetHDLD.Size = new System.Drawing.Size(225, 30);
+            this.TXB_ngayhetHDLD.TabIndex = 62;
+            // 
             // TXB_nhom
             // 
             this.TXB_nhom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.TXB_nhom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_nhom.Enabled = false;
             this.TXB_nhom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_nhom.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.TXB_nhom.Location = new System.Drawing.Point(25, 240);
@@ -273,6 +287,7 @@
             // 
             this.TXB_phongban.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.TXB_phongban.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_phongban.Enabled = false;
             this.TXB_phongban.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_phongban.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.TXB_phongban.Location = new System.Drawing.Point(25, 146);
@@ -284,6 +299,7 @@
             // 
             this.TXB_loainv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.TXB_loainv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_loainv.Enabled = false;
             this.TXB_loainv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_loainv.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.TXB_loainv.Location = new System.Drawing.Point(23, 50);
@@ -295,6 +311,7 @@
             // 
             this.TXB_tinhtrangHDLD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.TXB_tinhtrangHDLD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_tinhtrangHDLD.Enabled = false;
             this.TXB_tinhtrangHDLD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_tinhtrangHDLD.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.TXB_tinhtrangHDLD.Location = new System.Drawing.Point(321, 146);
@@ -313,23 +330,10 @@
             this.label2.TabIndex = 59;
             this.label2.Text = "Nhóm";
             // 
-            // DTP_ngaykyHDLD
-            // 
-            this.DTP_ngaykyHDLD.Location = new System.Drawing.Point(346, 337);
-            this.DTP_ngaykyHDLD.Name = "DTP_ngaykyHDLD";
-            this.DTP_ngaykyHDLD.Size = new System.Drawing.Size(237, 22);
-            this.DTP_ngaykyHDLD.TabIndex = 56;
-            // 
-            // DTP_ngayhetHDLD
-            // 
-            this.DTP_ngayhetHDLD.Location = new System.Drawing.Point(33, 337);
-            this.DTP_ngayhetHDLD.Name = "DTP_ngayhetHDLD";
-            this.DTP_ngayhetHDLD.Size = new System.Drawing.Size(237, 22);
-            this.DTP_ngayhetHDLD.TabIndex = 55;
-            // 
             // CHB_tunglanv
             // 
             this.CHB_tunglanv.AutoSize = true;
+            this.CHB_tunglanv.Enabled = false;
             this.CHB_tunglanv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CHB_tunglanv.ForeColor = System.Drawing.Color.White;
             this.CHB_tunglanv.Location = new System.Drawing.Point(309, 48);
@@ -398,11 +402,11 @@
             // 
             this.panel3.AutoScroll = true;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.panel3.Controls.Add(this.TXB_ngaysinh);
             this.panel3.Controls.Add(this.TXB_gioitinh);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.TXB_ten);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.DTP_ngaysinh);
             this.panel3.Controls.Add(this.TXB_ho);
             this.panel3.Controls.Add(this.TXB_manv);
             this.panel3.Controls.Add(this.LB_hovaten);
@@ -414,6 +418,18 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(574, 404);
             this.panel3.TabIndex = 53;
+            // 
+            // TXB_ngaysinh
+            // 
+            this.TXB_ngaysinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.TXB_ngaysinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_ngaysinh.Enabled = false;
+            this.TXB_ngaysinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_ngaysinh.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_ngaysinh.Location = new System.Drawing.Point(28, 259);
+            this.TXB_ngaysinh.Name = "TXB_ngaysinh";
+            this.TXB_ngaysinh.Size = new System.Drawing.Size(204, 30);
+            this.TXB_ngaysinh.TabIndex = 61;
             // 
             // TXB_gioitinh
             // 
@@ -460,14 +476,6 @@
             this.label1.Size = new System.Drawing.Size(40, 22);
             this.label1.TabIndex = 55;
             this.label1.Text = "Tên";
-            // 
-            // DTP_ngaysinh
-            // 
-            this.DTP_ngaysinh.Enabled = false;
-            this.DTP_ngaysinh.Location = new System.Drawing.Point(29, 260);
-            this.DTP_ngaysinh.Name = "DTP_ngaysinh";
-            this.DTP_ngaysinh.Size = new System.Drawing.Size(237, 22);
-            this.DTP_ngaysinh.TabIndex = 52;
             // 
             // TXB_ho
             // 
@@ -571,6 +579,7 @@
             // 
             this.TXB_bhxh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.TXB_bhxh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_bhxh.Enabled = false;
             this.TXB_bhxh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_bhxh.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.TXB_bhxh.Location = new System.Drawing.Point(47, 144);
@@ -582,6 +591,7 @@
             // 
             this.TXB_quequan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.TXB_quequan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_quequan.Enabled = false;
             this.TXB_quequan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_quequan.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.TXB_quequan.Location = new System.Drawing.Point(47, 247);
@@ -649,6 +659,7 @@
             // 
             this.TXB_cccd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.TXB_cccd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_cccd.Enabled = false;
             this.TXB_cccd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_cccd.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.TXB_cccd.Location = new System.Drawing.Point(47, 41);
@@ -660,6 +671,7 @@
             // 
             this.TXB_tamtru.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.TXB_tamtru.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_tamtru.Enabled = false;
             this.TXB_tamtru.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_tamtru.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.TXB_tamtru.Location = new System.Drawing.Point(47, 450);
@@ -672,6 +684,7 @@
             // 
             this.TXB_thuongtru.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.TXB_thuongtru.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_thuongtru.Enabled = false;
             this.TXB_thuongtru.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_thuongtru.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.TXB_thuongtru.Location = new System.Drawing.Point(47, 350);
@@ -723,12 +736,45 @@
             this.BTN_yeucauchinhsua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_yeucauchinhsua.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(395, 26);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(500, 49);
+            this.label4.TabIndex = 58;
+            this.label4.Text = "THÔNG TIN NHÂN VIÊN";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(185, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(257, 25);
+            this.label5.TabIndex = 61;
+            this.label5.Text = "THÔNG TIN TÀI KHOẢN";
+            // 
+            // BTN_doimatkhau
+            // 
+            this.BTN_doimatkhau.Location = new System.Drawing.Point(499, 225);
+            this.BTN_doimatkhau.Name = "BTN_doimatkhau";
+            this.BTN_doimatkhau.Size = new System.Drawing.Size(108, 36);
+            this.BTN_doimatkhau.TabIndex = 62;
+            this.BTN_doimatkhau.Text = "Đổi mật khẩu";
+            this.BTN_doimatkhau.UseVisualStyleBackColor = true;
+            this.BTN_doimatkhau.Click += new System.EventHandler(this.BTN_doimatkhau_Click);
+            // 
             // ThongTinNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1358, 843);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.BTN_huy);
             this.Controls.Add(this.BTN_luu);
@@ -748,6 +794,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -755,7 +802,6 @@
 
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.CheckBox CHB_vohieuhoa;
         private System.Windows.Forms.TextBox TXB_matkhau;
         private System.Windows.Forms.TextBox TXB_manguoidung;
         private System.Windows.Forms.Label LB_taikhoan;
@@ -768,8 +814,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox TXB_tinhtrangHDLD;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker DTP_ngaykyHDLD;
-        private System.Windows.Forms.DateTimePicker DTP_ngayhetHDLD;
         private System.Windows.Forms.CheckBox CHB_tunglanv;
         private System.Windows.Forms.Label LB_vitri;
         private System.Windows.Forms.Label LB_manhom;
@@ -779,7 +823,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox TXB_ten;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker DTP_ngaysinh;
         private System.Windows.Forms.TextBox TXB_ho;
         private System.Windows.Forms.TextBox TXB_manv;
         private System.Windows.Forms.Label LB_hovaten;
@@ -806,5 +849,11 @@
         private System.Windows.Forms.TextBox TXB_loainv;
         private System.Windows.Forms.TextBox TXB_gioitinh;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox TXB_ngaysinh;
+        private System.Windows.Forms.TextBox TXB_ngaykyHDLD;
+        private System.Windows.Forms.TextBox TXB_ngayhetHDLD;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button BTN_doimatkhau;
     }
 }

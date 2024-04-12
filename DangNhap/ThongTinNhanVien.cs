@@ -36,8 +36,6 @@ namespace DangNhap
         {
             division = GroupBLL.Instance.GetDivsionByGroupId(group.MaNhom);
         }
-        // Hiện loại nhân viên từ mảng loaiNV vào CBB_loainv
-        private readonly string[] loaiNV = { "Intern / Trainne", "Part-time", "Full-time" };
         private void DisplayEmployeeeInfo()
         {
             // Hiện thông tin nhân viên
@@ -46,7 +44,7 @@ namespace DangNhap
             TXB_manv.Text = employee.MaNhanVien;
             TXB_ho.Text = employee.Ho;
             TXB_ten.Text = employee.Ten;
-            DTP_ngaysinh.Value = employee.NgaySinh;
+            TXB_ngaysinh.Text = employee.NgaySinh.ToString("dd/MM/yyyy");
             if (employee.GioiTinh == true)
             {
                 TXB_gioitinh.Text = "Nam";
@@ -63,8 +61,8 @@ namespace DangNhap
             }
             TXB_phongban.Text = $"{division.MaBoPhan} - {division.TenBoPhan}";
             TXB_nhom.Text = group.MaNhom;
-            DTP_ngayhetHDLD.Value = employee.NgayHetHDLD;
-            DTP_ngaykyHDLD.Value = employee.NgayKyHDLD;
+            TXB_ngayhetHDLD.Text = employee.NgayHetHDLD.ToString("dd/MM/yyyy");
+            TXB_ngaykyHDLD.Text = employee.NgayKyHDLD.ToString("dd/MM/yyyy");
             TXB_tinhtrangHDLD.Text = employee.TinhTrangHDLD;
             TXB_sdt.Text = employee.SoDienThoai;
             TXB_email.Text = employee.Email;
@@ -78,12 +76,19 @@ namespace DangNhap
             Account account = employee.TaiKhoanNguoiDung;
             TXB_manguoidung.Text = account.UserId;
             TXB_matkhau.Text = account.Password;
+            TXB_matkhau.UseSystemPasswordChar = true;
         }
 
         private void ThongTinNhanVien_Load(object sender, EventArgs e)
         {
             GetEmployeeByEmployeeId();
             DisplayEmployeeeInfo();
+        }
+
+        private void BTN_doimatkhau_Click(object sender, EventArgs e)
+        {
+            DoiMatKhau doiMatKhau = new DoiMatKhau(employee.TaiKhoanNguoiDung);
+            doiMatKhau.ShowDialog();
         }
     }
 }
