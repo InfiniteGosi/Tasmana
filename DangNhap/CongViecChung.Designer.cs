@@ -150,8 +150,8 @@ namespace DangNhap
             this.BTN_excel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BTN_excel.AnimationHoverSpeed = 0.07F;
             this.BTN_excel.AnimationSpeed = 0.03F;
-            this.BTN_excel.BaseColor1 = System.Drawing.Color.Transparent;
-            this.BTN_excel.BaseColor2 = System.Drawing.Color.Transparent;
+            this.BTN_excel.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(95)))), ((int)(((byte)(45)))));
+            this.BTN_excel.BaseColor2 = System.Drawing.Color.Green;
             this.BTN_excel.BorderColor = System.Drawing.Color.White;
             this.BTN_excel.BorderSize = 1;
             this.BTN_excel.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -162,10 +162,10 @@ namespace DangNhap
             this.BTN_excel.ImageSize = new System.Drawing.Size(20, 20);
             this.BTN_excel.Location = new System.Drawing.Point(65, 510);
             this.BTN_excel.Name = "BTN_excel";
-            this.BTN_excel.OnHoverBaseColor1 = System.Drawing.Color.DimGray;
-            this.BTN_excel.OnHoverBaseColor2 = System.Drawing.Color.DimGray;
-            this.BTN_excel.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.BTN_excel.OnHoverForeColor = System.Drawing.Color.Black;
+            this.BTN_excel.OnHoverBaseColor1 = System.Drawing.Color.Green;
+            this.BTN_excel.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(95)))), ((int)(((byte)(45)))));
+            this.BTN_excel.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_excel.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_excel.OnHoverImage = null;
             this.BTN_excel.OnPressedColor = System.Drawing.Color.Black;
             this.BTN_excel.Size = new System.Drawing.Size(107, 48);
@@ -232,8 +232,8 @@ namespace DangNhap
             this.BTN_PDF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BTN_PDF.AnimationHoverSpeed = 0.07F;
             this.BTN_PDF.AnimationSpeed = 0.03F;
-            this.BTN_PDF.BaseColor1 = System.Drawing.Color.Transparent;
-            this.BTN_PDF.BaseColor2 = System.Drawing.Color.Transparent;
+            this.BTN_PDF.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(131)))), ((int)(((byte)(18)))));
+            this.BTN_PDF.BaseColor2 = System.Drawing.Color.Coral;
             this.BTN_PDF.BorderColor = System.Drawing.Color.White;
             this.BTN_PDF.BorderSize = 1;
             this.BTN_PDF.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -244,10 +244,10 @@ namespace DangNhap
             this.BTN_PDF.ImageSize = new System.Drawing.Size(20, 20);
             this.BTN_PDF.Location = new System.Drawing.Point(178, 510);
             this.BTN_PDF.Name = "BTN_PDF";
-            this.BTN_PDF.OnHoverBaseColor1 = System.Drawing.Color.DimGray;
-            this.BTN_PDF.OnHoverBaseColor2 = System.Drawing.Color.DimGray;
-            this.BTN_PDF.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.BTN_PDF.OnHoverForeColor = System.Drawing.Color.Black;
+            this.BTN_PDF.OnHoverBaseColor1 = System.Drawing.Color.Coral;
+            this.BTN_PDF.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(131)))), ((int)(((byte)(18)))));
+            this.BTN_PDF.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_PDF.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_PDF.OnHoverImage = null;
             this.BTN_PDF.OnPressedColor = System.Drawing.Color.Black;
             this.BTN_PDF.Size = new System.Drawing.Size(107, 48);
@@ -261,8 +261,8 @@ namespace DangNhap
             this.BTN_in.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BTN_in.AnimationHoverSpeed = 0.07F;
             this.BTN_in.AnimationSpeed = 0.03F;
-            this.BTN_in.BaseColor1 = System.Drawing.Color.Transparent;
-            this.BTN_in.BaseColor2 = System.Drawing.Color.Transparent;
+            this.BTN_in.BaseColor1 = System.Drawing.Color.Silver;
+            this.BTN_in.BaseColor2 = System.Drawing.Color.DimGray;
             this.BTN_in.BorderColor = System.Drawing.Color.White;
             this.BTN_in.BorderSize = 1;
             this.BTN_in.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -274,9 +274,9 @@ namespace DangNhap
             this.BTN_in.Location = new System.Drawing.Point(291, 510);
             this.BTN_in.Name = "BTN_in";
             this.BTN_in.OnHoverBaseColor1 = System.Drawing.Color.DimGray;
-            this.BTN_in.OnHoverBaseColor2 = System.Drawing.Color.DimGray;
-            this.BTN_in.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.BTN_in.OnHoverForeColor = System.Drawing.Color.Black;
+            this.BTN_in.OnHoverBaseColor2 = System.Drawing.Color.Silver;
+            this.BTN_in.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_in.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_in.OnHoverImage = null;
             this.BTN_in.OnPressedColor = System.Drawing.Color.Black;
             this.BTN_in.Size = new System.Drawing.Size(89, 48);
@@ -303,6 +303,9 @@ namespace DangNhap
             // GGC_hienthicongviec
             // 
             this.GGC_hienthicongviec.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.GGC_hienthicongviec.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GGC_hienthicongviec.BackColor = System.Drawing.SystemColors.Window;
             this.GGC_hienthicongviec.Location = new System.Drawing.Point(65, 100);
             this.GGC_hienthicongviec.Name = "GGC_hienthicongviec";
@@ -318,6 +321,7 @@ namespace DangNhap
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1376, 782);
             this.Controls.Add(this.GGC_hienthicongviec);
             this.Controls.Add(this.BTN_in);

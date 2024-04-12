@@ -31,27 +31,32 @@ namespace DangNhap
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CanHo));
             this.DGV_hienthicanho = new System.Windows.Forms.DataGridView();
-            this.BTN_themcanho = new Guna.UI.WinForms.GunaGradientButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.TXB_sotrang = new System.Windows.Forms.TextBox();
-            this.BTN_trangtruoc = new System.Windows.Forms.Button();
-            this.BTN_trangsau = new System.Windows.Forms.Button();
-            this.BTN_in = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.C_macanho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_chuhohientai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_dinhky = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_dichvuyeucau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_chitiet = new System.Windows.Forms.DataGridViewImageColumn();
+            this.BTN_themcanho = new Guna.UI.WinForms.GunaGradientButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.TXB_sotrang = new System.Windows.Forms.TextBox();
+            this.BTN_trangtruoc = new System.Windows.Forms.Button();
+            this.BTN_trangsau = new System.Windows.Forms.Button();
+            this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.BTN_in = new Guna.UI.WinForms.GunaGradientButton();
+            this.BTN_PDF = new Guna.UI.WinForms.GunaGradientButton();
+            this.BTN_excel = new Guna.UI.WinForms.GunaGradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_hienthicanho)).BeginInit();
             this.SuspendLayout();
             // 
             // DGV_hienthicanho
             // 
+            this.DGV_hienthicanho.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DGV_hienthicanho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_hienthicanho.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.C_macanho,
@@ -66,6 +71,50 @@ namespace DangNhap
             this.DGV_hienthicanho.RowTemplate.Height = 24;
             this.DGV_hienthicanho.Size = new System.Drawing.Size(1248, 401);
             this.DGV_hienthicanho.TabIndex = 117;
+            // 
+            // C_macanho
+            // 
+            this.C_macanho.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.C_macanho.HeaderText = "Mã căn hộ";
+            this.C_macanho.MinimumWidth = 6;
+            this.C_macanho.Name = "C_macanho";
+            this.C_macanho.Width = 77;
+            // 
+            // C_chuhohientai
+            // 
+            this.C_chuhohientai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.C_chuhohientai.HeaderText = "Chủ hộ hiện tại";
+            this.C_chuhohientai.MinimumWidth = 6;
+            this.C_chuhohientai.Name = "C_chuhohientai";
+            // 
+            // C_trangthai
+            // 
+            this.C_trangthai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.C_trangthai.HeaderText = "Trạng thái";
+            this.C_trangthai.MinimumWidth = 6;
+            this.C_trangthai.Name = "C_trangthai";
+            this.C_trangthai.Width = 89;
+            // 
+            // C_dinhky
+            // 
+            this.C_dinhky.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.C_dinhky.HeaderText = "Dịch vụ định kỳ";
+            this.C_dinhky.MinimumWidth = 6;
+            this.C_dinhky.Name = "C_dinhky";
+            // 
+            // C_dichvuyeucau
+            // 
+            this.C_dichvuyeucau.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.C_dichvuyeucau.HeaderText = "Dịch vụ yêu cầu";
+            this.C_dichvuyeucau.MinimumWidth = 6;
+            this.C_dichvuyeucau.Name = "C_dichvuyeucau";
+            // 
+            // C_chitiet
+            // 
+            this.C_chitiet.HeaderText = "Chi tiết";
+            this.C_chitiet.MinimumWidth = 6;
+            this.C_chitiet.Name = "C_chitiet";
+            this.C_chitiet.Width = 125;
             // 
             // BTN_themcanho
             // 
@@ -149,33 +198,6 @@ namespace DangNhap
             this.BTN_trangsau.Text = ">";
             this.BTN_trangsau.UseVisualStyleBackColor = true;
             // 
-            // BTN_in
-            // 
-            this.BTN_in.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BTN_in.AnimationHoverSpeed = 0.07F;
-            this.BTN_in.AnimationSpeed = 0.03F;
-            this.BTN_in.BaseColor1 = System.Drawing.Color.Transparent;
-            this.BTN_in.BaseColor2 = System.Drawing.Color.Transparent;
-            this.BTN_in.BorderColor = System.Drawing.Color.White;
-            this.BTN_in.BorderSize = 1;
-            this.BTN_in.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.BTN_in.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_in.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_in.ForeColor = System.Drawing.Color.White;
-            this.BTN_in.Image = ((System.Drawing.Image)(resources.GetObject("BTN_in.Image")));
-            this.BTN_in.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_in.Location = new System.Drawing.Point(65, 527);
-            this.BTN_in.Name = "BTN_in";
-            this.BTN_in.OnHoverBaseColor1 = System.Drawing.Color.DimGray;
-            this.BTN_in.OnHoverBaseColor2 = System.Drawing.Color.DimGray;
-            this.BTN_in.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.BTN_in.OnHoverForeColor = System.Drawing.Color.Black;
-            this.BTN_in.OnHoverImage = null;
-            this.BTN_in.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_in.Size = new System.Drawing.Size(77, 31);
-            this.BTN_in.TabIndex = 112;
-            this.BTN_in.Text = "In";
-            // 
             // gunaGradientButton1
             // 
             this.gunaGradientButton1.Animated = true;
@@ -243,64 +265,106 @@ namespace DangNhap
             this.comboBox4.TabIndex = 108;
             this.comboBox4.Text = "All";
             // 
-            // C_macanho
+            // BTN_in
             // 
-            this.C_macanho.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.C_macanho.HeaderText = "Mã căn hộ";
-            this.C_macanho.MinimumWidth = 6;
-            this.C_macanho.Name = "C_macanho";
-            this.C_macanho.Width = 98;
+            this.BTN_in.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BTN_in.AnimationHoverSpeed = 0.07F;
+            this.BTN_in.AnimationSpeed = 0.03F;
+            this.BTN_in.BaseColor1 = System.Drawing.Color.Silver;
+            this.BTN_in.BaseColor2 = System.Drawing.Color.DimGray;
+            this.BTN_in.BorderColor = System.Drawing.Color.White;
+            this.BTN_in.BorderSize = 1;
+            this.BTN_in.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_in.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_in.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_in.ForeColor = System.Drawing.Color.White;
+            this.BTN_in.Image = ((System.Drawing.Image)(resources.GetObject("BTN_in.Image")));
+            this.BTN_in.ImageSize = new System.Drawing.Size(20, 20);
+            this.BTN_in.Location = new System.Drawing.Point(291, 527);
+            this.BTN_in.Name = "BTN_in";
+            this.BTN_in.OnHoverBaseColor1 = System.Drawing.Color.DimGray;
+            this.BTN_in.OnHoverBaseColor2 = System.Drawing.Color.Silver;
+            this.BTN_in.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_in.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_in.OnHoverImage = null;
+            this.BTN_in.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_in.Size = new System.Drawing.Size(89, 48);
+            this.BTN_in.TabIndex = 120;
+            this.BTN_in.Text = "In";
+            this.BTN_in.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // C_chuhohientai
+            // BTN_PDF
             // 
-            this.C_chuhohientai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.C_chuhohientai.HeaderText = "Chủ hộ hiện tại";
-            this.C_chuhohientai.MinimumWidth = 6;
-            this.C_chuhohientai.Name = "C_chuhohientai";
-            this.C_chuhohientai.Width = 122;
+            this.BTN_PDF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BTN_PDF.AnimationHoverSpeed = 0.07F;
+            this.BTN_PDF.AnimationSpeed = 0.03F;
+            this.BTN_PDF.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(131)))), ((int)(((byte)(18)))));
+            this.BTN_PDF.BaseColor2 = System.Drawing.Color.Coral;
+            this.BTN_PDF.BorderColor = System.Drawing.Color.White;
+            this.BTN_PDF.BorderSize = 1;
+            this.BTN_PDF.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_PDF.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_PDF.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_PDF.ForeColor = System.Drawing.Color.White;
+            this.BTN_PDF.Image = ((System.Drawing.Image)(resources.GetObject("BTN_PDF.Image")));
+            this.BTN_PDF.ImageSize = new System.Drawing.Size(20, 20);
+            this.BTN_PDF.Location = new System.Drawing.Point(178, 527);
+            this.BTN_PDF.Name = "BTN_PDF";
+            this.BTN_PDF.OnHoverBaseColor1 = System.Drawing.Color.Coral;
+            this.BTN_PDF.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(131)))), ((int)(((byte)(18)))));
+            this.BTN_PDF.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_PDF.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_PDF.OnHoverImage = null;
+            this.BTN_PDF.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_PDF.Size = new System.Drawing.Size(107, 48);
+            this.BTN_PDF.TabIndex = 119;
+            this.BTN_PDF.Text = "PDF";
+            this.BTN_PDF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // C_trangthai
+            // BTN_excel
             // 
-            this.C_trangthai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.C_trangthai.HeaderText = "Trạng thái";
-            this.C_trangthai.MinimumWidth = 6;
-            this.C_trangthai.Name = "C_trangthai";
-            this.C_trangthai.Width = 96;
-            // 
-            // C_dinhky
-            // 
-            this.C_dinhky.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.C_dinhky.HeaderText = "Dịch vụ định kỳ";
-            this.C_dinhky.MinimumWidth = 6;
-            this.C_dinhky.Name = "C_dinhky";
-            // 
-            // C_dichvuyeucau
-            // 
-            this.C_dichvuyeucau.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.C_dichvuyeucau.HeaderText = "Dịch vụ yêu cầu";
-            this.C_dichvuyeucau.MinimumWidth = 6;
-            this.C_dichvuyeucau.Name = "C_dichvuyeucau";
-            // 
-            // C_chitiet
-            // 
-            this.C_chitiet.HeaderText = "Chi tiết";
-            this.C_chitiet.MinimumWidth = 6;
-            this.C_chitiet.Name = "C_chitiet";
-            this.C_chitiet.Width = 125;
+            this.BTN_excel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BTN_excel.AnimationHoverSpeed = 0.07F;
+            this.BTN_excel.AnimationSpeed = 0.03F;
+            this.BTN_excel.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(95)))), ((int)(((byte)(45)))));
+            this.BTN_excel.BaseColor2 = System.Drawing.Color.Green;
+            this.BTN_excel.BorderColor = System.Drawing.Color.White;
+            this.BTN_excel.BorderSize = 1;
+            this.BTN_excel.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_excel.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_excel.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_excel.ForeColor = System.Drawing.Color.White;
+            this.BTN_excel.Image = ((System.Drawing.Image)(resources.GetObject("BTN_excel.Image")));
+            this.BTN_excel.ImageSize = new System.Drawing.Size(20, 20);
+            this.BTN_excel.Location = new System.Drawing.Point(65, 527);
+            this.BTN_excel.Name = "BTN_excel";
+            this.BTN_excel.OnHoverBaseColor1 = System.Drawing.Color.Green;
+            this.BTN_excel.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(95)))), ((int)(((byte)(45)))));
+            this.BTN_excel.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_excel.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_excel.OnHoverImage = null;
+            this.BTN_excel.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_excel.Size = new System.Drawing.Size(107, 48);
+            this.BTN_excel.TabIndex = 118;
+            this.BTN_excel.Text = "Excel";
+            this.BTN_excel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // CanHo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1376, 782);
+            this.Controls.Add(this.BTN_in);
+            this.Controls.Add(this.BTN_PDF);
+            this.Controls.Add(this.BTN_excel);
             this.Controls.Add(this.DGV_hienthicanho);
             this.Controls.Add(this.BTN_themcanho);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.TXB_sotrang);
             this.Controls.Add(this.BTN_trangtruoc);
             this.Controls.Add(this.BTN_trangsau);
-            this.Controls.Add(this.BTN_in);
             this.Controls.Add(this.gunaGradientButton1);
             this.Controls.Add(this.comboBox6);
             this.Controls.Add(this.comboBox5);
@@ -321,7 +385,6 @@ namespace DangNhap
         private System.Windows.Forms.TextBox TXB_sotrang;
         private System.Windows.Forms.Button BTN_trangtruoc;
         private System.Windows.Forms.Button BTN_trangsau;
-        private Guna.UI.WinForms.GunaGradientButton BTN_in;
         private Guna.UI.WinForms.GunaGradientButton gunaGradientButton1;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.ComboBox comboBox5;
@@ -332,5 +395,8 @@ namespace DangNhap
         private System.Windows.Forms.DataGridViewTextBoxColumn C_dinhky;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_dichvuyeucau;
         private System.Windows.Forms.DataGridViewImageColumn C_chitiet;
+        private Guna.UI.WinForms.GunaGradientButton BTN_in;
+        private Guna.UI.WinForms.GunaGradientButton BTN_PDF;
+        private Guna.UI.WinForms.GunaGradientButton BTN_excel;
     }
 }

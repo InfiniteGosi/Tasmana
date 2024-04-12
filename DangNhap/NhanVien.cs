@@ -80,6 +80,7 @@ namespace DangNhap
 
         private void NhanVien_Load(object sender, EventArgs e)
         {
+
             Refresh();
         }
     }

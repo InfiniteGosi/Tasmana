@@ -116,6 +116,12 @@ namespace DangNhap
         private void BTN_thongtin_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ThongTinNhanVien(DangNhap.currentAccount.EmployeeId));
+            BTN_thongbao.BackColor = Color.Transparent;
+            BTN_thongke.BackColor = Color.Transparent;
+            BTN_nhanvien.BackColor = Color.Transparent;
+            BTN_cudan.BackColor = Color.Transparent;
+            BTN_congviec.BackColor = Color.Transparent;
+            BTN_canho.BackColor = Color.Transparent;
         }
 
         //MoveForm

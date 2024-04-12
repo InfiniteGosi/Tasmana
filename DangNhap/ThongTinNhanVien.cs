@@ -90,5 +90,10 @@ namespace DangNhap
             DoiMatKhau doiMatKhau = new DoiMatKhau(employee.TaiKhoanNguoiDung);
             doiMatKhau.ShowDialog();
         }
+
+        private void BTN_huy_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
