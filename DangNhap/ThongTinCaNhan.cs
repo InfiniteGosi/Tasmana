@@ -16,7 +16,7 @@ namespace DangNhap
 {
     public partial class ThongTinCaNhan : Form
     {
-        NhanVien parent;
+        private readonly NhanVien parent;
         private List<Division> divisions = new List<Division>();
         private List<Group> groups = new List<Group>();
         private readonly Employee employee = null;
@@ -358,6 +358,7 @@ namespace DangNhap
                 CHB_vohieuhoa.Checked = true;
             }
             TXB_matkhau.Text = account.Password;
+            TXB_matkhau.UseSystemPasswordChar = true;
         }
         
         private void DisplayEmployeeType()

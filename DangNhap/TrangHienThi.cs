@@ -15,7 +15,8 @@ namespace DangNhap
     public partial class TrangHienThi : Form
     {
         // Khởi tạo các giá trị, biến
-        private int appTime; 
+        private int appTime;
+        private bool isClosed = true;
         public TrangHienThi()
         {
             InitializeComponent();
@@ -106,7 +107,10 @@ namespace DangNhap
 
         private void BTN_logout_Click(object sender, EventArgs e)
         {
+            isClosed = false;
             this.Close();
+            DangNhap dangnhap = new DangNhap();
+            dangnhap.Show();
         }
 
         private void BTN_thongtin_Click(object sender, EventArgs e)
@@ -140,7 +144,8 @@ namespace DangNhap
 
         private void BTN_x_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (isClosed)
+                Application.Exit();
         }
 
         private void BTN_square_Click(object sender, EventArgs e)
@@ -170,7 +175,7 @@ namespace DangNhap
             // Kiểm tra những công việc gần đến hạn nhưng chưa hoàn thành
             int curUnfJob = 0;
             string maNV = DangNhap.currentAccount.EmployeeId;
-            List<Job> tomorowJobs = new List<Job>();
+            List<Job> tomorowJobs;
             tomorowJobs = JobBLL.Instance.GetJobOfEmployeeByDate(maNV, tomorrowDay.Date.ToString("yyyy-MM-dd"));
             foreach (Job job in tomorowJobs)
             {
@@ -188,7 +193,7 @@ namespace DangNhap
             // Chỉ thông báo cho nhân viên như yêu cầu 10
             if (DangNhap.currentAccount.Level.Equals("CEO"))
             {
-                List<Job> allJobs = new List<Job>();
+                List<Job> allJobs;
                 allJobs = JobBLL.Instance.GetAllJob();
                 int curAllJobs = 0; // số công việc chưa cập nhật tình trạng
                 foreach (Job job in allJobs)
@@ -206,7 +211,7 @@ namespace DangNhap
             }
             else
             {
-                List<Job> allJobs = new List<Job>();
+                List<Job> allJobs;
                 allJobs = JobBLL.Instance.GetAllJobOfEmployee(maNV);
                 int curUndoJob = 0;
                 foreach (Job job in allJobs)

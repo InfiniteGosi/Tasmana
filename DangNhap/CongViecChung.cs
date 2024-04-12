@@ -24,7 +24,6 @@ namespace DangNhap
         SqlCommand cmd;
         SqlDataAdapter adt;
         DataTable dt;
-        DataSet dataSet;
         public CongViecChung()
         {
             SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NBaF5cXmZCekx3Qnxbf1x0ZFREalxWTndfUiweQnxTdEFjXX5ecHRVQWFcWUN+WA==");
@@ -93,9 +92,11 @@ namespace DangNhap
         {
             if (GGC_hienthicongviec.Table.Records.Count > 0)
             {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "PDF (*.pdf)|*.pdf";
-                save.FileName = "CongViec.pdf";
+                SaveFileDialog save = new SaveFileDialog
+                {
+                    Filter = "PDF (*.pdf)|*.pdf",
+                    FileName = "CongViec.pdf"
+                };
                 bool ErrorMessage = false;
                 if (save.ShowDialog() == DialogResult.OK)
                 {
@@ -187,7 +188,7 @@ namespace DangNhap
 
         }
 
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        private void PrintDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             /*Bitmap bitmap = new Bitmap(DGV_hienthicongviec.Width, DGV_hienthicongviec.Height);
             DGV_hienthicongviec.DrawToBitmap(bitmap, new System.Drawing.Rectangle(0, 0, DGV_hienthicongviec.Width, DGV_hienthicongviec.Height));

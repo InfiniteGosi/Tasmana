@@ -84,6 +84,8 @@ namespace DangNhap
             this.BTN_luu = new System.Windows.Forms.Button();
             this.BTN_huy = new System.Windows.Forms.Button();
             this.BTN_yeucauchinhsua = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -230,7 +232,7 @@ namespace DangNhap
             this.TXB_matkhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TXB_matkhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_matkhau.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_matkhau.Location = new System.Drawing.Point(25, 127);
+            this.TXB_matkhau.Location = new System.Drawing.Point(106, 169);
             this.TXB_matkhau.Name = "TXB_matkhau";
             this.TXB_matkhau.Size = new System.Drawing.Size(419, 30);
             this.TXB_matkhau.TabIndex = 55;
@@ -242,7 +244,7 @@ namespace DangNhap
             this.TXB_manguoidung.Enabled = false;
             this.TXB_manguoidung.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_manguoidung.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_manguoidung.Location = new System.Drawing.Point(23, 38);
+            this.TXB_manguoidung.Location = new System.Drawing.Point(104, 80);
             this.TXB_manguoidung.Name = "TXB_manguoidung";
             this.TXB_manguoidung.Size = new System.Drawing.Size(419, 30);
             this.TXB_manguoidung.TabIndex = 54;
@@ -252,7 +254,7 @@ namespace DangNhap
             this.LB_matkhau.AutoSize = true;
             this.LB_matkhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_matkhau.ForeColor = System.Drawing.Color.White;
-            this.LB_matkhau.Location = new System.Drawing.Point(21, 104);
+            this.LB_matkhau.Location = new System.Drawing.Point(102, 146);
             this.LB_matkhau.Name = "LB_matkhau";
             this.LB_matkhau.Size = new System.Drawing.Size(82, 22);
             this.LB_matkhau.TabIndex = 53;
@@ -263,7 +265,7 @@ namespace DangNhap
             this.LB_taikhoan.AutoSize = true;
             this.LB_taikhoan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_taikhoan.ForeColor = System.Drawing.Color.White;
-            this.LB_taikhoan.Location = new System.Drawing.Point(19, 15);
+            this.LB_taikhoan.Location = new System.Drawing.Point(100, 57);
             this.LB_taikhoan.Name = "LB_taikhoan";
             this.LB_taikhoan.Size = new System.Drawing.Size(130, 22);
             this.LB_taikhoan.TabIndex = 52;
@@ -355,6 +357,7 @@ namespace DangNhap
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.CHB_vohieuhoa);
             this.panel6.Controls.Add(this.TXB_matkhau);
             this.panel6.Controls.Add(this.TXB_manguoidung);
@@ -371,7 +374,7 @@ namespace DangNhap
             this.CHB_vohieuhoa.Enabled = false;
             this.CHB_vohieuhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CHB_vohieuhoa.ForeColor = System.Drawing.Color.White;
-            this.CHB_vohieuhoa.Location = new System.Drawing.Point(25, 211);
+            this.CHB_vohieuhoa.Location = new System.Drawing.Point(106, 228);
             this.CHB_vohieuhoa.Name = "CHB_vohieuhoa";
             this.CHB_vohieuhoa.Size = new System.Drawing.Size(223, 29);
             this.CHB_vohieuhoa.TabIndex = 61;
@@ -730,6 +733,28 @@ namespace DangNhap
             this.BTN_yeucauchinhsua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_yeucauchinhsua.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(361, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(511, 51);
+            this.label3.TabIndex = 57;
+            this.label3.Text = "THÔNG TIN NHÂN VIÊN";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(180, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(265, 26);
+            this.label4.TabIndex = 58;
+            this.label4.Text = "THÔNG TIN TÀI KHOẢN";
+            // 
             // ThongTinCaNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -737,6 +762,7 @@ namespace DangNhap
             this.AutoScrollMargin = new System.Drawing.Size(20, 20);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1358, 843);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.BTN_yeucauchinhsua);
             this.Controls.Add(this.BTN_huy);
             this.Controls.Add(this.BTN_luu);
@@ -759,6 +785,7 @@ namespace DangNhap
             this.GB_gioitinh.ResumeLayout(false);
             this.GB_gioitinh.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -818,5 +845,7 @@ namespace DangNhap
         private System.Windows.Forms.TextBox TXB_tinhtrangHDLD;
         private System.Windows.Forms.CheckBox CHB_vohieuhoa;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

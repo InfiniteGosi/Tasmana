@@ -50,5 +50,10 @@ namespace DAO
             int result = DataProvider.Instance.ExecuteStoredProcedure("SP_SuaTaiKhoan", parameters);
             return result > 0;
         }
+        public bool UpdatePassword(Dictionary<string, object> parameters)
+        {
+            int result = DataProvider.Instance.ExecuteStoredProcedure("SP_DoiMatKhau", parameters);
+            return result > 0;
+        }
     }
 }

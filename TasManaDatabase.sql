@@ -535,3 +535,15 @@ begin
 		disable = @disable
 	where maNhanVien = @maNhanVien
 end
+go
+
+--Procedure thay đổi mật khẩu tài khoản
+create procedure [dbo].[SP_DoiMatKhau]
+	@maNguoiDung varchar(30),
+	@matKhau varchar(100)
+as
+begin
+	update TaiKhoan
+	set matKhau = @matKhau
+	where maNguoiDung = @maNguoiDung
+end
