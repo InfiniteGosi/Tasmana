@@ -45,7 +45,7 @@ namespace DangNhap
         private void CongViecChung_Load(object sender, EventArgs e)
         {
             GetJobs();
-            GGC_hienthicongviec.Size = new System.Drawing.Size(1263, 404);
+            GGC_hienthicongviec.Size = new System.Drawing.Size(950, 300);
             GGC_hienthicongviec.DataSource = jobs;
             GGC_hienthicongviec.TableDescriptor.Columns[0].HeaderText = "Mã công việc";
             GGC_hienthicongviec.TableDescriptor.Columns[1].HeaderText = "Mã nhân viên";
@@ -54,9 +54,9 @@ namespace DangNhap
             GGC_hienthicongviec.TableDescriptor.Columns[4].HeaderText = "Nội dung";
             GGC_hienthicongviec.TableDescriptor.Columns[5].HeaderText = "Mã căn hộ";
             GGC_hienthicongviec.TableDescriptor.Columns[6].HeaderText = "Ngày giao";
-            GGC_hienthicongviec.TableDescriptor.Columns[7].HeaderText = "Ngày cập nhật";
-            GGC_hienthicongviec.TableDescriptor.Columns[8].HeaderText = "Thời hạn";
-            GGC_hienthicongviec.TableDescriptor.Columns[9].HeaderText = "Ngày hoàn thành";
+            GGC_hienthicongviec.TableDescriptor.Columns[7].HeaderText = "Thời hạn";
+            GGC_hienthicongviec.TableDescriptor.Columns[8].HeaderText = "Ngày hoàn thành";
+            GGC_hienthicongviec.TableDescriptor.Columns[9].HeaderText = "Ngày cập nhật";
             GGC_hienthicongviec.TableDescriptor.Columns[10].HeaderText = "Trạng thái";
             GGC_hienthicongviec.TableDescriptor.Columns[11].HeaderText = "Ghi chú";
 

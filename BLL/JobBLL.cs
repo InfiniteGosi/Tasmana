@@ -165,7 +165,7 @@ namespace BLL
                 string noiDung = dt.Rows[i]["Nội dung"].ToString();
                 string maCanHo = dt.Rows[i]["Mã căn hộ"].ToString();
                 DateTime ngayGiao = (DateTime)dt.Rows[i]["Ngày giao"];
-                DateTime ngayCapNhat = dt.Rows[i]["Ngày cập nhật"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["Ngày cập nhật"].ToString());
+                DateTime ngayCapNhat = (DateTime)dt.Rows[i]["Ngày cập nhật"];
                 DateTime thoiHan = (DateTime)dt.Rows[i]["Thời hạn"];
                 DateTime ngayHoanThanh = dt.Rows[i]["Ngày hoàn thành"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["Ngày hoàn thành"].ToString());
                 string trangThai = dt.Rows[i]["Trạng thái"].ToString();

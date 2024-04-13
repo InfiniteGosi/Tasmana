@@ -51,9 +51,9 @@ namespace DTO
             NoiDung = noiDung;
             MaCanHo = maCanHo;
             NgayGiao = ngayGiao;
+            NgayCapNhat = ngayCapNhat;
             ThoiHan = thoiHan;
             NgayHoanThanh = ngayHoanThanh;
-            NgayCapNhat = ngayCapNhat;
             TrangThai = trangThai;
             GhiChu = ghiChu;
         }
