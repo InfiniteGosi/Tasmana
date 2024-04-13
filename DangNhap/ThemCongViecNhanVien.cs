@@ -187,20 +187,8 @@ namespace DangNhap
                 TXB_noidung.Enabled = true;
                 TXB_macanho.Enabled = true;
                 GetNewestJobID();
-            }
-        }
-
-        private void CB_thoihan_CheckStateChanged(object sender, EventArgs e)
-        {
-            if (CB_thoihan.Checked)
-            {
                 DTP_gio.Enabled = true;
                 DTP_ngay.Enabled = true;
-            }
-            else
-            {
-                DTP_gio.Enabled = false;
-                DTP_ngay.Enabled = false;
             }
         }
 

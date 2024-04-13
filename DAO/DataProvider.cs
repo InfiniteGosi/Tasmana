@@ -177,7 +177,7 @@ namespace DAO
                             }
                             else
                             {
-                                p = new SqlParameter(pair.Key, SqlDbType.NVarChar) { Value = "" }; ;
+                                p = new SqlParameter(pair.Key, DBNull.Value);
                             }
 
                             cmd.Parameters.Add(p);

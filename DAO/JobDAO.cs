@@ -96,5 +96,12 @@ namespace DAO
             string query = $"SELECT CongViec.maCongViec as N'Mã công việc', Congviec_Nhanvien.maNhanVien as N'Mã nhân viên', NhanVien.ho as N'Họ', NhanVien.ten as N'Tên', CongViec.noiDung as N'Nội dung', YeuCau.maCanHo as N'Mã căn hộ' ,CongViec.ngayGiao as N'Ngày giao', CongViec.ngayCapNhat as N'Ngày cập nhật', CongViec.thoiHan as N'Thời hạn', CongViec.ngayHoanThanh as N'Ngày hoàn thành', CongViec.trangThai as N'Trạng thái', CongViec.ghiChu as N'Ghi chú' from NhanVien, CongViec, Congviec_Nhanvien, YeuCau WHERE NhanVien.maNhanVien = Congviec_Nhanvien.maNhanVien and Congviec_Nhanvien.maCongViec=CongViec.maCongViec and YeuCau.maCongViec = CongViec.maCongViec";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
+        // Chỉnh sửa công việc 
+        public bool EditJobOfEmployee(Dictionary<string, object> parameters)
+        {
+            int result = DataProvider.Instance.ExecuteStoredProcedure("SP_EditCongViec", parameters);
+            return result > 0;
+        }
     }
 }

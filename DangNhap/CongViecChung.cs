@@ -5,6 +5,7 @@ using Syncfusion.Grouping;
 using Syncfusion.Licensing;
 using Syncfusion.Windows.Forms.Grid;
 using Syncfusion.Windows.Forms.Grid.Grouping;
+using Syncfusion.Windows.Shared;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -207,5 +208,43 @@ namespace DangNhap
 
         }
 
+        private void GGC_hienthicongviec_TableControlCellDoubleClick(object sender, GridTableControlCellClickEventArgs e)
+        {
+            // Get the index of the clicked row
+            int rowIndex = e.Inner.RowIndex - 5;
+            // Check if the clicked row index is valid
+            if (rowIndex >= 0 && rowIndex < GGC_hienthicongviec.Table.Records.Count)
+            {
+                // Get the record corresponding to the clicked row
+                Record record = GGC_hienthicongviec.Table.Records[rowIndex];
+
+                // Extract data from the record
+                string maCongViec = record.GetValue("MaCongViec").ToString();
+                string maNhanVien = record.GetValue("MaNhanVien").ToString();
+                Employee curEmployee = EmployeeBLL.Instance.GetEmployeeByEmployeeId(maNhanVien);
+                Division divisionOfEmployee = GroupBLL.Instance.GetDivsionByGroupId(curEmployee.MaNhom.ToString());
+                string noiDungCV = record.GetValue("NoiDung").ToString();
+                string maCanHo = record.GetValue("MaCanHo").ToString();
+                string ghiChu = record.GetValue("GhiChu").ToString();
+                string trangThai = record.GetValue("TrangThai").ToString();
+                DateTime thoiHan = (DateTime)record.GetValue("ThoiHan");
+                // Add to ChiTietCongViec
+                ChiTietCongViec ctcv = new ChiTietCongViec();
+                ctcv.TXB_PhongBan.Text = divisionOfEmployee.MaBoPhan.ToString();
+                ctcv.TXB_Nhom.Text = curEmployee.MaNhom.ToString();
+                ctcv.TXB_MaNV.Text = maNhanVien;
+                ctcv.TXB_noidung.Text = noiDungCV;
+                ctcv.TXB_macanho.Text = maCanHo;
+                ctcv.TXB_GhiChu.Text = ghiChu;
+                ctcv.TXB_MaCV.Text = maCongViec;
+                ctcv.CBB_TrangThai.Text = trangThai;
+                DateTime date = thoiHan.Date;
+                ctcv.DTP_ngay.Text = date.ToString();
+                ctcv.DTP_gio.Text = thoiHan.ToString();
+                // Show Form
+                ctcv.ShowDialog();
+                this.Refresh();
+            }
+        }
     }
 }

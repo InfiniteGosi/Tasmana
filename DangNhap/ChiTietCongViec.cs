@@ -1,9 +1,11 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -50,6 +52,44 @@ namespace DangNhap
         {
             ThemCongViecNhanVien tcv = new ThemCongViecNhanVien();
             tcv.Show();
+        }
+
+        private bool GetNgayHoanThanhCongViec()
+        {
+            if (CBB_TrangThai.Text.Equals("Hoàn thành"))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private Dictionary<string, object> AddParameterEdit_Job()
+        {
+            DateTime combinedDateTime = DTP_ngay.Value.Date + DTP_gio.Value.TimeOfDay;
+            Dictionary<string, object> dict = new Dictionary<string, object>
+            {
+                {"@maCongViec", TXB_MaCV.Text},
+                {"@noiDung", TXB_noidung.Text},
+                {"@thoiHan", combinedDateTime}, // Combine Date and Time components
+                {"@ngayHoanThanh", GetNgayHoanThanhCongViec() ? (object)DateTime.UtcNow : null}, // Use DateTime directly
+                {"@ngayCapNhat", DateTime.UtcNow},
+                {"trangThai", CBB_TrangThai.SelectedItem.ToString()},
+                {"@ghiChu", TXB_GhiChu.Text}
+            };
+            return dict;
+        }
+        private void BTN_luu_Click(object sender, EventArgs e)
+        {
+            if (JobBLL.Instance.EditJobOfEmployee(AddParameterEdit_Job()))
+            {
+                MessageBox.Show("Chỉnh sửa thành công");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Chỉnh sửa thất bại");
+                //this.Close();
+            }
         }
     }
 }
