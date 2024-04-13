@@ -212,6 +212,7 @@ namespace DangNhap
             this.BTN_file.TabIndex = 174;
             this.BTN_file.Text = "File";
             this.BTN_file.UseVisualStyleBackColor = true;
+            this.BTN_file.Click += new System.EventHandler(this.BTN_file_Click);
             // 
             // CB_thoihan
             // 

@@ -42,8 +42,6 @@ namespace DangNhap
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.BTN_PDF = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_in = new Guna.UI.WinForms.GunaGradientButton();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.GGC_hienthicongviec = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
             ((System.ComponentModel.ISupportInitialize)(this.GGC_hienthicongviec)).BeginInit();
             this.SuspendLayout();
@@ -285,21 +283,6 @@ namespace DangNhap
             this.BTN_in.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.BTN_in.Click += new System.EventHandler(this.BTN_in_Click);
             // 
-            // printDocument1
-            // 
-            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PrintDocument1_PrintPage);
-            // 
-            // printPreviewDialog1
-            // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Document = this.printDocument1;
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
-            // 
             // GGC_hienthicongviec
             // 
             this.GGC_hienthicongviec.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
@@ -360,8 +343,6 @@ namespace DangNhap
         private System.Windows.Forms.ComboBox comboBox1;
         private Guna.UI.WinForms.GunaGradientButton BTN_PDF;
         private Guna.UI.WinForms.GunaGradientButton BTN_in;
-        private System.Drawing.Printing.PrintDocument printDocument1;
-        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl GGC_hienthicongviec;
     }
 }

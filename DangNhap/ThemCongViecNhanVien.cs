@@ -1,17 +1,11 @@
 ﻿using BLL;
 using DTO;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Runtime.Remoting.Messaging;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
+using System.Configuration;
 namespace DangNhap
 {
     public partial class ThemCongViecNhanVien : Form
@@ -180,6 +174,7 @@ namespace DangNhap
         }
 
         public string maCongViec;
+        public byte[] buffer = null;
         private void GetNewestJobID()
         {
             maCongViec = JobBLL.Instance.GetNewJobID();
@@ -264,12 +259,25 @@ namespace DangNhap
             };
             return dict;
         }
+
+        private Dictionary<string, object> AddParameterPDF()
+        {
+            Dictionary<string, object> dict = new Dictionary<string, object>
+            {
+                {"@maCongViec", TXB_MaCongViec.Text},
+                {"@file", buffer}
+            };
+            return dict;
+        }
         private bool SaveCongViec()
         {
-            if (JobBLL.Instance.AddJob(AddParameterCongViec())){
-                if (JobBLL.Instance.AddJob_Employee(AddParameterCongViec_NhanVien())){
+            if (JobBLL.Instance.AddJob(AddParameterCongViec()))
+            {
+                if (JobBLL.Instance.AddJob_Employee(AddParameterCongViec_NhanVien()))
+                {
                     if (JobBLL.Instance.AddRequestFromCustom(AddParameterYeuCau()))
-                        return true;
+                        if (JobBLL.Instance.AddJob_PDF(AddParameterPDF()))
+                            return true;
                 }
             }
             return false;
@@ -292,6 +300,23 @@ namespace DangNhap
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin");
             }
+        }
+
+        private void BTN_file_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog dlg = new OpenFileDialog() { Filter = "PDF Documents(*.pdf)|*.pdf", ValidateNames = true })
+            {
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    DialogResult dialog = MessageBox.Show("Bạn có chắc muốn upload file này chứ?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        string filename = dlg.FileName;
+                        buffer = File.ReadAllBytes(filename);
+                    }
+                }
+            }
+
         }
     }
 }

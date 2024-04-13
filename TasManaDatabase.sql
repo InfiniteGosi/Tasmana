@@ -52,6 +52,13 @@ CREATE TABLE CongViec_Nhom
   FOREIGN KEY (maCongViec) REFERENCES congViec(maCongViec)
 );
 
+CREATE TABLE CongViec_PDF
+(
+	maCongViec VARCHAR(10) NOT NULL,
+	pdfFile VARBINARY(MAX),
+	PRIMARY KEY (maCongViec),
+	FOREIGN KEY (maCongViec) REFERENCES congViec(maCongViec)
+)
 CREATE TABLE NhanVien
 (
   maNhanVien VARCHAR(10) NOT NULL,
@@ -276,6 +283,8 @@ Insert into CongViec_NhanVien Values ('VS-003', 'CVVS1')
 Insert INTO YeuCau VALUES('CVVS1', 'WPHA')
 go
 
+SELECT * FROM CongViec
+SELECT * FROM CongViec_PDF
 --Procedure thêm một nhân viên mới
 create procedure [dbo].[SP_ThemNhanVien]
 	@maNhanVien varchar(10),
@@ -327,16 +336,6 @@ go
 SELECT * FROM CanHo
 SELECT * FROM CongViec
 SELECT * FROM Congviec_Nhanvien
-go
-
--- Procedure lấy công việc
-CREATE procedure [dbo].[SP_LayCV]
-as 
-begin
-	SELECT Congviec_Nhanvien.maNhanVien as N'Mã nhân viên', (NhanVien.ho + NhanVien.ten) as N'Họ và tên', CongViec.noiDung as N'Nội dung',YeuCau.maCanHo as N'Mã căn hộ' , CongViec.thoiHan as N'Thời hạn', CongViec.ngayHoanThanh as N'Ngày hoàn thành', CongViec.trangThai as N'Trạng thái', CongViec.ghiChu as N'Ghi chú'
-	from NhanVien, CongViec, Congviec_Nhanvien, YeuCau
-	WHERE NhanVien.maNhanVien = Congviec_Nhanvien.maNhanVien and Congviec_Nhanvien.maCongViec=CongViec.maCongViec and YeuCau.maCongViec = CongViec.maCongViec
-END
 go
 
 -- Procedure lấy thông tin nhóm theo mã nhân viên
@@ -490,6 +489,20 @@ BEGIN
     VALUES (
 		   @maCongViec,
 		   @maCanHo
+    )
+END
+go
+
+--Thêm file PDF
+Create Procedure [dbo].[ThemFile]
+			@maCongViec varchar(10),
+			@file VARBINARY(MAX)
+AS
+BEGIN
+	INSERT INTO CongViec_PDF
+    VALUES (
+		   @maCongViec,
+		   @file
     )
 END
 go
