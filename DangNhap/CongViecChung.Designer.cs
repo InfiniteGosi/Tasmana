@@ -293,7 +293,7 @@ namespace DangNhap
             this.GGC_hienthicongviec.Location = new System.Drawing.Point(65, 100);
             this.GGC_hienthicongviec.Name = "GGC_hienthicongviec";
             this.GGC_hienthicongviec.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
-            this.GGC_hienthicongviec.Size = new System.Drawing.Size(1248, 404);
+            this.GGC_hienthicongviec.Size = new System.Drawing.Size(1211, 404);
             this.GGC_hienthicongviec.TabIndex = 97;
             this.GGC_hienthicongviec.Text = "gridGroupingControl1";
             this.GGC_hienthicongviec.UseRightToLeftCompatibleTextBox = true;
@@ -304,16 +304,15 @@ namespace DangNhap
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1376, 782);
-            this.Controls.Add(this.GGC_hienthicongviec);
             this.Controls.Add(this.BTN_in);
             this.Controls.Add(this.BTN_PDF);
+            this.Controls.Add(this.BTN_excel);
+            this.Controls.Add(this.GGC_hienthicongviec);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.TXB_sotrang);
             this.Controls.Add(this.BTN_trangtruoc);
             this.Controls.Add(this.BTN_trangsau);
-            this.Controls.Add(this.BTN_excel);
             this.Controls.Add(this.gunaGradientButton1);
             this.Controls.Add(this.comboBox6);
             this.Controls.Add(this.comboBox5);
