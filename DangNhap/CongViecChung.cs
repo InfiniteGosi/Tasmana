@@ -1,34 +1,33 @@
-﻿using System;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Syncfusion.Windows.Forms.Grid.Grouping;
-using Syncfusion.Windows.Forms.Grid;
+﻿using BLL;
+using DTO;
 using Syncfusion.GridHelperClasses;
 using Syncfusion.Grouping;
 using Syncfusion.Licensing;
-
+using Syncfusion.Windows.Forms.Grid;
+using Syncfusion.Windows.Forms.Grid.Grouping;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.IO;
+using System.Windows.Forms;
 
 
 namespace DangNhap
 {
     public partial class CongViecChung : Form
     {
-        string connectString = @"Data Source=.\SQLEXPRESS;Initial Catalog=TasMana;Integrated Security=True;TrustServerCertificate=True";
-        SqlConnection con;
-        SqlCommand cmd;
-        SqlDataAdapter adt;
-        DataTable dt;
+        private List<Job> jobs = new List<Job>();
+
+        private void GetJobs()
+        {
+            jobs = JobBLL.Instance.GetJob();
+        }
+
         public CongViecChung()
         {
-            SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NBaF5cXmZCekx3Qnxbf1x0ZFREalxWTndfUiweQnxTdEFjXX5ecHRVQWFcWUN+WA==");
+            SyncfusionLicenseProvider.RegisterLicense("MzIxOTI2MkAzMjM1MmUzMDJlMzBORkJZeFRVdUQxeERjT2xkWC9vdFgxS29wUmREOU9CZVdENkRUN0lrSStVPQ==;Mgo+DSMBaFt6QHFqVkNrXVNbdV5dVGpAd0N3RGlcdlR1fUUmHVdTRHRbQlliS3xTck1hW35Wcnc=");
             InitializeComponent();
-            
+
         }
 
         private void BTN_themcongviec_Click(object sender, EventArgs e)
@@ -42,24 +41,29 @@ namespace DangNhap
             ChiTietCongViec ctcv = new ChiTietCongViec();
             ctcv.Show();
         }
-        
+
         private void CongViecChung_Load(object sender, EventArgs e)
         {
-            con = new SqlConnection(connectString);
-            dt = new DataTable();
-            con.Open();
+            GetJobs();
+            GGC_hienthicongviec.Size = new System.Drawing.Size(1263, 404);
+            GGC_hienthicongviec.DataSource = jobs;
+            GGC_hienthicongviec.TableDescriptor.Columns[0].HeaderText = "Mã công việc";
+            GGC_hienthicongviec.TableDescriptor.Columns[1].HeaderText = "Mã nhân viên";
+            GGC_hienthicongviec.TableDescriptor.Columns[2].HeaderText = "Họ";
+            GGC_hienthicongviec.TableDescriptor.Columns[3].HeaderText = "Tên";
+            GGC_hienthicongviec.TableDescriptor.Columns[4].HeaderText = "Nội dung";
+            GGC_hienthicongviec.TableDescriptor.Columns[5].HeaderText = "Mã căn hộ";
+            GGC_hienthicongviec.TableDescriptor.Columns[6].HeaderText = "Ngày giao";
+            GGC_hienthicongviec.TableDescriptor.Columns[7].HeaderText = "Ngày cập nhật";
+            GGC_hienthicongviec.TableDescriptor.Columns[8].HeaderText = "Thời hạn";
+            GGC_hienthicongviec.TableDescriptor.Columns[9].HeaderText = "Ngày hoàn thành";
+            GGC_hienthicongviec.TableDescriptor.Columns[10].HeaderText = "Trạng thái";
+            GGC_hienthicongviec.TableDescriptor.Columns[11].HeaderText = "Ghi chú";
 
-            cmd = new SqlCommand("SP_LayCV", con);
-
-            adt = new SqlDataAdapter(cmd);
-            adt.Fill(dt);
-            //DGV_hienthicongviec.DataSource = dt;
-            //DGV_hienthicongviec.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            con.Close();
-
-            // Gán DataTable làm nguồn dữ liệu cho GridGroupingControl
-            GGC_hienthicongviec.DataSource = dt;
             GGC_hienthicongviec.TopLevelGroupOptions.ShowFilterBar = true;
+            GGC_hienthicongviec.ActivateCurrentCellBehavior = GridCellActivateAction.None;
+            GGC_hienthicongviec.ShowGroupDropArea = true;
+            GGC_hienthicongviec.BorderStyle = BorderStyle.FixedSingle;
 
             // Tạo đối tượng GridColumnDescriptorCollection để quản lý các cột
             GridColumnDescriptorCollection columns = GGC_hienthicongviec.TableDescriptor.Columns;
@@ -78,8 +82,6 @@ namespace DangNhap
                 column.Appearance.AnyRecordFieldCell.AutoSize = true;
                 column.Appearance.AnyRecordFieldCell.CellType = "TextBox";
             }
-            
-
             if (!DangNhap.currentAccount.Level.Equals("CEO"))
             {
                 BTN_themcongviec.Enabled = false;
@@ -138,14 +140,18 @@ namespace DangNhap
         {
             DataTable dataTable = new DataTable();
 
-            DataColumn col1 = new DataColumn("Mã nhân viên");
-            DataColumn col2 = new DataColumn("Họ và tên");
-            DataColumn col3 = new DataColumn("Nội dung");
-            DataColumn col4 = new DataColumn("Mã căn hộ");
-            DataColumn col5 = new DataColumn("Thời hạn");
-            DataColumn col6 = new DataColumn("Ngày hoàn thành");
-            DataColumn col7 = new DataColumn("Trạng thái");
-            DataColumn col8 = new DataColumn("Ghi chú");
+            DataColumn col1 = new DataColumn("Mã công việc");
+            DataColumn col2 = new DataColumn("Mã nhân viên");
+            DataColumn col3 = new DataColumn("Họ");
+            DataColumn col4 = new DataColumn("Tên");
+            DataColumn col5 = new DataColumn("Nội dung");
+            DataColumn col6 = new DataColumn("Mã căn hộ");
+            DataColumn col7 = new DataColumn("Ngày giao");
+            DataColumn col8 = new DataColumn("Ngày cập nhật");
+            DataColumn col9 = new DataColumn("Thời hạn");
+            DataColumn col10 = new DataColumn("Ngày hoàn thành");
+            DataColumn col11 = new DataColumn("Trạng thái");
+            DataColumn col12 = new DataColumn("Ghi chú");
 
             dataTable.Columns.Add(col1);
             dataTable.Columns.Add(col2);
@@ -155,45 +161,51 @@ namespace DangNhap
             dataTable.Columns.Add(col6);
             dataTable.Columns.Add(col7);
             dataTable.Columns.Add(col8);
+            dataTable.Columns.Add(col9);
+            dataTable.Columns.Add(col10);
+            dataTable.Columns.Add(col11);
+            dataTable.Columns.Add(col12);
 
             foreach (Record record in GGC_hienthicongviec.Table.Records)
             {
                 DataRow dtRow = dataTable.NewRow();
 
-                dtRow[0] = record.GetValue("Mã nhân viên");
-                dtRow[1] = record.GetValue("Họ và tên");
-                dtRow[2] = record.GetValue("Nội dung");
-                dtRow[3] = record.GetValue("Mã căn hộ");
-                dtRow[4] = record.GetValue("Thời hạn");
-                dtRow[5] = record.GetValue("Ngày hoàn thành");
-                dtRow[6] = record.GetValue("Trạng thái");
-                dtRow[7] = record.GetValue("Ghi chú");
+                dtRow[0] = record.GetValue("MaCongViec");
+                dtRow[1] = record.GetValue("MaNhanVien");
+                dtRow[2] = record.GetValue("Ho");
+                dtRow[3] = record.GetValue("Ten");
+                dtRow[4] = record.GetValue("NoiDung");
+                dtRow[5] = record.GetValue("MaCanHo");
+                dtRow[6] = record.GetValue("NgayGiao");
+                dtRow[7] = record.GetValue("NgayCapNhat");
+                dtRow[8] = record.GetValue("ThoiHan");
+                dtRow[9] = record.GetValue("NgayHoanThanh");
+                dtRow[10] = record.GetValue("TrangThai");
+                dtRow[11] = record.GetValue("GhiChu");
 
                 dataTable.Rows.Add(dtRow);
             }
             Export export = new Export();
             export.ToExcel(dataTable, "Cong_viec", "CÔNG VIỆC CHUNG");
+
         }
 
         private void BTN_in_Click(object sender, EventArgs e)
         {
-            //Create the Grid as printing document
-            GridPrintDocumentAdv gpd = new GridPrintDocumentAdv(GGC_hienthicongviec.TableControl);
-            PrintDialog pd = new PrintDialog();
-            //Scale all columns to fit within a page
-            gpd.ScaleColumnsToFitPage = true;
-            pd.Document = gpd;
-            //Print the contents of the Grid
-            gpd.Print();
+            GGC_hienthicongviec.TableModel.Properties.PrintFrame = false;
+
+            GridPrintDocumentAdv gridPrintDocument = new GridPrintDocumentAdv(GGC_hienthicongviec.TableControl);
+            PrintDialog printDialog = new PrintDialog();
+            gridPrintDocument.ScaleColumnsToFitPage = true;
+            PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog();
+            printPreviewDialog.Document = gridPrintDocument;
+
+            printPreviewDialog.ShowDialog();
+            printDialog.Document = gridPrintDocument;
+            if (printDialog.ShowDialog() == DialogResult.OK)
+                gridPrintDocument.Print();
 
         }
 
-        private void PrintDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-            /*Bitmap bitmap = new Bitmap(DGV_hienthicongviec.Width, DGV_hienthicongviec.Height);
-            DGV_hienthicongviec.DrawToBitmap(bitmap, new System.Drawing.Rectangle(0, 0, DGV_hienthicongviec.Width, DGV_hienthicongviec.Height));
-            
-            e.Graphics.DrawImage(bitmap, 0, 0);*/
-        }
     }
 }

@@ -164,6 +164,8 @@ namespace DAO
                                     p = new SqlParameter(pair.Key, SqlDbType.Float) { Value = doubleValue };
                                 else if (value is bool boolValue)
                                     p = new SqlParameter(pair.Key, SqlDbType.Bit) { Value = boolValue };
+                                else if (value is byte[] byteValue)
+                                    p = new SqlParameter(pair.Key, SqlDbType.VarBinary) { Value = byteValue };
                                 else if (value is DateTime dateTimeValue)
                                 {
                                     if (dateTimeValue.Year < 1900 || dateTimeValue.Year > 2100)

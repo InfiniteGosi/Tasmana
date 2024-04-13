@@ -9,6 +9,7 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using Syncfusion.Grouping;
 using Syncfusion.Windows.Forms.Grid.Grouping;
+using Syncfusion.XlsIO;
 namespace DangNhap
 {
     internal class Export
@@ -45,7 +46,7 @@ namespace DangNhap
             oSheet.Name = sheetName;
 
             // Create title
-            Microsoft.Office.Interop.Excel.Range head = oSheet.get_Range("A1", "H1");
+            Microsoft.Office.Interop.Excel.Range head = oSheet.get_Range("A1", "L1");
 
             head.MergeCells = true;
 
@@ -63,52 +64,76 @@ namespace DangNhap
 
             Microsoft.Office.Interop.Excel.Range cl1 = oSheet.get_Range("A3", "A3");
 
-            cl1.Value2 = "Mã nhân viên";
+            cl1.Value2 = "Mã công việc";
 
             cl1.ColumnWidth = 20;
 
             Microsoft.Office.Interop.Excel.Range cl2 = oSheet.get_Range("B3", "B3");
 
-            cl2.Value2 = "Họ và tên";
+            cl2.Value2 = "Mã nhân viên";
 
-            cl2.ColumnWidth = 50.0;
+            cl2.ColumnWidth = 20;
 
             Microsoft.Office.Interop.Excel.Range cl3 = oSheet.get_Range("C3", "C3");
 
-            cl3.Value2 = "Nội dung";
+            cl3.Value2 = "Họ";
 
-            cl3.ColumnWidth = 50.0;
+            cl3.ColumnWidth = 20;
 
             Microsoft.Office.Interop.Excel.Range cl4 = oSheet.get_Range("D3", "D3");
 
-            cl4.Value2 = "Mã căn hộ";
+            cl4.Value2 = "Tên";
 
             cl4.ColumnWidth = 20;
 
             Microsoft.Office.Interop.Excel.Range cl5 = oSheet.get_Range("E3", "E3");
 
-            cl5.Value2 = "Thời hạn";
+            cl5.Value2 = "Nội dung";
 
-            cl5.ColumnWidth = 20;
+            cl5.ColumnWidth = 50;
 
             Microsoft.Office.Interop.Excel.Range cl6 = oSheet.get_Range("F3", "F3");
 
-            cl6.Value2 = "Ngày hoàn thành";
+            cl6.Value2 = "Mã căn hộ";
 
             cl6.ColumnWidth = 20;
 
             Microsoft.Office.Interop.Excel.Range cl7 = oSheet.get_Range("G3", "G3");
 
-            cl7.Value2 = "Trạng thái";
+            cl7.Value2 = "Ngày giao";
 
             cl7.ColumnWidth = 20;
 
             Microsoft.Office.Interop.Excel.Range cl8 = oSheet.get_Range("H3", "H3");
 
-            cl8.Value2 = "Ghi chú";
+            cl8.Value2 = "Ngày cập nhật";
 
             cl8.ColumnWidth = 20;
-            Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A3", "H3");
+
+            Microsoft.Office.Interop.Excel.Range cl9 = oSheet.get_Range("I3", "I3");
+
+            cl9.Value2 = "Thời hạn";
+
+            cl9.ColumnWidth = 20;
+
+            Microsoft.Office.Interop.Excel.Range cl10 = oSheet.get_Range("J3", "J3");
+
+            cl10.Value2 = "Ngày hoàn thành";
+
+            cl10.ColumnWidth = 20;
+
+            Microsoft.Office.Interop.Excel.Range cl11 = oSheet.get_Range("K3", "K3");
+
+            cl11.Value2 = "Trạng thái";
+
+            cl11.ColumnWidth = 20;
+
+            Microsoft.Office.Interop.Excel.Range cl12 = oSheet.get_Range("L3", "L3");
+
+            cl12.Value2 = "Ghi chú";
+
+            cl12.ColumnWidth = 20;
+            Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A3", "L3");
 
             rowHead.Font.Bold = true;
             // Draw border
@@ -170,6 +195,7 @@ namespace DangNhap
             // Center the table
             oSheet.get_Range(c1, c2).HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
         }
+
 
         public void ToPDF(GridGroupingControl ggc, String path)
         {

@@ -58,7 +58,17 @@ namespace BLL
                 return false;
             }
         }
-
+        public bool AddJob_PDF(Dictionary<string, object> parameters)
+        {
+            if (JobDAO.Instance.AddJob_PDF(parameters))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public bool AddJob_Division(Dictionary<string, object> parameters)
         {
             if (JobDAO.Instance.AddJob_Division(parameters))
@@ -137,6 +147,30 @@ namespace BLL
                 string trangThai = dt.Rows[i]["trangThai"].ToString();
                 string ghiChu = dt.Rows[i]["ghiChu"].ToString();
                 Job job = new Job(maCongViec, noiDung, ngayGiao, thoihan, ngayHoanThanh, ngayCapNhat, trangThai, ghiChu);
+                jobs.Add(job);
+            }
+            return jobs;
+        }
+
+        public List<Job> GetJob()
+        {
+            List<Job> jobs = new List<Job>();
+            DataTable dt = JobDAO.Instance.GetJob();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                string maCongViec = dt.Rows[i]["Mã công việc"].ToString();
+                string maNhanVien = dt.Rows[i]["Mã nhân viên"].ToString() ;
+                string ho = dt.Rows[i]["Họ"].ToString();
+                string ten = dt.Rows[i]["Tên"].ToString();
+                string noiDung = dt.Rows[i]["Nội dung"].ToString();
+                string maCanHo = dt.Rows[i]["Mã căn hộ"].ToString();
+                DateTime ngayGiao = (DateTime)dt.Rows[i]["Ngày giao"];
+                DateTime ngayCapNhat = dt.Rows[i]["Ngày cập nhật"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["Ngày cập nhật"].ToString());
+                DateTime thoiHan = (DateTime)dt.Rows[i]["Thời hạn"];
+                DateTime ngayHoanThanh = dt.Rows[i]["Ngày hoàn thành"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["Ngày hoàn thành"].ToString());
+                string trangThai = dt.Rows[i]["Trạng thái"].ToString();
+                string ghiChu = dt.Rows[i]["Ghi chú"].ToString();
+                Job job = new Job(maCongViec,maNhanVien,ho, ten, noiDung, maCanHo, ngayGiao,  ngayCapNhat,  thoiHan, ngayHoanThanh, trangThai, ghiChu);
                 jobs.Add(job);
             }
             return jobs;

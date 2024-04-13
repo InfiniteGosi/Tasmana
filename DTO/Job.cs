@@ -10,7 +10,11 @@ namespace DTO
     public class Job
     {
         public string MaCongViec {  get; set; }
+        public string MaNhanVien { get; set; }
+        public string Ho { get; set; }
+        public string Ten { get; set; }
         public string NoiDung { get; set; }
+        public string MaCanHo { get; set; }
         public DateTime NgayGiao { get; set; }
         public DateTime ThoiHan {  get; set; }
         public DateTime NgayHoanThanh { get; set; }
@@ -30,6 +34,22 @@ namespace DTO
         {
             MaCongViec = maCongViec;
             NoiDung = noiDung;
+            NgayGiao = ngayGiao;
+            ThoiHan = thoiHan;
+            NgayHoanThanh = ngayHoanThanh;
+            NgayCapNhat = ngayCapNhat;
+            TrangThai = trangThai;
+            GhiChu = ghiChu;
+        }
+
+        public Job(string maCongViec, string maNhanVien, string ho, string ten, string noiDung, string maCanHo, DateTime ngayGiao, DateTime ngayCapNhat, DateTime thoiHan, DateTime ngayHoanThanh, string trangThai, string ghiChu)
+        {
+            MaCongViec = maCongViec;
+            MaNhanVien = maNhanVien;
+            Ho = ho;
+            Ten = ten;
+            NoiDung = noiDung;
+            MaCanHo = maCanHo;
             NgayGiao = ngayGiao;
             ThoiHan = thoiHan;
             NgayHoanThanh = ngayHoanThanh;
