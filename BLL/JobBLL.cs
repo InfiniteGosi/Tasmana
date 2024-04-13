@@ -132,6 +132,7 @@ namespace BLL
             }
             return jobs;
         }
+        // Lấy toàn bộ tất cả công việc
         public List<Job> GetAllJob()
         {
             List <Job> jobs = new List<Job>();
@@ -151,7 +152,6 @@ namespace BLL
             }
             return jobs;
         }
-
         public List<Job> GetJob()
         {
             List<Job> jobs = new List<Job>();
@@ -174,6 +174,17 @@ namespace BLL
                 jobs.Add(job);
             }
             return jobs;
+        }
+
+        // Chỉnh sửa công việc
+        public bool EditJobOfEmployee(Dictionary<string, object> parameters)
+        {
+            if (JobDAO.Instance.EditJobOfEmployee(parameters))
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

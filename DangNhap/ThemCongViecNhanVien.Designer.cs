@@ -40,7 +40,6 @@ namespace DangNhap
             this.label1 = new System.Windows.Forms.Label();
             this.CBB_phongban = new System.Windows.Forms.ComboBox();
             this.BTN_file = new System.Windows.Forms.Button();
-            this.CB_thoihan = new System.Windows.Forms.CheckBox();
             this.RBTN_toancongty = new System.Windows.Forms.RadioButton();
             this.LB_quyentruycap = new System.Windows.Forms.Label();
             this.RBTN_bophan = new System.Windows.Forms.RadioButton();
@@ -82,7 +81,6 @@ namespace DangNhap
             this.PN_hienthithemcongviec.Controls.Add(this.label1);
             this.PN_hienthithemcongviec.Controls.Add(this.CBB_phongban);
             this.PN_hienthithemcongviec.Controls.Add(this.BTN_file);
-            this.PN_hienthithemcongviec.Controls.Add(this.CB_thoihan);
             this.PN_hienthithemcongviec.Controls.Add(this.RBTN_toancongty);
             this.PN_hienthithemcongviec.Controls.Add(this.LB_quyentruycap);
             this.PN_hienthithemcongviec.Controls.Add(this.RBTN_bophan);
@@ -213,16 +211,6 @@ namespace DangNhap
             this.BTN_file.Text = "File";
             this.BTN_file.UseVisualStyleBackColor = true;
             this.BTN_file.Click += new System.EventHandler(this.BTN_file_Click);
-            // 
-            // CB_thoihan
-            // 
-            this.CB_thoihan.AutoSize = true;
-            this.CB_thoihan.Location = new System.Drawing.Point(212, 506);
-            this.CB_thoihan.Name = "CB_thoihan";
-            this.CB_thoihan.Size = new System.Drawing.Size(18, 17);
-            this.CB_thoihan.TabIndex = 173;
-            this.CB_thoihan.UseVisualStyleBackColor = true;
-            this.CB_thoihan.CheckStateChanged += new System.EventHandler(this.CB_thoihan_CheckStateChanged);
             // 
             // RBTN_toancongty
             // 
@@ -597,7 +585,6 @@ namespace DangNhap
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox CBB_phongban;
         private System.Windows.Forms.Button BTN_file;
-        private System.Windows.Forms.CheckBox CB_thoihan;
         private System.Windows.Forms.RadioButton RBTN_toancongty;
         private System.Windows.Forms.Label LB_quyentruycap;
         private System.Windows.Forms.RadioButton RBTN_bophan;

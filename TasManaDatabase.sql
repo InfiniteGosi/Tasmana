@@ -560,3 +560,20 @@ begin
 	set matKhau = @matKhau
 	where maNguoiDung = @maNguoiDung
 end
+go
+-- Procedure Cập nhật Công Việc
+Create Procedure [dbo].[SP_EditCongViec]
+	@maCongViec Varchar(10),
+	@noiDung NVARCHAR(200),
+	@thoiHan SMALLDATETIME,
+	@ngayHoanThanh SMALLDATETIME,
+	@ngayCapNhat SMALLDATETIME,
+	@trangThai NVARCHAR(100),
+	@ghiChu NVARCHAR(200)
+as
+begin
+	Update CongViec
+	Set noiDung = @noiDung, thoiHan = @thoiHan, ngayHoanThanh = @ngayHoanThanh, ngayCapNhat = @ngayCapNhat, trangThai = @trangThai, ghiChu = @ghiChu
+	WHERE maCongViec = @maCongViec
+end
+go
