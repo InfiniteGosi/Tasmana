@@ -189,6 +189,7 @@ namespace DangNhap
                 GetNewestJobID();
                 DTP_gio.Enabled = true;
                 DTP_ngay.Enabled = true;
+                BTN_file.Enabled = true;
             }
         }
 
@@ -264,8 +265,12 @@ namespace DangNhap
                 if (JobBLL.Instance.AddJob_Employee(AddParameterCongViec_NhanVien()))
                 {
                     if (JobBLL.Instance.AddRequestFromCustom(AddParameterYeuCau()))
+                    {
                         if (JobBLL.Instance.AddJob_PDF(AddParameterPDF()))
+                        {
                             return true;
+                        }
+                    }
                 }
             }
             return false;
@@ -305,6 +310,24 @@ namespace DangNhap
                 }
             }
 
+        }
+
+        private void BTN_huy_Click(object sender, EventArgs e)
+        {
+            CBB_phongban.SelectedIndex = -1;
+            CBB_nhom.SelectedIndex = -1;
+            CBB_manhanvien.SelectedIndex = -1;
+            TXB_noidung.Clear();
+            TXB_MaCongViec.Clear();
+            TXB_macanho.Clear();
+            CBB_nhom.Enabled = false;
+            CBB_manhanvien.Enabled = false;
+            TXB_noidung.Enabled = false;
+            TXB_macanho.Enabled= false;
+            TXB_MaCongViec.Enabled = false;
+            DTP_gio.Enabled = false;
+            DTP_ngay.Enabled = false;   
+            BTN_file.Enabled = false;
         }
     }
 }

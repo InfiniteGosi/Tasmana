@@ -191,7 +191,7 @@ namespace DangNhap
             this.BTN_luu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.BTN_luu.Image = null;
             this.BTN_luu.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_luu.Location = new System.Drawing.Point(574, 831);
+            this.BTN_luu.Location = new System.Drawing.Point(574, 834);
             this.BTN_luu.Name = "BTN_luu";
             this.BTN_luu.OnHoverBaseColor1 = System.Drawing.Color.WhiteSmoke;
             this.BTN_luu.OnHoverBaseColor2 = System.Drawing.Color.ForestGreen;
@@ -377,6 +377,7 @@ namespace DangNhap
             this.gunaGradientButton1.TabIndex = 125;
             this.gunaGradientButton1.Text = "Xóa";
             this.gunaGradientButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaGradientButton1.Click += new System.EventHandler(this.gunaGradientButton1_Click);
             // 
             // panel1
             // 

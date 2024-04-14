@@ -577,3 +577,24 @@ begin
 	WHERE maCongViec = @maCongViec
 end
 go
+Create Procedure [dbo].[SP_XoaCongViec_NhanVien]
+	@maCongViec Varchar(10)
+as
+begin
+	-- Xóa File công việc
+	if Exists (Select * From CongViec_PDF Where maCongViec = @maCongViec)
+	Begin
+		Delete From CongViec_PDF
+		Where maCongViec = @maCongViec
+	End
+	-- Xóa Yêu cầu Công việc
+	Delete From YeuCau
+	Where maCongViec = @maCongViec
+	-- Xóa Công việc nhân viên
+	Delete From Congviec_Nhanvien
+	Where maCongViec = @maCongViec
+	-- Xóa Công việc 
+	Delete From CongViec
+	Where maCongViec = @maCongViec
+end
+go

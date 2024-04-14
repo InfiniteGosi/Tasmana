@@ -91,5 +91,26 @@ namespace DangNhap
                 //this.Close();
             }
         }
+
+        private Dictionary<string, object> AddParameterDeleteJobOfEmployee()
+        {
+            Dictionary<string, object> dict = new Dictionary<string, object>
+            {
+                {"@maCongViec", TXB_MaCV.Text},
+            };
+            return dict;
+        }
+        private void gunaGradientButton1_Click(object sender, EventArgs e)
+        {
+            if (JobBLL.Instance.DeleteJobOfEmployee(AddParameterDeleteJobOfEmployee()))
+            {
+                MessageBox.Show("Xóa thành công");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Xóa thất bại");
+            }
+        }
     }
 }

@@ -80,6 +80,7 @@ namespace DangNhap
                 DTP_ngay.Enabled = true;
                 BTN_ok.Enabled = true;
                 GetNewestJobID();
+                BTN_file.Enabled = true;
             }
         }
 
@@ -163,6 +164,22 @@ namespace DangNhap
             {
                 MessageBox.Show("Thêm thất bại");
             }
+        }
+
+        private void BTN_huy_Click(object sender, EventArgs e)
+        {
+            CBB_phongban.SelectedIndex = -1;
+            CBB_nhom.SelectedIndex = -1;
+            TXB_noidung.Clear();
+            TXB_MaCongViec.Clear();
+            TXB_macanho.Clear();
+            CBB_nhom.Enabled = false;
+            TXB_noidung.Enabled = false;
+            TXB_macanho.Enabled = false;
+            TXB_MaCongViec.Enabled = false;
+            DTP_gio.Enabled = false;
+            DTP_ngay.Enabled = false;
+            BTN_file.Enabled = false;
         }
     }
 }

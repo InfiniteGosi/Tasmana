@@ -103,5 +103,12 @@ namespace DAO
             int result = DataProvider.Instance.ExecuteStoredProcedure("SP_EditCongViec", parameters);
             return result > 0;
         }
+
+        // Xóa công việc
+        public bool DeleteJobOfEmployee(Dictionary<string, object> parameters)
+        {
+            int result = DataProvider.Instance.ExecuteStoredProcedure("SP_XoaCongViec_NhanVien", parameters);
+            return result > 0;
+        }
     }
 }

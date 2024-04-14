@@ -117,6 +117,7 @@ namespace DangNhap
             // 
             // BTN_file
             // 
+            this.BTN_file.Enabled = false;
             this.BTN_file.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_file.ForeColor = System.Drawing.Color.White;
             this.BTN_file.Location = new System.Drawing.Point(212, 499);
@@ -212,6 +213,7 @@ namespace DangNhap
             this.BTN_huy.TabIndex = 169;
             this.BTN_huy.Text = "Hoàn tác";
             this.BTN_huy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_huy.Click += new System.EventHandler(this.BTN_huy_Click);
             // 
             // TXB_noidung
             // 

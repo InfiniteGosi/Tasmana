@@ -186,5 +186,15 @@ namespace BLL
 
             return false;
         }
+
+        // Xóa công việc của nhân viên theo mã công việc
+        public bool DeleteJobOfEmployee(Dictionary<string, object> parameters)
+        {
+            if (JobDAO.Instance.DeleteJobOfEmployee(parameters))
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
