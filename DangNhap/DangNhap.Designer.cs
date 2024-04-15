@@ -104,7 +104,7 @@ namespace DangNhap
             // VB_HienMatKhau
             // 
             this.VB_HienMatKhau.AutoSize = true;
-            this.VB_HienMatKhau.BackColor = System.Drawing.Color.Transparent;
+            this.VB_HienMatKhau.BackColor = System.Drawing.Color.Black;
             this.VB_HienMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.VB_HienMatKhau.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VB_HienMatKhau.ForeColor = System.Drawing.Color.White;
@@ -125,9 +125,9 @@ namespace DangNhap
             this.TB_MatKhau.Location = new System.Drawing.Point(632, 318);
             this.TB_MatKhau.Multiline = true;
             this.TB_MatKhau.Name = "TB_MatKhau";
+            this.TB_MatKhau.PasswordChar = '*';
             this.TB_MatKhau.Size = new System.Drawing.Size(420, 26);
             this.TB_MatKhau.TabIndex = 8;
-            this.TB_MatKhau.UseSystemPasswordChar = true;
             // 
             // TB_TaiKhoan
             // 
@@ -186,7 +186,7 @@ namespace DangNhap
             this.BTN_close.BorderColor = System.Drawing.Color.Black;
             this.BTN_close.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_close.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_close.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_close.ForeColor = System.Drawing.Color.White;
             this.BTN_close.Image = ((System.Drawing.Image)(resources.GetObject("BTN_close.Image")));
             this.BTN_close.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
