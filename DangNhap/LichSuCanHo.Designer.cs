@@ -51,7 +51,7 @@ namespace DangNhap
             this.TXB_chuhohientai.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TXB_chuhohientai.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_chuhohientai.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_chuhohientai.Location = new System.Drawing.Point(62, 111);
+            this.TXB_chuhohientai.Location = new System.Drawing.Point(174, 87);
             this.TXB_chuhohientai.Name = "TXB_chuhohientai";
             this.TXB_chuhohientai.Size = new System.Drawing.Size(283, 27);
             this.TXB_chuhohientai.TabIndex = 22;
@@ -73,7 +73,7 @@ namespace DangNhap
             this.TXB_chuhotruoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TXB_chuhotruoc.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_chuhotruoc.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_chuhotruoc.Location = new System.Drawing.Point(467, 102);
+            this.TXB_chuhotruoc.Location = new System.Drawing.Point(667, 89);
             this.TXB_chuhotruoc.Multiline = true;
             this.TXB_chuhotruoc.Name = "TXB_chuhotruoc";
             this.TXB_chuhotruoc.Size = new System.Drawing.Size(283, 89);
@@ -84,7 +84,7 @@ namespace DangNhap
             this.LB_chuhotruoc.AutoSize = true;
             this.LB_chuhotruoc.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_chuhotruoc.ForeColor = System.Drawing.Color.White;
-            this.LB_chuhotruoc.Location = new System.Drawing.Point(463, 80);
+            this.LB_chuhotruoc.Location = new System.Drawing.Point(500, 89);
             this.LB_chuhotruoc.Name = "LB_chuhotruoc";
             this.LB_chuhotruoc.Size = new System.Drawing.Size(98, 19);
             this.LB_chuhotruoc.TabIndex = 23;
@@ -96,7 +96,7 @@ namespace DangNhap
             this.TXB_phidichvu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TXB_phidichvu.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_phidichvu.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_phidichvu.Location = new System.Drawing.Point(467, 265);
+            this.TXB_phidichvu.Location = new System.Drawing.Point(667, 206);
             this.TXB_phidichvu.Multiline = true;
             this.TXB_phidichvu.Name = "TXB_phidichvu";
             this.TXB_phidichvu.Size = new System.Drawing.Size(283, 84);
@@ -107,7 +107,7 @@ namespace DangNhap
             this.LB_phidichvu.AutoSize = true;
             this.LB_phidichvu.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_phidichvu.ForeColor = System.Drawing.Color.White;
-            this.LB_phidichvu.Location = new System.Drawing.Point(463, 243);
+            this.LB_phidichvu.Location = new System.Drawing.Point(500, 208);
             this.LB_phidichvu.Name = "LB_phidichvu";
             this.LB_phidichvu.Size = new System.Drawing.Size(115, 19);
             this.LB_phidichvu.TabIndex = 25;
@@ -119,9 +119,9 @@ namespace DangNhap
             this.TXB_congno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TXB_congno.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_congno.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_congno.Location = new System.Drawing.Point(62, 440);
+            this.TXB_congno.Location = new System.Drawing.Point(199, 391);
             this.TXB_congno.Name = "TXB_congno";
-            this.TXB_congno.Size = new System.Drawing.Size(283, 27);
+            this.TXB_congno.Size = new System.Drawing.Size(258, 27);
             this.TXB_congno.TabIndex = 28;
             // 
             // LB_congno
@@ -129,7 +129,7 @@ namespace DangNhap
             this.LB_congno.AutoSize = true;
             this.LB_congno.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_congno.ForeColor = System.Drawing.Color.White;
-            this.LB_congno.Location = new System.Drawing.Point(58, 418);
+            this.LB_congno.Location = new System.Drawing.Point(58, 391);
             this.LB_congno.Name = "LB_congno";
             this.LB_congno.Size = new System.Drawing.Size(135, 19);
             this.LB_congno.TabIndex = 27;
@@ -141,7 +141,7 @@ namespace DangNhap
             this.TXB_dichvu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TXB_dichvu.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_dichvu.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_dichvu.Location = new System.Drawing.Point(62, 274);
+            this.TXB_dichvu.Location = new System.Drawing.Point(174, 204);
             this.TXB_dichvu.Multiline = true;
             this.TXB_dichvu.Name = "TXB_dichvu";
             this.TXB_dichvu.Size = new System.Drawing.Size(283, 84);
@@ -152,7 +152,7 @@ namespace DangNhap
             this.LB_dichvu.AutoSize = true;
             this.LB_dichvu.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_dichvu.ForeColor = System.Drawing.Color.White;
-            this.LB_dichvu.Location = new System.Drawing.Point(58, 252);
+            this.LB_dichvu.Location = new System.Drawing.Point(58, 206);
             this.LB_dichvu.Name = "LB_dichvu";
             this.LB_dichvu.Size = new System.Drawing.Size(61, 19);
             this.LB_dichvu.TabIndex = 31;
@@ -164,7 +164,7 @@ namespace DangNhap
             this.TXB_doxe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TXB_doxe.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_doxe.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_doxe.Location = new System.Drawing.Point(467, 431);
+            this.TXB_doxe.Location = new System.Drawing.Point(658, 378);
             this.TXB_doxe.Multiline = true;
             this.TXB_doxe.Name = "TXB_doxe";
             this.TXB_doxe.Size = new System.Drawing.Size(283, 84);
@@ -175,7 +175,7 @@ namespace DangNhap
             this.LB_doxe.AutoSize = true;
             this.LB_doxe.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_doxe.ForeColor = System.Drawing.Color.White;
-            this.LB_doxe.Location = new System.Drawing.Point(463, 409);
+            this.LB_doxe.Location = new System.Drawing.Point(509, 380);
             this.LB_doxe.Name = "LB_doxe";
             this.LB_doxe.Size = new System.Drawing.Size(106, 19);
             this.LB_doxe.TabIndex = 33;
@@ -196,7 +196,7 @@ namespace DangNhap
             this.BTN_huy.ForeColor = System.Drawing.Color.Black;
             this.BTN_huy.Image = null;
             this.BTN_huy.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_huy.Location = new System.Drawing.Point(682, 550);
+            this.BTN_huy.Location = new System.Drawing.Point(883, 550);
             this.BTN_huy.Name = "BTN_huy";
             this.BTN_huy.OnHoverBaseColor1 = System.Drawing.Color.Red;
             this.BTN_huy.OnHoverBaseColor2 = System.Drawing.Color.DarkRed;
@@ -224,7 +224,7 @@ namespace DangNhap
             this.BTN_ok.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.BTN_ok.Image = null;
             this.BTN_ok.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_ok.Location = new System.Drawing.Point(777, 550);
+            this.BTN_ok.Location = new System.Drawing.Point(978, 550);
             this.BTN_ok.Name = "BTN_ok";
             this.BTN_ok.OnHoverBaseColor1 = System.Drawing.Color.Green;
             this.BTN_ok.OnHoverBaseColor2 = System.Drawing.Color.ForestGreen;
@@ -241,8 +241,8 @@ namespace DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(878, 604);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            this.ClientSize = new System.Drawing.Size(1079, 604);
             this.Controls.Add(this.BTN_huy);
             this.Controls.Add(this.BTN_ok);
             this.Controls.Add(this.TXB_doxe);
