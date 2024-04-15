@@ -116,11 +116,11 @@ namespace DangNhap
         {
             if (VB_HienMatKhau.Checked)
             {
-                TB_MatKhau.UseSystemPasswordChar = false;
+                TB_MatKhau.UseSystemPasswordChar = true;
             }
             else
             {
-                TB_MatKhau.UseSystemPasswordChar = true;
+                TB_MatKhau.UseSystemPasswordChar = false;
             }
         }
     }
