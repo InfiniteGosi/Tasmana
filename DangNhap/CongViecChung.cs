@@ -48,6 +48,7 @@ namespace DangNhap
             GetJobs();
             GGC_hienthicongviec.Size = new System.Drawing.Size(950, 300);
             GGC_hienthicongviec.DataSource = jobs;
+            GGC_hienthicongviec_DataSourceChanged(sender, e);
             GGC_hienthicongviec.TableDescriptor.Columns[0].HeaderText = "Mã công việc";
             GGC_hienthicongviec.TableDescriptor.Columns[1].HeaderText = "Mã nhân viên";
             GGC_hienthicongviec.TableDescriptor.Columns[2].HeaderText = "Họ";
@@ -90,7 +91,22 @@ namespace DangNhap
             }
         }
 
-
+        private void GGC_hienthicongviec_DataSourceChanged(object sender, EventArgs e)
+        {
+            if (GGC_hienthicongviec.TableDescriptor.Columns.Contains("NgayHoanThanh"))
+            {
+                var col = GGC_hienthicongviec.TableDescriptor.Columns["NgayHoanThanh"];
+                col.Appearance.AnyCell.CellValueType = typeof(string);
+                foreach (var comp in GGC_hienthicongviec.Table.Records)
+                {
+                    var cellValue = comp.GetValue("NgayHoanThanh");
+                    if(cellValue.ToString().Contains( "1/1/0001"))
+                    {
+                        cellValue = null;
+                    }
+                }
+            }
+        }
         private void BTN_PDF_Click(object sender, EventArgs e)
         {
             if (GGC_hienthicongviec.Table.Records.Count > 0)

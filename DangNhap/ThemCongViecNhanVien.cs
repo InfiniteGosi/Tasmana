@@ -266,10 +266,15 @@ namespace DangNhap
                 {
                     if (JobBLL.Instance.AddRequestFromCustom(AddParameterYeuCau()))
                     {
-                        if (JobBLL.Instance.AddJob_PDF(AddParameterPDF()))
+                        if (buffer != null)
                         {
-                            return true;
+                            if (JobBLL.Instance.AddJob_PDF(AddParameterPDF()))
+                            {
+                                return true;
+                            }
                         }
+                        else
+                            return true;
                     }
                 }
             }
