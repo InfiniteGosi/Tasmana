@@ -62,18 +62,18 @@ namespace DangNhap
             this.BTN_themcongviec.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_themcongviec.ForeColor = System.Drawing.Color.White;
             this.BTN_themcongviec.Image = ((System.Drawing.Image)(resources.GetObject("BTN_themcongviec.Image")));
-            this.BTN_themcongviec.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_themcongviec.ImageSize = new System.Drawing.Size(15, 15);
-            this.BTN_themcongviec.Location = new System.Drawing.Point(1273, 57);
+            this.BTN_themcongviec.Location = new System.Drawing.Point(1209, 57);
             this.BTN_themcongviec.Name = "BTN_themcongviec";
             this.BTN_themcongviec.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.BTN_themcongviec.OnHoverBaseColor2 = System.Drawing.Color.DarkGreen;
-            this.BTN_themcongviec.OnHoverBorderColor = System.Drawing.Color.White;
-            this.BTN_themcongviec.OnHoverForeColor = System.Drawing.Color.Black;
+            this.BTN_themcongviec.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.BTN_themcongviec.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_themcongviec.OnHoverImage = null;
             this.BTN_themcongviec.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_themcongviec.Size = new System.Drawing.Size(40, 40);
+            this.BTN_themcongviec.Size = new System.Drawing.Size(104, 40);
             this.BTN_themcongviec.TabIndex = 8;
+            this.BTN_themcongviec.Text = "Thêm";
             this.BTN_themcongviec.Click += new System.EventHandler(this.BTN_themcongviec_Click);
             // 
             // comboBox4
@@ -154,22 +154,22 @@ namespace DangNhap
             this.BTN_excel.BorderSize = 1;
             this.BTN_excel.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_excel.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_excel.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_excel.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_excel.ForeColor = System.Drawing.Color.White;
             this.BTN_excel.Image = ((System.Drawing.Image)(resources.GetObject("BTN_excel.Image")));
-            this.BTN_excel.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_excel.Location = new System.Drawing.Point(65, 510);
+            this.BTN_excel.ImageSize = new System.Drawing.Size(10, 10);
+            this.BTN_excel.Location = new System.Drawing.Point(12, 746);
             this.BTN_excel.Name = "BTN_excel";
             this.BTN_excel.OnHoverBaseColor1 = System.Drawing.Color.Green;
             this.BTN_excel.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(95)))), ((int)(((byte)(45)))));
-            this.BTN_excel.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_excel.OnHoverBorderColor = System.Drawing.Color.Black;
             this.BTN_excel.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_excel.OnHoverImage = null;
             this.BTN_excel.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_excel.Size = new System.Drawing.Size(107, 48);
+            this.BTN_excel.Size = new System.Drawing.Size(93, 24);
             this.BTN_excel.TabIndex = 83;
             this.BTN_excel.Text = "Excel";
-            this.BTN_excel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.BTN_excel.TextOffsetX = 3;
             this.BTN_excel.Click += new System.EventHandler(this.BTN_excel_Click);
             // 
             // TXB_sotrang
@@ -236,22 +236,22 @@ namespace DangNhap
             this.BTN_PDF.BorderSize = 1;
             this.BTN_PDF.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_PDF.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_PDF.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_PDF.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_PDF.ForeColor = System.Drawing.Color.White;
             this.BTN_PDF.Image = ((System.Drawing.Image)(resources.GetObject("BTN_PDF.Image")));
-            this.BTN_PDF.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_PDF.Location = new System.Drawing.Point(178, 510);
+            this.BTN_PDF.ImageSize = new System.Drawing.Size(10, 10);
+            this.BTN_PDF.Location = new System.Drawing.Point(111, 746);
             this.BTN_PDF.Name = "BTN_PDF";
             this.BTN_PDF.OnHoverBaseColor1 = System.Drawing.Color.Coral;
             this.BTN_PDF.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(131)))), ((int)(((byte)(18)))));
-            this.BTN_PDF.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_PDF.OnHoverBorderColor = System.Drawing.Color.Black;
             this.BTN_PDF.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_PDF.OnHoverImage = null;
             this.BTN_PDF.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_PDF.Size = new System.Drawing.Size(107, 48);
+            this.BTN_PDF.Size = new System.Drawing.Size(93, 24);
             this.BTN_PDF.TabIndex = 95;
             this.BTN_PDF.Text = "PDF";
-            this.BTN_PDF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.BTN_PDF.TextOffsetX = 3;
             this.BTN_PDF.Click += new System.EventHandler(this.BTN_PDF_Click);
             // 
             // BTN_in
@@ -265,22 +265,22 @@ namespace DangNhap
             this.BTN_in.BorderSize = 1;
             this.BTN_in.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_in.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_in.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_in.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_in.ForeColor = System.Drawing.Color.White;
             this.BTN_in.Image = ((System.Drawing.Image)(resources.GetObject("BTN_in.Image")));
-            this.BTN_in.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_in.Location = new System.Drawing.Point(291, 510);
+            this.BTN_in.ImageSize = new System.Drawing.Size(10, 10);
+            this.BTN_in.Location = new System.Drawing.Point(210, 746);
             this.BTN_in.Name = "BTN_in";
             this.BTN_in.OnHoverBaseColor1 = System.Drawing.Color.DimGray;
             this.BTN_in.OnHoverBaseColor2 = System.Drawing.Color.Silver;
-            this.BTN_in.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_in.OnHoverBorderColor = System.Drawing.Color.Black;
             this.BTN_in.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_in.OnHoverImage = null;
             this.BTN_in.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_in.Size = new System.Drawing.Size(89, 48);
+            this.BTN_in.Size = new System.Drawing.Size(93, 24);
             this.BTN_in.TabIndex = 96;
             this.BTN_in.Text = "In";
-            this.BTN_in.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.BTN_in.TextOffsetX = 3;
             this.BTN_in.Click += new System.EventHandler(this.BTN_in_Click);
             // 
             // GGC_hienthicongviec
