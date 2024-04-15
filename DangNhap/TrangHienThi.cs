@@ -42,7 +42,7 @@ namespace DangNhap
         private void BTN_congviec_Click(object sender, EventArgs e)
         {
             OpenChildForm(new CongViecChung());
-            BTN_congviec.BackColor = Color.Gray;
+            BTN_congviec.BackColor = Color.FromArgb(51,53,55);
             BTN_thongbao.BackColor = Color.Transparent;
             BTN_thongke.BackColor = Color.Transparent;
             BTN_nhanvien.BackColor = Color.Transparent;
@@ -53,7 +53,7 @@ namespace DangNhap
         private void BTN_thongbao_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ThongBao());
-            BTN_thongbao.BackColor = Color.Gray;
+            BTN_thongbao.BackColor = Color.FromArgb(51, 53, 55);
             BTN_congviec.BackColor = Color.Transparent;
             BTN_thongke.BackColor = Color.Transparent;
             BTN_nhanvien.BackColor = Color.Transparent;
@@ -64,7 +64,7 @@ namespace DangNhap
         private void BTN_thongke_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ThongKe());
-            BTN_thongke.BackColor = Color.Gray;
+            BTN_thongke.BackColor = Color.FromArgb(51, 53, 55);
             BTN_congviec.BackColor = Color.Transparent;
             BTN_thongbao.BackColor = Color.Transparent;
             BTN_nhanvien.BackColor = Color.Transparent;
@@ -75,7 +75,7 @@ namespace DangNhap
         private void BTN_nhanvien_Click(object sender, EventArgs e)
         {
             OpenChildForm(new NhanVien());
-            BTN_nhanvien.BackColor = Color.Gray;
+            BTN_nhanvien.BackColor = Color.FromArgb(51, 53, 55);
             BTN_thongbao.BackColor = Color.Transparent;
             BTN_thongke.BackColor = Color.Transparent;
             BTN_cudan.BackColor = Color.Transparent;
@@ -86,7 +86,7 @@ namespace DangNhap
         private void BTN_cudan_Click(object sender, EventArgs e)
         {
             OpenChildForm(new CuDan());
-            BTN_cudan.BackColor = Color.Gray;
+            BTN_cudan.BackColor = Color.FromArgb(51, 53, 55);
             BTN_thongbao.BackColor = Color.Transparent;
             BTN_thongke.BackColor = Color.Transparent;
             BTN_nhanvien.BackColor = Color.Transparent;
@@ -97,7 +97,7 @@ namespace DangNhap
         private void BTN_canho_Click(object sender, EventArgs e)
         {
             OpenChildForm(new CanHo());
-            BTN_canho.BackColor = Color.Gray;
+            BTN_canho.BackColor = Color.FromArgb(51, 53, 55);
             BTN_thongbao.BackColor = Color.Transparent;
             BTN_thongke.BackColor = Color.Transparent;
             BTN_nhanvien.BackColor = Color.Transparent;
