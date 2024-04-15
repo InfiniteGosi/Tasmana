@@ -341,10 +341,5 @@ namespace DangNhap
             DTP_ngay.Enabled = false;   
             BTN_file.Enabled = false;
         }
-
-        private void LLB_hienfile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
     }
 }

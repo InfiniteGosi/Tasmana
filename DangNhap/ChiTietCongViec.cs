@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
@@ -111,6 +112,45 @@ namespace DangNhap
             {
                 MessageBox.Show("Xóa thất bại");
             }
+        }
+
+        private void LLB_chỉtietfile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SaveFileDialog save = new SaveFileDialog
+            {
+                Filter = "PDF (*.pdf)|*.pdf",
+                FileName = LLB_chỉtietfile.Text,
+            };
+            bool ErrorMessage = false;
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                if (File.Exists(save.FileName))
+                {
+                    try
+                    {
+                        File.Delete(save.FileName);
+                    }
+                    catch (Exception ex)
+                    {
+                        ErrorMessage = true;
+                        MessageBox.Show("Unable to write data in disk" + ex.Message);
+                    }
+                }
+                if (!ErrorMessage)
+                {
+                    try
+                    {
+                        byte[] bytes = JobBLL.Instance.GetFileOfJob(LLB_chỉtietfile.Text);
+                        File.WriteAllBytes(save.FileName, bytes);
+                        MessageBox.Show("Successful", "Info");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error while downloading" + ex.Message);
+                    }
+                }
+            }
+           
         }
     }
 }

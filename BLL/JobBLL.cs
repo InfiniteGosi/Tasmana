@@ -198,15 +198,26 @@ namespace BLL
             return false;
         }
 
-        public string GetFileOfJob(string maCongViec)
+        public string GetNameFile(string maCongViec)
         {
             string tenFile = null;
-            DataTable dt = JobDAO.Instance.GetFileOfJob(maCongViec);
+            DataTable dt = JobDAO.Instance.GetNameOfFile(maCongViec);
             if (dt.Rows.Count > 0)
             {
                tenFile = dt.Rows[0]["tenFile"].ToString();
             }
             return tenFile;
+        }
+
+        public byte[] GetFileOfJob(string maCongViec)
+        {
+            byte[] bytes = null;
+            DataTable dt = JobDAO.Instance.GetFileOfJob(maCongViec);
+            if (dt.Rows.Count > 0)
+            {
+                bytes = (byte[])dt.Rows[0]["pdfFile"];
+            }
+            return bytes;
         }
     }
 }
