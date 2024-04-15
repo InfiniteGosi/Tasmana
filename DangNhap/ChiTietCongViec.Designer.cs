@@ -579,6 +579,7 @@ namespace DangNhap
             this.LLB_chỉtietfile.TabStop = true;
             this.LLB_chỉtietfile.Text = "linkLabel1";
             this.LLB_chỉtietfile.Visible = false;
+            this.LLB_chỉtietfile.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LLB_chỉtietfile_LinkClicked);
             // 
             // ChiTietCongViec
             // 

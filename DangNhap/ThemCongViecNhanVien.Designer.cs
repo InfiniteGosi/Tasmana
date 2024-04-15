@@ -113,7 +113,6 @@ namespace DangNhap
             this.LLB_hienfile.TabStop = true;
             this.LLB_hienfile.Text = "linkLabel1";
             this.LLB_hienfile.Visible = false;
-            this.LLB_hienfile.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LLB_hienfile_LinkClicked);
             // 
             // TXB_MaCongViec
             // 

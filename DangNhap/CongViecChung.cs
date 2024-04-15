@@ -275,7 +275,7 @@ namespace DangNhap
                 DateTime date = thoiHan.Date;
                 ctcv.DTP_ngay.Text = date.ToString();
                 ctcv.DTP_gio.Text = thoiHan.ToString();
-                ctcv.LLB_chỉtietfile.Text = JobBLL.Instance.GetFileOfJob(maCongViec);
+                ctcv.LLB_chỉtietfile.Text = JobBLL.Instance.GetNameFile(maCongViec);
                 ctcv.LLB_chỉtietfile.Show();
                 // Show Form
                 ctcv.ShowDialog();

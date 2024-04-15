@@ -111,10 +111,17 @@ namespace DAO
             return result > 0;
         }
 
-        //Lấy tệp đính kèm của công việc
-        public DataTable GetFileOfJob(string maCongViec)
+        //Lấy tên tệp đính kèm theo mã công việc
+        public DataTable GetNameOfFile(string maCongViec)
         {
             string query = $"SELECT * FROM CongViec_PDF WHERE maCongViec = '{maCongViec}'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        //Lấy tệp đính kèm theo tên của nó
+        public DataTable GetFileOfJob(string tenFile)
+        {
+            string query = $"SELECT * FROM CongViec_PDF WHERE tenFile = '{tenFile}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
     }
