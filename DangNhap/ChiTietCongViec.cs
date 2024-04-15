@@ -71,7 +71,7 @@ namespace DangNhap
                 {"@maCongViec", TXB_MaCV.Text},
                 {"@noiDung", TXB_noidung.Text},
                 {"@thoiHan", combinedDateTime}, // Combine Date and Time components
-                {"@ngayHoanThanh", GetNgayHoanThanhCongViec() ? (object)DateTime.UtcNow : null}, // Use DateTime directly
+                {"@ngayHoanThanh", GetNgayHoanThanhCongViec() ? (object)DateTime.UtcNow.ToLocalTime() : null}, // Use DateTime directly
                 {"@ngayCapNhat", DateTime.UtcNow},
                 {"trangThai", CBB_TrangThai.SelectedItem.ToString()},
                 {"@ghiChu", TXB_GhiChu.Text}
