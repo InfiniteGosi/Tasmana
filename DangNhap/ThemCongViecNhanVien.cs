@@ -218,10 +218,10 @@ namespace DangNhap
             Dictionary<string, object> dict = new Dictionary<string, object>
             {
                 {"@noiDung", TXB_noidung.Text},
-                {"@ngayGiao", DateTime.Now.ToString("yyyy-MM-dd")},
+                {"@ngayGiao", DateTime.UtcNow.ToString("yyyy-MM-dd'T'HH:mm:ss")},
                 {"@thoihan",  DTP_ngay.Value.ToString("yyyy-MM-dd") + " " + DTP_gio.Text.Split(' ')[0].ToString()},
                 {"@ngayHoanThanh", null},
-                {"@ngayCapNhat", DateTime.Now.ToString("yyyy-MM-dd")},
+                {"@ngayCapNhat", DateTime.UtcNow.ToString("yyyy-MM-dd'T'HH:mm:ss")},
                 {"@trangThai", "Chưa bắt đầu"},
                 {"@ghiChu", null}
             };

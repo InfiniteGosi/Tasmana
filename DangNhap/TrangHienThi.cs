@@ -158,7 +158,7 @@ namespace DangNhap
         {
             if(WindowState == FormWindowState.Maximized)
             {
-                WindowState = FormWindowState.Normal;
+                WindowState = FormWindowState.Normal;   
             }
             else
             {
