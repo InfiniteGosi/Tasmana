@@ -168,7 +168,7 @@ namespace BLL
                 DateTime ngayGiao = (DateTime)dt.Rows[i]["Ngày giao"];
                 DateTime ngayCapNhat = (DateTime)dt.Rows[i]["Ngày cập nhật"];
                 DateTime thoiHan = (DateTime)dt.Rows[i]["Thời hạn"];
-                DateTime ngayHoanThanh = dt.Rows[i]["Ngày hoàn thành"] == DBNull.Value ? default(DateTime) : Convert.ToDateTime(dt.Rows[i]["ngayHoanThanh"].ToString());
+                DateTime ngayHoanThanh = dt.Rows[i]["Ngày hoàn thành"] == DBNull.Value ? default(DateTime) : Convert.ToDateTime(dt.Rows[i]["Ngày hoàn thành"].ToString());
                 string trangThai = dt.Rows[i]["Trạng thái"].ToString();
                 string ghiChu = dt.Rows[i]["Ghi chú"].ToString();
                 Job job = new Job(maCongViec,maNhanVien,ho, ten, noiDung, maCanHo, ngayGiao,  ngayCapNhat,  thoiHan, ngayHoanThanh, trangThai, ghiChu);
