@@ -42,7 +42,6 @@ namespace DangNhap
             ChiTietCongViec ctcv = new ChiTietCongViec();
             ctcv.Show();
         }
-
         private void CongViecChung_Load(object sender, EventArgs e)
         {
             GetJobs();
