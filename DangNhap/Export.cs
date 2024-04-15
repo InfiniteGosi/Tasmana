@@ -10,6 +10,7 @@ using iTextSharp.text.pdf;
 using Syncfusion.Grouping;
 using Syncfusion.Windows.Forms.Grid.Grouping;
 using Syncfusion.XlsIO;
+
 namespace DangNhap
 {
     internal class Export
@@ -197,46 +198,39 @@ namespace DangNhap
         }
 
 
-        public void ToPDF(GridGroupingControl ggc, String path)
+        public void ToPDF(DataTable dataTable, String path)
         {
-            // Tạo một đối tượng Document
-            Document document = new Document(PageSize.LETTER, 10, 10, 42, 35);
+            // Tạo một tệp PDF mới
+            Document document = new Document();
+            PdfWriter.GetInstance(document, new FileStream(path, FileMode.Create));
 
-            // Tạo một đối tượng PdfWriter để ghi dữ liệu vào file PDF
-            PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(path, FileMode.Create));
-
-            // Mở Document để bắt đầu viết dữ liệu
+            // Mở tài liệu để bắt đầu viết dữ liệu vào
             document.Open();
 
-            // Tạo một PdfPTable với số cột bằng với số cột trong GridGroupingControl
-            PdfPTable table = new PdfPTable(ggc.TableDescriptor.Columns.Count);
+            // Tạo một bảng PDF với số cột bằng với số cột trong DataTable
+            PdfPTable pdfTable = new PdfPTable(dataTable.Columns.Count);
 
-            // Thêm tiêu đề cho bảng
-            foreach (GridColumnDescriptor column in ggc.TableDescriptor.Columns)
+            // Thêm tiêu đề cho từng cột
+            foreach (DataColumn column in dataTable.Columns)
             {
-                table.AddCell(new Phrase(column.Name));
+                pdfTable.AddCell(new Phrase(column.ColumnName));
             }
 
-            // Thiết lập số hàng đầu tiên là hàng tiêu đề
-            table.HeaderRows = 1;
-
-            // Duyệt qua từng bản ghi trong GridGroupingControl và thêm dữ liệu vào bảng
-            foreach (Record record in ggc.Table.Records)
+            // Thêm dữ liệu từ DataTable vào bảng PDF
+            foreach (DataRow row in dataTable.Rows)
             {
-                foreach (GridColumnDescriptor column in ggc.TableDescriptor.Columns)
+                foreach (object item in row.ItemArray)
                 {
-                    if (record.GetValue(column.MappingName) != null)
-                    {
-                        table.AddCell(new Phrase(record.GetValue(column.MappingName).ToString()));
-                    }
+                    pdfTable.AddCell(new Phrase(item.ToString()));
                 }
             }
 
-            // Thêm bảng vào Document
-            document.Add(table);
+            // Thêm bảng vào tài liệu
+            document.Add(pdfTable);
 
-            // Đóng Document sau khi đã hoàn thành việc ghi dữ liệu
+            // Đóng tài liệu sau khi đã hoàn thành việc ghi dữ liệu
             document.Close();
+
         }
     }
 }

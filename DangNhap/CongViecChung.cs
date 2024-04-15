@@ -1,5 +1,6 @@
 ﻿using BLL;
 using DTO;
+using Google.Protobuf.WellKnownTypes;
 using Syncfusion.GridHelperClasses;
 using Syncfusion.Grouping;
 using Syncfusion.Licensing;
@@ -45,7 +46,7 @@ namespace DangNhap
         private void CongViecChung_Load(object sender, EventArgs e)
         {
             GetJobs();
-            GGC_hienthicongviec.Size = new System.Drawing.Size(950, 300);
+            GGC_hienthicongviec.Size = new System.Drawing.Size(950, 404);
             GGC_hienthicongviec.DataSource = jobs;
             GGC_hienthicongviec_DataSourceChanged(sender, e);
             GGC_hienthicongviec.TableDescriptor.Columns[0].HeaderText = "Mã công việc";
@@ -106,53 +107,7 @@ namespace DangNhap
                 }
             }
         }
-        private void BTN_PDF_Click(object sender, EventArgs e)
-        {
-            if (GGC_hienthicongviec.Table.Records.Count > 0)
-            {
-                SaveFileDialog save = new SaveFileDialog
-                {
-                    Filter = "PDF (*.pdf)|*.pdf",
-                    FileName = "CongViec.pdf"
-                };
-                bool ErrorMessage = false;
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    if (File.Exists(save.FileName))
-                    {
-                        try
-                        {
-                            File.Delete(save.FileName);
-                        }
-                        catch (Exception ex)
-                        {
-                            ErrorMessage = true;
-                            MessageBox.Show("Unable to write data in disk" + ex.Message);
-                        }
-                    }
-                    if (!ErrorMessage)
-                    {
-                        try
-                        {
-                            Export export = new Export();
-                            export.ToPDF(GGC_hienthicongviec, save.FileName);
-
-                            MessageBox.Show("Successful", "Info");
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error while exporting Data" + ex.Message);
-                        }
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("No record found", "Info");
-            }
-        }
-
-        private void BTN_excel_Click(object sender, EventArgs e)
+        private DataTable GetDataTable()
         {
             DataTable dataTable = new DataTable();
 
@@ -201,6 +156,70 @@ namespace DangNhap
 
                 dataTable.Rows.Add(dtRow);
             }
+            foreach (DataRow row in dataTable.Rows)
+            {
+                // Access the value in the 'Ngày hoàn thành' column for the current row
+                var value = row["Ngày hoàn thành"];
+
+                // Check if the value is DBNull or if it contains "1/1/0001"
+                if (value == DBNull.Value || value.ToString().Contains("1/1/0001"))
+                {
+                    // Set the value to null
+                    row["Ngày hoàn thành"] = null;
+                }
+            }
+            return dataTable;
+        }
+        private void BTN_PDF_Click(object sender, EventArgs e)
+        {
+            if (GGC_hienthicongviec.Table.Records.Count > 0)
+            {
+                SaveFileDialog save = new SaveFileDialog
+                {
+                    Filter = "PDF (*.pdf)|*.pdf",
+                    FileName = "CongViec.pdf"
+                };
+                bool ErrorMessage = false;
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(save.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(save.FileName);
+                        }
+                        catch (Exception ex)
+                        {
+                            ErrorMessage = true;
+                            MessageBox.Show("Unable to write data in disk" + ex.Message);
+                        }
+                    }
+                    if (!ErrorMessage)
+                    {
+                        try
+                        {
+                            DataTable dataTable = GetDataTable();
+                            Export export = new Export();
+                            export.ToPDF(dataTable, save.FileName);
+
+                            MessageBox.Show("Successful", "Info");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error while exporting Data" + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No record found", "Info");
+            }
+        }
+
+        private void BTN_excel_Click(object sender, EventArgs e)
+        {
+            DataTable dataTable = GetDataTable();
             Export export = new Export();
             export.ToExcel(dataTable, "Cong_viec", "CÔNG VIỆC CHUNG");
 
@@ -256,6 +275,8 @@ namespace DangNhap
                 DateTime date = thoiHan.Date;
                 ctcv.DTP_ngay.Text = date.ToString();
                 ctcv.DTP_gio.Text = thoiHan.ToString();
+                ctcv.LLB_chỉtietfile.Text = JobBLL.Instance.GetFileOfJob(maCongViec);
+                ctcv.LLB_chỉtietfile.Show();
                 // Show Form
                 ctcv.ShowDialog();
                 this.Refresh();

@@ -55,7 +55,9 @@ CREATE TABLE CongViec_Nhom
 CREATE TABLE CongViec_PDF
 (
 	maCongViec VARCHAR(10) NOT NULL,
-	pdfFile VARBINARY(MAX),
+	pdfFile VARBINARY(MAX) NOT NULL ,
+	tenFile VARCHAR(50) NOT NULL,
+	fileExten VARCHAR(10) NOT NULL
 	PRIMARY KEY (maCongViec),
 	FOREIGN KEY (maCongViec) REFERENCES congViec(maCongViec)
 )
@@ -497,13 +499,17 @@ go
 --Thêm file PDF
 Create Procedure [dbo].[ThemFile]
 			@maCongViec varchar(10),
-			@file VARBINARY(MAX)
+			@pdfFile VARBINARY(MAX),
+			@tenFile VARCHAR(50),
+			@fileExten VARCHAR(10)
 AS
 BEGIN
 	INSERT INTO CongViec_PDF
     VALUES (
 		   @maCongViec,
-		   @file
+		   @pdfFile,
+		   @tenFile,
+		   @fileExten
     )
 END
 go

@@ -197,5 +197,16 @@ namespace BLL
             }
             return false;
         }
+
+        public string GetFileOfJob(string maCongViec)
+        {
+            string tenFile = null;
+            DataTable dt = JobDAO.Instance.GetFileOfJob(maCongViec);
+            if (dt.Rows.Count > 0)
+            {
+               tenFile = dt.Rows[0]["tenFile"].ToString();
+            }
+            return tenFile;
+        }
     }
 }
