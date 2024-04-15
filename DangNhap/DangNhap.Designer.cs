@@ -114,6 +114,7 @@ namespace DangNhap
             this.VB_HienMatKhau.TabIndex = 12;
             this.VB_HienMatKhau.Text = "Hiện mật khẩu";
             this.VB_HienMatKhau.UseVisualStyleBackColor = false;
+            this.VB_HienMatKhau.CheckedChanged += new System.EventHandler(this.VB_HienMatKhau_CheckedChanged);
             // 
             // TB_MatKhau
             // 
@@ -126,6 +127,7 @@ namespace DangNhap
             this.TB_MatKhau.Name = "TB_MatKhau";
             this.TB_MatKhau.Size = new System.Drawing.Size(420, 26);
             this.TB_MatKhau.TabIndex = 8;
+            this.TB_MatKhau.UseSystemPasswordChar = true;
             // 
             // TB_TaiKhoan
             // 

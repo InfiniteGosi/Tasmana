@@ -87,18 +87,6 @@ namespace DangNhap
             }
         }
 
-        private void VB_HienMatKhau_CheckedChanged(object sender, EventArgs e)
-        {
-            if (VB_HienMatKhau.Checked)
-            {
-                TB_MatKhau.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                TB_MatKhau.UseSystemPasswordChar = true;
-            }
-        }
-
         private void BTN_close_Click(object sender, EventArgs e)
         {
             Close();
@@ -122,6 +110,18 @@ namespace DangNhap
         private void DangNhap_MouseUp(object sender, MouseEventArgs e)
         {
             mov = 0;
+        }
+
+        private void VB_HienMatKhau_CheckedChanged(object sender, EventArgs e)
+        {
+            if (VB_HienMatKhau.Checked)
+            {
+                TB_MatKhau.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                TB_MatKhau.UseSystemPasswordChar = true;
+            }
         }
     }
 }
