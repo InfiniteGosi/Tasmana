@@ -65,6 +65,7 @@ namespace DangNhap
             this.LB_Ghichu = new System.Windows.Forms.Label();
             this.TXB_GhiChu = new System.Windows.Forms.TextBox();
             this.BTN_themcongviec = new Guna.UI.WinForms.GunaGradientButton();
+            this.LLB_chỉtietfile = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // BTN_file
@@ -567,12 +568,25 @@ namespace DangNhap
             this.BTN_themcongviec.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_themcongviec.Click += new System.EventHandler(this.BTN_themcongviec_Click);
             // 
+            // LLB_chỉtietfile
+            // 
+            this.LLB_chỉtietfile.AutoSize = true;
+            this.LLB_chỉtietfile.LinkColor = System.Drawing.Color.White;
+            this.LLB_chỉtietfile.Location = new System.Drawing.Point(390, 710);
+            this.LLB_chỉtietfile.Name = "LLB_chỉtietfile";
+            this.LLB_chỉtietfile.Size = new System.Drawing.Size(68, 16);
+            this.LLB_chỉtietfile.TabIndex = 190;
+            this.LLB_chỉtietfile.TabStop = true;
+            this.LLB_chỉtietfile.Text = "linkLabel1";
+            this.LLB_chỉtietfile.Visible = false;
+            // 
             // ChiTietCongViec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(653, 876);
+            this.Controls.Add(this.LLB_chỉtietfile);
             this.Controls.Add(this.TXB_GhiChu);
             this.Controls.Add(this.LB_Ghichu);
             this.Controls.Add(this.TXB_MaCV);
@@ -656,5 +670,6 @@ namespace DangNhap
         private System.Windows.Forms.Label LB_Ghichu;
         public System.Windows.Forms.TextBox TXB_GhiChu;
         private Guna.UI.WinForms.GunaGradientButton BTN_themcongviec;
+        public System.Windows.Forms.LinkLabel LLB_chỉtietfile;
     }
 }

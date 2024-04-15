@@ -36,9 +36,6 @@ namespace DangNhap
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_excel = new Guna.UI.WinForms.GunaGradientButton();
-            this.TXB_sotrang = new System.Windows.Forms.TextBox();
-            this.BTN_trangtruoc = new System.Windows.Forms.Button();
-            this.BTN_trangsau = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.BTN_PDF = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_in = new Guna.UI.WinForms.GunaGradientButton();
@@ -172,46 +169,6 @@ namespace DangNhap
             this.BTN_excel.TextOffsetX = 3;
             this.BTN_excel.Click += new System.EventHandler(this.BTN_excel_Click);
             // 
-            // TXB_sotrang
-            // 
-            this.TXB_sotrang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.TXB_sotrang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_sotrang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TXB_sotrang.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_sotrang.ForeColor = System.Drawing.Color.White;
-            this.TXB_sotrang.Location = new System.Drawing.Point(1246, 527);
-            this.TXB_sotrang.Multiline = true;
-            this.TXB_sotrang.Name = "TXB_sotrang";
-            this.TXB_sotrang.Size = new System.Drawing.Size(30, 30);
-            this.TXB_sotrang.TabIndex = 92;
-            this.TXB_sotrang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // BTN_trangtruoc
-            // 
-            this.BTN_trangtruoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_trangtruoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_trangtruoc.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_trangtruoc.ForeColor = System.Drawing.Color.White;
-            this.BTN_trangtruoc.Location = new System.Drawing.Point(1209, 527);
-            this.BTN_trangtruoc.Name = "BTN_trangtruoc";
-            this.BTN_trangtruoc.Size = new System.Drawing.Size(30, 30);
-            this.BTN_trangtruoc.TabIndex = 91;
-            this.BTN_trangtruoc.Text = "<";
-            this.BTN_trangtruoc.UseVisualStyleBackColor = true;
-            // 
-            // BTN_trangsau
-            // 
-            this.BTN_trangsau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_trangsau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_trangsau.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_trangsau.ForeColor = System.Drawing.Color.White;
-            this.BTN_trangsau.Location = new System.Drawing.Point(1283, 527);
-            this.BTN_trangsau.Name = "BTN_trangsau";
-            this.BTN_trangsau.Size = new System.Drawing.Size(30, 30);
-            this.BTN_trangsau.TabIndex = 90;
-            this.BTN_trangsau.Text = ">";
-            this.BTN_trangsau.UseVisualStyleBackColor = true;
-            // 
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -311,9 +268,6 @@ namespace DangNhap
             this.Controls.Add(this.BTN_excel);
             this.Controls.Add(this.GGC_hienthicongviec);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.TXB_sotrang);
-            this.Controls.Add(this.BTN_trangtruoc);
-            this.Controls.Add(this.BTN_trangsau);
             this.Controls.Add(this.gunaGradientButton1);
             this.Controls.Add(this.comboBox6);
             this.Controls.Add(this.comboBox5);
@@ -325,7 +279,6 @@ namespace DangNhap
             this.Load += new System.EventHandler(this.CongViecChung_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GGC_hienthicongviec)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -337,9 +290,6 @@ namespace DangNhap
         private System.Windows.Forms.ComboBox comboBox6;
         private Guna.UI.WinForms.GunaGradientButton gunaGradientButton1;
         private Guna.UI.WinForms.GunaGradientButton BTN_excel;
-        private System.Windows.Forms.TextBox TXB_sotrang;
-        private System.Windows.Forms.Button BTN_trangtruoc;
-        private System.Windows.Forms.Button BTN_trangsau;
         private System.Windows.Forms.ComboBox comboBox1;
         private Guna.UI.WinForms.GunaGradientButton BTN_PDF;
         private Guna.UI.WinForms.GunaGradientButton BTN_in;

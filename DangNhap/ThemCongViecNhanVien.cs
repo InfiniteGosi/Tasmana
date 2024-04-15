@@ -175,6 +175,7 @@ namespace DangNhap
 
         public string maCongViec;
         public byte[] buffer = null;
+        public string fileName;
         private void GetNewestJobID()
         {
             maCongViec = JobBLL.Instance.GetNewJobID();
@@ -254,7 +255,9 @@ namespace DangNhap
             Dictionary<string, object> dict = new Dictionary<string, object>
             {
                 {"@maCongViec", TXB_MaCongViec.Text},
-                {"@file", buffer}
+                {"@pdffile", buffer},
+                {"@tenFile", fileName },
+                {"@fileExten", ".pdf" }
             };
             return dict;
         }
@@ -309,12 +312,16 @@ namespace DangNhap
                     DialogResult dialog = MessageBox.Show("Bạn có chắc muốn upload file này chứ?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (dialog == DialogResult.Yes)
                     {
-                        string filename = dlg.FileName;
-                        buffer = File.ReadAllBytes(filename);
+                        string file = dlg.FileName;
+                        buffer = File.ReadAllBytes(file);
+                        string[] words = file.Split('\\');
+                        int length = words.Length;
+                        fileName = words[length - 1];
                     }
                 }
             }
-
+            LLB_hienfile.Text = fileName;
+            LLB_hienfile.Show();
         }
 
         private void BTN_huy_Click(object sender, EventArgs e)
@@ -333,6 +340,11 @@ namespace DangNhap
             DTP_gio.Enabled = false;
             DTP_ngay.Enabled = false;   
             BTN_file.Enabled = false;
+        }
+
+        private void LLB_hienfile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }

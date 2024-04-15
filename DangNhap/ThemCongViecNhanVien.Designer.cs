@@ -31,6 +31,7 @@ namespace DangNhap
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemCongViecNhanVien));
             this.PN_hienthithemcongviec = new System.Windows.Forms.Panel();
+            this.LLB_hienfile = new System.Windows.Forms.LinkLabel();
             this.TXB_MaCongViec = new System.Windows.Forms.TextBox();
             this.LB_MaCongViec = new System.Windows.Forms.Label();
             this.TXB_macanho = new System.Windows.Forms.TextBox();
@@ -72,6 +73,7 @@ namespace DangNhap
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PN_hienthithemcongviec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.PN_hienthithemcongviec.Controls.Add(this.LLB_hienfile);
             this.PN_hienthithemcongviec.Controls.Add(this.TXB_MaCongViec);
             this.PN_hienthithemcongviec.Controls.Add(this.LB_MaCongViec);
             this.PN_hienthithemcongviec.Controls.Add(this.TXB_macanho);
@@ -99,6 +101,19 @@ namespace DangNhap
             this.PN_hienthithemcongviec.Name = "PN_hienthithemcongviec";
             this.PN_hienthithemcongviec.Size = new System.Drawing.Size(595, 797);
             this.PN_hienthithemcongviec.TabIndex = 22;
+            // 
+            // LLB_hienfile
+            // 
+            this.LLB_hienfile.AutoSize = true;
+            this.LLB_hienfile.LinkColor = System.Drawing.Color.White;
+            this.LLB_hienfile.Location = new System.Drawing.Point(320, 570);
+            this.LLB_hienfile.Name = "LLB_hienfile";
+            this.LLB_hienfile.Size = new System.Drawing.Size(68, 16);
+            this.LLB_hienfile.TabIndex = 184;
+            this.LLB_hienfile.TabStop = true;
+            this.LLB_hienfile.Text = "linkLabel1";
+            this.LLB_hienfile.Visible = false;
+            this.LLB_hienfile.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LLB_hienfile_LinkClicked);
             // 
             // TXB_MaCongViec
             // 
@@ -604,5 +619,6 @@ namespace DangNhap
         private System.Windows.Forms.ComboBox CBB_manhanvien;
         private System.Windows.Forms.TextBox TXB_MaCongViec;
         private System.Windows.Forms.Label LB_MaCongViec;
+        public System.Windows.Forms.LinkLabel LLB_hienfile;
     }
 }

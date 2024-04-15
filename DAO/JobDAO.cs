@@ -110,5 +110,12 @@ namespace DAO
             int result = DataProvider.Instance.ExecuteStoredProcedure("SP_XoaCongViec_NhanVien", parameters);
             return result > 0;
         }
+
+        //Lấy tệp đính kèm của công việc
+        public DataTable GetFileOfJob(string maCongViec)
+        {
+            string query = $"SELECT * FROM CongViec_PDF WHERE maCongViec = '{maCongViec}'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }
