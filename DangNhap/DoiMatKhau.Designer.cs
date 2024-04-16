@@ -75,6 +75,7 @@
             this.TXB_mkhientai.Name = "TXB_mkhientai";
             this.TXB_mkhientai.Size = new System.Drawing.Size(419, 23);
             this.TXB_mkhientai.TabIndex = 55;
+            this.TXB_mkhientai.UseSystemPasswordChar = true;
             // 
             // TXB_mkmoi
             // 
@@ -86,6 +87,7 @@
             this.TXB_mkmoi.Name = "TXB_mkmoi";
             this.TXB_mkmoi.Size = new System.Drawing.Size(419, 23);
             this.TXB_mkmoi.TabIndex = 56;
+            this.TXB_mkmoi.UseSystemPasswordChar = true;
             // 
             // TXB_xacnhanmk
             // 
@@ -97,6 +99,7 @@
             this.TXB_xacnhanmk.Name = "TXB_xacnhanmk";
             this.TXB_xacnhanmk.Size = new System.Drawing.Size(419, 23);
             this.TXB_xacnhanmk.TabIndex = 57;
+            this.TXB_xacnhanmk.UseSystemPasswordChar = true;
             // 
             // BTN_luu
             // 
