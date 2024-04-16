@@ -262,6 +262,7 @@ namespace DangNhap
                 string ghiChu = record.GetValue("GhiChu").ToString();
                 string trangThai = record.GetValue("TrangThai").ToString();
                 DateTime thoiHan = (DateTime)record.GetValue("ThoiHan");
+                Job curJob = JobBLL.Instance.GetJobFromJobID(maCongViec);
                 // Add to ChiTietCongViec
                 ChiTietCongViec ctcv = new ChiTietCongViec();
                 ctcv.TXB_PhongBan.Text = divisionOfEmployee.MaBoPhan.ToString();
@@ -272,11 +273,15 @@ namespace DangNhap
                 ctcv.TXB_GhiChu.Text = ghiChu;
                 ctcv.TXB_MaCV.Text = maCongViec;
                 ctcv.CBB_TrangThai.Text = trangThai;
-                DateTime date = thoiHan.Date;
-                ctcv.DTP_ngay.Text = date.ToString();
-                ctcv.DTP_gio.Text = thoiHan.ToString();
+                if (thoiHan > DateTime.MinValue)
+                {
+                    DateTime date = thoiHan.Date;
+                    ctcv.DTP_ngay.Text = date.ToString();
+                    ctcv.DTP_gio.Text = thoiHan.ToString();
+                }
                 ctcv.LLB_chỉtietfile.Text = JobBLL.Instance.GetNameFile(maCongViec);
                 ctcv.LLB_chỉtietfile.Show();
+                ctcv.CBB_quyentruycap.SelectedIndex = curJob.QuyenTruyCap;
                 // Show Form
                 ctcv.ShowDialog();
                 this.Refresh();

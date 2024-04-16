@@ -26,11 +26,12 @@ CREATE TABLE CongViec
   maCongViec VARCHAR(10) NOT NULL,
   noiDung NVARCHAR(200) NOT NULL,
   ngayGiao SMALLDATETIME NOT NULL,
-  thoiHan SMALLDATETime NOT NULL,
+  thoiHan SMALLDATETime,
   ngayHoanThanh SMALLDATETIME,
   ngayCapNhat SMALLDATETIME,
   trangThai NVARCHAR(100) NOT NULL,
   ghiChu NVARCHAR(200),
+  quyenTruyCap int,
   PRIMARY KEY (maCongViec)
 );
 
@@ -288,6 +289,7 @@ go
 
 SELECT * FROM CongViec
 SELECT * FROM CongViec_PDF
+go
 --Procedure thêm một nhân viên mới
 create procedure [dbo].[SP_ThemNhanVien]
 	@maNhanVien varchar(10),
@@ -431,7 +433,8 @@ CREATE PROCEDURE [dbo].[SP_ThemCongViec]
            @ngayHoanThanh SMALLDATETIME,
            @ngayCapNhat SMALLDATETIME,
            @trangThai NVARCHAR(100),
-           @ghiChu NVARCHAR(200)
+           @ghiChu NVARCHAR(200),
+		   @quyenTruyCap int
 AS
 BEGIN
     DECLARE @maCongViec VARCHAR(10);
@@ -439,8 +442,8 @@ BEGIN
     EXEC [dbo].[Auto_Create_Job] @nextJobId = @maCongViec OUTPUT;
     
     -- Insert the new job into the CongViec table
-    INSERT INTO CongViec (maCongViec, noiDung, ngayGiao, thoiHan, ngayHoanThanh, ngayCapNhat, trangThai, ghiChu)
-    VALUES (@maCongViec, @noiDung, @ngayGiao, @thoiHan, @ngayHoanThanh, @ngayCapNhat, @trangThai, @ghiChu);
+    INSERT INTO CongViec (maCongViec, noiDung, ngayGiao, thoiHan, ngayHoanThanh, ngayCapNhat, trangThai, ghiChu, quyenTruyCap)
+    VALUES (@maCongViec, @noiDung, @ngayGiao, @thoiHan, @ngayHoanThanh, @ngayCapNhat, @trangThai, @ghiChu, @quyenTruyCap);
 END
 go
 	
@@ -576,11 +579,12 @@ Create Procedure [dbo].[SP_EditCongViec]
 	@ngayHoanThanh SMALLDATETIME,
 	@ngayCapNhat SMALLDATETIME,
 	@trangThai NVARCHAR(100),
-	@ghiChu NVARCHAR(200)
+	@ghiChu NVARCHAR(200),
+	@quyenTruyCap int
 as
 begin
 	Update CongViec
-	Set noiDung = @noiDung, thoiHan = @thoiHan, ngayHoanThanh = @ngayHoanThanh, ngayCapNhat = @ngayCapNhat, trangThai = @trangThai, ghiChu = @ghiChu
+	SET noiDung = @noiDung, thoiHan = @thoiHan, ngayHoanThanh = @ngayHoanThanh, ngayCapNhat = @ngayCapNhat, trangThai = @trangThai, ghiChu = @ghiChu, quyenTruyCap = @quyenTruyCap
 	WHERE maCongViec = @maCongViec
 end
 go

@@ -31,10 +31,11 @@ namespace DangNhap
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemCongViecNhanVien));
             this.PN_hienthithemcongviec = new System.Windows.Forms.Panel();
+            this.LB_Ghichu = new System.Windows.Forms.Label();
+            this.TXB_ghiChu = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.CB_thoihan = new System.Windows.Forms.CheckBox();
-            this.CBB_quyentruycap = new System.Windows.Forms.ComboBox();
+            this.CBB_QuyenTruyCap = new System.Windows.Forms.ComboBox();
             this.LLB_hienfile = new System.Windows.Forms.LinkLabel();
             this.TXB_MaCongViec = new System.Windows.Forms.TextBox();
             this.LB_MaCongViec = new System.Windows.Forms.Label();
@@ -65,8 +66,7 @@ namespace DangNhap
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.LB_Ghichu = new System.Windows.Forms.Label();
-            this.TXB_Ghichu = new System.Windows.Forms.TextBox();
+            this.CB_thoihan = new System.Windows.Forms.CheckBox();
             this.PN_hienthithemcongviec.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,11 +77,11 @@ namespace DangNhap
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PN_hienthithemcongviec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.PN_hienthithemcongviec.Controls.Add(this.LB_Ghichu);
-            this.PN_hienthithemcongviec.Controls.Add(this.TXB_Ghichu);
+            this.PN_hienthithemcongviec.Controls.Add(this.TXB_ghiChu);
             this.PN_hienthithemcongviec.Controls.Add(this.panel6);
             this.PN_hienthithemcongviec.Controls.Add(this.panel1);
             this.PN_hienthithemcongviec.Controls.Add(this.CB_thoihan);
-            this.PN_hienthithemcongviec.Controls.Add(this.CBB_quyentruycap);
+            this.PN_hienthithemcongviec.Controls.Add(this.CBB_QuyenTruyCap);
             this.PN_hienthithemcongviec.Controls.Add(this.LLB_hienfile);
             this.PN_hienthithemcongviec.Controls.Add(this.TXB_MaCongViec);
             this.PN_hienthithemcongviec.Controls.Add(this.LB_MaCongViec);
@@ -108,6 +108,28 @@ namespace DangNhap
             this.PN_hienthithemcongviec.Size = new System.Drawing.Size(1277, 609);
             this.PN_hienthithemcongviec.TabIndex = 22;
             // 
+            // LB_Ghichu
+            // 
+            this.LB_Ghichu.AutoSize = true;
+            this.LB_Ghichu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_Ghichu.ForeColor = System.Drawing.Color.White;
+            this.LB_Ghichu.Location = new System.Drawing.Point(676, 240);
+            this.LB_Ghichu.Name = "LB_Ghichu";
+            this.LB_Ghichu.Size = new System.Drawing.Size(72, 22);
+            this.LB_Ghichu.TabIndex = 190;
+            this.LB_Ghichu.Text = "Ghi chú";
+            // 
+            // TXB_ghiChu
+            // 
+            this.TXB_ghiChu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_ghiChu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_ghiChu.ForeColor = System.Drawing.Color.White;
+            this.TXB_ghiChu.Location = new System.Drawing.Point(830, 236);
+            this.TXB_ghiChu.Multiline = true;
+            this.TXB_ghiChu.Name = "TXB_ghiChu";
+            this.TXB_ghiChu.Size = new System.Drawing.Size(419, 30);
+            this.TXB_ghiChu.TabIndex = 189;
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -124,29 +146,22 @@ namespace DangNhap
             this.panel1.Size = new System.Drawing.Size(2, 496);
             this.panel1.TabIndex = 186;
             // 
-            // CB_thoihan
+            // CBB_QuyenTruyCap
             // 
-            this.CB_thoihan.AutoSize = true;
-            this.CB_thoihan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CB_thoihan.ForeColor = System.Drawing.Color.White;
-            this.CB_thoihan.Location = new System.Drawing.Point(199, 429);
-            this.CB_thoihan.Name = "CB_thoihan";
-            this.CB_thoihan.Size = new System.Drawing.Size(18, 17);
-            this.CB_thoihan.TabIndex = 185;
-            this.CB_thoihan.UseVisualStyleBackColor = true;
-            // 
-            // CBB_quyentruycap
-            // 
-            this.CBB_quyentruycap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.CBB_quyentruycap.Enabled = false;
-            this.CBB_quyentruycap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CBB_quyentruycap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CBB_quyentruycap.ForeColor = System.Drawing.Color.White;
-            this.CBB_quyentruycap.FormattingEnabled = true;
-            this.CBB_quyentruycap.Location = new System.Drawing.Point(830, 327);
-            this.CBB_quyentruycap.Name = "CBB_quyentruycap";
-            this.CBB_quyentruycap.Size = new System.Drawing.Size(419, 30);
-            this.CBB_quyentruycap.TabIndex = 184;
+            this.CBB_QuyenTruyCap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.CBB_QuyenTruyCap.Enabled = false;
+            this.CBB_QuyenTruyCap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CBB_QuyenTruyCap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBB_QuyenTruyCap.ForeColor = System.Drawing.Color.White;
+            this.CBB_QuyenTruyCap.FormattingEnabled = true;
+            this.CBB_QuyenTruyCap.Items.AddRange(new object[] {
+            "Riêng tư",
+            "Bộ phận",
+            "Công ty"});
+            this.CBB_QuyenTruyCap.Location = new System.Drawing.Point(830, 327);
+            this.CBB_QuyenTruyCap.Name = "CBB_QuyenTruyCap";
+            this.CBB_QuyenTruyCap.Size = new System.Drawing.Size(419, 30);
+            this.CBB_QuyenTruyCap.TabIndex = 184;
             // 
             // LLB_hienfile
             // 
@@ -416,7 +431,7 @@ namespace DangNhap
             this.DTP_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DTP_ngay.Location = new System.Drawing.Point(273, 422);
             this.DTP_ngay.Name = "DTP_ngay";
-            this.DTP_ngay.Size = new System.Drawing.Size(155, 30);
+            this.DTP_ngay.Size = new System.Drawing.Size(144, 30);
             this.DTP_ngay.TabIndex = 166;
             // 
             // CBB_manhanvien
@@ -567,27 +582,17 @@ namespace DangNhap
             this.panel5.Size = new System.Drawing.Size(1275, 4);
             this.panel5.TabIndex = 27;
             // 
-            // LB_Ghichu
+            // CB_thoihan
             // 
-            this.LB_Ghichu.AutoSize = true;
-            this.LB_Ghichu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_Ghichu.ForeColor = System.Drawing.Color.White;
-            this.LB_Ghichu.Location = new System.Drawing.Point(676, 240);
-            this.LB_Ghichu.Name = "LB_Ghichu";
-            this.LB_Ghichu.Size = new System.Drawing.Size(72, 22);
-            this.LB_Ghichu.TabIndex = 190;
-            this.LB_Ghichu.Text = "Ghi chú";
-            // 
-            // TXB_Ghichu
-            // 
-            this.TXB_Ghichu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_Ghichu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_Ghichu.ForeColor = System.Drawing.Color.White;
-            this.TXB_Ghichu.Location = new System.Drawing.Point(830, 236);
-            this.TXB_Ghichu.Multiline = true;
-            this.TXB_Ghichu.Name = "TXB_Ghichu";
-            this.TXB_Ghichu.Size = new System.Drawing.Size(419, 30);
-            this.TXB_Ghichu.TabIndex = 189;
+            this.CB_thoihan.AutoSize = true;
+            this.CB_thoihan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CB_thoihan.ForeColor = System.Drawing.Color.White;
+            this.CB_thoihan.Location = new System.Drawing.Point(199, 429);
+            this.CB_thoihan.Name = "CB_thoihan";
+            this.CB_thoihan.Size = new System.Drawing.Size(18, 17);
+            this.CB_thoihan.TabIndex = 185;
+            this.CB_thoihan.UseVisualStyleBackColor = true;
+            this.CB_thoihan.CheckedChanged += new System.EventHandler(this.CB_thoihan_CheckedChanged);
             // 
             // ThemCongViecNhanVien
             // 
@@ -652,12 +657,12 @@ namespace DangNhap
         private System.Windows.Forms.ComboBox CBB_manhanvien;
         private System.Windows.Forms.TextBox TXB_MaCongViec;
         private System.Windows.Forms.Label LB_MaCongViec;
-        private System.Windows.Forms.CheckBox CB_thoihan;
-        private System.Windows.Forms.ComboBox CBB_quyentruycap;
+        private System.Windows.Forms.ComboBox CBB_QuyenTruyCap;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel6;
         public System.Windows.Forms.LinkLabel LLB_hienfile;
         private System.Windows.Forms.Label LB_Ghichu;
-        public System.Windows.Forms.TextBox TXB_Ghichu;
+        public System.Windows.Forms.TextBox TXB_ghiChu;
+        private System.Windows.Forms.CheckBox CB_thoihan;
     }
 }
