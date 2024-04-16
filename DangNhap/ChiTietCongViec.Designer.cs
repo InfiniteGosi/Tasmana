@@ -64,7 +64,7 @@ namespace DangNhap
             this.LLB_chỉtietfile = new System.Windows.Forms.LinkLabel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CBB_quyentruycap = new System.Windows.Forms.ComboBox();
             this.CB_thoihan = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
@@ -149,7 +149,7 @@ namespace DangNhap
             this.TXB_noidung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_noidung.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_noidung.ForeColor = System.Drawing.Color.White;
-            this.TXB_noidung.Location = new System.Drawing.Point(839, 284);
+            this.TXB_noidung.Location = new System.Drawing.Point(839, 96);
             this.TXB_noidung.Multiline = true;
             this.TXB_noidung.Name = "TXB_noidung";
             this.TXB_noidung.Size = new System.Drawing.Size(419, 30);
@@ -216,7 +216,7 @@ namespace DangNhap
             this.DTP_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DTP_ngay.Location = new System.Drawing.Point(259, 472);
             this.DTP_ngay.Name = "DTP_ngay";
-            this.DTP_ngay.Size = new System.Drawing.Size(144, 30);
+            this.DTP_ngay.Size = new System.Drawing.Size(155, 30);
             this.DTP_ngay.TabIndex = 100;
             // 
             // LB_themcongviec
@@ -474,7 +474,7 @@ namespace DangNhap
             this.TXB_GhiChu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_GhiChu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_GhiChu.ForeColor = System.Drawing.Color.White;
-            this.TXB_GhiChu.Location = new System.Drawing.Point(839, 96);
+            this.TXB_GhiChu.Location = new System.Drawing.Point(839, 284);
             this.TXB_GhiChu.Multiline = true;
             this.TXB_GhiChu.Name = "TXB_GhiChu";
             this.TXB_GhiChu.Size = new System.Drawing.Size(419, 30);
@@ -540,18 +540,18 @@ namespace DangNhap
             this.panel5.Size = new System.Drawing.Size(2, 496);
             this.panel5.TabIndex = 234;
             // 
-            // comboBox1
+            // CBB_quyentruycap
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.comboBox1.Enabled = false;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(839, 472);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(419, 30);
-            this.comboBox1.TabIndex = 236;
+            this.CBB_quyentruycap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.CBB_quyentruycap.Enabled = false;
+            this.CBB_quyentruycap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CBB_quyentruycap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBB_quyentruycap.ForeColor = System.Drawing.Color.White;
+            this.CBB_quyentruycap.FormattingEnabled = true;
+            this.CBB_quyentruycap.Location = new System.Drawing.Point(839, 472);
+            this.CBB_quyentruycap.Name = "CBB_quyentruycap";
+            this.CBB_quyentruycap.Size = new System.Drawing.Size(419, 30);
+            this.CBB_quyentruycap.TabIndex = 236;
             // 
             // CB_thoihan
             // 
@@ -571,7 +571,7 @@ namespace DangNhap
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(1283, 684);
             this.Controls.Add(this.CB_thoihan);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.CBB_quyentruycap);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.LLB_chỉtietfile);
@@ -653,7 +653,7 @@ namespace DangNhap
         public System.Windows.Forms.LinkLabel LLB_chỉtietfile;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CBB_quyentruycap;
         private System.Windows.Forms.CheckBox CB_thoihan;
     }
 }
