@@ -53,6 +53,7 @@ namespace DangNhap
             this.TXB_email = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.CHB_matkhau = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.CHB_vohieuhoa = new System.Windows.Forms.CheckBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -232,7 +233,7 @@ namespace DangNhap
             this.TXB_matkhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TXB_matkhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_matkhau.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_matkhau.Location = new System.Drawing.Point(106, 169);
+            this.TXB_matkhau.Location = new System.Drawing.Point(25, 169);
             this.TXB_matkhau.Name = "TXB_matkhau";
             this.TXB_matkhau.Size = new System.Drawing.Size(419, 30);
             this.TXB_matkhau.TabIndex = 55;
@@ -244,7 +245,7 @@ namespace DangNhap
             this.TXB_manguoidung.Enabled = false;
             this.TXB_manguoidung.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_manguoidung.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_manguoidung.Location = new System.Drawing.Point(104, 80);
+            this.TXB_manguoidung.Location = new System.Drawing.Point(23, 80);
             this.TXB_manguoidung.Name = "TXB_manguoidung";
             this.TXB_manguoidung.Size = new System.Drawing.Size(419, 30);
             this.TXB_manguoidung.TabIndex = 54;
@@ -254,7 +255,7 @@ namespace DangNhap
             this.LB_matkhau.AutoSize = true;
             this.LB_matkhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_matkhau.ForeColor = System.Drawing.Color.White;
-            this.LB_matkhau.Location = new System.Drawing.Point(102, 146);
+            this.LB_matkhau.Location = new System.Drawing.Point(21, 146);
             this.LB_matkhau.Name = "LB_matkhau";
             this.LB_matkhau.Size = new System.Drawing.Size(82, 22);
             this.LB_matkhau.TabIndex = 53;
@@ -265,7 +266,7 @@ namespace DangNhap
             this.LB_taikhoan.AutoSize = true;
             this.LB_taikhoan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_taikhoan.ForeColor = System.Drawing.Color.White;
-            this.LB_taikhoan.Location = new System.Drawing.Point(100, 57);
+            this.LB_taikhoan.Location = new System.Drawing.Point(19, 57);
             this.LB_taikhoan.Name = "LB_taikhoan";
             this.LB_taikhoan.Size = new System.Drawing.Size(130, 22);
             this.LB_taikhoan.TabIndex = 52;
@@ -356,6 +357,7 @@ namespace DangNhap
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.panel6.Controls.Add(this.CHB_matkhau);
             this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.CHB_vohieuhoa);
             this.panel6.Controls.Add(this.TXB_matkhau);
@@ -367,12 +369,25 @@ namespace DangNhap
             this.panel6.Size = new System.Drawing.Size(631, 282);
             this.panel6.TabIndex = 54;
             // 
+            // CHB_matkhau
+            // 
+            this.CHB_matkhau.AutoSize = true;
+            this.CHB_matkhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CHB_matkhau.ForeColor = System.Drawing.Color.White;
+            this.CHB_matkhau.Location = new System.Drawing.Point(454, 170);
+            this.CHB_matkhau.Name = "CHB_matkhau";
+            this.CHB_matkhau.Size = new System.Drawing.Size(160, 29);
+            this.CHB_matkhau.TabIndex = 62;
+            this.CHB_matkhau.Text = "Xem mật khẩu";
+            this.CHB_matkhau.UseVisualStyleBackColor = true;
+            this.CHB_matkhau.CheckedChanged += new System.EventHandler(this.CHB_matkhau_CheckedChanged);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(180, 9);
+            this.label4.Location = new System.Drawing.Point(198, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(257, 25);
             this.label4.TabIndex = 58;
@@ -384,7 +399,7 @@ namespace DangNhap
             this.CHB_vohieuhoa.Enabled = false;
             this.CHB_vohieuhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CHB_vohieuhoa.ForeColor = System.Drawing.Color.White;
-            this.CHB_vohieuhoa.Location = new System.Drawing.Point(106, 228);
+            this.CHB_vohieuhoa.Location = new System.Drawing.Point(25, 225);
             this.CHB_vohieuhoa.Name = "CHB_vohieuhoa";
             this.CHB_vohieuhoa.Size = new System.Drawing.Size(223, 29);
             this.CHB_vohieuhoa.TabIndex = 61;
@@ -475,14 +490,14 @@ namespace DangNhap
             // 
             // DTP_ngaykyHDLD
             // 
-            this.DTP_ngaykyHDLD.Location = new System.Drawing.Point(346, 337);
+            this.DTP_ngaykyHDLD.Location = new System.Drawing.Point(36, 345);
             this.DTP_ngaykyHDLD.Name = "DTP_ngaykyHDLD";
             this.DTP_ngaykyHDLD.Size = new System.Drawing.Size(237, 22);
             this.DTP_ngaykyHDLD.TabIndex = 56;
             // 
             // DTP_ngayhetHDLD
             // 
-            this.DTP_ngayhetHDLD.Location = new System.Drawing.Point(33, 337);
+            this.DTP_ngayhetHDLD.Location = new System.Drawing.Point(361, 341);
             this.DTP_ngayhetHDLD.Name = "DTP_ngayhetHDLD";
             this.DTP_ngayhetHDLD.Size = new System.Drawing.Size(237, 22);
             this.DTP_ngayhetHDLD.TabIndex = 55;
@@ -526,7 +541,7 @@ namespace DangNhap
             this.LB_ngayhetHDLD.AutoSize = true;
             this.LB_ngayhetHDLD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_ngayhetHDLD.ForeColor = System.Drawing.Color.White;
-            this.LB_ngayhetHDLD.Location = new System.Drawing.Point(31, 310);
+            this.LB_ngayhetHDLD.Location = new System.Drawing.Point(359, 314);
             this.LB_ngayhetHDLD.Name = "LB_ngayhetHDLD";
             this.LB_ngayhetHDLD.Size = new System.Drawing.Size(137, 22);
             this.LB_ngayhetHDLD.TabIndex = 43;
@@ -548,7 +563,7 @@ namespace DangNhap
             this.LB_ngaykyHDLD.AutoSize = true;
             this.LB_ngaykyHDLD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_ngaykyHDLD.ForeColor = System.Drawing.Color.White;
-            this.LB_ngaykyHDLD.Location = new System.Drawing.Point(342, 310);
+            this.LB_ngaykyHDLD.Location = new System.Drawing.Point(32, 318);
             this.LB_ngaykyHDLD.Name = "LB_ngaykyHDLD";
             this.LB_ngaykyHDLD.Size = new System.Drawing.Size(133, 22);
             this.LB_ngaykyHDLD.TabIndex = 14;
@@ -845,5 +860,6 @@ namespace DangNhap
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox CHB_matkhau;
     }
 }

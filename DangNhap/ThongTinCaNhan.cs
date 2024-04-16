@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -18,9 +19,9 @@ namespace DangNhap
     {
         private readonly NhanVien parent;
         private List<Division> divisions = new List<Division>();
-        private List<Group> groups = new List<Group>();
+        private List<DTO.Group> groups = new List<DTO.Group>();
         private readonly Employee employee = null;
-        private Group group;
+        private DTO.Group group;
         private Division division;
         public ThongTinCaNhan()
         {
@@ -37,7 +38,7 @@ namespace DangNhap
             InitializeComponent();
             this.employee = employee;
             this.parent = parent;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ThongTinCaNhan_FormClosing);
+            this.FormClosing += new FormClosingEventHandler(this.ThongTinCaNhan_FormClosing);
         }
 
         // Hàm khởi tạo danh sách giá trị truyền vào SP
@@ -168,11 +169,17 @@ namespace DangNhap
                 CBB_nhom.Items.Add(group.MaNhom);
             }
         }
-
+        //Chuyển tiếng Việt sang tiếng Anh cho tên nhân viên
+        private string ConvertToUnSign3(string s)
+        {
+            Regex regex = new Regex("\\p{IsCombiningDiacriticalMarks}+");
+            string temp = s.Normalize(NormalizationForm.FormD);
+            return regex.Replace(temp, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
+        }
         // Tạo userId theo quy tắc trong file QA
         private void GenerateUserId()
         {
-            string ten = TXB_ten.Text.Substring(TXB_ten.Text.LastIndexOf(' ') + 1).ToUpper();
+            string ten = ConvertToUnSign3(TXB_ten.Text.Substring(TXB_ten.Text.LastIndexOf(' ') + 1).ToUpper());
             string output = $"{TXB_manv.Text.Trim()}.{ten.Trim()}.{TXB_sdt.Text.Trim()}";
             TXB_manguoidung.Text = output;
         }
@@ -368,7 +375,7 @@ namespace DangNhap
         }
         private void ThongTinCaNhan_Load(object sender, EventArgs e)
         {
-            // Nếu ấn nút chi tiết
+            // Nếu double click
             DisplayDivisionsToCBB_phongban();
             DisplayEmployeeType();
             if (employee != null)
@@ -382,6 +389,18 @@ namespace DangNhap
         private void ThongTinCaNhan_FormClosing(object sender, FormClosingEventArgs e)
         {
             parent.Refresh();
+        }
+
+        private void CHB_matkhau_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CHB_matkhau.Checked)
+            {
+                TXB_matkhau.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                TXB_matkhau.UseSystemPasswordChar = true;
+            }
         }
     }
 }

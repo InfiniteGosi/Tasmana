@@ -9,9 +9,9 @@ namespace DTO
     public class Employee
     {
         public string MaNhanVien { get; set; }
-        public string Email { get; set; }
         public string Ho {  get; set; }
         public string Ten { get; set; }
+        public string Email { get; set; }
         public string SoDienThoai { get; set; }
         public DateTime NgaySinh { get; set; }
         public bool GioiTinh { get; set; }
