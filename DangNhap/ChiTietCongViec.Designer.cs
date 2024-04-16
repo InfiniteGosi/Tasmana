@@ -659,7 +659,7 @@ namespace DangNhap
         public System.Windows.Forms.LinkLabel LLB_chỉtietfile;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.CheckBox CB_thoihan;
         public System.Windows.Forms.ComboBox CBB_quyentruycap;
+        public System.Windows.Forms.CheckBox CB_thoihan;
     }
 }

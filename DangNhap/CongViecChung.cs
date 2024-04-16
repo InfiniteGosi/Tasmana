@@ -275,6 +275,7 @@ namespace DangNhap
                 ctcv.CBB_TrangThai.Text = trangThai;
                 if (thoiHan > DateTime.MinValue)
                 {
+                    ctcv.CB_thoihan.Checked = true;
                     DateTime date = thoiHan.Date;
                     ctcv.DTP_ngay.Text = date.ToString();
                     ctcv.DTP_gio.Text = thoiHan.ToString();
