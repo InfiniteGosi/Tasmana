@@ -76,26 +76,46 @@ namespace DangNhap
             {
                 TXB_noidung.Enabled = true;
                 TXB_macanho.Enabled = true;
-                DTP_gio.Enabled = true;
-                DTP_ngay.Enabled = true;
                 BTN_ok.Enabled = true;
                 GetNewestJobID();
                 BTN_file.Enabled = true;
+                CBB_QuyenTruyCap.Enabled = true;
+                TXB_ghiChu.Enabled = true;
             }
         }
 
+        private int GetQuyenTruyCap()
+        {
+            int ch = 0; // mặc định là riêng tư
+            if (CBB_QuyenTruyCap.SelectedItem.ToString().Equals("Bộ phận"))
+            {
+                ch = 1;
+            }
+            if (CBB_QuyenTruyCap.SelectedItem.ToString().Equals("Công ty"))
+            {
+                ch = 2;
+            }
+            return ch;
+        }
         // Tạo tham số cho bảng CongViec để truyền vào DataProvider
+
         private Dictionary<string, object> AddParameterCongViec()
         {
+            string thoiHan = null;
+            if (CB_thoihan.Checked == true)
+            {
+                thoiHan = DTP_ngay.Value.ToString("yyyy-MM-dd") + " " + DTP_gio.Text.Split(' ')[0].ToString();
+            }
             Dictionary<string, object> dict = new Dictionary<string, object>
             {
                 {"@noiDung", TXB_noidung.Text},
-                {"@ngayGiao", DateTime.Now.ToString("yyyy-MM-dd'T'HH:mm:ss")},
-                {"@thoihan",  DTP_ngay.Value.ToString("yyyy-MM-dd") + " " + DTP_gio.Text.Split(' ')[0].ToString()},
+                {"@ngayGiao", DateTime.UtcNow.ToString("yyyy-MM-dd'T'HH:mm:ss")},
+                {"@thoihan", thoiHan},
                 {"@ngayHoanThanh", null},
-                {"@ngayCapNhat", DateTime.Now.ToString("yyyy-MM-dd'T'HH:mm:ss")},
+                {"@ngayCapNhat", DateTime.UtcNow.ToString("yyyy-MM-dd'T'HH:mm:ss")},
                 {"@trangThai", "Chưa bắt đầu"},
-                {"@ghiChu", null}
+                {"@ghiChu", TXB_ghiChu.Text},
+                {"@quyenTruyCap", GetQuyenTruyCap()}
             };
             return dict;
         }
@@ -155,6 +175,10 @@ namespace DangNhap
             {
                 MessageBox.Show("Vui lòng điền mã công việc");
             }
+            if (CBB_QuyenTruyCap.SelectedIndex == -1)
+            {
+                MessageBox.Show("Vui lòng chọn quyền hạn truy cập");
+            }
             if (SaveCongViec())
             {
                 MessageBox.Show("Thêm thành công");
@@ -168,6 +192,7 @@ namespace DangNhap
 
         private void BTN_huy_Click(object sender, EventArgs e)
         {
+            CBB_QuyenTruyCap.SelectedIndex = -1;
             CBB_phongban.SelectedIndex = -1;
             CBB_nhom.SelectedIndex = -1;
             TXB_noidung.Clear();
@@ -177,9 +202,24 @@ namespace DangNhap
             TXB_noidung.Enabled = false;
             TXB_macanho.Enabled = false;
             TXB_MaCongViec.Enabled = false;
-            DTP_gio.Enabled = false;
-            DTP_ngay.Enabled = false;
+            CB_thoihan.Checked = false;
             BTN_file.Enabled = false;
-        }       
+            TXB_ghiChu.Enabled = false;
+            CBB_QuyenTruyCap.Enabled = false;
+        }
+
+        private void CB_thoihan_CheckedChanged(object sender, EventArgs e)
+        {
+            if(CB_thoihan.Checked)
+            {
+                DTP_ngay.Enabled = true;
+                DTP_gio.Enabled = true;
+            }
+            else
+            {
+                DTP_gio.Enabled = false;
+                DTP_ngay.Enabled = false;
+            }
+        }
     }
 }

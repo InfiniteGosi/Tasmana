@@ -102,12 +102,13 @@ namespace BLL
                 string maCongViec = dt.Rows[i]["maCongViec"].ToString();
                 string noiDung = dt.Rows[i]["noiDung"].ToString();
                 DateTime ngayGiao = (DateTime)dt.Rows[i]["ngayGiao"];
-                DateTime thoihan = (DateTime)dt.Rows[i]["thoiHan"];
+                DateTime thoihan = dt.Rows[i]["thoiHan"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["thoiHan"].ToString());
                 DateTime ngayHoanThanh = dt.Rows[i]["ngayHoanThanh"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["ngayHoanThanh"].ToString());
                 DateTime ngayCapNhat = (DateTime)dt.Rows[i]["ngayCapNhat"];
                 string trangThai = dt.Rows[i]["trangThai"].ToString();
                 string ghiChu = dt.Rows[i]["ghiChu"].ToString();
-                Job job = new Job(maCongViec, noiDung, ngayGiao, thoihan, ngayHoanThanh, ngayCapNhat, trangThai, ghiChu);
+                int quyenTruyCap = (int)dt.Rows[i]["quyenTruyCap"];
+                Job job = new Job(maCongViec, noiDung, ngayGiao, thoihan, ngayHoanThanh, ngayCapNhat, trangThai, ghiChu, quyenTruyCap);
                 jobs.Add(job);
             }
             return jobs;
@@ -122,12 +123,13 @@ namespace BLL
                 string maCongViec = dt.Rows[i]["maCongViec"].ToString();
                 string noiDung = dt.Rows[i]["noiDung"].ToString();
                 DateTime ngayGiao = (DateTime)dt.Rows[i]["ngayGiao"];
-                DateTime thoihan = (DateTime)dt.Rows[i]["thoiHan"];
+                DateTime thoihan = dt.Rows[i]["thoiHan"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["thoiHan"].ToString());
                 DateTime ngayHoanThanh = dt.Rows[i]["ngayHoanThanh"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["ngayHoanThanh"].ToString());
                 DateTime ngayCapNhat = (DateTime)dt.Rows[i]["ngayCapNhat"];
                 string trangThai = dt.Rows[i]["trangThai"].ToString();
                 string ghiChu = dt.Rows[i]["ghiChu"].ToString();
-                Job job = new Job(maCongViec, noiDung, ngayGiao, thoihan, ngayHoanThanh, ngayCapNhat, trangThai, ghiChu);
+                int quyenTruyCap = (int)dt.Rows[i]["quyenTruyCap"];
+                Job job = new Job(maCongViec, noiDung, ngayGiao, thoihan, ngayHoanThanh, ngayCapNhat, trangThai, ghiChu, quyenTruyCap);
                 jobs.Add(job);
             }
             return jobs;
@@ -135,7 +137,6 @@ namespace BLL
         // Lấy toàn bộ tất cả công việc
         public List<Job> GetAllJob()
         {
-            DateTime? nullDateTime = null;
             List <Job> jobs = new List<Job>();
             DataTable dt = JobDAO.Instance.GetAllJob();
             for (int i = 0; i < dt.Rows.Count; i++)
@@ -143,12 +144,13 @@ namespace BLL
                 string maCongViec = dt.Rows[i]["maCongViec"].ToString();
                 string noiDung = dt.Rows[i]["noiDung"].ToString();
                 DateTime ngayGiao = (DateTime)dt.Rows[i]["ngayGiao"];
-                DateTime thoihan = (DateTime)dt.Rows[i]["thoiHan"];
+                DateTime thoihan = dt.Rows[i]["thoiHan"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["thoiHan"].ToString());
                 DateTime ngayHoanThanh = dt.Rows[i]["ngayHoanThanh"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["ngayHoanThanh"].ToString());
                 DateTime ngayCapNhat = (DateTime)dt.Rows[i]["ngayCapNhat"];
                 string trangThai = dt.Rows[i]["trangThai"].ToString();
                 string ghiChu = dt.Rows[i]["ghiChu"].ToString();
-                Job job = new Job(maCongViec, noiDung, ngayGiao, thoihan, ngayHoanThanh, ngayCapNhat, trangThai, ghiChu);
+                int quyenTruyCap = (int)dt.Rows[i]["quyenTruyCap"];
+                Job job = new Job(maCongViec, noiDung, ngayGiao, thoihan, ngayHoanThanh, ngayCapNhat, trangThai, ghiChu, quyenTruyCap);
                 jobs.Add(job);
             }
             return jobs;
@@ -167,7 +169,7 @@ namespace BLL
                 string maCanHo = dt.Rows[i]["Mã căn hộ"].ToString();
                 DateTime ngayGiao = (DateTime)dt.Rows[i]["Ngày giao"];
                 DateTime ngayCapNhat = (DateTime)dt.Rows[i]["Ngày cập nhật"];
-                DateTime thoiHan = (DateTime)dt.Rows[i]["Thời hạn"];
+                DateTime thoiHan = dt.Rows[i]["Thời hạn"] == DBNull.Value ? default(DateTime) : Convert.ToDateTime(dt.Rows[i]["Thời hạn"].ToString());
                 DateTime ngayHoanThanh = dt.Rows[i]["Ngày hoàn thành"] == DBNull.Value ? default(DateTime) : Convert.ToDateTime(dt.Rows[i]["Ngày hoàn thành"].ToString());
                 string trangThai = dt.Rows[i]["Trạng thái"].ToString();
                 string ghiChu = dt.Rows[i]["Ghi chú"].ToString();
@@ -175,6 +177,24 @@ namespace BLL
                 jobs.Add(job);
             }
             return jobs;
+        }
+
+        // lấy công việc theo mã công việc
+        public Job GetJobFromJobID(string maCV)
+        {
+            DataTable dt = JobDAO.Instance.GetJobFromJobID(maCV);
+            int i = 0;
+            string maCongViec = dt.Rows[i]["maCongViec"].ToString();
+            string noiDung = dt.Rows[i]["noiDung"].ToString();
+            DateTime ngayGiao = (DateTime)dt.Rows[i]["ngayGiao"];
+            DateTime thoihan = dt.Rows[i]["thoiHan"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["thoiHan"].ToString());
+            DateTime ngayHoanThanh = dt.Rows[i]["ngayHoanThanh"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["ngayHoanThanh"].ToString());
+            DateTime ngayCapNhat = (DateTime)dt.Rows[i]["ngayCapNhat"];
+            string trangThai = dt.Rows[i]["trangThai"].ToString();
+            string ghiChu = dt.Rows[i]["ghiChu"].ToString();
+            int quyenTruyCap = (int)dt.Rows[i]["quyenTruyCap"];
+            Job job = new Job(maCongViec, noiDung, ngayGiao, thoihan, ngayHoanThanh, ngayCapNhat, trangThai, ghiChu, quyenTruyCap);
+            return job;
         }
 
         // Chỉnh sửa công việc

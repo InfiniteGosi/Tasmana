@@ -64,6 +64,27 @@ namespace DangNhap
             return false;
         }
 
+        private int GetQuyenTruyCap()
+        {
+            int ch = 0; // mặc định là riêng tư
+            if (CBB_quyentruycap.SelectedItem.ToString().Equals("Bộ phận"))
+            {
+                ch = 1;
+            }
+            if (CBB_quyentruycap.SelectedItem.ToString().Equals("Công ty"))
+            {
+                ch = 2;
+            }
+            return ch;
+        }
+        private bool CheckThoiHan()
+        {
+            if (CB_thoihan.Checked)
+            {
+                return true;
+            }
+            return false;
+        }
         private Dictionary<string, object> AddParameterEdit_Job()
         {
             DateTime combinedDateTime = DTP_ngay.Value.Date + DTP_gio.Value.TimeOfDay;
@@ -71,11 +92,12 @@ namespace DangNhap
             {
                 {"@maCongViec", TXB_MaCV.Text},
                 {"@noiDung", TXB_noidung.Text},
-                {"@thoiHan", combinedDateTime}, // Combine Date and Time components
+                {"@thoiHan", CheckThoiHan() ? (object)combinedDateTime : null}, // Combine Date and Time components
                 {"@ngayHoanThanh", GetNgayHoanThanhCongViec() ? (object)DateTime.UtcNow.ToLocalTime() : null}, // Use DateTime directly
                 {"@ngayCapNhat", DateTime.UtcNow},
                 {"trangThai", CBB_TrangThai.SelectedItem.ToString()},
-                {"@ghiChu", TXB_GhiChu.Text}
+                {"@ghiChu", TXB_GhiChu.Text},
+                {"@quyenTruyCap", GetQuyenTruyCap()}
             };
             return dict;
         }
@@ -151,6 +173,20 @@ namespace DangNhap
                 }
             }
            
+        }
+
+        private void CB_thoihan_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CB_thoihan.Checked == true)
+            {
+                DTP_gio.Enabled = true;
+                DTP_ngay.Enabled = true;
+            }
+            else
+            {
+                DTP_gio.Enabled = false;
+                DTP_ngay.Enabled = false;
+            }
         }
     }
 }

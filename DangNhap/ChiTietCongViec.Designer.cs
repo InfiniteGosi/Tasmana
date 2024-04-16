@@ -212,6 +212,7 @@ namespace DangNhap
             this.DTP_ngay.CalendarMonthBackground = System.Drawing.Color.Black;
             this.DTP_ngay.CalendarTitleBackColor = System.Drawing.SystemColors.AppWorkspace;
             this.DTP_ngay.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.DTP_ngay.Enabled = false;
             this.DTP_ngay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTP_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DTP_ngay.Location = new System.Drawing.Point(259, 472);
@@ -391,6 +392,7 @@ namespace DangNhap
             this.DTP_gio.CalendarMonthBackground = System.Drawing.Color.Black;
             this.DTP_gio.CalendarTitleBackColor = System.Drawing.SystemColors.AppWorkspace;
             this.DTP_gio.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.DTP_gio.Enabled = false;
             this.DTP_gio.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTP_gio.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.DTP_gio.Location = new System.Drawing.Point(459, 472);
@@ -543,11 +545,14 @@ namespace DangNhap
             // CBB_quyentruycap
             // 
             this.CBB_quyentruycap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.CBB_quyentruycap.Enabled = false;
             this.CBB_quyentruycap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CBB_quyentruycap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBB_quyentruycap.ForeColor = System.Drawing.Color.White;
             this.CBB_quyentruycap.FormattingEnabled = true;
+            this.CBB_quyentruycap.Items.AddRange(new object[] {
+            "Riêng tư",
+            "Bộ phận",
+            "Công ty"});
             this.CBB_quyentruycap.Location = new System.Drawing.Point(839, 472);
             this.CBB_quyentruycap.Name = "CBB_quyentruycap";
             this.CBB_quyentruycap.Size = new System.Drawing.Size(419, 30);
@@ -563,6 +568,7 @@ namespace DangNhap
             this.CB_thoihan.Size = new System.Drawing.Size(18, 17);
             this.CB_thoihan.TabIndex = 237;
             this.CB_thoihan.UseVisualStyleBackColor = true;
+            this.CB_thoihan.CheckedChanged += new System.EventHandler(this.CB_thoihan_CheckedChanged);
             // 
             // ChiTietCongViec
             // 
@@ -653,7 +659,7 @@ namespace DangNhap
         public System.Windows.Forms.LinkLabel LLB_chỉtietfile;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.ComboBox CBB_quyentruycap;
         private System.Windows.Forms.CheckBox CB_thoihan;
+        public System.Windows.Forms.ComboBox CBB_quyentruycap;
     }
 }

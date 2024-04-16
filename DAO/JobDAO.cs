@@ -124,5 +124,12 @@ namespace DAO
             string query = $"SELECT * FROM CongViec_PDF WHERE tenFile = '{tenFile}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
+        // Lấy công việc theo mã
+        public DataTable GetJobFromJobID(string maCV)
+        {
+            string query = $"SELECT * FROM CongViec Where maCongViec = '{maCV}'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }
