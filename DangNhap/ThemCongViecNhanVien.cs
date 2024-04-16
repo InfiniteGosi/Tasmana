@@ -45,34 +45,25 @@ namespace DangNhap
             {
                 currentFormChild.Close();
             }
-            BTN_nhanvien.BackColor = Color.Silver;
-            BTN_nhanvien.ForeColor = Color.Black;
-            BTN_nhom.BackColor = Color.FromArgb(40, 40, 40);
-            BTN_nhom.ForeColor = Color.White;
-            BTN_phongban.BackColor = Color.FromArgb(40, 40, 40);
-            BTN_phongban.ForeColor = Color.White;
+            BTN_nhanvien.BackColor = Color.FromArgb(51, 53, 55);
+            BTN_nhom.BackColor = Color.Transparent;
+            BTN_phongban.BackColor = Color.Transparent;
         }
 
         private void BTN_phongban_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ThemCongViecPhongBan());
-            BTN_phongban.BackColor = Color.Silver;
-            BTN_phongban.ForeColor = Color.Black;
-            BTN_nhanvien.BackColor = Color.FromArgb(40, 40, 40);
-            BTN_nhanvien.ForeColor = Color.White;
-            BTN_nhom.BackColor = Color.FromArgb(40, 40, 40);
-            BTN_nhom.ForeColor = Color.White;
+            BTN_phongban.BackColor = Color.FromArgb(51, 53, 55);
+            BTN_nhanvien.BackColor = Color.Transparent;
+            BTN_nhom.BackColor = Color.Transparent;
         }
 
         private void BTN_nhom_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ThemCongViecNhom());
-            BTN_nhom.BackColor = Color.Silver;
-            BTN_nhom.ForeColor = Color.Black;
-            BTN_phongban.BackColor = Color.FromArgb(40, 40, 40);
-            BTN_phongban.ForeColor = Color.White;
-            BTN_nhanvien.BackColor = Color.FromArgb(40, 40, 40);
-            BTN_nhanvien.ForeColor = Color.White;
+            BTN_nhom.BackColor = Color.FromArgb(51, 53, 55);
+            BTN_phongban.BackColor = Color.Transparent;
+            BTN_nhanvien.BackColor = Color.Transparent;
         }
 
         private void ThemCongViecNhanVien_MouseDown(object sender, MouseEventArgs e)

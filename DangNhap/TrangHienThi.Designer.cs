@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrangHienThi));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.BTN_nhanvien = new Guna.UI.WinForms.GunaButton();
             this.BTN_congviec = new Guna.UI.WinForms.GunaButton();
             this.BTN_cudan = new Guna.UI.WinForms.GunaButton();
@@ -47,7 +48,6 @@
             this.Timer_KTCongViec = new System.Windows.Forms.Timer(this.components);
             this.NTFIcon_ThongBaoCV = new System.Windows.Forms.NotifyIcon(this.components);
             this.PN_main = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
@@ -72,6 +72,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(310, 685);
             this.panel1.TabIndex = 25;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Location = new System.Drawing.Point(45, 375);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(220, 1);
+            this.panel2.TabIndex = 0;
             // 
             // BTN_nhanvien
             // 
@@ -345,7 +353,7 @@
             this.BTN_square.Image = ((System.Drawing.Image)(resources.GetObject("BTN_square.Image")));
             this.BTN_square.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_square.ImageSize = new System.Drawing.Size(15, 15);
-            this.BTN_square.Location = new System.Drawing.Point(1430, 0);
+            this.BTN_square.Location = new System.Drawing.Point(1409, 1);
             this.BTN_square.Name = "BTN_square";
             this.BTN_square.OnHoverBaseColor1 = System.Drawing.Color.Silver;
             this.BTN_square.OnHoverBaseColor2 = System.Drawing.Color.Silver;
@@ -353,7 +361,7 @@
             this.BTN_square.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_square.OnHoverImage = null;
             this.BTN_square.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_square.Size = new System.Drawing.Size(30, 30);
+            this.BTN_square.Size = new System.Drawing.Size(40, 40);
             this.BTN_square.TabIndex = 32;
             this.BTN_square.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_square.Click += new System.EventHandler(this.BTN_square_Click);
@@ -373,7 +381,7 @@
             this.BTN_x.Image = ((System.Drawing.Image)(resources.GetObject("BTN_x.Image")));
             this.BTN_x.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_x.ImageSize = new System.Drawing.Size(15, 15);
-            this.BTN_x.Location = new System.Drawing.Point(1466, 0);
+            this.BTN_x.Location = new System.Drawing.Point(1455, 1);
             this.BTN_x.Name = "BTN_x";
             this.BTN_x.OnHoverBaseColor1 = System.Drawing.Color.Red;
             this.BTN_x.OnHoverBaseColor2 = System.Drawing.Color.Red;
@@ -381,7 +389,7 @@
             this.BTN_x.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_x.OnHoverImage = null;
             this.BTN_x.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_x.Size = new System.Drawing.Size(30, 30);
+            this.BTN_x.Size = new System.Drawing.Size(40, 40);
             this.BTN_x.TabIndex = 31;
             this.BTN_x.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_x.Click += new System.EventHandler(this.BTN_x_Click);
@@ -410,14 +418,6 @@
             this.PN_main.Name = "PN_main";
             this.PN_main.Size = new System.Drawing.Size(1189, 622);
             this.PN_main.TabIndex = 33;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Location = new System.Drawing.Point(45, 375);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 1);
-            this.panel2.TabIndex = 0;
             // 
             // label1
             // 

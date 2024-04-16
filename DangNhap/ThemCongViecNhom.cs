@@ -155,7 +155,7 @@ namespace DangNhap
             {
                 MessageBox.Show("Vui lòng điền mã công việc");
             }
-            if(SaveCongViec())
+            if (SaveCongViec())
             {
                 MessageBox.Show("Thêm thành công");
                 this.Close();
@@ -180,6 +180,6 @@ namespace DangNhap
             DTP_gio.Enabled = false;
             DTP_ngay.Enabled = false;
             BTN_file.Enabled = false;
-        }
+        }       
     }
 }
