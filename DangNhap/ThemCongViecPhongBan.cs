@@ -111,11 +111,11 @@ namespace DangNhap
         }
         private void BTN_ok_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(TXB_noidung.Text))
+            if (string.IsNullOrEmpty(TXB_noidung.Text))
             {
                 MessageBox.Show("Vui lòng điền nội dung công việc");
             }
-            if(string.IsNullOrEmpty(TXB_macanho.Text))
+            if (string.IsNullOrEmpty(TXB_macanho.Text))
             {
                 MessageBox.Show("Vui lòng điền mã căn hộ");
             }
