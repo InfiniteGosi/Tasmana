@@ -31,6 +31,7 @@ namespace DangNhap
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemCongViecNhanVien));
             this.PN_hienthithemcongviec = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.CB_thoihan = new System.Windows.Forms.CheckBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -64,7 +65,6 @@ namespace DangNhap
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.PN_hienthithemcongviec.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,7 +78,6 @@ namespace DangNhap
             this.PN_hienthithemcongviec.Controls.Add(this.panel1);
             this.PN_hienthithemcongviec.Controls.Add(this.CB_thoihan);
             this.PN_hienthithemcongviec.Controls.Add(this.comboBox1);
-            this.PN_hienthithemcongviec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.PN_hienthithemcongviec.Controls.Add(this.LLB_hienfile);
             this.PN_hienthithemcongviec.Controls.Add(this.TXB_MaCongViec);
             this.PN_hienthithemcongviec.Controls.Add(this.LB_MaCongViec);
@@ -104,6 +103,14 @@ namespace DangNhap
             this.PN_hienthithemcongviec.Name = "PN_hienthithemcongviec";
             this.PN_hienthithemcongviec.Size = new System.Drawing.Size(1277, 609);
             this.PN_hienthithemcongviec.TabIndex = 22;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel6.Location = new System.Drawing.Point(9, 533);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1259, 2);
+            this.panel6.TabIndex = 187;
             // 
             // panel1
             // 
@@ -141,7 +148,7 @@ namespace DangNhap
             // 
             this.LLB_hienfile.AutoSize = true;
             this.LLB_hienfile.LinkColor = System.Drawing.Color.White;
-            this.LLB_hienfile.Location = new System.Drawing.Point(320, 570);
+            this.LLB_hienfile.Location = new System.Drawing.Point(196, 561);
             this.LLB_hienfile.Name = "LLB_hienfile";
             this.LLB_hienfile.Size = new System.Drawing.Size(68, 16);
             this.LLB_hienfile.TabIndex = 184;
@@ -555,14 +562,6 @@ namespace DangNhap
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1275, 4);
             this.panel5.TabIndex = 27;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panel6.Location = new System.Drawing.Point(9, 533);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1259, 2);
-            this.panel6.TabIndex = 187;
             // 
             // ThemCongViecNhanVien
             // 
