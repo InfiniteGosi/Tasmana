@@ -50,6 +50,8 @@ namespace DangNhap
             this.LB_thoihan = new System.Windows.Forms.Label();
             this.DTP_ngay = new System.Windows.Forms.DateTimePicker();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.LB_Ghichu = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // panel1
@@ -113,10 +115,10 @@ namespace DangNhap
             this.TXB_macanho.Enabled = false;
             this.TXB_macanho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_macanho.ForeColor = System.Drawing.Color.White;
-            this.TXB_macanho.Location = new System.Drawing.Point(829, 234);
+            this.TXB_macanho.Location = new System.Drawing.Point(829, 138);
             this.TXB_macanho.Multiline = true;
             this.TXB_macanho.Name = "TXB_macanho";
-            this.TXB_macanho.Size = new System.Drawing.Size(419, 28);
+            this.TXB_macanho.Size = new System.Drawing.Size(419, 30);
             this.TXB_macanho.TabIndex = 227;
             // 
             // DTP_gio
@@ -125,11 +127,11 @@ namespace DangNhap
             this.DTP_gio.CalendarTitleBackColor = System.Drawing.SystemColors.AppWorkspace;
             this.DTP_gio.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.DTP_gio.Enabled = false;
-            this.DTP_gio.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTP_gio.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTP_gio.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.DTP_gio.Location = new System.Drawing.Point(414, 234);
+            this.DTP_gio.Location = new System.Drawing.Point(472, 233);
             this.DTP_gio.Name = "DTP_gio";
-            this.DTP_gio.Size = new System.Drawing.Size(121, 28);
+            this.DTP_gio.Size = new System.Drawing.Size(144, 30);
             this.DTP_gio.TabIndex = 226;
             // 
             // CB_uyquyen
@@ -244,7 +246,7 @@ namespace DangNhap
             this.TXB_noidung.Location = new System.Drawing.Point(829, 48);
             this.TXB_noidung.Multiline = true;
             this.TXB_noidung.Name = "TXB_noidung";
-            this.TXB_noidung.Size = new System.Drawing.Size(419, 119);
+            this.TXB_noidung.Size = new System.Drawing.Size(419, 30);
             this.TXB_noidung.TabIndex = 214;
             // 
             // BTN_ok
@@ -283,7 +285,7 @@ namespace DangNhap
             this.LB_macanho.AutoSize = true;
             this.LB_macanho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_macanho.ForeColor = System.Drawing.Color.White;
-            this.LB_macanho.Location = new System.Drawing.Point(676, 240);
+            this.LB_macanho.Location = new System.Drawing.Point(676, 144);
             this.LB_macanho.Name = "LB_macanho";
             this.LB_macanho.Size = new System.Drawing.Size(92, 22);
             this.LB_macanho.TabIndex = 215;
@@ -307,11 +309,11 @@ namespace DangNhap
             this.DTP_ngay.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.DTP_ngay.CustomFormat = "yyyy-MM-dd";
             this.DTP_ngay.Enabled = false;
-            this.DTP_ngay.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTP_ngay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTP_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DTP_ngay.Location = new System.Drawing.Point(260, 234);
+            this.DTP_ngay.Location = new System.Drawing.Point(272, 233);
             this.DTP_ngay.Name = "DTP_ngay";
-            this.DTP_ngay.Size = new System.Drawing.Size(110, 28);
+            this.DTP_ngay.Size = new System.Drawing.Size(144, 30);
             this.DTP_ngay.TabIndex = 217;
             // 
             // panel6
@@ -322,12 +324,36 @@ namespace DangNhap
             this.panel6.Size = new System.Drawing.Size(1259, 2);
             this.panel6.TabIndex = 233;
             // 
+            // LB_Ghichu
+            // 
+            this.LB_Ghichu.AutoSize = true;
+            this.LB_Ghichu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_Ghichu.ForeColor = System.Drawing.Color.White;
+            this.LB_Ghichu.Location = new System.Drawing.Point(676, 237);
+            this.LB_Ghichu.Name = "LB_Ghichu";
+            this.LB_Ghichu.Size = new System.Drawing.Size(72, 22);
+            this.LB_Ghichu.TabIndex = 235;
+            this.LB_Ghichu.Text = "Ghi chú";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(829, 233);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(419, 30);
+            this.textBox1.TabIndex = 234;
+            // 
             // ThemCongViecPhongBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(1277, 609);
+            this.Controls.Add(this.LB_Ghichu);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.CB_thoihan);
@@ -379,5 +405,7 @@ namespace DangNhap
         private System.Windows.Forms.Label LB_thoihan;
         private System.Windows.Forms.DateTimePicker DTP_ngay;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label LB_Ghichu;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }
