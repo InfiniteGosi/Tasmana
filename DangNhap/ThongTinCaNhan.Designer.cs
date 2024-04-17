@@ -85,7 +85,6 @@ namespace DangNhap
             this.LB_ngaysinh = new System.Windows.Forms.Label();
             this.BTN_luu = new System.Windows.Forms.Button();
             this.BTN_huy = new System.Windows.Forms.Button();
-            this.BTN_yeucauchinhsua = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -741,22 +740,6 @@ namespace DangNhap
             this.BTN_huy.TabIndex = 55;
             this.BTN_huy.UseVisualStyleBackColor = false;
             // 
-            // BTN_yeucauchinhsua
-            // 
-            this.BTN_yeucauchinhsua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_yeucauchinhsua.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.BTN_yeucauchinhsua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_yeucauchinhsua.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_yeucauchinhsua.ForeColor = System.Drawing.Color.White;
-            this.BTN_yeucauchinhsua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_yeucauchinhsua.Location = new System.Drawing.Point(1211, 8);
-            this.BTN_yeucauchinhsua.Name = "BTN_yeucauchinhsua";
-            this.BTN_yeucauchinhsua.Size = new System.Drawing.Size(129, 36);
-            this.BTN_yeucauchinhsua.TabIndex = 56;
-            this.BTN_yeucauchinhsua.Text = "Gửi yêu cầu";
-            this.BTN_yeucauchinhsua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_yeucauchinhsua.UseVisualStyleBackColor = true;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -776,7 +759,6 @@ namespace DangNhap
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1358, 843);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.BTN_yeucauchinhsua);
             this.Controls.Add(this.BTN_huy);
             this.Controls.Add(this.BTN_luu);
             this.Controls.Add(this.panel5);
@@ -841,7 +823,6 @@ namespace DangNhap
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button BTN_luu;
         private System.Windows.Forms.Button BTN_huy;
-        private System.Windows.Forms.Button BTN_yeucauchinhsua;
         private System.Windows.Forms.CheckBox CHB_tunglanv;
         private System.Windows.Forms.RadioButton Rad_nam;
         private System.Windows.Forms.GroupBox GB_gioitinh;

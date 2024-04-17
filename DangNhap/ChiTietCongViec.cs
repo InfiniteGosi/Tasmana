@@ -15,15 +15,15 @@ namespace DangNhap
 {
     public partial class ChiTietCongViec : Form
     {
-        //
-        int mov;
-        int movX;
-        int movY;
+        
         public ChiTietCongViec()
         {
             InitializeComponent();
         }
-
+        //Di chuyển form
+        int mov;
+        int movX;
+        int movY;
         private void ChiTietCongViec_MouseDown(object sender, MouseEventArgs e)
         {
             mov = 1;

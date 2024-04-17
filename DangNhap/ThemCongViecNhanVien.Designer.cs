@@ -35,6 +35,7 @@ namespace DangNhap
             this.TXB_ghiChu = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CB_thoihan = new System.Windows.Forms.CheckBox();
             this.CBB_QuyenTruyCap = new System.Windows.Forms.ComboBox();
             this.LLB_hienfile = new System.Windows.Forms.LinkLabel();
             this.TXB_MaCongViec = new System.Windows.Forms.TextBox();
@@ -66,7 +67,6 @@ namespace DangNhap
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.CB_thoihan = new System.Windows.Forms.CheckBox();
             this.PN_hienthithemcongviec.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,6 +145,18 @@ namespace DangNhap
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(2, 496);
             this.panel1.TabIndex = 186;
+            // 
+            // CB_thoihan
+            // 
+            this.CB_thoihan.AutoSize = true;
+            this.CB_thoihan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CB_thoihan.ForeColor = System.Drawing.Color.White;
+            this.CB_thoihan.Location = new System.Drawing.Point(199, 429);
+            this.CB_thoihan.Name = "CB_thoihan";
+            this.CB_thoihan.Size = new System.Drawing.Size(18, 17);
+            this.CB_thoihan.TabIndex = 185;
+            this.CB_thoihan.UseVisualStyleBackColor = true;
+            this.CB_thoihan.CheckedChanged += new System.EventHandler(this.CB_thoihan_CheckedChanged);
             // 
             // CBB_QuyenTruyCap
             // 
@@ -484,8 +496,8 @@ namespace DangNhap
             this.BTN_thoat.ForeColor = System.Drawing.Color.Black;
             this.BTN_thoat.Image = ((System.Drawing.Image)(resources.GetObject("BTN_thoat.Image")));
             this.BTN_thoat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.BTN_thoat.ImageSize = new System.Drawing.Size(15, 15);
-            this.BTN_thoat.Location = new System.Drawing.Point(1238, 5);
+            this.BTN_thoat.ImageSize = new System.Drawing.Size(10, 10);
+            this.BTN_thoat.Location = new System.Drawing.Point(1221, 1);
             this.BTN_thoat.Name = "BTN_thoat";
             this.BTN_thoat.OnHoverBaseColor1 = System.Drawing.Color.Red;
             this.BTN_thoat.OnHoverBaseColor2 = System.Drawing.Color.Red;
@@ -493,7 +505,7 @@ namespace DangNhap
             this.BTN_thoat.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_thoat.OnHoverImage = null;
             this.BTN_thoat.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_thoat.Size = new System.Drawing.Size(40, 40);
+            this.BTN_thoat.Size = new System.Drawing.Size(60, 30);
             this.BTN_thoat.TabIndex = 18;
             this.BTN_thoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_thoat.Click += new System.EventHandler(this.BTN_thoat_Click);
@@ -552,47 +564,35 @@ namespace DangNhap
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(4, 684);
+            this.panel2.Size = new System.Drawing.Size(1, 684);
             this.panel2.TabIndex = 25;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(4, 680);
+            this.panel3.Location = new System.Drawing.Point(1, 683);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1279, 4);
+            this.panel3.Size = new System.Drawing.Size(1282, 1);
             this.panel3.TabIndex = 26;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(1279, 0);
+            this.panel4.Location = new System.Drawing.Point(1282, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(4, 680);
+            this.panel4.Size = new System.Drawing.Size(1, 683);
             this.panel4.TabIndex = 26;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(4, 0);
+            this.panel5.Location = new System.Drawing.Point(1, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1275, 4);
+            this.panel5.Size = new System.Drawing.Size(1281, 1);
             this.panel5.TabIndex = 27;
-            // 
-            // CB_thoihan
-            // 
-            this.CB_thoihan.AutoSize = true;
-            this.CB_thoihan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CB_thoihan.ForeColor = System.Drawing.Color.White;
-            this.CB_thoihan.Location = new System.Drawing.Point(199, 429);
-            this.CB_thoihan.Name = "CB_thoihan";
-            this.CB_thoihan.Size = new System.Drawing.Size(18, 17);
-            this.CB_thoihan.TabIndex = 185;
-            this.CB_thoihan.UseVisualStyleBackColor = true;
-            this.CB_thoihan.CheckedChanged += new System.EventHandler(this.CB_thoihan_CheckedChanged);
             // 
             // ThemCongViecNhanVien
             // 
@@ -603,13 +603,13 @@ namespace DangNhap
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.BTN_thoat);
             this.Controls.Add(this.LB_themcongviec);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.PN_hienthithemcongviec);
             this.Controls.Add(this.BTN_phongban);
             this.Controls.Add(this.BTN_nhanvien);
             this.Controls.Add(this.BTN_nhom);
+            this.Controls.Add(this.BTN_thoat);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ThemCongViecNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
