@@ -82,9 +82,9 @@ namespace DangNhap
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PN_tk.BackColor = System.Drawing.Color.Silver;
-            this.PN_tk.Location = new System.Drawing.Point(538, 12);
+            this.PN_tk.Location = new System.Drawing.Point(538, 160);
             this.PN_tk.Name = "PN_tk";
-            this.PN_tk.Size = new System.Drawing.Size(454, 542);
+            this.PN_tk.Size = new System.Drawing.Size(1061, 680);
             this.PN_tk.TabIndex = 4;
             // 
             // elipse_blue
@@ -109,7 +109,7 @@ namespace DangNhap
             this.PN_tk2.BackColor = System.Drawing.Color.Silver;
             this.PN_tk2.Location = new System.Drawing.Point(33, 290);
             this.PN_tk2.Name = "PN_tk2";
-            this.PN_tk2.Size = new System.Drawing.Size(474, 264);
+            this.PN_tk2.Size = new System.Drawing.Size(474, 550);
             this.PN_tk2.TabIndex = 5;
             // 
             // ThongKe
@@ -117,7 +117,7 @@ namespace DangNhap
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(1004, 566);
+            this.ClientSize = new System.Drawing.Size(1634, 852);
             this.Controls.Add(this.PN_tk2);
             this.Controls.Add(this.PN_tk);
             this.Controls.Add(this.DT_ngaythong);

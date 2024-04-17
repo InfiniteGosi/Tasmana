@@ -39,10 +39,10 @@
             this.LB_themcongviec = new System.Windows.Forms.Label();
             this.BTN_ok = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_huy = new Guna.UI.WinForms.GunaGradientButton();
-            this.gridGroupingControl1 = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
             this.panel5 = new System.Windows.Forms.Panel();
             this.PN_nen = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.gridGroupingControl1)).BeginInit();
+            this.LB_MaTruongNhom = new System.Windows.Forms.Label();
+            this.TXB_ghiChu = new System.Windows.Forms.TextBox();
             this.PN_nen.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +52,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(798, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1, 633);
+            this.panel1.Size = new System.Drawing.Size(1, 462);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -68,7 +68,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 632);
+            this.panel3.Location = new System.Drawing.Point(0, 461);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(798, 1);
             this.panel3.TabIndex = 1;
@@ -79,7 +79,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1, 631);
+            this.panel4.Size = new System.Drawing.Size(1, 460);
             this.panel4.TabIndex = 1;
             // 
             // CBB_nhanvien
@@ -102,9 +102,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(52, 185);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 22);
+            this.label1.Size = new System.Drawing.Size(140, 22);
             this.label1.TabIndex = 204;
-            this.label1.Text = "Mã nhân viên";
+            this.label1.Text = "Mã trưởng nhóm";
             // 
             // CBB_phongban
             // 
@@ -156,7 +156,7 @@
             this.BTN_ok.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.BTN_ok.Image = null;
             this.BTN_ok.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_ok.Location = new System.Drawing.Point(658, 584);
+            this.BTN_ok.Location = new System.Drawing.Point(658, 412);
             this.BTN_ok.Name = "BTN_ok";
             this.BTN_ok.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.BTN_ok.OnHoverBaseColor2 = System.Drawing.Color.Navy;
@@ -185,7 +185,7 @@
             this.BTN_huy.ForeColor = System.Drawing.Color.Black;
             this.BTN_huy.Image = null;
             this.BTN_huy.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_huy.Location = new System.Drawing.Point(514, 584);
+            this.BTN_huy.Location = new System.Drawing.Point(512, 414);
             this.BTN_huy.Name = "BTN_huy";
             this.BTN_huy.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(30)))), ((int)(((byte)(43)))));
             this.BTN_huy.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(30)))), ((int)(((byte)(43)))));
@@ -200,23 +200,10 @@
             this.BTN_huy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_huy.Click += new System.EventHandler(this.BTN_huy_Click);
             // 
-            // gridGroupingControl1
-            // 
-            this.gridGroupingControl1.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.gridGroupingControl1.BackColor = System.Drawing.SystemColors.Window;
-            this.gridGroupingControl1.Location = new System.Drawing.Point(56, 274);
-            this.gridGroupingControl1.Name = "gridGroupingControl1";
-            this.gridGroupingControl1.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
-            this.gridGroupingControl1.Size = new System.Drawing.Size(687, 229);
-            this.gridGroupingControl1.TabIndex = 209;
-            this.gridGroupingControl1.Text = "gridGroupingControl1";
-            this.gridGroupingControl1.UseRightToLeftCompatibleTextBox = true;
-            this.gridGroupingControl1.VersionInfo = "25.1462.39";
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Gray;
-            this.panel5.Location = new System.Drawing.Point(13, 566);
+            this.panel5.Location = new System.Drawing.Point(13, 396);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(772, 1);
             this.panel5.TabIndex = 210;
@@ -233,14 +220,37 @@
             this.PN_nen.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PN_nen_MouseMove);
             this.PN_nen.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PN_nen_MouseUp);
             // 
+            // LB_MaTruongNhom
+            // 
+            this.LB_MaTruongNhom.AutoSize = true;
+            this.LB_MaTruongNhom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_MaTruongNhom.ForeColor = System.Drawing.Color.White;
+            this.LB_MaTruongNhom.Location = new System.Drawing.Point(52, 287);
+            this.LB_MaTruongNhom.Name = "LB_MaTruongNhom";
+            this.LB_MaTruongNhom.Size = new System.Drawing.Size(140, 22);
+            this.LB_MaTruongNhom.TabIndex = 212;
+            this.LB_MaTruongNhom.Text = "Mã trưởng nhóm";
+            // 
+            // TXB_ghiChu
+            // 
+            this.TXB_ghiChu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_ghiChu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_ghiChu.ForeColor = System.Drawing.Color.White;
+            this.TXB_ghiChu.Location = new System.Drawing.Point(222, 287);
+            this.TXB_ghiChu.Multiline = true;
+            this.TXB_ghiChu.Name = "TXB_ghiChu";
+            this.TXB_ghiChu.Size = new System.Drawing.Size(419, 30);
+            this.TXB_ghiChu.TabIndex = 213;
+            // 
             // ThemNhom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(799, 633);
+            this.ClientSize = new System.Drawing.Size(799, 462);
+            this.Controls.Add(this.TXB_ghiChu);
+            this.Controls.Add(this.LB_MaTruongNhom);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.gridGroupingControl1);
             this.Controls.Add(this.BTN_huy);
             this.Controls.Add(this.BTN_ok);
             this.Controls.Add(this.CBB_nhanvien);
@@ -256,7 +266,6 @@
             this.Name = "ThemNhom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThemNhom";
-            ((System.ComponentModel.ISupportInitialize)(this.gridGroupingControl1)).EndInit();
             this.PN_nen.ResumeLayout(false);
             this.PN_nen.PerformLayout();
             this.ResumeLayout(false);
@@ -277,8 +286,9 @@
         private System.Windows.Forms.Label LB_themcongviec;
         private Guna.UI.WinForms.GunaGradientButton BTN_ok;
         private Guna.UI.WinForms.GunaGradientButton BTN_huy;
-        private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl gridGroupingControl1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel PN_nen;
+        private System.Windows.Forms.Label LB_MaTruongNhom;
+        public System.Windows.Forms.TextBox TXB_ghiChu;
     }
 }
