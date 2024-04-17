@@ -41,8 +41,8 @@
             this.BTN_huy = new Guna.UI.WinForms.GunaGradientButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.PN_nen = new System.Windows.Forms.Panel();
-            this.LB_MaTruongNhom = new System.Windows.Forms.Label();
-            this.TXB_ghiChu = new System.Windows.Forms.TextBox();
+            this.LB_MaNhom = new System.Windows.Forms.Label();
+            this.TXB_maNhom = new System.Windows.Forms.TextBox();
             this.PN_nen.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,6 +94,7 @@
             this.CBB_nhanvien.Name = "CBB_nhanvien";
             this.CBB_nhanvien.Size = new System.Drawing.Size(419, 30);
             this.CBB_nhanvien.TabIndex = 205;
+            this.CBB_nhanvien.SelectedValueChanged += new System.EventHandler(this.CBB_nhanvien_SelectedValueChanged);
             // 
             // label1
             // 
@@ -117,6 +118,7 @@
             this.CBB_phongban.Name = "CBB_phongban";
             this.CBB_phongban.Size = new System.Drawing.Size(419, 30);
             this.CBB_phongban.TabIndex = 203;
+            this.CBB_phongban.SelectedValueChanged += new System.EventHandler(this.CBB_phongban_SelectedValueChanged);
             // 
             // LB_maphongban
             // 
@@ -169,6 +171,7 @@
             this.BTN_ok.TabIndex = 207;
             this.BTN_ok.Text = "Lưu";
             this.BTN_ok.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_ok.Click += new System.EventHandler(this.BTN_ok_Click);
             // 
             // BTN_huy
             // 
@@ -220,27 +223,28 @@
             this.PN_nen.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PN_nen_MouseMove);
             this.PN_nen.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PN_nen_MouseUp);
             // 
-            // LB_MaTruongNhom
+            // LB_MaNhom
             // 
-            this.LB_MaTruongNhom.AutoSize = true;
-            this.LB_MaTruongNhom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_MaTruongNhom.ForeColor = System.Drawing.Color.White;
-            this.LB_MaTruongNhom.Location = new System.Drawing.Point(52, 287);
-            this.LB_MaTruongNhom.Name = "LB_MaTruongNhom";
-            this.LB_MaTruongNhom.Size = new System.Drawing.Size(140, 22);
-            this.LB_MaTruongNhom.TabIndex = 212;
-            this.LB_MaTruongNhom.Text = "Mã trưởng nhóm";
+            this.LB_MaNhom.AutoSize = true;
+            this.LB_MaNhom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_MaNhom.ForeColor = System.Drawing.Color.White;
+            this.LB_MaNhom.Location = new System.Drawing.Point(52, 287);
+            this.LB_MaNhom.Name = "LB_MaNhom";
+            this.LB_MaNhom.Size = new System.Drawing.Size(83, 22);
+            this.LB_MaNhom.TabIndex = 212;
+            this.LB_MaNhom.Text = "Mã nhóm";
             // 
-            // TXB_ghiChu
+            // TXB_maNhom
             // 
-            this.TXB_ghiChu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_ghiChu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_ghiChu.ForeColor = System.Drawing.Color.White;
-            this.TXB_ghiChu.Location = new System.Drawing.Point(222, 287);
-            this.TXB_ghiChu.Multiline = true;
-            this.TXB_ghiChu.Name = "TXB_ghiChu";
-            this.TXB_ghiChu.Size = new System.Drawing.Size(419, 30);
-            this.TXB_ghiChu.TabIndex = 213;
+            this.TXB_maNhom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_maNhom.Enabled = false;
+            this.TXB_maNhom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_maNhom.ForeColor = System.Drawing.Color.White;
+            this.TXB_maNhom.Location = new System.Drawing.Point(222, 287);
+            this.TXB_maNhom.Multiline = true;
+            this.TXB_maNhom.Name = "TXB_maNhom";
+            this.TXB_maNhom.Size = new System.Drawing.Size(419, 30);
+            this.TXB_maNhom.TabIndex = 213;
             // 
             // ThemNhom
             // 
@@ -248,8 +252,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(799, 462);
-            this.Controls.Add(this.TXB_ghiChu);
-            this.Controls.Add(this.LB_MaTruongNhom);
+            this.Controls.Add(this.TXB_maNhom);
+            this.Controls.Add(this.LB_MaNhom);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.BTN_huy);
             this.Controls.Add(this.BTN_ok);
@@ -266,6 +270,7 @@
             this.Name = "ThemNhom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThemNhom";
+            this.Load += new System.EventHandler(this.ThemNhom_Load);
             this.PN_nen.ResumeLayout(false);
             this.PN_nen.PerformLayout();
             this.ResumeLayout(false);
@@ -288,7 +293,7 @@
         private Guna.UI.WinForms.GunaGradientButton BTN_huy;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel PN_nen;
-        private System.Windows.Forms.Label LB_MaTruongNhom;
-        public System.Windows.Forms.TextBox TXB_ghiChu;
+        private System.Windows.Forms.Label LB_MaNhom;
+        public System.Windows.Forms.TextBox TXB_maNhom;
     }
 }
