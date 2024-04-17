@@ -54,5 +54,29 @@ namespace DTO
             MaNhom = maNhom;
             TaiKhoanNguoiDung = account;
         }
+
+        public Employee(string maNhanVien, string email, string ho, string ten, string soDienThoai, DateTime ngaySinh, bool gioiTinh, string queQuan, string maDinhDanh, string loaiNhanVien, string tinhTrangHonNhan, string maSoBHXH, bool daTungLamNhanVien, DateTime ngayKyHDLD, DateTime ngayHetHDLD, string diaChiThuongTru, string diaChiTamTru, string tinhTrangHDLD, string maBoPhan, string maNhom)
+        {
+            MaNhanVien = maNhanVien;
+            Email = email;
+            Ho = ho;
+            Ten = ten;
+            SoDienThoai = soDienThoai;
+            NgaySinh = ngaySinh;
+            GioiTinh = gioiTinh;
+            QueQuan = queQuan;
+            MaDinhDanh = maDinhDanh;
+            LoaiNhanVien = loaiNhanVien;
+            TinhTrangHonNhan = tinhTrangHonNhan;
+            MaSoBHXH = maSoBHXH;
+            DaTungLamNhanVien = daTungLamNhanVien;
+            NgayKyHDLD = ngayKyHDLD;
+            NgayHetHDLD = ngayHetHDLD;
+            DiaChiThuongTru = diaChiThuongTru;
+            DiaChiTamTru = diaChiTamTru;
+            TinhTrangHDLD = tinhTrangHDLD;
+            MaBoPhan = maBoPhan;
+            MaNhom = maNhom;
+        }
     }
 }

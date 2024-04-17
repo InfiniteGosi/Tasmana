@@ -64,5 +64,89 @@ namespace DangNhap
             }
         }
 
+        public List<Employee> GetEmployee(string maBoPhan)
+        {
+            List<Employee> list = new List<Employee>();
+            list = EmployeeBLL.Instance.GetEmployeeByDivision(maBoPhan);
+            return list;
+        }
+
+        public void ReadNV()
+        {
+            List<Employee> employees = new List<Employee>();
+            CBB_nhanvien.Enabled = true;
+            CBB_nhanvien.Items.Clear();
+            employees = GetEmployee(CBB_phongban.SelectedItem.ToString().Split('-')[0]);
+            for (int i = 0;i < employees.Count;i++)
+            {
+                CBB_nhanvien.Items.Add(employees[i].MaNhanVien + "_" + employees[i].Ten);
+            }
+        }
+
+        private void ThemNhom_Load(object sender, EventArgs e)
+        {
+            ReadPhongBan();
+        }
+
+        private void CBB_phongban_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if(CBB_phongban.SelectedIndex != -1)
+            {
+                ReadNV();
+            }
+        }
+
+        private void CBB_nhanvien_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if(CBB_nhanvien.SelectedIndex != -1)
+            {
+                TXB_maNhom.Enabled = true;
+            }
+        }
+        private Dictionary<string, object> AddParametersForGroup()
+        {
+            Dictionary<string, object> dict = new Dictionary<string, object>
+            {
+                {"@maNhom",  TXB_maNhom.Text},
+                {"@maTruongNhom", CBB_nhanvien.SelectedItem.ToString().Split('_')[0]},
+                {"@maBoPhan", CBB_phongban.SelectedItem.ToString().Split('-')[0]}
+            };
+            return dict;
+        }
+        private bool SaveGroup()
+        {
+            if (GroupBLL.Instance.AddGroup(AddParametersForGroup()))
+            {
+                return true;
+            }
+            return false;
+        }
+        private void BTN_ok_Click(object sender, EventArgs e)
+        {
+            if(CBB_phongban.SelectedIndex == -1)
+            {
+                MessageBox.Show("Vui lòng chọn Phòng ban");
+                return;
+            }
+            if(CBB_nhanvien.SelectedIndex == -1) 
+            {
+                MessageBox.Show("Vui lòng chọn nhóm trưởng");
+                return;
+            }
+            if(string.IsNullOrEmpty(TXB_maNhom.Text))
+            {
+                MessageBox.Show("Vui lòng điền mã nhóm");
+                return;
+            }
+            if(SaveGroup())
+            {
+                MessageBox.Show("Thêm thành công");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Thêm thất bại");
+            }
+        }
     }
 }

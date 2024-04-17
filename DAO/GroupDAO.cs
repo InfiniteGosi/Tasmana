@@ -26,5 +26,9 @@ namespace DAO
             string query = "exec SP_LayPhongBanTheoMaNhom @maNhom";
             return DataProvider.Instance.ExecuteQuery(query, new object[] { maNhom });
         }
+        public bool AddGroup(Dictionary<string, object> parameters) 
+        {
+            return DataProvider.Instance.ExecuteStoredProcedure("SP_ThemNhom", parameters) > 0;
+        }
     }
 }

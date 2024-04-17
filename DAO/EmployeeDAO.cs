@@ -50,5 +50,11 @@ namespace DAO
             string query = $"select * from NhanVien where maNhom = '{maNhom}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
+        public DataTable GetEmployeeByDivision(string maBoPhan)
+        {
+            string query = $"Select * from NhanVien Where maBoPhan = '{maBoPhan}'";
+            return DataProvider.Instance. ExecuteQuery(query);
+        }
     }
 }

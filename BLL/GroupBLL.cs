@@ -42,5 +42,10 @@ namespace BLL
             Division division = new Division(maBoPhan, tenBoPhan, soDienThoai, email);
             return division;
         }
+
+        public bool AddGroup(Dictionary<string, object> parameters)
+        {
+            return GroupDAO.Instance.AddGroup(parameters);
+        }
     }
 }
