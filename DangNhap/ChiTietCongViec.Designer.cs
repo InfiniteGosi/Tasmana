@@ -173,7 +173,7 @@ namespace DangNhap
             this.BTN_luu.Location = new System.Drawing.Point(1129, 623);
             this.BTN_luu.Name = "BTN_luu";
             this.BTN_luu.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
-            this.BTN_luu.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.BTN_luu.OnHoverBaseColor2 = System.Drawing.Color.DeepSkyBlue;
             this.BTN_luu.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_luu.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_luu.OnHoverImage = null;
@@ -294,8 +294,8 @@ namespace DangNhap
             this.BTN_thoat.ForeColor = System.Drawing.Color.Black;
             this.BTN_thoat.Image = ((System.Drawing.Image)(resources.GetObject("BTN_thoat.Image")));
             this.BTN_thoat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.BTN_thoat.ImageSize = new System.Drawing.Size(15, 15);
-            this.BTN_thoat.Location = new System.Drawing.Point(1241, 2);
+            this.BTN_thoat.ImageSize = new System.Drawing.Size(10, 10);
+            this.BTN_thoat.Location = new System.Drawing.Point(1221, 1);
             this.BTN_thoat.Name = "BTN_thoat";
             this.BTN_thoat.OnHoverBaseColor1 = System.Drawing.Color.Red;
             this.BTN_thoat.OnHoverBaseColor2 = System.Drawing.Color.Red;
@@ -303,7 +303,7 @@ namespace DangNhap
             this.BTN_thoat.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_thoat.OnHoverImage = null;
             this.BTN_thoat.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_thoat.Size = new System.Drawing.Size(40, 40);
+            this.BTN_thoat.Size = new System.Drawing.Size(60, 30);
             this.BTN_thoat.TabIndex = 123;
             this.BTN_thoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_thoat.Click += new System.EventHandler(this.BTN_thoat_Click);
@@ -357,34 +357,34 @@ namespace DangNhap
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(3, 684);
+            this.panel1.Size = new System.Drawing.Size(1, 684);
             this.panel1.TabIndex = 126;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(3, 0);
+            this.panel2.Location = new System.Drawing.Point(1, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1280, 3);
+            this.panel2.Size = new System.Drawing.Size(1282, 1);
             this.panel2.TabIndex = 127;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(3, 681);
+            this.panel3.Location = new System.Drawing.Point(1, 683);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1280, 3);
+            this.panel3.Size = new System.Drawing.Size(1282, 1);
             this.panel3.TabIndex = 128;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(1280, 3);
+            this.panel4.Location = new System.Drawing.Point(1282, 1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(3, 678);
+            this.panel4.Size = new System.Drawing.Size(1, 682);
             this.panel4.TabIndex = 129;
             // 
             // DTP_gio
@@ -500,7 +500,7 @@ namespace DangNhap
             this.BTN_themcongviec.ImageSize = new System.Drawing.Size(10, 10);
             this.BTN_themcongviec.Location = new System.Drawing.Point(167, 623);
             this.BTN_themcongviec.Name = "BTN_themcongviec";
-            this.BTN_themcongviec.OnHoverBaseColor1 = System.Drawing.Color.WhiteSmoke;
+            this.BTN_themcongviec.OnHoverBaseColor1 = System.Drawing.Color.Lime;
             this.BTN_themcongviec.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.BTN_themcongviec.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_themcongviec.OnHoverForeColor = System.Drawing.Color.White;
@@ -595,7 +595,6 @@ namespace DangNhap
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gunaGradientButton1);
             this.Controls.Add(this.LB_macongviec);
-            this.Controls.Add(this.BTN_thoat);
             this.Controls.Add(this.CBB_TrangThai);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BTN_themcongviec);
@@ -612,6 +611,7 @@ namespace DangNhap
             this.Controls.Add(this.LB_macanho);
             this.Controls.Add(this.LB_thoihan);
             this.Controls.Add(this.DTP_ngay);
+            this.Controls.Add(this.BTN_thoat);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ChiTietCongViec";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
