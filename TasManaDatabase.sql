@@ -612,3 +612,34 @@ begin
 	Where maCongViec = @maCongViec
 end
 go
+
+
+--Procedure thêm nhân viên
+create procedure [dbo].[SP_ThemCanHo]
+	@maCanHo varchar(10),
+	@dienTich float,
+	@viTriTang int,
+	@soLuongPhongNgu int,
+	@soLuongToilet int,
+	@soDoMatBang image,
+	@mucPhiQLHangThang int,
+	@soLuongTheThangMay int,
+	@lichSuGiaoDich Date,
+	@tinhTrangGDHienTai varchar(100),
+	@maCuDan varchar(10)
+as
+begin
+	insert into CanHo
+	values(
+		@maCanHo,
+		@dienTich,
+		@viTriTang,
+		@soLuongPhongNgu,
+		@soLuongToilet,
+		@soDoMatBang,
+		@mucPhiQLHangThang,
+		@soLuongTheThangMay,
+		@lichSuGiaoDich,
+		@tinhTrangGDHienTai,
+		@maCuDan)
+end

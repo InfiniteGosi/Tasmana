@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,14 +14,24 @@ namespace DangNhap
     public partial class ChiTietCanHo : Form
     {
         private CanHo parent;
+        private Apartment apartment;
         public ChiTietCanHo()
         {
             InitializeComponent();
         }
         public ChiTietCanHo(CanHo parent)
         {
+            InitializeComponent();
             this.parent = parent;
         }
+        public ChiTietCanHo(CanHo parent, Apartment apartment)
+        {
+            InitializeComponent();
+            this.parent = parent;
+            this.apartment = apartment;
+            this.FormClosing += new FormClosingEventHandler(this.ChiTietCanHo_FormClosing);
+        }
+
         private Form currentFormChild;
 
         private void OpenChildForm(Form childForm)
@@ -51,6 +62,20 @@ namespace DangNhap
             }
             BTN_chung.BackColor = Color.FromArgb(51, 53, 55);
             BTN_lichsu.BackColor = Color.Transparent;
+        }
+
+        private object[] values_ch;
+        private void InitializeValues_CH()
+        {
+            values_ch = new object[]
+            {
+
+            };
+        }
+
+        private void ChiTietCanHo_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }

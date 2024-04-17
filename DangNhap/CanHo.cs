@@ -20,6 +20,7 @@ namespace DangNhap
     public partial class CanHo : Form
     {
         private List<Apartment> apartments;
+        private Apartment canHoChiTiet;
         public CanHo()
         {
             SyncfusionLicenseProvider.RegisterLicense("MzIxOTI2MkAzMjM1MmUzMDJlMzBORkJZeFRVdUQxeERjT2xkWC9vdFgxS29wUmREOU9CZVdENkRUN0lrSStVPQ==;Mgo+DSMBaFt6QHFqVkNrXVNbdV5dVGpAd0N3RGlcdlR1fUUmHVdTRHRbQlliS3xTck1hW35Wcnc=");
@@ -91,6 +92,28 @@ namespace DangNhap
         private void CanHo_Load(object sender, EventArgs e)
         {
             DisplayGCC_canho();
+        }
+        private void GetApartmentById(string maCanHo)
+        {
+            canHoChiTiet = ApartmentBLL.Instance.GetApartmentById(maCanHo);
+        }
+
+        private void GGC_canho_TableControlCellDoubleClick(object sender, GridTableControlCellClickEventArgs e)
+        {
+            // Get the index of the clicked row
+            int rowIndex = e.Inner.RowIndex - 5;
+            // Check if the clicked row index is valid
+            if (rowIndex >= 0 && rowIndex < GGC_canho.Table.Records.Count)
+            {
+                // Get the record corresponding to the clicked row
+                Record record = GGC_canho.Table.Records[rowIndex];
+
+                // Extract data from the record
+                string maNhanVien = record.GetValue("MaCanHo").ToString();
+                GetApartmentById(maNhanVien);
+                ChiTietCanHo ctch = new ChiTietCanHo(this, canHoChiTiet);
+                ctch.ShowDialog();
+            }
         }
     }
 }
