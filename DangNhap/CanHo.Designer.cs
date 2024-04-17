@@ -30,13 +30,6 @@ namespace DangNhap
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CanHo));
-            this.DGV_hienthicanho = new System.Windows.Forms.DataGridView();
-            this.C_macanho = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.C_chuhohientai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.C_trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.C_dinhky = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.C_dichvuyeucau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.C_chitiet = new System.Windows.Forms.DataGridViewImageColumn();
             this.BTN_themcanho = new Guna.UI.WinForms.GunaGradientButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.TXB_sotrang = new System.Windows.Forms.TextBox();
@@ -49,72 +42,11 @@ namespace DangNhap
             this.BTN_in = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_PDF = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_excel = new Guna.UI.WinForms.GunaGradientButton();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_hienthicanho)).BeginInit();
+            this.GGC_danhsachnv = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
+            this.GGC_canho = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
+            ((System.ComponentModel.ISupportInitialize)(this.GGC_danhsachnv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GGC_canho)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DGV_hienthicanho
-            // 
-            this.DGV_hienthicanho.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGV_hienthicanho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_hienthicanho.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.C_macanho,
-            this.C_chuhohientai,
-            this.C_trangthai,
-            this.C_dinhky,
-            this.C_dichvuyeucau,
-            this.C_chitiet});
-            this.DGV_hienthicanho.Location = new System.Drawing.Point(65, 120);
-            this.DGV_hienthicanho.Name = "DGV_hienthicanho";
-            this.DGV_hienthicanho.RowHeadersWidth = 51;
-            this.DGV_hienthicanho.RowTemplate.Height = 24;
-            this.DGV_hienthicanho.Size = new System.Drawing.Size(1248, 401);
-            this.DGV_hienthicanho.TabIndex = 117;
-            // 
-            // C_macanho
-            // 
-            this.C_macanho.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.C_macanho.HeaderText = "Mã căn hộ";
-            this.C_macanho.MinimumWidth = 6;
-            this.C_macanho.Name = "C_macanho";
-            this.C_macanho.Width = 77;
-            // 
-            // C_chuhohientai
-            // 
-            this.C_chuhohientai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.C_chuhohientai.HeaderText = "Chủ hộ hiện tại";
-            this.C_chuhohientai.MinimumWidth = 6;
-            this.C_chuhohientai.Name = "C_chuhohientai";
-            // 
-            // C_trangthai
-            // 
-            this.C_trangthai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.C_trangthai.HeaderText = "Trạng thái";
-            this.C_trangthai.MinimumWidth = 6;
-            this.C_trangthai.Name = "C_trangthai";
-            this.C_trangthai.Width = 89;
-            // 
-            // C_dinhky
-            // 
-            this.C_dinhky.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.C_dinhky.HeaderText = "Dịch vụ định kỳ";
-            this.C_dinhky.MinimumWidth = 6;
-            this.C_dinhky.Name = "C_dinhky";
-            // 
-            // C_dichvuyeucau
-            // 
-            this.C_dichvuyeucau.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.C_dichvuyeucau.HeaderText = "Dịch vụ yêu cầu";
-            this.C_dichvuyeucau.MinimumWidth = 6;
-            this.C_dichvuyeucau.Name = "C_dichvuyeucau";
-            // 
-            // C_chitiet
-            // 
-            this.C_chitiet.HeaderText = "Chi tiết";
-            this.C_chitiet.MinimumWidth = 6;
-            this.C_chitiet.Name = "C_chitiet";
-            this.C_chitiet.Width = 125;
             // 
             // BTN_themcanho
             // 
@@ -144,6 +76,7 @@ namespace DangNhap
             this.BTN_themcanho.OnPressedColor = System.Drawing.Color.Black;
             this.BTN_themcanho.Size = new System.Drawing.Size(40, 40);
             this.BTN_themcanho.TabIndex = 107;
+            this.BTN_themcanho.Click += new System.EventHandler(this.BTN_themcanho_Click);
             // 
             // comboBox1
             // 
@@ -349,6 +282,38 @@ namespace DangNhap
             this.BTN_excel.Text = "Excel";
             this.BTN_excel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // GGC_danhsachnv
+            // 
+            this.GGC_danhsachnv.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.GGC_danhsachnv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GGC_danhsachnv.BackColor = System.Drawing.SystemColors.Window;
+            this.GGC_danhsachnv.Location = new System.Drawing.Point(-36, 399);
+            this.GGC_danhsachnv.Name = "GGC_danhsachnv";
+            this.GGC_danhsachnv.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
+            this.GGC_danhsachnv.Size = new System.Drawing.Size(1248, 404);
+            this.GGC_danhsachnv.TabIndex = 121;
+            this.GGC_danhsachnv.Text = "gridGroupingControl1";
+            this.GGC_danhsachnv.UseRightToLeftCompatibleTextBox = true;
+            this.GGC_danhsachnv.VersionInfo = "25.1462.39";
+            // 
+            // GGC_canho
+            // 
+            this.GGC_canho.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.GGC_canho.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GGC_canho.BackColor = System.Drawing.SystemColors.Window;
+            this.GGC_canho.Location = new System.Drawing.Point(65, 117);
+            this.GGC_canho.Name = "GGC_canho";
+            this.GGC_canho.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
+            this.GGC_canho.Size = new System.Drawing.Size(1248, 404);
+            this.GGC_canho.TabIndex = 121;
+            this.GGC_canho.Text = "gridGroupingControl1";
+            this.GGC_canho.UseRightToLeftCompatibleTextBox = true;
+            this.GGC_canho.VersionInfo = "25.1462.39";
+            // 
             // CanHo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -356,10 +321,10 @@ namespace DangNhap
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1376, 782);
+            this.Controls.Add(this.GGC_canho);
             this.Controls.Add(this.BTN_in);
             this.Controls.Add(this.BTN_PDF);
             this.Controls.Add(this.BTN_excel);
-            this.Controls.Add(this.DGV_hienthicanho);
             this.Controls.Add(this.BTN_themcanho);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.TXB_sotrang);
@@ -372,14 +337,15 @@ namespace DangNhap
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CanHo";
             this.Text = "CanHo";
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_hienthicanho)).EndInit();
+            this.Load += new System.EventHandler(this.CanHo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.GGC_danhsachnv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GGC_canho)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView DGV_hienthicanho;
         private Guna.UI.WinForms.GunaGradientButton BTN_themcanho;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox TXB_sotrang;
@@ -389,14 +355,10 @@ namespace DangNhap
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C_macanho;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C_chuhohientai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C_trangthai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C_dinhky;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C_dichvuyeucau;
-        private System.Windows.Forms.DataGridViewImageColumn C_chitiet;
         private Guna.UI.WinForms.GunaGradientButton BTN_in;
         private Guna.UI.WinForms.GunaGradientButton BTN_PDF;
         private Guna.UI.WinForms.GunaGradientButton BTN_excel;
+        private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl GGC_danhsachnv;
+        private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl GGC_canho;
     }
 }

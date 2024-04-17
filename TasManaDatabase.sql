@@ -280,6 +280,7 @@ INSERT INTO CanHo VALUES ('WPHA', 100.5, 5, 3, 2, NULL, 200, 2, '2024-01-01', N'
 INSERT INTO CanHo VALUES ('WPHB', 90.2, 8, 2, 1, NULL, 150, 1, '2024-01-01', N'Còn trống', NULL);
 INSERT INTO CanHo VALUES ('WPHC', 110.8, 3, 4, 2, NULL, 250, 2, '2024-01-01', N'Còn trống', NULL);
 INSERT INTO CanHo VALUES ('WPHD', 80.0, 10, 1, 1, NULL, 180, 1, '2024-01-01', N'Còn trống', NULL);
+select * from CanHo
 
 -- Insert mẫu công việc
 INSERT INTO CongViec VALUES('CVVS1', N'Quét nhà', '2024-04-08 9:12:00','2024-04-04 12:30:00',null, '2024-04-08 9:12:00',N'Chưa bắt đầu',null)

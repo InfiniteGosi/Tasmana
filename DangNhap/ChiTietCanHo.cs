@@ -12,9 +12,14 @@ namespace DangNhap
 {
     public partial class ChiTietCanHo : Form
     {
+        private CanHo parent;
         public ChiTietCanHo()
         {
             InitializeComponent();
+        }
+        public ChiTietCanHo(CanHo parent)
+        {
+            this.parent = parent;
         }
         private Form currentFormChild;
 
