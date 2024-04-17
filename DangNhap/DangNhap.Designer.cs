@@ -191,14 +191,14 @@ namespace DangNhap
             this.BTN_close.Image = ((System.Drawing.Image)(resources.GetObject("BTN_close.Image")));
             this.BTN_close.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_close.ImageSize = new System.Drawing.Size(15, 15);
-            this.BTN_close.Location = new System.Drawing.Point(1107, 3);
+            this.BTN_close.Location = new System.Drawing.Point(1074, 3);
             this.BTN_close.Name = "BTN_close";
             this.BTN_close.OnHoverBaseColor = System.Drawing.Color.Red;
             this.BTN_close.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.BTN_close.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_close.OnHoverImage = null;
             this.BTN_close.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_close.Size = new System.Drawing.Size(20, 20);
+            this.BTN_close.Size = new System.Drawing.Size(60, 30);
             this.BTN_close.TabIndex = 1;
             this.BTN_close.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_close.Click += new System.EventHandler(this.BTN_close_Click);

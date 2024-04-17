@@ -389,6 +389,12 @@
     <Compile Include="ThemCongViecPhongBan.Designer.cs">
       <DependentUpon>ThemCongViecPhongBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemNhom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemNhom.Designer.cs">
+      <DependentUpon>ThemNhom.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThongBao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -478,6 +484,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThemCongViecPhongBan.resx">
       <DependentUpon>ThemCongViecPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemNhom.resx">
+      <DependentUpon>ThemNhom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongBao.resx">
       <DependentUpon>ThongBao.cs</DependentUpon>

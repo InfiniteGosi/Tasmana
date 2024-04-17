@@ -166,18 +166,22 @@ namespace DangNhap
             if (string.IsNullOrEmpty(TXB_noidung.Text))
             {
                 MessageBox.Show("Vui lòng điền nội dung công việc");
+                return;
             }
             if (string.IsNullOrEmpty(TXB_macanho.Text))
             {
                 MessageBox.Show("Vui lòng điền mã căn hộ");
+                return;
             }
             if (string.IsNullOrEmpty(TXB_MaCongViec.Text))
             {
                 MessageBox.Show("Vui lòng điền mã công việc");
+                return;
             }
             if (CBB_QuyenTruyCap.SelectedIndex == -1)
             {
                 MessageBox.Show("Vui lòng chọn quyền hạn truy cập");
+                return;
             }
             if (SaveCongViec())
             {

@@ -33,7 +33,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.TXB_guiden = new System.Windows.Forms.TextBox();
             this.LB_den = new System.Windows.Forms.Label();
             this.PN_hienthi = new System.Windows.Forms.Panel();
             this.BTN_thoat = new System.Windows.Forms.Button();
@@ -43,6 +42,7 @@
             this.TXB_tieude = new System.Windows.Forms.TextBox();
             this.LB_soantin = new System.Windows.Forms.Label();
             this.LB_tieude = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.PN_hienthi.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,17 +81,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(906, 5);
             this.panel4.TabIndex = 3;
-            // 
-            // TXB_guiden
-            // 
-            this.TXB_guiden.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_guiden.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TXB_guiden.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_guiden.ForeColor = System.Drawing.Color.White;
-            this.TXB_guiden.Location = new System.Drawing.Point(123, 62);
-            this.TXB_guiden.Name = "TXB_guiden";
-            this.TXB_guiden.Size = new System.Drawing.Size(769, 28);
-            this.TXB_guiden.TabIndex = 4;
             // 
             // LB_den
             // 
@@ -201,17 +190,28 @@
             this.LB_tieude.TabIndex = 9;
             this.LB_tieude.Text = "Tiêu đề";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(122, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(216, 22);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "note: ct,bophan,dropdown";
+            // 
             // SoanThongBao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(916, 683);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.LB_tieude);
             this.Controls.Add(this.LB_soantin);
             this.Controls.Add(this.TXB_tieude);
             this.Controls.Add(this.LB_den);
-            this.Controls.Add(this.TXB_guiden);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -220,6 +220,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SoanThongBao";
             this.Text = "SoanThongBao";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SoanThongBao_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SoanThongBao_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.SoanThongBao_MouseUp);
             this.PN_hienthi.ResumeLayout(false);
             this.PN_hienthi.PerformLayout();
             this.ResumeLayout(false);
@@ -233,7 +236,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox TXB_guiden;
         private System.Windows.Forms.Label LB_den;
         private System.Windows.Forms.Panel PN_hienthi;
         private System.Windows.Forms.TextBox TXB_tieude;
@@ -243,5 +245,6 @@
         private System.Windows.Forms.Button BTN_gui;
         private System.Windows.Forms.Button BTN_themtep;
         private System.Windows.Forms.Button BTN_thoat;
+        private System.Windows.Forms.Label label1;
     }
 }
