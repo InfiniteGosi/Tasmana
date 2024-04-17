@@ -17,7 +17,7 @@ namespace DangNhap
     {
         private Employee employee;
         private Group group;
-        private Division division;
+        private Division division = null;
         private readonly string employeeId;
         public ThongTinNhanVien(string employeeId)
         {
@@ -30,11 +30,14 @@ namespace DangNhap
         }
         private void GetGroupByEmployeeId()
         {
-            group = EmployeeBLL.Instance.GetGroupByEmployeeId(employee.MaNhanVien);
+            group = EmployeeBLL.Instance.GetGroupByEmployeeId(employeeId);
         }
         private void GetDivisionByGroupId()
         {
-            division = GroupBLL.Instance.GetDivsionByGroupId(group.MaNhom);
+            if (group != null)
+            {
+                division = GroupBLL.Instance.GetDivsionByGroupId(group.MaNhom);
+            }
         }
         private void DisplayEmployeeeInfo()
         {
@@ -59,8 +62,22 @@ namespace DangNhap
             {
                 CHB_tunglanv.Checked = true;
             }
-            TXB_phongban.Text = $"{division.MaBoPhan} - {division.TenBoPhan}";
-            TXB_nhom.Text = group.MaNhom;
+            if (division != null)
+            {
+                TXB_phongban.Text = $"{division.MaBoPhan} - {division.TenBoPhan}";
+            }
+            else
+            {
+                TXB_phongban.Text = "";
+            }
+            if (group != null)
+            {
+                TXB_nhom.Text = group.MaNhom;
+            }
+            else
+            {
+                TXB_nhom.Text = "";
+            }
             TXB_ngayhetHDLD.Text = employee.NgayHetHDLD.ToString("dd/MM/yyyy");
             TXB_ngaykyHDLD.Text = employee.NgayKyHDLD.ToString("dd/MM/yyyy");
             TXB_tinhtrangHDLD.Text = employee.TinhTrangHDLD;

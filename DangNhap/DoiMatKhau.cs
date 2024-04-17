@@ -14,7 +14,7 @@ namespace DangNhap
 {
     public partial class DoiMatKhau : Form
     {
-        private Account currentAccount;
+        private readonly Account currentAccount;
         public DoiMatKhau(Account currentAccount)
         {
             this.currentAccount = currentAccount;

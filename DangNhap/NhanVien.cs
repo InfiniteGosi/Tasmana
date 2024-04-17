@@ -83,6 +83,7 @@ namespace DangNhap
                 e.DiaChiThuongTru,
                 e.DiaChiTamTru,
                 e.TinhTrangHDLD,
+                e.MaBoPhan,
                 e.MaNhom,
                 e.TaiKhoanNguoiDung
             }).ToList();
@@ -105,12 +106,12 @@ namespace DangNhap
             GGC_danhsachnv.TableDescriptor.Columns[15].HeaderText = "Địa chỉ thường trú";
             GGC_danhsachnv.TableDescriptor.Columns[16].HeaderText = "Địa chỉ tạm trú";
             GGC_danhsachnv.TableDescriptor.Columns[17].HeaderText = "Tình trạng hợp đồng lao động";
-            GGC_danhsachnv.TableDescriptor.Columns[18].HeaderText = "Mã Nhóm";
-            GGC_danhsachnv.TableDescriptor.Columns[19].HeaderText = "Mã tài khoản nhân viên";
+            GGC_danhsachnv.TableDescriptor.Columns[18].HeaderText = "Mã bộ phận";
+            GGC_danhsachnv.TableDescriptor.Columns[19].HeaderText = "Mã nhóm";
+            GGC_danhsachnv.TableDescriptor.Columns[20].HeaderText = "Mã tài khoản nhân viên";
             GGC_danhsachnv.TableDescriptor.VisibleColumns.Remove("TaiKhoanNguoiDung_Password");
             GGC_danhsachnv.TableDescriptor.VisibleColumns.Remove("TaiKhoanNguoiDung_EmployeeId");
-            GGC_danhsachnv.TableDescriptor.Columns[22].HeaderText = "Phân quyền";
-            GGC_danhsachnv.TableDescriptor.Columns[23].HeaderText = "Tài khoản đã bị vô hiệu hóa";
+            GGC_danhsachnv.TableDescriptor.VisibleColumns.Remove("TaiKhoanNguoiDung_IsDisabled");
 
             GGC_danhsachnv.TopLevelGroupOptions.ShowFilterBar = true;
             GGC_danhsachnv.ActivateCurrentCellBehavior = GridCellActivateAction.None;

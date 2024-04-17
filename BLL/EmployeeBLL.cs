@@ -53,6 +53,7 @@ namespace BLL
                 string diaChiThuongTru = dt.Rows[i]["dChiThuongTru"].ToString();
                 string diaChiaTamTru = dt.Rows[i]["dChiTamTru"].ToString();
                 string tinhTrangHDLD = dt.Rows[i]["tinhTrangHDLD"].ToString();
+                string maBoPhan = dt.Rows[i]["maBoPhan"].ToString();
                 string maNhom = dt.Rows[i]["maNhom"].ToString();
 
                 DataTable dt1 = AccountDAO.Instance.GetAccountByEmployeeId(maNhanVien);
@@ -62,7 +63,7 @@ namespace BLL
                 Account account = new Account(maNguoiDung, matKhau, maNhanVien, disable);
                 Employee employee = new Employee(maNhanVien, email, ho, ten, soDienThoai, ngaySinh, gioiTinh, queQuan, maDinhDanh,
                                                  loaiNhanVien, tinhTrangHonNhan, maSoBHXH, daTungLamNV, ngayKyHDLD, ngayHetHDLD,
-                                                 diaChiThuongTru, diaChiaTamTru, tinhTrangHDLD, maNhom, account);
+                                                 diaChiThuongTru, diaChiaTamTru, tinhTrangHDLD, maBoPhan, maNhom, account);
                 employees.Add(employee);
             }
             return employees;
@@ -87,6 +88,7 @@ namespace BLL
             string diaChiThuongTru = dt.Rows[0]["dChiThuongTru"].ToString();
             string diaChiaTamTru = dt.Rows[0]["dChiTamTru"].ToString();
             string tinhTrangHDLD = dt.Rows[0]["tinhTrangHDLD"].ToString();
+            string maBoPhan = dt.Rows[0]["maBoPhan"].ToString();
             string maNhom = dt.Rows[0]["maNhom"].ToString();
 
             DataTable dt1 = AccountDAO.Instance.GetAccountByEmployeeId(maNhanVien);
@@ -95,18 +97,28 @@ namespace BLL
             bool disable = (bool)dt1.Rows[0]["disable"];
             Account account = new Account(maNguoiDung, matKhau, maNhanVien, disable);
             Employee employee = new Employee(maNhanVien, email, ho, ten, soDienThoai, ngaySinh, gioiTinh, queQuan, maDinhDanh,
-                                             loaiNhanVien, tinhTrangHonNhan, maSoBHXH, daTungLamNV, ngayKyHDLD, ngayHetHDLD,
-                                             diaChiThuongTru, diaChiaTamTru, tinhTrangHDLD, maNhom, account);
+                                                loaiNhanVien, tinhTrangHonNhan, maSoBHXH, daTungLamNV, ngayKyHDLD, ngayHetHDLD,
+                                                diaChiThuongTru, diaChiaTamTru, tinhTrangHDLD, maBoPhan, maNhom, account);
             return employee;
         }
         public Group GetGroupByEmployeeId(string maNhanVien)
         {
             DataTable dt = EmployeeDAO.Instance.GetGroupByEmployeeId(maNhanVien);
-            string maNhom = dt.Rows[0]["maNhom"].ToString();
-            string maTruongNhom = dt.Rows[0]["maTruongNhom"].ToString();
-            string maBoPhan = dt.Rows[0]["maBoPhan"].ToString();
-            Group group = new Group(maNhom, maTruongNhom, maBoPhan);
-            return group;
+
+            // Check if the DataTable is not empty
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                string maNhom = dt.Rows[0]["maNhom"].ToString();
+                string maTruongNhom = dt.Rows[0]["maTruongNhom"].ToString();
+                string maBoPhan = dt.Rows[0]["maBoPhan"].ToString();
+                Group group = new Group(maNhom, maTruongNhom, maBoPhan);
+                return group;
+            }
+            else
+            {
+                // Return null when no records are found
+                return null;
+            }
         }
         public string UpdateEmployee(Dictionary<string, object> parameters)
         {
@@ -144,6 +156,7 @@ namespace BLL
                 string diaChiThuongTru = dt.Rows[i]["dChiThuongTru"].ToString();
                 string diaChiaTamTru = dt.Rows[i]["dChiTamTru"].ToString();
                 string tinhTrangHDLD = dt.Rows[i]["tinhTrangHDLD"].ToString();
+                string maBoPhan = dt.Rows[i]["maBoPhan"].ToString();
 
                 DataTable dt1 = AccountDAO.Instance.GetAccountByEmployeeId(maNhanVien);
                 string maNguoiDung = dt1.Rows[0]["maNguoiDung"].ToString();
@@ -151,8 +164,8 @@ namespace BLL
                 bool disable = (bool)dt1.Rows[0]["disable"];
                 Account account = new Account(maNguoiDung, matKhau, maNhanVien, disable);
                 Employee employee = new Employee(maNhanVien, email, ho, ten, soDienThoai, ngaySinh, gioiTinh, queQuan, maDinhDanh,
-                                                 loaiNhanVien, tinhTrangHonNhan, maSoBHXH, daTungLamNV, ngayKyHDLD, ngayHetHDLD,
-                                                 diaChiThuongTru, diaChiaTamTru, tinhTrangHDLD, maNhom, account);
+                                                loaiNhanVien, tinhTrangHonNhan, maSoBHXH, daTungLamNV, ngayKyHDLD, ngayHetHDLD,
+                                                diaChiThuongTru, diaChiaTamTru, tinhTrangHDLD, maBoPhan, maNhom, account);
                 employees.Add(employee);
             }
             return employees;

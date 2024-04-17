@@ -82,7 +82,7 @@ CREATE TABLE NhanVien
   dChiThuongTru NVARCHAR(100) NOT NULL,
   dChiTamTru NVARCHAR(100),
   tinhTrangHDLD NVARCHAR(100) NOT NULL,
-  maBoPhan VARCHAR(10) NOT NULL,
+  maBoPhan VARCHAR(10),
   maNhom VARCHAR(10),
   PRIMARY KEY (maNhanVien),
   FOREIGN KEY (maNhom) REFERENCES nhom(maNhom),
@@ -266,7 +266,7 @@ SELECT * FROM PhongBan
 SELECT * FROM Nhom
 
 -- Insert thông tin tài khoản
-INSERT INTO NhanVien VALUES('GD-001', 'jd@gmail.com', 'Ho', 'Khang', '111111111', '1/1/2002', 1, 'TP.HCM', '123456', 'Full-time', N'Độc thân', '1111111', 1, '2024-01-01', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú GD-001', N'Tốt', 'VS', 'VSN01')
+INSERT INTO NhanVien VALUES('GD-001', 'jd@gmail.com', 'Ho', 'Khang', '111111111', '1/1/2002', 1, 'TP.HCM', '123456', 'Full-time', N'Độc thân', '1111111', 1, '2024-01-01', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú GD-001', N'Tốt', NULL, NULL)
 INSERT INTO NhanVien VALUES('VS-002', 'VS002@gmail.com', 'Vu', 'Quang', '1321312', '1/2/2004', 1, 'TP.HCM', '1234576', 'Part-time', N'Độc thân', '1111211', 1, '2024-01-01', '2025-12-31', 'TP.HCM', 'Chua co', N'Tốt', 'VS','VSN02')
 INSERT INTO NhanVien VALUES('VS-003', 'email_nv001@example.com', 'Tran', 'An', '0123456669', '2000-01-01', 0, N'Hà Nội', '072947182653', 'Full-time', N'Độc thân', '01231230213', 1, '2024-01-01', '2025-12-31', N'Địa chỉ thường trú NV001', 'Chua co', N'Tốt', 'VS','VSN01')
 -- Insert thông tin NV
@@ -276,6 +276,8 @@ INSERT INTO TaiKhoan VALUES('VS-003.AN.0123456669', '123', 'VS-003', 0)
 SELECT * FROM TaiKhoan
 SELECT * FROM NhanVien
 
+
+INSERT INTO NhanVien VALUES('VS-112', 'jd@gmail.com', 'Ho', 'Khang', '2222', '1/1/2002', 1, 'TP.HCM', '11111', 'Full-time', N'Độc thân', '2222222', 1, '2024-01-01', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú GD-001', N'Tốt', NULL, NULL)
 
 -- Insert Dữ liệu thử của căn hộ
 INSERT INTO CanHo VALUES ('WPHA', 100.5, 5, 3, 2, NULL, 200, 2, '2024-01-01', N'Còn trống', NULL);
@@ -313,6 +315,7 @@ create procedure [dbo].[SP_ThemNhanVien]
 	@dChiThuongTru nvarchar(100),
 	@dChiTamTru nvarchar(100),
 	@tinhTrangHDLD nvarchar(100),
+	@maBoPhan varchar(10),
 	@maNhom varchar(10)
 as
 begin
@@ -336,15 +339,35 @@ begin
         @dChiThuongTru,
         @dChiTamTru,
         @tinhTrangHDLD,
+		@maBoPhan,
         @maNhom
     )
 end
 go
 
-SELECT * FROM CanHo
-SELECT * FROM CongViec
-SELECT * FROM Congviec_Nhanvien
+exec SP_ThemNhanVien
+	@maNhanVien = 'VS-111',
+	@email = 'VS-111',
+	@ho = 'VS-111',
+	@ten = 'VS-111',
+	@SDT = 'VS-111',
+	@ngaySinh = '1-1-2024',
+	@gioiTinh =1,
+	@queQuan = 'VS-111',
+	@maDinhDanh = 'VS-111',
+	@loaiNhanVien = 'VS-111',
+	@tinhTrangHonNhan = 'VS-111',
+	@maSoBHXH = 'VS-111',
+	@daTungLamNV =1,
+	@ngayKyHDLD = '1-1-2024',
+	@ngayHetHDLD = '1-1-2024',
+	@dChiThuongTru = '1-1-2024',
+	@dChiTamTru = '1-1-2024',
+	@tinhTrangHDLD = '1-1-2024',
+	@maBoPhan = NULL,
+	@maNhom = NULL
 go
+
 
 -- Procedure lấy thông tin nhóm theo mã nhân viên
 create procedure [dbo].[SP_LayNhomTheoMaNhanVien]
@@ -357,6 +380,7 @@ begin
 	where nv.maNhanVien = @maNhanVien
 end
 go
+
 
 -- Procedure lấy thông tin phòng ban theo mã phòng ban
 create procedure [dbo].[SP_LayPhongBanTheoMaNhom]
@@ -390,6 +414,7 @@ create procedure [dbo].[SP_CapNhatNhanVien]
     @dChiThuongTru nvarchar(100),
     @dChiTamTru nvarchar(100),
     @tinhTrangHDLD nvarchar(100),
+	@maBoPhan varchar(10),
     @maNhom varchar(10)
 as
 begin
@@ -411,6 +436,7 @@ begin
         dChiThuongTru = @dChiThuongTru,
         dChiTamTru = @dChiTamTru,
         tinhTrangHDLD = @tinhTrangHDLD,
+		maBoPhan = @maBoPhan,
         maNhom = @maNhom
     where maNhanVien = @maNhanVien;
 end

@@ -212,8 +212,10 @@ namespace DAO
                         // Add output parameters
                         foreach (var param in outputParameters)
                         {
-                            SqlParameter outputParam = new SqlParameter(param.Key, param.Value);
-                            outputParam.Direction = ParameterDirection.Output;
+                            SqlParameter outputParam = new SqlParameter(param.Key, param.Value)
+                            {
+                                Direction = ParameterDirection.Output
+                            };
 
                             // Set the size for string parameters
                             if (param.Value == SqlDbType.VarChar || param.Value == SqlDbType.NVarChar)
@@ -244,6 +246,67 @@ namespace DAO
             }
 
             return outputValues;
+        }
+
+        public int ExecuteStoredProcedureWithNullValue(string storedprocedure, Dictionary<string, object> parameters)
+        {
+            int data = 0;
+            using (SqlConnection conn = new SqlConnection(connectionSTR))
+            {
+                try
+                {
+                    conn.Open();
+
+                    using (SqlCommand cmd = new SqlCommand(storedprocedure, conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        foreach (var pair in parameters)
+                        {
+                            Console.WriteLine($"Parameter: {pair.Key}, Value: {pair.Value?.ToString() ?? "null"}");
+                            // Get the value of each object
+                            object value = pair.Value;
+
+                            // Handle null values
+                            if (value == null)
+                            {
+                                cmd.Parameters.AddWithValue(pair.Key, DBNull.Value);
+                            }
+                            else
+                            {
+                                SqlParameter p;
+                                if (value is int intValue)
+                                    p = new SqlParameter(pair.Key, SqlDbType.Int) { Value = intValue };
+                                else if (value is string stringValue)
+                                    p = new SqlParameter(pair.Key, SqlDbType.NVarChar) { Value = stringValue };
+                                else if (value is double doubleValue)
+                                    p = new SqlParameter(pair.Key, SqlDbType.Float) { Value = doubleValue };
+                                else if (value is bool boolValue)
+                                    p = new SqlParameter(pair.Key, SqlDbType.Bit) { Value = boolValue };
+                                else if (value is byte[] byteValue)
+                                    p = new SqlParameter(pair.Key, SqlDbType.VarBinary) { Value = byteValue };
+                                else if (value is DateTime dateTimeValue)
+                                {
+                                    if (dateTimeValue.Year < 1900 || dateTimeValue.Year > 2100)
+                                        throw new ArgumentException($"DateTime parameter '{pair.Key}' is out of range.");
+                                    p = new SqlParameter(pair.Key, SqlDbType.Date) { Value = dateTimeValue };
+                                }
+                                else
+                                    throw new ArgumentException($"Unsupported data type for parameter: {pair.Key}");
+
+                                cmd.Parameters.Add(p);
+                            }
+                        }
+
+                        data = cmd.ExecuteNonQuery();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    Console.Write(ex.ToString());
+                }
+            }
+            return data;
         }
 
 

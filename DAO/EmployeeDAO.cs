@@ -20,7 +20,7 @@ namespace DAO
 
         public bool AddEmployee(Dictionary<string, object> parameters)
         {
-            int result = DataProvider.Instance.ExecuteStoredProcedure("SP_ThemNhanVien", parameters);
+            int result = DataProvider.Instance.ExecuteStoredProcedureWithNullValue("SP_ThemNhanVien", parameters);
             return result > 0;
         }
         public DataTable GetAllEmployee()
@@ -39,6 +39,7 @@ namespace DAO
             string query = "exec SP_LayNhomTheoMaNhanVien @maNhanVien";
             return DataProvider.Instance.ExecuteQuery(query, new object[] { maNhanVien });
         }
+
         public bool UpdateEmployee(Dictionary<string, object> parameters)
         {
             int result = DataProvider.Instance.ExecuteStoredProcedure("SP_CapNhatNhanVien", parameters);

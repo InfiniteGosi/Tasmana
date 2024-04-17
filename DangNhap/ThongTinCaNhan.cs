@@ -22,7 +22,7 @@ namespace DangNhap
         private List<DTO.Group> groups = new List<DTO.Group>();
         private readonly Employee employee = null;
         private DTO.Group group;
-        private Division division;
+        private Division division = null;
         public ThongTinCaNhan()
         {
             InitializeComponent();
@@ -40,12 +40,23 @@ namespace DangNhap
             this.parent = parent;
             this.FormClosing += new FormClosingEventHandler(this.ThongTinCaNhan_FormClosing);
         }
+        private void GetGroupByEmployeeId()
+        {
+            group = EmployeeBLL.Instance.GetGroupByEmployeeId(employee.MaNhanVien);
+        }
+        private void GetDivisionByGroupId()
+        {
+            if (group != null)
+            {
+                division = GroupBLL.Instance.GetDivsionByGroupId(group.MaNhom);
+            }
+        }
 
         // Hàm khởi tạo danh sách giá trị truyền vào SP
         private object[] values_nv;
         private void InitializeValues_NV()
         {
-            values_nv = new object[] 
+            values_nv = new object[]
             {
                 TXB_manv.Text,
                 TXB_email.Text,
@@ -65,7 +76,8 @@ namespace DangNhap
                 TXB_thuongtru.Text,
                 TXB_tamtru.Text,
                 TXB_tinhtrangHDLD.Text,
-                CBB_nhom.SelectedItem.ToString()
+                CBB_phongban.SelectedItem,
+                CBB_nhom.SelectedItem,
             };
         }
 
@@ -92,7 +104,8 @@ namespace DangNhap
                 { "@dChiThuongTru", values_nv[15] },
                 { "@dChiTamTru", values_nv[16] },
                 { "@tinhTrangHDLD", values_nv[17] },
-                { "@maNhom", values_nv[18] }
+                { "@maBoPhan", values_nv[18] },
+                { "@maNhom", values_nv[19] }
             };
             return dict;
         }
@@ -216,16 +229,16 @@ namespace DangNhap
                 MessageBox.Show("Vui lòng chọn loại nhân viên");
                 return;
             }
-            if (CBB_phongban.SelectedIndex == -1)
-            {
-                MessageBox.Show("Vui lòng chọn phòng ban");
-                return;
-            }
-            if (CBB_phongban.SelectedIndex == -1)
-            {
-                MessageBox.Show("Vui lòng chọn mã nhóm");
-                return;
-            }
+            //if (CBB_phongban.SelectedIndex == -1)
+            //{
+            //    MessageBox.Show("Vui lòng chọn phòng ban");
+            //    return;
+            //}
+            //if (CBB_phongban.SelectedIndex == -1)
+            //{
+            //    MessageBox.Show("Vui lòng chọn mã nhóm");
+            //    return;
+            //}
             if (string.IsNullOrEmpty(TXB_tinhtrangHDLD.Text))
             {
                 MessageBox.Show("Vui lòng nhập tình trạng hợp đồng lao động");
@@ -308,14 +321,7 @@ namespace DangNhap
                 DisplayGroupToCBB_nhom();
             }
         }
-        private void GetGroupByEmployeeId()
-        {
-            group = EmployeeBLL.Instance.GetGroupByEmployeeId(employee.MaNhanVien);
-        }
-        private void GetDivisionByGroupId()
-        {
-            division = GroupBLL.Instance.GetDivsionByGroupId(group.MaNhom);
-        }
+        
         // Hiện loại nhân viên từ mảng loaiNV vào CBB_loainv
         private readonly string[] loaiNV = { "Intern / Trainne", "Part-time", "Full-time" };
         // Hiện thông tin chỉnh sửa nhân viên và tài khoản của nhân viên này lên các input tương ứng
@@ -342,9 +348,23 @@ namespace DangNhap
             {
                 CHB_tunglanv.Checked = true;
             }
-            CBB_phongban.SelectedIndex = CBB_phongban.Items.IndexOf(division.MaBoPhan + "-" + division.TenBoPhan);
+            if (division != null)
+            {
+                CBB_phongban.SelectedIndex = CBB_phongban.Items.IndexOf(division.MaBoPhan + "-" + division.TenBoPhan);
+            }
+            else
+            {
+                CBB_phongban.SelectedIndex = -1;
+            }
             CBB_nhom.Enabled = true;
-            CBB_nhom.SelectedIndex = CBB_nhom.Items.IndexOf(group.MaNhom);
+            if (group != null)
+            {
+                CBB_nhom.SelectedIndex = CBB_nhom.Items.IndexOf(group.MaNhom);
+            }
+            else
+            {
+                CBB_nhom.SelectedIndex = -1;
+            }
             DTP_ngayhetHDLD.Value = employee.NgayHetHDLD;
             DTP_ngaykyHDLD.Value = employee.NgayKyHDLD;
             TXB_tinhtrangHDLD.Text = employee.TinhTrangHDLD;
