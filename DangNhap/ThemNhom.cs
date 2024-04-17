@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,5 +46,23 @@ namespace DangNhap
         {
             mov = 0;
         }
+        public List<Division> GetPhongBan()
+        {
+            List<Division> listMaPB = new List<Division>();
+            listMaPB = DivisionBLL.Instance.GetDivisionList();
+            return listMaPB;
+        }
+        private void ReadPhongBan()
+        {
+            List<Division> listPB = new List<Division>();
+            CBB_phongban.Enabled = true;
+            CBB_phongban.Items.Clear();
+            listPB = GetPhongBan();
+            for (int i = 0; i < listPB.Count; i++)
+            {
+                CBB_phongban.Items.Add(listPB[i].MaBoPhan + "-" + listPB[i].TenBoPhan);
+            }
+        }
+
     }
 }
