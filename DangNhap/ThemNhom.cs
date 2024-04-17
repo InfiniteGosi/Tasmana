@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace DangNhap
 {
-    public partial class SoanThongBao : Form
+    public partial class ThemNhom : Form
     {
-        public SoanThongBao()
+        public ThemNhom()
         {
             InitializeComponent();
         }
 
-        private void BTN_thoat_Click(object sender, EventArgs e)
+        private void BTN_huy_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -25,14 +25,14 @@ namespace DangNhap
         int mov;
         int movX;
         int movY;
-        private void SoanThongBao_MouseDown(object sender, MouseEventArgs e)
+        private void PN_nen_MouseDown(object sender, MouseEventArgs e)
         {
             mov = 1;
             movX = e.X;
             movY = e.Y;
         }
 
-        private void SoanThongBao_MouseMove(object sender, MouseEventArgs e)
+        private void PN_nen_MouseMove(object sender, MouseEventArgs e)
         {
             if (mov == 1)
             {
@@ -40,7 +40,7 @@ namespace DangNhap
             }
         }
 
-        private void SoanThongBao_MouseUp(object sender, MouseEventArgs e)
+        private void PN_nen_MouseUp(object sender, MouseEventArgs e)
         {
             mov = 0;
         }

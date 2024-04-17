@@ -153,5 +153,11 @@ namespace DangNhap
                 ttcn.ShowDialog();
             }
         }
+
+        private void BTN_themnhom_Click(object sender, EventArgs e)
+        {
+            ThemNhom tn = new ThemNhom();
+            tn.Show();
+        }
     }
 }

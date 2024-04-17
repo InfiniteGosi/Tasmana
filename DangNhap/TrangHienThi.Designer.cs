@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrangHienThi));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BTN_nhanvien = new Guna.UI.WinForms.GunaButton();
             this.BTN_congviec = new Guna.UI.WinForms.GunaButton();
@@ -49,9 +52,6 @@
             this.NTFIcon_ThongBaoCV = new System.Windows.Forms.NotifyIcon(this.components);
             this.PN_main = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -81,6 +81,33 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(310, 685);
             this.panel1.TabIndex = 25;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(1, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(309, 1);
+            this.panel5.TabIndex = 35;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(1, 684);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(309, 1);
+            this.panel4.TabIndex = 35;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1, 685);
+            this.panel3.TabIndex = 35;
             // 
             // panel2
             // 
@@ -435,38 +462,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(313, 213);
+            this.label1.Location = new System.Drawing.Point(273, 243);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(642, 136);
             this.label1.TabIndex = 34;
             this.label1.Text = "TASMANA";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1, 685);
-            this.panel3.TabIndex = 35;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(1, 684);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(309, 1);
-            this.panel4.TabIndex = 35;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(1, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(309, 1);
-            this.panel5.TabIndex = 35;
             // 
             // panel6
             // 

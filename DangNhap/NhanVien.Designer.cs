@@ -31,15 +31,11 @@ namespace DangNhap
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NhanVien));
             this.BTN_themnhanvien = new Guna.UI.WinForms.GunaGradientButton();
-            this.TXB_sotrang = new System.Windows.Forms.TextBox();
-            this.BTN_trangtruoc = new System.Windows.Forms.Button();
-            this.BTN_trangsau = new System.Windows.Forms.Button();
+            this.GGC_danhsachnv = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
+            this.BTN_themnhom = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_in = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_PDF = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_excel = new Guna.UI.WinForms.GunaGradientButton();
-            this.GGC_danhsachnv = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
-            this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.GGC_danhsachnv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,68 +46,79 @@ namespace DangNhap
             this.BTN_themnhanvien.AnimationHoverSpeed = 1F;
             this.BTN_themnhanvien.AnimationSpeed = 0.03F;
             this.BTN_themnhanvien.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_themnhanvien.BaseColor1 = System.Drawing.Color.DarkGreen;
-            this.BTN_themnhanvien.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTN_themnhanvien.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(156)))), ((int)(((byte)(46)))));
+            this.BTN_themnhanvien.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(172)))), ((int)(((byte)(54)))));
             this.BTN_themnhanvien.BorderColor = System.Drawing.Color.White;
-            this.BTN_themnhanvien.BorderSize = 1;
             this.BTN_themnhanvien.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_themnhanvien.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_themnhanvien.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_themnhanvien.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_themnhanvien.ForeColor = System.Drawing.Color.White;
-            this.BTN_themnhanvien.Image = ((System.Drawing.Image)(resources.GetObject("BTN_themnhanvien.Image")));
+            this.BTN_themnhanvien.Image = null;
             this.BTN_themnhanvien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_themnhanvien.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_themnhanvien.Location = new System.Drawing.Point(1273, 57);
+            this.BTN_themnhanvien.Location = new System.Drawing.Point(1147, 45);
             this.BTN_themnhanvien.Name = "BTN_themnhanvien";
-            this.BTN_themnhanvien.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.BTN_themnhanvien.OnHoverBaseColor2 = System.Drawing.Color.DarkGreen;
+            this.BTN_themnhanvien.OnHoverBaseColor1 = System.Drawing.Color.DarkGreen;
+            this.BTN_themnhanvien.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(156)))), ((int)(((byte)(46)))));
             this.BTN_themnhanvien.OnHoverBorderColor = System.Drawing.Color.White;
-            this.BTN_themnhanvien.OnHoverForeColor = System.Drawing.Color.Black;
+            this.BTN_themnhanvien.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_themnhanvien.OnHoverImage = null;
             this.BTN_themnhanvien.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_themnhanvien.Size = new System.Drawing.Size(40, 40);
+            this.BTN_themnhanvien.Radius = 5;
+            this.BTN_themnhanvien.Size = new System.Drawing.Size(129, 35);
             this.BTN_themnhanvien.TabIndex = 94;
+            this.BTN_themnhanvien.Text = "Thêm nhân viên";
+            this.BTN_themnhanvien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_themnhanvien.Click += new System.EventHandler(this.BTN_themnhanvien_Click);
             // 
-            // TXB_sotrang
+            // GGC_danhsachnv
             // 
-            this.TXB_sotrang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.TXB_sotrang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_sotrang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TXB_sotrang.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_sotrang.ForeColor = System.Drawing.Color.White;
-            this.TXB_sotrang.Location = new System.Drawing.Point(1246, 527);
-            this.TXB_sotrang.Multiline = true;
-            this.TXB_sotrang.Name = "TXB_sotrang";
-            this.TXB_sotrang.Size = new System.Drawing.Size(30, 30);
-            this.TXB_sotrang.TabIndex = 104;
-            this.TXB_sotrang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.GGC_danhsachnv.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.GGC_danhsachnv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GGC_danhsachnv.BackColor = System.Drawing.SystemColors.Window;
+            this.GGC_danhsachnv.Location = new System.Drawing.Point(65, 100);
+            this.GGC_danhsachnv.Name = "GGC_danhsachnv";
+            this.GGC_danhsachnv.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
+            this.GGC_danhsachnv.Size = new System.Drawing.Size(1211, 404);
+            this.GGC_danhsachnv.TabIndex = 112;
+            this.GGC_danhsachnv.Text = "gridGroupingControl1";
+            this.GGC_danhsachnv.UseRightToLeftCompatibleTextBox = true;
+            this.GGC_danhsachnv.VersionInfo = "25.1462.39";
+            this.GGC_danhsachnv.TableControlCellDoubleClick += new Syncfusion.Windows.Forms.Grid.Grouping.GridTableControlCellClickEventHandler(this.GGC_danhsachnv_TableControlCellDoubleClick);
             // 
-            // BTN_trangtruoc
+            // BTN_themnhom
             // 
-            this.BTN_trangtruoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_trangtruoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_trangtruoc.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_trangtruoc.ForeColor = System.Drawing.Color.White;
-            this.BTN_trangtruoc.Location = new System.Drawing.Point(1209, 527);
-            this.BTN_trangtruoc.Name = "BTN_trangtruoc";
-            this.BTN_trangtruoc.Size = new System.Drawing.Size(30, 30);
-            this.BTN_trangtruoc.TabIndex = 103;
-            this.BTN_trangtruoc.Text = "<";
-            this.BTN_trangtruoc.UseVisualStyleBackColor = true;
-            // 
-            // BTN_trangsau
-            // 
-            this.BTN_trangsau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_trangsau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_trangsau.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_trangsau.ForeColor = System.Drawing.Color.White;
-            this.BTN_trangsau.Location = new System.Drawing.Point(1283, 527);
-            this.BTN_trangsau.Name = "BTN_trangsau";
-            this.BTN_trangsau.Size = new System.Drawing.Size(30, 30);
-            this.BTN_trangsau.TabIndex = 102;
-            this.BTN_trangsau.Text = ">";
-            this.BTN_trangsau.UseVisualStyleBackColor = true;
+            this.BTN_themnhom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_themnhom.Animated = true;
+            this.BTN_themnhom.AnimationHoverSpeed = 0.5F;
+            this.BTN_themnhom.AnimationSpeed = 0.03F;
+            this.BTN_themnhom.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_themnhom.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.BTN_themnhom.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
+            this.BTN_themnhom.BorderColor = System.Drawing.Color.Black;
+            this.BTN_themnhom.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_themnhom.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_themnhom.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_themnhom.ForeColor = System.Drawing.Color.White;
+            this.BTN_themnhom.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.BTN_themnhom.Image = null;
+            this.BTN_themnhom.ImageSize = new System.Drawing.Size(20, 20);
+            this.BTN_themnhom.Location = new System.Drawing.Point(1001, 45);
+            this.BTN_themnhom.Name = "BTN_themnhom";
+            this.BTN_themnhom.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
+            this.BTN_themnhom.OnHoverBaseColor2 = System.Drawing.Color.Navy;
+            this.BTN_themnhom.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_themnhom.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_themnhom.OnHoverImage = null;
+            this.BTN_themnhom.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_themnhom.Radius = 5;
+            this.BTN_themnhom.Size = new System.Drawing.Size(129, 35);
+            this.BTN_themnhom.TabIndex = 169;
+            this.BTN_themnhom.Text = "Tạo nhóm mới";
+            this.BTN_themnhom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_themnhom.Click += new System.EventHandler(this.BTN_themnhom_Click);
             // 
             // BTN_in
             // 
@@ -127,19 +134,19 @@ namespace DangNhap
             this.BTN_in.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_in.ForeColor = System.Drawing.Color.White;
             this.BTN_in.Image = ((System.Drawing.Image)(resources.GetObject("BTN_in.Image")));
-            this.BTN_in.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_in.Location = new System.Drawing.Point(291, 527);
+            this.BTN_in.ImageSize = new System.Drawing.Size(15, 15);
+            this.BTN_in.Location = new System.Drawing.Point(238, 690);
             this.BTN_in.Name = "BTN_in";
             this.BTN_in.OnHoverBaseColor1 = System.Drawing.Color.DimGray;
             this.BTN_in.OnHoverBaseColor2 = System.Drawing.Color.Silver;
-            this.BTN_in.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_in.OnHoverBorderColor = System.Drawing.Color.Black;
             this.BTN_in.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_in.OnHoverImage = null;
             this.BTN_in.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_in.Size = new System.Drawing.Size(89, 48);
-            this.BTN_in.TabIndex = 109;
+            this.BTN_in.Size = new System.Drawing.Size(102, 37);
+            this.BTN_in.TabIndex = 172;
             this.BTN_in.Text = "In";
-            this.BTN_in.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.BTN_in.TextOffsetX = 3;
             // 
             // BTN_PDF
             // 
@@ -155,19 +162,19 @@ namespace DangNhap
             this.BTN_PDF.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_PDF.ForeColor = System.Drawing.Color.White;
             this.BTN_PDF.Image = ((System.Drawing.Image)(resources.GetObject("BTN_PDF.Image")));
-            this.BTN_PDF.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_PDF.Location = new System.Drawing.Point(178, 527);
+            this.BTN_PDF.ImageSize = new System.Drawing.Size(15, 15);
+            this.BTN_PDF.Location = new System.Drawing.Point(130, 690);
             this.BTN_PDF.Name = "BTN_PDF";
             this.BTN_PDF.OnHoverBaseColor1 = System.Drawing.Color.Coral;
             this.BTN_PDF.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(131)))), ((int)(((byte)(18)))));
-            this.BTN_PDF.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_PDF.OnHoverBorderColor = System.Drawing.Color.Black;
             this.BTN_PDF.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_PDF.OnHoverImage = null;
             this.BTN_PDF.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_PDF.Size = new System.Drawing.Size(107, 48);
-            this.BTN_PDF.TabIndex = 108;
+            this.BTN_PDF.Size = new System.Drawing.Size(102, 37);
+            this.BTN_PDF.TabIndex = 171;
             this.BTN_PDF.Text = "PDF";
-            this.BTN_PDF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.BTN_PDF.TextOffsetX = 3;
             // 
             // BTN_excel
             // 
@@ -183,109 +190,47 @@ namespace DangNhap
             this.BTN_excel.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_excel.ForeColor = System.Drawing.Color.White;
             this.BTN_excel.Image = ((System.Drawing.Image)(resources.GetObject("BTN_excel.Image")));
-            this.BTN_excel.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_excel.Location = new System.Drawing.Point(65, 527);
+            this.BTN_excel.ImageSize = new System.Drawing.Size(15, 15);
+            this.BTN_excel.Location = new System.Drawing.Point(22, 690);
             this.BTN_excel.Name = "BTN_excel";
             this.BTN_excel.OnHoverBaseColor1 = System.Drawing.Color.Green;
             this.BTN_excel.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(95)))), ((int)(((byte)(45)))));
-            this.BTN_excel.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_excel.OnHoverBorderColor = System.Drawing.Color.Black;
             this.BTN_excel.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_excel.OnHoverImage = null;
             this.BTN_excel.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_excel.Size = new System.Drawing.Size(107, 48);
-            this.BTN_excel.TabIndex = 107;
+            this.BTN_excel.Size = new System.Drawing.Size(102, 37);
+            this.BTN_excel.TabIndex = 170;
             this.BTN_excel.Text = "Excel";
-            this.BTN_excel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // GGC_danhsachnv
-            // 
-            this.GGC_danhsachnv.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.GGC_danhsachnv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.GGC_danhsachnv.BackColor = System.Drawing.SystemColors.Window;
-            this.GGC_danhsachnv.Location = new System.Drawing.Point(28, 55);
-            this.GGC_danhsachnv.Name = "GGC_danhsachnv";
-            this.GGC_danhsachnv.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
-            this.GGC_danhsachnv.Size = new System.Drawing.Size(1248, 404);
-            this.GGC_danhsachnv.TabIndex = 112;
-            this.GGC_danhsachnv.Text = "gridGroupingControl1";
-            this.GGC_danhsachnv.UseRightToLeftCompatibleTextBox = true;
-            this.GGC_danhsachnv.VersionInfo = "25.1462.39";
-            this.GGC_danhsachnv.TableControlCellDoubleClick += new Syncfusion.Windows.Forms.Grid.Grouping.GridTableControlCellClickEventHandler(this.GGC_danhsachnv_TableControlCellDoubleClick);
-            // 
-            // gunaGradientButton1
-            // 
-            this.gunaGradientButton1.Animated = true;
-            this.gunaGradientButton1.AnimationHoverSpeed = 1F;
-            this.gunaGradientButton1.AnimationSpeed = 0.03F;
-            this.gunaGradientButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton1.BaseColor1 = System.Drawing.Color.White;
-            this.gunaGradientButton1.BaseColor2 = System.Drawing.Color.Silver;
-            this.gunaGradientButton1.BorderColor = System.Drawing.Color.DarkGray;
-            this.gunaGradientButton1.BorderSize = 2;
-            this.gunaGradientButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaGradientButton1.ForeColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton1.Image")));
-            this.gunaGradientButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaGradientButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaGradientButton1.Location = new System.Drawing.Point(405, 22);
-            this.gunaGradientButton1.Name = "gunaGradientButton1";
-            this.gunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.Gray;
-            this.gunaGradientButton1.OnHoverBorderColor = System.Drawing.Color.White;
-            this.gunaGradientButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton1.OnHoverImage = null;
-            this.gunaGradientButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.Size = new System.Drawing.Size(46, 27);
-            this.gunaGradientButton1.TabIndex = 98;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(93, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(287, 22);
-            this.textBox1.TabIndex = 110;
+            this.BTN_excel.TextOffsetX = 3;
             // 
             // NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(1376, 782);
-            this.Controls.Add(this.GGC_danhsachnv);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.BTN_in);
             this.Controls.Add(this.BTN_PDF);
             this.Controls.Add(this.BTN_excel);
+            this.Controls.Add(this.BTN_themnhom);
+            this.Controls.Add(this.GGC_danhsachnv);
             this.Controls.Add(this.BTN_themnhanvien);
-            this.Controls.Add(this.TXB_sotrang);
-            this.Controls.Add(this.BTN_trangtruoc);
-            this.Controls.Add(this.BTN_trangsau);
-            this.Controls.Add(this.gunaGradientButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NhanVien";
             this.Text = "NhanVien";
             this.Load += new System.EventHandler(this.NhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GGC_danhsachnv)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private Guna.UI.WinForms.GunaGradientButton BTN_themnhanvien;
-        private System.Windows.Forms.TextBox TXB_sotrang;
-        private System.Windows.Forms.Button BTN_trangtruoc;
-        private System.Windows.Forms.Button BTN_trangsau;
+        private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl GGC_danhsachnv;
+        private Guna.UI.WinForms.GunaGradientButton BTN_themnhom;
         private Guna.UI.WinForms.GunaGradientButton BTN_in;
         private Guna.UI.WinForms.GunaGradientButton BTN_PDF;
         private Guna.UI.WinForms.GunaGradientButton BTN_excel;
-        private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl GGC_danhsachnv;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton1;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -50,7 +50,6 @@ namespace DangNhap
             this.pic_canho = new System.Windows.Forms.PictureBox();
             this.LB_hinhanhcanho = new System.Windows.Forms.Label();
             this.PN_hienthi = new System.Windows.Forms.Panel();
-            this.BTN_huy = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_ok = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_chung = new System.Windows.Forms.Button();
             this.BTN_lichsu = new System.Windows.Forms.Button();
@@ -276,7 +275,6 @@ namespace DangNhap
             // PN_hienthi
             // 
             this.PN_hienthi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
-            this.PN_hienthi.Controls.Add(this.BTN_huy);
             this.PN_hienthi.Controls.Add(this.BTN_ok);
             this.PN_hienthi.Controls.Add(this.TXB_chuho);
             this.PN_hienthi.Controls.Add(this.LB_hinhanhcanho);
@@ -300,34 +298,6 @@ namespace DangNhap
             this.PN_hienthi.Name = "PN_hienthi";
             this.PN_hienthi.Size = new System.Drawing.Size(1079, 604);
             this.PN_hienthi.TabIndex = 38;
-            // 
-            // BTN_huy
-            // 
-            this.BTN_huy.Animated = true;
-            this.BTN_huy.AnimationHoverSpeed = 0.5F;
-            this.BTN_huy.AnimationSpeed = 0.03F;
-            this.BTN_huy.BaseColor1 = System.Drawing.Color.Firebrick;
-            this.BTN_huy.BaseColor2 = System.Drawing.Color.Red;
-            this.BTN_huy.BorderColor = System.Drawing.Color.Black;
-            this.BTN_huy.BorderSize = 2;
-            this.BTN_huy.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.BTN_huy.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_huy.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_huy.ForeColor = System.Drawing.Color.Black;
-            this.BTN_huy.Image = null;
-            this.BTN_huy.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_huy.Location = new System.Drawing.Point(885, 550);
-            this.BTN_huy.Name = "BTN_huy";
-            this.BTN_huy.OnHoverBaseColor1 = System.Drawing.Color.Red;
-            this.BTN_huy.OnHoverBaseColor2 = System.Drawing.Color.DarkRed;
-            this.BTN_huy.OnHoverBorderColor = System.Drawing.Color.White;
-            this.BTN_huy.OnHoverForeColor = System.Drawing.Color.White;
-            this.BTN_huy.OnHoverImage = null;
-            this.BTN_huy.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_huy.Size = new System.Drawing.Size(89, 42);
-            this.BTN_huy.TabIndex = 171;
-            this.BTN_huy.Text = "Hoàn tác";
-            this.BTN_huy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // BTN_ok
             // 
@@ -475,7 +445,6 @@ namespace DangNhap
         private System.Windows.Forms.Panel PN_hienthi;
         private System.Windows.Forms.Button BTN_chung;
         private System.Windows.Forms.Button BTN_lichsu;
-        private Guna.UI.WinForms.GunaGradientButton BTN_huy;
         private Guna.UI.WinForms.GunaGradientButton BTN_ok;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;

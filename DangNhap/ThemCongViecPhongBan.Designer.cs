@@ -36,7 +36,6 @@ namespace DangNhap
             this.LB_MaCongViec = new System.Windows.Forms.Label();
             this.TXB_macanho = new System.Windows.Forms.TextBox();
             this.DTP_gio = new System.Windows.Forms.DateTimePicker();
-            this.CB_uyquyen = new System.Windows.Forms.CheckBox();
             this.CBB_phongban = new System.Windows.Forms.ComboBox();
             this.BTN_file = new System.Windows.Forms.Button();
             this.LB_quyentruycap = new System.Windows.Forms.Label();
@@ -56,10 +55,10 @@ namespace DangNhap
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panel1.Location = new System.Drawing.Point(637, 19);
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Location = new System.Drawing.Point(638, 19);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2, 496);
+            this.panel1.Size = new System.Drawing.Size(1, 496);
             this.panel1.TabIndex = 232;
             // 
             // CBB_QuyenTruyCap
@@ -126,18 +125,6 @@ namespace DangNhap
             this.DTP_gio.Name = "DTP_gio";
             this.DTP_gio.Size = new System.Drawing.Size(144, 30);
             this.DTP_gio.TabIndex = 226;
-            // 
-            // CB_uyquyen
-            // 
-            this.CB_uyquyen.AutoSize = true;
-            this.CB_uyquyen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CB_uyquyen.ForeColor = System.Drawing.Color.White;
-            this.CB_uyquyen.Location = new System.Drawing.Point(680, 427);
-            this.CB_uyquyen.Name = "CB_uyquyen";
-            this.CB_uyquyen.Size = new System.Drawing.Size(241, 26);
-            this.CB_uyquyen.TabIndex = 225;
-            this.CB_uyquyen.Text = "Công việc được ủy quyền?";
-            this.CB_uyquyen.UseVisualStyleBackColor = true;
             // 
             // CBB_phongban
             // 
@@ -262,7 +249,7 @@ namespace DangNhap
             this.BTN_ok.Location = new System.Drawing.Point(1120, 554);
             this.BTN_ok.Name = "BTN_ok";
             this.BTN_ok.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
-            this.BTN_ok.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.BTN_ok.OnHoverBaseColor2 = System.Drawing.Color.Navy;
             this.BTN_ok.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_ok.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_ok.OnHoverImage = null;
@@ -312,10 +299,10 @@ namespace DangNhap
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel6.BackColor = System.Drawing.Color.Silver;
             this.panel6.Location = new System.Drawing.Point(9, 533);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1259, 2);
+            this.panel6.Size = new System.Drawing.Size(1259, 1);
             this.panel6.TabIndex = 233;
             // 
             // LB_Ghichu
@@ -368,7 +355,6 @@ namespace DangNhap
             this.Controls.Add(this.LB_MaCongViec);
             this.Controls.Add(this.TXB_macanho);
             this.Controls.Add(this.DTP_gio);
-            this.Controls.Add(this.CB_uyquyen);
             this.Controls.Add(this.CBB_phongban);
             this.Controls.Add(this.BTN_file);
             this.Controls.Add(this.LB_quyentruycap);
@@ -397,7 +383,6 @@ namespace DangNhap
         private System.Windows.Forms.Label LB_MaCongViec;
         private System.Windows.Forms.TextBox TXB_macanho;
         private System.Windows.Forms.DateTimePicker DTP_gio;
-        private System.Windows.Forms.CheckBox CB_uyquyen;
         private System.Windows.Forms.ComboBox CBB_phongban;
         private System.Windows.Forms.Button BTN_file;
         private System.Windows.Forms.Label LB_quyentruycap;
