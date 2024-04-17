@@ -49,9 +49,9 @@ namespace DangNhap
             ttcn.ShowDialog();
         }
         // Lấy thông tin nhân viên bằng mã nhân viên
-        private Employee GetEmployeeByEmployeeId(string maNhanVien)
+        private void GetEmployeeByEmployeeId(string maNhanVien)
         {
-            return EmployeeBLL.Instance.GetEmployeeByEmployeeId(maNhanVien);
+            nhanVienChiTiet =  EmployeeBLL.Instance.GetEmployeeByEmployeeId(maNhanVien);
         }
         // Phương thức refresh lại GGC
         public override void Refresh()
@@ -148,7 +148,7 @@ namespace DangNhap
 
                 // Extract data from the record
                 string maNhanVien = record.GetValue("MaNhanVien").ToString();
-                nhanVienChiTiet = GetEmployeeByEmployeeId(maNhanVien);
+                GetEmployeeByEmployeeId(maNhanVien);
                 ThongTinCaNhan ttcn = new ThongTinCaNhan(this, nhanVienChiTiet);
                 ttcn.ShowDialog();
             }

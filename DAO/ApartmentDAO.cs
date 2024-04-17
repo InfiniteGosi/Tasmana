@@ -22,5 +22,15 @@ namespace DAO
             string query = "select * from CanHo";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetApartmentById(string maCanHo)
+        {
+            string query = $"select * from CanHo where maCanHo = '{maCanHo}'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public bool AddApartment(Dictionary<string, object> parameters)
+        {
+            int result = DataProvider.Instance.ExecuteStoredProcedure("SP_ThemCanHo", parameters);
+            return result > 0;
+        }
     }
 }

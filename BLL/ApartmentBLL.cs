@@ -41,5 +41,32 @@ namespace BLL
             }
             return apartments;
         }
+        public Apartment GetApartmentById(string maCanHo)
+        {
+            DataTable dt = ApartmentDAO.Instance.GetApartmentById(maCanHo);
+            float dienTich = dt.Rows[0]["dienTich"] != DBNull.Value ? Convert.ToSingle(dt.Rows[0]["dienTich"]) : 0.0f;
+            int viTriTang = (int)dt.Rows[0]["viTriTang"];
+            int soLuongPhongNgu = (int)dt.Rows[0]["soLuongPhongNgu"];
+            int soLuongToilet = (int)dt.Rows[0]["soLuongToilet"];
+            Image soDoMatBang = dt.Rows[0]["soDoMatBang"] != DBNull.Value ? (Image)dt.Rows[0]["soDoMatBang"] : null;
+            int mucPhiQLHangThang = (int)dt.Rows[0]["mucPhiQLHangThang"];
+            int soLuongTheThangMay = (int)dt.Rows[0]["soLuongTheThangMay"];
+            DateTime lichSuGiaoDich = (DateTime)dt.Rows[0]["lichSuGiaoDich"];
+            string tinhTrangGDHienTai = dt.Rows[0]["tinhTrangGDHienTai"].ToString();
+            string maCuDan = dt.Rows[0]["maCuDan"].ToString();
+            Apartment apartment = new Apartment(maCanHo, dienTich, viTriTang, soLuongToilet, soLuongPhongNgu, soDoMatBang, mucPhiQLHangThang, soLuongTheThangMay, lichSuGiaoDich, tinhTrangGDHienTai, maCuDan);
+            return apartment;
+        }
+        public string AddApartment(Dictionary<string, object> parameters)
+        {
+            if (ApartmentDAO.Instance.AddApartment(parameters))
+            {
+                return "Sửa thành công";
+            }
+            else
+            {
+                return "Sửa thất bại";
+            }
+        }
     }
 }

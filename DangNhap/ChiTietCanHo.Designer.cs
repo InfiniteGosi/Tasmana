@@ -443,6 +443,7 @@ namespace DangNhap
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ChiTietCanHo";
             this.Text = "ChiTietCanHo";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChiTietCanHo_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pic_canho)).EndInit();
             this.PN_hienthi.ResumeLayout(false);
             this.PN_hienthi.PerformLayout();

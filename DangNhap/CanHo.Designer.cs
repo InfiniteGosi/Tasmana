@@ -313,6 +313,7 @@ namespace DangNhap
             this.GGC_canho.Text = "gridGroupingControl1";
             this.GGC_canho.UseRightToLeftCompatibleTextBox = true;
             this.GGC_canho.VersionInfo = "25.1462.39";
+            this.GGC_canho.TableControlCellDoubleClick += new Syncfusion.Windows.Forms.Grid.Grouping.GridTableControlCellClickEventHandler(this.GGC_canho_TableControlCellDoubleClick);
             // 
             // CanHo
             // 
