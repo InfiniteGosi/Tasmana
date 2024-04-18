@@ -106,6 +106,19 @@ namespace DangNhap
                     }
                 }
             }
+            if (GGC_hienthicongviec.TableDescriptor.Columns.Contains("ThoiHan"))
+            {
+                var col = GGC_hienthicongviec.TableDescriptor.Columns["ThoiHan"];
+                col.Appearance.AnyCell.CellValueType = typeof(string);
+                foreach (var comp in GGC_hienthicongviec.Table.Records)
+                {
+                    var cellValue = comp.GetValue("ThoiHan");
+                    if (cellValue.ToString().Contains("1/1/0001"))
+                    {
+                        cellValue = null;
+                    }
+                }
+            }
         }
         private DataTable GetDataTable()
         {

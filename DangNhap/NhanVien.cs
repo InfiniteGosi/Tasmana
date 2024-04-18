@@ -1,4 +1,5 @@
-﻿using BLL;
+﻿
+using BLL;
 using DTO;
 using Syncfusion.GridHelperClasses;
 using Syncfusion.Licensing;
@@ -19,6 +20,7 @@ using System.Windows.Forms;
 using Syncfusion.Grouping;
 using Syncfusion.Windows.Forms.Grid;
 using Syncfusion.Windows.Shared;
+using DAO;
 
 namespace DangNhap
 {
@@ -62,8 +64,10 @@ namespace DangNhap
         // Hiển thị dữ liệu lên GGC_danhsachnhanvien
         private void DisplayGGC_danhsachnhanvien()
         {
-            GetEmployees();
-            GGC_danhsachnv.DataSource = employees.Select(e => new
+            GGC_danhsachnv.Size = new System.Drawing.Size(950, 404);
+            DataTable dt = JobDAO.Instance.GetEmployees();
+            GGC_danhsachnv.DataSource = dt;
+            /*GGC_danhsachnv.DataSource = dt.Select(e => new
             {
                 e.MaNhanVien,
                 e.Ho,
@@ -82,16 +86,22 @@ namespace DangNhap
                 NgayHetHDLD = e.NgayHetHDLD.ToString("dd/MM/yyyy"),
                 e.DiaChiThuongTru,
                 e.DiaChiTamTru,
-                e.TinhTrangHDLD,
-                e.MaBoPhan,
-                e.MaNhom,
-                e.TaiKhoanNguoiDung
-            }).ToList();
+                e.TinhTrangHDLD,*/
+                //e.MaBoPhan,
+                //e.MaNhom,
+                //e.TaiKhoanNguoiDung
+            //}).ToList();
             
             GGC_danhsachnv.TableDescriptor.Columns[0].HeaderText = "Mã nhân viên";
             GGC_danhsachnv.TableDescriptor.Columns[1].HeaderText = "Họ";
             GGC_danhsachnv.TableDescriptor.Columns[2].HeaderText = "Tên";
-            GGC_danhsachnv.TableDescriptor.Columns[3].HeaderText = "Email";
+            GGC_danhsachnv.TableDescriptor.Columns[3].HeaderText = "Mã bộ phận";
+            GGC_danhsachnv.TableDescriptor.Columns[4].HeaderText = "Tổng công việc";
+            GGC_danhsachnv.TableDescriptor.Columns[5].HeaderText = "Hoàn thành";
+            GGC_danhsachnv.TableDescriptor.Columns[6].HeaderText = "Chưa bắt đầu";
+            GGC_danhsachnv.TableDescriptor.Columns[7].HeaderText = "Đang thực hiện";
+            GGC_danhsachnv.TableDescriptor.Columns[8].HeaderText = "Trễ hẹn";
+            /*GGC_danhsachnv.TableDescriptor.Columns[3].HeaderText = "Email";
             GGC_danhsachnv.TableDescriptor.Columns[4].HeaderText = "Số điện thoại";
             GGC_danhsachnv.TableDescriptor.Columns[5].HeaderText = "Ngày sinh";
             GGC_danhsachnv.TableDescriptor.Columns[6].HeaderText = "Giới tính";
@@ -105,13 +115,13 @@ namespace DangNhap
             GGC_danhsachnv.TableDescriptor.Columns[14].HeaderText = "Ngày hết hợp đồng lao động";
             GGC_danhsachnv.TableDescriptor.Columns[15].HeaderText = "Địa chỉ thường trú";
             GGC_danhsachnv.TableDescriptor.Columns[16].HeaderText = "Địa chỉ tạm trú";
-            GGC_danhsachnv.TableDescriptor.Columns[17].HeaderText = "Tình trạng hợp đồng lao động";
-            GGC_danhsachnv.TableDescriptor.Columns[18].HeaderText = "Mã bộ phận";
-            GGC_danhsachnv.TableDescriptor.Columns[19].HeaderText = "Mã nhóm";
+            GGC_danhsachnv.TableDescriptor.Columns[17].HeaderText = "Tình trạng hợp đồng lao động";*/
+            //GGC_danhsachnv.TableDescriptor.Columns[18].HeaderText = "Mã bộ phận";
+            /*GGC_danhsachnv.TableDescriptor.Columns[19].HeaderText = "Mã nhóm";
             GGC_danhsachnv.TableDescriptor.Columns[20].HeaderText = "Mã tài khoản nhân viên";
             GGC_danhsachnv.TableDescriptor.VisibleColumns.Remove("TaiKhoanNguoiDung_Password");
             GGC_danhsachnv.TableDescriptor.VisibleColumns.Remove("TaiKhoanNguoiDung_EmployeeId");
-            GGC_danhsachnv.TableDescriptor.VisibleColumns.Remove("TaiKhoanNguoiDung_IsDisabled");
+            GGC_danhsachnv.TableDescriptor.VisibleColumns.Remove("TaiKhoanNguoiDung_IsDisabled");*/
 
             GGC_danhsachnv.TopLevelGroupOptions.ShowFilterBar = true;
             GGC_danhsachnv.ActivateCurrentCellBehavior = GridCellActivateAction.None;
@@ -148,7 +158,7 @@ namespace DangNhap
                 Record record = GGC_danhsachnv.Table.Records[rowIndex];
 
                 // Extract data from the record
-                string maNhanVien = record.GetValue("MaNhanVien").ToString();
+                string maNhanVien = record.GetValue("maNhanVien").ToString();
                 GetEmployeeByEmployeeId(maNhanVien);
                 ThongTinCaNhan ttcn = new ThongTinCaNhan(this, nhanVienChiTiet);
                 ttcn.ShowDialog();
