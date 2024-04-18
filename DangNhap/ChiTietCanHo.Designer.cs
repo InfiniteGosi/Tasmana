@@ -57,8 +57,10 @@ namespace DangNhap
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.numericUpDownExt1 = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
             ((System.ComponentModel.ISupportInitialize)(this.pic_canho)).BeginInit();
             this.PN_hienthi.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt1)).BeginInit();
             this.SuspendLayout();
             // 
             // LB_ttch
@@ -275,6 +277,7 @@ namespace DangNhap
             // PN_hienthi
             // 
             this.PN_hienthi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            this.PN_hienthi.Controls.Add(this.numericUpDownExt1);
             this.PN_hienthi.Controls.Add(this.BTN_ok);
             this.PN_hienthi.Controls.Add(this.TXB_chuho);
             this.PN_hienthi.Controls.Add(this.LB_hinhanhcanho);
@@ -395,6 +398,14 @@ namespace DangNhap
             this.panel5.Size = new System.Drawing.Size(1077, 2);
             this.panel5.TabIndex = 43;
             // 
+            // numericUpDownExt1
+            // 
+            this.numericUpDownExt1.BeforeTouchSize = new System.Drawing.Size(120, 22);
+            this.numericUpDownExt1.Location = new System.Drawing.Point(512, 107);
+            this.numericUpDownExt1.Name = "numericUpDownExt1";
+            this.numericUpDownExt1.Size = new System.Drawing.Size(120, 22);
+            this.numericUpDownExt1.TabIndex = 171;
+            // 
             // ChiTietCanHo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -417,6 +428,7 @@ namespace DangNhap
             ((System.ComponentModel.ISupportInitialize)(this.pic_canho)).EndInit();
             this.PN_hienthi.ResumeLayout(false);
             this.PN_hienthi.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -451,5 +463,6 @@ namespace DangNhap
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
+        private Syncfusion.Windows.Forms.Tools.NumericUpDownExt numericUpDownExt1;
     }
 }

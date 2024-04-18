@@ -76,7 +76,7 @@ namespace DangNhap
                 TXB_thuongtru.Text,
                 TXB_tamtru.Text,
                 TXB_tinhtrangHDLD.Text,
-                CBB_phongban.SelectedItem,
+                CBB_phongban.SelectedItem?.ToString().Split('-')[0],
                 CBB_nhom.SelectedItem,
             };
         }

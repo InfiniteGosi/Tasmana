@@ -69,6 +69,7 @@ namespace DangNhap
         {
             values_ch = new object[]
             {
+                TXB_macanho.Text,
 
             };
         }
