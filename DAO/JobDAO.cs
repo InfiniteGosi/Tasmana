@@ -131,5 +131,11 @@ namespace DAO
             string query = $"SELECT * FROM CongViec Where maCongViec = '{maCV}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
+        public DataTable GetEmployees()
+        {
+            string query = $"EXEC [dbo].[Count_Job_State]";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

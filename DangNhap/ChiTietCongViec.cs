@@ -155,7 +155,7 @@ namespace DangNhap
                 {
                     try
                     {
-                        byte[] bytes = JobBLL.Instance.GetFileOfJob(LLB_chỉtietfile.Text);
+                        byte[] bytes = JobBLL.Instance.GetFileOfJob(TXB_MaCV.Text);
                         File.WriteAllBytes(save.FileName, bytes);
                         MessageBox.Show("Successful", "Info");
                     }
