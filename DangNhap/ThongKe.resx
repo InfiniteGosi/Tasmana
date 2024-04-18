@@ -117,17 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="PN_blue.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADgSURBVChTDc6hTQQwGIbh6iaoOpLa6ia4qktqqW0C6hQD
-        wAB3A9wCLMAAMAAMwADcAgzAAj+PeN2TL186niOOF73qTe/60rd+9Ku/iLRfIja84Q1veH8I3vC+Ck7r
-        KWLBC17wghe8LK9PwQtO8yFiwvNZJ8ETnvCEJzzhNO4jxqPgAQ/LAx7wgAc83Ej9ENGX4A53Nzrc4Q53
-        uPuc2l1Eg5vl5kaDG9zgBje4wam2iApXuMIVrnB1o/pc4QqnchtR4AIXuMDFjQIXuFgucMo3ERnOcIYz
-        nH3OcIazG/kc8Q9SuA27ie4DwgAAAABJRU5ErkJggg==
-</value>
-  </data>
   <metadata name="elipse_blue.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

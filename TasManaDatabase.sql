@@ -251,7 +251,7 @@ go
 
 
 -- Insert thông tin phòng ban
-INSERT INTO PhongBan VALUES('HCNS', N'Hành chính Nhân sự & Dịch vụ Cư dân','0123456789','BCMP_HCNS@gmail.com')
+INSERT INTO PhongBan VALUES('DV', N'Hành chính Nhân sự & Dịch vụ Cư dân','0123456789','BCMP_HCNS@gmail.com')
 INSERT INTO PhongBan VALUES('VS', N'Vệ Sinh','0123456889','BCMP_VS@gmail.com')
 INSERT INTO PhongBan VALUES('TCKT', N'Tài chính kế toán', '01234444444' ,'BCMP_TCKT@gmail.com')
 INSERT INTO PhongBan VALUES('AN', N'An Ninh', '0133333333', 'BCMP_AN@gmail.com')
@@ -698,8 +698,26 @@ BEGIN
             SELECT maNhanVien, COUNT(*) AS Count
             FROM Congviec_Nhanvien CNV
             JOIN CongViec CV ON CNV.maCongViec = CV.maCongViec
-            WHERE CV.trangThai = N'Trễ hẹn'
+            WHERE CV.trangThai = N'Trễ hạn'
             GROUP BY maNhanVien
         ) AS TreHen ON NV.maNhanVien = TreHen.maNhanVien;
 END
 GO
+-- Tạo Trigger tự động kiểm tra tình trạng công việc
+CREATE TRIGGER CheckLateJob
+ON CongViec
+AFTER UPDATE
+AS
+BEGIN
+    -- Kiểm tra các bản ghi bị cập nhật
+    IF UPDATE(trangThai) OR UPDATE(ngayHoanThanh) OR UPDATE(thoiHan)
+    BEGIN
+        -- Cập nhật trạng thái thành 'Trễ hạn' nếu trạng thái không phải 'Hoàn thành', ngày hoàn thành là NULL, và thời hạn đã qua hoặc ngày hoàn thành muộn hơn thời hạn
+        UPDATE CongViec
+        SET trangThai = N'Trễ hạn'
+        WHERE (CAST(thoiHan AS datetime) < CAST(GETDATE() AS datetime) OR CAST(ngayHoanThanh AS datetime) > CAST(thoiHan AS datetime));
+    END
+END;
+DROP Trigger CheckLateJob
+Go
+Select * From CongViec
