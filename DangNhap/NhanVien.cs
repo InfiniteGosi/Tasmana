@@ -65,56 +65,18 @@ namespace DangNhap
         private void DisplayGGC_danhsachnhanvien()
         {
             GGC_danhsachnv.Size = new System.Drawing.Size(950, 404);
-            GetEmployees();
-            GGC_danhsachnv.DataSource = employees.Select(e => new
-            {
-                e.MaNhanVien,
-                e.Ho,
-                e.Ten,
-                e.Email,
-                e.SoDienThoai,
-                NgaySinh = e.NgaySinh.ToString("dd/MM/yyyy"),
-                GioiTinh = e.GioiTinh ? "Nam" : "Nữ",
-                e.QueQuan,
-                e.MaDinhDanh,
-                e.LoaiNhanVien,
-                e.TinhTrangHonNhan,
-                e.MaSoBHXH,
-                e.DaTungLamNhanVien,
-                NgayKyHDLD = e.NgayKyHDLD.ToString("dd/MM/yyyy"),
-                NgayHetHDLD = e.NgayHetHDLD.ToString("dd/MM/yyyy"),
-                e.DiaChiThuongTru,
-                e.DiaChiTamTru,
-                e.TinhTrangHDLD,
-                e.MaBoPhan,
-                e.MaNhom,
-                e.TaiKhoanNguoiDung
-            }).ToList();
+            GGC_danhsachnv.DataSource = JobDAO.Instance.GetEmployees();
             
             GGC_danhsachnv.TableDescriptor.Columns[0].HeaderText = "Mã nhân viên";
             GGC_danhsachnv.TableDescriptor.Columns[1].HeaderText = "Họ";
             GGC_danhsachnv.TableDescriptor.Columns[2].HeaderText = "Tên";
-            GGC_danhsachnv.TableDescriptor.Columns[3].HeaderText = "Email";
-            GGC_danhsachnv.TableDescriptor.Columns[4].HeaderText = "Số điện thoại";
-            GGC_danhsachnv.TableDescriptor.Columns[5].HeaderText = "Ngày sinh";
-            GGC_danhsachnv.TableDescriptor.Columns[6].HeaderText = "Giới tính";
-            GGC_danhsachnv.TableDescriptor.Columns[7].HeaderText = "Quê quán";
-            GGC_danhsachnv.TableDescriptor.Columns[8].HeaderText = "Mã định danh";
-            GGC_danhsachnv.TableDescriptor.Columns[9].HeaderText = "Loại nhân viên";
-            GGC_danhsachnv.TableDescriptor.Columns[10].HeaderText = "Tình trạng hôn nhân";
-            GGC_danhsachnv.TableDescriptor.Columns[11].HeaderText = "Mã số bảo hiểm xã hội";
-            GGC_danhsachnv.TableDescriptor.Columns[12].HeaderText = "Đã từng làm nhân viên";
-            GGC_danhsachnv.TableDescriptor.Columns[13].HeaderText = "Ngày ký hợp đồng lao động";
-            GGC_danhsachnv.TableDescriptor.Columns[14].HeaderText = "Ngày hết hợp đồng lao động";
-            GGC_danhsachnv.TableDescriptor.Columns[15].HeaderText = "Địa chỉ thường trú";
-            GGC_danhsachnv.TableDescriptor.Columns[16].HeaderText = "Địa chỉ tạm trú";
-            GGC_danhsachnv.TableDescriptor.Columns[17].HeaderText = "Tình trạng hợp đồng lao động";
-            GGC_danhsachnv.TableDescriptor.Columns[18].HeaderText = "Mã bộ phận";
-            GGC_danhsachnv.TableDescriptor.Columns[19].HeaderText = "Mã nhóm";
-            GGC_danhsachnv.TableDescriptor.Columns[20].HeaderText = "Mã tài khoản nhân viên";
-            GGC_danhsachnv.TableDescriptor.VisibleColumns.Remove("TaiKhoanNguoiDung_Password");
-            GGC_danhsachnv.TableDescriptor.VisibleColumns.Remove("TaiKhoanNguoiDung_EmployeeId");
-            GGC_danhsachnv.TableDescriptor.VisibleColumns.Remove("TaiKhoanNguoiDung_IsDisabled");
+            GGC_danhsachnv.TableDescriptor.Columns[3].HeaderText = "Mã bộ phận";
+            GGC_danhsachnv.TableDescriptor.Columns[4].HeaderText = "Tổng công việc";
+            GGC_danhsachnv.TableDescriptor.Columns[5].HeaderText = "Hoàn thành";
+            GGC_danhsachnv.TableDescriptor.Columns[6].HeaderText = "Đang thực hiện";
+            GGC_danhsachnv.TableDescriptor.Columns[7].HeaderText = "Chưa bắt đầu";
+            GGC_danhsachnv.TableDescriptor.Columns[8].HeaderText = "Trễ Hạn";
+
 
             GGC_danhsachnv.TopLevelGroupOptions.ShowFilterBar = true;
             GGC_danhsachnv.ActivateCurrentCellBehavior = GridCellActivateAction.None;
