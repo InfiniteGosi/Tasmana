@@ -82,7 +82,7 @@ CREATE TABLE NhanVien
   dChiThuongTru NVARCHAR(100) NOT NULL,
   dChiTamTru NVARCHAR(100),
   tinhTrangHDLD NVARCHAR(100) NOT NULL,
-  maBoPhan VARCHAR(10) NOT NULL,
+  maBoPhan VARCHAR(10),
   maNhom VARCHAR(10),
   PRIMARY KEY (maNhanVien),
   FOREIGN KEY (maNhom) REFERENCES nhom(maNhom),
@@ -703,5 +703,3 @@ BEGIN
         ) AS TreHen ON NV.maNhanVien = TreHen.maNhanVien;
 END
 GO
-
-EXEC [dbo].[Count_Job_State]

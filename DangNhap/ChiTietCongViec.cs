@@ -86,8 +86,8 @@ namespace DangNhap
                 {"@maCongViec", TXB_MaCV.Text},
                 {"@noiDung", TXB_noidung.Text},
                 {"@thoiHan", CheckThoiHan() ? (object)combinedDateTime : null}, // Combine Date and Time components
-                {"@ngayHoanThanh", GetNgayHoanThanhCongViec() ? (object)DateTime.UtcNow.ToLocalTime() : null}, // Use DateTime directly
-                {"@ngayCapNhat", DateTime.UtcNow},
+                {"@ngayHoanThanh", GetNgayHoanThanhCongViec() ? (object)DateTime.Now : null}, // Use DateTime directly
+                {"@ngayCapNhat", DateTime.Now},
                 {"trangThai", CBB_TrangThai.SelectedItem.ToString()},
                 {"@ghiChu", TXB_GhiChu.Text},
                 {"@quyenTruyCap", GetQuyenTruyCap()}

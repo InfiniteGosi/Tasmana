@@ -113,10 +113,10 @@ namespace DangNhap
             Dictionary<string, object> dict = new Dictionary<string, object>
             {
                 {"@noiDung", TXB_noidung.Text},
-                {"@ngayGiao", DateTime.UtcNow.ToString("yyyy-MM-dd'T'HH:mm:ss")},
+                {"@ngayGiao", DateTime.Now.ToString("yyyy-MM-dd'T'HH:mm:ss")},
                 {"@thoihan", thoiHan},
                 {"@ngayHoanThanh", null},
-                {"@ngayCapNhat", DateTime.UtcNow.ToString("yyyy-MM-dd'T'HH:mm:ss")},
+                {"@ngayCapNhat", DateTime.Now.ToString("yyyy-MM-dd'T'HH:mm:ss")},
                 {"@trangThai", "Chưa bắt đầu"},
                 {"@ghiChu", TXB_ghiChu.Text},
                 {"@quyenTruyCap", GetQuyenTruyCap()}
