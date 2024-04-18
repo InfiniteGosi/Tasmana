@@ -170,7 +170,7 @@ namespace DAO
                                 {
                                     if (dateTimeValue.Year < 1900 || dateTimeValue.Year > 2100)
                                         throw new ArgumentException($"DateTime parameter '{pair.Key}' is out of range.");
-                                    p = new SqlParameter(pair.Key, SqlDbType.Date) { Value = dateTimeValue };
+                                    p = new SqlParameter(pair.Key, SqlDbType.DateTime2) { Value = dateTimeValue };
                                 }
                                 else
                                     throw new ArgumentException($"Unsupported data type for parameter: {pair.Key}");
