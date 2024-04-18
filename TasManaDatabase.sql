@@ -653,3 +653,55 @@ BEGIN
 	INSERT INTO Nhom
 	Values (@maNhom, @maTruongNhom, @maBoPhan)
 END
+GO
+---Lấy danh sách nhân viên
+CREATE PROCEDURE [dbo].[Count_Job_State]
+AS
+BEGIN
+    SELECT NV.maNhanVien,
+           NV.ho,
+           NV.ten,
+           NV.maBoPhan,
+           ISNULL(TongCongViec.Count, 0) AS TongCongViec,
+           ISNULL(HoanThanh.Count, 0) AS HoanThanh,
+           ISNULL(ChuaBatDau.Count, 0) AS ChuaBatDau,
+           ISNULL(DangThucHien.Count, 0) AS DangThucHien,
+           ISNULL(TreHen.Count, 0) AS TreHen
+    FROM NhanVien NV
+        LEFT JOIN (
+            SELECT maNhanVien, COUNT(*) AS Count
+            FROM Congviec_Nhanvien CNV
+            GROUP BY maNhanVien
+        ) AS TongCongViec ON NV.maNhanVien = TongCongViec.maNhanVien
+        LEFT JOIN (
+            SELECT maNhanVien, COUNT(*) AS Count
+            FROM Congviec_Nhanvien CNV
+            JOIN CongViec CV ON CNV.maCongViec = CV.maCongViec
+            WHERE CV.trangThai = N'Hoàn thành'
+            GROUP BY maNhanVien
+        ) AS HoanThanh ON NV.maNhanVien = HoanThanh.maNhanVien
+        LEFT JOIN (
+            SELECT maNhanVien, COUNT(*) AS Count
+            FROM Congviec_Nhanvien CNV
+            JOIN CongViec CV ON CNV.maCongViec = CV.maCongViec
+            WHERE CV.trangThai = N'Chưa bắt đầu'
+            GROUP BY maNhanVien
+        ) AS ChuaBatDau ON NV.maNhanVien = ChuaBatDau.maNhanVien
+        LEFT JOIN (
+            SELECT maNhanVien, COUNT(*) AS Count
+            FROM Congviec_Nhanvien CNV
+            JOIN CongViec CV ON CNV.maCongViec = CV.maCongViec
+            WHERE CV.trangThai = N'Đang thực hiện'
+            GROUP BY maNhanVien
+        ) AS DangThucHien ON NV.maNhanVien = DangThucHien.maNhanVien
+        LEFT JOIN (
+            SELECT maNhanVien, COUNT(*) AS Count
+            FROM Congviec_Nhanvien CNV
+            JOIN CongViec CV ON CNV.maCongViec = CV.maCongViec
+            WHERE CV.trangThai = N'Trễ hẹn'
+            GROUP BY maNhanVien
+        ) AS TreHen ON NV.maNhanVien = TreHen.maNhanVien;
+END
+GO
+
+EXEC [dbo].[Count_Job_State]
