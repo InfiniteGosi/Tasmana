@@ -144,11 +144,10 @@
             // 
             // TXB_matkhau
             // 
-            this.TXB_matkhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_matkhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_matkhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_matkhau.Enabled = false;
             this.TXB_matkhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_matkhau.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_matkhau.ForeColor = System.Drawing.Color.White;
             this.TXB_matkhau.Location = new System.Drawing.Point(30, 185);
             this.TXB_matkhau.Name = "TXB_matkhau";
             this.TXB_matkhau.Size = new System.Drawing.Size(420, 30);
@@ -156,11 +155,10 @@
             // 
             // TXB_manguoidung
             // 
-            this.TXB_manguoidung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_manguoidung.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_manguoidung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_manguoidung.Enabled = false;
             this.TXB_manguoidung.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_manguoidung.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_manguoidung.ForeColor = System.Drawing.Color.White;
             this.TXB_manguoidung.Location = new System.Drawing.Point(30, 91);
             this.TXB_manguoidung.Name = "TXB_manguoidung";
             this.TXB_manguoidung.Size = new System.Drawing.Size(420, 30);
@@ -208,7 +206,7 @@
             this.BTN_doimatkhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_doimatkhau.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_doimatkhau.ForeColor = System.Drawing.Color.White;
-            this.BTN_doimatkhau.Location = new System.Drawing.Point(324, 243);
+            this.BTN_doimatkhau.Location = new System.Drawing.Point(324, 238);
             this.BTN_doimatkhau.Name = "BTN_doimatkhau";
             this.BTN_doimatkhau.Size = new System.Drawing.Size(126, 55);
             this.BTN_doimatkhau.TabIndex = 62;
@@ -279,11 +277,10 @@
             // 
             // TXB_bhxh
             // 
-            this.TXB_bhxh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_bhxh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_bhxh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_bhxh.Enabled = false;
             this.TXB_bhxh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_bhxh.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_bhxh.ForeColor = System.Drawing.Color.White;
             this.TXB_bhxh.Location = new System.Drawing.Point(30, 403);
             this.TXB_bhxh.Name = "TXB_bhxh";
             this.TXB_bhxh.Size = new System.Drawing.Size(420, 30);
@@ -291,11 +288,10 @@
             // 
             // TXB_quequan
             // 
-            this.TXB_quequan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_quequan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_quequan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_quequan.Enabled = false;
             this.TXB_quequan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_quequan.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_quequan.ForeColor = System.Drawing.Color.White;
             this.TXB_quequan.Location = new System.Drawing.Point(30, 507);
             this.TXB_quequan.Multiline = true;
             this.TXB_quequan.Name = "TXB_quequan";
@@ -304,11 +300,10 @@
             // 
             // TXB_email
             // 
-            this.TXB_email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_email.Enabled = false;
             this.TXB_email.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_email.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_email.ForeColor = System.Drawing.Color.White;
             this.TXB_email.Location = new System.Drawing.Point(30, 195);
             this.TXB_email.Name = "TXB_email";
             this.TXB_email.Size = new System.Drawing.Size(420, 30);
@@ -316,11 +311,10 @@
             // 
             // TXB_sdt
             // 
-            this.TXB_sdt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_sdt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_sdt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_sdt.Enabled = false;
             this.TXB_sdt.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_sdt.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_sdt.ForeColor = System.Drawing.Color.White;
             this.TXB_sdt.Location = new System.Drawing.Point(30, 91);
             this.TXB_sdt.Name = "TXB_sdt";
             this.TXB_sdt.Size = new System.Drawing.Size(420, 30);
@@ -328,11 +322,10 @@
             // 
             // TXB_cccd
             // 
-            this.TXB_cccd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_cccd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_cccd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_cccd.Enabled = false;
             this.TXB_cccd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_cccd.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_cccd.ForeColor = System.Drawing.Color.White;
             this.TXB_cccd.Location = new System.Drawing.Point(30, 299);
             this.TXB_cccd.Name = "TXB_cccd";
             this.TXB_cccd.Size = new System.Drawing.Size(420, 30);
@@ -340,11 +333,10 @@
             // 
             // TXB_thuongtru
             // 
-            this.TXB_thuongtru.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_thuongtru.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_thuongtru.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_thuongtru.Enabled = false;
             this.TXB_thuongtru.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_thuongtru.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_thuongtru.ForeColor = System.Drawing.Color.White;
             this.TXB_thuongtru.Location = new System.Drawing.Point(30, 611);
             this.TXB_thuongtru.Multiline = true;
             this.TXB_thuongtru.Name = "TXB_thuongtru";
@@ -353,11 +345,10 @@
             // 
             // TXB_tamtru
             // 
-            this.TXB_tamtru.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_tamtru.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_tamtru.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_tamtru.Enabled = false;
             this.TXB_tamtru.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_tamtru.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_tamtru.ForeColor = System.Drawing.Color.White;
             this.TXB_tamtru.Location = new System.Drawing.Point(30, 715);
             this.TXB_tamtru.Multiline = true;
             this.TXB_tamtru.Name = "TXB_tamtru";
@@ -517,35 +508,32 @@
             // 
             // TXB_ngaykyHDLD
             // 
-            this.TXB_ngaykyHDLD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_ngaykyHDLD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_ngaykyHDLD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_ngaykyHDLD.Enabled = false;
             this.TXB_ngaykyHDLD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_ngaykyHDLD.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_ngaykyHDLD.Location = new System.Drawing.Point(235, 462);
+            this.TXB_ngaykyHDLD.ForeColor = System.Drawing.Color.White;
+            this.TXB_ngaykyHDLD.Location = new System.Drawing.Point(34, 465);
             this.TXB_ngaykyHDLD.Name = "TXB_ngaykyHDLD";
-            this.TXB_ngaykyHDLD.Size = new System.Drawing.Size(215, 30);
+            this.TXB_ngaykyHDLD.Size = new System.Drawing.Size(167, 30);
             this.TXB_ngaykyHDLD.TabIndex = 63;
             // 
             // TXB_ngayhetHDLD
             // 
-            this.TXB_ngayhetHDLD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_ngayhetHDLD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_ngayhetHDLD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_ngayhetHDLD.Enabled = false;
             this.TXB_ngayhetHDLD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_ngayhetHDLD.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_ngayhetHDLD.Location = new System.Drawing.Point(34, 465);
+            this.TXB_ngayhetHDLD.ForeColor = System.Drawing.Color.White;
+            this.TXB_ngayhetHDLD.Location = new System.Drawing.Point(241, 465);
             this.TXB_ngayhetHDLD.Name = "TXB_ngayhetHDLD";
-            this.TXB_ngayhetHDLD.Size = new System.Drawing.Size(171, 30);
+            this.TXB_ngayhetHDLD.Size = new System.Drawing.Size(167, 30);
             this.TXB_ngayhetHDLD.TabIndex = 62;
             // 
             // TXB_nhom
             // 
-            this.TXB_nhom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_nhom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_nhom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_nhom.Enabled = false;
             this.TXB_nhom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_nhom.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_nhom.ForeColor = System.Drawing.Color.White;
             this.TXB_nhom.Location = new System.Drawing.Point(30, 361);
             this.TXB_nhom.Name = "TXB_nhom";
             this.TXB_nhom.Size = new System.Drawing.Size(171, 30);
@@ -553,11 +541,10 @@
             // 
             // TXB_phongban
             // 
-            this.TXB_phongban.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_phongban.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_phongban.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_phongban.Enabled = false;
             this.TXB_phongban.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_phongban.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_phongban.ForeColor = System.Drawing.Color.White;
             this.TXB_phongban.Location = new System.Drawing.Point(30, 255);
             this.TXB_phongban.Name = "TXB_phongban";
             this.TXB_phongban.Size = new System.Drawing.Size(171, 30);
@@ -565,11 +552,10 @@
             // 
             // TXB_loainv
             // 
-            this.TXB_loainv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_loainv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_loainv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_loainv.Enabled = false;
             this.TXB_loainv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_loainv.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_loainv.ForeColor = System.Drawing.Color.White;
             this.TXB_loainv.Location = new System.Drawing.Point(30, 153);
             this.TXB_loainv.Name = "TXB_loainv";
             this.TXB_loainv.Size = new System.Drawing.Size(171, 30);
@@ -577,11 +563,10 @@
             // 
             // TXB_tinhtrangHDLD
             // 
-            this.TXB_tinhtrangHDLD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_tinhtrangHDLD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_tinhtrangHDLD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_tinhtrangHDLD.Enabled = false;
             this.TXB_tinhtrangHDLD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_tinhtrangHDLD.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_tinhtrangHDLD.ForeColor = System.Drawing.Color.White;
             this.TXB_tinhtrangHDLD.Location = new System.Drawing.Point(30, 569);
             this.TXB_tinhtrangHDLD.Name = "TXB_tinhtrangHDLD";
             this.TXB_tinhtrangHDLD.Size = new System.Drawing.Size(171, 30);
@@ -685,7 +670,7 @@
             this.LB_ngayhetHDLD.AutoSize = true;
             this.LB_ngayhetHDLD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_ngayhetHDLD.ForeColor = System.Drawing.Color.White;
-            this.LB_ngayhetHDLD.Location = new System.Drawing.Point(30, 440);
+            this.LB_ngayhetHDLD.Location = new System.Drawing.Point(237, 440);
             this.LB_ngayhetHDLD.Name = "LB_ngayhetHDLD";
             this.LB_ngayhetHDLD.Size = new System.Drawing.Size(137, 22);
             this.LB_ngayhetHDLD.TabIndex = 43;
@@ -707,7 +692,7 @@
             this.LB_ngaykyHDLD.AutoSize = true;
             this.LB_ngaykyHDLD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_ngaykyHDLD.ForeColor = System.Drawing.Color.White;
-            this.LB_ngaykyHDLD.Location = new System.Drawing.Point(231, 440);
+            this.LB_ngaykyHDLD.Location = new System.Drawing.Point(30, 440);
             this.LB_ngaykyHDLD.Name = "LB_ngaykyHDLD";
             this.LB_ngaykyHDLD.Size = new System.Drawing.Size(133, 22);
             this.LB_ngaykyHDLD.TabIndex = 14;
@@ -742,11 +727,10 @@
             // 
             // TXB_ngaysinh
             // 
-            this.TXB_ngaysinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_ngaysinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_ngaysinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_ngaysinh.Enabled = false;
             this.TXB_ngaysinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_ngaysinh.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_ngaysinh.ForeColor = System.Drawing.Color.White;
             this.TXB_ngaysinh.Location = new System.Drawing.Point(30, 284);
             this.TXB_ngaysinh.Name = "TXB_ngaysinh";
             this.TXB_ngaysinh.Size = new System.Drawing.Size(171, 30);
@@ -754,11 +738,10 @@
             // 
             // TXB_gioitinh
             // 
-            this.TXB_gioitinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_gioitinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_gioitinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_gioitinh.Enabled = false;
             this.TXB_gioitinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_gioitinh.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_gioitinh.ForeColor = System.Drawing.Color.White;
             this.TXB_gioitinh.Location = new System.Drawing.Point(235, 284);
             this.TXB_gioitinh.Name = "TXB_gioitinh";
             this.TXB_gioitinh.Size = new System.Drawing.Size(215, 30);
@@ -766,11 +749,10 @@
             // 
             // TXB_ten
             // 
-            this.TXB_ten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_ten.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_ten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_ten.Enabled = false;
             this.TXB_ten.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_ten.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_ten.ForeColor = System.Drawing.Color.White;
             this.TXB_ten.Location = new System.Drawing.Point(235, 185);
             this.TXB_ten.Name = "TXB_ten";
             this.TXB_ten.Size = new System.Drawing.Size(215, 30);
@@ -778,11 +760,10 @@
             // 
             // TXB_ho
             // 
-            this.TXB_ho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_ho.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_ho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_ho.Enabled = false;
             this.TXB_ho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_ho.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_ho.ForeColor = System.Drawing.Color.White;
             this.TXB_ho.Location = new System.Drawing.Point(30, 184);
             this.TXB_ho.Name = "TXB_ho";
             this.TXB_ho.Size = new System.Drawing.Size(171, 30);
@@ -790,11 +771,10 @@
             // 
             // TXB_manv
             // 
-            this.TXB_manv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_manv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_manv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_manv.Enabled = false;
             this.TXB_manv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_manv.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_manv.ForeColor = System.Drawing.Color.White;
             this.TXB_manv.Location = new System.Drawing.Point(30, 91);
             this.TXB_manv.Name = "TXB_manv";
             this.TXB_manv.Size = new System.Drawing.Size(171, 30);
@@ -802,11 +782,10 @@
             // 
             // TXB_honnhan
             // 
-            this.TXB_honnhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_honnhan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXB_honnhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_honnhan.Enabled = false;
             this.TXB_honnhan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_honnhan.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TXB_honnhan.ForeColor = System.Drawing.Color.White;
             this.TXB_honnhan.Location = new System.Drawing.Point(30, 379);
             this.TXB_honnhan.Name = "TXB_honnhan";
             this.TXB_honnhan.Size = new System.Drawing.Size(171, 30);
@@ -957,7 +936,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1358, 843);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel5);

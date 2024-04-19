@@ -48,6 +48,7 @@ namespace DangNhap
             this.panel6 = new System.Windows.Forms.Panel();
             this.CBBB_manguoidung = new Syncfusion.Windows.Forms.Tools.ComboBoxBase();
             this.CHB_luuid = new System.Windows.Forms.CheckBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.CBBB_manguoidung)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,7 +106,7 @@ namespace DangNhap
             // VB_HienMatKhau
             // 
             this.VB_HienMatKhau.AutoSize = true;
-            this.VB_HienMatKhau.BackColor = System.Drawing.Color.Black;
+            this.VB_HienMatKhau.BackColor = System.Drawing.Color.Transparent;
             this.VB_HienMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.VB_HienMatKhau.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VB_HienMatKhau.ForeColor = System.Drawing.Color.White;
@@ -121,8 +122,8 @@ namespace DangNhap
             // 
             this.TB_MatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(17)))), ((int)(((byte)(26)))));
             this.TB_MatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TB_MatKhau.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_MatKhau.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TB_MatKhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_MatKhau.ForeColor = System.Drawing.Color.White;
             this.TB_MatKhau.Location = new System.Drawing.Point(632, 318);
             this.TB_MatKhau.Multiline = true;
             this.TB_MatKhau.Name = "TB_MatKhau";
@@ -206,7 +207,7 @@ namespace DangNhap
             this.LB_welcometo.BackColor = System.Drawing.Color.Transparent;
             this.LB_welcometo.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_welcometo.ForeColor = System.Drawing.Color.White;
-            this.LB_welcometo.Location = new System.Drawing.Point(59, 145);
+            this.LB_welcometo.Location = new System.Drawing.Point(47, 175);
             this.LB_welcometo.Name = "LB_welcometo";
             this.LB_welcometo.Size = new System.Drawing.Size(207, 46);
             this.LB_welcometo.TabIndex = 21;
@@ -226,53 +227,58 @@ namespace DangNhap
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel3.BackColor = System.Drawing.Color.Silver;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(2, 587);
+            this.panel3.Size = new System.Drawing.Size(1, 587);
             this.panel3.TabIndex = 23;
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel4.BackColor = System.Drawing.Color.Silver;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(2, 0);
+            this.panel4.Location = new System.Drawing.Point(1, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1127, 2);
+            this.panel4.Size = new System.Drawing.Size(1128, 1);
             this.panel4.TabIndex = 24;
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel5.BackColor = System.Drawing.Color.Silver;
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(2, 585);
+            this.panel5.Location = new System.Drawing.Point(1, 586);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1127, 2);
+            this.panel5.Size = new System.Drawing.Size(1128, 1);
             this.panel5.TabIndex = 25;
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel6.BackColor = System.Drawing.Color.Silver;
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(1127, 2);
+            this.panel6.Location = new System.Drawing.Point(1128, 1);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(2, 583);
+            this.panel6.Size = new System.Drawing.Size(1, 585);
             this.panel6.TabIndex = 26;
             // 
             // CBBB_manguoidung
             // 
-            this.CBBB_manguoidung.BeforeTouchSize = new System.Drawing.Size(428, 24);
+            this.CBBB_manguoidung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
+            this.CBBB_manguoidung.BeforeTouchSize = new System.Drawing.Size(428, 30);
+            this.CBBB_manguoidung.FlatBorderColor = System.Drawing.Color.Transparent;
+            this.CBBB_manguoidung.FlatStyle = Syncfusion.Windows.Forms.Tools.ComboFlatStyle.Flat;
+            this.CBBB_manguoidung.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBBB_manguoidung.ForeColor = System.Drawing.Color.White;
             this.CBBB_manguoidung.Location = new System.Drawing.Point(627, 227);
             this.CBBB_manguoidung.Name = "CBBB_manguoidung";
-            this.CBBB_manguoidung.Size = new System.Drawing.Size(428, 24);
+            this.CBBB_manguoidung.Size = new System.Drawing.Size(428, 30);
             this.CBBB_manguoidung.TabIndex = 28;
             this.CBBB_manguoidung.SelectionChangeCommitted += new System.EventHandler(this.CBBB_manguoidung_SelectionChangeCommitted);
             // 
             // CHB_luuid
             // 
             this.CHB_luuid.AutoSize = true;
-            this.CHB_luuid.BackColor = System.Drawing.Color.Black;
+            this.CHB_luuid.BackColor = System.Drawing.Color.Transparent;
             this.CHB_luuid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CHB_luuid.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CHB_luuid.ForeColor = System.Drawing.Color.White;
@@ -283,6 +289,14 @@ namespace DangNhap
             this.CHB_luuid.Text = "Nhớ mã người dùng";
             this.CHB_luuid.UseVisualStyleBackColor = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(635, 255);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(420, 2);
+            this.panel1.TabIndex = 30;
+            // 
             // DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -291,8 +305,8 @@ namespace DangNhap
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1129, 587);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.CHB_luuid);
-            this.Controls.Add(this.CBBB_manguoidung);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -309,6 +323,7 @@ namespace DangNhap
             this.Controls.Add(this.LB_id);
             this.Controls.Add(this.TB_MatKhau);
             this.Controls.Add(this.LB_pw);
+            this.Controls.Add(this.CBBB_manguoidung);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DangNhap";
@@ -343,6 +358,7 @@ namespace DangNhap
         private System.Windows.Forms.Panel panel6;
         private Syncfusion.Windows.Forms.Tools.ComboBoxBase CBBB_manguoidung;
         private System.Windows.Forms.CheckBox CHB_luuid;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

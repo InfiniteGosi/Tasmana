@@ -58,7 +58,7 @@ namespace DangNhap
             this.BTN_themnhanvien.ImageSize = new System.Drawing.Size(20, 20);
             this.BTN_themnhanvien.Location = new System.Drawing.Point(1147, 45);
             this.BTN_themnhanvien.Name = "BTN_themnhanvien";
-            this.BTN_themnhanvien.OnHoverBaseColor1 = System.Drawing.Color.DarkGreen;
+            this.BTN_themnhanvien.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(156)))), ((int)(((byte)(46)))));
             this.BTN_themnhanvien.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(156)))), ((int)(((byte)(46)))));
             this.BTN_themnhanvien.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_themnhanvien.OnHoverForeColor = System.Drawing.Color.White;
@@ -81,7 +81,7 @@ namespace DangNhap
             this.GGC_danhsachnv.Location = new System.Drawing.Point(65, 100);
             this.GGC_danhsachnv.Name = "GGC_danhsachnv";
             this.GGC_danhsachnv.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
-            this.GGC_danhsachnv.Size = new System.Drawing.Size(1211, 404);
+            this.GGC_danhsachnv.Size = new System.Drawing.Size(1211, 565);
             this.GGC_danhsachnv.TabIndex = 112;
             this.GGC_danhsachnv.Text = "gridGroupingControl1";
             this.GGC_danhsachnv.UseRightToLeftCompatibleTextBox = true;
@@ -108,7 +108,7 @@ namespace DangNhap
             this.BTN_themnhom.Location = new System.Drawing.Point(1001, 45);
             this.BTN_themnhom.Name = "BTN_themnhom";
             this.BTN_themnhom.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
-            this.BTN_themnhom.OnHoverBaseColor2 = System.Drawing.Color.Navy;
+            this.BTN_themnhom.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.BTN_themnhom.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_themnhom.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_themnhom.OnHoverImage = null;
@@ -116,7 +116,7 @@ namespace DangNhap
             this.BTN_themnhom.Radius = 5;
             this.BTN_themnhom.Size = new System.Drawing.Size(129, 35);
             this.BTN_themnhom.TabIndex = 169;
-            this.BTN_themnhom.Text = "Tạo nhóm mới";
+            this.BTN_themnhom.Text = "Tạo mới";
             this.BTN_themnhom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_themnhom.Click += new System.EventHandler(this.BTN_themnhom_Click);
             // 

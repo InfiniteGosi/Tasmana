@@ -246,7 +246,7 @@
             this.BTN_luu.Location = new System.Drawing.Point(431, 504);
             this.BTN_luu.Name = "BTN_luu";
             this.BTN_luu.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
-            this.BTN_luu.OnHoverBaseColor2 = System.Drawing.Color.DeepSkyBlue;
+            this.BTN_luu.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.BTN_luu.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_luu.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_luu.OnHoverImage = null;
