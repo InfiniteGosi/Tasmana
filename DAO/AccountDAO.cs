@@ -55,5 +55,13 @@ namespace DAO
             int result = DataProvider.Instance.ExecuteStoredProcedure("SP_DoiMatKhau", parameters);
             return result > 0;
         }
+        public bool UpdateRememberId(string maNguoiDung, bool remember)
+        {
+            int bit = 0;
+            if (remember)
+                bit = 1;
+            string query = $"update TaiKhoan set rememberId = {bit} where maNguoiDung = '{maNguoiDung}'";
+            return DataProvider.Instance.ExecuteNonQuery(query) > 0;
+        }
     }
 }

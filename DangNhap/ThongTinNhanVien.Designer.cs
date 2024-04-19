@@ -208,9 +208,9 @@
             this.BTN_doimatkhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_doimatkhau.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_doimatkhau.ForeColor = System.Drawing.Color.White;
-            this.BTN_doimatkhau.Location = new System.Drawing.Point(328, 240);
+            this.BTN_doimatkhau.Location = new System.Drawing.Point(324, 243);
             this.BTN_doimatkhau.Name = "BTN_doimatkhau";
-            this.BTN_doimatkhau.Size = new System.Drawing.Size(126, 36);
+            this.BTN_doimatkhau.Size = new System.Drawing.Size(126, 55);
             this.BTN_doimatkhau.TabIndex = 62;
             this.BTN_doimatkhau.Text = "Đổi mật khẩu";
             this.BTN_doimatkhau.UseVisualStyleBackColor = true;

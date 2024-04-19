@@ -15,17 +15,23 @@ using BLL;
 using Microsoft.VisualBasic.ApplicationServices;
 using Microsoft.Office.Interop.Excel;
 using System.Collections;
+using Syncfusion.Licensing;
+using Services;
+using Meziantou.Framework.Win32;
 
 namespace DangNhap
 {
     public partial class DangNhap : Form
     {
         public static Account currentAccount;
+        string userId;
+        string pwd;
         int mov;
         int movX;
         int movY;
         public DangNhap()
         {
+            SyncfusionLicenseProvider.RegisterLicense("MzIxOTI2MkAzMjM1MmUzMDJlMzBORkJZeFRVdUQxeERjT2xkWC9vdFgxS29wUmREOU9CZVdENkRUN0lrSStVPQ==;Mgo+DSMBaFt6QHFqVkNrXVNbdV5dVGpAd0N3RGlcdlR1fUUmHVdTRHRbQlliS3xTck1hW35Wcnc=");
             InitializeComponent();
         }
         private bool CheckAccountExistence(string userId)
@@ -43,10 +49,10 @@ namespace DangNhap
 
         private void BT_DangNhap_Click(object sender, EventArgs e)
         {
-            string userId = TB_TaiKhoan.Text;
-            string pwd = TB_MatKhau.Text;
+            userId = CBBB_manguoidung.Text;
+            pwd = TB_MatKhau.Text;
 
-            if (string.IsNullOrEmpty(userId))
+            if (string.IsNullOrEmpty(CBBB_manguoidung.Text))
             {
                 MessageBox.Show("Vui lòng nhập mã người dùng");
                 return;
@@ -67,6 +73,8 @@ namespace DangNhap
                         TrangHienThi formTrangChu = new TrangHienThi();
                         formTrangChu.Show();
                         this.Hide();
+                        AccountBLL.Instance.UpdateRememberId(userId, CHB_luuid.Checked);
+                        CredentialHandler.SaveCredential(userId, pwd, CHB_luuid.Checked);
                     }
                     else
                     {
@@ -89,7 +97,8 @@ namespace DangNhap
 
         private void BTN_close_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void DangNhap_MouseDown(object sender, MouseEventArgs e)
@@ -121,6 +130,30 @@ namespace DangNhap
             else
             {
                 TB_MatKhau.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void DangNhap_Load(object sender, EventArgs e)
+        {
+            List<Credential> credentials = CredentialHandler.LoadCredential();
+            List<string> usernames = new List<string>();
+            foreach (Credential c in credentials)
+            {
+                usernames.Add(c.UserName);
+            }
+            System.Windows.Forms.ListBox listBox = new System.Windows.Forms.ListBox
+            {
+                DataSource = usernames
+            };
+            CBBB_manguoidung.ListControl = listBox;
+        }
+        private void CBBB_manguoidung_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            userId = CBBB_manguoidung.Text;
+            GetAccount(userId);
+            if (currentAccount.RememberUserId)
+            {
+                CHB_luuid.Checked = true;
             }
         }
     }

@@ -13,8 +13,8 @@ namespace DTO
         public string Password { get; set; }
         public string EmployeeId { get; set; }
         public string Level { get; set; } // Phân quyền
-
         public bool IsDisabled { get; set; }
+        public bool RememberUserId { get; set; }
 
         public Account(string userId, string password, string employeeId)
         {
@@ -30,6 +30,15 @@ namespace DTO
             EmployeeId = employeeId;
             Level = PhanQuyen(UserId);
             IsDisabled = isDisabled;
+        }
+        public Account(string userId, string password, string employeeId, bool isDisabled, bool rememberId)
+        {
+            UserId = userId;
+            Password = password;
+            EmployeeId = employeeId;
+            Level = PhanQuyen(UserId);
+            IsDisabled = isDisabled;
+            RememberUserId = rememberId;
         }
         private string PhanQuyen(string userID)
         {
