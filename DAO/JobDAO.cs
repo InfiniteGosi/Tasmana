@@ -145,5 +145,12 @@ namespace DAO
             string query = $"EXEC [dbo].[Job_Of_Groups]";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        //Lấy tất cả công việc của phòng ban
+        public DataTable GetJobOfDivisions()
+        {
+            string query = $"EXEC [dbo].[Job_Of_Divisions]";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
     }
 }

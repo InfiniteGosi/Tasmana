@@ -130,6 +130,7 @@ namespace DangNhap
             this.BTN_in.TabIndex = 175;
             this.BTN_in.Text = "In";
             this.BTN_in.TextOffsetX = 3;
+            this.BTN_in.Click += new System.EventHandler(this.BTN_in_Click);
             // 
             // BTN_PDF
             // 
@@ -158,6 +159,7 @@ namespace DangNhap
             this.BTN_PDF.TabIndex = 174;
             this.BTN_PDF.Text = "PDF";
             this.BTN_PDF.TextOffsetX = 3;
+            this.BTN_PDF.Click += new System.EventHandler(this.BTN_PDF_Click);
             // 
             // BTN_excel
             // 
@@ -186,6 +188,7 @@ namespace DangNhap
             this.BTN_excel.TabIndex = 173;
             this.BTN_excel.Text = "Excel";
             this.BTN_excel.TextOffsetX = 3;
+            this.BTN_excel.Click += new System.EventHandler(this.BTN_excel_Click);
             // 
             // CanHo
             // 
