@@ -31,7 +31,7 @@ namespace BLL
         {
             DataTable dt = AccountDAO.Instance.GetAccount(userId);
 
-            return new Account(userId, dt.Rows[0]["matKhau"].ToString(), dt.Rows[0]["maNhanVien"].ToString(), (bool)dt.Rows[0]["disable"]);
+            return new Account(userId, dt.Rows[0]["matKhau"].ToString(), dt.Rows[0]["maNhanVien"].ToString(), (bool)dt.Rows[0]["disable"], (bool)dt.Rows[0]["rememberId"]);
         }
         public bool AddAccount(Dictionary<string, object> parameters)
         {
@@ -48,6 +48,10 @@ namespace BLL
                 return "Cập nhật mật khẩu thành công";
             }
             return "Cập nhật mật khẩu thất bại";
+        }
+        public bool UpdateRememberId(string maNguoiDung, bool remember)
+        {
+            return AccountDAO.Instance.UpdateRememberId(maNguoiDung, remember);
         }
     }
 }

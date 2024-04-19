@@ -534,6 +534,10 @@
       <Project>{a5587c10-6bdc-4b1f-aa86-4d5016ed5c0d}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{a29b128c-b674-467f-b5cb-26989a797d1f}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="SyncEngineLibrary">
