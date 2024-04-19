@@ -37,6 +37,7 @@ namespace DangNhap
         private void BTN_phongban_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ThemPhongBan());
+            LB_themmoi.Text = "THÊM PHÒNG BAN";
             BTN_nhanvien.BackColor = Color.Transparent;
             BTN_phongban.BackColor = Color.FromArgb(51, 53, 55);
         }
@@ -46,12 +47,9 @@ namespace DangNhap
             {
                 currentFormChild.Close();
             }
+            LB_themmoi.Text = "THÊM NHÓM";
             BTN_phongban.BackColor = Color.Transparent;
             BTN_nhanvien.BackColor = Color.FromArgb(51, 53, 55);
-        }
-        private void BTN_huy_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         //Di chuyển form
@@ -180,6 +178,11 @@ namespace DangNhap
             {
                 MessageBox.Show("Thêm thất bại");
             }
+        }
+
+        private void BTN_thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

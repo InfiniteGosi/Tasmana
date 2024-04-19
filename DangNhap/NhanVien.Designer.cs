@@ -116,7 +116,7 @@ namespace DangNhap
             this.BTN_themnhom.Radius = 5;
             this.BTN_themnhom.Size = new System.Drawing.Size(129, 35);
             this.BTN_themnhom.TabIndex = 169;
-            this.BTN_themnhom.Text = "Tạo nhóm mới";
+            this.BTN_themnhom.Text = "Tạo mới";
             this.BTN_themnhom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_themnhom.Click += new System.EventHandler(this.BTN_themnhom_Click);
             // 

@@ -599,6 +599,7 @@ namespace DangNhap
             // 
             this.CBB_loainv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.CBB_loainv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBB_loainv.ForeColor = System.Drawing.Color.White;
             this.CBB_loainv.FormattingEnabled = true;
             this.CBB_loainv.Location = new System.Drawing.Point(30, 90);
             this.CBB_loainv.Name = "CBB_loainv";
@@ -620,6 +621,7 @@ namespace DangNhap
             // 
             this.CBB_phongban.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.CBB_phongban.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBB_phongban.ForeColor = System.Drawing.Color.White;
             this.CBB_phongban.FormattingEnabled = true;
             this.CBB_phongban.Location = new System.Drawing.Point(30, 194);
             this.CBB_phongban.Name = "CBB_phongban";
@@ -632,6 +634,7 @@ namespace DangNhap
             this.CBB_nhom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.CBB_nhom.Enabled = false;
             this.CBB_nhom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBB_nhom.ForeColor = System.Drawing.Color.White;
             this.CBB_nhom.FormattingEnabled = true;
             this.CBB_nhom.Location = new System.Drawing.Point(30, 298);
             this.CBB_nhom.Name = "CBB_nhom";
