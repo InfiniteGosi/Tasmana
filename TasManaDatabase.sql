@@ -97,6 +97,7 @@ CREATE TABLE TaiKhoan
   matKhau VARCHAR(100) NOT NULL,
   maNhanVien VARCHAR(10) NOT NULL,
   disable BIT NOT NULL,
+  rememberId BIT NOT NULL,
   PRIMARY KEY (maNguoiDung),
   FOREIGN KEY (maNhanVien) REFERENCES nhanVien(maNhanVien)
 );
@@ -271,11 +272,12 @@ INSERT INTO NhanVien VALUES('GD-001', 'jd@gmail.com', 'Ho', 'Khang', '111111111'
 INSERT INTO NhanVien VALUES('VS-002', 'VS002@gmail.com', 'Vu', 'Quang', '1321312', '1/2/2004', 1, 'TP.HCM', '1234576', 'Part-time', N'Độc thân', '1111211', 1, '2024-01-01', '2025-12-31', 'TP.HCM', 'Chua co', N'Tốt', 'VS','VSN02')
 INSERT INTO NhanVien VALUES('VS-003', 'email_nv001@example.com', 'Tran', 'An', '0123456669', '2000-01-01', 0, N'Hà Nội', '072947182653', 'Full-time', N'Độc thân', '01231230213', 1, '2024-01-01', '2025-12-31', N'Địa chỉ thường trú NV001', 'Chua co', N'Tốt', 'VS','VSN01')
 -- Insert thông tin NV
-INSERT INTO TaiKhoan VALUES('GD-001.KHANG.111111111', '123', 'GD-001', 0)
-INSERT INTO TaiKhoan VALUES('VS-002.QUANG.1321312', '123', 'VS-002', 0)
-INSERT INTO TaiKhoan VALUES('VS-003.AN.0123456669', '123', 'VS-003', 0)
+INSERT INTO TaiKhoan VALUES('GD-001.KHANG.111111111', '123', 'GD-001', 0, 1)
+INSERT INTO TaiKhoan VALUES('VS-002.QUANG.1321312', '123', 'VS-002', 0, 0)
+INSERT INTO TaiKhoan VALUES('VS-003.AN.0123456669', '123', 'VS-003', 0, 0)
 SELECT * FROM TaiKhoan
 SELECT * FROM NhanVien
+
 
 -- Insert dữ liệu mẫu cư dân
 INSERT INTO CuDan VALUES('CD-A001','Nguyen Thi An','2024-01-01','195052003','0987654321','nguyenthian@example.com', '9876543','2024-01-01','2022-01-01', 35, 0, 'dog', 'vietnam', null);
@@ -556,7 +558,7 @@ create procedure [dbo].[SP_ThemTaiKhoan]
 	@disable bit
 as
 begin
-	insert into TaiKhoan
+	insert into TaiKhoan (maNguoiDung, matKhau, maNhanVien, disable)
 	values(@maNguoiDung,
 		   @matKhau,
 		   @maNhanVien,
@@ -661,16 +663,16 @@ begin
 		@maCuDan)
 end
 -- Procedure thêm Nhóm
-Create PROCEDURE [dbo].[SP_ThemNhom]
-	@maNhom VARCHAR(10),
-	@maTruongNhom VARCHAR(10),
-	@maBoPhan VARCHAR(10)
-AS
-BEGIN
-	INSERT INTO Nhom
-	Values (@maNhom, @maTruongNhom, @maBoPhan)
-END
-GO
+--Create PROCEDURE [dbo].[SP_ThemNhom]
+--	@maNhom VARCHAR(10),
+--	@maTruongNhom VARCHAR(10),
+--	@maBoPhan VARCHAR(10)
+--AS
+--BEGIN
+--	INSERT INTO Nhom
+--	Values (@maNhom, @maTruongNhom, @maBoPhan)
+--END
+--GO
 ---Lấy danh sách nhân viên
 CREATE PROCEDURE [dbo].[Count_Job_State]
 AS
