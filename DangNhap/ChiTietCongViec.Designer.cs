@@ -145,7 +145,7 @@ namespace DangNhap
             this.BTN_luu.Location = new System.Drawing.Point(1129, 623);
             this.BTN_luu.Name = "BTN_luu";
             this.BTN_luu.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
-            this.BTN_luu.OnHoverBaseColor2 = System.Drawing.Color.Navy;
+            this.BTN_luu.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.BTN_luu.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_luu.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_luu.OnHoverImage = null;
@@ -543,8 +543,8 @@ namespace DangNhap
             this.gunaGradientButton2.ImageSize = new System.Drawing.Size(10, 10);
             this.gunaGradientButton2.Location = new System.Drawing.Point(21, 623);
             this.gunaGradientButton2.Name = "gunaGradientButton2";
-            this.gunaGradientButton2.OnHoverBaseColor1 = System.Drawing.Color.Red;
-            this.gunaGradientButton2.OnHoverBaseColor2 = System.Drawing.Color.Red;
+            this.gunaGradientButton2.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.gunaGradientButton2.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.gunaGradientButton2.OnHoverBorderColor = System.Drawing.Color.White;
             this.gunaGradientButton2.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaGradientButton2.OnHoverImage = null;

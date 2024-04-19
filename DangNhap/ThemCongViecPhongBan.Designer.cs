@@ -249,7 +249,7 @@ namespace DangNhap
             this.BTN_ok.Location = new System.Drawing.Point(1120, 554);
             this.BTN_ok.Name = "BTN_ok";
             this.BTN_ok.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
-            this.BTN_ok.OnHoverBaseColor2 = System.Drawing.Color.Navy;
+            this.BTN_ok.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.BTN_ok.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_ok.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_ok.OnHoverImage = null;

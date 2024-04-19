@@ -36,14 +36,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.CBB_phongban = new System.Windows.Forms.ComboBox();
             this.LB_maphongban = new System.Windows.Forms.Label();
-            this.LB_themcongviec = new System.Windows.Forms.Label();
             this.BTN_ok = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_huy = new Guna.UI.WinForms.GunaGradientButton();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.PN_nen = new System.Windows.Forms.Panel();
             this.LB_MaNhom = new System.Windows.Forms.Label();
             this.TXB_maNhom = new System.Windows.Forms.TextBox();
-            this.PN_nen.SuspendLayout();
+            this.PN_main = new System.Windows.Forms.Panel();
+            this.BTN_xoa = new Guna.UI.WinForms.GunaGradientButton();
+            this.LB_themcongviec = new System.Windows.Forms.Label();
+            this.BTN_nhanvien = new System.Windows.Forms.Button();
+            this.BTN_phongban = new System.Windows.Forms.Button();
+            this.PN_main.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -90,7 +93,7 @@
             this.CBB_nhanvien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBB_nhanvien.ForeColor = System.Drawing.Color.White;
             this.CBB_nhanvien.FormattingEnabled = true;
-            this.CBB_nhanvien.Location = new System.Drawing.Point(222, 179);
+            this.CBB_nhanvien.Location = new System.Drawing.Point(220, 133);
             this.CBB_nhanvien.Name = "CBB_nhanvien";
             this.CBB_nhanvien.Size = new System.Drawing.Size(419, 30);
             this.CBB_nhanvien.TabIndex = 205;
@@ -101,7 +104,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(52, 185);
+            this.label1.Location = new System.Drawing.Point(50, 137);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 22);
             this.label1.TabIndex = 204;
@@ -114,7 +117,7 @@
             this.CBB_phongban.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBB_phongban.ForeColor = System.Drawing.Color.White;
             this.CBB_phongban.FormattingEnabled = true;
-            this.CBB_phongban.Location = new System.Drawing.Point(222, 86);
+            this.CBB_phongban.Location = new System.Drawing.Point(220, 36);
             this.CBB_phongban.Name = "CBB_phongban";
             this.CBB_phongban.Size = new System.Drawing.Size(419, 30);
             this.CBB_phongban.TabIndex = 203;
@@ -125,22 +128,11 @@
             this.LB_maphongban.AutoSize = true;
             this.LB_maphongban.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_maphongban.ForeColor = System.Drawing.Color.White;
-            this.LB_maphongban.Location = new System.Drawing.Point(52, 92);
+            this.LB_maphongban.Location = new System.Drawing.Point(50, 40);
             this.LB_maphongban.Name = "LB_maphongban";
             this.LB_maphongban.Size = new System.Drawing.Size(91, 22);
             this.LB_maphongban.TabIndex = 202;
             this.LB_maphongban.Text = "Phòng ban";
-            // 
-            // LB_themcongviec
-            // 
-            this.LB_themcongviec.AutoSize = true;
-            this.LB_themcongviec.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_themcongviec.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.LB_themcongviec.Location = new System.Drawing.Point(16, 16);
-            this.LB_themcongviec.Name = "LB_themcongviec";
-            this.LB_themcongviec.Size = new System.Drawing.Size(261, 32);
-            this.LB_themcongviec.TabIndex = 206;
-            this.LB_themcongviec.Text = "THÊM NHÓM MỚI";
             // 
             // BTN_ok
             // 
@@ -158,10 +150,10 @@
             this.BTN_ok.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.BTN_ok.Image = null;
             this.BTN_ok.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_ok.Location = new System.Drawing.Point(658, 412);
+            this.BTN_ok.Location = new System.Drawing.Point(658, 345);
             this.BTN_ok.Name = "BTN_ok";
-            this.BTN_ok.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
-            this.BTN_ok.OnHoverBaseColor2 = System.Drawing.Color.Navy;
+            this.BTN_ok.OnHoverBaseColor1 = System.Drawing.Color.Blue;
+            this.BTN_ok.OnHoverBaseColor2 = System.Drawing.Color.Blue;
             this.BTN_ok.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_ok.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_ok.OnHoverImage = null;
@@ -188,7 +180,7 @@
             this.BTN_huy.ForeColor = System.Drawing.Color.Black;
             this.BTN_huy.Image = null;
             this.BTN_huy.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_huy.Location = new System.Drawing.Point(512, 414);
+            this.BTN_huy.Location = new System.Drawing.Point(512, 345);
             this.BTN_huy.Name = "BTN_huy";
             this.BTN_huy.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(30)))), ((int)(((byte)(43)))));
             this.BTN_huy.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(30)))), ((int)(((byte)(43)))));
@@ -206,29 +198,17 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Gray;
-            this.panel5.Location = new System.Drawing.Point(13, 396);
+            this.panel5.Location = new System.Drawing.Point(13, 329);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(772, 1);
             this.panel5.TabIndex = 210;
-            // 
-            // PN_nen
-            // 
-            this.PN_nen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.PN_nen.Controls.Add(this.LB_themcongviec);
-            this.PN_nen.Location = new System.Drawing.Point(-3, 0);
-            this.PN_nen.Name = "PN_nen";
-            this.PN_nen.Size = new System.Drawing.Size(801, 65);
-            this.PN_nen.TabIndex = 211;
-            this.PN_nen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PN_nen_MouseDown);
-            this.PN_nen.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PN_nen_MouseMove);
-            this.PN_nen.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PN_nen_MouseUp);
             // 
             // LB_MaNhom
             // 
             this.LB_MaNhom.AutoSize = true;
             this.LB_MaNhom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_MaNhom.ForeColor = System.Drawing.Color.White;
-            this.LB_MaNhom.Location = new System.Drawing.Point(52, 287);
+            this.LB_MaNhom.Location = new System.Drawing.Point(50, 234);
             this.LB_MaNhom.Name = "LB_MaNhom";
             this.LB_MaNhom.Size = new System.Drawing.Size(83, 22);
             this.LB_MaNhom.TabIndex = 212;
@@ -240,39 +220,128 @@
             this.TXB_maNhom.Enabled = false;
             this.TXB_maNhom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_maNhom.ForeColor = System.Drawing.Color.White;
-            this.TXB_maNhom.Location = new System.Drawing.Point(222, 287);
+            this.TXB_maNhom.Location = new System.Drawing.Point(220, 230);
             this.TXB_maNhom.Multiline = true;
             this.TXB_maNhom.Name = "TXB_maNhom";
             this.TXB_maNhom.Size = new System.Drawing.Size(419, 30);
             this.TXB_maNhom.TabIndex = 213;
             // 
+            // PN_main
+            // 
+            this.PN_main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.PN_main.Controls.Add(this.BTN_xoa);
+            this.PN_main.Controls.Add(this.LB_maphongban);
+            this.PN_main.Controls.Add(this.TXB_maNhom);
+            this.PN_main.Controls.Add(this.CBB_phongban);
+            this.PN_main.Controls.Add(this.LB_MaNhom);
+            this.PN_main.Controls.Add(this.label1);
+            this.PN_main.Controls.Add(this.panel5);
+            this.PN_main.Controls.Add(this.CBB_nhanvien);
+            this.PN_main.Controls.Add(this.BTN_huy);
+            this.PN_main.Controls.Add(this.BTN_ok);
+            this.PN_main.Location = new System.Drawing.Point(1, 64);
+            this.PN_main.Name = "PN_main";
+            this.PN_main.Size = new System.Drawing.Size(797, 397);
+            this.PN_main.TabIndex = 214;
+            // 
+            // BTN_xoa
+            // 
+            this.BTN_xoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_xoa.Animated = true;
+            this.BTN_xoa.AnimationHoverSpeed = 1F;
+            this.BTN_xoa.AnimationSpeed = 0.03F;
+            this.BTN_xoa.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_xoa.BaseColor1 = System.Drawing.Color.Transparent;
+            this.BTN_xoa.BaseColor2 = System.Drawing.Color.Transparent;
+            this.BTN_xoa.BorderColor = System.Drawing.Color.Red;
+            this.BTN_xoa.BorderSize = 1;
+            this.BTN_xoa.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_xoa.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_xoa.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_xoa.ForeColor = System.Drawing.Color.Red;
+            this.BTN_xoa.Image = null;
+            this.BTN_xoa.ImageSize = new System.Drawing.Size(10, 10);
+            this.BTN_xoa.Location = new System.Drawing.Point(12, 345);
+            this.BTN_xoa.Name = "BTN_xoa";
+            this.BTN_xoa.OnHoverBaseColor1 = System.Drawing.Color.Red;
+            this.BTN_xoa.OnHoverBaseColor2 = System.Drawing.Color.Red;
+            this.BTN_xoa.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_xoa.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_xoa.OnHoverImage = null;
+            this.BTN_xoa.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_xoa.Radius = 5;
+            this.BTN_xoa.Size = new System.Drawing.Size(129, 35);
+            this.BTN_xoa.TabIndex = 225;
+            this.BTN_xoa.Text = "Xóa";
+            this.BTN_xoa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LB_themcongviec
+            // 
+            this.LB_themcongviec.AutoSize = true;
+            this.LB_themcongviec.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_themcongviec.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.LB_themcongviec.Location = new System.Drawing.Point(16, 16);
+            this.LB_themcongviec.Name = "LB_themcongviec";
+            this.LB_themcongviec.Size = new System.Drawing.Size(196, 32);
+            this.LB_themcongviec.TabIndex = 206;
+            this.LB_themcongviec.Text = "THÊM NHÓM";
+            // 
+            // BTN_nhanvien
+            // 
+            this.BTN_nhanvien.AutoSize = true;
+            this.BTN_nhanvien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(53)))), ((int)(((byte)(55)))));
+            this.BTN_nhanvien.FlatAppearance.BorderSize = 0;
+            this.BTN_nhanvien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_nhanvien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_nhanvien.ForeColor = System.Drawing.Color.White;
+            this.BTN_nhanvien.Location = new System.Drawing.Point(513, 16);
+            this.BTN_nhanvien.Name = "BTN_nhanvien";
+            this.BTN_nhanvien.Size = new System.Drawing.Size(125, 47);
+            this.BTN_nhanvien.TabIndex = 215;
+            this.BTN_nhanvien.Text = "Nhân Viên";
+            this.BTN_nhanvien.UseVisualStyleBackColor = false;
+            this.BTN_nhanvien.Click += new System.EventHandler(this.BTN_nhanvien_Click);
+            // 
+            // BTN_phongban
+            // 
+            this.BTN_phongban.AutoSize = true;
+            this.BTN_phongban.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_phongban.FlatAppearance.BorderSize = 0;
+            this.BTN_phongban.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_phongban.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_phongban.ForeColor = System.Drawing.Color.White;
+            this.BTN_phongban.Location = new System.Drawing.Point(644, 16);
+            this.BTN_phongban.Name = "BTN_phongban";
+            this.BTN_phongban.Size = new System.Drawing.Size(125, 47);
+            this.BTN_phongban.TabIndex = 216;
+            this.BTN_phongban.Text = "Phòng Ban";
+            this.BTN_phongban.UseVisualStyleBackColor = false;
+            this.BTN_phongban.Click += new System.EventHandler(this.BTN_phongban_Click);
+            // 
             // ThemNhom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(799, 462);
-            this.Controls.Add(this.TXB_maNhom);
-            this.Controls.Add(this.LB_MaNhom);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.BTN_huy);
-            this.Controls.Add(this.BTN_ok);
-            this.Controls.Add(this.CBB_nhanvien);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.CBB_phongban);
-            this.Controls.Add(this.LB_maphongban);
+            this.Controls.Add(this.BTN_phongban);
+            this.Controls.Add(this.BTN_nhanvien);
+            this.Controls.Add(this.LB_themcongviec);
+            this.Controls.Add(this.PN_main);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.PN_nen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ThemNhom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThemNhom";
             this.Load += new System.EventHandler(this.ThemNhom_Load);
-            this.PN_nen.ResumeLayout(false);
-            this.PN_nen.PerformLayout();
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ThemNhom_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ThemNhom_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ThemNhom_MouseUp);
+            this.PN_main.ResumeLayout(false);
+            this.PN_main.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,12 +357,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox CBB_phongban;
         private System.Windows.Forms.Label LB_maphongban;
-        private System.Windows.Forms.Label LB_themcongviec;
         private Guna.UI.WinForms.GunaGradientButton BTN_ok;
         private Guna.UI.WinForms.GunaGradientButton BTN_huy;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel PN_nen;
         private System.Windows.Forms.Label LB_MaNhom;
         public System.Windows.Forms.TextBox TXB_maNhom;
+        private System.Windows.Forms.Panel PN_main;
+        private System.Windows.Forms.Label LB_themcongviec;
+        private System.Windows.Forms.Button BTN_nhanvien;
+        private System.Windows.Forms.Button BTN_phongban;
+        private Guna.UI.WinForms.GunaGradientButton BTN_xoa;
     }
 }

@@ -10,9 +10,7 @@ namespace DangNhap
 {
     public partial class ThemCongViecNhanVien : Form
     {
-        int mov;
-        int movX;
-        int movY;
+        
         public ThemCongViecNhanVien()
         {
             InitializeComponent();
@@ -65,7 +63,10 @@ namespace DangNhap
             BTN_phongban.BackColor = Color.Transparent;
             BTN_nhanvien.BackColor = Color.Transparent;
         }
-
+        //MoveForm
+        int mov;
+        int movX;
+        int movY;
         private void ThemCongViecNhanVien_MouseDown(object sender, MouseEventArgs e)
         {
             mov = 1;

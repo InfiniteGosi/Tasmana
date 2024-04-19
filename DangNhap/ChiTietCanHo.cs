@@ -64,14 +64,14 @@ namespace DangNhap
 
         private void BTN_lichsu_Click(object sender, EventArgs e)
         {
-             OpenChildForm(new LichSuCanHo());
-             BTN_lichsu.BackColor = Color.FromArgb(51, 53, 55);
-             BTN_chung.BackColor = Color.Transparent;
+            OpenChildForm(new LichSuCanHo());
+            BTN_lichsu.BackColor = Color.FromArgb(51, 53, 55);
+            BTN_chung.BackColor = Color.Transparent;
         }
 
         private void BTN_chung_Click(object sender, EventArgs e)
         {
-            if(currentFormChild != null)
+            if (currentFormChild != null)
             {
                 currentFormChild.Close();
             }
@@ -99,11 +99,18 @@ namespace DangNhap
             string last2Characters = maCanHo.Substring(Math.Max(0, maCanHo.Length - 2));
             switch (last2Characters)
             {
-                case "01": case "02": case "07": case "08": case "11":
+                case "01":
+                case "02":
+                case "07":
+                case "08":
+                case "11":
                     return 3;
-                case "04": case "05":
+                case "04":
+                case "05":
                     return 2;
-                case "03": case "09": case "10":
+                case "03":
+                case "09":
+                case "10":
                     return 1;
                 default:
                     return 5;
@@ -134,7 +141,7 @@ namespace DangNhap
                 CBB_loai.SelectedIndex = Array.IndexOf(arrLoai, GetApartmentType(maCanHoHienTai));
             }
         }
-        
+
         private void ChiTietCanHo_Load(object sender, EventArgs e)
         {
             CBB_tinhtrang.DataSource = arrTinhTrang;
@@ -143,13 +150,36 @@ namespace DangNhap
             CBB_loai.SelectedIndex = -1;
             if (canHoHienTai != null)
             {
-                DisplayApartmenInfo(); 
+                DisplayApartmenInfo();
+            }
+        }
+        private void BTN_thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        //MoveForm
+        int mov;
+        int movX;
+        int movY;
+
+        private void ChiTietCanHo_MouseDown(object sender, MouseEventArgs e)
+        {
+            mov = 1;
+            movX = e.X;
+            movY = e.Y;
+        }
+
+        private void ChiTietCanHo_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mov == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - movX, MousePosition.Y - movY);
             }
         }
 
-        private void BTN_thoat_Click(object sender, EventArgs e)
+        private void ChiTietCanHo_MouseUp(object sender, MouseEventArgs e)
         {
-            Close();
+            mov = 0;
         }
     }
 }

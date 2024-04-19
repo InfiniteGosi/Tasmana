@@ -18,23 +18,55 @@ namespace DangNhap
         {
             InitializeComponent();
         }
-
+        private Form currentFormChild;
+        private void OpenChildForm(Form childForm)
+        {
+            if (currentFormChild != null)
+            {
+                currentFormChild.Close();
+            }
+            currentFormChild = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            PN_main.Controls.Add(childForm);
+            PN_main.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+        private void BTN_phongban_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ThemPhongBan());
+            BTN_nhanvien.BackColor = Color.Transparent;
+            BTN_phongban.BackColor = Color.FromArgb(51, 53, 55);
+        }
+        private void BTN_nhanvien_Click(object sender, EventArgs e)
+        {
+            if(currentFormChild != null)
+            {
+                currentFormChild.Close();
+            }
+            BTN_phongban.BackColor = Color.Transparent;
+            BTN_nhanvien.BackColor = Color.FromArgb(51, 53, 55);
+        }
         private void BTN_huy_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
         //Di chuyển form
         int mov;
         int movX;
         int movY;
-        private void PN_nen_MouseDown(object sender, MouseEventArgs e)
+
+        private void ThemNhom_MouseDown(object sender, MouseEventArgs e)
         {
             mov = 1;
             movX = e.X;
             movY = e.Y;
         }
 
-        private void PN_nen_MouseMove(object sender, MouseEventArgs e)
+        private void ThemNhom_MouseMove(object sender, MouseEventArgs e)
         {
             if (mov == 1)
             {
@@ -42,10 +74,11 @@ namespace DangNhap
             }
         }
 
-        private void PN_nen_MouseUp(object sender, MouseEventArgs e)
+        private void ThemNhom_MouseUp(object sender, MouseEventArgs e)
         {
             mov = 0;
         }
+
         public List<Division> GetPhongBan()
         {
             List<Division> listMaPB = new List<Division>();
