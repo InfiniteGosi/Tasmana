@@ -662,17 +662,18 @@ begin
 		@tinhTrangGDHienTai,
 		@maCuDan)
 end
+GO
 -- Procedure thêm Nhóm
---Create PROCEDURE [dbo].[SP_ThemNhom]
---	@maNhom VARCHAR(10),
---	@maTruongNhom VARCHAR(10),
---	@maBoPhan VARCHAR(10)
---AS
---BEGIN
---	INSERT INTO Nhom
---	Values (@maNhom, @maTruongNhom, @maBoPhan)
---END
---GO
+Create PROCEDURE [dbo].[SP_ThemNhom]
+	@maNhom VARCHAR(10),
+	@maTruongNhom VARCHAR(10),
+	@maBoPhan VARCHAR(10)
+AS
+BEGIN
+	INSERT INTO Nhom
+	Values (@maNhom, @maTruongNhom, @maBoPhan)
+END
+GO
 ---Lấy danh sách nhân viên
 CREATE PROCEDURE [dbo].[Count_Job_State]
 AS
@@ -681,11 +682,11 @@ BEGIN
            NV.ho,
            NV.ten,
            NV.maBoPhan,
-           ISNULL(TongCongViec.Count, 0) AS TongCongViec,
-           ISNULL(HoanThanh.Count, 0) AS HoanThanh,
-           ISNULL(ChuaBatDau.Count, 0) AS ChuaBatDau,
-           ISNULL(DangThucHien.Count, 0) AS DangThucHien,
-           ISNULL(TreHan.Count, 0) AS TreHan
+           ISNULL(TongCongViec.Count, 0) AS tongCongViec,
+           ISNULL(HoanThanh.Count, 0) AS hoanThanh,
+           ISNULL(ChuaBatDau.Count, 0) AS chuaBatDau,
+           ISNULL(DangThucHien.Count, 0) AS dangThucHien,
+           ISNULL(TreHan.Count, 0) AS treHan
     FROM NhanVien NV
         LEFT JOIN (
             SELECT maNhanVien, COUNT(*) AS Count
@@ -751,7 +752,6 @@ BEGIN
 	WHERE NhanVien.maNhanVien = Congviec_Nhanvien.maNhanVien and Congviec_Nhanvien.maCongViec=CongViec.maCongViec and YeuCau.maCongViec = CongViec.maCongViec;
 END
 GO
-EXEC [dbo].[Job_Of_Employees]
 
 ---Lấy công việc của nhóm
 CREATE PROCEDURE [dbo].[Job_Of_Groups]
@@ -762,6 +762,12 @@ BEGIN
 	WHERE Nhom.maNhom = Congviec_Nhom.maNhom and Congviec_Nhom.maCongViec=CongViec.maCongViec and YeuCau.maCongViec = CongViec.maCongViec;
 END
 GO
-EXEC [dbo].[Job_Of_Groups] 
-drop PROCEDURE [dbo].[Job_Of_Groups]
-go
+--Lấy công việc phòng ban
+CREATE PROCEDURE [dbo].[Job_Of_Divides]
+AS
+BEGIN
+	SELECT CongViec.maCongViec as N'Mã công việc', Congviec_PhongBan.maBoPhan as N'Mã bộ phận', QuanLy.maNhanVien as N'Mã Quản lý', CongViec.noiDung as N'Nội dung', YeuCau.maCanHo as N'Mã căn hộ' ,CongViec.ngayGiao as N'Ngày giao', CongViec.ngayCapNhat as N'Ngày cập nhật', CongViec.thoiHan as N'Thời hạn', CongViec.ngayHoanThanh as N'Ngày hoàn thành', CongViec.trangThai as N'Trạng thái', CongViec.ghiChu as N'Ghi chú' 
+	FROM PhongBan, CongViec, Congviec_PhongBan, YeuCau, QuanLy
+	WHERE PhongBan.maBoPhan = Congviec_PhongBan.maBoPhan and Congviec_PhongBan.maCongViec=CongViec.maCongViec and YeuCau.maCongViec = CongViec.maCongViec and QuanLy.maBoPhan = Congviec_PhongBan.maBoPhan;
+END
+GO

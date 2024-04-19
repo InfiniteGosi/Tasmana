@@ -21,6 +21,7 @@ using Syncfusion.Grouping;
 using Syncfusion.Windows.Forms.Grid;
 using Syncfusion.Windows.Shared;
 using DAO;
+using System.IO;
 
 namespace DangNhap
 {
@@ -124,6 +125,116 @@ namespace DangNhap
         {
             ThemNhom tn = new ThemNhom();
             tn.Show();
+        }
+        private DataTable GetDataTable()
+        {
+            DataTable dataTable = new DataTable();
+
+            DataColumn col1 = new DataColumn("Mã nhân viên");
+            DataColumn col2 = new DataColumn("Họ");
+            DataColumn col3 = new DataColumn("Tên");
+            DataColumn col4 = new DataColumn("Mã bộ phận");
+            DataColumn col5 = new DataColumn("Tổng công việc");
+            DataColumn col6 = new DataColumn("Hoàn thành");
+            DataColumn col7 = new DataColumn("Đang thực hiện");
+            DataColumn col8 = new DataColumn("Chưa bắt đầu");
+            DataColumn col9 = new DataColumn("Trễ Hạn");
+
+            dataTable.Columns.Add(col1);
+            dataTable.Columns.Add(col2);
+            dataTable.Columns.Add(col3);
+            dataTable.Columns.Add(col4);
+            dataTable.Columns.Add(col5);
+            dataTable.Columns.Add(col6);
+            dataTable.Columns.Add(col7);
+            dataTable.Columns.Add(col8);
+            dataTable.Columns.Add(col9);
+
+            foreach (Record record in GGC_danhsachnv.Table.Records)
+            {
+                DataRow dtRow = dataTable.NewRow();
+                dtRow[0] = record.GetValue("maNhanVien");
+                dtRow[1] = record.GetValue("ho");
+                dtRow[2] = record.GetValue("ten");
+                dtRow[3] = record.GetValue("maBoPhan");
+                dtRow[4] = record.GetValue("tongCongViec");
+                dtRow[5] = record.GetValue("hoanThanh");
+                dtRow[6] = record.GetValue("dangThucHien");
+                dtRow[7] = record.GetValue("chuaBatDau");
+                dtRow[8] = record.GetValue("treHan");
+                dataTable.Rows.Add(dtRow);
+            }
+            return dataTable;
+        }
+        private void BTN_excel_Click(object sender, EventArgs e)
+        {
+            DataTable dataTable = GetDataTable();
+            Export export = new Export();
+            export.ToExcelNV(dataTable, "Nhan_vien", "NHÂN VIÊN");
+
+        }
+
+        private void BTN_PDF_Click(object sender, EventArgs e)
+        {
+            if (GGC_danhsachnv.Table.Records.Count > 0)
+            {
+                SaveFileDialog save = new SaveFileDialog
+                {
+                    Filter = "PDF (*.pdf)|*.pdf",
+                    FileName = "NhanVien.pdf"
+                };
+                bool ErrorMessage = false;
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(save.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(save.FileName);
+                        }
+                        catch (Exception ex)
+                        {
+                            ErrorMessage = true;
+                            MessageBox.Show("Unable to write data in disk" + ex.Message);
+                        }
+                    }
+                    if (!ErrorMessage)
+                    {
+                        try
+                        {
+                            DataTable dataTable = GetDataTable();
+                            Export export = new Export();
+                            export.ToPDF(dataTable, save.FileName);
+
+                            MessageBox.Show("Successful", "Info");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error while exporting Data" + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No record found", "Info");
+            }
+        }
+
+        private void BTN_in_Click(object sender, EventArgs e)
+        {
+            GGC_danhsachnv.TableModel.Properties.PrintFrame = false;
+
+            GridPrintDocumentAdv gridPrintDocument = new GridPrintDocumentAdv(GGC_danhsachnv.TableControl);
+            PrintDialog printDialog = new PrintDialog();
+            gridPrintDocument.ScaleColumnsToFitPage = true;
+            PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog();
+            printPreviewDialog.Document = gridPrintDocument;
+
+            printPreviewDialog.ShowDialog();
+            printDialog.Document = gridPrintDocument;
+            if (printDialog.ShowDialog() == DialogResult.OK)
+                gridPrintDocument.Print();
         }
     }
 }
