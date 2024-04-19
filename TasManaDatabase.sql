@@ -97,10 +97,11 @@ CREATE TABLE TaiKhoan
   matKhau VARCHAR(100) NOT NULL,
   maNhanVien VARCHAR(10) NOT NULL,
   disable BIT NOT NULL,
-  rememberId BIT NOT NULL,
+  rememberId BIT,
   PRIMARY KEY (maNguoiDung),
   FOREIGN KEY (maNhanVien) REFERENCES nhanVien(maNhanVien)
 );
+
 
 CREATE TABLE CEO
 (
@@ -409,6 +410,7 @@ create procedure [dbo].[SP_CapNhatNhanVien]
     @dChiThuongTru nvarchar(100),
     @dChiTamTru nvarchar(100),
     @tinhTrangHDLD nvarchar(100),
+	@maBoPhan varchar(10),
     @maNhom varchar(10)
 as
 begin
@@ -430,6 +432,7 @@ begin
         dChiThuongTru = @dChiThuongTru,
         dChiTamTru = @dChiTamTru,
         tinhTrangHDLD = @tinhTrangHDLD,
+		maBoPhan = @maBoPhan,
         maNhom = @maNhom
     where maNhanVien = @maNhanVien;
 end
