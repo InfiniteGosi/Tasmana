@@ -763,10 +763,10 @@ BEGIN
 END
 GO
 --Lấy công việc phòng ban
-CREATE PROCEDURE [dbo].[Job_Of_Divides]
+CREATE PROCEDURE [dbo].[Job_Of_Divisions]
 AS
 BEGIN
-	SELECT CongViec.maCongViec as N'Mã công việc', Congviec_PhongBan.maBoPhan as N'Mã bộ phận', QuanLy.maNhanVien as N'Mã Quản lý', CongViec.noiDung as N'Nội dung', YeuCau.maCanHo as N'Mã căn hộ' ,CongViec.ngayGiao as N'Ngày giao', CongViec.ngayCapNhat as N'Ngày cập nhật', CongViec.thoiHan as N'Thời hạn', CongViec.ngayHoanThanh as N'Ngày hoàn thành', CongViec.trangThai as N'Trạng thái', CongViec.ghiChu as N'Ghi chú' 
+	SELECT CongViec.maCongViec as N'Mã công việc', Congviec_PhongBan.maBoPhan as N'Mã bộ phận', QuanLy.maNhanVien as N'Mã quản lý', CongViec.noiDung as N'Nội dung', YeuCau.maCanHo as N'Mã căn hộ' ,CongViec.ngayGiao as N'Ngày giao', CongViec.ngayCapNhat as N'Ngày cập nhật', CongViec.thoiHan as N'Thời hạn', CongViec.ngayHoanThanh as N'Ngày hoàn thành', CongViec.trangThai as N'Trạng thái', CongViec.ghiChu as N'Ghi chú' 
 	FROM PhongBan, CongViec, Congviec_PhongBan, YeuCau, QuanLy
 	WHERE PhongBan.maBoPhan = Congviec_PhongBan.maBoPhan and Congviec_PhongBan.maCongViec=CongViec.maCongViec and YeuCau.maCongViec = CongViec.maCongViec and QuanLy.maBoPhan = Congviec_PhongBan.maBoPhan;
 END
