@@ -15,13 +15,13 @@ namespace DTO
         public int SoLuongPhongNgu { get; set; }
         public int SoLuongToilet { get; set; }
         public Image SoDoMatBang { get; set; }
-        public float MucPhiQuanLyHangThang {  get; set; }
+        public int MucPhiQuanLyHangThang {  get; set; }
         public int SoLuongTheThangMay {  get; set; }
         public DateTime LichSuGiaoDich {  get; set; }
         public string TinhTrangGiaoDichHienTai { get; set; }
         public string MaCuDan {  get; set; }
 
-        public Apartment(string maCanHo, float dienTich, int viTriTang, int soLuongToilet, int soLuongPhongNgu, Image soDoMatBang, float mucPhiQuanLyHangThang, int soLuongTheThangMay, DateTime lichSuGiaoDich, string tinhTrangGiaoDichHienTai, string maCuDan)
+        public Apartment(string maCanHo, float dienTich, int viTriTang, int soLuongToilet, int soLuongPhongNgu, Image soDoMatBang, int mucPhiQuanLyHangThang, int soLuongTheThangMay, DateTime lichSuGiaoDich, string tinhTrangGiaoDichHienTai, string maCuDan)
         {
             MaCanHo = maCanHo;
             DienTich = dienTich;

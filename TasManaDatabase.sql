@@ -139,14 +139,15 @@ CREATE TABLE CuDan
   ngayChuyenDi DATE NOT NULL,
   soDienNuocHangThang FLOAT NOT NULL,
   tinhTrangCongNo FLOAT NOT NULL,
-  duLieuDangKyThuNuoi NVARCHAR(100) NOT NULL,
+  duLieuDangKyThuNuoi NVARCHAR(100),
   quocTich NVARCHAR(50) NOT NULL,
-  maCuDanNguoiThan VARCHAR(10) NOT NULL,
+  maCuDanNguoiThan VARCHAR(10),
   PRIMARY KEY (maCuDan),
   FOREIGN KEY (maCuDanNguoiThan) REFERENCES CuDan(maCuDan),
   UNIQUE (maDinhDanh),
   UNIQUE (soTheTamTru)
 );
+
 
 CREATE TABLE ChuHo
 (
@@ -200,7 +201,7 @@ CREATE TABLE CanHo
   tinhTrangGDHienTai NVARCHAR(100) NOT NULL,
   maCuDan VARCHAR(10),
   PRIMARY KEY (maCanHo),
-  FOREIGN KEY (maCuDan) REFERENCES cuDan(maCuDan)
+  FOREIGN KEY (maCuDan) REFERENCES cuDan(maCuDan),
 );
 
 CREATE TABLE PhuongTien
@@ -276,19 +277,37 @@ INSERT INTO TaiKhoan VALUES('VS-003.AN.0123456669', '123', 'VS-003', 0)
 SELECT * FROM TaiKhoan
 SELECT * FROM NhanVien
 
+-- Insert dữ liệu mẫu cư dân
+INSERT INTO CuDan VALUES('CD-A001','Nguyen Thi An','2024-01-01','195052003','0987654321','nguyenthian@example.com', '9876543','2024-01-01','2022-01-01', 35, 0, 'dog', 'vietnam', null);
+INSERT INTO CuDan VALUES('CD-A002','Tran Van Binh','1980-09-10','198092035','0123456789','tranvanbinh@example.com', '1234567','2024-01-02','2022-01-02', 35, 0, 'dog', 'vietnam', null);
+INSERT INTO CuDan VALUES('CD-A003','Le Thi Mai','1999-12-25','199912253','0365987412','lethimai@example.com', '9871235','2024-01-03','2022-01-03', 35, 0, 'dog', 'vietnam', null)
+INSERT INTO CuDan VALUES('CD-A004','Pham Van Cuong','1988-08-08','198808083','0123456789','phamvancuong@example.com', '4561239','2024-01-04','2022-01-04', 35, 0, 'dog', 'vietnam', null)
+INSERT INTO CuDan VALUES('CD-A005','Hoang Thi Thu','1992-03-18','199203182','0987654321','hoangthithu@example.com', '7894561','2024-01-05','2022-01-05', 35, 0, 'dog', 'vietnam', null)
+INSERT INTO CuDan VALUES('CD-A006','Vu Duc Trung','1985-11-30','198511302','0365987412','vuductrung@example.com', '1237894','2024-01-06','2022-01-06', 35, 0, 'dog', 'vietnam', null)
+INSERT INTO CuDan VALUES('CD-A007','Nguyen Van An','1996-02-14','199602143','0901234567','nguyenvanan@example.com', '1593572','2024-01-07','2022-01-07', 35, 0, 'dog', 'vietnam', null)
+INSERT INTO CuDan VALUES('CD-A008','Tran Thi Hoa','1982-07-05','198207053','0987654321','tranthihoa@example.com', '7539514','2024-01-08','2022-01-08', 2, 0, 'dog', 'vietnam', null)
+INSERT INTO CuDan VALUES('CD-A009','Le Van Hieu','1976-04-12','197604123','0123456789','levanhieu@example.com', '4569872','2024-01-09','2022-01-09', 0, 0, 'dog', 'vietnam', null)
 
 -- Insert Dữ liệu thử của căn hộ
-INSERT INTO CanHo VALUES ('WPHA', 100.5, 5, 3, 2, NULL, 200, 2, '2024-01-01', N'Còn trống', NULL);
-INSERT INTO CanHo VALUES ('WPHB', 90.2, 8, 2, 1, NULL, 150, 1, '2024-01-01', N'Còn trống', NULL);
-INSERT INTO CanHo VALUES ('WPHC', 110.8, 3, 4, 2, NULL, 250, 2, '2024-01-01', N'Còn trống', NULL);
-INSERT INTO CanHo VALUES ('WPHD', 80.0, 10, 1, 1, NULL, 180, 1, '2024-01-01', N'Còn trống', NULL);
+INSERT INTO CanHo VALUES ('WPHA', 100.5, 36, 5, 2, NULL, 2000000, 2, '2024-01-01', N'Còn trống', 'CD-A001');
+INSERT INTO CanHo VALUES ('WPHB', 90.2, 36, 5, 1, NULL, 1500000, 1, '2024-01-01', N'Còn trống', 'CD-A002');
+INSERT INTO CanHo VALUES ('WPHC', 110.8, 37, 5, 2, NULL, 2500000, 2, '2024-01-01', N'Còn trống', 'CD-A003');
+INSERT INTO CanHo VALUES ('WPHD', 80.0, 37, 5, 1, NULL, 200000, 1, '2024-01-01', N'Còn trống', 'CD-A004');
+INSERT INTO CanHo VALUES ('W3501', 80.0, 35, 5, 1, NULL, 100000, 1, '2024-01-01', N'Còn trống', 'CD-A005');
+INSERT INTO CanHo VALUES ('W3502', 80.0, 35, 5, 1, NULL, 1800000, 1, '2024-01-01', N'Còn trống', 'CD-A006');
+INSERT INTO CanHo VALUES ('W3503', 80.0, 35, 5, 1, NULL, 310000, 1, '2024-01-01', N'Còn trống', 'CD-A007');
+INSERT INTO CanHo VALUES ('W3504', 80.0, 35, 5, 1, NULL, 1800000, 1, '2024-01-01', N'Còn trống', 'CD-A008');
+INSERT INTO CanHo VALUES ('W3510', 80.0, 35, 5, 1, NULL, 18000000, 1, '2024-01-01', N'Còn trống', 'CD-A009');
 select * from CanHo
 
+
+
 -- Insert mẫu công việc
-INSERT INTO CongViec VALUES('CVVS1', N'Quét nhà', '2024-04-08 9:12:00','2024-04-04 12:30:00',null, '2024-04-08 9:12:00',N'Chưa bắt đầu',null,2)
+INSERT INTO CongViec VALUES('CV1', N'Quét nhà', '2024-04-08 9:12:00','2024-04-04 12:30:00',null, '2024-04-08 9:12:00',N'Chưa bắt đầu',null,2)
 Insert into CongViec_NhanVien Values ('VS-003', 'CVVS1')
-Insert INTO YeuCau VALUES('CVVS1', 'WPHA')
+Insert INTO YeuCau VALUES('CV1', 'WPHA')
 go
+
 
 SELECT * FROM CongViec
 SELECT * FROM CongViec_PDF
@@ -313,6 +332,7 @@ create procedure [dbo].[SP_ThemNhanVien]
 	@dChiThuongTru nvarchar(100),
 	@dChiTamTru nvarchar(100),
 	@tinhTrangHDLD nvarchar(100),
+	@maBoPhan varchar(10),
 	@maNhom varchar(10)
 as
 begin
@@ -336,15 +356,12 @@ begin
         @dChiThuongTru,
         @dChiTamTru,
         @tinhTrangHDLD,
+		@maBoPhan,
         @maNhom
     )
 end
 go
 
-SELECT * FROM CanHo
-SELECT * FROM CongViec
-SELECT * FROM Congviec_Nhanvien
-go
 
 -- Procedure lấy thông tin nhóm theo mã nhân viên
 create procedure [dbo].[SP_LayNhomTheoMaNhanVien]
@@ -718,6 +735,4 @@ BEGIN
         WHERE (CAST(thoiHan AS datetime) < CAST(GETDATE() AS datetime) OR CAST(ngayHoanThanh AS datetime) > CAST(thoiHan AS datetime));
     END
 END;
-DROP Trigger CheckLateJob
-Go
-Select * From CongViec
+go

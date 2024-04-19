@@ -20,7 +20,6 @@ namespace DangNhap
     public partial class CanHo : Form
     {
         private List<Apartment> apartments;
-        private Apartment canHoChiTiet;
         public CanHo()
         {
             SyncfusionLicenseProvider.RegisterLicense("MzIxOTI2MkAzMjM1MmUzMDJlMzBORkJZeFRVdUQxeERjT2xkWC9vdFgxS29wUmREOU9CZVdENkRUN0lrSStVPQ==;Mgo+DSMBaFt6QHFqVkNrXVNbdV5dVGpAd0N3RGlcdlR1fUUmHVdTRHRbQlliS3xTck1hW35Wcnc=");
@@ -49,6 +48,7 @@ namespace DangNhap
                 e.SoLuongPhongNgu,
                 e.SoLuongToilet,
                 e.SoLuongTheThangMay,
+                e.MucPhiQuanLyHangThang,
                 LichSuGiaoDich = e.LichSuGiaoDich.ToString("dd/MM/yyyy"),
                 e.TinhTrangGiaoDichHienTai,
                 e.MaCuDan
@@ -61,9 +61,10 @@ namespace DangNhap
             GGC_canho.TableDescriptor.Columns[3].HeaderText = "Số lượng phòng ngủ";
             GGC_canho.TableDescriptor.Columns[4].HeaderText = "Số lượng toilet";
             GGC_canho.TableDescriptor.Columns[5].HeaderText = "Số lượng thẻ thang máy";
-            GGC_canho.TableDescriptor.Columns[6].HeaderText = "Lịch sử giao dịch";
-            GGC_canho.TableDescriptor.Columns[7].HeaderText = "Tình trạng giao dịch hiện tại";
-            GGC_canho.TableDescriptor.Columns[8].HeaderText = "Mã cư dân";
+            GGC_canho.TableDescriptor.Columns[6].HeaderText = "Mức phí quản lý hàng tháng";
+            GGC_canho.TableDescriptor.Columns[7].HeaderText = "Lịch sử giao dịch";
+            GGC_canho.TableDescriptor.Columns[8].HeaderText = "Tình trạng giao dịch hiện tại";
+            GGC_canho.TableDescriptor.Columns[9].HeaderText = "Mã cư dân";
 
             GGC_canho.TopLevelGroupOptions.ShowFilterBar = true;
             GGC_canho.ActivateCurrentCellBehavior = GridCellActivateAction.None;
@@ -93,10 +94,7 @@ namespace DangNhap
         {
             DisplayGCC_canho();
         }
-        private void GetApartmentById(string maCanHo)
-        {
-            canHoChiTiet = ApartmentBLL.Instance.GetApartmentById(maCanHo);
-        }
+        
 
         private void GGC_canho_TableControlCellDoubleClick(object sender, GridTableControlCellClickEventArgs e)
         {
@@ -109,9 +107,8 @@ namespace DangNhap
                 Record record = GGC_canho.Table.Records[rowIndex];
 
                 // Extract data from the record
-                string maNhanVien = record.GetValue("MaCanHo").ToString();
-                GetApartmentById(maNhanVien);
-                ChiTietCanHo ctch = new ChiTietCanHo(this, canHoChiTiet);
+                string maCanHo = record.GetValue("MaCanHo").ToString();
+                ChiTietCanHo ctch = new ChiTietCanHo(this, maCanHo);
                 ctch.ShowDialog();
             }
         }
