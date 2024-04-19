@@ -685,7 +685,7 @@ BEGIN
            ISNULL(HoanThanh.Count, 0) AS HoanThanh,
            ISNULL(ChuaBatDau.Count, 0) AS ChuaBatDau,
            ISNULL(DangThucHien.Count, 0) AS DangThucHien,
-           ISNULL(TreHen.Count, 0) AS TreHen
+           ISNULL(TreHan.Count, 0) AS TreHan
     FROM NhanVien NV
         LEFT JOIN (
             SELECT maNhanVien, COUNT(*) AS Count
@@ -719,9 +719,10 @@ BEGIN
             JOIN CongViec CV ON CNV.maCongViec = CV.maCongViec
             WHERE CV.trangThai = N'Trễ hạn'
             GROUP BY maNhanVien
-        ) AS TreHen ON NV.maNhanVien = TreHen.maNhanVien;
+        ) AS TreHan ON NV.maNhanVien = TreHan.maNhanVien;
 END
 GO
+DROP PROCEDURE [dbo].[Count_Job_State]
 -- Tạo Trigger tự động kiểm tra tình trạng công việc
 CREATE TRIGGER CheckLateJob
 ON CongViec
@@ -737,4 +738,30 @@ BEGIN
         WHERE (CAST(thoiHan AS datetime) < CAST(GETDATE() AS datetime) OR CAST(ngayHoanThanh AS datetime) > CAST(thoiHan AS datetime));
     END
 END;
+DROP Trigger CheckLateJob
+Go
+Select * From CongViec
+
+---Lấy công việc của nhân viên
+CREATE PROCEDURE [dbo].[Job_Of_Employees]
+AS
+BEGIN
+	SELECT CongViec.maCongViec as N'Mã công việc', Congviec_Nhanvien.maNhanVien as N'Mã nhân viên', NhanVien.ho as N'Họ', NhanVien.ten as N'Tên', CongViec.noiDung as N'Nội dung', YeuCau.maCanHo as N'Mã căn hộ' ,CongViec.ngayGiao as N'Ngày giao', CongViec.ngayCapNhat as N'Ngày cập nhật', CongViec.thoiHan as N'Thời hạn', CongViec.ngayHoanThanh as N'Ngày hoàn thành', CongViec.trangThai as N'Trạng thái', CongViec.ghiChu as N'Ghi chú' 
+	FROM NhanVien, CongViec, Congviec_Nhanvien, YeuCau 
+	WHERE NhanVien.maNhanVien = Congviec_Nhanvien.maNhanVien and Congviec_Nhanvien.maCongViec=CongViec.maCongViec and YeuCau.maCongViec = CongViec.maCongViec;
+END
+GO
+EXEC [dbo].[Job_Of_Employees]
+
+---Lấy công việc của nhóm
+CREATE PROCEDURE [dbo].[Job_Of_Groups]
+AS
+BEGIN
+	SELECT CongViec.maCongViec as N'Mã công việc', CongViec_Nhom.maNhom as N'Mã nhóm', Nhom.maTruongNhom as N'Mã Trưởng Nhóm', Nhom.maBoPhan as N'Mã Bộ phận', CongViec.noiDung as N'Nội dung', YeuCau.maCanHo as N'Mã căn hộ' ,CongViec.ngayGiao as N'Ngày giao', CongViec.ngayCapNhat as N'Ngày cập nhật', CongViec.thoiHan as N'Thời hạn', CongViec.ngayHoanThanh as N'Ngày hoàn thành', CongViec.trangThai as N'Trạng thái', CongViec.ghiChu as N'Ghi chú' 
+	FROM Nhom, CongViec, Congviec_Nhom, YeuCau 
+	WHERE Nhom.maNhom = Congviec_Nhom.maNhom and Congviec_Nhom.maCongViec=CongViec.maCongViec and YeuCau.maCongViec = CongViec.maCongViec;
+END
+GO
+EXEC [dbo].[Job_Of_Groups] 
+drop PROCEDURE [dbo].[Job_Of_Groups]
 go

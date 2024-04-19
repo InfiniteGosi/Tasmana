@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DAO;
 using DTO;
 using Google.Protobuf.WellKnownTypes;
 using Syncfusion.GridHelperClasses;
@@ -6,6 +7,7 @@ using Syncfusion.Grouping;
 using Syncfusion.Licensing;
 using Syncfusion.Windows.Forms.Grid;
 using Syncfusion.Windows.Forms.Grid.Grouping;
+using Syncfusion.Windows.Forms.Tools;
 using Syncfusion.Windows.Shared;
 using System;
 using System.Collections.Generic;
@@ -22,7 +24,7 @@ namespace DangNhap
 
         private void GetJobs()
         {
-            jobs = JobBLL.Instance.GetJob();
+            jobs = JobBLL.Instance.GetAllJob();
         }
 
         public CongViecChung()
@@ -45,59 +47,40 @@ namespace DangNhap
         }
         private void CongViecChung_Load(object sender, EventArgs e)
         {
-            GetJobs();
-            GGC_hienthicongviec.Size = new System.Drawing.Size(950, 404);
-            GGC_hienthicongviec.DataSource = jobs;
-            GGC_hienthicongviec_DataSourceChanged(sender, e);
-            GGC_hienthicongviec.TableDescriptor.Columns[0].HeaderText = "Mã công việc";
-            GGC_hienthicongviec.TableDescriptor.Columns[1].HeaderText = "Mã nhân viên";
-            GGC_hienthicongviec.TableDescriptor.Columns[2].HeaderText = "Họ";
-            GGC_hienthicongviec.TableDescriptor.Columns[3].HeaderText = "Tên";
-            GGC_hienthicongviec.TableDescriptor.Columns[4].HeaderText = "Nội dung";
-            GGC_hienthicongviec.TableDescriptor.Columns[5].HeaderText = "Mã căn hộ";
-            GGC_hienthicongviec.TableDescriptor.Columns[6].HeaderText = "Ngày giao";
-            GGC_hienthicongviec.TableDescriptor.Columns[7].HeaderText = "Thời hạn";
-            GGC_hienthicongviec.TableDescriptor.Columns[8].HeaderText = "Ngày hoàn thành";
-            GGC_hienthicongviec.TableDescriptor.Columns[9].HeaderText = "Ngày cập nhật";
-            GGC_hienthicongviec.TableDescriptor.Columns[10].HeaderText = "Trạng thái";
-            GGC_hienthicongviec.TableDescriptor.Columns[11].HeaderText = "Ghi chú";
-
-            GGC_hienthicongviec.TopLevelGroupOptions.ShowFilterBar = true;
-            GGC_hienthicongviec.ActivateCurrentCellBehavior = GridCellActivateAction.None;
-            GGC_hienthicongviec.ShowGroupDropArea = true;
-            GGC_hienthicongviec.BorderStyle = BorderStyle.FixedSingle;
-
-            // Tạo đối tượng GridColumnDescriptorCollection để quản lý các cột
-            GridColumnDescriptorCollection columns = GGC_hienthicongviec.TableDescriptor.Columns;
-            foreach (GridColumnDescriptor column in columns)
-            {
-                column.AllowFilter = true;
-            }
-            GridDynamicFilter dynamicFilter = new GridDynamicFilter();
-            dynamicFilter.WireGrid(GGC_hienthicongviec);
-
-            GridExcelFilter excelFilter = new GridExcelFilter();
-            excelFilter.WireGrid(GGC_hienthicongviec);
-            // Thiết lập AutoSizeMode cho mỗi cột
-            foreach (GridColumnDescriptor column in columns)
-            {
-                column.Appearance.AnyRecordFieldCell.AutoSize = true;
-                column.Appearance.AnyRecordFieldCell.CellType = "TextBox";
-            }
+            TCA_congviecchung_TabIndexChanged(sender, e);
             if (!DangNhap.currentAccount.Level.Equals("CEO"))
             {
                 BTN_themcongviec.Enabled = false;
                 BTN_themcongviec.Visible = false;
             }
         }
+        private void TCA_congviecchung_SelectedIndexChanged(object sender, EventArgs e)
 
-        private void GGC_hienthicongviec_DataSourceChanged(object sender, EventArgs e)
         {
-            if (GGC_hienthicongviec.TableDescriptor.Columns.Contains("NgayHoanThanh"))
+
+            foreach (TabPageAdv item in TCA_congviecchung.TabPages)
+
             {
-                var col = GGC_hienthicongviec.TableDescriptor.Columns["NgayHoanThanh"];
+
+                if (TCA_congviecchung.SelectedTab == item)
+
+                {
+
+                    Console.WriteLine("Selected Tab:" + item.Text);
+
+                }
+
+            }
+
+        }
+
+        private void GGC_DataSourceChanged(GridGroupingControl ggc)
+        {
+            if (ggc.TableDescriptor.Columns.Contains("NgayHoanThanh"))
+            {
+                var col = ggc.TableDescriptor.Columns["NgayHoanThanh"];
                 col.Appearance.AnyCell.CellValueType = typeof(string);
-                foreach (var comp in GGC_hienthicongviec.Table.Records)
+                foreach (var comp in ggc.Table.Records)
                 {
                     var cellValue = comp.GetValue("NgayHoanThanh");
                     if(cellValue.ToString().Contains( "1/1/0001"))
@@ -106,11 +89,11 @@ namespace DangNhap
                     }
                 }
             }
-            if (GGC_hienthicongviec.TableDescriptor.Columns.Contains("ThoiHan"))
+            if (ggc.TableDescriptor.Columns.Contains("ThoiHan"))
             {
-                var col = GGC_hienthicongviec.TableDescriptor.Columns["ThoiHan"];
+                var col = ggc.TableDescriptor.Columns["ThoiHan"];
                 col.Appearance.AnyCell.CellValueType = typeof(string);
-                foreach (var comp in GGC_hienthicongviec.Table.Records)
+                foreach (var comp in ggc.Table.Records)
                 {
                     var cellValue = comp.GetValue("ThoiHan");
                     if (cellValue.ToString().Contains("1/1/0001"))
@@ -299,6 +282,101 @@ namespace DangNhap
                 // Show Form
                 ctcv.ShowDialog();
                 this.Refresh();
+            }
+        }
+
+        private void TCA_congviecchung_TabIndexChanged(object sender, EventArgs e)
+        {
+            if (TCA_congviecchung.SelectedTab == TPA_nhanvien)
+            {
+                GGC_hienthicongviec.DataSource = JobDAO.Instance.GetJobOfEmployees();
+                GGC_DataSourceChanged(GGC_hienthicongviec);
+                GGC_hienthicongviec.Size = new System.Drawing.Size(950, 404);
+                GGC_hienthicongviec.TopLevelGroupOptions.ShowFilterBar = true;
+                GGC_hienthicongviec.ActivateCurrentCellBehavior = GridCellActivateAction.None;
+                GGC_hienthicongviec.ShowGroupDropArea = true;
+                GGC_hienthicongviec.BorderStyle = BorderStyle.FixedSingle;
+
+                // Thiết lập cho từng cột
+                GridColumnDescriptorCollection columns = GGC_hienthicongviec.TableDescriptor.Columns;
+                foreach (GridColumnDescriptor column in columns)
+                {
+                    column.AllowFilter = true;
+                    column.Appearance.AnyRecordFieldCell.AutoSize = true;
+                    column.Appearance.AnyRecordFieldCell.CellType = "TextBox";
+                }
+
+                // Thiết lập Dynamic Filter và Excel Filter
+                GridDynamicFilter dynamicFilter = new GridDynamicFilter();
+                dynamicFilter.WireGrid(GGC_hienthicongviec);
+
+                GridExcelFilter excelFilter = new GridExcelFilter();
+                excelFilter.WireGrid(GGC_hienthicongviec);
+
+                // Thiết lập AutoSizeMode cho mỗi cột
+                foreach (GridColumnDescriptor column in columns)
+                {
+                    column.Appearance.AnyRecordFieldCell.AutoSize = true;
+                    column.Appearance.AnyRecordFieldCell.CellType = "TextBox";
+                }
+                GGC_hienthicongviec.TableDescriptor.Columns[0].HeaderText = "Mã công việc";
+                GGC_hienthicongviec.TableDescriptor.Columns[1].HeaderText = "Mã nhân viên";
+                GGC_hienthicongviec.TableDescriptor.Columns[2].HeaderText = "Họ";
+                GGC_hienthicongviec.TableDescriptor.Columns[3].HeaderText = "Tên";
+                GGC_hienthicongviec.TableDescriptor.Columns[4].HeaderText = "Nội dung";
+                GGC_hienthicongviec.TableDescriptor.Columns[5].HeaderText = "Mã căn hộ";
+                GGC_hienthicongviec.TableDescriptor.Columns[6].HeaderText = "Ngày giao";
+                GGC_hienthicongviec.TableDescriptor.Columns[7].HeaderText = "Thời hạn";
+                GGC_hienthicongviec.TableDescriptor.Columns[8].HeaderText = "Ngày hoàn thành";
+                GGC_hienthicongviec.TableDescriptor.Columns[9].HeaderText = "Ngày cập nhật";
+                GGC_hienthicongviec.TableDescriptor.Columns[10].HeaderText = "Trạng thái";
+                GGC_hienthicongviec.TableDescriptor.Columns[11].HeaderText = "Ghi chú";
+            }
+
+            if (TCA_congviecchung.SelectedTab == TPA_nhom)
+            {
+                GGC_hiencongviecnhom.DataSource = JobDAO.Instance.GetJobOfGroups();
+                GGC_DataSourceChanged(GGC_hiencongviecnhom);
+                GGC_hiencongviecnhom.Size = new System.Drawing.Size(950, 404);
+                GGC_hiencongviecnhom.TopLevelGroupOptions.ShowFilterBar = true;
+                GGC_hiencongviecnhom.ActivateCurrentCellBehavior = GridCellActivateAction.None;
+                GGC_hiencongviecnhom.ShowGroupDropArea = true;
+                GGC_hiencongviecnhom.BorderStyle = BorderStyle.FixedSingle;
+
+                // Thiết lập cho từng cột
+                GridColumnDescriptorCollection columns = GGC_hiencongviecnhom.TableDescriptor.Columns;
+                foreach (GridColumnDescriptor column in columns)
+                {
+                    column.AllowFilter = true;
+                    column.Appearance.AnyRecordFieldCell.AutoSize = true;
+                    column.Appearance.AnyRecordFieldCell.CellType = "TextBox";
+                }
+
+                // Thiết lập Dynamic Filter và Excel Filter
+                GridDynamicFilter dynamicFilter = new GridDynamicFilter();
+                dynamicFilter.WireGrid(GGC_hiencongviecnhom);
+
+                GridExcelFilter excelFilter = new GridExcelFilter();
+                excelFilter.WireGrid(GGC_hiencongviecnhom);
+
+                // Thiết lập AutoSizeMode cho mỗi cột
+                foreach (GridColumnDescriptor column in columns)
+                {
+                    column.Appearance.AnyRecordFieldCell.AutoSize = true;
+                    column.Appearance.AnyRecordFieldCell.CellType = "TextBox";
+                }
+                GGC_hiencongviecnhom.TableDescriptor.Columns[0].HeaderText = "Mã công việc";
+                GGC_hiencongviecnhom.TableDescriptor.Columns[1].HeaderText = "Mã nhóm";
+                GGC_hiencongviecnhom.TableDescriptor.Columns[2].HeaderText = "Mã Trưởng nhóm";
+                GGC_hiencongviecnhom.TableDescriptor.Columns[3].HeaderText = "Mã Bộ phận";
+                GGC_hiencongviecnhom.TableDescriptor.Columns[4].HeaderText = "Nội dung";
+                GGC_hiencongviecnhom.TableDescriptor.Columns[5].HeaderText = "Mã căn hộ";
+                GGC_hiencongviecnhom.TableDescriptor.Columns[6].HeaderText = "Ngày giao";
+                GGC_hiencongviecnhom.TableDescriptor.Columns[7].HeaderText = "Thời hạn";
+                GGC_hiencongviecnhom.TableDescriptor.Columns[8].HeaderText = "Ngày hoàn thành";
+                GGC_hiencongviecnhom.TableDescriptor.Columns[9].HeaderText = "Ngày cập nhật";
+                GGC_hiencongviecnhom.TableDescriptor.Columns[10].HeaderText = "Trạng thái";
+                GGC_hiencongviecnhom.TableDescriptor.Columns[11].HeaderText = "Ghi chú";
             }
         }
     }

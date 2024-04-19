@@ -155,29 +155,6 @@ namespace BLL
             }
             return jobs;
         }
-        public List<Job> GetJob()
-        {
-            List<Job> jobs = new List<Job>();
-            DataTable dt = JobDAO.Instance.GetJob();
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                string maCongViec = dt.Rows[i]["Mã công việc"].ToString();
-                string maNhanVien = dt.Rows[i]["Mã nhân viên"].ToString() ;
-                string ho = dt.Rows[i]["Họ"].ToString();
-                string ten = dt.Rows[i]["Tên"].ToString();
-                string noiDung = dt.Rows[i]["Nội dung"].ToString();
-                string maCanHo = dt.Rows[i]["Mã căn hộ"].ToString();
-                DateTime ngayGiao = (DateTime)dt.Rows[i]["Ngày giao"];
-                DateTime ngayCapNhat = (DateTime)dt.Rows[i]["Ngày cập nhật"];
-                DateTime thoiHan = dt.Rows[i]["Thời hạn"] == DBNull.Value ? default(DateTime) : Convert.ToDateTime(dt.Rows[i]["Thời hạn"].ToString());
-                DateTime ngayHoanThanh = dt.Rows[i]["Ngày hoàn thành"] == DBNull.Value ? default(DateTime) : Convert.ToDateTime(dt.Rows[i]["Ngày hoàn thành"].ToString());
-                string trangThai = dt.Rows[i]["Trạng thái"].ToString();
-                string ghiChu = dt.Rows[i]["Ghi chú"].ToString();
-                Job job = new Job(maCongViec,maNhanVien,ho, ten, noiDung, maCanHo, ngayGiao,  ngayCapNhat,  thoiHan, ngayHoanThanh, trangThai, ghiChu);
-                jobs.Add(job);
-            }
-            return jobs;
-        }
 
         // lấy công việc theo mã công việc
         public Job GetJobFromJobID(string maCV)

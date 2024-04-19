@@ -35,7 +35,20 @@ namespace DangNhap
             this.BTN_PDF = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_in = new Guna.UI.WinForms.GunaGradientButton();
             this.GGC_hienthicongviec = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
+            this.TCA_congviecchung = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
+            this.TPA_nhom = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.GGC_hiencongviecnhom = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
+            this.TPA_nhanvien = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.TPA_phongban = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.gridGroupingControl2 = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
             ((System.ComponentModel.ISupportInitialize)(this.GGC_hienthicongviec)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TCA_congviecchung)).BeginInit();
+            this.TCA_congviecchung.SuspendLayout();
+            this.TPA_nhom.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GGC_hiencongviecnhom)).BeginInit();
+            this.TPA_nhanvien.SuspendLayout();
+            this.TPA_phongban.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridGroupingControl2)).BeginInit();
             this.SuspendLayout();
             // 
             // BTN_themcongviec
@@ -158,20 +171,111 @@ namespace DangNhap
             // 
             // GGC_hienthicongviec
             // 
+            this.GGC_hienthicongviec.AllowDrop = true;
             this.GGC_hienthicongviec.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.GGC_hienthicongviec.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GGC_hienthicongviec.BackColor = System.Drawing.SystemColors.Window;
-            this.GGC_hienthicongviec.Location = new System.Drawing.Point(65, 100);
+            this.GGC_hienthicongviec.IsDynamicData = true;
+            this.GGC_hienthicongviec.Location = new System.Drawing.Point(48, 27);
             this.GGC_hienthicongviec.Name = "GGC_hienthicongviec";
             this.GGC_hienthicongviec.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
-            this.GGC_hienthicongviec.Size = new System.Drawing.Size(1211, 404);
+            this.GGC_hienthicongviec.ShowGroupDropArea = true;
+            this.GGC_hienthicongviec.Size = new System.Drawing.Size(1096, 313);
             this.GGC_hienthicongviec.TabIndex = 97;
             this.GGC_hienthicongviec.Text = "gridGroupingControl1";
             this.GGC_hienthicongviec.UseRightToLeftCompatibleTextBox = true;
             this.GGC_hienthicongviec.VersionInfo = "25.1462.39";
             this.GGC_hienthicongviec.TableControlCellDoubleClick += new Syncfusion.Windows.Forms.Grid.Grouping.GridTableControlCellClickEventHandler(this.GGC_hienthicongviec_TableControlCellDoubleClick);
+            // 
+            // TCA_congviecchung
+            // 
+            this.TCA_congviecchung.BeforeTouchSize = new System.Drawing.Size(1204, 413);
+            this.TCA_congviecchung.Controls.Add(this.TPA_nhanvien);
+            this.TCA_congviecchung.Controls.Add(this.TPA_nhom);
+            this.TCA_congviecchung.Controls.Add(this.TPA_phongban);
+            this.TCA_congviecchung.Location = new System.Drawing.Point(72, 99);
+            this.TCA_congviecchung.Name = "TCA_congviecchung";
+            this.TCA_congviecchung.Size = new System.Drawing.Size(1204, 413);
+            this.TCA_congviecchung.TabIndex = 98;
+            this.TCA_congviecchung.TabIndexChanged += new System.EventHandler(this.TCA_congviecchung_TabIndexChanged);
+            // 
+            // TPA_nhom
+            // 
+            this.TPA_nhom.AllowDrop = true;
+            this.TPA_nhom.AutoScroll = true;
+            this.TPA_nhom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TPA_nhom.Controls.Add(this.GGC_hiencongviecnhom);
+            this.TPA_nhom.Image = null;
+            this.TPA_nhom.ImageSize = new System.Drawing.Size(20, 20);
+            this.TPA_nhom.Location = new System.Drawing.Point(1, 29);
+            this.TPA_nhom.Name = "TPA_nhom";
+            this.TPA_nhom.ShowCloseButton = true;
+            this.TPA_nhom.Size = new System.Drawing.Size(1201, 383);
+            this.TPA_nhom.TabForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.TPA_nhom.TabIndex = 2;
+            this.TPA_nhom.Text = "Nhóm";
+            this.TPA_nhom.ThemesEnabled = false;
+            this.TPA_nhom.UseCustomScrollerFrame = true;
+            // 
+            // GGC_hiencongviecnhom
+            // 
+            this.GGC_hiencongviecnhom.AllowDrop = true;
+            this.GGC_hiencongviecnhom.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.GGC_hiencongviecnhom.BackColor = System.Drawing.SystemColors.Window;
+            this.GGC_hiencongviecnhom.Location = new System.Drawing.Point(126, 51);
+            this.GGC_hiencongviecnhom.Name = "GGC_hiencongviecnhom";
+            this.GGC_hiencongviecnhom.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
+            this.GGC_hiencongviecnhom.Size = new System.Drawing.Size(993, 277);
+            this.GGC_hiencongviecnhom.TabIndex = 0;
+            this.GGC_hiencongviecnhom.Text = "gridGroupingControl1";
+            this.GGC_hiencongviecnhom.UseRightToLeftCompatibleTextBox = true;
+            this.GGC_hiencongviecnhom.VersionInfo = "25.1462.39";
+            // 
+            // TPA_nhanvien
+            // 
+            this.TPA_nhanvien.AllowDrop = true;
+            this.TPA_nhanvien.AutoScroll = true;
+            this.TPA_nhanvien.Controls.Add(this.GGC_hienthicongviec);
+            this.TPA_nhanvien.Image = null;
+            this.TPA_nhanvien.ImageSize = new System.Drawing.Size(20, 20);
+            this.TPA_nhanvien.Location = new System.Drawing.Point(1, 29);
+            this.TPA_nhanvien.Name = "TPA_nhanvien";
+            this.TPA_nhanvien.ShowCloseButton = true;
+            this.TPA_nhanvien.Size = new System.Drawing.Size(1201, 383);
+            this.TPA_nhanvien.TabForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.TPA_nhanvien.TabIndex = 1;
+            this.TPA_nhanvien.Text = "Nhân viên";
+            this.TPA_nhanvien.ThemesEnabled = false;
+            this.TPA_nhanvien.UseCustomScrollerFrame = true;
+            // 
+            // TPA_phongban
+            // 
+            this.TPA_phongban.Controls.Add(this.gridGroupingControl2);
+            this.TPA_phongban.Image = null;
+            this.TPA_phongban.ImageSize = new System.Drawing.Size(20, 20);
+            this.TPA_phongban.Location = new System.Drawing.Point(1, 29);
+            this.TPA_phongban.Name = "TPA_phongban";
+            this.TPA_phongban.ShowCloseButton = true;
+            this.TPA_phongban.Size = new System.Drawing.Size(1201, 383);
+            this.TPA_phongban.TabForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.TPA_phongban.TabIndex = 3;
+            this.TPA_phongban.Text = "Phòng ban";
+            this.TPA_phongban.ThemesEnabled = false;
+            // 
+            // gridGroupingControl2
+            // 
+            this.gridGroupingControl2.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.gridGroupingControl2.BackColor = System.Drawing.SystemColors.Window;
+            this.gridGroupingControl2.Location = new System.Drawing.Point(87, 47);
+            this.gridGroupingControl2.Name = "gridGroupingControl2";
+            this.gridGroupingControl2.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
+            this.gridGroupingControl2.Size = new System.Drawing.Size(1036, 284);
+            this.gridGroupingControl2.TabIndex = 0;
+            this.gridGroupingControl2.Text = "gridGroupingControl2";
+            this.gridGroupingControl2.UseRightToLeftCompatibleTextBox = true;
+            this.gridGroupingControl2.VersionInfo = "25.1462.39";
             // 
             // CongViecChung
             // 
@@ -179,16 +283,23 @@ namespace DangNhap
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(1376, 782);
+            this.Controls.Add(this.TCA_congviecchung);
             this.Controls.Add(this.BTN_in);
             this.Controls.Add(this.BTN_PDF);
             this.Controls.Add(this.BTN_excel);
-            this.Controls.Add(this.GGC_hienthicongviec);
             this.Controls.Add(this.BTN_themcongviec);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CongViecChung";
             this.Text = "CongViecChung";
             this.Load += new System.EventHandler(this.CongViecChung_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GGC_hienthicongviec)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TCA_congviecchung)).EndInit();
+            this.TCA_congviecchung.ResumeLayout(false);
+            this.TPA_nhom.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GGC_hiencongviecnhom)).EndInit();
+            this.TPA_nhanvien.ResumeLayout(false);
+            this.TPA_phongban.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridGroupingControl2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -200,5 +311,11 @@ namespace DangNhap
         private Guna.UI.WinForms.GunaGradientButton BTN_PDF;
         private Guna.UI.WinForms.GunaGradientButton BTN_in;
         private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl GGC_hienthicongviec;
+        private Syncfusion.Windows.Forms.Tools.TabControlAdv TCA_congviecchung;
+        private Syncfusion.Windows.Forms.Tools.TabPageAdv TPA_nhanvien;
+        private Syncfusion.Windows.Forms.Tools.TabPageAdv TPA_nhom;
+        private Syncfusion.Windows.Forms.Tools.TabPageAdv TPA_phongban;
+        private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl GGC_hiencongviecnhom;
+        private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl gridGroupingControl2;
     }
 }
