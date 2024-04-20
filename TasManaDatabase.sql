@@ -269,6 +269,7 @@ INSERT INTO Nhom VALUES('VSN02', 'VS-002', 'VS')
 SELECT * FROM PhongBan
 SELECT * FROM Nhom
 
+
 -- Insert thông tin tài khoản
 INSERT INTO NhanVien VALUES('GD-001', 'jd@gmail.com', 'Ho', 'Khang', '111111111', '1/1/2002', 1, 'TP.HCM', '123456', 'Full-time', N'Độc thân', '1111111', 1, '2024-01-01', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú GD-001', N'Tốt', 'VS', 'VSN01')
 INSERT INTO NhanVien VALUES('VS-002', 'VS002@gmail.com', 'Vu', 'Quang', '1321312', '1/2/2004', 1, 'TP.HCM', '1234576', 'Part-time', N'Độc thân', '1111211', 1, '2024-01-01', '2025-12-31', 'TP.HCM', 'Chua co', N'Tốt', 'VS','VSN02')
@@ -277,6 +278,7 @@ INSERT INTO NhanVien VALUES('VS-003', 'email_nv001@example.com', 'Tran', 'An', '
 INSERT INTO TaiKhoan VALUES('GD-001.KHANG.111111111', '123', 'GD-001', 0, 1)
 INSERT INTO TaiKhoan VALUES('VS-002.QUANG.1321312', '123', 'VS-002', 0, 0)
 INSERT INTO TaiKhoan VALUES('VS-003.AN.0123456669', '123', 'VS-003', 0, 0)
+
 SELECT * FROM TaiKhoan
 SELECT * FROM NhanVien
 
@@ -293,17 +295,16 @@ INSERT INTO CuDan VALUES('CD-A008','Tran Thi Hoa','1982-07-05','198207053','0987
 INSERT INTO CuDan VALUES('CD-A009','Le Van Hieu','1976-04-12','197604123','0123456789','levanhieu@example.com', '4569872','2024-01-09','2022-01-09', 0, 0, 'dog', 'vietnam', null)
 
 -- Insert Dữ liệu thử của căn hộ
-INSERT INTO CanHo VALUES ('WPHA', 100.5, 36, 5, 2, NULL, 2000000, 2, '2024-01-01', N'Còn trống', 'CD-A001');
-INSERT INTO CanHo VALUES ('WPHB', 90.2, 36, 5, 1, NULL, 1500000, 1, '2024-01-01', N'Còn trống', 'CD-A002');
-INSERT INTO CanHo VALUES ('WPHC', 110.8, 37, 5, 2, NULL, 2500000, 2, '2024-01-01', N'Còn trống', 'CD-A003');
-INSERT INTO CanHo VALUES ('WPHD', 80.0, 37, 5, 1, NULL, 200000, 1, '2024-01-01', N'Còn trống', 'CD-A004');
-INSERT INTO CanHo VALUES ('W3501', 80.0, 35, 5, 1, NULL, 100000, 1, '2024-01-01', N'Còn trống', 'CD-A005');
-INSERT INTO CanHo VALUES ('W3502', 80.0, 35, 5, 1, NULL, 1800000, 1, '2024-01-01', N'Còn trống', 'CD-A006');
-INSERT INTO CanHo VALUES ('W3503', 80.0, 35, 5, 1, NULL, 310000, 1, '2024-01-01', N'Còn trống', 'CD-A007');
-INSERT INTO CanHo VALUES ('W3504', 80.0, 35, 5, 1, NULL, 1800000, 1, '2024-01-01', N'Còn trống', 'CD-A008');
-INSERT INTO CanHo VALUES ('W3510', 80.0, 35, 5, 1, NULL, 18000000, 1, '2024-01-01', N'Còn trống', 'CD-A009');
+INSERT INTO CanHo VALUES ('WPHA', 100.5, 36, 5, 2, NULL, 2000000, 2, '2024-01-01', N'Chưa bán', 'CD-A001');
+INSERT INTO CanHo VALUES ('WPHB', 90.2, 36, 5, 1, NULL, 1500000, 1, '2024-01-01', N'Đã bán', 'CD-A002');
+INSERT INTO CanHo VALUES ('WPHC', 110.8, 37, 5, 2, NULL, 2500000, 2, '2024-01-01', N'Đã bán', 'CD-A003');
+INSERT INTO CanHo VALUES ('WPHD', 80.0, 37, 5, 1, NULL, 200000, 1, '2024-01-01', N'Đã bán', 'CD-A004');
+INSERT INTO CanHo VALUES ('W3501', 80.0, 35, 5, 1, NULL, 100000, 1, '2024-01-01', N'Chưa bán', 'CD-A005');
+INSERT INTO CanHo VALUES ('W3502', 80.0, 35, 5, 1, NULL, 1800000, 1, '2024-01-01', N'Chưa bàn giao - Cư dân đang ở', 'CD-A006');
+INSERT INTO CanHo VALUES ('W3503', 80.0, 35, 5, 1, NULL, 310000, 1, '2024-01-01', N'Đã bàn giao - trống', 'CD-A007');
+INSERT INTO CanHo VALUES ('W3504', 80.0, 35, 5, 1, NULL, 1800000, 1, '2024-01-01', N'Đã bàn giao - trống', 'CD-A008');
+INSERT INTO CanHo VALUES ('W3510', 80.0, 35, 5, 1, NULL, 18000000, 1, '2024-01-01', N'Chưa bàn giao - Cư dân đang ở', 'CD-A009');
 select * from CanHo
-
 
 
 -- Insert mẫu công việc
@@ -379,6 +380,14 @@ begin
 end
 go
 
+select n.*
+	from NhanVien nv
+	inner join Nhom n on n.maNhom = nv.maNhom
+	where nv.maNhanVien = 'AN-111'
+
+select * from Nhom
+select * from NhanVien
+
 -- Procedure lấy thông tin phòng ban theo mã phòng ban
 create procedure [dbo].[SP_LayPhongBanTheoMaNhom]
 	@maNhom varchar(10)
@@ -390,6 +399,18 @@ begin
 	where n.maNhom = @maNhom
 end
 go
+
+--Lấy phòng ban theo mã nhân viên
+create procedure [dbo].[SP_LayPhongBanTheoMaNhanVien]
+	@maNhanVien varchar(10)
+as
+begin
+	select pb.*
+	from PhongBan pb
+	inner join NhanVien nv on nv.maBoPhan = pb.maBoPhan
+	where nv.maNhanVien = @maNhanVien
+end
+
 
 -- Procedure cập nhật thông tin nhân viên
 create procedure [dbo].[SP_CapNhatNhanVien]

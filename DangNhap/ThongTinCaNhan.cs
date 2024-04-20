@@ -44,13 +44,13 @@ namespace DangNhap
         {
             group = EmployeeBLL.Instance.GetGroupByEmployeeId(employee.MaNhanVien);
         }
-        private void GetDivisionByGroupId()
+        private void GetDivisionByEmployeeId()
         {
-            if (group != null)
+            if (employee != null)
             {
-                division = GroupBLL.Instance.GetDivsionByGroupId(group.MaNhom);
+                division = DivisionBLL.Instance.GetDivisionByEmployeeId(employee.MaNhanVien);
             }
-        }
+        } 
 
         // Hàm khởi tạo danh sách giá trị truyền vào SP
         private object[] values_nv;
@@ -329,7 +329,7 @@ namespace DangNhap
         {
             // Hiện thông tin nhân viên
             GetGroupByEmployeeId();
-            GetDivisionByGroupId();
+            GetDivisionByEmployeeId();
             TXB_manv.Text = employee.MaNhanVien;
             TXB_ho.Text = employee.Ho;
             TXB_ten.Text = employee.Ten;
