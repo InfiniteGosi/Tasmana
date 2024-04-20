@@ -751,7 +751,7 @@ BEGIN
         ) AS TreHan ON NV.maNhanVien = TreHan.maNhanVien;
 END
 GO
-DROP PROCEDURE [dbo].[Count_Job_State]
+
 -- Tạo Trigger tự động kiểm tra tình trạng công việc
 CREATE TRIGGER CheckLateJob
 ON CongViec
@@ -767,8 +767,7 @@ BEGIN
         WHERE (CAST(thoiHan AS datetime) < CAST(GETDATE() AS datetime) OR CAST(ngayHoanThanh AS datetime) > CAST(thoiHan AS datetime));
     END
 END;
-DROP Trigger CheckLateJob
-Go
+
 Select * From CongViec
 
 ---Lấy công việc của nhân viên

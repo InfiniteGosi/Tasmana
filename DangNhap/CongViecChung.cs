@@ -47,16 +47,16 @@ namespace DangNhap
         }
         private void CongViecChung_Load(object sender, EventArgs e)
         {
-            Display_GGC_nhanvien(sender, e);
-            Display_GGC_nhom(sender, e);
-            Display_GGC_phongban(sender, e);
+            Display_GGC_nhanvien();
+            Display_GGC_nhom();
+            Display_GGC_phongban();
             if (!DangNhap.currentAccount.Level.Equals("CEO"))
             {
                 BTN_themcongviec.Enabled = false;
                 BTN_themcongviec.Visible = false;
             }
         }
-        private void Display_GGC_nhanvien(Object sender, EventArgs e)
+        private void Display_GGC_nhanvien()
         {
             GGC_hienthicongviec.DataSource = JobDAO.Instance.GetJobOfEmployees();
             GGC_DataSourceChanged(GGC_hienthicongviec);
@@ -65,6 +65,7 @@ namespace DangNhap
             GGC_hienthicongviec.ActivateCurrentCellBehavior = GridCellActivateAction.None;
             GGC_hienthicongviec.ShowGroupDropArea = true;
             GGC_hienthicongviec.BorderStyle = BorderStyle.FixedSingle;
+
 
             // Thiết lập cho từng cột
             GridColumnDescriptorCollection columns = GGC_hienthicongviec.TableDescriptor.Columns;
@@ -89,14 +90,14 @@ namespace DangNhap
             GGC_hienthicongviec.TableDescriptor.Columns[4].HeaderText = "Nội dung";
             GGC_hienthicongviec.TableDescriptor.Columns[5].HeaderText = "Mã căn hộ";
             GGC_hienthicongviec.TableDescriptor.Columns[6].HeaderText = "Ngày giao";
-            GGC_hienthicongviec.TableDescriptor.Columns[7].HeaderText = "Thời hạn";
-            GGC_hienthicongviec.TableDescriptor.Columns[8].HeaderText = "Ngày hoàn thành";
-            GGC_hienthicongviec.TableDescriptor.Columns[9].HeaderText = "Ngày cập nhật";
+            GGC_hienthicongviec.TableDescriptor.Columns[7].HeaderText = "Ngày cập nhật";
+            GGC_hienthicongviec.TableDescriptor.Columns[8].HeaderText = "Thời hạn";
+            GGC_hienthicongviec.TableDescriptor.Columns[9].HeaderText = "Ngày hoàn thành";
             GGC_hienthicongviec.TableDescriptor.Columns[10].HeaderText = "Trạng thái";
             GGC_hienthicongviec.TableDescriptor.Columns[11].HeaderText = "Ghi chú";
         }
 
-        private void Display_GGC_nhom(Object sender, EventArgs e)
+        private void Display_GGC_nhom()
         {
             GGC_hiencongviecnhom.DataSource = JobDAO.Instance.GetJobOfGroups();
             GGC_DataSourceChanged(GGC_hiencongviecnhom);
@@ -129,16 +130,16 @@ namespace DangNhap
             GGC_hiencongviecnhom.TableDescriptor.Columns[4].HeaderText = "Nội dung";
             GGC_hiencongviecnhom.TableDescriptor.Columns[5].HeaderText = "Mã căn hộ";
             GGC_hiencongviecnhom.TableDescriptor.Columns[6].HeaderText = "Ngày giao";
-            GGC_hiencongviecnhom.TableDescriptor.Columns[7].HeaderText = "Thời hạn";
-            GGC_hiencongviecnhom.TableDescriptor.Columns[8].HeaderText = "Ngày hoàn thành";
-            GGC_hiencongviecnhom.TableDescriptor.Columns[9].HeaderText = "Ngày cập nhật";
+            GGC_hiencongviecnhom.TableDescriptor.Columns[7].HeaderText = "Ngày cập nhật";
+            GGC_hiencongviecnhom.TableDescriptor.Columns[8].HeaderText = "Thời hạn";
+            GGC_hiencongviecnhom.TableDescriptor.Columns[9].HeaderText = "Ngày hoàn thành";
             GGC_hiencongviecnhom.TableDescriptor.Columns[10].HeaderText = "Trạng thái";
             GGC_hiencongviecnhom.TableDescriptor.Columns[11].HeaderText = "Ghi chú";
         }
 
-        private void Display_GGC_phongban(Object sender, EventArgs e)
+        private void Display_GGC_phongban()
         {
-            GGC_hiencongviecpb.DataSource = JobDAO.Instance.GetJobOfGroups();
+            GGC_hiencongviecpb.DataSource = JobDAO.Instance.GetJobOfDivisions();
             GGC_DataSourceChanged(GGC_hiencongviecpb);
             GGC_hiencongviecpb.Size = new System.Drawing.Size(950, 404);
             GGC_hiencongviecpb.TopLevelGroupOptions.ShowFilterBar = true;
@@ -168,9 +169,9 @@ namespace DangNhap
             GGC_hiencongviecpb.TableDescriptor.Columns[3].HeaderText = "Nội dung";
             GGC_hiencongviecpb.TableDescriptor.Columns[4].HeaderText = "Mã căn hộ";
             GGC_hiencongviecpb.TableDescriptor.Columns[5].HeaderText = "Ngày giao";
-            GGC_hiencongviecpb.TableDescriptor.Columns[6].HeaderText = "Thời hạn";
-            GGC_hiencongviecpb.TableDescriptor.Columns[7].HeaderText = "Ngày hoàn thành";
-            GGC_hiencongviecpb.TableDescriptor.Columns[8].HeaderText = "Ngày cập nhật";
+            GGC_hiencongviecpb.TableDescriptor.Columns[6].HeaderText = "Ngày cập nhật";
+            GGC_hiencongviecpb.TableDescriptor.Columns[7].HeaderText = "Thời hạn";
+            GGC_hiencongviecpb.TableDescriptor.Columns[8].HeaderText = "Ngày hoàn thành";
             GGC_hiencongviecpb.TableDescriptor.Columns[9].HeaderText = "Trạng thái";
             GGC_hiencongviecpb.TableDescriptor.Columns[10].HeaderText = "Ghi chú";
         }
@@ -184,7 +185,7 @@ namespace DangNhap
                 foreach (var comp in ggc.Table.Records)
                 {
                     var cellValue = comp.GetValue("NgayHoanThanh");
-                    if (cellValue != null && cellValue.ToString().Contains("1/1/0001"))
+                    if (cellValue.ToString().Contains("1/1/0001"))
                     {
                         cellValue = null;
                     }
@@ -197,7 +198,7 @@ namespace DangNhap
                 foreach (var comp in ggc.Table.Records)
                 {
                     var cellValue = comp.GetValue("ThoiHan");
-                    if (cellValue != null && cellValue.ToString().Contains("1/1/0001"))
+                    if (cellValue.ToString().Contains("1/1/0001"))
                     {
                         cellValue = null;
                     }
@@ -386,51 +387,6 @@ namespace DangNhap
             }
         }
 
-        private void GGC_hiencongviecnhom_TableControlCellDoubleClick(object sender, GridTableControlCellClickEventArgs e)
-        {
-            // Get the index of the clicked row
-            int rowIndex = e.Inner.RowIndex - 5;
-            // Check if the clicked row index is valid
-            if (rowIndex >= 0 && rowIndex < GGC_hienthicongviec.Table.Records.Count)
-            {
-                // Get the record corresponding to the clicked row
-                Record record = GGC_hienthicongviec.Table.Records[rowIndex];
-
-                // Extract data from the record
-                string maCongViec = record.GetValue("MaCongViec").ToString();
-                string maNhanVien = record.GetValue("MaNhanVien").ToString();
-                Employee curEmployee = EmployeeBLL.Instance.GetEmployeeByEmployeeId(maNhanVien);
-                Division divisionOfEmployee = GroupBLL.Instance.GetDivsionByGroupId(curEmployee.MaNhom.ToString());
-                string noiDungCV = record.GetValue("NoiDung").ToString();
-                string maCanHo = record.GetValue("MaCanHo").ToString();
-                string ghiChu = record.GetValue("GhiChu").ToString();
-                string trangThai = record.GetValue("TrangThai").ToString();
-                DateTime thoiHan = (DateTime)record.GetValue("ThoiHan");
-                Job curJob = JobBLL.Instance.GetJobFromJobID(maCongViec);
-                // Add to ChiTietCongViec
-                ChiTietCongViec ctcv = new ChiTietCongViec();
-                ctcv.TXB_PhongBan.Text = divisionOfEmployee.MaBoPhan.ToString();
-                ctcv.TXB_Nhom.Text = curEmployee.MaNhom.ToString();
-                ctcv.TXB_MaNV.Text = maNhanVien;
-                ctcv.TXB_noidung.Text = noiDungCV;
-                ctcv.TXB_macanho.Text = maCanHo;
-                ctcv.TXB_GhiChu.Text = ghiChu;
-                ctcv.TXB_MaCV.Text = maCongViec;
-                ctcv.CBB_TrangThai.Text = trangThai;
-                if (thoiHan > DateTime.MinValue)
-                {
-                    ctcv.CB_thoihan.Checked = true;
-                    DateTime date = thoiHan.Date;
-                    ctcv.DTP_ngay.Text = date.ToString();
-                    ctcv.DTP_gio.Text = thoiHan.ToString();
-                }
-                ctcv.LLB_chỉtietfile.Text = JobBLL.Instance.GetNameFile(maCongViec);
-                ctcv.LLB_chỉtietfile.Show();
-                ctcv.CBB_quyentruycap.SelectedIndex = curJob.QuyenTruyCap;
-                // Show Form
-                ctcv.ShowDialog();
-                this.Refresh();
-            }
-        }
+        
     }
 }
