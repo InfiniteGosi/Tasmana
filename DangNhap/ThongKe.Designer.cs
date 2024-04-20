@@ -30,6 +30,9 @@ namespace DangNhap
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.elipse_blue = new Guna.UI.WinForms.GunaElipse(this.components);
             this.elipse_red = new Guna.UI.WinForms.GunaElipse(this.components);
             this.elipse_green = new Guna.UI.WinForms.GunaElipse(this.components);
@@ -51,7 +54,9 @@ namespace DangNhap
             this.GGC_ThongKe = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
             this.DTP_TuNgay = new System.Windows.Forms.DateTimePicker();
             this.DTP_DenNgay = new System.Windows.Forms.DateTimePicker();
+            this.C_ThongKe = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.GGC_ThongKe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.C_ThongKe)).BeginInit();
             this.SuspendLayout();
             // 
             // elipse_blue
@@ -229,6 +234,7 @@ namespace DangNhap
             this.Btn_XuatDoThi.TabIndex = 220;
             this.Btn_XuatDoThi.Text = "Xuất đồ thị";
             this.Btn_XuatDoThi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btn_XuatDoThi.Click += new System.EventHandler(this.Btn_XuatDoThi_Click);
             // 
             // CBB_LoaiDoThi
             // 
@@ -286,7 +292,7 @@ namespace DangNhap
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GGC_ThongKe.BackColor = System.Drawing.SystemColors.Window;
-            this.GGC_ThongKe.Location = new System.Drawing.Point(21, 189);
+            this.GGC_ThongKe.Location = new System.Drawing.Point(52, 189);
             this.GGC_ThongKe.Name = "GGC_ThongKe";
             this.GGC_ThongKe.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
             this.GGC_ThongKe.Size = new System.Drawing.Size(1585, 574);
@@ -298,20 +304,40 @@ namespace DangNhap
             // DTP_TuNgay
             // 
             this.DTP_TuNgay.CustomFormat = "yyyy-MM-dd HH:MM";
+            this.DTP_TuNgay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTP_TuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DTP_TuNgay.Location = new System.Drawing.Point(97, 73);
             this.DTP_TuNgay.Name = "DTP_TuNgay";
-            this.DTP_TuNgay.Size = new System.Drawing.Size(248, 22);
+            this.DTP_TuNgay.Size = new System.Drawing.Size(248, 30);
             this.DTP_TuNgay.TabIndex = 226;
             // 
             // DTP_DenNgay
             // 
             this.DTP_DenNgay.CustomFormat = "yyyy-MM-dd HH:MM";
+            this.DTP_DenNgay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTP_DenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DTP_DenNgay.Location = new System.Drawing.Point(504, 73);
             this.DTP_DenNgay.Name = "DTP_DenNgay";
-            this.DTP_DenNgay.Size = new System.Drawing.Size(248, 22);
+            this.DTP_DenNgay.Size = new System.Drawing.Size(248, 30);
             this.DTP_DenNgay.TabIndex = 227;
+            // 
+            // C_ThongKe
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.C_ThongKe.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.C_ThongKe.Legends.Add(legend1);
+            this.C_ThongKe.Location = new System.Drawing.Point(21, 189);
+            this.C_ThongKe.Name = "C_ThongKe";
+            series1.ChartArea = "ChartArea1";
+            series1.IsValueShownAsLabel = true;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.C_ThongKe.Series.Add(series1);
+            this.C_ThongKe.Size = new System.Drawing.Size(1585, 574);
+            this.C_ThongKe.TabIndex = 228;
+            this.C_ThongKe.Text = "chart1";
+            this.C_ThongKe.Visible = false;
             // 
             // ThongKe
             // 
@@ -319,6 +345,7 @@ namespace DangNhap
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(1634, 852);
+            this.Controls.Add(this.C_ThongKe);
             this.Controls.Add(this.DTP_DenNgay);
             this.Controls.Add(this.DTP_TuNgay);
             this.Controls.Add(this.GGC_ThongKe);
@@ -342,6 +369,7 @@ namespace DangNhap
             this.Text = "ThongKe";
             this.Load += new System.EventHandler(this.ThongKe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GGC_ThongKe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.C_ThongKe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,5 +397,6 @@ namespace DangNhap
         private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl GGC_ThongKe;
         private System.Windows.Forms.DateTimePicker DTP_DenNgay;
         private System.Windows.Forms.DateTimePicker DTP_TuNgay;
+        private System.Windows.Forms.DataVisualization.Charting.Chart C_ThongKe;
     }
 }

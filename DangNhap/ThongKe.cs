@@ -14,6 +14,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace DangNhap
 {
@@ -136,6 +137,8 @@ namespace DangNhap
         // Hiển thị dữ liệu lên GGC_ThongKe
         private void LoadThongKeCongTy()
         {
+            GGC_ThongKe.Visible = true;
+            C_ThongKe.Visible = false;
             DateTime tuNgay = DTP_TuNgay.Value;
             DateTime denNgay = DTP_DenNgay.Value;
             DataTable dataSource = new DataTable();
@@ -197,6 +200,8 @@ namespace DangNhap
         }
         private void LoadThongKe_PhongBan()
         {
+            GGC_ThongKe.Visible = true;
+            C_ThongKe.Visible = false;
             DateTime tuNgay = DTP_TuNgay.Value;
             DateTime denNgay = DTP_DenNgay.Value;
             string maBoPhan = CBB_PhongBan.SelectedItem.ToString().Split('-')[0];
@@ -231,6 +236,8 @@ namespace DangNhap
         }
         private void LoadThongKe_NhanVien()
         {
+            GGC_ThongKe.Visible = true;
+            C_ThongKe.Visible = false;
             DateTime tuNgay = DTP_TuNgay.Value;
             DateTime denNgay = DTP_DenNgay.Value;
             string maNhanVien = CBB_NhanVien.SelectedItem.ToString().Split('_')[0];
@@ -307,6 +314,175 @@ namespace DangNhap
             GGC_ThongKe.ActivateCurrentCellBehavior = Syncfusion.Windows.Forms.Grid.GridCellActivateAction.None;
             //GGC_ThongKe.ShowGroupDropArea = true;
             GGC_ThongKe.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void Btn_XuatDoThi_Click(object sender, EventArgs e)
+        {
+            BTN_ThongKe_Click(sender, e);
+            if(CBB_LoaiDoThi.SelectedIndex == -1)
+            {
+                MessageBox.Show("Vui lòng chọn loại đồ thị");
+                CBB_LoaiDoThi.Focus();
+                return;
+            }
+            if(CBB_LoaiDoThi.SelectedIndex == 0)
+            {
+                GGC_ThongKe.Visible = false;
+                C_ThongKe.Location = new Point(21, 189);
+
+                // Clear any existing series
+                C_ThongKe.Series.Clear();
+
+                // Ensure that the chart is visible
+                C_ThongKe.Visible = true;
+
+                // Add a new series and set its chart type to Pie
+                C_ThongKe.Series.Add("PieSeries");
+                C_ThongKe.Series["PieSeries"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+                C_ThongKe.Series["PieSeries"].IsValueShownAsLabel = true;
+                // Calculate total for each type of job
+                Dictionary<string, int> jobTotals = new Dictionary<string, int>();
+
+                foreach (DataRow row in ((DataTable)GGC_ThongKe.DataSource).Rows)
+                {
+                    string[] dataColumnNames = { "dungHan", "trcHan", "treHan", "chuaBatDau" };
+                    string[] columnNames = { "Số công việc đúng hạn", "Số công việc trước hạn", "Số công việc trễ hạn", "Số công việc chưa bắt đầu" };
+
+                    for (int i = 0; i < dataColumnNames.Length; i++)
+                    {
+                        if (!jobTotals.ContainsKey(columnNames[i]))
+                        {
+                            jobTotals.Add(columnNames[i], Convert.ToInt32(row[dataColumnNames[i]]));
+                        }
+                        else
+                        {
+                            jobTotals[columnNames[i]] += Convert.ToInt32(row[dataColumnNames[i]]);
+                        }
+                    }
+                }
+
+                // Calculate total number of jobs
+                int totalJobs = jobTotals.Sum(x => x.Value);
+
+                // Add data to PieSeries
+                foreach (var kvp in jobTotals)
+                {
+                    // Calculate percentage for each job type
+                    double percentage = (double)kvp.Value / totalJobs * 100;
+
+                    // Add data point with percentage label
+                    C_ThongKe.Series["PieSeries"].Points.AddXY(kvp.Key, percentage);
+                    //C_ThongKe.Series["PieSeries"].Points.Last().Label = $"{kvp.Key} ({percentage.ToString("F1")}%)";
+                }
+            }
+            if (CBB_LoaiDoThi.SelectedIndex == 1) // Check if the selected chart type is Bar Chart
+            {
+                // Hide the grid and show the chart
+                GGC_ThongKe.Visible = false;
+                C_ThongKe.Location = new Point(21, 189);
+                C_ThongKe.Series.Clear(); // Clear existing series
+
+                // Show the chart
+                C_ThongKe.Visible = true;
+
+                System.Windows.Forms.DataVisualization.Charting.Series series = new System.Windows.Forms.DataVisualization.Charting.Series("Số lượng công việc");
+                series.ChartType = SeriesChartType.Column; // Set chart type to column
+                series.IsValueShownAsLabel = true; // Show values as labels on top of bars
+                C_ThongKe.Series.Add(series);
+                C_ThongKe.ChartAreas[0].AxisX.Title = "Tình trạng công việc";
+                C_ThongKe.ChartAreas[0].AxisY.Title = "Số lượng công việc";
+                Dictionary<string, int> jobTotals = new Dictionary<string, int>();
+
+                // Turn off major grid lines
+                C_ThongKe.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
+                C_ThongKe.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
+
+                foreach (DataRow row in ((DataTable)GGC_ThongKe.DataSource).Rows)
+                {
+                    string[] dataColumnNames = { "dungHan", "trcHan", "treHan", "chuaBatDau" };
+                    string[] columnNames = { "Số công việc đúng hạn", "Số công việc trước hạn", "Số công việc trễ hạn", "Số công việc chưa bắt đầu" };
+
+                    for (int i = 0; i < dataColumnNames.Length; i++)
+                    {
+                        if (!jobTotals.ContainsKey(columnNames[i]))
+                        {
+                            jobTotals.Add(columnNames[i], Convert.ToInt32(row[dataColumnNames[i]]));
+                        }
+                        else
+                        {
+                            jobTotals[columnNames[i]] += Convert.ToInt32(row[dataColumnNames[i]]);
+                        }
+                    }
+                }
+
+                foreach (var data in jobTotals)
+                {
+                    series.Points.AddXY(data.Key, data.Value);
+                }
+                // Tính toán giá trị cao nhất và thấp nhất trên trục Y
+                double maxYValue = C_ThongKe.ChartAreas[0].AxisY.Maximum;
+                double minYValue = C_ThongKe.ChartAreas[0].AxisY.Minimum;
+
+                // Tính toán giá trị trung bình của interval
+                double averageInterval = (maxYValue + minYValue) / 2;
+
+                // Đặt interval trung bình cho trục Y
+                C_ThongKe.ChartAreas[0].AxisY.Interval = (int)averageInterval;
+            }
+            if (CBB_LoaiDoThi.SelectedIndex == 2) // Check if the selected chart type is Line Chart
+            {
+                // Hide the grid and show the chart
+                GGC_ThongKe.Visible = false;
+                C_ThongKe.Location = new Point(21, 189);
+                C_ThongKe.Series.Clear(); // Clear existing series
+
+                // Show the chart
+                C_ThongKe.Visible = true;
+
+                System.Windows.Forms.DataVisualization.Charting.Series series = new System.Windows.Forms.DataVisualization.Charting.Series("Số lượng công việc");
+                series.ChartType = SeriesChartType.Line; // Set chart type to Line
+                series.IsValueShownAsLabel = true; // Show values as labels on data points
+                C_ThongKe.Series.Add(series);
+                C_ThongKe.ChartAreas[0].AxisX.Title = "Tình trạng công việc";
+                C_ThongKe.ChartAreas[0].AxisY.Title = "Số lượng công việc";
+                Dictionary<string, int> jobTotals = new Dictionary<string, int>();
+                
+                // Turn off major grid lines
+                C_ThongKe.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
+                C_ThongKe.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
+
+                foreach (DataRow row in ((DataTable)GGC_ThongKe.DataSource).Rows)
+                {
+                    string[] dataColumnNames = { "dungHan", "trcHan", "treHan", "chuaBatDau" };
+                    string[] columnNames = { "Số công việc đúng hạn", "Số công việc trước hạn", "Số công việc trễ hạn", "Số công việc chưa bắt đầu" };
+
+                    for (int i = 0; i < dataColumnNames.Length; i++)
+                    {
+                        if (!jobTotals.ContainsKey(columnNames[i]))
+                        {
+                            jobTotals.Add(columnNames[i], Convert.ToInt32(row[dataColumnNames[i]]));
+                        }
+                        else
+                        {
+                            jobTotals[columnNames[i]] += Convert.ToInt32(row[dataColumnNames[i]]);
+                        }
+                    }
+                }
+
+                foreach (var data in jobTotals)
+                {
+                    series.Points.AddXY(data.Key, data.Value);
+                }
+                // Tính toán giá trị cao nhất và thấp nhất trên trục Y
+                double maxYValue = C_ThongKe.ChartAreas[0].AxisY.Maximum;
+                double minYValue = C_ThongKe.ChartAreas[0].AxisY.Minimum;
+
+                // Tính toán giá trị trung bình của interval
+                double averageInterval = (maxYValue + minYValue) / 2;
+
+                // Đặt interval trung bình cho trục Y
+                C_ThongKe.ChartAreas[0].AxisY.Interval = (int)averageInterval;
+            }
         }
     }
 }
