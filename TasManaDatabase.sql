@@ -97,10 +97,11 @@ CREATE TABLE TaiKhoan
   matKhau VARCHAR(100) NOT NULL,
   maNhanVien VARCHAR(10) NOT NULL,
   disable BIT NOT NULL,
-  rememberId BIT,
+  rememberId BIT NOT NULL,
   PRIMARY KEY (maNguoiDung),
   FOREIGN KEY (maNhanVien) REFERENCES nhanVien(maNhanVien)
 );
+
 
 
 CREATE TABLE CEO
@@ -561,11 +562,12 @@ create procedure [dbo].[SP_ThemTaiKhoan]
 	@disable bit
 as
 begin
-	insert into TaiKhoan (maNguoiDung, matKhau, maNhanVien, disable)
+	insert into TaiKhoan
 	values(@maNguoiDung,
 		   @matKhau,
 		   @maNhanVien,
-		   @disable)
+		   @disable,
+		   0)
 end
 go
 

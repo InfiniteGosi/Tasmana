@@ -150,10 +150,13 @@ namespace DangNhap
         private void CBBB_manguoidung_SelectionChangeCommitted(object sender, EventArgs e)
         {
             userId = CBBB_manguoidung.Text;
-            GetAccount(userId);
-            if (currentAccount.RememberUserId)
+            if (CheckAccountExistence(userId))
             {
-                CHB_luuid.Checked = true;
+                GetAccount(userId);
+                if (currentAccount.RememberUserId)
+                {
+                    CHB_luuid.Checked = true;
+                }
             }
         }
     }
