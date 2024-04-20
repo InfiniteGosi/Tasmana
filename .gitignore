@@ -370,3 +370,5 @@ FodyWeavers.xsd
 /DangNhap/obj/Debug/DangNhap.Home.resources
 /DangNhap/obj/Debug/DangNhap.CongViecChung.resources
 /DangNhap/obj/Debug/DangNhap.ThongBao.resources
+/DangNhap/Tasmana.csproj
+/DangNhap/packages.config
