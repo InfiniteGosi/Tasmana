@@ -33,8 +33,6 @@ namespace DangNhap
             this.elipse_blue = new Guna.UI.WinForms.GunaElipse(this.components);
             this.elipse_red = new Guna.UI.WinForms.GunaElipse(this.components);
             this.elipse_green = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.MTB_TuNgay = new System.Windows.Forms.MaskedTextBox();
-            this.MTB_DenNgay = new System.Windows.Forms.MaskedTextBox();
             this.LB_ThongKeCV = new System.Windows.Forms.Label();
             this.LB_TuNgay = new System.Windows.Forms.Label();
             this.LB_ToiNgay = new System.Windows.Forms.Label();
@@ -51,6 +49,8 @@ namespace DangNhap
             this.LB_ThongBao1 = new System.Windows.Forms.Label();
             this.RBtn_Congty = new System.Windows.Forms.RadioButton();
             this.GGC_ThongKe = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
+            this.DTP_TuNgay = new System.Windows.Forms.DateTimePicker();
+            this.DTP_DenNgay = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.GGC_ThongKe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,24 +68,6 @@ namespace DangNhap
             // 
             this.elipse_green.Radius = 10;
             this.elipse_green.TargetControl = this;
-            // 
-            // MTB_TuNgay
-            // 
-            this.MTB_TuNgay.Location = new System.Drawing.Point(107, 73);
-            this.MTB_TuNgay.Mask = "00/00/0000 90:00";
-            this.MTB_TuNgay.Name = "MTB_TuNgay";
-            this.MTB_TuNgay.Size = new System.Drawing.Size(112, 22);
-            this.MTB_TuNgay.TabIndex = 4;
-            this.MTB_TuNgay.ValidatingType = typeof(System.DateTime);
-            // 
-            // MTB_DenNgay
-            // 
-            this.MTB_DenNgay.Location = new System.Drawing.Point(339, 73);
-            this.MTB_DenNgay.Mask = "00/00/0000 90:00";
-            this.MTB_DenNgay.Name = "MTB_DenNgay";
-            this.MTB_DenNgay.Size = new System.Drawing.Size(112, 22);
-            this.MTB_DenNgay.TabIndex = 6;
-            this.MTB_DenNgay.ValidatingType = typeof(System.DateTime);
             // 
             // LB_ThongKeCV
             // 
@@ -114,7 +96,7 @@ namespace DangNhap
             this.LB_ToiNgay.AutoSize = true;
             this.LB_ToiNgay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_ToiNgay.ForeColor = System.Drawing.Color.White;
-            this.LB_ToiNgay.Location = new System.Drawing.Point(242, 73);
+            this.LB_ToiNgay.Location = new System.Drawing.Point(391, 73);
             this.LB_ToiNgay.Name = "LB_ToiNgay";
             this.LB_ToiNgay.Size = new System.Drawing.Size(80, 22);
             this.LB_ToiNgay.TabIndex = 209;
@@ -313,12 +295,32 @@ namespace DangNhap
             this.GGC_ThongKe.UseRightToLeftCompatibleTextBox = true;
             this.GGC_ThongKe.VersionInfo = "25.1462.39";
             // 
+            // DTP_TuNgay
+            // 
+            this.DTP_TuNgay.CustomFormat = "yyyy-MM-dd HH:MM";
+            this.DTP_TuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DTP_TuNgay.Location = new System.Drawing.Point(97, 73);
+            this.DTP_TuNgay.Name = "DTP_TuNgay";
+            this.DTP_TuNgay.Size = new System.Drawing.Size(248, 22);
+            this.DTP_TuNgay.TabIndex = 226;
+            // 
+            // DTP_DenNgay
+            // 
+            this.DTP_DenNgay.CustomFormat = "yyyy-MM-dd HH:MM";
+            this.DTP_DenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DTP_DenNgay.Location = new System.Drawing.Point(504, 73);
+            this.DTP_DenNgay.Name = "DTP_DenNgay";
+            this.DTP_DenNgay.Size = new System.Drawing.Size(248, 22);
+            this.DTP_DenNgay.TabIndex = 227;
+            // 
             // ThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(1634, 852);
+            this.Controls.Add(this.DTP_DenNgay);
+            this.Controls.Add(this.DTP_TuNgay);
             this.Controls.Add(this.GGC_ThongKe);
             this.Controls.Add(this.RBtn_Congty);
             this.Controls.Add(this.LB_ThongBao1);
@@ -335,8 +337,6 @@ namespace DangNhap
             this.Controls.Add(this.LB_ToiNgay);
             this.Controls.Add(this.LB_TuNgay);
             this.Controls.Add(this.LB_ThongKeCV);
-            this.Controls.Add(this.MTB_DenNgay);
-            this.Controls.Add(this.MTB_TuNgay);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ThongKe";
             this.Text = "ThongKe";
@@ -351,8 +351,6 @@ namespace DangNhap
         private Guna.UI.WinForms.GunaElipse elipse_blue;
         private Guna.UI.WinForms.GunaElipse elipse_red;
         private Guna.UI.WinForms.GunaElipse elipse_green;
-        private System.Windows.Forms.MaskedTextBox MTB_DenNgay;
-        private System.Windows.Forms.MaskedTextBox MTB_TuNgay;
         private System.Windows.Forms.Label LB_ThongKeCV;
         private System.Windows.Forms.RadioButton RBtn_PhongBan;
         private System.Windows.Forms.Label LB_ToiNgay;
@@ -369,5 +367,7 @@ namespace DangNhap
         private System.Windows.Forms.ComboBox CBB_LoaiDoThi;
         private System.Windows.Forms.RadioButton RBtn_Congty;
         private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl GGC_ThongKe;
+        private System.Windows.Forms.DateTimePicker DTP_DenNgay;
+        private System.Windows.Forms.DateTimePicker DTP_TuNgay;
     }
 }

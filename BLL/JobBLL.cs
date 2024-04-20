@@ -216,5 +216,10 @@ namespace BLL
             }
             return bytes;
         }
+        // Thống kê công việc của toàn công ty
+        public DataTable StatisticAllJob(DateTime tuNgay, DateTime denNgay)
+        {
+            return JobDAO.Instance.StatisticAllJob(tuNgay, denNgay);
+        }
     }
 }

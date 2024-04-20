@@ -772,7 +772,7 @@ BEGIN
         ) AS TreHan ON NV.maNhanVien = TreHan.maNhanVien;
 END
 GO
-
+DROP PROCEDURE [dbo].[Count_Job_State]
 -- Tạo Trigger tự động kiểm tra tình trạng công việc
 CREATE TRIGGER CheckLateJob
 ON CongViec
@@ -788,7 +788,8 @@ BEGIN
         WHERE (CAST(thoiHan AS datetime) < CAST(GETDATE() AS datetime) OR CAST(ngayHoanThanh AS datetime) > CAST(thoiHan AS datetime));
     END
 END;
-
+DROP Trigger CheckLateJob
+Go
 Select * From CongViec
 
 ---Lấy công việc của nhân viên
@@ -819,3 +820,29 @@ BEGIN
 	WHERE PhongBan.maBoPhan = Congviec_PhongBan.maBoPhan and Congviec_PhongBan.maCongViec=CongViec.maCongViec and YeuCau.maCongViec = CongViec.maCongViec and QuanLy.maBoPhan = Congviec_PhongBan.maBoPhan;
 END
 GO
+-- Thống kê tình trạng công việc của toàn công ty
+CREATE PROCEDURE [dbo].[SP_ThongKeCongViecCongTy]
+    @tuNgay SMALLDATETIME,
+    @denNgay SMALLDATETIME
+As
+Begin
+    SELECT 
+        nv.maNhanVien,
+        nv.ho,
+        nv.ten,
+        COUNT(CASE WHEN cv.ngayHoanThanh IS NOT NULL AND CAST(cv.ngayHoanThanh AS DATE) = CAST(cv.thoiHan AS DATE) AND cv.trangThai = N'Hoàn thành' THEN 1 END) AS 'dungHan',
+        COUNT(CASE WHEN cv.ngayHoanThanh IS NOT NULL AND CAST(cv.ngayHoanThanh AS DATE) < CAST(cv.thoiHan AS DATE) AND cv.trangThai = N'Hoàn thành' THEN 1 END) AS 'trcHan',
+        COUNT(CASE WHEN cv.thoiHan IS NOT NULL AND (cv.trangThai = N'Trễ hạn' OR cv.thoiHan < GETDATE()) THEN 1 END) AS 'treHan',
+        COUNT(CASE WHEN cv.trangThai != N'Trễ hạn' and cv.trangThai != N'Hoàn thành' THEN 1 END) AS 'chuaBatDau'
+    FROM 
+        CongViec cv
+    INNER JOIN 
+        Congviec_Nhanvien cnv ON cv.maCongViec = cnv.maCongViec
+    INNER JOIN 
+        NhanVien nv ON cnv.maNhanVien = nv.maNhanVien
+    WHERE 
+        cv.ngayGiao between @tuNgay and @denNgay
+    GROUP BY 
+        nv.maNhanVien, nv.ho, nv.ten;
+End
+Go
