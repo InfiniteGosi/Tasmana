@@ -841,33 +841,6 @@ Begin
     GROUP BY 
         nv.maNhanVien, nv.ho, nv.ten;
 End
-Go
--- Thống kê tình trạng công việc của phòng ban
-CREATE PROCEDURE [dbo].[SP_ThongKeCongViecPhongBan]
-    @tuNgay SMALLDATETIME,
-    @denNgay SMALLDATETIME,
-	@maBoPhan VARCHAR(10)
-As
-Begin
-    SELECT 
-        nv.maNhanVien,
-        nv.ho,
-        nv.ten,
-        COUNT(CASE WHEN cv.ngayHoanThanh IS NOT NULL AND CAST(cv.ngayHoanThanh AS DATE) = CAST(cv.thoiHan AS DATE) AND cv.trangThai = N'Hoàn thành' THEN 1 END) AS 'dungHan',
-        COUNT(CASE WHEN cv.ngayHoanThanh IS NOT NULL AND CAST(cv.ngayHoanThanh AS DATE) < CAST(cv.thoiHan AS DATE) AND cv.trangThai = N'Hoàn thành' THEN 1 END) AS 'trcHan',
-        COUNT(CASE WHEN cv.thoiHan IS NOT NULL AND (cv.trangThai = N'Trễ hạn' OR cv.thoiHan < GETDATE()) THEN 1 END) AS 'treHan',
-        COUNT(CASE WHEN cv.trangThai != N'Trễ hạn' and cv.trangThai != N'Hoàn thành' THEN 1 END) AS 'chuaBatDau'
-    FROM 
-        CongViec cv
-    INNER JOIN 
-        Congviec_Nhanvien cnv ON cv.maCongViec = cnv.maCongViec
-    INNER JOIN 
-        NhanVien nv ON cnv.maNhanVien = nv.maNhanVien
-    WHERE 
-        cv.ngayGiao between @tuNgay and @denNgay and nv.maBoPhan = @maBoPhan 
-    GROUP BY 
-        nv.maNhanVien, nv.ho, nv.ten;
-End
 GO
 -- Thống kê tình trạng công việc của phòng ban
 CREATE PROCEDURE [dbo].[SP_ThongKeCongViecPhongBan]
