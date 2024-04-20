@@ -164,5 +164,27 @@ namespace DAO
 
             return result;
         }
+        public DataTable StatisticDivisionJob(DateTime tuNgay, DateTime denNgay, string maPhongBan)
+        {
+            // Tạo dictionary chứa các tham số cho stored procedure
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@tuNgay", tuNgay);
+            parameters.Add("@denNgay", denNgay);
+            parameters.Add("@maBoPhan", maPhongBan);
+            // Gọi stored procedure và nhận kết quả vào một DataTable
+            DataTable result = DataProvider.Instance.ExecuteStoredProcedureWithTableReturn("SP_ThongKeCongViecPhongBan", parameters);
+            return result;
+        }
+        public DataTable StatisticEmployeeJob(DateTime tuNgay, DateTime denNgay, string maNhanVien)
+        {
+            // Tạo dictionary chứa các tham số cho stored procedure
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@tuNgay", tuNgay);
+            parameters.Add("@denNgay", denNgay);
+            parameters.Add("@maNhanVien", maNhanVien);
+            // Gọi stored procedure và nhận kết quả vào một DataTable
+            DataTable result = DataProvider.Instance.ExecuteStoredProcedureWithTableReturn("SP_ThongKeCongViecNhanVien", parameters);
+            return result;
+        }
     }
 }

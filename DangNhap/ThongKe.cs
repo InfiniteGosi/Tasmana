@@ -12,6 +12,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI;
 using System.Windows.Forms;
 
 namespace DangNhap
@@ -111,13 +112,27 @@ namespace DangNhap
                 ReadNV();
             }
         }
+        // lấy dữ liệu thống kê của toàn công ty
         private DataTable GetAllJobs(DateTime tuNgay, DateTime denNgay)
         {
             DataTable data = new DataTable();
             data = JobBLL.Instance.StatisticAllJob(tuNgay, denNgay);
             return data;
         }
-
+        // Lấy dữ liệu thống kê của phòng ban
+        private DataTable GetAll_DivisionJob(DateTime tuNgay, DateTime denNgay, string maBoPhan)
+        {
+            DataTable data = new DataTable();
+            data = JobBLL.Instance.StatisticDivisionJob(tuNgay, denNgay, maBoPhan); 
+            return data;
+        }
+        // Lấy dữ liệu thống kê của nhân viên
+        private DataTable GetAll_EmployeeJob(DateTime tuNgay, DateTime denNgay, string maNhanVien)
+        {
+            DataTable data = new DataTable();
+            data = JobBLL.Instance.StatisticEmployeeJob(tuNgay, denNgay, maNhanVien);
+            return data;
+        }
         // Hiển thị dữ liệu lên GGC_ThongKe
         private void LoadThongKeCongTy()
         {
@@ -180,31 +195,118 @@ namespace DangNhap
             //    dtRow[6] = record.GetValue("chuaBatDau");
             //}
         }
+        private void LoadThongKe_PhongBan()
+        {
+            DateTime tuNgay = DTP_TuNgay.Value;
+            DateTime denNgay = DTP_DenNgay.Value;
+            string maBoPhan = CBB_PhongBan.SelectedItem.ToString().Split('-')[0];
+            DataTable dataSource = new DataTable();
+            dataSource = GetAll_DivisionJob(tuNgay, denNgay, maBoPhan);
+            GGC_ThongKe.DataSource = dataSource;
+            GGC_ThongKe.TableDescriptor.Columns[0].HeaderText = "Mã nhân viên";
+            GGC_ThongKe.TableDescriptor.Columns[1].HeaderText = "Họ";
+            GGC_ThongKe.TableDescriptor.Columns[2].HeaderText = "Tên";
+            GGC_ThongKe.TableDescriptor.Columns[3].HeaderText = "Số công việc đúng hạn";
+            GGC_ThongKe.TableDescriptor.Columns[4].HeaderText = "Số công việc trước hạn";
+            GGC_ThongKe.TableDescriptor.Columns[5].HeaderText = "Số công việc trễ hạn";
+            GGC_ThongKe.TableDescriptor.Columns[6].HeaderText = "Số công việc chưa bắt đầu";
+
+            // Tạo đối tượng GridColumnDescriptorCollection để quản lý các cột
+            GridColumnDescriptorCollection columns = GGC_ThongKe.TableDescriptor.Columns;
+            foreach (GridColumnDescriptor column in columns)
+            {
+                column.AllowFilter = true;
+            }
+            GridDynamicFilter dynamicFilter = new GridDynamicFilter();
+            dynamicFilter.WireGrid(GGC_ThongKe);
+
+            GridExcelFilter excelFilter = new GridExcelFilter();
+            excelFilter.WireGrid(GGC_ThongKe);
+            // Thiết lập AutoSizeMode cho mỗi cột
+            foreach (GridColumnDescriptor column in columns)
+            {
+                column.Appearance.AnyRecordFieldCell.AutoSize = true;
+                column.Appearance.AnyRecordFieldCell.CellType = "TextBox";
+            }
+        }
+        private void LoadThongKe_NhanVien()
+        {
+            DateTime tuNgay = DTP_TuNgay.Value;
+            DateTime denNgay = DTP_DenNgay.Value;
+            string maNhanVien = CBB_NhanVien.SelectedItem.ToString().Split('_')[0];
+            DataTable dataSource = new DataTable();
+            dataSource = GetAll_EmployeeJob(tuNgay, denNgay, maNhanVien);
+            GGC_ThongKe.DataSource = dataSource;
+            GGC_ThongKe.TableDescriptor.Columns[0].HeaderText = "Mã nhân viên";
+            GGC_ThongKe.TableDescriptor.Columns[1].HeaderText = "Họ";
+            GGC_ThongKe.TableDescriptor.Columns[2].HeaderText = "Tên";
+            GGC_ThongKe.TableDescriptor.Columns[3].HeaderText = "Số công việc đúng hạn";
+            GGC_ThongKe.TableDescriptor.Columns[4].HeaderText = "Số công việc trước hạn";
+            GGC_ThongKe.TableDescriptor.Columns[5].HeaderText = "Số công việc trễ hạn";
+            GGC_ThongKe.TableDescriptor.Columns[6].HeaderText = "Số công việc chưa bắt đầu";
+
+            // Tạo đối tượng GridColumnDescriptorCollection để quản lý các cột
+            GridColumnDescriptorCollection columns = GGC_ThongKe.TableDescriptor.Columns;
+            foreach (GridColumnDescriptor column in columns)
+            {
+                column.AllowFilter = true;
+            }
+            GridDynamicFilter dynamicFilter = new GridDynamicFilter();
+            dynamicFilter.WireGrid(GGC_ThongKe);
+
+            GridExcelFilter excelFilter = new GridExcelFilter();
+            excelFilter.WireGrid(GGC_ThongKe);
+            // Thiết lập AutoSizeMode cho mỗi cột
+            foreach (GridColumnDescriptor column in columns)
+            {
+                column.Appearance.AnyRecordFieldCell.AutoSize = true;
+                column.Appearance.AnyRecordFieldCell.CellType = "TextBox";
+            }
+        }
         private void BTN_ThongKe_Click(object sender, EventArgs e)
         {
             if(RBtn_Congty.Checked)
             {
                 LoadThongKeCongTy();    
             }
+            if (RBtn_PhongBan.Checked)
+            {
+                if(CBB_PhongBan.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Vui lòng chọn phòng ban muốn thống kê");
+                    CBB_PhongBan.Focus();
+                    return;
+                }
+                else
+                {
+                    LoadThongKe_PhongBan();
+                }
+            }
+            if (RBtn_NhanVien.Checked)
+            {
+                if (CBB_PhongBan.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Vui lòng chọn phòng ban của nhân viên muốn thống kê");
+                    CBB_PhongBan.Focus();
+                    return;
+                }
+                if(CBB_NhanVien.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Vui lòng chọn nhân viên muốn thống kê");
+                    CBB_NhanVien.Focus();
+                    return;
+                }
+                LoadThongKe_NhanVien();
+            }
         }
 
         private void ThongKe_Load(object sender, EventArgs e)
         {
             GGC_ThongKe.Size = new System.Drawing.Size(950, 404);
-            /*
-            GGC_ThongKe.TableDescriptor.Columns[0].HeaderText = "Mã công việc";
-            GGC_ThongKe.TableDescriptor.Columns[1].HeaderText = "Mã nhân viên";
-            GGC_ThongKe.TableDescriptor.Columns[2].HeaderText = "Tên";
-            GGC_ThongKe.TableDescriptor.Columns[3].HeaderText = "Số công việc đúng hạn";
-            GGC_ThongKe.TableDescriptor.Columns[4].HeaderText = "Số công việc trước hạn";
-            GGC_ThongKe.TableDescriptor.Columns[5].HeaderText = "Số công việc trễ hạn";
-            GGC_ThongKe.TableDescriptor.Columns[5].HeaderText = "Số công việc chưa bắt đầu";
-            */
             GGC_ThongKe.TopLevelGroupOptions.ShowFilterBar = true;
             GGC_ThongKe.ActivateCurrentCellBehavior = Syncfusion.Windows.Forms.Grid.GridCellActivateAction.None;
             //GGC_ThongKe.ShowGroupDropArea = true;
             GGC_ThongKe.BorderStyle = BorderStyle.FixedSingle;
-
         }
     }
 }

@@ -221,5 +221,15 @@ namespace BLL
         {
             return JobDAO.Instance.StatisticAllJob(tuNgay, denNgay);
         }
+        // Thống kê công việc của bộ phận
+        public DataTable StatisticDivisionJob(DateTime tuNgay, DateTime denNgay, string maPhongBan)
+        {
+            return JobDAO.Instance.StatisticDivisionJob(tuNgay, denNgay, maPhongBan);
+        }
+        // Thống kê công việc của nhân viên
+        public DataTable StatisticEmployeeJob(DateTime tuNgay, DateTime denNgay, string maNhanVien)
+        {
+            return JobDAO.Instance.StatisticEmployeeJob(tuNgay, denNgay , maNhanVien);
+        }
     }
 }
