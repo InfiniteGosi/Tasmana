@@ -33,16 +33,15 @@ namespace DangNhap
             this.elipse_blue = new Guna.UI.WinForms.GunaElipse(this.components);
             this.elipse_red = new Guna.UI.WinForms.GunaElipse(this.components);
             this.elipse_green = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.DGV_ThongKeCongViec = new System.Windows.Forms.DataGridView();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.MTB_TuNgay = new System.Windows.Forms.MaskedTextBox();
+            this.MTB_DenNgay = new System.Windows.Forms.MaskedTextBox();
             this.LB_ThongKeCV = new System.Windows.Forms.Label();
             this.LB_TuNgay = new System.Windows.Forms.Label();
             this.LB_ToiNgay = new System.Windows.Forms.Label();
             this.RBtn_PhongBan = new System.Windows.Forms.RadioButton();
             this.RBtn_NhanVien = new System.Windows.Forms.RadioButton();
             this.CBB_PhongBan = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.CBB_NhanVien = new System.Windows.Forms.ComboBox();
             this.LB_PhongBan = new System.Windows.Forms.Label();
             this.LB_NhanVien = new System.Windows.Forms.Label();
             this.BTN_ThongKe = new Guna.UI.WinForms.GunaGradientButton();
@@ -50,7 +49,9 @@ namespace DangNhap
             this.CBB_LoaiDoThi = new System.Windows.Forms.ComboBox();
             this.LB_LoaiDoThi = new System.Windows.Forms.Label();
             this.LB_ThongBao1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_ThongKeCongViec)).BeginInit();
+            this.RBtn_Congty = new System.Windows.Forms.RadioButton();
+            this.GGC_ThongKe = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
+            ((System.ComponentModel.ISupportInitialize)(this.GGC_ThongKe)).BeginInit();
             this.SuspendLayout();
             // 
             // elipse_blue
@@ -68,36 +69,23 @@ namespace DangNhap
             this.elipse_green.Radius = 10;
             this.elipse_green.TargetControl = this;
             // 
-            // maskedTextBox1
+            // MTB_TuNgay
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(107, 73);
-            this.maskedTextBox1.Mask = "00/00/0000 90:00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(112, 22);
-            this.maskedTextBox1.TabIndex = 4;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.MTB_TuNgay.Location = new System.Drawing.Point(107, 73);
+            this.MTB_TuNgay.Mask = "00/00/0000 90:00";
+            this.MTB_TuNgay.Name = "MTB_TuNgay";
+            this.MTB_TuNgay.Size = new System.Drawing.Size(112, 22);
+            this.MTB_TuNgay.TabIndex = 4;
+            this.MTB_TuNgay.ValidatingType = typeof(System.DateTime);
             // 
-            // DGV_ThongKeCongViec
+            // MTB_DenNgay
             // 
-            this.DGV_ThongKeCongViec.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGV_ThongKeCongViec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_ThongKeCongViec.Location = new System.Drawing.Point(12, 188);
-            this.DGV_ThongKeCongViec.Name = "DGV_ThongKeCongViec";
-            this.DGV_ThongKeCongViec.RowHeadersWidth = 51;
-            this.DGV_ThongKeCongViec.RowTemplate.Height = 24;
-            this.DGV_ThongKeCongViec.Size = new System.Drawing.Size(1610, 568);
-            this.DGV_ThongKeCongViec.TabIndex = 5;
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(339, 73);
-            this.maskedTextBox2.Mask = "00/00/0000 90:00";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(112, 22);
-            this.maskedTextBox2.TabIndex = 6;
-            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
+            this.MTB_DenNgay.Location = new System.Drawing.Point(339, 73);
+            this.MTB_DenNgay.Mask = "00/00/0000 90:00";
+            this.MTB_DenNgay.Name = "MTB_DenNgay";
+            this.MTB_DenNgay.Size = new System.Drawing.Size(112, 22);
+            this.MTB_DenNgay.TabIndex = 6;
+            this.MTB_DenNgay.ValidatingType = typeof(System.DateTime);
             // 
             // LB_ThongKeCV
             // 
@@ -135,51 +123,54 @@ namespace DangNhap
             // RBtn_PhongBan
             // 
             this.RBtn_PhongBan.AutoSize = true;
-            this.RBtn_PhongBan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RBtn_PhongBan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBtn_PhongBan.ForeColor = System.Drawing.Color.White;
-            this.RBtn_PhongBan.Location = new System.Drawing.Point(25, 135);
+            this.RBtn_PhongBan.Location = new System.Drawing.Point(175, 133);
             this.RBtn_PhongBan.Name = "RBtn_PhongBan";
-            this.RBtn_PhongBan.Size = new System.Drawing.Size(118, 27);
+            this.RBtn_PhongBan.Size = new System.Drawing.Size(112, 26);
             this.RBtn_PhongBan.TabIndex = 210;
             this.RBtn_PhongBan.TabStop = true;
             this.RBtn_PhongBan.Text = "Phòng ban";
             this.RBtn_PhongBan.UseVisualStyleBackColor = true;
+            this.RBtn_PhongBan.CheckedChanged += new System.EventHandler(this.RBtn_PhongBan_CheckedChanged);
             // 
             // RBtn_NhanVien
             // 
             this.RBtn_NhanVien.AutoSize = true;
-            this.RBtn_NhanVien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RBtn_NhanVien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBtn_NhanVien.ForeColor = System.Drawing.Color.White;
-            this.RBtn_NhanVien.Location = new System.Drawing.Point(208, 134);
+            this.RBtn_NhanVien.Location = new System.Drawing.Point(331, 133);
             this.RBtn_NhanVien.Name = "RBtn_NhanVien";
-            this.RBtn_NhanVien.Size = new System.Drawing.Size(114, 27);
+            this.RBtn_NhanVien.Size = new System.Drawing.Size(111, 26);
             this.RBtn_NhanVien.TabIndex = 212;
             this.RBtn_NhanVien.TabStop = true;
             this.RBtn_NhanVien.Text = "Nhân viên";
             this.RBtn_NhanVien.UseVisualStyleBackColor = true;
+            this.RBtn_NhanVien.CheckedChanged += new System.EventHandler(this.RBtn_PhongBan_CheckedChanged);
             // 
             // CBB_PhongBan
             // 
             this.CBB_PhongBan.FormattingEnabled = true;
-            this.CBB_PhongBan.Location = new System.Drawing.Point(505, 139);
+            this.CBB_PhongBan.Location = new System.Drawing.Point(602, 139);
             this.CBB_PhongBan.Name = "CBB_PhongBan";
             this.CBB_PhongBan.Size = new System.Drawing.Size(231, 24);
             this.CBB_PhongBan.TabIndex = 213;
+            this.CBB_PhongBan.SelectedValueChanged += new System.EventHandler(this.CBB_PhongBan_SelectedValueChanged);
             // 
-            // comboBox2
+            // CBB_NhanVien
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(927, 139);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(257, 24);
-            this.comboBox2.TabIndex = 215;
+            this.CBB_NhanVien.FormattingEnabled = true;
+            this.CBB_NhanVien.Location = new System.Drawing.Point(1024, 139);
+            this.CBB_NhanVien.Name = "CBB_NhanVien";
+            this.CBB_NhanVien.Size = new System.Drawing.Size(257, 24);
+            this.CBB_NhanVien.TabIndex = 215;
             // 
             // LB_PhongBan
             // 
             this.LB_PhongBan.AutoSize = true;
             this.LB_PhongBan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_PhongBan.ForeColor = System.Drawing.Color.White;
-            this.LB_PhongBan.Location = new System.Drawing.Point(387, 138);
+            this.LB_PhongBan.Location = new System.Drawing.Point(484, 138);
             this.LB_PhongBan.Name = "LB_PhongBan";
             this.LB_PhongBan.Size = new System.Drawing.Size(75, 22);
             this.LB_PhongBan.TabIndex = 216;
@@ -190,7 +181,7 @@ namespace DangNhap
             this.LB_NhanVien.AutoSize = true;
             this.LB_NhanVien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_NhanVien.ForeColor = System.Drawing.Color.White;
-            this.LB_NhanVien.Location = new System.Drawing.Point(793, 141);
+            this.LB_NhanVien.Location = new System.Drawing.Point(890, 141);
             this.LB_NhanVien.Name = "LB_NhanVien";
             this.LB_NhanVien.Size = new System.Drawing.Size(92, 22);
             this.LB_NhanVien.TabIndex = 217;
@@ -212,7 +203,7 @@ namespace DangNhap
             this.BTN_ThongKe.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.BTN_ThongKe.Image = null;
             this.BTN_ThongKe.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_ThongKe.Location = new System.Drawing.Point(1232, 135);
+            this.BTN_ThongKe.Location = new System.Drawing.Point(1329, 135);
             this.BTN_ThongKe.Name = "BTN_ThongKe";
             this.BTN_ThongKe.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.BTN_ThongKe.OnHoverBaseColor2 = System.Drawing.Color.Navy;
@@ -225,6 +216,7 @@ namespace DangNhap
             this.BTN_ThongKe.TabIndex = 219;
             this.BTN_ThongKe.Text = "Thống kê";
             this.BTN_ThongKe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_ThongKe.Click += new System.EventHandler(this.BTN_ThongKe_Click);
             // 
             // Btn_XuatDoThi
             // 
@@ -242,7 +234,7 @@ namespace DangNhap
             this.Btn_XuatDoThi.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.Btn_XuatDoThi.Image = null;
             this.Btn_XuatDoThi.ImageSize = new System.Drawing.Size(20, 20);
-            this.Btn_XuatDoThi.Location = new System.Drawing.Point(927, 72);
+            this.Btn_XuatDoThi.Location = new System.Drawing.Point(1329, 68);
             this.Btn_XuatDoThi.Name = "Btn_XuatDoThi";
             this.Btn_XuatDoThi.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.Btn_XuatDoThi.OnHoverBaseColor2 = System.Drawing.Color.Navy;
@@ -263,9 +255,9 @@ namespace DangNhap
             "Pie Chart",
             "Bar Chart",
             "Line Chart"});
-            this.CBB_LoaiDoThi.Location = new System.Drawing.Point(654, 74);
+            this.CBB_LoaiDoThi.Location = new System.Drawing.Point(1024, 70);
             this.CBB_LoaiDoThi.Name = "CBB_LoaiDoThi";
-            this.CBB_LoaiDoThi.Size = new System.Drawing.Size(231, 24);
+            this.CBB_LoaiDoThi.Size = new System.Drawing.Size(263, 24);
             this.CBB_LoaiDoThi.TabIndex = 221;
             // 
             // LB_LoaiDoThi
@@ -273,7 +265,7 @@ namespace DangNhap
             this.LB_LoaiDoThi.AutoSize = true;
             this.LB_LoaiDoThi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_LoaiDoThi.ForeColor = System.Drawing.Color.White;
-            this.LB_LoaiDoThi.Location = new System.Drawing.Point(530, 75);
+            this.LB_LoaiDoThi.Location = new System.Drawing.Point(890, 72);
             this.LB_LoaiDoThi.Name = "LB_LoaiDoThi";
             this.LB_LoaiDoThi.Size = new System.Drawing.Size(96, 22);
             this.LB_LoaiDoThi.TabIndex = 222;
@@ -291,12 +283,44 @@ namespace DangNhap
             this.LB_ThongBao1.Text = "Thông tin:";
             this.LB_ThongBao1.Visible = false;
             // 
+            // RBtn_Congty
+            // 
+            this.RBtn_Congty.AutoSize = true;
+            this.RBtn_Congty.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RBtn_Congty.ForeColor = System.Drawing.Color.White;
+            this.RBtn_Congty.Location = new System.Drawing.Point(12, 133);
+            this.RBtn_Congty.Name = "RBtn_Congty";
+            this.RBtn_Congty.Size = new System.Drawing.Size(131, 26);
+            this.RBtn_Congty.TabIndex = 224;
+            this.RBtn_Congty.TabStop = true;
+            this.RBtn_Congty.Text = "Toàn công ty";
+            this.RBtn_Congty.UseVisualStyleBackColor = true;
+            this.RBtn_Congty.CheckedChanged += new System.EventHandler(this.RBtn_PhongBan_CheckedChanged);
+            // 
+            // GGC_ThongKe
+            // 
+            this.GGC_ThongKe.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.GGC_ThongKe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GGC_ThongKe.BackColor = System.Drawing.SystemColors.Window;
+            this.GGC_ThongKe.Location = new System.Drawing.Point(21, 189);
+            this.GGC_ThongKe.Name = "GGC_ThongKe";
+            this.GGC_ThongKe.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
+            this.GGC_ThongKe.Size = new System.Drawing.Size(1585, 574);
+            this.GGC_ThongKe.TabIndex = 225;
+            this.GGC_ThongKe.Text = "gridGroupingControl1";
+            this.GGC_ThongKe.UseRightToLeftCompatibleTextBox = true;
+            this.GGC_ThongKe.VersionInfo = "25.1462.39";
+            // 
             // ThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(1634, 852);
+            this.Controls.Add(this.GGC_ThongKe);
+            this.Controls.Add(this.RBtn_Congty);
             this.Controls.Add(this.LB_ThongBao1);
             this.Controls.Add(this.LB_LoaiDoThi);
             this.Controls.Add(this.CBB_LoaiDoThi);
@@ -304,20 +328,20 @@ namespace DangNhap
             this.Controls.Add(this.BTN_ThongKe);
             this.Controls.Add(this.LB_NhanVien);
             this.Controls.Add(this.LB_PhongBan);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.CBB_NhanVien);
             this.Controls.Add(this.CBB_PhongBan);
             this.Controls.Add(this.RBtn_NhanVien);
             this.Controls.Add(this.RBtn_PhongBan);
             this.Controls.Add(this.LB_ToiNgay);
             this.Controls.Add(this.LB_TuNgay);
             this.Controls.Add(this.LB_ThongKeCV);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.DGV_ThongKeCongViec);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.MTB_DenNgay);
+            this.Controls.Add(this.MTB_TuNgay);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ThongKe";
             this.Text = "ThongKe";
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_ThongKeCongViec)).EndInit();
+            this.Load += new System.EventHandler(this.ThongKe_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.GGC_ThongKe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,15 +351,14 @@ namespace DangNhap
         private Guna.UI.WinForms.GunaElipse elipse_blue;
         private Guna.UI.WinForms.GunaElipse elipse_red;
         private Guna.UI.WinForms.GunaElipse elipse_green;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.DataGridView DGV_ThongKeCongViec;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox MTB_DenNgay;
+        private System.Windows.Forms.MaskedTextBox MTB_TuNgay;
         private System.Windows.Forms.Label LB_ThongKeCV;
         private System.Windows.Forms.RadioButton RBtn_PhongBan;
         private System.Windows.Forms.Label LB_ToiNgay;
         private System.Windows.Forms.Label LB_TuNgay;
         private System.Windows.Forms.RadioButton RBtn_NhanVien;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox CBB_NhanVien;
         private System.Windows.Forms.ComboBox CBB_PhongBan;
         private System.Windows.Forms.Label LB_NhanVien;
         private System.Windows.Forms.Label LB_PhongBan;
@@ -344,5 +367,7 @@ namespace DangNhap
         private System.Windows.Forms.Label LB_ThongBao1;
         private System.Windows.Forms.Label LB_LoaiDoThi;
         private System.Windows.Forms.ComboBox CBB_LoaiDoThi;
+        private System.Windows.Forms.RadioButton RBtn_Congty;
+        private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl GGC_ThongKe;
     }
 }

@@ -350,16 +350,16 @@ namespace DangNhap
                 Record record = GGC_hienthicongviec.Table.Records[rowIndex];
 
                 // Extract data from the record
-                string maCongViec = record.GetValue("MaCongViec").ToString();
-                string maNhanVien = record.GetValue("MaNhanVien").ToString();
+                string maCongViec = record.GetValue("Mã công việc").ToString();
+                string maNhanVien = record.GetValue("Mã nhân viên").ToString();
                 Employee curEmployee = EmployeeBLL.Instance.GetEmployeeByEmployeeId(maNhanVien);
                 Division divisionOfEmployee = GroupBLL.Instance.GetDivsionByGroupId(curEmployee.MaNhom.ToString());
-                string noiDungCV = record.GetValue("NoiDung").ToString();
-                string maCanHo = record.GetValue("MaCanHo").ToString();
-                string ghiChu = record.GetValue("GhiChu").ToString();
-                string trangThai = record.GetValue("TrangThai").ToString();
-                DateTime thoiHan = (DateTime)record.GetValue("ThoiHan");
+                string maCanHo = record.GetValue("Mã căn hộ").ToString();
                 Job curJob = JobBLL.Instance.GetJobFromJobID(maCongViec);
+                string noiDungCV = curJob.NoiDung.ToString();
+                string ghiChu = curJob.GhiChu.ToString();
+                string trangThai = curJob.TrangThai.ToString();
+                DateTime thoiHan = curJob.ThoiHan;
                 // Add to ChiTietCongViec
                 ChiTietCongViec ctcv = new ChiTietCongViec();
                 ctcv.TXB_PhongBan.Text = divisionOfEmployee.MaBoPhan.ToString();

@@ -102,8 +102,8 @@ namespace BLL
                 string maCongViec = dt.Rows[i]["maCongViec"].ToString();
                 string noiDung = dt.Rows[i]["noiDung"].ToString();
                 DateTime ngayGiao = (DateTime)dt.Rows[i]["ngayGiao"];
-                DateTime thoihan = dt.Rows[i]["thoiHan"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["thoiHan"].ToString());
-                DateTime ngayHoanThanh = dt.Rows[i]["ngayHoanThanh"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["ngayHoanThanh"].ToString());
+                DateTime thoihan = dt.Rows[i]["thoiHan"] == DBNull.Value ? DateTime.MinValue : (DateTime)dt.Rows[i]["thoiHan"];
+                DateTime ngayHoanThanh = dt.Rows[i]["ngayHoanThanh"] == DBNull.Value ? DateTime.MinValue : (DateTime)dt.Rows[i]["ngayHoanThanh"];
                 DateTime ngayCapNhat = (DateTime)dt.Rows[i]["ngayCapNhat"];
                 string trangThai = dt.Rows[i]["trangThai"].ToString();
                 string ghiChu = dt.Rows[i]["ghiChu"].ToString();
@@ -123,8 +123,8 @@ namespace BLL
                 string maCongViec = dt.Rows[i]["maCongViec"].ToString();
                 string noiDung = dt.Rows[i]["noiDung"].ToString();
                 DateTime ngayGiao = (DateTime)dt.Rows[i]["ngayGiao"];
-                DateTime thoihan = dt.Rows[i]["thoiHan"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["thoiHan"].ToString());
-                DateTime ngayHoanThanh = dt.Rows[i]["ngayHoanThanh"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["ngayHoanThanh"].ToString());
+                DateTime thoihan = dt.Rows[i]["thoiHan"] == DBNull.Value ? DateTime.MinValue : (DateTime)dt.Rows[i]["thoiHan"];
+                DateTime ngayHoanThanh = dt.Rows[i]["ngayHoanThanh"] == DBNull.Value ? DateTime.MinValue : (DateTime)dt.Rows[i]["ngayHoanThanh"];
                 DateTime ngayCapNhat = (DateTime)dt.Rows[i]["ngayCapNhat"];
                 string trangThai = dt.Rows[i]["trangThai"].ToString();
                 string ghiChu = dt.Rows[i]["ghiChu"].ToString();
@@ -144,8 +144,8 @@ namespace BLL
                 string maCongViec = dt.Rows[i]["maCongViec"].ToString();
                 string noiDung = dt.Rows[i]["noiDung"].ToString();
                 DateTime ngayGiao = (DateTime)dt.Rows[i]["ngayGiao"];
-                DateTime thoihan = dt.Rows[i]["thoiHan"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["thoiHan"].ToString());
-                DateTime ngayHoanThanh = dt.Rows[i]["ngayHoanThanh"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["ngayHoanThanh"].ToString());
+                DateTime thoihan = dt.Rows[i]["thoiHan"] == DBNull.Value ? DateTime.MinValue : (DateTime)dt.Rows[i]["thoiHan"];
+                DateTime ngayHoanThanh = dt.Rows[i]["ngayHoanThanh"] == DBNull.Value ? DateTime.MinValue : (DateTime)dt.Rows[i]["ngayHoanThanh"];
                 DateTime ngayCapNhat = (DateTime)dt.Rows[i]["ngayCapNhat"];
                 string trangThai = dt.Rows[i]["trangThai"].ToString();
                 string ghiChu = dt.Rows[i]["ghiChu"].ToString();
@@ -164,8 +164,8 @@ namespace BLL
             string maCongViec = dt.Rows[i]["maCongViec"].ToString();
             string noiDung = dt.Rows[i]["noiDung"].ToString();
             DateTime ngayGiao = (DateTime)dt.Rows[i]["ngayGiao"];
-            DateTime thoihan = dt.Rows[i]["thoiHan"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["thoiHan"].ToString());
-            DateTime ngayHoanThanh = dt.Rows[i]["ngayHoanThanh"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(dt.Rows[i]["ngayHoanThanh"].ToString());
+            DateTime thoihan = dt.Rows[i]["thoiHan"] == DBNull.Value ? DateTime.MinValue : (DateTime)dt.Rows[i]["thoiHan"];
+            DateTime ngayHoanThanh = dt.Rows[i]["ngayHoanThanh"] == DBNull.Value ? DateTime.MinValue : (DateTime)dt.Rows[i]["ngayHoanThanh"];
             DateTime ngayCapNhat = (DateTime)dt.Rows[i]["ngayCapNhat"];
             string trangThai = dt.Rows[i]["trangThai"].ToString();
             string ghiChu = dt.Rows[i]["ghiChu"].ToString();
