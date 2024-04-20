@@ -22,5 +22,10 @@ namespace DAO
             string query = "select * from PhongBan";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetDivisionByEmployeeId(string maNhanVien)
+        {
+            string query = "exec SP_LayPhongBanTheoMaNhanVien @maNhanVien";
+            return DataProvider.Instance.ExecuteQuery(query, new object[] { maNhanVien });
+        }
     }
 }

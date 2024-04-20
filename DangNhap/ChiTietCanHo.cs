@@ -139,6 +139,7 @@ namespace DangNhap
                 NUD_thangmay.Value = canHoHienTai.SoLuongTheThangMay;
                 TXB_phiql.Text = canHoHienTai.MucPhiQuanLyHangThang.ToString();
                 CBB_loai.SelectedIndex = Array.IndexOf(arrLoai, GetApartmentType(maCanHoHienTai));
+                CBB_tinhtrang.SelectedIndex = Array.IndexOf(arrTinhTrang, canHoHienTai.TinhTrangGiaoDichHienTai);
             }
         }
 

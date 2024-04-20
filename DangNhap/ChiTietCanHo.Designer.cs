@@ -46,49 +46,16 @@ namespace DangNhap
             this.LB_phongngu = new System.Windows.Forms.Label();
             this.pic_canho = new System.Windows.Forms.PictureBox();
             this.PN_hienthi = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.BTN_xoa = new Guna.UI.WinForms.GunaGradientButton();
-            this.BTN_luu = new Guna.UI.WinForms.GunaGradientButton();
-            this.CBB_loai = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.TXB_phiql = new System.Windows.Forms.TextBox();
-            this.CBB_tinhtrang = new System.Windows.Forms.ComboBox();
-            this.gridGroupingControl1 = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
-            this.label3 = new System.Windows.Forms.Label();
-            this.NUD_thangmay = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
-            this.label2 = new System.Windows.Forms.Label();
-            this.NUD_toilet = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
-            this.label1 = new System.Windows.Forms.Label();
-            this.NUD_phongngu = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
-            this.LB_hinhanhcanho = new System.Windows.Forms.Label();
-            this.BTN_chung = new System.Windows.Forms.Button();
-            this.BTN_lichsu = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.BTN_thoat = new Guna.UI.WinForms.GunaGradientButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.numericUpDownExt1 = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
-            this.label9 = new System.Windows.Forms.Label();
-            this.numericUpDownExt2 = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
-            this.label10 = new System.Windows.Forms.Label();
-            this.numericUpDownExt3 = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
-            this.label11 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.numericUpDownExt4 = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
@@ -96,24 +63,48 @@ namespace DangNhap
             this.numericUpDownExt5 = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
             this.label17 = new System.Windows.Forms.Label();
             this.numericUpDownExt6 = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
-            this.label18 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.BTN_xoa = new Guna.UI.WinForms.GunaGradientButton();
+            this.BTN_luu = new Guna.UI.WinForms.GunaGradientButton();
+            this.label11 = new System.Windows.Forms.Label();
+            this.CBB_loai = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TXB_phiql = new System.Windows.Forms.TextBox();
+            this.CBB_tinhtrang = new System.Windows.Forms.ComboBox();
+            this.gridGroupingControl1 = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.NUD_thangmay = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.NUD_toilet = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
+            this.label1 = new System.Windows.Forms.Label();
+            this.NUD_phongngu = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.LB_hinhanhcanho = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.BTN_chung = new System.Windows.Forms.Button();
+            this.BTN_lichsu = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.BTN_thoat = new Guna.UI.WinForms.GunaGradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.pic_canho)).BeginInit();
             this.PN_hienthi.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridGroupingControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_thangmay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_toilet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_phongngu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt6)).BeginInit();
             this.SuspendLayout();
             // 
             // LB_ttch
@@ -287,7 +278,6 @@ namespace DangNhap
             this.PN_hienthi.Controls.Add(this.panel1);
             this.PN_hienthi.Controls.Add(this.panel6);
             this.PN_hienthi.Controls.Add(this.BTN_xoa);
-            this.PN_hienthi.Controls.Add(this.comboBox1);
             this.PN_hienthi.Controls.Add(this.BTN_luu);
             this.PN_hienthi.Controls.Add(this.label11);
             this.PN_hienthi.Controls.Add(this.CBB_loai);
@@ -295,17 +285,13 @@ namespace DangNhap
             this.PN_hienthi.Controls.Add(this.TXB_phiql);
             this.PN_hienthi.Controls.Add(this.CBB_tinhtrang);
             this.PN_hienthi.Controls.Add(this.gridGroupingControl1);
-            this.PN_hienthi.Controls.Add(this.numericUpDownExt3);
             this.PN_hienthi.Controls.Add(this.label3);
             this.PN_hienthi.Controls.Add(this.label10);
             this.PN_hienthi.Controls.Add(this.NUD_thangmay);
-            this.PN_hienthi.Controls.Add(this.numericUpDownExt2);
             this.PN_hienthi.Controls.Add(this.label2);
             this.PN_hienthi.Controls.Add(this.label9);
             this.PN_hienthi.Controls.Add(this.NUD_toilet);
-            this.PN_hienthi.Controls.Add(this.numericUpDownExt1);
             this.PN_hienthi.Controls.Add(this.label1);
-            this.PN_hienthi.Controls.Add(this.textBox2);
             this.PN_hienthi.Controls.Add(this.NUD_phongngu);
             this.PN_hienthi.Controls.Add(this.label8);
             this.PN_hienthi.Controls.Add(this.TXB_chuho);
@@ -314,7 +300,6 @@ namespace DangNhap
             this.PN_hienthi.Controls.Add(this.pictureBox1);
             this.PN_hienthi.Controls.Add(this.LB_macanho);
             this.PN_hienthi.Controls.Add(this.pic_canho);
-            this.PN_hienthi.Controls.Add(this.textBox1);
             this.PN_hienthi.Controls.Add(this.TXB_thanhtoan);
             this.PN_hienthi.Controls.Add(this.TXB_macanho);
             this.PN_hienthi.Controls.Add(this.label6);
@@ -332,6 +317,14 @@ namespace DangNhap
             this.PN_hienthi.Name = "PN_hienthi";
             this.PN_hienthi.Size = new System.Drawing.Size(1391, 772);
             this.PN_hienthi.TabIndex = 38;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Silver;
+            this.panel7.Location = new System.Drawing.Point(650, 38);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1, 600);
+            this.panel7.TabIndex = 212;
             // 
             // panel1
             // 
@@ -355,6 +348,165 @@ namespace DangNhap
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1, 600);
             this.panel1.TabIndex = 212;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Silver;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1, 600);
+            this.panel8.TabIndex = 212;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(55, 151);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(166, 22);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "Số lượng phòng ngủ";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(-617, 151);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(128, 22);
+            this.label13.TabIndex = 19;
+            this.label13.Text = "Chủ hộ hiện tại";
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.Color.White;
+            this.textBox3.Location = new System.Drawing.Point(-456, 7);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(375, 30);
+            this.textBox3.TabIndex = 13;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.ForeColor = System.Drawing.Color.White;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(-456, 76);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(375, 30);
+            this.comboBox2.TabIndex = 183;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(-456, 374);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(170, 170);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 36;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(-617, 9);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(92, 22);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "Mã căn hộ";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(-617, 80);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(102, 22);
+            this.label18.TabIndex = 182;
+            this.label18.Text = "Loại căn hộ";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(-614, 374);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(136, 22);
+            this.label15.TabIndex = 37;
+            this.label15.Text = "Hình ảnh căn hộ";
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.textBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.ForeColor = System.Drawing.Color.White;
+            this.textBox4.Location = new System.Drawing.Point(-456, 147);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(375, 30);
+            this.textBox4.TabIndex = 20;
+            // 
+            // numericUpDownExt4
+            // 
+            this.numericUpDownExt4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.numericUpDownExt4.BeforeTouchSize = new System.Drawing.Size(375, 30);
+            this.numericUpDownExt4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownExt4.ForeColor = System.Drawing.Color.White;
+            this.numericUpDownExt4.Location = new System.Drawing.Point(320, 149);
+            this.numericUpDownExt4.Name = "numericUpDownExt4";
+            this.numericUpDownExt4.Size = new System.Drawing.Size(375, 30);
+            this.numericUpDownExt4.TabIndex = 171;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(55, 9);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(128, 22);
+            this.label16.TabIndex = 172;
+            this.label16.Text = "Số lượng toilet";
+            // 
+            // numericUpDownExt5
+            // 
+            this.numericUpDownExt5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.numericUpDownExt5.BeforeTouchSize = new System.Drawing.Size(375, 30);
+            this.numericUpDownExt5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownExt5.ForeColor = System.Drawing.Color.White;
+            this.numericUpDownExt5.Location = new System.Drawing.Point(320, 7);
+            this.numericUpDownExt5.Name = "numericUpDownExt5";
+            this.numericUpDownExt5.Size = new System.Drawing.Size(375, 30);
+            this.numericUpDownExt5.TabIndex = 173;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(55, 80);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(193, 22);
+            this.label17.TabIndex = 174;
+            this.label17.Text = "Số lượng thẻ thang máy";
+            // 
+            // numericUpDownExt6
+            // 
+            this.numericUpDownExt6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.numericUpDownExt6.BeforeTouchSize = new System.Drawing.Size(375, 30);
+            this.numericUpDownExt6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownExt6.ForeColor = System.Drawing.Color.White;
+            this.numericUpDownExt6.Location = new System.Drawing.Point(320, 78);
+            this.numericUpDownExt6.Name = "numericUpDownExt6";
+            this.numericUpDownExt6.Size = new System.Drawing.Size(375, 30);
+            this.numericUpDownExt6.TabIndex = 175;
             // 
             // panel6
             // 
@@ -424,6 +576,17 @@ namespace DangNhap
             this.BTN_luu.Text = "Lưu";
             this.BTN_luu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(33, 118);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(102, 22);
+            this.label11.TabIndex = 182;
+            this.label11.Text = "Loại căn hộ";
+            // 
             // CBB_loai
             // 
             this.CBB_loai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
@@ -492,6 +655,17 @@ namespace DangNhap
             this.label3.TabIndex = 176;
             this.label3.Text = "Mức phí quản lý hằng tháng";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(705, 118);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(193, 22);
+            this.label10.TabIndex = 174;
+            this.label10.Text = "Số lượng thẻ thang máy";
+            // 
             // NUD_thangmay
             // 
             this.NUD_thangmay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
@@ -513,6 +687,17 @@ namespace DangNhap
             this.label2.Size = new System.Drawing.Size(193, 22);
             this.label2.TabIndex = 174;
             this.label2.Text = "Số lượng thẻ thang máy";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(705, 47);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(128, 22);
+            this.label9.TabIndex = 172;
+            this.label9.Text = "Số lượng toilet";
             // 
             // NUD_toilet
             // 
@@ -547,6 +732,28 @@ namespace DangNhap
             this.NUD_phongngu.Size = new System.Drawing.Size(375, 30);
             this.NUD_phongngu.TabIndex = 171;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(36, 412);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(136, 22);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "Hình ảnh căn hộ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(33, 47);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(92, 22);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Mã căn hộ";
+            // 
             // LB_hinhanhcanho
             // 
             this.LB_hinhanhcanho.AutoSize = true;
@@ -557,6 +764,38 @@ namespace DangNhap
             this.LB_hinhanhcanho.Size = new System.Drawing.Size(136, 22);
             this.LB_hinhanhcanho.TabIndex = 37;
             this.LB_hinhanhcanho.Text = "Hình ảnh căn hộ";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(194, 412);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(170, 170);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 36;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(33, 189);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(128, 22);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Chủ hộ hiện tại";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(705, 189);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(166, 22);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Số lượng phòng ngủ";
             // 
             // BTN_chung
             // 
@@ -654,324 +893,6 @@ namespace DangNhap
             this.BTN_thoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_thoat.Click += new System.EventHandler(this.BTN_thoat_Click);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(705, 189);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(166, 22);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Số lượng phòng ngủ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(33, 189);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(128, 22);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Chủ hộ hiện tại";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(194, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(375, 30);
-            this.textBox1.TabIndex = 13;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(194, 412);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(170, 170);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 36;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(33, 47);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 22);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Mã căn hộ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(36, 412);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(136, 22);
-            this.label8.TabIndex = 37;
-            this.label8.Text = "Hình ảnh căn hộ";
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(194, 185);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(375, 30);
-            this.textBox2.TabIndex = 20;
-            // 
-            // numericUpDownExt1
-            // 
-            this.numericUpDownExt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.numericUpDownExt1.BeforeTouchSize = new System.Drawing.Size(375, 30);
-            this.numericUpDownExt1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownExt1.ForeColor = System.Drawing.Color.White;
-            this.numericUpDownExt1.Location = new System.Drawing.Point(970, 187);
-            this.numericUpDownExt1.Name = "numericUpDownExt1";
-            this.numericUpDownExt1.Size = new System.Drawing.Size(375, 30);
-            this.numericUpDownExt1.TabIndex = 171;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(705, 47);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(128, 22);
-            this.label9.TabIndex = 172;
-            this.label9.Text = "Số lượng toilet";
-            // 
-            // numericUpDownExt2
-            // 
-            this.numericUpDownExt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.numericUpDownExt2.BeforeTouchSize = new System.Drawing.Size(375, 30);
-            this.numericUpDownExt2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownExt2.ForeColor = System.Drawing.Color.White;
-            this.numericUpDownExt2.Location = new System.Drawing.Point(970, 45);
-            this.numericUpDownExt2.Name = "numericUpDownExt2";
-            this.numericUpDownExt2.Size = new System.Drawing.Size(375, 30);
-            this.numericUpDownExt2.TabIndex = 173;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(705, 118);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(193, 22);
-            this.label10.TabIndex = 174;
-            this.label10.Text = "Số lượng thẻ thang máy";
-            // 
-            // numericUpDownExt3
-            // 
-            this.numericUpDownExt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.numericUpDownExt3.BeforeTouchSize = new System.Drawing.Size(375, 30);
-            this.numericUpDownExt3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownExt3.ForeColor = System.Drawing.Color.White;
-            this.numericUpDownExt3.Location = new System.Drawing.Point(970, 116);
-            this.numericUpDownExt3.Name = "numericUpDownExt3";
-            this.numericUpDownExt3.Size = new System.Drawing.Size(375, 30);
-            this.numericUpDownExt3.TabIndex = 175;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(33, 118);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(102, 22);
-            this.label11.TabIndex = 182;
-            this.label11.Text = "Loại căn hộ";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(194, 114);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(375, 30);
-            this.comboBox1.TabIndex = 183;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Silver;
-            this.panel7.Location = new System.Drawing.Point(650, 38);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1, 600);
-            this.panel7.TabIndex = 212;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(55, 151);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(166, 22);
-            this.label12.TabIndex = 29;
-            this.label12.Text = "Số lượng phòng ngủ";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(-617, 151);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(128, 22);
-            this.label13.TabIndex = 19;
-            this.label13.Text = "Chủ hộ hiện tại";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(-456, 7);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(375, 30);
-            this.textBox3.TabIndex = 13;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-456, 374);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(170, 170);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 36;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(-617, 9);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(92, 22);
-            this.label14.TabIndex = 12;
-            this.label14.Text = "Mã căn hộ";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(-614, 374);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(136, 22);
-            this.label15.TabIndex = 37;
-            this.label15.Text = "Hình ảnh căn hộ";
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.textBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(-456, 147);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(375, 30);
-            this.textBox4.TabIndex = 20;
-            // 
-            // numericUpDownExt4
-            // 
-            this.numericUpDownExt4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.numericUpDownExt4.BeforeTouchSize = new System.Drawing.Size(375, 30);
-            this.numericUpDownExt4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownExt4.ForeColor = System.Drawing.Color.White;
-            this.numericUpDownExt4.Location = new System.Drawing.Point(320, 149);
-            this.numericUpDownExt4.Name = "numericUpDownExt4";
-            this.numericUpDownExt4.Size = new System.Drawing.Size(375, 30);
-            this.numericUpDownExt4.TabIndex = 171;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(55, 9);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(128, 22);
-            this.label16.TabIndex = 172;
-            this.label16.Text = "Số lượng toilet";
-            // 
-            // numericUpDownExt5
-            // 
-            this.numericUpDownExt5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.numericUpDownExt5.BeforeTouchSize = new System.Drawing.Size(375, 30);
-            this.numericUpDownExt5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownExt5.ForeColor = System.Drawing.Color.White;
-            this.numericUpDownExt5.Location = new System.Drawing.Point(320, 7);
-            this.numericUpDownExt5.Name = "numericUpDownExt5";
-            this.numericUpDownExt5.Size = new System.Drawing.Size(375, 30);
-            this.numericUpDownExt5.TabIndex = 173;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(55, 80);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(193, 22);
-            this.label17.TabIndex = 174;
-            this.label17.Text = "Số lượng thẻ thang máy";
-            // 
-            // numericUpDownExt6
-            // 
-            this.numericUpDownExt6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.numericUpDownExt6.BeforeTouchSize = new System.Drawing.Size(375, 30);
-            this.numericUpDownExt6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownExt6.ForeColor = System.Drawing.Color.White;
-            this.numericUpDownExt6.Location = new System.Drawing.Point(320, 78);
-            this.numericUpDownExt6.Name = "numericUpDownExt6";
-            this.numericUpDownExt6.Size = new System.Drawing.Size(375, 30);
-            this.numericUpDownExt6.TabIndex = 175;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(-617, 80);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(102, 22);
-            this.label18.TabIndex = 182;
-            this.label18.Text = "Loại căn hộ";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.White;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(-456, 76);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(375, 30);
-            this.comboBox2.TabIndex = 183;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Silver;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1, 600);
-            this.panel8.TabIndex = 212;
-            // 
             // ChiTietCanHo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1002,18 +923,15 @@ namespace DangNhap
             this.PN_hienthi.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridGroupingControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_thangmay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_toilet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_phongngu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1061,18 +979,12 @@ namespace DangNhap
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label11;
-        private Syncfusion.Windows.Forms.Tools.NumericUpDownExt numericUpDownExt3;
         private System.Windows.Forms.Label label10;
-        private Syncfusion.Windows.Forms.Tools.NumericUpDownExt numericUpDownExt2;
         private System.Windows.Forms.Label label9;
-        private Syncfusion.Windows.Forms.Tools.NumericUpDownExt numericUpDownExt1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel8;
