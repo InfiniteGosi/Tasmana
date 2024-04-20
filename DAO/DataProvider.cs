@@ -309,6 +309,39 @@ namespace DAO
             return data;
         }
 
+        public DataTable ExecuteStoredProcedureWithTableReturn(string storedProcedure, Dictionary<string, object> parameters)
+        {
+            DataTable data = new DataTable();
 
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(storedProcedure, connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        // Add parameters
+                        foreach (var pair in parameters)
+                        {
+                            SqlParameter parameter = new SqlParameter(pair.Key, pair.Value ?? DBNull.Value);
+                            command.Parameters.Add(parameter);
+                        }
+
+                        // Execute the command and fill the DataTable
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        adapter.Fill(data);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+            }
+
+            return data;
+        }
     }
 }

@@ -152,9 +152,17 @@ namespace DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        //public DataTable StatisticAllJob(DateTime tuNgay, DateTime denNgay)
-        //{
-        //    DataTable result = new DataTable();
-        //}
+        public DataTable StatisticAllJob(DateTime tuNgay, DateTime denNgay)
+        {
+            // Tạo dictionary chứa các tham số cho stored procedure
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@tuNgay", tuNgay);
+            parameters.Add("@denNgay", denNgay);
+
+            // Gọi stored procedure và nhận kết quả vào một DataTable
+            DataTable result = DataProvider.Instance.ExecuteStoredProcedureWithTableReturn("SP_ThongKeCongViecCongTy", parameters);
+
+            return result;
+        }
     }
 }

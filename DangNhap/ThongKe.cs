@@ -1,6 +1,9 @@
 ﻿using BLL;
 using DTO;
+using Syncfusion.GridHelperClasses;
+using Syncfusion.Grouping;
 using Syncfusion.Licensing;
+using Syncfusion.Windows.Forms.Grid.Grouping;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -108,17 +111,80 @@ namespace DangNhap
                 ReadNV();
             }
         }
-        private List<Job> GetAllJobs()
+        private DataTable GetAllJobs(DateTime tuNgay, DateTime denNgay)
         {
-            List<Job> jobs = new List<Job>();
-            jobs = JobBLL.Instance.GetAllJob();
-            return jobs;
+            DataTable data = new DataTable();
+            data = JobBLL.Instance.StatisticAllJob(tuNgay, denNgay);
+            return data;
+        }
+
+        // Hiển thị dữ liệu lên GGC_ThongKe
+        private void LoadThongKeCongTy()
+        {
+            DateTime tuNgay = DTP_TuNgay.Value;
+            DateTime denNgay = DTP_DenNgay.Value;
+            DataTable dataSource = new DataTable();
+            //DataColumn col1 = new DataColumn("Mã nhân viên");
+            //DataColumn col2 = new DataColumn("Họ");
+            //DataColumn col3 = new DataColumn("Tên");
+            //DataColumn col4 = new DataColumn("Số công việc đúng hạn");
+            //DataColumn col5 = new DataColumn("Số công việc trước hạn");
+            //DataColumn col6 = new DataColumn("Số công việc trễ hạn");
+            //DataColumn col7 = new DataColumn("Số công việc chưa hoàn thành");
+
+            //dataSource.Columns.Add(col1);
+            //dataSource.Columns.Add(col2);
+            //dataSource.Columns.Add(col3);
+            //dataSource.Columns.Add(col4);
+            //dataSource.Columns.Add(col5);
+            //dataSource.Columns.Add(col6);
+            //dataSource.Columns.Add(col7);
+
+            dataSource = GetAllJobs(tuNgay, denNgay);
+            GGC_ThongKe.DataSource = dataSource;
+            GGC_ThongKe.TableDescriptor.Columns[0].HeaderText = "Mã nhân viên";
+            GGC_ThongKe.TableDescriptor.Columns[1].HeaderText = "Họ";
+            GGC_ThongKe.TableDescriptor.Columns[2].HeaderText = "Tên";
+            GGC_ThongKe.TableDescriptor.Columns[3].HeaderText = "Số công việc đúng hạn";
+            GGC_ThongKe.TableDescriptor.Columns[4].HeaderText = "Số công việc trước hạn";
+            GGC_ThongKe.TableDescriptor.Columns[5].HeaderText = "Số công việc trễ hạn";
+            GGC_ThongKe.TableDescriptor.Columns[6].HeaderText = "Số công việc chưa bắt đầu";
+
+            // Tạo đối tượng GridColumnDescriptorCollection để quản lý các cột
+            GridColumnDescriptorCollection columns = GGC_ThongKe.TableDescriptor.Columns;
+            foreach (GridColumnDescriptor column in columns)
+            {
+                column.AllowFilter = true;
+            }
+            GridDynamicFilter dynamicFilter = new GridDynamicFilter();
+            dynamicFilter.WireGrid(GGC_ThongKe);
+
+            GridExcelFilter excelFilter = new GridExcelFilter();
+            excelFilter.WireGrid(GGC_ThongKe);
+            // Thiết lập AutoSizeMode cho mỗi cột
+            foreach (GridColumnDescriptor column in columns)
+            {
+                column.Appearance.AnyRecordFieldCell.AutoSize = true;
+                column.Appearance.AnyRecordFieldCell.CellType = "TextBox";
+            }
+
+            //foreach (Record record in GGC_ThongKe.Table.Records)
+            //{
+            //    DataRow dtRow = dataSource.NewRow();
+            //    dtRow[0] = record.GetValue("maNhanVien");
+            //    dtRow[1] = record.GetValue("ho");
+            //    dtRow[2] = record.GetValue("Ten");
+            //    dtRow[3] = record.GetValue("dungHan");
+            //    dtRow[4] = record.GetValue("trcHan");
+            //    dtRow[5] = record.GetValue("treHan");
+            //    dtRow[6] = record.GetValue("chuaBatDau");
+            //}
         }
         private void BTN_ThongKe_Click(object sender, EventArgs e)
         {
             if(RBtn_Congty.Checked)
             {
-                
+                LoadThongKeCongTy();    
             }
         }
 
