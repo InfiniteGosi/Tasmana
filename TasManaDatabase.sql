@@ -445,9 +445,32 @@ CREATE PROCEDURE [dbo].[Auto_Create_Job]
 AS
 BEGIN
     DECLARE @curNumOfJob INT;
+    DECLARE @candidateId VARCHAR(10);
+    DECLARE @found BIT = 0;
+
+    -- Lấy số lượng công việc hiện tại
     SELECT @curNumOfJob = COUNT(maCongViec) FROM CongViec;
 
-    SET @nextJobId = 'CV' + CAST(@curNumOfJob + 1 AS VARCHAR(3));
+    -- Tạo mã công việc tiếp theo
+    SET @candidateId = 'CV' + CAST(@curNumOfJob + 1 AS VARCHAR(3));
+
+    -- Kiểm tra và tăng mã công việc cho đến khi không còn trùng
+    WHILE @found = 0
+    BEGIN
+        -- Kiểm tra xem mã công việc có tồn tại không
+        IF NOT EXISTS (SELECT 1 FROM CongViec WHERE maCongViec = @candidateId)
+        BEGIN
+            -- Nếu không tồn tại, gán giá trị cho @nextJobId và thoát khỏi vòng lặp
+            SET @nextJobId = @candidateId;
+            SET @found = 1;
+        END
+        ELSE
+        BEGIN
+            -- Nếu tồn tại, tăng mã công việc lên 1 và kiểm tra lại
+            SET @curNumOfJob = @curNumOfJob + 1;
+            SET @candidateId = 'CV' + CAST(@curNumOfJob + 1 AS VARCHAR(3));
+        END
+    END
 END
 --Declare @maCongViec Varchar(10) Exec Auto_Create_Job @maCongViec OUTPUT Print @maCongViec
 go
