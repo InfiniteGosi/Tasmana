@@ -317,6 +317,8 @@ go
 SELECT * FROM CongViec
 SELECT * FROM CongViec_PDF
 go
+
+
 --Procedure thêm một nhân viên mới
 create procedure [dbo].[SP_ThemNhanVien]
 	@maNhanVien varchar(10),
@@ -380,15 +382,9 @@ begin
 end
 go
 
-select n.*
-	from NhanVien nv
-	inner join Nhom n on n.maNhom = nv.maNhom
-	where nv.maNhanVien = 'AN-111'
 
-select * from Nhom
-select * from NhanVien
 
--- Procedure lấy thông tin phòng ban theo mã phòng ban
+-- Procedure lấy thông tin phòng ban theo mã nhóm
 create procedure [dbo].[SP_LayPhongBanTheoMaNhom]
 	@maNhom varchar(10)
 as
@@ -819,3 +815,5 @@ BEGIN
 	WHERE PhongBan.maBoPhan = Congviec_PhongBan.maBoPhan and Congviec_PhongBan.maCongViec=CongViec.maCongViec and YeuCau.maCongViec = CongViec.maCongViec and QuanLy.maBoPhan = Congviec_PhongBan.maBoPhan;
 END
 GO
+
+--Lấy công việc theo mã căn hộ

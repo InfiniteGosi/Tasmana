@@ -49,6 +49,7 @@ namespace DangNhap
             this.CBBB_manguoidung = new Syncfusion.Windows.Forms.Tools.ComboBoxBase();
             this.CHB_luuid = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BTN_facelogin = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.CBBB_manguoidung)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +79,7 @@ namespace DangNhap
             this.BT_DangNhap.ForeColor = System.Drawing.Color.White;
             this.BT_DangNhap.Image = null;
             this.BT_DangNhap.ImageSize = new System.Drawing.Size(20, 20);
-            this.BT_DangNhap.Location = new System.Drawing.Point(773, 463);
+            this.BT_DangNhap.Location = new System.Drawing.Point(669, 463);
             this.BT_DangNhap.Name = "BT_DangNhap";
             this.BT_DangNhap.OnHoverBaseColor = System.Drawing.Color.White;
             this.BT_DangNhap.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -297,6 +298,34 @@ namespace DangNhap
             this.panel1.Size = new System.Drawing.Size(420, 2);
             this.panel1.TabIndex = 30;
             // 
+            // BTN_facelogin
+            // 
+            this.BTN_facelogin.Animated = true;
+            this.BTN_facelogin.AnimationHoverSpeed = 0.5F;
+            this.BTN_facelogin.AnimationSpeed = 0.03F;
+            this.BTN_facelogin.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_facelogin.BaseColor = System.Drawing.Color.Transparent;
+            this.BTN_facelogin.BorderColor = System.Drawing.Color.White;
+            this.BTN_facelogin.BorderSize = 3;
+            this.BTN_facelogin.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_facelogin.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_facelogin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_facelogin.ForeColor = System.Drawing.Color.White;
+            this.BTN_facelogin.Image = null;
+            this.BTN_facelogin.ImageSize = new System.Drawing.Size(20, 20);
+            this.BTN_facelogin.Location = new System.Drawing.Point(907, 463);
+            this.BTN_facelogin.Name = "BTN_facelogin";
+            this.BTN_facelogin.OnHoverBaseColor = System.Drawing.Color.White;
+            this.BTN_facelogin.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.BTN_facelogin.OnHoverForeColor = System.Drawing.Color.Black;
+            this.BTN_facelogin.OnHoverImage = null;
+            this.BTN_facelogin.OnPressedColor = System.Drawing.Color.DimGray;
+            this.BTN_facelogin.Size = new System.Drawing.Size(160, 56);
+            this.BTN_facelogin.TabIndex = 32;
+            this.BTN_facelogin.Text = "Face rec";
+            this.BTN_facelogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_facelogin.Click += new System.EventHandler(this.BTN_facelogin_Click);
+            // 
             // DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -305,6 +334,7 @@ namespace DangNhap
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1129, 587);
+            this.Controls.Add(this.BTN_facelogin);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.CHB_luuid);
             this.Controls.Add(this.panel6);
@@ -359,6 +389,7 @@ namespace DangNhap
         private Syncfusion.Windows.Forms.Tools.ComboBoxBase CBBB_manguoidung;
         private System.Windows.Forms.CheckBox CHB_luuid;
         private System.Windows.Forms.Panel panel1;
+        private Guna.UI.WinForms.GunaButton BTN_facelogin;
     }
 }
 

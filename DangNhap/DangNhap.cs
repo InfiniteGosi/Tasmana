@@ -23,9 +23,9 @@ namespace DangNhap
 {
     public partial class DangNhap : Form
     {
-        public static Account currentAccount;
-        string userId;
-        string pwd;
+        private Account currentAccount;
+        private string userId;
+        private string pwd;
         int mov;
         int movX;
         int movY;
@@ -70,7 +70,7 @@ namespace DangNhap
                     GetAccount(userId);
                     if (!currentAccount.IsDisabled)
                     {
-                        TrangHienThi formTrangChu = new TrangHienThi();
+                        TrangHienThi formTrangChu = new TrangHienThi(currentAccount);
                         formTrangChu.Show();
                         this.Hide();
                         AccountBLL.Instance.UpdateRememberId(userId, CHB_luuid.Checked);
@@ -158,6 +158,12 @@ namespace DangNhap
                     CHB_luuid.Checked = true;
                 }
             }
+        }
+
+        private void BTN_facelogin_Click(object sender, EventArgs e)
+        {
+            FaceDetectLogin faceDetectLogin = new FaceDetectLogin(this, currentAccount);
+            faceDetectLogin.ShowDialog();
         }
     }
 }

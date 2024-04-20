@@ -17,10 +17,12 @@ namespace DangNhap
         // Khởi tạo các giá trị, biến
         private int appTime;
         private bool isClosed = true;
-        public TrangHienThi()
+        private Account currentAccount;
+        public TrangHienThi(Account currentAccount)
         {
             InitializeComponent();
-            LB_tendangnhap.Text = $"Xin chào, {DangNhap.currentAccount.EmployeeId} - {DangNhap.currentAccount.Level}";
+            this.currentAccount = currentAccount;
+            LB_tendangnhap.Text = $"Xin chào, {currentAccount.EmployeeId} - {currentAccount.Level}";
             Timer_KTCongViec.Start();
             appTime = 0;
         }
@@ -41,7 +43,7 @@ namespace DangNhap
 
         private void BTN_congviec_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new CongViecChung());
+            OpenChildForm(new CongViecChung(currentAccount));
             BTN_congviec.BackColor = Color.FromArgb(51,53,55);
             BTN_thongbao.BackColor = Color.Transparent;
             BTN_thongke.BackColor = Color.Transparent;
@@ -115,7 +117,7 @@ namespace DangNhap
 
         private void BTN_thongtin_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinNhanVien(DangNhap.currentAccount.EmployeeId));
+            OpenChildForm(new ThongTinNhanVien(currentAccount.EmployeeId));
             BTN_thongbao.BackColor = Color.Transparent;
             BTN_thongke.BackColor = Color.Transparent;
             BTN_nhanvien.BackColor = Color.Transparent;
@@ -180,7 +182,7 @@ namespace DangNhap
                 return;
             // Kiểm tra những công việc gần đến hạn nhưng chưa hoàn thành
             int curUnfJob = 0;
-            string maNV = DangNhap.currentAccount.EmployeeId;
+            string maNV = currentAccount.EmployeeId;
             List<Job> tomorowJobs;
             tomorowJobs = JobBLL.Instance.GetJobOfEmployeeByDate(maNV, tomorrowDay.Date.ToString("yyyy-MM-dd"));
             foreach (Job job in tomorowJobs)
@@ -197,7 +199,7 @@ namespace DangNhap
 
             // Kiểm tra những công việc của NHÂN VIÊN chưa bắt đầu làm
             // Chỉ thông báo cho nhân viên như yêu cầu 10
-            if (DangNhap.currentAccount.Level.Equals("CEO"))
+            if (currentAccount.Level.Equals("CEO"))
             {
                 List<Job> allJobs;
                 allJobs = JobBLL.Instance.GetAllJob();
