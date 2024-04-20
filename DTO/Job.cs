@@ -39,7 +39,7 @@ namespace DTO
             TrangThai = trangThai;
             GhiChu = ghiChu;
         }
-        public Job(string maCongViec, string noiDung, DateTime ngayGiao, DateTime ngayCapNhat, DateTime thoiHan, DateTime ngayHoanThanh, string trangThai, string ghiChu, int quyenTruyCap)
+        public Job(string maCongViec, string noiDung, DateTime ngayGiao, DateTime thoiHan, DateTime ngayHoanThanh, DateTime ngayCapNhat, string trangThai, string ghiChu, int quyenTruyCap)
         {
             MaCongViec = maCongViec;
             NoiDung = noiDung;

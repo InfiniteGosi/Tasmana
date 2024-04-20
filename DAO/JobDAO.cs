@@ -152,5 +152,9 @@ namespace DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
+        //public DataTable StatisticAllJob(DateTime tuNgay, DateTime denNgay)
+        //{
+        //    DataTable result = new DataTable();
+        //}
     }
 }
