@@ -21,17 +21,17 @@ namespace DangNhap
     public partial class CongViecChung : Form
     {
         private List<Job> jobs = new List<Job>();
-
+        private Account currentAccount;
         private void GetJobs()
         {
             jobs = JobBLL.Instance.GetAllJob();
         }
 
-        public CongViecChung()
+        public CongViecChung(Account currentAccount)
         {
             SyncfusionLicenseProvider.RegisterLicense("MzIxOTI2MkAzMjM1MmUzMDJlMzBORkJZeFRVdUQxeERjT2xkWC9vdFgxS29wUmREOU9CZVdENkRUN0lrSStVPQ==;Mgo+DSMBaFt6QHFqVkNrXVNbdV5dVGpAd0N3RGlcdlR1fUUmHVdTRHRbQlliS3xTck1hW35Wcnc=");
             InitializeComponent();
-
+            this.currentAccount = currentAccount;
         }
 
         private void BTN_themcongviec_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace DangNhap
             Display_GGC_nhanvien();
             Display_GGC_nhom();
             Display_GGC_phongban();
-            if (!DangNhap.currentAccount.Level.Equals("CEO"))
+            if (currentAccount.Level.Equals("CEO"))
             {
                 BTN_themcongviec.Enabled = false;
                 BTN_themcongviec.Visible = false;

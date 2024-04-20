@@ -71,7 +71,7 @@ namespace DangNhap
             this.label4 = new System.Windows.Forms.Label();
             this.TXB_phiql = new System.Windows.Forms.TextBox();
             this.CBB_tinhtrang = new System.Windows.Forms.ComboBox();
-            this.gridGroupingControl1 = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
+            this.GGC_dichvu = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.NUD_thangmay = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
@@ -100,7 +100,7 @@ namespace DangNhap
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridGroupingControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GGC_dichvu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_thangmay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_toilet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_phongngu)).BeginInit();
@@ -284,7 +284,7 @@ namespace DangNhap
             this.PN_hienthi.Controls.Add(this.label4);
             this.PN_hienthi.Controls.Add(this.TXB_phiql);
             this.PN_hienthi.Controls.Add(this.CBB_tinhtrang);
-            this.PN_hienthi.Controls.Add(this.gridGroupingControl1);
+            this.PN_hienthi.Controls.Add(this.GGC_dichvu);
             this.PN_hienthi.Controls.Add(this.label3);
             this.PN_hienthi.Controls.Add(this.label10);
             this.PN_hienthi.Controls.Add(this.NUD_thangmay);
@@ -631,18 +631,18 @@ namespace DangNhap
             this.CBB_tinhtrang.Size = new System.Drawing.Size(375, 30);
             this.CBB_tinhtrang.TabIndex = 180;
             // 
-            // gridGroupingControl1
+            // GGC_dichvu
             // 
-            this.gridGroupingControl1.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.gridGroupingControl1.BackColor = System.Drawing.SystemColors.Window;
-            this.gridGroupingControl1.Location = new System.Drawing.Point(709, 437);
-            this.gridGroupingControl1.Name = "gridGroupingControl1";
-            this.gridGroupingControl1.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
-            this.gridGroupingControl1.Size = new System.Drawing.Size(636, 181);
-            this.gridGroupingControl1.TabIndex = 178;
-            this.gridGroupingControl1.Text = "gridGroupingControl1";
-            this.gridGroupingControl1.UseRightToLeftCompatibleTextBox = true;
-            this.gridGroupingControl1.VersionInfo = "25.1462.39";
+            this.GGC_dichvu.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.GGC_dichvu.BackColor = System.Drawing.SystemColors.Window;
+            this.GGC_dichvu.Location = new System.Drawing.Point(3, 545);
+            this.GGC_dichvu.Name = "GGC_dichvu";
+            this.GGC_dichvu.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
+            this.GGC_dichvu.Size = new System.Drawing.Size(1385, 181);
+            this.GGC_dichvu.TabIndex = 178;
+            this.GGC_dichvu.Text = "gridGroupingControl1";
+            this.GGC_dichvu.UseRightToLeftCompatibleTextBox = true;
+            this.GGC_dichvu.VersionInfo = "25.1462.39";
             // 
             // label3
             // 
@@ -927,7 +927,7 @@ namespace DangNhap
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridGroupingControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GGC_dichvu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_thangmay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_toilet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_phongngu)).EndInit();
@@ -967,7 +967,7 @@ namespace DangNhap
         private Syncfusion.Windows.Forms.Tools.NumericUpDownExt NUD_toilet;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl gridGroupingControl1;
+        private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl GGC_dichvu;
         private System.Windows.Forms.ComboBox CBB_tinhtrang;
         private System.Windows.Forms.TextBox TXB_phiql;
         private System.Windows.Forms.ComboBox CBB_loai;
