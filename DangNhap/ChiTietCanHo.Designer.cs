@@ -273,6 +273,7 @@ namespace DangNhap
             this.PN_hienthi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.PN_hienthi.AutoScroll = true;
             this.PN_hienthi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.PN_hienthi.Controls.Add(this.panel7);
             this.PN_hienthi.Controls.Add(this.panel1);

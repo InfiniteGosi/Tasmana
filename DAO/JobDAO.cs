@@ -186,5 +186,10 @@ namespace DAO
             DataTable result = DataProvider.Instance.ExecuteStoredProcedureWithTableReturn("SP_ThongKeCongViecNhanVien", parameters);
             return result;
         }
+        public DataTable GetJobByApartmentId(string maCanHo)
+        {
+            string query = $"exec SP_LayDichVuTheoMaCanHo @maCanHo = '{maCanHo}'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }
