@@ -885,6 +885,7 @@ END
 GO
 
 insert into QuanLy Values ('VS-002','VS')
+
 --Lấy công việc phòng ban có phân quyền
 CREATE PROCEDURE [dbo].[Job_Of_Divisions]
     @quyen int

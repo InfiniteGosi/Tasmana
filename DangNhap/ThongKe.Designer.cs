@@ -331,6 +331,7 @@ namespace DangNhap
             this.C_ThongKe.Name = "C_ThongKe";
             series1.ChartArea = "ChartArea1";
             series1.IsValueShownAsLabel = true;
+            series1.LabelFormat = "#.##";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.C_ThongKe.Series.Add(series1);
