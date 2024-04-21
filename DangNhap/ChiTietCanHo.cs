@@ -14,6 +14,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Syncfusion.Windows.Forms.Grid;
+using Syncfusion.Grouping;
 
 namespace DangNhap
 {
@@ -137,7 +138,10 @@ namespace DangNhap
             if (canHoHienTai != null)
             {
                 TXB_macanho.Text = maCanHoHienTai;
-                TXB_chuho.Text = cuDanCuaCanHo.HoTen;
+                if (cuDanCuaCanHo != null)
+                {
+                    TXB_chuho.Text = cuDanCuaCanHo.HoTen;
+                }
                 NUD_toilet.Value = canHoHienTai.SoLuongToilet;
                 NUD_phongngu.Value = GetNoOfRoomsUsingApartmentId(maCanHoHienTai);
                 NUD_thangmay.Value = canHoHienTai.SoLuongTheThangMay;
@@ -153,7 +157,6 @@ namespace DangNhap
             CBB_loai.DataSource = arrLoai;
             CBB_tinhtrang.SelectedIndex = -1;
             CBB_loai.SelectedIndex = -1;
-            DisplayGGC_nhanvien();
             DisplayGGC_Dichvu();
             if (canHoHienTai != null)
             {
@@ -188,49 +191,9 @@ namespace DangNhap
         {
             mov = 0;
         }
-        private void DisplayGGC_nhanvien()
-        {
-            GGC_dichvu.DataSource = JobDAO.Instance.GetJobOfEmployees(2);
-            GGC_DataSourceChanged(GGC_dichvu);
-            GGC_dichvu.Size = new System.Drawing.Size(950, 404);
-            GGC_dichvu.TopLevelGroupOptions.ShowFilterBar = true;
-            GGC_dichvu.ActivateCurrentCellBehavior = GridCellActivateAction.None;
-            GGC_dichvu.ShowGroupDropArea = true;
-            GGC_dichvu.BorderStyle = BorderStyle.FixedSingle;
-
-
-            // Thiết lập cho từng cột
-            GridColumnDescriptorCollection columns = GGC_dichvu.TableDescriptor.Columns;
-            foreach (GridColumnDescriptor column in columns)
-            {
-                column.AllowFilter = true;
-                column.Appearance.AnyRecordFieldCell.AutoSize = true;
-                column.Appearance.AnyRecordFieldCell.CellType = "TextBox";
-            }
-
-            // Thiết lập Dynamic Filter và Excel Filter
-            GridDynamicFilter dynamicFilter = new GridDynamicFilter();
-            dynamicFilter.WireGrid(GGC_dichvu);
-
-            GridExcelFilter excelFilter = new GridExcelFilter();
-            excelFilter.WireGrid(GGC_dichvu);
-
-            GGC_dichvu.TableDescriptor.Columns[0].HeaderText = "Mã công việc";
-            GGC_dichvu.TableDescriptor.Columns[1].HeaderText = "Mã nhân viên";
-            GGC_dichvu.TableDescriptor.Columns[2].HeaderText = "Họ";
-            GGC_dichvu.TableDescriptor.Columns[3].HeaderText = "Tên";
-            GGC_dichvu.TableDescriptor.Columns[4].HeaderText = "Nội dung";
-            GGC_dichvu.TableDescriptor.Columns[5].HeaderText = "Mã căn hộ";
-            GGC_dichvu.TableDescriptor.Columns[6].HeaderText = "Ngày giao";
-            GGC_dichvu.TableDescriptor.Columns[7].HeaderText = "Ngày cập nhật";
-            GGC_dichvu.TableDescriptor.Columns[8].HeaderText = "Thời hạn";
-            GGC_dichvu.TableDescriptor.Columns[9].HeaderText = "Ngày hoàn thành";
-            GGC_dichvu.TableDescriptor.Columns[10].HeaderText = "Trạng thái";
-            GGC_dichvu.TableDescriptor.Columns[11].HeaderText = "Ghi chú";
-        }
         private void DisplayGGC_Dichvu()
         {
-            GGC_dichvu.DataSource = JobDAO.Instance.GetJobOfEmployees(2);
+            GGC_dichvu.DataSource = JobDAO.Instance.GetJobByApartmentId(maCanHoHienTai);
             GGC_DataSourceChanged(GGC_dichvu);
             GGC_dichvu.Size = new System.Drawing.Size(950, 404);
             GGC_dichvu.TopLevelGroupOptions.ShowFilterBar = true;
@@ -256,17 +219,17 @@ namespace DangNhap
             excelFilter.WireGrid(GGC_dichvu);
 
             GGC_dichvu.TableDescriptor.Columns[0].HeaderText = "Mã công việc";
-            GGC_dichvu.TableDescriptor.Columns[1].HeaderText = "Mã nhân viên";
-            GGC_dichvu.TableDescriptor.Columns[2].HeaderText = "Họ";
-            GGC_dichvu.TableDescriptor.Columns[3].HeaderText = "Tên";
-            GGC_dichvu.TableDescriptor.Columns[4].HeaderText = "Nội dung";
-            GGC_dichvu.TableDescriptor.Columns[5].HeaderText = "Mã căn hộ";
-            GGC_dichvu.TableDescriptor.Columns[6].HeaderText = "Ngày giao";
-            GGC_dichvu.TableDescriptor.Columns[7].HeaderText = "Ngày cập nhật";
-            GGC_dichvu.TableDescriptor.Columns[8].HeaderText = "Thời hạn";
-            GGC_dichvu.TableDescriptor.Columns[9].HeaderText = "Ngày hoàn thành";
-            GGC_dichvu.TableDescriptor.Columns[10].HeaderText = "Trạng thái";
-            GGC_dichvu.TableDescriptor.Columns[11].HeaderText = "Ghi chú";
+            GGC_dichvu.TableDescriptor.Columns[1].HeaderText = "Nội dung";
+            GGC_dichvu.TableDescriptor.VisibleColumns.Remove("ngayGiao");
+            GGC_dichvu.TableDescriptor.VisibleColumns.Remove("thoiHan");
+            GGC_dichvu.TableDescriptor.VisibleColumns.Remove("ngayHoanThanh");
+            GGC_dichvu.TableDescriptor.VisibleColumns.Remove("ngayCapNhat");
+            GGC_dichvu.TableDescriptor.Columns[6].HeaderText = "Trạng thái";
+            GGC_dichvu.TableDescriptor.Columns[7].HeaderText = "Ghi chú";
+            GGC_dichvu.TableDescriptor.VisibleColumns.Remove("quyenTruyCap");
+            GGC_dichvu.TableDescriptor.Columns[9].HeaderText = "Mã nhân viên phụ trách";
+            GGC_dichvu.TableDescriptor.Columns[10].HeaderText = "Họ nhân viên phụ trách";
+            GGC_dichvu.TableDescriptor.Columns[11].HeaderText = "Tên nhân viên phụ trách";
         }
         private void GGC_DataSourceChanged(GridGroupingControl ggc)
         {

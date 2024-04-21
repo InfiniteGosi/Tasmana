@@ -26,17 +26,18 @@ namespace BLL
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 string maCanHo = dt.Rows[i]["maCanHo"].ToString();
-                float dienTich = dt.Rows[i]["dienTich"] != DBNull.Value ? Convert.ToSingle(dt.Rows[i]["dienTich"]) : 0.0f;
+                float dienTichGSA = dt.Rows[i]["dienTichGSA"] != DBNull.Value ? Convert.ToSingle(dt.Rows[i]["dienTichGSA"]) : 0.0f;
+                float dienTichNSA = dt.Rows[i]["dienTichNSA"] != DBNull.Value ? Convert.ToSingle(dt.Rows[i]["dienTichNSA"]) : 0.0f;
                 int viTriTang = (int)dt.Rows[i]["viTriTang"];
                 int soLuongPhongNgu = (int)dt.Rows[i]["soLuongPhongNgu"];
                 int soLuongToilet = (int)dt.Rows[i]["soLuongToilet"];
                 Image soDoMatBang = dt.Rows[i]["soDoMatBang"] != DBNull.Value ? (Image)dt.Rows[i]["soDoMatBang"] : null;
                 int mucPhiQLHangThang = (int)dt.Rows[i]["mucPhiQLHangThang"];
                 int soLuongTheThangMay = (int)dt.Rows[i]["soLuongTheThangMay"];
-                DateTime lichSuGiaoDich = (DateTime)dt.Rows[i]["lichSuGiaoDich"];
+                LichSuGiaoDich lichSuGiaoDich = LichSuGiaoDichBLL.Instance.GetLichSuByApartmentId(maCanHo);
                 string tinhTrangGDHienTai = dt.Rows[i]["tinhTrangGDHienTai"].ToString();
                 string maCuDan = dt.Rows[i]["maCuDan"].ToString();
-                Apartment apartment = new Apartment(maCanHo, dienTich, viTriTang, soLuongToilet, soLuongPhongNgu, soDoMatBang, mucPhiQLHangThang, soLuongTheThangMay, lichSuGiaoDich, tinhTrangGDHienTai, maCuDan);
+                Apartment apartment = new Apartment(maCanHo, dienTichGSA, dienTichNSA, viTriTang, soLuongToilet, soLuongPhongNgu, soDoMatBang, mucPhiQLHangThang, soLuongTheThangMay, lichSuGiaoDich, tinhTrangGDHienTai, maCuDan);
                 apartments.Add(apartment);
             }
             return apartments;
@@ -44,17 +45,18 @@ namespace BLL
         public Apartment GetApartmentById(string maCanHo)
         {
             DataTable dt = ApartmentDAO.Instance.GetApartmentById(maCanHo);
-            float dienTich = dt.Rows[0]["dienTich"] != DBNull.Value ? Convert.ToSingle(dt.Rows[0]["dienTich"]) : 0.0f;
+            float dienTichGSA = dt.Rows[0]["dienTichGSA"] != DBNull.Value ? Convert.ToSingle(dt.Rows[0]["dienTichGSA"]) : 0.0f;
+            float dienTichNSA = dt.Rows[0]["dienTichNSA"] != DBNull.Value ? Convert.ToSingle(dt.Rows[0]["dienTichNSA"]) : 0.0f;
             int viTriTang = (int)dt.Rows[0]["viTriTang"];
             int soLuongPhongNgu = (int)dt.Rows[0]["soLuongPhongNgu"];
             int soLuongToilet = (int)dt.Rows[0]["soLuongToilet"];
             Image soDoMatBang = dt.Rows[0]["soDoMatBang"] != DBNull.Value ? (Image)dt.Rows[0]["soDoMatBang"] : null;
             int mucPhiQLHangThang = (int)dt.Rows[0]["mucPhiQLHangThang"];
             int soLuongTheThangMay = (int)dt.Rows[0]["soLuongTheThangMay"];
-            DateTime lichSuGiaoDich = (DateTime)dt.Rows[0]["lichSuGiaoDich"];
+            LichSuGiaoDich lichSuGiaoDich = LichSuGiaoDichBLL.Instance.GetLichSuByApartmentId(maCanHo);
             string tinhTrangGDHienTai = dt.Rows[0]["tinhTrangGDHienTai"].ToString();
             string maCuDan = dt.Rows[0]["maCuDan"].ToString();
-            Apartment apartment = new Apartment(maCanHo, dienTich, viTriTang, soLuongToilet, soLuongPhongNgu, soDoMatBang, mucPhiQLHangThang, soLuongTheThangMay, lichSuGiaoDich, tinhTrangGDHienTai, maCuDan);
+            Apartment apartment = new Apartment(maCanHo, dienTichGSA, dienTichNSA, viTriTang, soLuongToilet, soLuongPhongNgu, soDoMatBang, mucPhiQLHangThang, soLuongTheThangMay, lichSuGiaoDich, tinhTrangGDHienTai, maCuDan);
             return apartment;
         }
         public string AddApartment(Dictionary<string, object> parameters)

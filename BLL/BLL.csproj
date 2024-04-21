@@ -67,6 +67,7 @@
     <Compile Include="EmployeeBLL.cs" />
     <Compile Include="GroupBLL.cs" />
     <Compile Include="JobBLL.cs" />
+    <Compile Include="LichSuGiaoDichBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResidentBLL.cs" />
   </ItemGroup>

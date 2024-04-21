@@ -44,13 +44,13 @@ namespace DangNhap
             GGC_canho.DataSource = apartments.Select(e => new
             {
                 e.MaCanHo,
-                e.DienTich,
+                e.DienTichGSA,
+                e.DienTichNSA,
                 e.ViTriTang,
                 e.SoLuongPhongNgu,
                 e.SoLuongToilet,
                 e.SoLuongTheThangMay,
                 e.MucPhiQuanLyHangThang,
-                LichSuGiaoDich = e.LichSuGiaoDich.ToString("dd/MM/yyyy"),
                 e.TinhTrangGiaoDichHienTai,
                 e.MaCuDan
 
