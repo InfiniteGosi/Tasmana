@@ -1,10 +1,12 @@
 ﻿using BLL;
 using DTO;
+using SixLabors.ImageSharp.Memory;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,7 +38,7 @@ namespace DangNhap
         }
         private int GetQuyenTruyCap()
         {
-            int ch = 0; // mặc định là riêng tư
+            int ch = 1; // mặc định là Bộ phận
             if (CBB_QuyenTruyCap.SelectedItem.ToString().Equals("Bộ phận"))
             {
                 ch = 1;
@@ -91,6 +93,8 @@ namespace DangNhap
         }
 
         private string maCongViec;
+        private byte[] buffer;
+        private string fileName;
         private void GetNewestJobID()
         {
             maCongViec = JobBLL.Instance.GetNewJobID();
@@ -116,6 +120,17 @@ namespace DangNhap
         {
             ReadPhongBan();
         }
+        private Dictionary<string, object> AddParameterPDF()
+        {
+            Dictionary<string, object> dict = new Dictionary<string, object>
+            {
+                {"@maCongViec", TXB_MaCongViec.Text},
+                {"@pdffile", buffer},
+                {"@tenFile", fileName },
+                {"@fileExten", ".pdf" }
+            };
+            return dict;
+        }
 
         private bool SaveCongViec()
         {
@@ -125,7 +140,15 @@ namespace DangNhap
                 {
                     if (JobBLL.Instance.AddRequestFromCustom(AddParameterYeuCau()))
                     {
-                        return true;
+                        if (buffer != null)
+                        {
+                            if (JobBLL.Instance.AddJob_PDF(AddParameterPDF()))
+                            {
+                                return true;
+                            }
+                        }
+                        else
+                            return true;
                     }
                 }
             }
@@ -193,6 +216,27 @@ namespace DangNhap
                 DTP_gio.Enabled = false;
                 DTP_ngay.Enabled = false;
             }
+        }
+
+        private void BTN_file_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog dlg = new OpenFileDialog() { Filter = "PDF Documents(*.pdf)|*.pdf", ValidateNames = true })
+            {
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    DialogResult dialog = MessageBox.Show("Bạn có chắc muốn upload file này chứ?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        string file = dlg.FileName;
+                        buffer = File.ReadAllBytes(file);
+                        string[] words = file.Split('\\');
+                        int length = words.Length;
+                        fileName = words[length - 1];
+                    }
+                }
+            }
+            LLB_themfilepb.Text = fileName;
+            LLB_themfilepb.Show();
         }
     }
 }

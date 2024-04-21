@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -194,7 +195,7 @@ namespace BLL
             }
             return false;
         }
-
+        // Lấy tên file bằng mã công việc
         public string GetNameFile(string maCongViec)
         {
             string tenFile = null;
@@ -205,7 +206,7 @@ namespace BLL
             }
             return tenFile;
         }
-
+        // Lấy file pdf bằng mã công việc
         public byte[] GetFileOfJob(string maCongViec)
         {
             byte[] bytes = null;
@@ -230,6 +231,150 @@ namespace BLL
         public DataTable StatisticEmployeeJob(DateTime tuNgay, DateTime denNgay, string maNhanVien)
         {
             return JobDAO.Instance.StatisticEmployeeJob(tuNgay, denNgay , maNhanVien);
+        }
+
+        //Lấy công việc phân quyền
+        public DataTable GetJobOfEmployeesPQ(int quyen,Employee e, String level)
+        {
+            DataTable jobs = JobDAO.Instance.GetJobOfEmployees(quyen);
+            DataTable GetJob0()
+            {
+                DataTable jobs0 = new DataTable();
+                DataTable j = JobDAO.Instance.GetJobOfEmployees(0);
+                for (int i = 0; i < j.Rows.Count; i++)
+                {
+                    if (j.Rows[i]["Mã nhân viên"].ToString() == e.MaNhanVien)
+                        jobs0.ImportRow(j.Rows[i]);
+                }
+                return jobs0;
+            }
+            DataTable GetJob1()
+            {
+                DataTable jobs1 = new DataTable();
+                DataTable j = JobDAO.Instance.GetJobOfEmployees(1);
+                for (int i = 0; i < j.Rows.Count; i++)
+                {
+                    if (j.Rows[i]["Mã Bộ phận"].ToString() == e.MaBoPhan)
+                        jobs1.ImportRow(j.Rows[i]);
+                }
+                return jobs1;
+            }
+            DataTable GetJob2()
+            {
+                DataTable j = JobDAO.Instance.GetJobOfEmployees(2);
+                return j;
+            }
+            if (level != "CEO")
+            {
+                if (quyen == 0)
+                {
+                    return GetJob0();
+                }
+                else if(quyen == 1)
+                {
+                        return GetJob1();
+                }
+                else if(quyen == 2)
+                    return GetJob2();
+                else 
+                {
+                    DataTable rs = GetJob0();
+                    rs.Merge(GetJob1());
+                    rs.Merge(GetJob2());
+                    return rs;
+                }
+            }
+            return jobs;
+        }
+        public DataTable GetJobOfGroupsPQ(int quyen, Employee e, String level)
+        {
+            DataTable jobs = JobDAO.Instance.GetJobOfGroups(quyen);
+            DataTable GetJob0()
+            {
+                DataTable jobs0 = new DataTable();
+                DataTable j = JobDAO.Instance.GetJobOfGroups(0);
+                for (int i = 0; i < j.Rows.Count; i++)
+                {
+                    if (j.Rows[i]["Mã nhóm"].ToString() == e.MaNhom)
+                        jobs0.ImportRow(j.Rows[i]);
+                }
+                return jobs0;
+            }
+            DataTable GetJob1()
+            {
+                DataTable jobs1 = new DataTable();
+                DataTable j = JobDAO.Instance.GetJobOfGroups(1);
+                for (int i = 0; i < j.Rows.Count; i++)
+                {
+                    if (j.Rows[i]["Mã Bộ phận"].ToString() == e.MaBoPhan)
+                        jobs1.ImportRow(j.Rows[i]);
+                }
+                return jobs1;
+            }
+            DataTable GetJob2()
+            {
+                DataTable j = JobDAO.Instance.GetJobOfGroups(2);
+                return j;
+            }
+            if (level != "CEO")
+            {
+                if (quyen == 0)
+                {
+                    return GetJob0();
+                }
+                else if (quyen == 1)
+                {
+                    return GetJob1();
+                }
+                else if (quyen == 2)
+                    return GetJob2();
+                else
+                {
+                    DataTable rs = GetJob0();
+                    rs.Merge(GetJob1());
+                    rs.Merge(GetJob2());
+                    return rs;
+                }
+            }
+            return jobs;
+        }
+        public DataTable GetJobOfDivisionsPQ(int quyen, Employee e, String level)
+        {
+            if(quyen == 0)
+                quyen = 1;
+            DataTable jobs = JobDAO.Instance.GetJobOfDivisions(quyen);
+            DataTable GetJob1()
+            {
+                DataTable jobs1 = new DataTable();
+                DataTable j = JobDAO.Instance.GetJobOfGroups(1);
+                for (int i = 0; i < j.Rows.Count; i++)
+                {
+                    if (j.Rows[i]["Mã Bộ phận"].ToString() == e.MaBoPhan)
+                        jobs1.ImportRow(j.Rows[i]);
+                }
+                return jobs1;
+            }
+            DataTable GetJob2()
+            {
+                DataTable j = JobDAO.Instance.GetJobOfGroups(2);
+                return j;
+            }
+            if (level != "CEO")
+            {
+                 if (quyen == 1)
+                {
+                    return GetJob1();
+                }
+                else if (quyen == 2)
+                    return GetJob2();
+                else
+                {
+                    DataTable rs = GetJob1();
+                    rs.Merge(GetJob2());
+                    return rs;
+                }
+            }
+            return jobs;
         }
     }
 }

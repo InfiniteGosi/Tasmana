@@ -15,7 +15,7 @@ namespace DangNhap
 {
     internal class Export
     {
-        public void ToExcel(DataTable dataTable, string sheetName, string title)
+        public void ToExcel(DataTable dataTable, string sheetName, string title, int loai)
         {
             // Create Excel object
 
@@ -45,107 +45,315 @@ namespace DangNhap
             oSheet = (Microsoft.Office.Interop.Excel.Worksheet)oSheets.get_Item(1);
 
             oSheet.Name = sheetName;
+            if (loai == 0) { 
+                // Create title
+                Microsoft.Office.Interop.Excel.Range head = oSheet.get_Range("A1", "N1");
 
-            // Create title
-            Microsoft.Office.Interop.Excel.Range head = oSheet.get_Range("A1", "L1");
+                head.MergeCells = true;
 
-            head.MergeCells = true;
+                head.Value2 = title;
 
-            head.Value2 = title;
+                head.Font.Bold = true;
 
-            head.Font.Bold = true;
+                head.Font.Name = "Times New Roman";
 
-            head.Font.Name = "Times New Roman";
+                head.Font.Size = "20";
 
-            head.Font.Size = "20";
+                head.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
 
-            head.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+                // Create column name
 
-            // Create column name
+                Microsoft.Office.Interop.Excel.Range cl1 = oSheet.get_Range("A3", "A3");
 
-            Microsoft.Office.Interop.Excel.Range cl1 = oSheet.get_Range("A3", "A3");
+                cl1.Value2 = "Mã công việc";
 
-            cl1.Value2 = "Mã công việc";
+                cl1.ColumnWidth = 20;
 
-            cl1.ColumnWidth = 20;
+                Microsoft.Office.Interop.Excel.Range cl2 = oSheet.get_Range("B3", "B3");
 
-            Microsoft.Office.Interop.Excel.Range cl2 = oSheet.get_Range("B3", "B3");
+                cl2.Value2 = "Mã nhân viên";
 
-            cl2.Value2 = "Mã nhân viên";
+                cl2.ColumnWidth = 20;
 
-            cl2.ColumnWidth = 20;
+                Microsoft.Office.Interop.Excel.Range cl3 = oSheet.get_Range("C3", "C3");
 
-            Microsoft.Office.Interop.Excel.Range cl3 = oSheet.get_Range("C3", "C3");
+                cl3.Value2 = "Họ";
 
-            cl3.Value2 = "Họ";
+                cl3.ColumnWidth = 20;
 
-            cl3.ColumnWidth = 20;
+                Microsoft.Office.Interop.Excel.Range cl4 = oSheet.get_Range("D3", "D3");
 
-            Microsoft.Office.Interop.Excel.Range cl4 = oSheet.get_Range("D3", "D3");
+                cl4.Value2 = "Tên";
 
-            cl4.Value2 = "Tên";
+                cl4.ColumnWidth = 20;
 
-            cl4.ColumnWidth = 20;
+                Microsoft.Office.Interop.Excel.Range cl5 = oSheet.get_Range("E3", "E3");
 
-            Microsoft.Office.Interop.Excel.Range cl5 = oSheet.get_Range("E3", "E3");
+                cl5.Value2 = "Mã nhóm";
 
-            cl5.Value2 = "Nội dung";
+                cl5.ColumnWidth = 50;
 
-            cl5.ColumnWidth = 50;
+                Microsoft.Office.Interop.Excel.Range cl6 = oSheet.get_Range("F3", "F3");
 
-            Microsoft.Office.Interop.Excel.Range cl6 = oSheet.get_Range("F3", "F3");
+                cl6.Value2 = "Mã bộ phận";
+                cl6.ColumnWidth = 20;
 
-            cl6.Value2 = "Mã căn hộ";
+                Microsoft.Office.Interop.Excel.Range cl7 = oSheet.get_Range("G3", "G3");
 
-            cl6.ColumnWidth = 20;
+                cl7.Value2 = "Nội dung";
 
-            Microsoft.Office.Interop.Excel.Range cl7 = oSheet.get_Range("G3", "G3");
+                cl7.ColumnWidth = 20;
 
-            cl7.Value2 = "Ngày giao";
+                Microsoft.Office.Interop.Excel.Range cl8 = oSheet.get_Range("H3", "H3");
 
-            cl7.ColumnWidth = 20;
+                cl8.Value2 = "Mã căn hộ";
 
-            Microsoft.Office.Interop.Excel.Range cl8 = oSheet.get_Range("H3", "H3");
+                cl8.ColumnWidth = 20;
 
-            cl8.Value2 = "Ngày cập nhật";
+                Microsoft.Office.Interop.Excel.Range cl9 = oSheet.get_Range("I3", "I3");
 
-            cl8.ColumnWidth = 20;
+                cl9.Value2 = "Ngày giao";
 
-            Microsoft.Office.Interop.Excel.Range cl9 = oSheet.get_Range("I3", "I3");
+                cl9.ColumnWidth = 20;
 
-            cl9.Value2 = "Thời hạn";
+                Microsoft.Office.Interop.Excel.Range cl10 = oSheet.get_Range("J3", "J3");
 
-            cl9.ColumnWidth = 20;
+                cl10.Value2 = "Ngày cập nhật";
 
-            Microsoft.Office.Interop.Excel.Range cl10 = oSheet.get_Range("J3", "J3");
+                cl10.ColumnWidth = 20;
 
-            cl10.Value2 = "Ngày hoàn thành";
+                Microsoft.Office.Interop.Excel.Range cl11 = oSheet.get_Range("K3", "K3");
 
-            cl10.ColumnWidth = 20;
+                cl11.Value2 = "Thời hạn";
 
-            Microsoft.Office.Interop.Excel.Range cl11 = oSheet.get_Range("K3", "K3");
+                cl11.ColumnWidth = 20;
 
-            cl11.Value2 = "Trạng thái";
+                Microsoft.Office.Interop.Excel.Range cl12 = oSheet.get_Range("L3", "L3");
 
-            cl11.ColumnWidth = 20;
+                cl12.Value2 = "Ngày hoàn thành";
 
-            Microsoft.Office.Interop.Excel.Range cl12 = oSheet.get_Range("L3", "L3");
+                cl12.ColumnWidth = 20;
+                Microsoft.Office.Interop.Excel.Range cl13 = oSheet.get_Range("M3", "M3");
 
-            cl12.Value2 = "Ghi chú";
+                cl13.Value2 = "Trạng thái";
 
-            cl12.ColumnWidth = 20;
-            Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A3", "L3");
+                cl13.ColumnWidth = 20;
+                Microsoft.Office.Interop.Excel.Range cl14 = oSheet.get_Range("N3", "N3");
 
-            rowHead.Font.Bold = true;
-            // Draw border
+                cl14.Value2 = "Ghi chú";
 
-            rowHead.Borders.LineStyle = Microsoft.Office.Interop.Excel.Constants.xlSolid;
+                cl14.ColumnWidth = 20;
+                Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A3", "N3");
+                rowHead.Font.Bold = true;
+                // Draw border
 
-            // Setting background color
+                rowHead.Borders.LineStyle = Microsoft.Office.Interop.Excel.Constants.xlSolid;
 
-            rowHead.Interior.ColorIndex = 6;
+                // Setting background color
 
-            rowHead.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+                rowHead.Interior.ColorIndex = 6;
+
+                rowHead.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+            }
+            else if (loai == 1)
+            {
+                // Create title
+                Microsoft.Office.Interop.Excel.Range head = oSheet.get_Range("A1", "L1");
+
+                head.MergeCells = true;
+
+                head.Value2 = title;
+
+                head.Font.Bold = true;
+
+                head.Font.Name = "Times New Roman";
+
+                head.Font.Size = "20";
+
+                head.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+                // Create column name
+
+                Microsoft.Office.Interop.Excel.Range cl1 = oSheet.get_Range("A3", "A3");
+
+                cl1.Value2 = "Mã công việc";
+
+                cl1.ColumnWidth = 20;
+
+                Microsoft.Office.Interop.Excel.Range cl2 = oSheet.get_Range("B3", "B3");
+
+                cl2.Value2 = "Mã nhóm";
+
+                cl2.ColumnWidth = 20;
+
+                Microsoft.Office.Interop.Excel.Range cl3 = oSheet.get_Range("C3", "C3");
+
+                cl3.Value2 = "Mã trưởng nhóm";
+
+                cl3.ColumnWidth = 20;
+
+                Microsoft.Office.Interop.Excel.Range cl4 = oSheet.get_Range("D3", "D3");
+
+                cl4.Value2 = "Mã bộ phận";
+
+                cl4.ColumnWidth = 20;
+
+                Microsoft.Office.Interop.Excel.Range cl5 = oSheet.get_Range("E3", "E3");
+
+                cl5.Value2 = "Nội dung";
+
+                cl5.ColumnWidth = 50;
+
+                Microsoft.Office.Interop.Excel.Range cl6 = oSheet.get_Range("F3", "F3");
+
+                cl6.Value2 = "Mã căn hộ";
+
+                cl6.ColumnWidth = 20;
+
+                Microsoft.Office.Interop.Excel.Range cl7 = oSheet.get_Range("G3", "G3");
+
+                cl7.Value2 = "Ngày giao";
+
+                cl7.ColumnWidth = 20;
+
+                Microsoft.Office.Interop.Excel.Range cl8 = oSheet.get_Range("H3", "H3");
+
+                cl8.Value2 = "Ngày cập nhật";
+
+                cl8.ColumnWidth = 20;
+
+                Microsoft.Office.Interop.Excel.Range cl9 = oSheet.get_Range("I3", "I3");
+
+                cl9.Value2 = "Thời hạn";
+
+                cl9.ColumnWidth = 20;
+
+                Microsoft.Office.Interop.Excel.Range cl10 = oSheet.get_Range("J3", "J3");
+
+                cl10.Value2 = "Ngày hoàn thành";
+
+                cl10.ColumnWidth = 20;
+
+                Microsoft.Office.Interop.Excel.Range cl11 = oSheet.get_Range("K3", "K3");
+
+                cl11.Value2 = "Trạng thái";
+
+                cl11.ColumnWidth = 20;
+
+                Microsoft.Office.Interop.Excel.Range cl12 = oSheet.get_Range("L3", "L3");
+
+                cl12.Value2 = "Ghi chú";
+
+                cl12.ColumnWidth = 20;
+                Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A3", "L3");
+                rowHead.Font.Bold = true;
+                // Draw border
+
+                rowHead.Borders.LineStyle = Microsoft.Office.Interop.Excel.Constants.xlSolid;
+
+                // Setting background color
+
+                rowHead.Interior.ColorIndex = 6;
+
+                rowHead.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+            }
+            else
+            {
+                // Create title
+                Microsoft.Office.Interop.Excel.Range head = oSheet.get_Range("A1", "K1");
+
+                head.MergeCells = true;
+
+                head.Value2 = title;
+
+                head.Font.Bold = true;
+
+                head.Font.Name = "Times New Roman";
+
+                head.Font.Size = "20";
+
+                head.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+                // Create column name
+
+                Microsoft.Office.Interop.Excel.Range cl1 = oSheet.get_Range("A3", "A3");
+
+                cl1.Value2 = "Mã công việc";
+
+                cl1.ColumnWidth = 20;
+
+                Microsoft.Office.Interop.Excel.Range cl2 = oSheet.get_Range("B3", "B3");
+
+                cl2.Value2 = "Mã bộ phận";
+
+                cl2.ColumnWidth = 20;
+
+                Microsoft.Office.Interop.Excel.Range cl3 = oSheet.get_Range("C3", "C3");
+
+                cl3.Value2 = "Mã quản lý";
+
+                cl3.ColumnWidth = 20;
+
+                Microsoft.Office.Interop.Excel.Range cl4 = oSheet.get_Range("D3", "D3");
+
+                cl4.Value2 = "Nội dung";
+
+                cl4.ColumnWidth = 50;
+
+                Microsoft.Office.Interop.Excel.Range cl5 = oSheet.get_Range("E3", "E3");
+
+                cl5.Value2 = "Mã căn hộ";
+
+                cl5.ColumnWidth = 20;
+
+                Microsoft.Office.Interop.Excel.Range cl6 = oSheet.get_Range("F3", "F3");
+
+                cl6.Value2 = "Ngày giao";
+
+                cl6.ColumnWidth = 20;
+
+                Microsoft.Office.Interop.Excel.Range cl7 = oSheet.get_Range("G3", "G3");
+
+                cl7.Value2 = "Ngày cập nhật";
+
+                cl7.ColumnWidth = 20;
+
+                Microsoft.Office.Interop.Excel.Range cl8 = oSheet.get_Range("H3", "H3");
+
+                cl8.Value2 = "Thời hạn";
+
+                cl8.ColumnWidth = 20;
+
+                Microsoft.Office.Interop.Excel.Range cl9 = oSheet.get_Range("I3", "I3");
+
+                cl9.Value2 = "Ngày hoàn thành";
+
+                cl9.ColumnWidth = 20;
+
+                Microsoft.Office.Interop.Excel.Range cl10 = oSheet.get_Range("J3", "J3");
+
+                cl10.Value2 = "Trạng thái";
+
+                cl10.ColumnWidth = 20;
+
+                Microsoft.Office.Interop.Excel.Range cl11 = oSheet.get_Range("K3", "K3");
+
+                cl11.Value2 = "Ghi chú";
+
+                cl11.ColumnWidth = 20;
+
+                Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A3", "K3");
+                rowHead.Font.Bold = true;
+                // Draw border
+
+                rowHead.Borders.LineStyle = Microsoft.Office.Interop.Excel.Constants.xlSolid;
+
+                // Setting background color
+
+                rowHead.Interior.ColorIndex = 6;
+
+                rowHead.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+            }
 
             // Create array base on datatable
 

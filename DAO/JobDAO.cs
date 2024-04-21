@@ -133,22 +133,22 @@ namespace DAO
         }
 
         //Lấy tất cả công việc của nhân viên
-        public DataTable GetJobOfEmployees()
+        public DataTable GetJobOfEmployees(int quyen)
         {
-            string query = $"EXEC [dbo].[Job_Of_Employees]";
+            string query = $"EXEC [dbo].[Job_Of_Employees] @quyen ='{quyen}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
         //Lấy tất cả công việc của nhóm
-        public DataTable GetJobOfGroups()
+        public DataTable GetJobOfGroups(int quyen)
         {
-            string query = $"EXEC [dbo].[Job_Of_Groups]";
+            string query = $"EXEC [dbo].[Job_Of_Groups] @quyen ='{quyen}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         //Lấy tất cả công việc của phòng ban
-        public DataTable GetJobOfDivisions()
+        public DataTable GetJobOfDivisions(int quyen)
         {
-            string query = $"EXEC [dbo].[Job_Of_Divisions]";
+            string query = $"EXEC [dbo].[Job_Of_Divisions] @quyen ='{quyen}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
