@@ -190,7 +190,7 @@ namespace DangNhap
         }
         private void DisplayGGC_nhanvien()
         {
-            GGC_dichvu.DataSource = JobDAO.Instance.GetJobOfEmployees();
+            GGC_dichvu.DataSource = JobDAO.Instance.GetJobOfEmployees(2);
             GGC_DataSourceChanged(GGC_dichvu);
             GGC_dichvu.Size = new System.Drawing.Size(950, 404);
             GGC_dichvu.TopLevelGroupOptions.ShowFilterBar = true;
@@ -230,7 +230,7 @@ namespace DangNhap
         }
         private void DisplayGGC_Dichvu()
         {
-            GGC_dichvu.DataSource = JobDAO.Instance.GetJobOfEmployees();
+            GGC_dichvu.DataSource = JobDAO.Instance.GetJobOfEmployees(2);
             GGC_DataSourceChanged(GGC_dichvu);
             GGC_dichvu.Size = new System.Drawing.Size(950, 404);
             GGC_dichvu.TopLevelGroupOptions.ShowFilterBar = true;

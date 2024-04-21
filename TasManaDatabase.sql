@@ -309,7 +309,7 @@ select * from CanHo
 
 -- Insert mẫu công việc
 INSERT INTO CongViec VALUES('CV1', N'Quét nhà', '2024-04-08 9:12:00','2024-04-04 12:30:00',null, '2024-04-08 9:12:00',N'Chưa bắt đầu',null,2)
-Insert into CongViec_NhanVien Values ('VS-003', 'CVVS1')
+Insert into CongViec_NhanVien Values ('VS-003', 'CV1')
 Insert INTO YeuCau VALUES('CV1', 'WPHA')
 go
 
@@ -768,7 +768,7 @@ BEGIN
         ) AS TreHan ON NV.maNhanVien = TreHan.maNhanVien;
 END
 GO
-DROP PROCEDURE [dbo].[Count_Job_State]
+
 -- Tạo Trigger tự động kiểm tra tình trạng công việc
 CREATE TRIGGER CheckLateJob
 ON CongViec
@@ -784,38 +784,154 @@ BEGIN
         WHERE (CAST(thoiHan AS datetime) < CAST(GETDATE() AS datetime) OR CAST(ngayHoanThanh AS datetime) > CAST(thoiHan AS datetime));
     END
 END;
-DROP Trigger CheckLateJob
-Go
-Select * From CongViec
+GO
 
----Lấy công việc của nhân viên
+---Lấy công việc của nhân viên có phân quyền
 CREATE PROCEDURE [dbo].[Job_Of_Employees]
+    @quyen int
 AS
 BEGIN
-	SELECT CongViec.maCongViec as N'Mã công việc', Congviec_Nhanvien.maNhanVien as N'Mã nhân viên', NhanVien.ho as N'Họ', NhanVien.ten as N'Tên', CongViec.noiDung as N'Nội dung', YeuCau.maCanHo as N'Mã căn hộ' ,CongViec.ngayGiao as N'Ngày giao', CongViec.ngayCapNhat as N'Ngày cập nhật', CongViec.thoiHan as N'Thời hạn', CongViec.ngayHoanThanh as N'Ngày hoàn thành', CongViec.trangThai as N'Trạng thái', CongViec.ghiChu as N'Ghi chú' 
-	FROM NhanVien, CongViec, Congviec_Nhanvien, YeuCau 
-	WHERE NhanVien.maNhanVien = Congviec_Nhanvien.maNhanVien and Congviec_Nhanvien.maCongViec=CongViec.maCongViec and YeuCau.maCongViec = CongViec.maCongViec;
+    IF @quyen = 3
+    BEGIN
+        SELECT CongViec.maCongViec as N'Mã công việc', 
+               Congviec_Nhanvien.maNhanVien as N'Mã nhân viên', 
+               NhanVien.ho as N'Họ', 
+               NhanVien.ten as N'Tên', 
+               NhanVien.maNhom as N'Mã nhóm', 
+               NhanVien.maBoPhan as N'Mã Bộ phận', 
+               CongViec.noiDung as N'Nội dung', 
+               YeuCau.maCanHo as N'Mã căn hộ', 
+               CongViec.ngayGiao as N'Ngày giao', 
+               CongViec.ngayCapNhat as N'Ngày cập nhật', 
+               CongViec.thoiHan as N'Thời hạn', 
+               CongViec.ngayHoanThanh as N'Ngày hoàn thành', 
+               CongViec.trangThai as N'Trạng thái', 
+               CongViec.ghiChu as N'Ghi chú' 
+        FROM NhanVien, CongViec, Congviec_Nhanvien, YeuCau 
+        WHERE NhanVien.maNhanVien = Congviec_Nhanvien.maNhanVien 
+              AND Congviec_Nhanvien.maCongViec=CongViec.maCongViec 
+              AND YeuCau.maCongViec = CongViec.maCongViec;
+    END
+    ELSE
+    BEGIN
+        SELECT CongViec.maCongViec as N'Mã công việc', 
+               Congviec_Nhanvien.maNhanVien as N'Mã nhân viên', 
+               NhanVien.ho as N'Họ', 
+               NhanVien.ten as N'Tên', 
+               NhanVien.maNhom as N'Mã nhóm', 
+               NhanVien.maBoPhan as N'Mã Bộ phận', 
+               CongViec.noiDung as N'Nội dung', 
+               YeuCau.maCanHo as N'Mã căn hộ', 
+               CongViec.ngayGiao as N'Ngày giao', 
+               CongViec.ngayCapNhat as N'Ngày cập nhật', 
+               CongViec.thoiHan as N'Thời hạn', 
+               CongViec.ngayHoanThanh as N'Ngày hoàn thành', 
+               CongViec.trangThai as N'Trạng thái', 
+               CongViec.ghiChu as N'Ghi chú' 
+        FROM NhanVien, CongViec, Congviec_Nhanvien, YeuCau 
+        WHERE NhanVien.maNhanVien = Congviec_Nhanvien.maNhanVien 
+              AND Congviec_Nhanvien.maCongViec=CongViec.maCongViec 
+              AND YeuCau.maCongViec = CongViec.maCongViec 
+              AND CongViec.quyenTruyCap = @quyen;
+    END
 END
 GO
 
----Lấy công việc của nhóm
+---Lấy công việc của nhóm có phân quyền
 CREATE PROCEDURE [dbo].[Job_Of_Groups]
+    @quyen int
 AS
 BEGIN
-	SELECT CongViec.maCongViec as N'Mã công việc', CongViec_Nhom.maNhom as N'Mã nhóm', Nhom.maTruongNhom as N'Mã Trưởng Nhóm', Nhom.maBoPhan as N'Mã Bộ phận', CongViec.noiDung as N'Nội dung', YeuCau.maCanHo as N'Mã căn hộ' ,CongViec.ngayGiao as N'Ngày giao', CongViec.ngayCapNhat as N'Ngày cập nhật', CongViec.thoiHan as N'Thời hạn', CongViec.ngayHoanThanh as N'Ngày hoàn thành', CongViec.trangThai as N'Trạng thái', CongViec.ghiChu as N'Ghi chú' 
-	FROM Nhom, CongViec, Congviec_Nhom, YeuCau 
-	WHERE Nhom.maNhom = Congviec_Nhom.maNhom and Congviec_Nhom.maCongViec=CongViec.maCongViec and YeuCau.maCongViec = CongViec.maCongViec;
+    IF @quyen = 3
+    BEGIN
+        SELECT CongViec.maCongViec as N'Mã công việc', 
+               CongViec_Nhom.maNhom as N'Mã nhóm', 
+               Nhom.maTruongNhom as N'Mã Trưởng Nhóm', 
+               Nhom.maBoPhan as N'Mã Bộ phận', 
+               CongViec.noiDung as N'Nội dung', 
+               YeuCau.maCanHo as N'Mã căn hộ', 
+               CongViec.ngayGiao as N'Ngày giao', 
+               CongViec.ngayCapNhat as N'Ngày cập nhật', 
+               CongViec.thoiHan as N'Thời hạn', 
+               CongViec.ngayHoanThanh as N'Ngày hoàn thành', 
+               CongViec.trangThai as N'Trạng thái', 
+               CongViec.ghiChu as N'Ghi chú' 
+        FROM Nhom, CongViec, Congviec_Nhom, YeuCau 
+        WHERE Nhom.maNhom = Congviec_Nhom.maNhom 
+              AND Congviec_Nhom.maCongViec=CongViec.maCongViec 
+              AND YeuCau.maCongViec = CongViec.maCongViec;
+    END
+    ELSE
+    BEGIN
+        SELECT CongViec.maCongViec as N'Mã công việc', 
+               CongViec_Nhom.maNhom as N'Mã nhóm', 
+               Nhom.maTruongNhom as N'Mã Trưởng Nhóm', 
+               Nhom.maBoPhan as N'Mã Bộ phận', 
+               CongViec.noiDung as N'Nội dung', 
+               YeuCau.maCanHo as N'Mã căn hộ', 
+               CongViec.ngayGiao as N'Ngày giao', 
+               CongViec.ngayCapNhat as N'Ngày cập nhật', 
+               CongViec.thoiHan as N'Thời hạn', 
+               CongViec.ngayHoanThanh as N'Ngày hoàn thành', 
+               CongViec.trangThai as N'Trạng thái', 
+               CongViec.ghiChu as N'Ghi chú' 
+        FROM Nhom, CongViec, Congviec_Nhom, YeuCau 
+        WHERE Nhom.maNhom = Congviec_Nhom.maNhom 
+              AND Congviec_Nhom.maCongViec=CongViec.maCongViec 
+              AND YeuCau.maCongViec = CongViec.maCongViec 
+              AND CongViec.quyenTruyCap = @quyen;
+    END
 END
 GO
---Lấy công việc phòng ban
+
+insert into QuanLy Values ('VS-002','VS')
+--Lấy công việc phòng ban có phân quyền
 CREATE PROCEDURE [dbo].[Job_Of_Divisions]
+    @quyen int
 AS
 BEGIN
-	SELECT CongViec.maCongViec as N'Mã công việc', Congviec_PhongBan.maBoPhan as N'Mã bộ phận', QuanLy.maNhanVien as N'Mã quản lý', CongViec.noiDung as N'Nội dung', YeuCau.maCanHo as N'Mã căn hộ' ,CongViec.ngayGiao as N'Ngày giao', CongViec.ngayCapNhat as N'Ngày cập nhật', CongViec.thoiHan as N'Thời hạn', CongViec.ngayHoanThanh as N'Ngày hoàn thành', CongViec.trangThai as N'Trạng thái', CongViec.ghiChu as N'Ghi chú' 
-	FROM PhongBan, CongViec, Congviec_PhongBan, YeuCau, QuanLy
-	WHERE PhongBan.maBoPhan = Congviec_PhongBan.maBoPhan and Congviec_PhongBan.maCongViec=CongViec.maCongViec and YeuCau.maCongViec = CongViec.maCongViec and QuanLy.maBoPhan = Congviec_PhongBan.maBoPhan;
+    IF @quyen = 3
+    BEGIN
+        SELECT CongViec.maCongViec as N'Mã công việc', 
+               Congviec_PhongBan.maBoPhan as N'Mã bộ phận', 
+               QuanLy.maNhanVien as N'Mã quản lý', 
+               CongViec.noiDung as N'Nội dung', 
+               YeuCau.maCanHo as N'Mã căn hộ', 
+               CongViec.ngayGiao as N'Ngày giao', 
+               CongViec.ngayCapNhat as N'Ngày cập nhật', 
+               CongViec.thoiHan as N'Thời hạn', 
+               CongViec.ngayHoanThanh as N'Ngày hoàn thành', 
+               CongViec.trangThai as N'Trạng thái', 
+               CongViec.ghiChu as N'Ghi chú' 
+        FROM PhongBan, CongViec, Congviec_PhongBan, YeuCau, QuanLy
+        WHERE PhongBan.maBoPhan = Congviec_PhongBan.maBoPhan 
+              AND Congviec_PhongBan.maCongViec=CongViec.maCongViec 
+              AND YeuCau.maCongViec = CongViec.maCongViec 
+              AND QuanLy.maBoPhan = PhongBan.maBoPhan;
+    END
+    ELSE
+    BEGIN
+        SELECT CongViec.maCongViec as N'Mã công việc', 
+               Congviec_PhongBan.maBoPhan as N'Mã bộ phận', 
+               QuanLy.maNhanVien as N'Mã quản lý', 
+               CongViec.noiDung as N'Nội dung', 
+               YeuCau.maCanHo as N'Mã căn hộ', 
+               CongViec.ngayGiao as N'Ngày giao', 
+               CongViec.ngayCapNhat as N'Ngày cập nhật', 
+               CongViec.thoiHan as N'Thời hạn', 
+               CongViec.ngayHoanThanh as N'Ngày hoàn thành', 
+               CongViec.trangThai as N'Trạng thái', 
+               CongViec.ghiChu as N'Ghi chú' 
+        FROM PhongBan, CongViec, Congviec_PhongBan, YeuCau, QuanLy
+        WHERE PhongBan.maBoPhan = Congviec_PhongBan.maBoPhan 
+              AND Congviec_PhongBan.maCongViec=CongViec.maCongViec 
+              AND YeuCau.maCongViec = CongViec.maCongViec 
+              AND QuanLy.maBoPhan = PhongBan.maBoPhan 
+              AND CongViec.quyenTruyCap = @quyen;
+    END
 END
 GO
+
 -- Thống kê tình trạng công việc của toàn công ty
 CREATE PROCEDURE [dbo].[SP_ThongKeCongViecCongTy]
     @tuNgay SMALLDATETIME,
@@ -896,3 +1012,4 @@ Begin
         nv.maNhanVien, nv.ho, nv.ten;
 End
 GO
+select * from Congviec

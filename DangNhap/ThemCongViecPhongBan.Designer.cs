@@ -51,6 +51,7 @@ namespace DangNhap
             this.LB_Ghichu = new System.Windows.Forms.Label();
             this.TXB_ghiChu = new System.Windows.Forms.TextBox();
             this.CB_thoihan = new System.Windows.Forms.CheckBox();
+            this.LLB_themfilepb = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // panel1
@@ -70,7 +71,6 @@ namespace DangNhap
             this.CBB_QuyenTruyCap.ForeColor = System.Drawing.Color.White;
             this.CBB_QuyenTruyCap.FormattingEnabled = true;
             this.CBB_QuyenTruyCap.Items.AddRange(new object[] {
-            "Riêng tư",
             "Công ty",
             "Bộ phận"});
             this.CBB_QuyenTruyCap.Location = new System.Drawing.Point(829, 327);
@@ -154,6 +154,7 @@ namespace DangNhap
             this.BTN_file.Text = "Tệp đính kèm";
             this.BTN_file.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_file.UseVisualStyleBackColor = true;
+            this.BTN_file.Click += new System.EventHandler(this.BTN_file_Click);
             // 
             // LB_quyentruycap
             // 
@@ -339,12 +340,25 @@ namespace DangNhap
             this.CB_thoihan.UseVisualStyleBackColor = true;
             this.CB_thoihan.CheckedChanged += new System.EventHandler(this.CB_thoihan_CheckedChanged);
             // 
+            // LLB_themfilepb
+            // 
+            this.LLB_themfilepb.AutoSize = true;
+            this.LLB_themfilepb.LinkColor = System.Drawing.Color.White;
+            this.LLB_themfilepb.Location = new System.Drawing.Point(213, 561);
+            this.LLB_themfilepb.Name = "LLB_themfilepb";
+            this.LLB_themfilepb.Size = new System.Drawing.Size(68, 16);
+            this.LLB_themfilepb.TabIndex = 236;
+            this.LLB_themfilepb.TabStop = true;
+            this.LLB_themfilepb.Text = "linkLabel1";
+            this.LLB_themfilepb.Visible = false;
+            // 
             // ThemCongViecPhongBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(1277, 609);
+            this.Controls.Add(this.LLB_themfilepb);
             this.Controls.Add(this.LB_Ghichu);
             this.Controls.Add(this.TXB_ghiChu);
             this.Controls.Add(this.panel6);
@@ -398,5 +412,6 @@ namespace DangNhap
         private System.Windows.Forms.Label LB_Ghichu;
         public System.Windows.Forms.TextBox TXB_ghiChu;
         private System.Windows.Forms.CheckBox CB_thoihan;
+        private System.Windows.Forms.LinkLabel LLB_themfilepb;
     }
 }
