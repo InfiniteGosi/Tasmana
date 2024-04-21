@@ -318,8 +318,50 @@ namespace DangNhap
 
         private void Btn_XuatDoThi_Click(object sender, EventArgs e)
         {
-            BTN_ThongKe_Click(sender, e);
-            if(CBB_LoaiDoThi.SelectedIndex == -1)
+            if (RBtn_Congty.Checked)
+            {
+                LoadThongKeCongTy();
+                GGC_ThongKe.Visible = false;
+            }
+            if (RBtn_PhongBan.Checked)
+            {
+                if (CBB_PhongBan.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Vui lòng chọn phòng ban muốn thống kê");
+                    CBB_PhongBan.Focus();
+                    return;
+                }
+                else
+                {
+                    LoadThongKe_PhongBan();
+                    GGC_ThongKe.Visible = false;
+                }
+            }
+            if (RBtn_NhanVien.Checked)
+            {
+                if (CBB_PhongBan.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Vui lòng chọn phòng ban của nhân viên muốn thống kê");
+                    CBB_PhongBan.Focus();
+                    return;
+                }
+                if (CBB_NhanVien.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Vui lòng chọn nhân viên muốn thống kê");
+                    CBB_NhanVien.Focus();
+                    return;
+                }
+                LoadThongKe_NhanVien();
+                GGC_ThongKe.Visible = false;
+            }
+
+            if(RBtn_Congty.Checked == false && RBtn_PhongBan.Checked == false && RBtn_NhanVien.Checked == false)
+            {
+                MessageBox.Show("Vui lòng chọn dữ liệu muốn thống kê");
+                return;
+            }
+
+            if (CBB_LoaiDoThi.SelectedIndex == -1)
             {
                 MessageBox.Show("Vui lòng chọn loại đồ thị");
                 CBB_LoaiDoThi.Focus();
@@ -340,6 +382,7 @@ namespace DangNhap
                 C_ThongKe.Series.Add("PieSeries");
                 C_ThongKe.Series["PieSeries"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
                 C_ThongKe.Series["PieSeries"].IsValueShownAsLabel = true;
+                C_ThongKe.Series["PieSeries"].LabelFormat = "#.##%";
                 // Calculate total for each type of job
                 Dictionary<string, int> jobTotals = new Dictionary<string, int>();
 
@@ -368,7 +411,7 @@ namespace DangNhap
                 foreach (var kvp in jobTotals)
                 {
                     // Calculate percentage for each job type
-                    double percentage = (double)kvp.Value / totalJobs * 100;
+                    double percentage = (double)kvp.Value / totalJobs;
 
                     // Add data point with percentage label
                     C_ThongKe.Series["PieSeries"].Points.AddXY(kvp.Key, percentage);
@@ -419,12 +462,10 @@ namespace DangNhap
                 {
                     series.Points.AddXY(data.Key, data.Value);
                 }
-                // Tính toán giá trị cao nhất và thấp nhất trên trục Y
-                double maxYValue = C_ThongKe.ChartAreas[0].AxisY.Maximum;
-                double minYValue = C_ThongKe.ChartAreas[0].AxisY.Minimum;
 
+                int totalJobs = jobTotals.Sum(x => x.Value);
                 // Tính toán giá trị trung bình của interval
-                double averageInterval = (maxYValue + minYValue) / 2;
+                double averageInterval = totalJobs / 4;
 
                 // Đặt interval trung bình cho trục Y
                 C_ThongKe.ChartAreas[0].AxisY.Interval = (int)averageInterval;
@@ -473,12 +514,10 @@ namespace DangNhap
                 {
                     series.Points.AddXY(data.Key, data.Value);
                 }
-                // Tính toán giá trị cao nhất và thấp nhất trên trục Y
-                double maxYValue = C_ThongKe.ChartAreas[0].AxisY.Maximum;
-                double minYValue = C_ThongKe.ChartAreas[0].AxisY.Minimum;
 
+                int totalJobs = jobTotals.Sum(x => x.Value);
                 // Tính toán giá trị trung bình của interval
-                double averageInterval = (maxYValue + minYValue) / 2;
+                double averageInterval =  totalJobs/ 4;
 
                 // Đặt interval trung bình cho trục Y
                 C_ThongKe.ChartAreas[0].AxisY.Interval = (int)averageInterval;
