@@ -165,5 +165,11 @@ namespace DangNhap
             FaceDetectLogin faceDetectLogin = new FaceDetectLogin(this, currentAccount);
             faceDetectLogin.ShowDialog();
         }
+
+        private void LB_quenpw_Click(object sender, EventArgs e)
+        {
+            QuenMatKhau quenMatKhau = new QuenMatKhau();
+            quenMatKhau.ShowDialog();
+        }
     }
 }
