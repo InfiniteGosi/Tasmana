@@ -30,9 +30,9 @@ namespace DangNhap
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.elipse_blue = new Guna.UI.WinForms.GunaElipse(this.components);
             this.elipse_red = new Guna.UI.WinForms.GunaElipse(this.components);
             this.elipse_green = new Guna.UI.WinForms.GunaElipse(this.components);
@@ -122,18 +122,18 @@ namespace DangNhap
             // 
             // C_ThongKe
             // 
-            chartArea3.Name = "ChartArea1";
-            this.C_ThongKe.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.C_ThongKe.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.C_ThongKe.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.C_ThongKe.Legends.Add(legend1);
             this.C_ThongKe.Location = new System.Drawing.Point(10, 134);
             this.C_ThongKe.Name = "C_ThongKe";
-            series3.ChartArea = "ChartArea1";
-            series3.IsValueShownAsLabel = true;
-            series3.LabelFormat = "#.##";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.C_ThongKe.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.IsValueShownAsLabel = true;
+            series1.LabelFormat = "#.##";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.C_ThongKe.Series.Add(series1);
             this.C_ThongKe.Size = new System.Drawing.Size(1585, 574);
             this.C_ThongKe.TabIndex = 246;
             this.C_ThongKe.Text = "chart1";
@@ -252,6 +252,7 @@ namespace DangNhap
             this.Btn_XuatDoThi.TabIndex = 238;
             this.Btn_XuatDoThi.Text = "Xuất đồ thị";
             this.Btn_XuatDoThi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btn_XuatDoThi.Click += new System.EventHandler(this.Btn_XuatDoThi_Click);
             // 
             // BTN_ThongKe
             // 
@@ -282,6 +283,7 @@ namespace DangNhap
             this.BTN_ThongKe.TabIndex = 237;
             this.BTN_ThongKe.Text = "Thống kê";
             this.BTN_ThongKe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_ThongKe.Click += new System.EventHandler(this.BTN_ThongKe_Click);
             // 
             // LB_NhanVien
             // 
