@@ -25,6 +25,20 @@ namespace DangNhap
             SyncfusionLicenseProvider.RegisterLicense("MzIxOTI2MkAzMjM1MmUzMDJlMzBORkJZeFRVdUQxeERjT2xkWC9vdFgxS29wUmREOU9CZVdENkRUN0lrSStVPQ==;Mgo+DSMBaFt6QHFqVkNrXVNbdV5dVGpAd0N3RGlcdlR1fUUmHVdTRHRbQlliS3xTck1hW35Wcnc=");
             InitializeComponent();
         }
+        private Form currentFormChild;
+
+        private void OpenChildForm(Form childForm)
+        {
+            currentFormChild?.Close();
+            currentFormChild = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            PN_hienthi.Controls.Add(childForm);
+            PN_hienthi.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
 
         public List<Division> GetPhongBan()
         {
@@ -522,6 +536,21 @@ namespace DangNhap
                 // Đặt interval trung bình cho trục Y
                 C_ThongKe.ChartAreas[0].AxisY.Interval = (int)averageInterval;
             }
+        }
+
+        private void BTN_thongkecanho_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ThongKeCanHo());
+            LB_ThongKeCV.Text = "THỐNG KÊ CĂN HỘ";
+        }
+
+        private void BTN_thongkecongviec_Click(object sender, EventArgs e)
+        {
+            if(currentFormChild != null)
+            {
+                currentFormChild.Close();
+            }
+            LB_ThongKeCV.Text = "THỐNG KÊ CÔNG VIỆC";
         }
     }
 }

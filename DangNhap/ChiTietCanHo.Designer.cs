@@ -277,9 +277,6 @@ namespace DangNhap
             this.PN_hienthi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.PN_hienthi.Controls.Add(this.panel7);
             this.PN_hienthi.Controls.Add(this.panel1);
-            this.PN_hienthi.Controls.Add(this.panel6);
-            this.PN_hienthi.Controls.Add(this.BTN_xoa);
-            this.PN_hienthi.Controls.Add(this.BTN_luu);
             this.PN_hienthi.Controls.Add(this.label11);
             this.PN_hienthi.Controls.Add(this.CBB_loai);
             this.PN_hienthi.Controls.Add(this.label4);
@@ -316,7 +313,7 @@ namespace DangNhap
             this.PN_hienthi.Controls.Add(this.LB_yeucau);
             this.PN_hienthi.Location = new System.Drawing.Point(1, 67);
             this.PN_hienthi.Name = "PN_hienthi";
-            this.PN_hienthi.Size = new System.Drawing.Size(1391, 772);
+            this.PN_hienthi.Size = new System.Drawing.Size(1391, 708);
             this.PN_hienthi.TabIndex = 38;
             // 
             // panel7
@@ -512,7 +509,7 @@ namespace DangNhap
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Silver;
-            this.panel6.Location = new System.Drawing.Point(20, 712);
+            this.panel6.Location = new System.Drawing.Point(32, 781);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1350, 1);
             this.panel6.TabIndex = 211;
@@ -533,7 +530,7 @@ namespace DangNhap
             this.BTN_xoa.ForeColor = System.Drawing.Color.Red;
             this.BTN_xoa.Image = null;
             this.BTN_xoa.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_xoa.Location = new System.Drawing.Point(1092, 725);
+            this.BTN_xoa.Location = new System.Drawing.Point(1107, 793);
             this.BTN_xoa.Name = "BTN_xoa";
             this.BTN_xoa.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(30)))), ((int)(((byte)(43)))));
             this.BTN_xoa.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(30)))), ((int)(((byte)(43)))));
@@ -563,7 +560,7 @@ namespace DangNhap
             this.BTN_luu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.BTN_luu.Image = null;
             this.BTN_luu.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_luu.Location = new System.Drawing.Point(1238, 725);
+            this.BTN_luu.Location = new System.Drawing.Point(1253, 793);
             this.BTN_luu.Name = "BTN_luu";
             this.BTN_luu.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.BTN_luu.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
@@ -636,10 +633,10 @@ namespace DangNhap
             // 
             this.GGC_dichvu.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.GGC_dichvu.BackColor = System.Drawing.SystemColors.Window;
-            this.GGC_dichvu.Location = new System.Drawing.Point(3, 545);
+            this.GGC_dichvu.Location = new System.Drawing.Point(709, 446);
             this.GGC_dichvu.Name = "GGC_dichvu";
             this.GGC_dichvu.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
-            this.GGC_dichvu.Size = new System.Drawing.Size(1385, 181);
+            this.GGC_dichvu.Size = new System.Drawing.Size(636, 181);
             this.GGC_dichvu.TabIndex = 178;
             this.GGC_dichvu.Text = "gridGroupingControl1";
             this.GGC_dichvu.UseRightToLeftCompatibleTextBox = true;
@@ -903,6 +900,9 @@ namespace DangNhap
             this.ClientSize = new System.Drawing.Size(1394, 840);
             this.Controls.Add(this.PN_hienthi);
             this.Controls.Add(this.panel5);
+            this.Controls.Add(this.BTN_xoa);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.BTN_luu);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);

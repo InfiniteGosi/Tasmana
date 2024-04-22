@@ -37,9 +37,6 @@ namespace DangNhap
             this.LB_congno = new System.Windows.Forms.Label();
             this.LB_dichvu = new System.Windows.Forms.Label();
             this.LB_doxe = new System.Windows.Forms.Label();
-            this.BTN_xoa = new Guna.UI.WinForms.GunaGradientButton();
-            this.BTN_luu = new Guna.UI.WinForms.GunaGradientButton();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.gridGroupingControl1 = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
             this.LB_phidichvu = new System.Windows.Forms.Label();
             this.gridGroupingControl2 = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
@@ -136,74 +133,6 @@ namespace DangNhap
             this.LB_doxe.TabIndex = 33;
             this.LB_doxe.Text = "Đăng ký đỗ xe";
             // 
-            // BTN_xoa
-            // 
-            this.BTN_xoa.Animated = true;
-            this.BTN_xoa.AnimationHoverSpeed = 0.5F;
-            this.BTN_xoa.AnimationSpeed = 0.03F;
-            this.BTN_xoa.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_xoa.BaseColor1 = System.Drawing.Color.Transparent;
-            this.BTN_xoa.BaseColor2 = System.Drawing.Color.Transparent;
-            this.BTN_xoa.BorderColor = System.Drawing.Color.Red;
-            this.BTN_xoa.BorderSize = 1;
-            this.BTN_xoa.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.BTN_xoa.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_xoa.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_xoa.ForeColor = System.Drawing.Color.Red;
-            this.BTN_xoa.Image = null;
-            this.BTN_xoa.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_xoa.Location = new System.Drawing.Point(1092, 725);
-            this.BTN_xoa.Name = "BTN_xoa";
-            this.BTN_xoa.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(30)))), ((int)(((byte)(43)))));
-            this.BTN_xoa.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(30)))), ((int)(((byte)(43)))));
-            this.BTN_xoa.OnHoverBorderColor = System.Drawing.Color.White;
-            this.BTN_xoa.OnHoverForeColor = System.Drawing.Color.White;
-            this.BTN_xoa.OnHoverImage = null;
-            this.BTN_xoa.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_xoa.Radius = 5;
-            this.BTN_xoa.Size = new System.Drawing.Size(129, 35);
-            this.BTN_xoa.TabIndex = 212;
-            this.BTN_xoa.Text = "Xóa";
-            this.BTN_xoa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // BTN_luu
-            // 
-            this.BTN_luu.Animated = true;
-            this.BTN_luu.AnimationHoverSpeed = 0.5F;
-            this.BTN_luu.AnimationSpeed = 0.03F;
-            this.BTN_luu.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_luu.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
-            this.BTN_luu.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
-            this.BTN_luu.BorderColor = System.Drawing.Color.Black;
-            this.BTN_luu.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.BTN_luu.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_luu.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_luu.ForeColor = System.Drawing.Color.White;
-            this.BTN_luu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.BTN_luu.Image = null;
-            this.BTN_luu.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_luu.Location = new System.Drawing.Point(1238, 725);
-            this.BTN_luu.Name = "BTN_luu";
-            this.BTN_luu.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
-            this.BTN_luu.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
-            this.BTN_luu.OnHoverBorderColor = System.Drawing.Color.White;
-            this.BTN_luu.OnHoverForeColor = System.Drawing.Color.White;
-            this.BTN_luu.OnHoverImage = null;
-            this.BTN_luu.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_luu.Radius = 5;
-            this.BTN_luu.Size = new System.Drawing.Size(129, 35);
-            this.BTN_luu.TabIndex = 211;
-            this.BTN_luu.Text = "Lưu";
-            this.BTN_luu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Silver;
-            this.panel6.Location = new System.Drawing.Point(17, 712);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1350, 1);
-            this.panel6.TabIndex = 213;
-            // 
             // gridGroupingControl1
             // 
             this.gridGroupingControl1.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
@@ -272,9 +201,6 @@ namespace DangNhap
             this.Controls.Add(this.gridGroupingControl3);
             this.Controls.Add(this.gridGroupingControl2);
             this.Controls.Add(this.gridGroupingControl1);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.BTN_xoa);
-            this.Controls.Add(this.BTN_luu);
             this.Controls.Add(this.LB_doxe);
             this.Controls.Add(this.LB_dichvu);
             this.Controls.Add(this.TXB_congno);
@@ -305,9 +231,6 @@ namespace DangNhap
         private System.Windows.Forms.Label LB_congno;
         private System.Windows.Forms.Label LB_dichvu;
         private System.Windows.Forms.Label LB_doxe;
-        private Guna.UI.WinForms.GunaGradientButton BTN_xoa;
-        private Guna.UI.WinForms.GunaGradientButton BTN_luu;
-        private System.Windows.Forms.Panel panel6;
         private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl gridGroupingControl1;
         private System.Windows.Forms.Label LB_phidichvu;
         private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl gridGroupingControl2;
