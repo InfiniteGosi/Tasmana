@@ -268,7 +268,7 @@
             this.BTN_nhanvien.Name = "BTN_nhanvien";
             this.BTN_nhanvien.Size = new System.Drawing.Size(125, 47);
             this.BTN_nhanvien.TabIndex = 215;
-            this.BTN_nhanvien.Text = "Nhân Viên";
+            this.BTN_nhanvien.Text = "Nhóm";
             this.BTN_nhanvien.UseVisualStyleBackColor = false;
             this.BTN_nhanvien.Click += new System.EventHandler(this.BTN_nhanvien_Click);
             // 

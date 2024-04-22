@@ -35,6 +35,8 @@
             this.TXB_maphongban = new System.Windows.Forms.TextBox();
             this.BTN_xoa = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_ok = new Guna.UI.WinForms.GunaGradientButton();
+            this.TXB_manhanvien = new System.Windows.Forms.TextBox();
+            this.LB_manhanvien = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LB_maphongban
@@ -150,12 +152,36 @@
             this.BTN_ok.Text = "Lưu";
             this.BTN_ok.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // TXB_manhanvien
+            // 
+            this.TXB_manhanvien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_manhanvien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_manhanvien.ForeColor = System.Drawing.Color.White;
+            this.TXB_manhanvien.Location = new System.Drawing.Point(218, 229);
+            this.TXB_manhanvien.Multiline = true;
+            this.TXB_manhanvien.Name = "TXB_manhanvien";
+            this.TXB_manhanvien.Size = new System.Drawing.Size(419, 30);
+            this.TXB_manhanvien.TabIndex = 229;
+            // 
+            // LB_manhanvien
+            // 
+            this.LB_manhanvien.AutoSize = true;
+            this.LB_manhanvien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_manhanvien.ForeColor = System.Drawing.Color.White;
+            this.LB_manhanvien.Location = new System.Drawing.Point(48, 233);
+            this.LB_manhanvien.Name = "LB_manhanvien";
+            this.LB_manhanvien.Size = new System.Drawing.Size(116, 22);
+            this.LB_manhanvien.TabIndex = 228;
+            this.LB_manhanvien.Text = "Mã nhân viên";
+            // 
             // ThemPhongBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(847, 397);
+            this.Controls.Add(this.TXB_manhanvien);
+            this.Controls.Add(this.LB_manhanvien);
             this.Controls.Add(this.BTN_xoa);
             this.Controls.Add(this.BTN_ok);
             this.Controls.Add(this.TXB_maphongban);
@@ -180,5 +206,7 @@
         public System.Windows.Forms.TextBox TXB_maphongban;
         private Guna.UI.WinForms.GunaGradientButton BTN_xoa;
         private Guna.UI.WinForms.GunaGradientButton BTN_ok;
+        public System.Windows.Forms.TextBox TXB_manhanvien;
+        private System.Windows.Forms.Label LB_manhanvien;
     }
 }
