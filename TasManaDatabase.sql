@@ -18,7 +18,7 @@ CREATE TABLE Nhom
   maTruongNhom VARCHAR(10) NOT NULL,
   maBoPhan VARCHAR(10) NOT NULL,
   PRIMARY KEY (maNhom),
-  FOREIGN KEY (maBoPhan) REFERENCES phongBan(maBoPhan)
+  FOREIGN KEY (maBoPhan) REFERENCES PhongBan(maBoPhan)
 );
 
 CREATE TABLE CongViec
@@ -85,7 +85,7 @@ CREATE TABLE NhanVien
   maBoPhan VARCHAR(10),
   maNhom VARCHAR(10),
   PRIMARY KEY (maNhanVien),
-  FOREIGN KEY (maNhom) REFERENCES nhom(maNhom),
+  FOREIGN KEY (maNhom) REFERENCES Nhom(maNhom),
   FOREIGN KEY (maBoPhan) REFERENCES PhongBan(maBoPhan),
   UNIQUE (maDinhDanh),
   UNIQUE (maSoBHXH)
@@ -279,6 +279,8 @@ INSERT INTO PhongBan VALUES('XD', N'Xây Dựng', '02645816328', '@BCMP_XD@gmail
 INSERT INTO Nhom VALUES('VSN01', 'VS-002', 'VS')
 INSERT INTO Nhom VALUES('VSN02', 'VS-002', 'VS')
 
+insert into CEO values('GD-001')
+
 SELECT * FROM PhongBan
 SELECT * FROM Nhom
 
@@ -439,7 +441,7 @@ begin
 	inner join NhanVien nv on nv.maBoPhan = pb.maBoPhan
 	where nv.maNhanVien = @maNhanVien
 end
-
+go
 
 -- Procedure cập nhật thông tin nhân viên
 create procedure [dbo].[SP_CapNhatNhanVien]
@@ -752,55 +754,81 @@ BEGIN
 	Values (@maNhom, @maTruongNhom, @maBoPhan)
 END
 GO
----Lấy danh sách nhân viên
+
+---Lấy danh sách nhân viên có chức vụ
 CREATE PROCEDURE [dbo].[Count_Job_State]
 AS
 BEGIN
     SELECT NV.maNhanVien,
            NV.ho,
            NV.ten,
+           NV.maDinhDanh,
            NV.maBoPhan,
-           ISNULL(TongCongViec.Count, 0) AS tongCongViec,
+           CASE
+               WHEN QL.maNhanVien IS NOT NULL AND N.maNhom IS NOT NULL THEN N'Quản Lý/Trưởng Nhóm'
+               WHEN QL.maNhanVien IS NOT NULL THEN N'Quản Lý'
+               WHEN CEO.maNhanVien IS NOT NULL THEN 'CEO'
+               WHEN NV.maNhanVien IN (SELECT maTruongNhom FROM Nhom) THEN N'Trưởng Nhóm'
+               ELSE 'Nhân viên'
+           END AS chucVu,
+           ISNULL(TongCongViec.Count, 0) + ISNULL(congViecPhongBan.Count, 0) + ISNULL(congViecNhom.Count, 0) AS tongCongViec,
            ISNULL(HoanThanh.Count, 0) AS hoanThanh,
            ISNULL(ChuaBatDau.Count, 0) AS chuaBatDau,
            ISNULL(DangThucHien.Count, 0) AS dangThucHien,
-           ISNULL(TreHan.Count, 0) AS treHan
+           ISNULL(TreHan.Count, 0) AS treHan,
+           ISNULL(congViecPhongBan.Count, 0) AS congViecPhongBan,
+           ISNULL(congViecNhom.Count, 0) AS congViecNhom
     FROM NhanVien NV
+        LEFT JOIN QuanLy QL ON NV.maNhanVien = QL.maNhanVien
+        LEFT JOIN CEO ON NV.maNhanVien = CEO.maNhanVien
+        LEFT JOIN Nhom N ON NV.maNhom = N.maNhom
         LEFT JOIN (
             SELECT maNhanVien, COUNT(*) AS Count
-            FROM Congviec_Nhanvien CNV
+            FROM Congviec_Nhanvien
             GROUP BY maNhanVien
         ) AS TongCongViec ON NV.maNhanVien = TongCongViec.maNhanVien
         LEFT JOIN (
             SELECT maNhanVien, COUNT(*) AS Count
             FROM Congviec_Nhanvien CNV
-            JOIN CongViec CV ON CNV.maCongViec = CV.maCongViec
-            WHERE CV.trangThai = N'Hoàn thành'
+            JOIN CongViec CV ON CNV.maCongViec = CV.maCongViec AND CV.trangThai = N'Hoàn thành'
             GROUP BY maNhanVien
         ) AS HoanThanh ON NV.maNhanVien = HoanThanh.maNhanVien
         LEFT JOIN (
             SELECT maNhanVien, COUNT(*) AS Count
             FROM Congviec_Nhanvien CNV
-            JOIN CongViec CV ON CNV.maCongViec = CV.maCongViec
-            WHERE CV.trangThai = N'Chưa bắt đầu'
+            JOIN CongViec CV ON CNV.maCongViec = CV.maCongViec AND CV.trangThai = N'Chưa bắt đầu'
             GROUP BY maNhanVien
         ) AS ChuaBatDau ON NV.maNhanVien = ChuaBatDau.maNhanVien
         LEFT JOIN (
             SELECT maNhanVien, COUNT(*) AS Count
             FROM Congviec_Nhanvien CNV
-            JOIN CongViec CV ON CNV.maCongViec = CV.maCongViec
-            WHERE CV.trangThai = N'Đang thực hiện'
+            JOIN CongViec CV ON CNV.maCongViec = CV.maCongViec AND CV.trangThai = N'Đang thực hiện'
             GROUP BY maNhanVien
         ) AS DangThucHien ON NV.maNhanVien = DangThucHien.maNhanVien
         LEFT JOIN (
             SELECT maNhanVien, COUNT(*) AS Count
             FROM Congviec_Nhanvien CNV
-            JOIN CongViec CV ON CNV.maCongViec = CV.maCongViec
-            WHERE CV.trangThai = N'Trễ hạn'
+            JOIN CongViec CV ON CNV.maCongViec = CV.maCongViec AND CV.trangThai = N'Trễ hạn'
             GROUP BY maNhanVien
-        ) AS TreHan ON NV.maNhanVien = TreHan.maNhanVien;
+        ) AS TreHan ON NV.maNhanVien = TreHan.maNhanVien
+        LEFT JOIN (
+            SELECT QL.maNhanVien, CPB.maBoPhan, COUNT(*) AS Count
+            FROM QuanLy QL
+            JOIN CongViec_PhongBan CPB ON QL.maBoPhan = CPB.maBoPhan
+            GROUP BY QL.maNhanVien, CPB.maBoPhan
+        ) AS congViecPhongBan ON NV.maNhanVien = congViecPhongBan.maNhanVien AND NV.maBoPhan = congViecPhongBan.maBoPhan
+        LEFT JOIN (
+            SELECT NV.maNhanVien, N.maNhom, COUNT(*) AS Count
+            FROM Nhom N
+            JOIN NhanVien NV ON N.maNhom = NV.maNhom
+            JOIN CongViec_Nhom CN ON N.maNhom = CN.maNhom
+            GROUP BY NV.maNhanVien, N.maNhom
+        ) AS congViecNhom ON NV.maNhanVien = congViecNhom.maNhanVien;
 END
 GO
+
+
+select * from CanHo
 
 -- Tạo Trigger tự động kiểm tra tình trạng công việc
 CREATE TRIGGER CheckLateJob
@@ -927,7 +955,7 @@ BEGIN
     IF @quyen = 3
     BEGIN
         SELECT CongViec.maCongViec as N'Mã công việc', 
-               Congviec_PhongBan.maBoPhan as N'Mã bộ phận', 
+               Congviec_PhongBan.maBoPhan as N'Mã Bộ phận', 
                QuanLy.maNhanVien as N'Mã quản lý', 
                CongViec.noiDung as N'Nội dung', 
                YeuCau.maCanHo as N'Mã căn hộ', 
@@ -946,7 +974,7 @@ BEGIN
     ELSE
     BEGIN
         SELECT CongViec.maCongViec as N'Mã công việc', 
-               Congviec_PhongBan.maBoPhan as N'Mã bộ phận', 
+               Congviec_PhongBan.maBoPhan as N'Mã Bộ phận', 
                QuanLy.maNhanVien as N'Mã quản lý', 
                CongViec.noiDung as N'Nội dung', 
                YeuCau.maCanHo as N'Mã căn hộ', 
@@ -1059,3 +1087,4 @@ begin
 	inner join NhanVien nv on nv.maNhanVien = cvnv.maNhanVien
 	where yc.maCanHo = @maCanHo
 end
+go

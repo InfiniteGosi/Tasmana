@@ -473,7 +473,7 @@ namespace DangNhap
             oSheet.Name = sheetName;
 
             // Create title
-            Microsoft.Office.Interop.Excel.Range head = oSheet.get_Range("A1", "I1");
+            Microsoft.Office.Interop.Excel.Range head = oSheet.get_Range("A1", "M1");
 
             head.MergeCells = true;
 
@@ -509,41 +509,62 @@ namespace DangNhap
 
             Microsoft.Office.Interop.Excel.Range cl4 = oSheet.get_Range("D3", "D3");
 
-            cl4.Value2 = "Mã bộ phận";
+            cl4.Value2 = "Mã định danh";
 
             cl4.ColumnWidth = 20;
 
             Microsoft.Office.Interop.Excel.Range cl5 = oSheet.get_Range("E3", "E3");
 
-            cl5.Value2 = "Tổng công việc";
+            cl5.Value2 = "Mã Bộ phận";
 
-            cl5.ColumnWidth = 50;
+            cl5.ColumnWidth = 20;
 
             Microsoft.Office.Interop.Excel.Range cl6 = oSheet.get_Range("F3", "F3");
 
-            cl6.Value2 = "Hoàn thành";
+            cl6.Value2 = "Chức vụ";
 
             cl6.ColumnWidth = 20;
 
             Microsoft.Office.Interop.Excel.Range cl7 = oSheet.get_Range("G3", "G3");
 
-            cl7.Value2 = "Đang thực hiện";
+            cl7.Value2 = "Tổng công việc";
 
             cl7.ColumnWidth = 20;
 
             Microsoft.Office.Interop.Excel.Range cl8 = oSheet.get_Range("H3", "H3");
 
-            cl8.Value2 = "Chưa bắt đầu";
+            cl8.Value2 = "Hoàn thành";
 
             cl8.ColumnWidth = 20;
 
             Microsoft.Office.Interop.Excel.Range cl9 = oSheet.get_Range("I3", "I3");
 
-            cl9.Value2 = "Trễ hạn";
+            cl9.Value2 = "Chưa bắt đầu";
 
             cl9.ColumnWidth = 20;
+            Microsoft.Office.Interop.Excel.Range cl10 = oSheet.get_Range("J3", "J3");
 
-            Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A3", "I3");
+            cl10.Value2 = "Đang thực hiện";
+
+            cl10.ColumnWidth = 20;
+            Microsoft.Office.Interop.Excel.Range cl11 = oSheet.get_Range("K3", "K3");
+
+            cl11.Value2 = "Trễ hạn";
+
+            cl11.ColumnWidth = 20;
+            Microsoft.Office.Interop.Excel.Range cl12 = oSheet.get_Range("L3", "L3");
+
+            cl12.Value2 = "Công việc phòng ban";
+
+            cl12.ColumnWidth = 40;
+            Microsoft.Office.Interop.Excel.Range cl13 = oSheet.get_Range("M3", "M3");
+
+            cl13.Value2 = "Công việc nhóm";
+
+            cl13.ColumnWidth = 40;
+
+
+            Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A3", "M3");
 
             rowHead.Font.Bold = true;
             // Draw border
