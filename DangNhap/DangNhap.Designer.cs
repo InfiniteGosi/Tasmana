@@ -98,11 +98,12 @@ namespace DangNhap
             this.LB_quenpw.BackColor = System.Drawing.Color.Transparent;
             this.LB_quenpw.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_quenpw.ForeColor = System.Drawing.Color.White;
-            this.LB_quenpw.Location = new System.Drawing.Point(958, 347);
+            this.LB_quenpw.Location = new System.Drawing.Point(956, 363);
             this.LB_quenpw.Name = "LB_quenpw";
             this.LB_quenpw.Size = new System.Drawing.Size(97, 15);
             this.LB_quenpw.TabIndex = 13;
             this.LB_quenpw.Text = "Quên mật khẩu?";
+            this.LB_quenpw.Click += new System.EventHandler(this.LB_quenpw_Click);
             // 
             // VB_HienMatKhau
             // 
