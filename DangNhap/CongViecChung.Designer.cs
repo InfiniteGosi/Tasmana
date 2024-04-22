@@ -172,6 +172,7 @@ namespace DangNhap
             this.GGC_hienthicongviec.Text = "gridGroupingControl1";
             this.GGC_hienthicongviec.UseRightToLeftCompatibleTextBox = true;
             this.GGC_hienthicongviec.VersionInfo = "25.1462.39";
+            this.GGC_hienthicongviec.TableControlCellClick += new Syncfusion.Windows.Forms.Grid.Grouping.GridTableControlCellClickEventHandler(this.GGC_hienthicongviec_TableControlCellClick);
             // 
             // CBB_loaicv
             // 

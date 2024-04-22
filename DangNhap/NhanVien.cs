@@ -71,12 +71,16 @@ namespace DangNhap
             GGC_danhsachnv.TableDescriptor.Columns[0].HeaderText = "Mã nhân viên";
             GGC_danhsachnv.TableDescriptor.Columns[1].HeaderText = "Họ";
             GGC_danhsachnv.TableDescriptor.Columns[2].HeaderText = "Tên";
-            GGC_danhsachnv.TableDescriptor.Columns[3].HeaderText = "Mã bộ phận";
-            GGC_danhsachnv.TableDescriptor.Columns[4].HeaderText = "Tổng công việc";
-            GGC_danhsachnv.TableDescriptor.Columns[5].HeaderText = "Hoàn thành";
-            GGC_danhsachnv.TableDescriptor.Columns[6].HeaderText = "Đang thực hiện";
-            GGC_danhsachnv.TableDescriptor.Columns[7].HeaderText = "Chưa bắt đầu";
-            GGC_danhsachnv.TableDescriptor.Columns[8].HeaderText = "Trễ Hạn";
+            GGC_danhsachnv.TableDescriptor.Columns[3].HeaderText = "Mã định danh";
+            GGC_danhsachnv.TableDescriptor.Columns[4].HeaderText = "Mã Bộ phận";
+            GGC_danhsachnv.TableDescriptor.Columns[5].HeaderText = "Chức vụ";
+            GGC_danhsachnv.TableDescriptor.Columns[6].HeaderText = "Tổng công việc";
+            GGC_danhsachnv.TableDescriptor.Columns[7].HeaderText = "Hoàn thành";
+            GGC_danhsachnv.TableDescriptor.Columns[8].HeaderText = "Chưa bắt đầu";
+            GGC_danhsachnv.TableDescriptor.Columns[9].HeaderText = "Đang thực hiện";
+            GGC_danhsachnv.TableDescriptor.Columns[10].HeaderText = "Trễ hạn";
+            GGC_danhsachnv.TableDescriptor.Columns[11].HeaderText = "Công việc Phòng ban";
+            GGC_danhsachnv.TableDescriptor.Columns[12].HeaderText = "Công việc Nhóm";
 
 
             GGC_danhsachnv.TopLevelGroupOptions.ShowFilterBar = true;
@@ -133,12 +137,16 @@ namespace DangNhap
             DataColumn col1 = new DataColumn("Mã nhân viên");
             DataColumn col2 = new DataColumn("Họ");
             DataColumn col3 = new DataColumn("Tên");
-            DataColumn col4 = new DataColumn("Mã bộ phận");
-            DataColumn col5 = new DataColumn("Tổng công việc");
-            DataColumn col6 = new DataColumn("Hoàn thành");
-            DataColumn col7 = new DataColumn("Đang thực hiện");
-            DataColumn col8 = new DataColumn("Chưa bắt đầu");
-            DataColumn col9 = new DataColumn("Trễ Hạn");
+            DataColumn col4 = new DataColumn("Mã định danh");
+            DataColumn col5 = new DataColumn("Mã Bộ phận");
+            DataColumn col6 = new DataColumn("Chức vụ");
+            DataColumn col7 = new DataColumn("Tổng công việc");
+            DataColumn col8 = new DataColumn("Hoàn thành");
+            DataColumn col9 = new DataColumn("Chưa bắt đầu");
+            DataColumn col10 = new DataColumn("Đang thực hiện");
+            DataColumn col11 = new DataColumn("Trễ hạn");
+            DataColumn col12 = new DataColumn("Công việc Phòng ban");
+            DataColumn col13 = new DataColumn("Công việc Nhóm");
 
             dataTable.Columns.Add(col1);
             dataTable.Columns.Add(col2);
@@ -149,6 +157,10 @@ namespace DangNhap
             dataTable.Columns.Add(col7);
             dataTable.Columns.Add(col8);
             dataTable.Columns.Add(col9);
+            dataTable.Columns.Add(col10);
+            dataTable.Columns.Add(col11);
+            dataTable.Columns.Add(col12);
+            dataTable.Columns.Add(col13);
 
             foreach (Record record in GGC_danhsachnv.Table.Records)
             {
@@ -156,12 +168,16 @@ namespace DangNhap
                 dtRow[0] = record.GetValue("maNhanVien");
                 dtRow[1] = record.GetValue("ho");
                 dtRow[2] = record.GetValue("ten");
-                dtRow[3] = record.GetValue("maBoPhan");
-                dtRow[4] = record.GetValue("tongCongViec");
-                dtRow[5] = record.GetValue("hoanThanh");
-                dtRow[6] = record.GetValue("dangThucHien");
-                dtRow[7] = record.GetValue("chuaBatDau");
-                dtRow[8] = record.GetValue("treHan");
+                dtRow[3] = record.GetValue("maDinhDanh");
+                dtRow[4] = record.GetValue("maBoPhan");
+                dtRow[5] = record.GetValue("chucVu");
+                dtRow[6] = record.GetValue("tongCongViec");
+                dtRow[7] = record.GetValue("hoanThanh");
+                dtRow[8] = record.GetValue("chuaBatDau");
+                dtRow[9] = record.GetValue("dangThucHien");
+                dtRow[10] = record.GetValue("treHan");
+                dtRow[11] = record.GetValue("congViecPhongBan");
+                dtRow[12] = record.GetValue("congViecNhom");
                 dataTable.Rows.Add(dtRow);
             }
             return dataTable;
