@@ -38,14 +38,17 @@ namespace DangNhap
             this.LB_chuho = new System.Windows.Forms.Label();
             this.TXB_khachdangthue = new System.Windows.Forms.TextBox();
             this.LB_khachdangthue = new System.Windows.Forms.Label();
-            this.TXB_dinhky = new System.Windows.Forms.TextBox();
-            this.LB_dinhky = new System.Windows.Forms.Label();
-            this.LB_yeucau = new System.Windows.Forms.Label();
-            this.TXB_thanhtoan = new System.Windows.Forms.TextBox();
             this.LB_thanhtoan = new System.Windows.Forms.Label();
             this.LB_phongngu = new System.Windows.Forms.Label();
-            this.pic_canho = new System.Windows.Forms.PictureBox();
             this.PN_hienthi = new System.Windows.Forms.Panel();
+            this.TXB_loaicanho = new System.Windows.Forms.TextBox();
+            this.TXB_NSA = new System.Windows.Forms.TextBox();
+            this.TXB_GSA = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.NUD_thanhtoan = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
+            this.BTN_uploadanh = new Guna.UI.WinForms.GunaGradientButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -63,15 +66,9 @@ namespace DangNhap
             this.numericUpDownExt5 = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
             this.label17 = new System.Windows.Forms.Label();
             this.numericUpDownExt6 = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.BTN_xoa = new Guna.UI.WinForms.GunaGradientButton();
-            this.BTN_luu = new Guna.UI.WinForms.GunaGradientButton();
             this.label11 = new System.Windows.Forms.Label();
-            this.CBB_loai = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.TXB_phiql = new System.Windows.Forms.TextBox();
             this.CBB_tinhtrang = new System.Windows.Forms.ComboBox();
-            this.GGC_dichvu = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.NUD_thangmay = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
@@ -83,9 +80,12 @@ namespace DangNhap
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.LB_hinhanhcanho = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PB_hinhcanho = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.BTN_xoa = new Guna.UI.WinForms.GunaGradientButton();
+            this.BTN_luu = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_chung = new System.Windows.Forms.Button();
             this.BTN_lichsu = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -93,18 +93,22 @@ namespace DangNhap
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.BTN_thoat = new Guna.UI.WinForms.GunaGradientButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_canho)).BeginInit();
+            this.label22 = new System.Windows.Forms.Label();
+            this.NUD_vitritang = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
+            this.NUD_mucphiql = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
             this.PN_hienthi.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_thanhtoan)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GGC_dichvu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_thangmay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_toilet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_phongngu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_hinhcanho)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_vitritang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_mucphiql)).BeginInit();
             this.SuspendLayout();
             // 
             // LB_ttch
@@ -145,7 +149,7 @@ namespace DangNhap
             this.LB_tinhtrang.AutoSize = true;
             this.LB_tinhtrang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_tinhtrang.ForeColor = System.Drawing.Color.White;
-            this.LB_tinhtrang.Location = new System.Drawing.Point(33, 260);
+            this.LB_tinhtrang.Location = new System.Drawing.Point(33, 281);
             this.LB_tinhtrang.Name = "LB_tinhtrang";
             this.LB_tinhtrang.Size = new System.Drawing.Size(90, 22);
             this.LB_tinhtrang.TabIndex = 17;
@@ -156,7 +160,7 @@ namespace DangNhap
             this.TXB_chuho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_chuho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_chuho.ForeColor = System.Drawing.Color.White;
-            this.TXB_chuho.Location = new System.Drawing.Point(194, 185);
+            this.TXB_chuho.Location = new System.Drawing.Point(194, 222);
             this.TXB_chuho.Name = "TXB_chuho";
             this.TXB_chuho.Size = new System.Drawing.Size(375, 30);
             this.TXB_chuho.TabIndex = 20;
@@ -166,7 +170,7 @@ namespace DangNhap
             this.LB_chuho.AutoSize = true;
             this.LB_chuho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_chuho.ForeColor = System.Drawing.Color.White;
-            this.LB_chuho.Location = new System.Drawing.Point(33, 189);
+            this.LB_chuho.Location = new System.Drawing.Point(33, 226);
             this.LB_chuho.Name = "LB_chuho";
             this.LB_chuho.Size = new System.Drawing.Size(128, 22);
             this.LB_chuho.TabIndex = 19;
@@ -177,7 +181,7 @@ namespace DangNhap
             this.TXB_khachdangthue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_khachdangthue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_khachdangthue.ForeColor = System.Drawing.Color.White;
-            this.TXB_khachdangthue.Location = new System.Drawing.Point(194, 327);
+            this.TXB_khachdangthue.Location = new System.Drawing.Point(194, 348);
             this.TXB_khachdangthue.Name = "TXB_khachdangthue";
             this.TXB_khachdangthue.Size = new System.Drawing.Size(375, 30);
             this.TXB_khachdangthue.TabIndex = 22;
@@ -187,61 +191,18 @@ namespace DangNhap
             this.LB_khachdangthue.AutoSize = true;
             this.LB_khachdangthue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_khachdangthue.ForeColor = System.Drawing.Color.White;
-            this.LB_khachdangthue.Location = new System.Drawing.Point(33, 331);
+            this.LB_khachdangthue.Location = new System.Drawing.Point(33, 352);
             this.LB_khachdangthue.Name = "LB_khachdangthue";
             this.LB_khachdangthue.Size = new System.Drawing.Size(139, 22);
             this.LB_khachdangthue.TabIndex = 21;
             this.LB_khachdangthue.Text = "Khách đang thuê";
-            // 
-            // TXB_dinhky
-            // 
-            this.TXB_dinhky.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_dinhky.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_dinhky.ForeColor = System.Drawing.Color.White;
-            this.TXB_dinhky.Location = new System.Drawing.Point(970, 329);
-            this.TXB_dinhky.Multiline = true;
-            this.TXB_dinhky.Name = "TXB_dinhky";
-            this.TXB_dinhky.Size = new System.Drawing.Size(375, 27);
-            this.TXB_dinhky.TabIndex = 24;
-            // 
-            // LB_dinhky
-            // 
-            this.LB_dinhky.AutoSize = true;
-            this.LB_dinhky.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_dinhky.ForeColor = System.Drawing.Color.White;
-            this.LB_dinhky.Location = new System.Drawing.Point(705, 331);
-            this.LB_dinhky.Name = "LB_dinhky";
-            this.LB_dinhky.Size = new System.Drawing.Size(134, 22);
-            this.LB_dinhky.TabIndex = 23;
-            this.LB_dinhky.Text = "Dịch vụ định kỳ";
-            // 
-            // LB_yeucau
-            // 
-            this.LB_yeucau.AutoSize = true;
-            this.LB_yeucau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_yeucau.ForeColor = System.Drawing.Color.White;
-            this.LB_yeucau.Location = new System.Drawing.Point(705, 412);
-            this.LB_yeucau.Name = "LB_yeucau";
-            this.LB_yeucau.Size = new System.Drawing.Size(199, 22);
-            this.LB_yeucau.TabIndex = 25;
-            this.LB_yeucau.Text = "Dịch vụ yêu cầu hiện tại";
-            // 
-            // TXB_thanhtoan
-            // 
-            this.TXB_thanhtoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_thanhtoan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_thanhtoan.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TXB_thanhtoan.Location = new System.Drawing.Point(970, 645);
-            this.TXB_thanhtoan.Name = "TXB_thanhtoan";
-            this.TXB_thanhtoan.Size = new System.Drawing.Size(33, 27);
-            this.TXB_thanhtoan.TabIndex = 28;
             // 
             // LB_thanhtoan
             // 
             this.LB_thanhtoan.AutoSize = true;
             this.LB_thanhtoan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_thanhtoan.ForeColor = System.Drawing.Color.White;
-            this.LB_thanhtoan.Location = new System.Drawing.Point(705, 646);
+            this.LB_thanhtoan.Location = new System.Drawing.Point(705, 440);
             this.LB_thanhtoan.Name = "LB_thanhtoan";
             this.LB_thanhtoan.Size = new System.Drawing.Size(174, 22);
             this.LB_thanhtoan.TabIndex = 27;
@@ -258,16 +219,6 @@ namespace DangNhap
             this.LB_phongngu.TabIndex = 29;
             this.LB_phongngu.Text = "Số lượng phòng ngủ";
             // 
-            // pic_canho
-            // 
-            this.pic_canho.Image = ((System.Drawing.Image)(resources.GetObject("pic_canho.Image")));
-            this.pic_canho.Location = new System.Drawing.Point(194, 412);
-            this.pic_canho.Name = "pic_canho";
-            this.pic_canho.Size = new System.Drawing.Size(170, 170);
-            this.pic_canho.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_canho.TabIndex = 36;
-            this.pic_canho.TabStop = false;
-            // 
             // PN_hienthi
             // 
             this.PN_hienthi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -275,14 +226,22 @@ namespace DangNhap
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PN_hienthi.AutoScroll = true;
             this.PN_hienthi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            this.PN_hienthi.Controls.Add(this.NUD_mucphiql);
+            this.PN_hienthi.Controls.Add(this.NUD_vitritang);
+            this.PN_hienthi.Controls.Add(this.label22);
+            this.PN_hienthi.Controls.Add(this.TXB_loaicanho);
+            this.PN_hienthi.Controls.Add(this.TXB_NSA);
+            this.PN_hienthi.Controls.Add(this.TXB_GSA);
+            this.PN_hienthi.Controls.Add(this.label21);
+            this.PN_hienthi.Controls.Add(this.label20);
+            this.PN_hienthi.Controls.Add(this.label19);
+            this.PN_hienthi.Controls.Add(this.NUD_thanhtoan);
+            this.PN_hienthi.Controls.Add(this.BTN_uploadanh);
             this.PN_hienthi.Controls.Add(this.panel7);
             this.PN_hienthi.Controls.Add(this.panel1);
             this.PN_hienthi.Controls.Add(this.label11);
-            this.PN_hienthi.Controls.Add(this.CBB_loai);
             this.PN_hienthi.Controls.Add(this.label4);
-            this.PN_hienthi.Controls.Add(this.TXB_phiql);
             this.PN_hienthi.Controls.Add(this.CBB_tinhtrang);
-            this.PN_hienthi.Controls.Add(this.GGC_dichvu);
             this.PN_hienthi.Controls.Add(this.label3);
             this.PN_hienthi.Controls.Add(this.label10);
             this.PN_hienthi.Controls.Add(this.NUD_thangmay);
@@ -295,10 +254,8 @@ namespace DangNhap
             this.PN_hienthi.Controls.Add(this.TXB_chuho);
             this.PN_hienthi.Controls.Add(this.label7);
             this.PN_hienthi.Controls.Add(this.LB_hinhanhcanho);
-            this.PN_hienthi.Controls.Add(this.pictureBox1);
+            this.PN_hienthi.Controls.Add(this.PB_hinhcanho);
             this.PN_hienthi.Controls.Add(this.LB_macanho);
-            this.PN_hienthi.Controls.Add(this.pic_canho);
-            this.PN_hienthi.Controls.Add(this.TXB_thanhtoan);
             this.PN_hienthi.Controls.Add(this.TXB_macanho);
             this.PN_hienthi.Controls.Add(this.label6);
             this.PN_hienthi.Controls.Add(this.LB_tinhtrang);
@@ -307,14 +264,118 @@ namespace DangNhap
             this.PN_hienthi.Controls.Add(this.label5);
             this.PN_hienthi.Controls.Add(this.TXB_khachdangthue);
             this.PN_hienthi.Controls.Add(this.LB_phongngu);
-            this.PN_hienthi.Controls.Add(this.LB_dinhky);
-            this.PN_hienthi.Controls.Add(this.TXB_dinhky);
             this.PN_hienthi.Controls.Add(this.LB_thanhtoan);
-            this.PN_hienthi.Controls.Add(this.LB_yeucau);
             this.PN_hienthi.Location = new System.Drawing.Point(1, 67);
             this.PN_hienthi.Name = "PN_hienthi";
             this.PN_hienthi.Size = new System.Drawing.Size(1391, 708);
             this.PN_hienthi.TabIndex = 38;
+            // 
+            // TXB_loaicanho
+            // 
+            this.TXB_loaicanho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_loaicanho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_loaicanho.ForeColor = System.Drawing.Color.White;
+            this.TXB_loaicanho.Location = new System.Drawing.Point(194, 110);
+            this.TXB_loaicanho.Name = "TXB_loaicanho";
+            this.TXB_loaicanho.Size = new System.Drawing.Size(375, 30);
+            this.TXB_loaicanho.TabIndex = 219;
+            // 
+            // TXB_NSA
+            // 
+            this.TXB_NSA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_NSA.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_NSA.ForeColor = System.Drawing.Color.White;
+            this.TXB_NSA.Location = new System.Drawing.Point(970, 311);
+            this.TXB_NSA.Multiline = true;
+            this.TXB_NSA.Name = "TXB_NSA";
+            this.TXB_NSA.Size = new System.Drawing.Size(375, 27);
+            this.TXB_NSA.TabIndex = 218;
+            // 
+            // TXB_GSA
+            // 
+            this.TXB_GSA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_GSA.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_GSA.ForeColor = System.Drawing.Color.White;
+            this.TXB_GSA.Location = new System.Drawing.Point(970, 251);
+            this.TXB_GSA.Multiline = true;
+            this.TXB_GSA.Name = "TXB_GSA";
+            this.TXB_GSA.Size = new System.Drawing.Size(375, 27);
+            this.TXB_GSA.TabIndex = 217;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(707, 316);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(126, 22);
+            this.label21.TabIndex = 216;
+            this.label21.Text = "Diện tích NSA";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(705, 256);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(126, 22);
+            this.label20.TabIndex = 215;
+            this.label20.Text = "Diện tích GSA";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(1070, 440);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(27, 22);
+            this.label19.TabIndex = 214;
+            this.label19.Text = "%";
+            // 
+            // NUD_thanhtoan
+            // 
+            this.NUD_thanhtoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.NUD_thanhtoan.BeforeTouchSize = new System.Drawing.Size(96, 30);
+            this.NUD_thanhtoan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUD_thanhtoan.ForeColor = System.Drawing.Color.White;
+            this.NUD_thanhtoan.Location = new System.Drawing.Point(970, 436);
+            this.NUD_thanhtoan.Name = "NUD_thanhtoan";
+            this.NUD_thanhtoan.Size = new System.Drawing.Size(96, 30);
+            this.NUD_thanhtoan.TabIndex = 213;
+            // 
+            // BTN_uploadanh
+            // 
+            this.BTN_uploadanh.Animated = true;
+            this.BTN_uploadanh.AnimationHoverSpeed = 0.5F;
+            this.BTN_uploadanh.AnimationSpeed = 0.03F;
+            this.BTN_uploadanh.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_uploadanh.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.BTN_uploadanh.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
+            this.BTN_uploadanh.BorderColor = System.Drawing.Color.Black;
+            this.BTN_uploadanh.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_uploadanh.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_uploadanh.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_uploadanh.ForeColor = System.Drawing.Color.White;
+            this.BTN_uploadanh.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.BTN_uploadanh.Image = null;
+            this.BTN_uploadanh.ImageSize = new System.Drawing.Size(20, 20);
+            this.BTN_uploadanh.Location = new System.Drawing.Point(492, 525);
+            this.BTN_uploadanh.Name = "BTN_uploadanh";
+            this.BTN_uploadanh.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
+            this.BTN_uploadanh.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
+            this.BTN_uploadanh.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_uploadanh.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_uploadanh.OnHoverImage = null;
+            this.BTN_uploadanh.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_uploadanh.Radius = 5;
+            this.BTN_uploadanh.Size = new System.Drawing.Size(129, 35);
+            this.BTN_uploadanh.TabIndex = 212;
+            this.BTN_uploadanh.Text = "Upload ảnh mới";
+            this.BTN_uploadanh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_uploadanh.Click += new System.EventHandler(this.BTN_uploadanh_Click);
             // 
             // panel7
             // 
@@ -506,74 +567,6 @@ namespace DangNhap
             this.numericUpDownExt6.Size = new System.Drawing.Size(375, 30);
             this.numericUpDownExt6.TabIndex = 175;
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Silver;
-            this.panel6.Location = new System.Drawing.Point(32, 781);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1350, 1);
-            this.panel6.TabIndex = 211;
-            // 
-            // BTN_xoa
-            // 
-            this.BTN_xoa.Animated = true;
-            this.BTN_xoa.AnimationHoverSpeed = 0.2F;
-            this.BTN_xoa.AnimationSpeed = 0.03F;
-            this.BTN_xoa.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_xoa.BaseColor1 = System.Drawing.Color.Transparent;
-            this.BTN_xoa.BaseColor2 = System.Drawing.Color.Transparent;
-            this.BTN_xoa.BorderColor = System.Drawing.Color.Red;
-            this.BTN_xoa.BorderSize = 1;
-            this.BTN_xoa.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.BTN_xoa.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_xoa.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_xoa.ForeColor = System.Drawing.Color.Red;
-            this.BTN_xoa.Image = null;
-            this.BTN_xoa.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_xoa.Location = new System.Drawing.Point(1107, 793);
-            this.BTN_xoa.Name = "BTN_xoa";
-            this.BTN_xoa.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(30)))), ((int)(((byte)(43)))));
-            this.BTN_xoa.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(30)))), ((int)(((byte)(43)))));
-            this.BTN_xoa.OnHoverBorderColor = System.Drawing.Color.White;
-            this.BTN_xoa.OnHoverForeColor = System.Drawing.Color.White;
-            this.BTN_xoa.OnHoverImage = null;
-            this.BTN_xoa.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_xoa.Radius = 5;
-            this.BTN_xoa.Size = new System.Drawing.Size(129, 35);
-            this.BTN_xoa.TabIndex = 210;
-            this.BTN_xoa.Text = "Xóa";
-            this.BTN_xoa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // BTN_luu
-            // 
-            this.BTN_luu.Animated = true;
-            this.BTN_luu.AnimationHoverSpeed = 0.5F;
-            this.BTN_luu.AnimationSpeed = 0.03F;
-            this.BTN_luu.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_luu.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
-            this.BTN_luu.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
-            this.BTN_luu.BorderColor = System.Drawing.Color.Black;
-            this.BTN_luu.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.BTN_luu.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_luu.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_luu.ForeColor = System.Drawing.Color.White;
-            this.BTN_luu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.BTN_luu.Image = null;
-            this.BTN_luu.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_luu.Location = new System.Drawing.Point(1253, 793);
-            this.BTN_luu.Name = "BTN_luu";
-            this.BTN_luu.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
-            this.BTN_luu.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
-            this.BTN_luu.OnHoverBorderColor = System.Drawing.Color.White;
-            this.BTN_luu.OnHoverForeColor = System.Drawing.Color.White;
-            this.BTN_luu.OnHoverImage = null;
-            this.BTN_luu.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_luu.Radius = 5;
-            this.BTN_luu.Size = new System.Drawing.Size(129, 35);
-            this.BTN_luu.TabIndex = 209;
-            this.BTN_luu.Text = "Lưu";
-            this.BTN_luu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -584,17 +577,6 @@ namespace DangNhap
             this.label11.Size = new System.Drawing.Size(102, 22);
             this.label11.TabIndex = 182;
             this.label11.Text = "Loại căn hộ";
-            // 
-            // CBB_loai
-            // 
-            this.CBB_loai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.CBB_loai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CBB_loai.ForeColor = System.Drawing.Color.White;
-            this.CBB_loai.FormattingEnabled = true;
-            this.CBB_loai.Location = new System.Drawing.Point(194, 114);
-            this.CBB_loai.Name = "CBB_loai";
-            this.CBB_loai.Size = new System.Drawing.Size(375, 30);
-            this.CBB_loai.TabIndex = 183;
             // 
             // label4
             // 
@@ -607,47 +589,23 @@ namespace DangNhap
             this.label4.TabIndex = 182;
             this.label4.Text = "Loại căn hộ";
             // 
-            // TXB_phiql
-            // 
-            this.TXB_phiql.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_phiql.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_phiql.ForeColor = System.Drawing.Color.White;
-            this.TXB_phiql.Location = new System.Drawing.Point(970, 258);
-            this.TXB_phiql.Multiline = true;
-            this.TXB_phiql.Name = "TXB_phiql";
-            this.TXB_phiql.Size = new System.Drawing.Size(375, 27);
-            this.TXB_phiql.TabIndex = 181;
-            // 
             // CBB_tinhtrang
             // 
             this.CBB_tinhtrang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.CBB_tinhtrang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBB_tinhtrang.ForeColor = System.Drawing.Color.White;
             this.CBB_tinhtrang.FormattingEnabled = true;
-            this.CBB_tinhtrang.Location = new System.Drawing.Point(194, 256);
+            this.CBB_tinhtrang.Location = new System.Drawing.Point(194, 277);
             this.CBB_tinhtrang.Name = "CBB_tinhtrang";
             this.CBB_tinhtrang.Size = new System.Drawing.Size(375, 30);
             this.CBB_tinhtrang.TabIndex = 180;
-            // 
-            // GGC_dichvu
-            // 
-            this.GGC_dichvu.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.GGC_dichvu.BackColor = System.Drawing.SystemColors.Window;
-            this.GGC_dichvu.Location = new System.Drawing.Point(709, 446);
-            this.GGC_dichvu.Name = "GGC_dichvu";
-            this.GGC_dichvu.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
-            this.GGC_dichvu.Size = new System.Drawing.Size(636, 181);
-            this.GGC_dichvu.TabIndex = 178;
-            this.GGC_dichvu.Text = "gridGroupingControl1";
-            this.GGC_dichvu.UseRightToLeftCompatibleTextBox = true;
-            this.GGC_dichvu.VersionInfo = "25.1462.39";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(705, 260);
+            this.label3.Location = new System.Drawing.Point(705, 373);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(227, 22);
             this.label3.TabIndex = 176;
@@ -735,7 +693,7 @@ namespace DangNhap
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(36, 412);
+            this.label8.Location = new System.Drawing.Point(36, 445);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(136, 22);
             this.label8.TabIndex = 37;
@@ -757,28 +715,28 @@ namespace DangNhap
             this.LB_hinhanhcanho.AutoSize = true;
             this.LB_hinhanhcanho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_hinhanhcanho.ForeColor = System.Drawing.Color.White;
-            this.LB_hinhanhcanho.Location = new System.Drawing.Point(36, 412);
+            this.LB_hinhanhcanho.Location = new System.Drawing.Point(36, 445);
             this.LB_hinhanhcanho.Name = "LB_hinhanhcanho";
             this.LB_hinhanhcanho.Size = new System.Drawing.Size(136, 22);
             this.LB_hinhanhcanho.TabIndex = 37;
             this.LB_hinhanhcanho.Text = "Hình ảnh căn hộ";
             // 
-            // pictureBox1
+            // PB_hinhcanho
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(194, 412);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(170, 170);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 36;
-            this.pictureBox1.TabStop = false;
+            this.PB_hinhcanho.Image = ((System.Drawing.Image)(resources.GetObject("PB_hinhcanho.Image")));
+            this.PB_hinhcanho.Location = new System.Drawing.Point(194, 436);
+            this.PB_hinhcanho.Name = "PB_hinhcanho";
+            this.PB_hinhcanho.Size = new System.Drawing.Size(273, 226);
+            this.PB_hinhcanho.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_hinhcanho.TabIndex = 36;
+            this.PB_hinhcanho.TabStop = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(33, 189);
+            this.label6.Location = new System.Drawing.Point(33, 226);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(128, 22);
             this.label6.TabIndex = 19;
@@ -794,6 +752,75 @@ namespace DangNhap
             this.label5.Size = new System.Drawing.Size(166, 22);
             this.label5.TabIndex = 29;
             this.label5.Text = "Số lượng phòng ngủ";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Silver;
+            this.panel6.Location = new System.Drawing.Point(32, 781);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1350, 1);
+            this.panel6.TabIndex = 211;
+            // 
+            // BTN_xoa
+            // 
+            this.BTN_xoa.Animated = true;
+            this.BTN_xoa.AnimationHoverSpeed = 0.2F;
+            this.BTN_xoa.AnimationSpeed = 0.03F;
+            this.BTN_xoa.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_xoa.BaseColor1 = System.Drawing.Color.Transparent;
+            this.BTN_xoa.BaseColor2 = System.Drawing.Color.Transparent;
+            this.BTN_xoa.BorderColor = System.Drawing.Color.Red;
+            this.BTN_xoa.BorderSize = 1;
+            this.BTN_xoa.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_xoa.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_xoa.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_xoa.ForeColor = System.Drawing.Color.Red;
+            this.BTN_xoa.Image = null;
+            this.BTN_xoa.ImageSize = new System.Drawing.Size(20, 20);
+            this.BTN_xoa.Location = new System.Drawing.Point(1107, 793);
+            this.BTN_xoa.Name = "BTN_xoa";
+            this.BTN_xoa.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(30)))), ((int)(((byte)(43)))));
+            this.BTN_xoa.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(30)))), ((int)(((byte)(43)))));
+            this.BTN_xoa.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_xoa.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_xoa.OnHoverImage = null;
+            this.BTN_xoa.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_xoa.Radius = 5;
+            this.BTN_xoa.Size = new System.Drawing.Size(129, 35);
+            this.BTN_xoa.TabIndex = 210;
+            this.BTN_xoa.Text = "Xóa";
+            this.BTN_xoa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // BTN_luu
+            // 
+            this.BTN_luu.Animated = true;
+            this.BTN_luu.AnimationHoverSpeed = 0.5F;
+            this.BTN_luu.AnimationSpeed = 0.03F;
+            this.BTN_luu.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_luu.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.BTN_luu.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
+            this.BTN_luu.BorderColor = System.Drawing.Color.Black;
+            this.BTN_luu.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_luu.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_luu.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_luu.ForeColor = System.Drawing.Color.White;
+            this.BTN_luu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.BTN_luu.Image = null;
+            this.BTN_luu.ImageSize = new System.Drawing.Size(20, 20);
+            this.BTN_luu.Location = new System.Drawing.Point(1253, 793);
+            this.BTN_luu.Name = "BTN_luu";
+            this.BTN_luu.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
+            this.BTN_luu.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
+            this.BTN_luu.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_luu.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_luu.OnHoverImage = null;
+            this.BTN_luu.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_luu.Radius = 5;
+            this.BTN_luu.Size = new System.Drawing.Size(129, 35);
+            this.BTN_luu.TabIndex = 209;
+            this.BTN_luu.Text = "Lưu";
+            this.BTN_luu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_luu.Click += new System.EventHandler(this.BTN_luu_Click);
             // 
             // BTN_chung
             // 
@@ -891,6 +918,44 @@ namespace DangNhap
             this.BTN_thoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_thoat.Click += new System.EventHandler(this.BTN_thoat_Click);
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.White;
+            this.label22.Location = new System.Drawing.Point(33, 167);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(89, 22);
+            this.label22.TabIndex = 220;
+            this.label22.Text = "Vị trí tầng";
+            // 
+            // NUD_vitritang
+            // 
+            this.NUD_vitritang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.NUD_vitritang.BeforeTouchSize = new System.Drawing.Size(375, 30);
+            this.NUD_vitritang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUD_vitritang.ForeColor = System.Drawing.Color.White;
+            this.NUD_vitritang.Location = new System.Drawing.Point(194, 167);
+            this.NUD_vitritang.Name = "NUD_vitritang";
+            this.NUD_vitritang.Size = new System.Drawing.Size(375, 30);
+            this.NUD_vitritang.TabIndex = 223;
+            // 
+            // NUD_mucphiql
+            // 
+            this.NUD_mucphiql.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.NUD_mucphiql.BeforeTouchSize = new System.Drawing.Size(375, 30);
+            this.NUD_mucphiql.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUD_mucphiql.ForeColor = System.Drawing.Color.White;
+            this.NUD_mucphiql.Location = new System.Drawing.Point(970, 365);
+            this.NUD_mucphiql.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.NUD_mucphiql.Name = "NUD_mucphiql";
+            this.NUD_mucphiql.Size = new System.Drawing.Size(375, 30);
+            this.NUD_mucphiql.TabIndex = 224;
+            // 
             // ChiTietCanHo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -919,20 +984,21 @@ namespace DangNhap
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ChiTietCanHo_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ChiTietCanHo_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ChiTietCanHo_MouseUp);
-            ((System.ComponentModel.ISupportInitialize)(this.pic_canho)).EndInit();
             this.PN_hienthi.ResumeLayout(false);
             this.PN_hienthi.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_thanhtoan)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GGC_dichvu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_thangmay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_toilet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_phongngu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_hinhcanho)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_vitritang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_mucphiql)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -948,13 +1014,8 @@ namespace DangNhap
         private System.Windows.Forms.Label LB_chuho;
         private System.Windows.Forms.TextBox TXB_khachdangthue;
         private System.Windows.Forms.Label LB_khachdangthue;
-        private System.Windows.Forms.TextBox TXB_dinhky;
-        private System.Windows.Forms.Label LB_dinhky;
-        private System.Windows.Forms.Label LB_yeucau;
-        private System.Windows.Forms.TextBox TXB_thanhtoan;
         private System.Windows.Forms.Label LB_thanhtoan;
         private System.Windows.Forms.Label LB_phongngu;
-        private System.Windows.Forms.PictureBox pic_canho;
         private System.Windows.Forms.Panel PN_hienthi;
         private System.Windows.Forms.Button BTN_chung;
         private System.Windows.Forms.Button BTN_lichsu;
@@ -968,10 +1029,7 @@ namespace DangNhap
         private Syncfusion.Windows.Forms.Tools.NumericUpDownExt NUD_toilet;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl GGC_dichvu;
         private System.Windows.Forms.ComboBox CBB_tinhtrang;
-        private System.Windows.Forms.TextBox TXB_phiql;
-        private System.Windows.Forms.ComboBox CBB_loai;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label LB_hinhanhcanho;
         private Guna.UI.WinForms.GunaGradientButton BTN_thoat;
@@ -985,7 +1043,7 @@ namespace DangNhap
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PB_hinhcanho;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel8;
@@ -1003,5 +1061,16 @@ namespace DangNhap
         private Syncfusion.Windows.Forms.Tools.NumericUpDownExt numericUpDownExt5;
         private System.Windows.Forms.Label label17;
         private Syncfusion.Windows.Forms.Tools.NumericUpDownExt numericUpDownExt6;
+        private Guna.UI.WinForms.GunaGradientButton BTN_uploadanh;
+        private System.Windows.Forms.Label label19;
+        private Syncfusion.Windows.Forms.Tools.NumericUpDownExt NUD_thanhtoan;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox TXB_NSA;
+        private System.Windows.Forms.TextBox TXB_GSA;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox TXB_loaicanho;
+        private System.Windows.Forms.Label label22;
+        private Syncfusion.Windows.Forms.Tools.NumericUpDownExt NUD_vitritang;
+        private Syncfusion.Windows.Forms.Tools.NumericUpDownExt NUD_mucphiql;
     }
 }

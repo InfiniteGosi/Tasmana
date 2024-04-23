@@ -57,13 +57,13 @@ namespace DangNhap
             }).ToList();
 
             GGC_canho.TableDescriptor.Columns[0].HeaderText = "Mã căn hộ";
-            GGC_canho.TableDescriptor.Columns[1].HeaderText = "Diện tích";
-            GGC_canho.TableDescriptor.Columns[2].HeaderText = "Vị trí tầng";
-            GGC_canho.TableDescriptor.Columns[3].HeaderText = "Số lượng phòng ngủ";
-            GGC_canho.TableDescriptor.Columns[4].HeaderText = "Số lượng toilet";
-            GGC_canho.TableDescriptor.Columns[5].HeaderText = "Số lượng thẻ thang máy";
-            GGC_canho.TableDescriptor.Columns[6].HeaderText = "Mức phí quản lý hàng tháng";
-            GGC_canho.TableDescriptor.Columns[7].HeaderText = "Lịch sử giao dịch";
+            GGC_canho.TableDescriptor.Columns[1].HeaderText = "Diện tích GSA";
+            GGC_canho.TableDescriptor.Columns[2].HeaderText = "Diện tích NSA";
+            GGC_canho.TableDescriptor.Columns[3].HeaderText = "Vị trí tầng";
+            GGC_canho.TableDescriptor.Columns[4].HeaderText = "Số lượng phòng ngủ";
+            GGC_canho.TableDescriptor.Columns[5].HeaderText = "Số lượng toilet";
+            GGC_canho.TableDescriptor.Columns[6].HeaderText = "Số lượng thẻ thang máy";
+            GGC_canho.TableDescriptor.Columns[7].HeaderText = "Mức phí quản lý hàng tháng";
             GGC_canho.TableDescriptor.Columns[8].HeaderText = "Tình trạng giao dịch hiện tại";
             GGC_canho.TableDescriptor.Columns[9].HeaderText = "Mã cư dân";
 

@@ -29,10 +29,13 @@ namespace BLL
             string maCuDanTruoc = dt.Rows[0]["maCuDanTruoc"] != DBNull.Value
                 ? dt.Rows[0]["maCuDanTruoc"].ToString()
                 : string.Empty;
+            string maKhachDangThue = dt.Rows[0]["maKhachDangThue"] != DBNull.Value
+                ? dt.Rows[0]["maKhachDangThue"].ToString()
+                : string.Empty;
             DateTime lichSuNopPhiDichVu = (DateTime)dt.Rows[0]["lichSuNopPhiDV"];
             DateTime lichSuDangKyDoXe = (DateTime)dt.Rows[0]["lichSuDangKyDoXe"];
             int tinhTrangCongNo = (int)dt.Rows[0]["tinhTrangCongNo"];
-            return new LichSuGiaoDich(maCanHo, maCuDanHienTai, maCuDanTruoc, lichSuNopPhiDichVu, lichSuDangKyDoXe, tinhTrangCongNo);
+            return new LichSuGiaoDich(maCanHo, maCuDanHienTai, maCuDanTruoc, maKhachDangThue, lichSuNopPhiDichVu, lichSuDangKyDoXe, tinhTrangCongNo);
         }
     }
 }

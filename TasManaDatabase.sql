@@ -202,16 +202,20 @@ CREATE TABLE CanHo
   mucPhiQLHangThang INT NOT NULL,
   soLuongTheThangMay INT NOT NULL,
   tinhTrangGDHienTai NVARCHAR(100) NOT NULL,
+  tinhTrangThanhToan INT NOT NULL,
   maCuDan VARCHAR(10),
   PRIMARY KEY (maCanHo),
   FOREIGN KEY (maCuDan) REFERENCES cuDan(maCuDan),
 );
+
+select * from CanHo
 
 CREATE TABLE LichSuGiaoDich
 (
   maCanHo VARCHAR(10) NOT NULL,
   maCuDanHienTai VARCHAR(10),
   maCuDanTruoc VARCHAR(10),
+  maKhachDangThue VARCHAR(10),
   lichSuNopPhiDV DATE NOT NULL,
   lichSuDangKyDoXe DATE NOT NULL,
   tinhTrangCongNo INT NOT NULL,
@@ -322,30 +326,33 @@ INSERT INTO CuDan VALUES('CD-A021','Tran Thi Hien','1983-09-17','198309173','098
 INSERT INTO CuDan VALUES('CD-A022','Hoang Van Quan','1975-08-02','197508023','0123456789','hoangvanquan@example.com', '3698522','2024-01-13','2022-01-13', 25, 0, 'dog', 'vietnam', null)
 INSERT INTO CuDan VALUES('CD-A023','Le Thi Kim','1987-03-10','198703103','0365987412','lethikim@example.com', '9517536','2024-01-14','2022-01-14', 4, 0, 'dog', 'korea', null)
 INSERT INTO CuDan VALUES('CD-A024','Pham Van Son','1997-10-15','199710153','0901234567','phamvanson@example.com', '1237893','2024-01-15','2022-01-15', 13, 0, 'cat', 'china', null)
-
+select * from CuDan
 
 -- Insert Dữ liệu thử của căn hộ
-INSERT INTO CanHo VALUES ('WPHA', 100.5, 100, 36, 5, 2, NULL, 2000000, 2, N'Chưa bán', 'CD-A001');
-INSERT INTO CanHo VALUES ('WPHB', 90.2, 100, 36, 5, 1, NULL, 1500000, 1, N'Đã bán', 'CD-A002');
-INSERT INTO CanHo VALUES ('WPHC', 110.8, 100, 37, 5, 2, NULL, 2500000, 2, N'Đã bán', 'CD-A003');
-INSERT INTO CanHo VALUES ('WPHD', 80.0, 100, 37, 5, 1, NULL, 200000, 1, N'Đã bán', 'CD-A004');
-INSERT INTO CanHo VALUES ('W3501', 80.0, 100, 35, 5, 1, NULL, 100000, 1, N'Chưa bán', 'CD-A005');
-INSERT INTO CanHo VALUES ('W3502', 80.0, 100, 35, 5, 1, NULL, 1800000, 1, N'Chưa bàn giao - Cư dân đang ở', 'CD-A006');
-INSERT INTO CanHo VALUES ('W3503', 80.0, 100, 35, 5, 1, NULL, 310000, 1, N'Đã bàn giao - trống', NULL);
-INSERT INTO CanHo VALUES ('W3504', 80.0, 100, 35, 5, 1, NULL, 1800000, 1, N'Đã bàn giao - trống', NULL);
-INSERT INTO CanHo VALUES ('W3510', 80.0, 100, 35, 5, 1, NULL, 18000000, 1, N'Chưa bàn giao - Cư dân đang ở', 'CD-A009');
+INSERT INTO CanHo VALUES ('WPHA', 100.5, 100, 36, 5, 2, NULL, 2000000, 2, N'Chưa bán', 50,'CD-A001');
+INSERT INTO CanHo VALUES ('WPHB', 90.2, 100, 36, 5, 1, NULL, 1500000, 1, N'Đã bán', 75, 'CD-A002');
+INSERT INTO CanHo VALUES ('WPHC', 110.8, 100, 37, 5, 2, NULL, 2500000, 2, N'Đã bán', 50, 'CD-A003');
+INSERT INTO CanHo VALUES ('WPHD', 80.0, 100, 37, 5, 1, NULL, 200000, 1, N'Đã bán', 25, 'CD-A004');
+INSERT INTO CanHo VALUES ('W3501', 80.0, 100, 35, 5, 1, NULL, 100000, 1, N'Chưa bán', 10, 'CD-A005');
+INSERT INTO CanHo VALUES ('W3502', 80.0, 100, 35, 5, 1, NULL, 1800000, 1, N'Chưa bàn giao - Cư dân đang ở', 15, 'CD-A006');
+INSERT INTO CanHo VALUES ('W3503', 80.0, 100, 35, 5, 1, NULL, 310000, 1, N'Đã bàn giao - trống', 0, NULL);
+INSERT INTO CanHo VALUES ('W3504', 80.0, 100, 35, 5, 1, NULL, 1800000, 1, N'Đã bàn giao - trống', 0, NULL);
+INSERT INTO CanHo VALUES ('W3510', 80.0, 100, 35, 5, 1, NULL, 18000000, 1, N'Chưa bàn giao - Cư dân đang ở', 25, 'CD-A009');
 select * from CanHo
 
+--delete from LichSuGiaoDich where maCanHo = 'W3510'
+--delete from CanHo where maCanHo = 'W3510'
 
-insert into LichSuGiaoDich values('WPHA', 'CD-A001', 'CD-A021', '1-1-2023', '1-1-2024', 100000000)
-insert into LichSuGiaoDich values('WPHB', 'CD-A002', 'CD-A014', '1-1-2023', '1-1-2024', 400000000)
-insert into LichSuGiaoDich values('WPHC', 'CD-A003', 'CD-A010', '1-1-2023', '1-1-2024', 600000000)
-insert into LichSuGiaoDich values('WPHD', 'CD-A004', 'CD-A011', '1-1-2023', '1-1-2024', 600000000)
-insert into LichSuGiaoDich values('W3501', 'CD-A005', 'CD-A016', '1-1-2023', '1-1-2024', 200000000)
-insert into LichSuGiaoDich values('W3502', 'CD-A006', 'CD-A016', '1-1-2023', '1-1-2024', 200000000)
-insert into LichSuGiaoDich values('W3503', NULL, NULL, '1-1-2023', '1-1-2024', 200000000)
-insert into LichSuGiaoDich values('W3504', NULL, NULL, '1-1-2023', '1-1-2024', 200000000)
-insert into LichSuGiaoDich values('W3510', 'CD-A009', 'CD-A015', '1-1-2023', '1-1-2024', 200000000)
+
+insert into LichSuGiaoDich values('WPHA', 'CD-A001', 'CD-A021', 'CD-A012', '1-1-2023', '1-1-2024', 100000000)
+insert into LichSuGiaoDich values('WPHB', 'CD-A002', 'CD-A014', 'CD-A013', '1-1-2023', '1-1-2024', 400000000)
+insert into LichSuGiaoDich values('WPHC', 'CD-A003', 'CD-A010', 'CD-A014', '1-1-2023', '1-1-2024', 600000000)
+insert into LichSuGiaoDich values('WPHD', 'CD-A004', 'CD-A011', 'CD-A015', '1-1-2023', '1-1-2024', 600000000)
+insert into LichSuGiaoDich values('W3501', 'CD-A005', 'CD-A016', 'CD-A017', '1-1-2023', '1-1-2024', 200000000)
+insert into LichSuGiaoDich values('W3502', 'CD-A006', 'CD-A016', 'CD-A018', '1-1-2023', '1-1-2024', 200000000)
+insert into LichSuGiaoDich values('W3503', NULL, NULL, NULL, '1-1-2023', '1-1-2024', 200000000)
+insert into LichSuGiaoDich values('W3504', NULL, NULL, NULL, '1-1-2023', '1-1-2024', 200000000)
+insert into LichSuGiaoDich values('W3510', 'CD-A009', 'CD-A015', 'CD-A021', '1-1-2023', '1-1-2024', 200000000)
 select * from LichSuGiaoDich
 
 
@@ -714,35 +721,37 @@ go
 
 
 --Procedure thêm căn hộ
---create procedure [dbo].[SP_ThemCanHo]
---	@maCanHo varchar(10),
---	@dienTich float,
---	@viTriTang int,
---	@soLuongPhongNgu int,
---	@soLuongToilet int,
---	@soDoMatBang image,
---	@mucPhiQLHangThang int,
---	@soLuongTheThangMay int,
---	@lichSuGiaoDich Date,
---	@tinhTrangGDHienTai varchar(100),
---	@maCuDan varchar(10)
---as
---begin
---	insert into CanHo
---	values(
---		@maCanHo,
---		@dienTich,
---		@viTriTang,
---		@soLuongPhongNgu,
---		@soLuongToilet,
---		@soDoMatBang,
---		@mucPhiQLHangThang,
---		@soLuongTheThangMay,
---		@lichSuGiaoDich,
---		@tinhTrangGDHienTai,
---		@maCuDan)
---end
---GO
+create procedure [dbo].[SP_CapNhatCanHo]
+	@maCanHo varchar(10),
+	@dienTichGSA float,
+	@dienTichNSA float,
+	@viTriTang int,
+	@soLuongPhongNgu int,
+	@soLuongToilet int,
+	@soDoMatBang image,
+	@mucPhiQLHangThang int,
+	@soLuongTheThangMay int,
+	@tinhTrangGDHienTai nvarchar(100),
+	@tinhTrangThanhToan int,
+	@maCuDan varchar(10)
+as
+begin
+	update CanHo
+	set dienTichGSA = @dienTichGSA,
+		dienTichNSA = @dienTichNSA,
+		viTriTang = @viTriTang,
+		soLuongPhongNgu = @soLuongPhongNgu,
+		soLuongToilet = @soLuongToilet,
+		soDoMatBang = @soDoMatBang,
+		mucPhiQLHangThang = @mucPhiQLHangThang,
+		soLuongTheThangMay = @soLuongTheThangMay,
+		tinhTrangGDHienTai = @tinhTrangGDHienTai,
+		@tinhTrangThanhToan = @tinhTrangThanhToan,
+		maCuDan = @maCuDan
+	where maCanHo = @maCanHo
+end
+GO
+
 -- Procedure thêm Nhóm
 Create PROCEDURE [dbo].[SP_ThemNhom]
 	@maNhom VARCHAR(10),
@@ -826,9 +835,6 @@ BEGIN
         ) AS congViecNhom ON NV.maNhanVien = congViecNhom.maNhanVien;
 END
 GO
-
-
-select * from CanHo
 
 -- Tạo Trigger tự động kiểm tra tình trạng công việc
 CREATE TRIGGER CheckLateJob

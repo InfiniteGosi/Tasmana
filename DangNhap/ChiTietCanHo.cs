@@ -15,6 +15,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Syncfusion.Windows.Forms.Grid;
 using Syncfusion.Grouping;
+using System.IO;
+using System.Globalization;
 
 namespace DangNhap
 {
@@ -24,7 +26,7 @@ namespace DangNhap
         private string maCanHoHienTai;
         private Apartment canHoHienTai;
         private Resident cuDanCuaCanHo;
-        private readonly string[] arrLoai = { "PENTHOUSE", "01", "02", "03", "04", "04", "05", "06", "07", "08", "09", "10", "11" };
+        //private readonly string[] arrLoai = { "PENTHOUSE", "01", "02", "03", "04", "04", "05", "06", "07", "08", "09", "10", "11" };
         private readonly string[] arrTinhTrang = { "Chưa bán", "Đã bán", "Chưa bàn giao - Cư dân đang ở", "Đã bàn giao - trống" };
         public ChiTietCanHo()
         {
@@ -69,7 +71,7 @@ namespace DangNhap
 
         private void BTN_lichsu_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new LichSuCanHo());
+            OpenChildForm(new LichSuCanHo(cuDanCuaCanHo, canHoHienTai));
             BTN_lichsu.BackColor = Color.FromArgb(51, 53, 55);
             BTN_chung.BackColor = Color.Transparent;
         }
@@ -90,8 +92,39 @@ namespace DangNhap
             values_ch = new object[]
             {
                 TXB_macanho.Text,
-
+                Convert.ToDouble(TXB_GSA.Text),
+                Convert.ToDouble(TXB_NSA.Text),
+                //100,
+                //120.5,
+                (int)NUD_vitritang.Value,
+                (int)NUD_phongngu.Value,
+                (int)NUD_toilet.Value,
+                ConvertImageToBytes(PB_hinhcanho.Image),
+                (int)NUD_mucphiql.Value,
+                (int)NUD_thangmay.Value,
+                CBB_tinhtrang.SelectedItem.ToString(),
+                (int)NUD_thanhtoan.Value,
+                TXB_chuho.Text.Split('_')[0]
             };
+        }
+        private Dictionary<string, object> AddParemeter_CH()
+        {
+            Dictionary<string, object> dict = new Dictionary<string, object>
+            {
+                { "@maCanHo", values_ch[0] },
+                { "@dienTichGSA", values_ch[1] },
+                { "@dienTichNSA", values_ch[2] },
+                { "@viTriTang", values_ch[3] },
+                { "@soLuongPhongNgu", values_ch[4] },
+                { "@soLuongToilet", values_ch[5] },
+                { "@soDoMatBang", values_ch[6] },
+                { "@mucPhiQLHangThang", values_ch[7] },
+                { "@soLuongTheThangMay", values_ch[8] },
+                { "@tinhTrangGDHienTai", values_ch[9] },
+                { "@tinhTrangThanhToan", values_ch[10] },
+                { "@maCuDan", values_ch[11] },
+            };
+            return dict;
         }
         // Do not delete
         private void ChiTietCanHo_FormClosing(object sender, FormClosingEventArgs e)
@@ -131,6 +164,15 @@ namespace DangNhap
             }
             return last2Characters;
         }
+        private byte[] ConvertImageToBytes(Image img)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                return ms.ToArray();
+            }
+        }
+        
         private void DisplayApartmenInfo()
         {
             GetApartmentById(maCanHoHienTai);
@@ -140,24 +182,34 @@ namespace DangNhap
                 TXB_macanho.Text = maCanHoHienTai;
                 if (cuDanCuaCanHo != null)
                 {
-                    TXB_chuho.Text = cuDanCuaCanHo.HoTen;
+                    TXB_chuho.Text = cuDanCuaCanHo.MaCuDan + "_" + cuDanCuaCanHo.HoTen;
                 }
+                string tenKhachDangThue = ResidentBLL.Instance.GetNameOfMaCuDan(canHoHienTai.LichSuGiaoDich.MaKhachDangThue);
+                if (!string.IsNullOrEmpty(tenKhachDangThue))
+                    TXB_khachdangthue.Text = canHoHienTai.LichSuGiaoDich.MaKhachDangThue + "_" + tenKhachDangThue;
+                NUD_vitritang.Value = canHoHienTai.ViTriTang;
                 NUD_toilet.Value = canHoHienTai.SoLuongToilet;
                 NUD_phongngu.Value = GetNoOfRoomsUsingApartmentId(maCanHoHienTai);
                 NUD_thangmay.Value = canHoHienTai.SoLuongTheThangMay;
-                TXB_phiql.Text = canHoHienTai.MucPhiQuanLyHangThang.ToString();
-                CBB_loai.SelectedIndex = Array.IndexOf(arrLoai, GetApartmentType(maCanHoHienTai));
+                NUD_mucphiql.Value = canHoHienTai.MucPhiQuanLyHangThang;
+                TXB_loaicanho.Text = GetApartmentType(maCanHoHienTai);
                 CBB_tinhtrang.SelectedIndex = Array.IndexOf(arrTinhTrang, canHoHienTai.TinhTrangGiaoDichHienTai);
+                NUD_thanhtoan.Value = canHoHienTai.TinhTrangThanhToan;
+                TXB_GSA.Text = canHoHienTai.DienTichGSA.ToString();
+                TXB_NSA.Text = canHoHienTai.DienTichNSA.ToString();
+                if (canHoHienTai.SoDoMatBang != null)
+                    PB_hinhcanho.Image = canHoHienTai.SoDoMatBang;
+                else
+                    PB_hinhcanho.Image = Properties.Resources.DefaulCanHoImage;
             }
         }
 
         private void ChiTietCanHo_Load(object sender, EventArgs e)
         {
+            
+            //MessageBox.Show(values_ch[1].ToString());
             CBB_tinhtrang.DataSource = arrTinhTrang;
-            CBB_loai.DataSource = arrLoai;
             CBB_tinhtrang.SelectedIndex = -1;
-            CBB_loai.SelectedIndex = -1;
-            DisplayGGC_Dichvu();
             if (canHoHienTai != null)
             {
                 DisplayApartmenInfo();
@@ -191,74 +243,23 @@ namespace DangNhap
         {
             mov = 0;
         }
-        private void DisplayGGC_Dichvu()
+
+        private void BTN_uploadanh_Click(object sender, EventArgs e)
         {
-            GGC_dichvu.DataSource = JobDAO.Instance.GetJobByApartmentId(maCanHoHienTai);
-            GGC_DataSourceChanged(GGC_dichvu);
-            GGC_dichvu.Size = new System.Drawing.Size(950, 404);
-            GGC_dichvu.TopLevelGroupOptions.ShowFilterBar = true;
-            GGC_dichvu.ActivateCurrentCellBehavior = GridCellActivateAction.None;
-            GGC_dichvu.ShowGroupDropArea = true;
-            GGC_dichvu.BorderStyle = BorderStyle.FixedSingle;
+            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Image Files (*.jpg, *.jpeg, *.png)|*.jpg;*.jpeg;*.png|All files (*.*)|*.*" , Multiselect = false}) 
+            { 
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    PB_hinhcanho.Image = Image.FromFile(ofd.FileName);
 
-
-            // Thiết lập cho từng cột
-            GridColumnDescriptorCollection columns = GGC_dichvu.TableDescriptor.Columns;
-            foreach (GridColumnDescriptor column in columns)
-            {
-                column.AllowFilter = true;
-                column.Appearance.AnyRecordFieldCell.AutoSize = true;
-                column.Appearance.AnyRecordFieldCell.CellType = "TextBox";
+                }
             }
-
-            // Thiết lập Dynamic Filter và Excel Filter
-            GridDynamicFilter dynamicFilter = new GridDynamicFilter();
-            dynamicFilter.WireGrid(GGC_dichvu);
-
-            GridExcelFilter excelFilter = new GridExcelFilter();
-            excelFilter.WireGrid(GGC_dichvu);
-
-            GGC_dichvu.TableDescriptor.Columns[0].HeaderText = "Mã công việc";
-            GGC_dichvu.TableDescriptor.Columns[1].HeaderText = "Nội dung";
-            GGC_dichvu.TableDescriptor.VisibleColumns.Remove("ngayGiao");
-            GGC_dichvu.TableDescriptor.VisibleColumns.Remove("thoiHan");
-            GGC_dichvu.TableDescriptor.VisibleColumns.Remove("ngayHoanThanh");
-            GGC_dichvu.TableDescriptor.VisibleColumns.Remove("ngayCapNhat");
-            GGC_dichvu.TableDescriptor.Columns[6].HeaderText = "Trạng thái";
-            GGC_dichvu.TableDescriptor.Columns[7].HeaderText = "Ghi chú";
-            GGC_dichvu.TableDescriptor.VisibleColumns.Remove("quyenTruyCap");
-            GGC_dichvu.TableDescriptor.Columns[9].HeaderText = "Mã nhân viên phụ trách";
-            GGC_dichvu.TableDescriptor.Columns[10].HeaderText = "Họ nhân viên phụ trách";
-            GGC_dichvu.TableDescriptor.Columns[11].HeaderText = "Tên nhân viên phụ trách";
         }
-        private void GGC_DataSourceChanged(GridGroupingControl ggc)
+
+        private void BTN_luu_Click(object sender, EventArgs e)
         {
-            if (ggc.TableDescriptor.Columns.Contains("NgayHoanThanh"))
-            {
-                var col = ggc.TableDescriptor.Columns["NgayHoanThanh"];
-                col.Appearance.AnyCell.CellValueType = typeof(string);
-                foreach (var comp in ggc.Table.Records)
-                {
-                    var cellValue = comp.GetValue("NgayHoanThanh");
-                    if (cellValue.ToString().Contains("1/1/0001"))
-                    {
-                        cellValue = null;
-                    }
-                }
-            }
-            if (ggc.TableDescriptor.Columns.Contains("ThoiHan"))
-            {
-                var col = ggc.TableDescriptor.Columns["ThoiHan"];
-                col.Appearance.AnyCell.CellValueType = typeof(string);
-                foreach (var comp in ggc.Table.Records)
-                {
-                    var cellValue = comp.GetValue("ThoiHan");
-                    if (cellValue.ToString().Contains("1/1/0001"))
-                    {
-                        cellValue = null;
-                    }
-                }
-            }
+            InitializeValues_CH();
+            MessageBox.Show(ApartmentBLL.Instance.UpdateApartment(AddParemeter_CH()));
         }
     }
 }
