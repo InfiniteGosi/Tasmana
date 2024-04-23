@@ -66,6 +66,8 @@ namespace DangNhap
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.LB_PhiDichVu = new System.Windows.Forms.Label();
+            this.TXB_PhiDichVu = new System.Windows.Forms.TextBox();
             this.PN_hienthithemcongviec.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +77,8 @@ namespace DangNhap
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PN_hienthithemcongviec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            this.PN_hienthithemcongviec.Controls.Add(this.LB_PhiDichVu);
+            this.PN_hienthithemcongviec.Controls.Add(this.TXB_PhiDichVu);
             this.PN_hienthithemcongviec.Controls.Add(this.LB_Ghichu);
             this.PN_hienthithemcongviec.Controls.Add(this.TXB_ghiChu);
             this.PN_hienthithemcongviec.Controls.Add(this.panel6);
@@ -168,7 +172,7 @@ namespace DangNhap
             "Riêng tư",
             "Bộ phận",
             "Công ty"});
-            this.CBB_QuyenTruyCap.Location = new System.Drawing.Point(830, 327);
+            this.CBB_QuyenTruyCap.Location = new System.Drawing.Point(830, 416);
             this.CBB_QuyenTruyCap.Name = "CBB_QuyenTruyCap";
             this.CBB_QuyenTruyCap.Size = new System.Drawing.Size(419, 30);
             this.CBB_QuyenTruyCap.TabIndex = 184;
@@ -295,7 +299,7 @@ namespace DangNhap
             this.LB_quyentruycap.AutoSize = true;
             this.LB_quyentruycap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_quyentruycap.ForeColor = System.Drawing.Color.White;
-            this.LB_quyentruycap.Location = new System.Drawing.Point(676, 333);
+            this.LB_quyentruycap.Location = new System.Drawing.Point(676, 422);
             this.LB_quyentruycap.Name = "LB_quyentruycap";
             this.LB_quyentruycap.Size = new System.Drawing.Size(128, 22);
             this.LB_quyentruycap.TabIndex = 172;
@@ -580,6 +584,29 @@ namespace DangNhap
             this.panel5.Size = new System.Drawing.Size(1281, 1);
             this.panel5.TabIndex = 27;
             // 
+            // LB_PhiDichVu
+            // 
+            this.LB_PhiDichVu.AutoSize = true;
+            this.LB_PhiDichVu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_PhiDichVu.ForeColor = System.Drawing.Color.White;
+            this.LB_PhiDichVu.Location = new System.Drawing.Point(662, 333);
+            this.LB_PhiDichVu.Name = "LB_PhiDichVu";
+            this.LB_PhiDichVu.Size = new System.Drawing.Size(99, 22);
+            this.LB_PhiDichVu.TabIndex = 240;
+            this.LB_PhiDichVu.Text = "Phí dịch vụ";
+            // 
+            // TXB_PhiDichVu
+            // 
+            this.TXB_PhiDichVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_PhiDichVu.Enabled = false;
+            this.TXB_PhiDichVu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_PhiDichVu.ForeColor = System.Drawing.Color.White;
+            this.TXB_PhiDichVu.Location = new System.Drawing.Point(830, 330);
+            this.TXB_PhiDichVu.Multiline = true;
+            this.TXB_PhiDichVu.Name = "TXB_PhiDichVu";
+            this.TXB_PhiDichVu.Size = new System.Drawing.Size(419, 30);
+            this.TXB_PhiDichVu.TabIndex = 239;
+            // 
             // ThemCongViecNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -649,5 +676,7 @@ namespace DangNhap
         private System.Windows.Forms.Label LB_Ghichu;
         public System.Windows.Forms.TextBox TXB_ghiChu;
         private System.Windows.Forms.CheckBox CB_thoihan;
+        private System.Windows.Forms.Label LB_PhiDichVu;
+        public System.Windows.Forms.TextBox TXB_PhiDichVu;
     }
 }

@@ -32,6 +32,7 @@ CREATE TABLE CongViec
   trangThai NVARCHAR(100) NOT NULL,
   ghiChu NVARCHAR(200),
   quyenTruyCap int,
+  phiDichVu int,
   PRIMARY KEY (maCongViec)
 );
 
@@ -283,7 +284,7 @@ INSERT INTO PhongBan VALUES('XD', N'Xây Dựng', '02645816328', '@BCMP_XD@gmail
 INSERT INTO Nhom VALUES('VSN01', 'VS-002', 'VS')
 INSERT INTO Nhom VALUES('VSN02', 'VS-002', 'VS')
 
-insert into CEO values('GD-001')
+--insert into CEO values('GD-001')
 
 SELECT * FROM PhongBan
 SELECT * FROM Nhom
@@ -357,7 +358,7 @@ select * from LichSuGiaoDich
 
 
 -- Insert mẫu công việc
-INSERT INTO CongViec VALUES('CV1', N'Quét nhà', '2024-04-08 9:12:00','2024-04-04 12:30:00',null, '2024-04-08 9:12:00',N'Chưa bắt đầu',null,2)
+INSERT INTO CongViec VALUES('CV1', N'Quét nhà', '2024-04-08 9:12:00','2024-04-04 12:30:00',null, '2024-04-08 9:12:00',N'Chưa bắt đầu',null,2,100000)
 Insert into CongViec_NhanVien Values ('VS-003', 'CV1')
 Insert INTO YeuCau VALUES('CV1', 'WPHA')
 go
@@ -542,7 +543,8 @@ CREATE PROCEDURE [dbo].[SP_ThemCongViec]
            @ngayCapNhat SMALLDATETIME,
            @trangThai NVARCHAR(100),
            @ghiChu NVARCHAR(200),
-		   @quyenTruyCap int
+		   @quyenTruyCap int,
+		   @phiDichVu int
 AS
 BEGIN
     DECLARE @maCongViec VARCHAR(10);
@@ -550,8 +552,8 @@ BEGIN
     EXEC [dbo].[Auto_Create_Job] @nextJobId = @maCongViec OUTPUT;
     
     -- Insert the new job into the CongViec table
-    INSERT INTO CongViec (maCongViec, noiDung, ngayGiao, thoiHan, ngayHoanThanh, ngayCapNhat, trangThai, ghiChu, quyenTruyCap)
-    VALUES (@maCongViec, @noiDung, @ngayGiao, @thoiHan, @ngayHoanThanh, @ngayCapNhat, @trangThai, @ghiChu, @quyenTruyCap);
+    INSERT INTO CongViec (maCongViec, noiDung, ngayGiao, thoiHan, ngayHoanThanh, ngayCapNhat, trangThai, ghiChu, quyenTruyCap, phiDichVu)
+    VALUES (@maCongViec, @noiDung, @ngayGiao, @thoiHan, @ngayHoanThanh, @ngayCapNhat, @trangThai, @ghiChu, @quyenTruyCap, @phiDichVu);
 END
 go
 	
@@ -689,11 +691,12 @@ Create Procedure [dbo].[SP_EditCongViec]
 	@ngayCapNhat SMALLDATETIME,
 	@trangThai NVARCHAR(100),
 	@ghiChu NVARCHAR(200),
-	@quyenTruyCap int
+	@quyenTruyCap int,
+	@phiDichVu int
 as
 begin
 	Update CongViec
-	SET noiDung = @noiDung, thoiHan = @thoiHan, ngayHoanThanh = @ngayHoanThanh, ngayCapNhat = @ngayCapNhat, trangThai = @trangThai, ghiChu = @ghiChu, quyenTruyCap = @quyenTruyCap
+	SET noiDung = @noiDung, thoiHan = @thoiHan, ngayHoanThanh = @ngayHoanThanh, ngayCapNhat = @ngayCapNhat, trangThai = @trangThai, ghiChu = @ghiChu, quyenTruyCap = @quyenTruyCap, phiDichVu = @phiDichVu
 	WHERE maCongViec = @maCongViec
 end
 go

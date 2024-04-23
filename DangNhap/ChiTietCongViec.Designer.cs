@@ -66,6 +66,8 @@ namespace DangNhap
             this.CB_thoihan = new System.Windows.Forms.CheckBox();
             this.PN_nen = new System.Windows.Forms.Panel();
             this.gunaGradientButton2 = new Guna.UI.WinForms.GunaGradientButton();
+            this.LB_PhiDichVu = new System.Windows.Forms.Label();
+            this.TXB_PhiDichVu = new System.Windows.Forms.TextBox();
             this.PN_nen.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -555,12 +557,36 @@ namespace DangNhap
             this.gunaGradientButton2.Text = "Highlight";
             this.gunaGradientButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // LB_PhiDichVu
+            // 
+            this.LB_PhiDichVu.AutoSize = true;
+            this.LB_PhiDichVu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_PhiDichVu.ForeColor = System.Drawing.Color.White;
+            this.LB_PhiDichVu.Location = new System.Drawing.Point(671, 550);
+            this.LB_PhiDichVu.Name = "LB_PhiDichVu";
+            this.LB_PhiDichVu.Size = new System.Drawing.Size(99, 22);
+            this.LB_PhiDichVu.TabIndex = 242;
+            this.LB_PhiDichVu.Text = "Phí dịch vụ";
+            // 
+            // TXB_PhiDichVu
+            // 
+            this.TXB_PhiDichVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_PhiDichVu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_PhiDichVu.ForeColor = System.Drawing.Color.White;
+            this.TXB_PhiDichVu.Location = new System.Drawing.Point(839, 547);
+            this.TXB_PhiDichVu.Multiline = true;
+            this.TXB_PhiDichVu.Name = "TXB_PhiDichVu";
+            this.TXB_PhiDichVu.Size = new System.Drawing.Size(419, 30);
+            this.TXB_PhiDichVu.TabIndex = 241;
+            // 
             // ChiTietCongViec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(1283, 684);
+            this.Controls.Add(this.LB_PhiDichVu);
+            this.Controls.Add(this.TXB_PhiDichVu);
             this.Controls.Add(this.gunaGradientButton2);
             this.Controls.Add(this.CB_thoihan);
             this.Controls.Add(this.CBB_quyentruycap);
@@ -643,5 +669,7 @@ namespace DangNhap
         public System.Windows.Forms.CheckBox CB_thoihan;
         private System.Windows.Forms.Panel PN_nen;
         private Guna.UI.WinForms.GunaGradientButton gunaGradientButton2;
+        private System.Windows.Forms.Label LB_PhiDichVu;
+        public System.Windows.Forms.TextBox TXB_PhiDichVu;
     }
 }

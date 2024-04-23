@@ -183,6 +183,7 @@ namespace DangNhap
                 BTN_file.Enabled = true;
                 TXB_ghiChu.Enabled = true;
                 CBB_QuyenTruyCap.Enabled = true;
+                TXB_PhiDichVu.Enabled = true;   
             }
         }
 
@@ -236,7 +237,8 @@ namespace DangNhap
                 {"@ngayCapNhat", DateTime.Now.ToString("yyyy-MM-dd'T'HH:mm:ss")},
                 {"@trangThai", "Chưa bắt đầu"},
                 {"@ghiChu", TXB_ghiChu.Text},
-                {"@quyenTruyCap", GetQuyenTruyCap()}
+                {"@quyenTruyCap", GetQuyenTruyCap()},
+                {"@phiDichVu", int.Parse(TXB_PhiDichVu.Text)}
             };
             return dict;
         }
@@ -295,7 +297,11 @@ namespace DangNhap
             }
             return false;
         }
-
+        // Kiểm tra phí dịch vụ điền vào có phải là 1 số hợp lệ hay không
+        private bool IsValidInteger(string input)
+        {
+            return int.TryParse(input, out _);
+        }
         private void BTN_ok_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(TXB_noidung.Text))
@@ -316,6 +322,17 @@ namespace DangNhap
             if (CBB_QuyenTruyCap.SelectedIndex == -1)
             {
                 MessageBox.Show("Vui lòng chọn quyền hạn truy cập");
+                return;
+            }
+            if (string.IsNullOrEmpty(TXB_PhiDichVu.Text))
+            {
+                MessageBox.Show("Vui lòng điền phí dịch vụ");
+                TXB_PhiDichVu.Focus();
+                return;
+            }
+            if (!IsValidInteger(TXB_PhiDichVu.Text))
+            {
+                MessageBox.Show("Vui lòng điền phí dịch vụ hợp lệ");
                 return;
             }
             if (SaveCongViec())
@@ -359,6 +376,7 @@ namespace DangNhap
             TXB_noidung.Clear();
             TXB_MaCongViec.Clear();
             TXB_macanho.Clear();
+            TXB_PhiDichVu.Clear();
             CBB_nhom.Enabled = false;
             CBB_manhanvien.Enabled = false;
             TXB_noidung.Enabled = false;
@@ -368,6 +386,7 @@ namespace DangNhap
             BTN_file.Enabled = false;
             TXB_ghiChu.Enabled = false;
             CBB_QuyenTruyCap.Enabled = false;
+            TXB_PhiDichVu.Enabled = false;
         }
 
         private void CB_thoihan_CheckedChanged(object sender, EventArgs e)
