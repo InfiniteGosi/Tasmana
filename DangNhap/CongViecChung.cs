@@ -323,7 +323,7 @@ namespace DangNhap
             }
         }
 
-        private void GGC_hienthicongviec_TableControlCellClick(object sender, GridTableControlCellClickEventArgs e)
+        private void GGC_hienthicongviec_TableControlCellDoubleClick(object sender, GridTableControlCellClickEventArgs e)
         {
             // Get the index of the clicked row
             int rowIndex = e.Inner.RowIndex - 5;
