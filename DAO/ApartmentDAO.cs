@@ -27,9 +27,9 @@ namespace DAO
             string query = $"select * from CanHo where maCanHo = '{maCanHo}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
-        public bool AddApartment(Dictionary<string, object> parameters)
+        public bool UpdateApartment(Dictionary<string, object> parameters)
         {
-            int result = DataProvider.Instance.ExecuteStoredProcedure("SP_ThemCanHo", parameters);
+            int result = DataProvider.Instance.ExecuteStoredProcedure("SP_CapNhatCanHo", parameters);
             return result > 0;
         }
     }

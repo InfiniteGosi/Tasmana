@@ -7,6 +7,7 @@ using DTO;
 using DAO;
 using System.Data;
 using System.Drawing;
+using System.IO;
 
 namespace BLL
 {
@@ -19,6 +20,13 @@ namespace BLL
             private set { instance = value; }
         }
         private ApartmentBLL() { }
+        private Image ConvertByteArrayToImage(byte[] data)
+        {
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                return Image.FromStream(ms);
+            }
+        }
         public List<Apartment> GetApartmentList()
         {
             DataTable dt = ApartmentDAO.Instance.GetAllApartments();
@@ -31,13 +39,14 @@ namespace BLL
                 int viTriTang = (int)dt.Rows[i]["viTriTang"];
                 int soLuongPhongNgu = (int)dt.Rows[i]["soLuongPhongNgu"];
                 int soLuongToilet = (int)dt.Rows[i]["soLuongToilet"];
-                Image soDoMatBang = dt.Rows[i]["soDoMatBang"] != DBNull.Value ? (Image)dt.Rows[i]["soDoMatBang"] : null;
+                Image soDoMatBang = dt.Rows[i]["soDoMatBang"] != DBNull.Value ? ConvertByteArrayToImage((byte[])dt.Rows[i]["soDoMatBang"]) : null;
                 int mucPhiQLHangThang = (int)dt.Rows[i]["mucPhiQLHangThang"];
                 int soLuongTheThangMay = (int)dt.Rows[i]["soLuongTheThangMay"];
                 LichSuGiaoDich lichSuGiaoDich = LichSuGiaoDichBLL.Instance.GetLichSuByApartmentId(maCanHo);
                 string tinhTrangGDHienTai = dt.Rows[i]["tinhTrangGDHienTai"].ToString();
+                int tinhTrangThanhToan = (int)dt.Rows[i]["tinhTrangThanhToan"];
                 string maCuDan = dt.Rows[i]["maCuDan"].ToString();
-                Apartment apartment = new Apartment(maCanHo, dienTichGSA, dienTichNSA, viTriTang, soLuongToilet, soLuongPhongNgu, soDoMatBang, mucPhiQLHangThang, soLuongTheThangMay, lichSuGiaoDich, tinhTrangGDHienTai, maCuDan);
+                Apartment apartment = new Apartment(maCanHo, dienTichGSA, dienTichNSA, viTriTang, soLuongToilet, soLuongPhongNgu, soDoMatBang, mucPhiQLHangThang, soLuongTheThangMay, lichSuGiaoDich, tinhTrangGDHienTai, tinhTrangThanhToan, maCuDan);
                 apartments.Add(apartment);
             }
             return apartments;
@@ -50,18 +59,19 @@ namespace BLL
             int viTriTang = (int)dt.Rows[0]["viTriTang"];
             int soLuongPhongNgu = (int)dt.Rows[0]["soLuongPhongNgu"];
             int soLuongToilet = (int)dt.Rows[0]["soLuongToilet"];
-            Image soDoMatBang = dt.Rows[0]["soDoMatBang"] != DBNull.Value ? (Image)dt.Rows[0]["soDoMatBang"] : null;
+            Image soDoMatBang = dt.Rows[0]["soDoMatBang"] != DBNull.Value ? ConvertByteArrayToImage((byte[])dt.Rows[0]["soDoMatBang"]) : null;
             int mucPhiQLHangThang = (int)dt.Rows[0]["mucPhiQLHangThang"];
             int soLuongTheThangMay = (int)dt.Rows[0]["soLuongTheThangMay"];
             LichSuGiaoDich lichSuGiaoDich = LichSuGiaoDichBLL.Instance.GetLichSuByApartmentId(maCanHo);
             string tinhTrangGDHienTai = dt.Rows[0]["tinhTrangGDHienTai"].ToString();
+            int tinhTrangThanhToan = (int)dt.Rows[0]["tinhTrangThanhToan"];
             string maCuDan = dt.Rows[0]["maCuDan"].ToString();
-            Apartment apartment = new Apartment(maCanHo, dienTichGSA, dienTichNSA, viTriTang, soLuongToilet, soLuongPhongNgu, soDoMatBang, mucPhiQLHangThang, soLuongTheThangMay, lichSuGiaoDich, tinhTrangGDHienTai, maCuDan);
+            Apartment apartment = new Apartment(maCanHo, dienTichGSA, dienTichNSA, viTriTang, soLuongToilet, soLuongPhongNgu, soDoMatBang, mucPhiQLHangThang, soLuongTheThangMay, lichSuGiaoDich, tinhTrangGDHienTai, tinhTrangThanhToan, maCuDan);
             return apartment;
         }
-        public string AddApartment(Dictionary<string, object> parameters)
+        public string UpdateApartment(Dictionary<string, object> parameters)
         {
-            if (ApartmentDAO.Instance.AddApartment(parameters))
+            if (ApartmentDAO.Instance.UpdateApartment(parameters))
             {
                 return "Sửa thành công";
             }

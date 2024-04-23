@@ -56,5 +56,6 @@ namespace DAO
             string query = $"Select * from NhanVien Where maBoPhan = '{maBoPhan}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        
     }
 }

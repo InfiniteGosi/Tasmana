@@ -24,5 +24,10 @@ namespace DAO
                            $"where ch.maCanHo = '{maCanHo}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetResidentByResidentId(string maCuDan)
+        {
+            string query = $"select * from CuDan where maCuDan = '{maCuDan}'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

@@ -41,5 +41,12 @@ namespace BLL
             }
             return null;
         }
+        public string GetNameOfMaCuDan(string maCuDan)
+        {
+            DataTable dt = ResidentDAO.Instance.GetResidentByResidentId(maCuDan);
+            if (dt.Rows.Count > 0)
+                return dt.Rows[0]["hoTen"].ToString();
+            return "";
+        }
     }
 }

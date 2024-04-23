@@ -20,21 +20,23 @@ namespace DTO
         public int SoLuongTheThangMay {  get; set; }
         public LichSuGiaoDich LichSuGiaoDich {  get; set; }
         public string TinhTrangGiaoDichHienTai { get; set; }
+        public int TinhTrangThanhToan {  get; set; }
         public string MaCuDan {  get; set; }
 
-        public Apartment(string maCanHo, float dienTichGSA, float dienTichNSA, int viTriTang, int soLuongToilet, int soLuongPhongNgu, Image soDoMatBang, int mucPhiQuanLyHangThang, int soLuongTheThangMay, LichSuGiaoDich lichSuGiaoDich, string tinhTrangGiaoDichHienTai, string maCuDan)
+        public Apartment(string maCanHo, float dienTichGSA, float dienTichNSA, int viTriTang, int soLuongPhongNgu, int soLuongToilet, Image soDoMatBang, int mucPhiQuanLyHangThang, int soLuongTheThangMay, LichSuGiaoDich lichSuGiaoDich, string tinhTrangGiaoDichHienTai, int tinhTrangThanhToan, string maCuDan)
         {
             MaCanHo = maCanHo;
             DienTichGSA = dienTichGSA;
             DienTichNSA = dienTichNSA;
             ViTriTang = viTriTang;
-            SoLuongToilet = soLuongToilet;
             SoLuongPhongNgu = soLuongPhongNgu;
+            SoLuongToilet = soLuongToilet;
             SoDoMatBang = soDoMatBang;
             MucPhiQuanLyHangThang = mucPhiQuanLyHangThang;
             SoLuongTheThangMay = soLuongTheThangMay;
             LichSuGiaoDich = lichSuGiaoDich;
             TinhTrangGiaoDichHienTai = tinhTrangGiaoDichHienTai;
+            TinhTrangThanhToan = tinhTrangThanhToan;
             MaCuDan = maCuDan;
         }
     }
