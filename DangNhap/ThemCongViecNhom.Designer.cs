@@ -54,6 +54,8 @@ namespace DangNhap
             this.TXB_ghiChu = new System.Windows.Forms.TextBox();
             this.CB_thoihan = new System.Windows.Forms.CheckBox();
             this.LLB_themfilenhom = new System.Windows.Forms.LinkLabel();
+            this.LB_PhiDichVu = new System.Windows.Forms.Label();
+            this.TXB_PhiDichVu = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // panel1
@@ -124,7 +126,7 @@ namespace DangNhap
             this.DTP_gio.Enabled = false;
             this.DTP_gio.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTP_gio.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.DTP_gio.Location = new System.Drawing.Point(474, 329);
+            this.DTP_gio.Location = new System.Drawing.Point(474, 405);
             this.DTP_gio.Name = "DTP_gio";
             this.DTP_gio.Size = new System.Drawing.Size(144, 30);
             this.DTP_gio.TabIndex = 203;
@@ -306,7 +308,7 @@ namespace DangNhap
             this.LB_thoihan.AutoSize = true;
             this.LB_thoihan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_thoihan.ForeColor = System.Drawing.Color.White;
-            this.LB_thoihan.Location = new System.Drawing.Point(29, 333);
+            this.LB_thoihan.Location = new System.Drawing.Point(29, 409);
             this.LB_thoihan.Name = "LB_thoihan";
             this.LB_thoihan.Size = new System.Drawing.Size(80, 22);
             this.LB_thoihan.TabIndex = 193;
@@ -321,7 +323,7 @@ namespace DangNhap
             this.DTP_ngay.Enabled = false;
             this.DTP_ngay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTP_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DTP_ngay.Location = new System.Drawing.Point(273, 329);
+            this.DTP_ngay.Location = new System.Drawing.Point(273, 405);
             this.DTP_ngay.Name = "DTP_ngay";
             this.DTP_ngay.Size = new System.Drawing.Size(144, 30);
             this.DTP_ngay.TabIndex = 194;
@@ -361,7 +363,7 @@ namespace DangNhap
             this.CB_thoihan.AutoSize = true;
             this.CB_thoihan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CB_thoihan.ForeColor = System.Drawing.Color.White;
-            this.CB_thoihan.Location = new System.Drawing.Point(198, 336);
+            this.CB_thoihan.Location = new System.Drawing.Point(198, 412);
             this.CB_thoihan.Name = "CB_thoihan";
             this.CB_thoihan.Size = new System.Drawing.Size(18, 17);
             this.CB_thoihan.TabIndex = 208;
@@ -380,12 +382,37 @@ namespace DangNhap
             this.LLB_themfilenhom.Text = "linkLabel1";
             this.LLB_themfilenhom.Visible = false;
             // 
+            // LB_PhiDichVu
+            // 
+            this.LB_PhiDichVu.AutoSize = true;
+            this.LB_PhiDichVu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_PhiDichVu.ForeColor = System.Drawing.Color.White;
+            this.LB_PhiDichVu.Location = new System.Drawing.Point(30, 328);
+            this.LB_PhiDichVu.Name = "LB_PhiDichVu";
+            this.LB_PhiDichVu.Size = new System.Drawing.Size(99, 22);
+            this.LB_PhiDichVu.TabIndex = 240;
+            this.LB_PhiDichVu.Text = "Phí dịch vụ";
+            // 
+            // TXB_PhiDichVu
+            // 
+            this.TXB_PhiDichVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_PhiDichVu.Enabled = false;
+            this.TXB_PhiDichVu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_PhiDichVu.ForeColor = System.Drawing.Color.White;
+            this.TXB_PhiDichVu.Location = new System.Drawing.Point(198, 325);
+            this.TXB_PhiDichVu.Multiline = true;
+            this.TXB_PhiDichVu.Name = "TXB_PhiDichVu";
+            this.TXB_PhiDichVu.Size = new System.Drawing.Size(419, 30);
+            this.TXB_PhiDichVu.TabIndex = 239;
+            // 
             // ThemCongViecNhom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(1277, 609);
+            this.Controls.Add(this.LB_PhiDichVu);
+            this.Controls.Add(this.TXB_PhiDichVu);
             this.Controls.Add(this.LLB_themfilenhom);
             this.Controls.Add(this.LB_Ghichu);
             this.Controls.Add(this.TXB_ghiChu);
@@ -445,5 +472,7 @@ namespace DangNhap
         public System.Windows.Forms.TextBox TXB_ghiChu;
         private System.Windows.Forms.CheckBox CB_thoihan;
         private System.Windows.Forms.LinkLabel LLB_themfilenhom;
+        private System.Windows.Forms.Label LB_PhiDichVu;
+        public System.Windows.Forms.TextBox TXB_PhiDichVu;
     }
 }

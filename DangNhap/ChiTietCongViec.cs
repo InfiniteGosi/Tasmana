@@ -90,7 +90,8 @@ namespace DangNhap
                 {"@ngayCapNhat", DateTime.Now},
                 {"trangThai", CBB_TrangThai.SelectedItem.ToString()},
                 {"@ghiChu", TXB_GhiChu.Text},
-                {"@quyenTruyCap", GetQuyenTruyCap()}
+                {"@quyenTruyCap", GetQuyenTruyCap()},
+                {"@phiDichVu", int.Parse(TXB_PhiDichVu.Text)}
             };
             return dict;
         }

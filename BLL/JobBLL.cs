@@ -171,7 +171,8 @@ namespace BLL
             string trangThai = dt.Rows[i]["trangThai"].ToString();
             string ghiChu = dt.Rows[i]["ghiChu"].ToString();
             int quyenTruyCap = (int)dt.Rows[i]["quyenTruyCap"];
-            Job job = new Job(maCongViec, noiDung, ngayGiao, thoihan, ngayHoanThanh, ngayCapNhat, trangThai, ghiChu, quyenTruyCap);
+            int phiDichVu = (int)dt.Rows[i]["phiDichVu"];
+            Job job = new Job(maCongViec, noiDung, ngayGiao, thoihan, ngayHoanThanh, ngayCapNhat, trangThai, ghiChu, quyenTruyCap, phiDichVu);
             return job;
         }
 

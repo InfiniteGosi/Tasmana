@@ -357,6 +357,7 @@ namespace DangNhap
                 string ghiChu = curJob.GhiChu.ToString();
                 string trangThai = curJob.TrangThai.ToString();
                 DateTime thoiHan = curJob.ThoiHan;
+                int phiDichVu = curJob.PhiDichVu;
                 // Add to ChiTietCongViec 
                 ChiTietCongViec ctcv = new ChiTietCongViec();
                 ctcv.TXB_PhongBan.Text = maPhongBan;
@@ -367,12 +368,13 @@ namespace DangNhap
                 ctcv.TXB_GhiChu.Text = ghiChu;
                 ctcv.TXB_MaCV.Text = maCongViec;
                 ctcv.CBB_TrangThai.Text = trangThai;
+                ctcv.TXB_PhiDichVu.Text = phiDichVu.ToString();
                 if (thoiHan > DateTime.MinValue)
                 {
                     ctcv.CB_thoihan.Checked = true;
                     DateTime date = thoiHan.Date;
                     ctcv.DTP_ngay.Text = date.ToString();
-                    ctcv.DTP_gio.Text = thoiHan.ToString();
+                    ctcv.DTP_gio.Text = thoiHan.TimeOfDay.ToString();
                 }
                 ctcv.LLB_chỉtietfile.Text = JobBLL.Instance.GetNameFile(maCongViec);
                 ctcv.LLB_chỉtietfile.Show();
