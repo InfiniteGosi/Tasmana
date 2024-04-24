@@ -67,10 +67,10 @@ namespace DangNhap
             }
             else
                 GGC_hienthicongviec.DataSource = null;
-            if (currentAccount.Level.Equals("CEO"))
+            if (!currentAccount.Level.Equals("CEO"))
             {
-                BTN_themcongviec.Enabled = true;
-                BTN_themcongviec.Visible = true;
+                BTN_themcongviec.Enabled = false;
+                BTN_themcongviec.Visible = false;
             }
         }
         private void Display_GGC_nhanvien()

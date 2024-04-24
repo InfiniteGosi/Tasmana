@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
@@ -56,6 +56,11 @@ namespace DAO
             string query = $"Select * from NhanVien Where maBoPhan = '{maBoPhan}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
-        
+
+        public DataTable GetEmployees()
+        {
+            string query = $"EXEC [dbo].[Count_Job_State]";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

@@ -125,27 +125,21 @@ namespace DAO
             string query = $"SELECT * FROM CongViec Where maCongViec = '{maCV}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
-        //Lấy nhân viên và số lượng công việc load trong form NhanVien
-        public DataTable GetEmployees()
-        {
-            string query = $"EXEC [dbo].[Count_Job_State]";
-            return DataProvider.Instance.ExecuteQuery(query);
-        }
 
-        //Lấy tất cả công việc của nhân viên
+        //Lấy tất cả công việc của nhân viên phân quyền
         public DataTable GetJobOfEmployees(int quyen)
         {
             string query = $"EXEC [dbo].[Job_Of_Employees] @quyen ='{quyen}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        //Lấy tất cả công việc của nhóm
+        //Lấy tất cả công việc của nhóm phân quyền
         public DataTable GetJobOfGroups(int quyen)
         {
             string query = $"EXEC [dbo].[Job_Of_Groups] @quyen ='{quyen}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
-        //Lấy tất cả công việc của phòng ban
+        //Lấy tất cả công việc của phòng ban phân quyền
         public DataTable GetJobOfDivisions(int quyen)
         {
             string query = $"EXEC [dbo].[Job_Of_Divisions] @quyen ='{quyen}'";
@@ -189,6 +183,20 @@ namespace DAO
         public DataTable GetJobByApartmentId(string maCanHo)
         {
             string query = $"exec SP_LayDichVuTheoMaCanHo @maCanHo = '{maCanHo}'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        //Lấy công việc Phòng ban theo mã phòng ban
+        public DataTable GetJobPbId(string maPhongBan)
+        {
+            string query = $"SELECT * FROM Congviec_PhongBan WHERE maBoPhan = '{maPhongBan}'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        //Lấy công việc nhóm theo mã nhóm
+        public DataTable GetJobGroupId(string maNhom)
+        {
+            string query = $"SELECT * FROM Congviec_Nhom WHERE maNhom = '{maNhom}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
     }

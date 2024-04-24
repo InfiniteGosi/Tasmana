@@ -66,7 +66,7 @@ namespace DangNhap
         private void DisplayGGC_danhsachnhanvien()
         {
             GGC_danhsachnv.Size = new System.Drawing.Size(950, 404);
-            GGC_danhsachnv.DataSource = JobDAO.Instance.GetEmployees();
+            GGC_danhsachnv.DataSource = EmployeeBLL.Instance.GetEmployees();
             
             GGC_danhsachnv.TableDescriptor.Columns[0].HeaderText = "Mã nhân viên";
             GGC_danhsachnv.TableDescriptor.Columns[1].HeaderText = "Họ";

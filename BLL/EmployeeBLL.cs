@@ -203,5 +203,76 @@ namespace BLL
             }
             return employees;
         }
+
+        public DataTable GetEmployees()
+        {
+            DataTable employees = EmployeeDAO.Instance.GetEmployees();
+            for (int i = 0; i < employees.Rows.Count; i++)
+            {
+                if ((int)employees.Rows[i]["congViecPhongBan"] > 0)
+                {
+                    List<Job> jobs = JobBLL.Instance.GetJobPbId(employees.Rows[i]["maBoPhan"].ToString());
+                    if ( jobs.Count > 0)
+                    {
+                        foreach (Job job in jobs)
+                        {
+                            if (job.TrangThai.Equals("Hoàn thành"))
+                            {
+                                int value = (int)employees.Rows[i]["hoanThanh"];
+                                employees.Rows[i].SetField("hoanThanh", value + 1);
+                            }
+                            else if (job.TrangThai.Equals("Đang thực hiện"))
+                            {
+                                int value = (int)employees.Rows[i]["dangThucHien"];
+                                employees.Rows[i].SetField("dangThucHien", value + 1);
+                            }
+                            else if (job.TrangThai.Equals("Chưa bắt đầu"))
+                            {
+                                int value = (int)employees.Rows[i]["chuaBatDau"];
+                                employees.Rows[i].SetField("chuaBatDau", value + 1);
+                            }
+                            else
+                            {
+                                int value = (int)employees.Rows[i]["treHan"];
+                                employees.Rows[i].SetField("treHan", value + 1);
+                            }
+                        }
+                    }
+                }
+                if ((int)employees.Rows[i]["congViecNhom"] > 0)
+                {
+                    Employee emp = EmployeeBLL.Instance.GetEmployeeByEmployeeId(employees.Rows[i]["maNhanVien"].ToString());
+                    List<Job> jobs = JobBLL.Instance.GetJobGroupId(emp.MaNhom);
+                    if (jobs.Count > 0)
+                    {
+                        foreach (Job job in jobs)
+                        {
+                            if (job.TrangThai.Equals("Hoàn thành"))
+                            {
+                                int value = (int)employees.Rows[i]["hoanThanh"];
+                                employees.Rows[i].SetField("hoanThanh", value + 1);
+                            }
+                            else if (job.TrangThai.Equals("Đang thực hiện"))
+                            {
+                                int value = (int)employees.Rows[i]["dangThucHien"];
+                                employees.Rows[i].SetField("dangThucHien", value + 1);
+                            }
+                            else if (job.TrangThai.Equals("Chưa bắt đầu"))
+                            {
+                                int value = (int)employees.Rows[i]["chuaBatDau"];
+                                employees.Rows[i].SetField("chuaBatDau", value + 1);
+                            }
+                            else
+                            {
+                                int value = (int)employees.Rows[i]["treHan"];
+                                employees.Rows[i].SetField("treHan", value + 1);
+                            }
+                        }
+                    }
+                }
+            }
+            return employees;
+        }
+
     }
 }
