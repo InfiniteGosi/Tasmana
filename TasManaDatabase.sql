@@ -208,7 +208,6 @@ CREATE TABLE CanHo
   FOREIGN KEY (maCuDan) REFERENCES cuDan(maCuDan),
 );
 
-select * from CanHo
 
 CREATE TABLE LichSuGiaoDich
 (
@@ -220,7 +219,9 @@ CREATE TABLE LichSuGiaoDich
   lichSuDangKyDoXe DATE NOT NULL,
   tinhTrangCongNo INT NOT NULL,
   PRIMARY KEY (maCanHo),
-  FOREIGN KEY (maCanHo) REFERENCES CanHo(maCanHo)
+  FOREIGN KEY (maCanHo) REFERENCES CanHo(maCanHo),
+  FOREIGN KEY (maCuDanHienTai) REFERENCES CuDan(maCuDan),
+  FOREIGN KEY (maCuDanTruoc) REFERENCES CuDan(maCuDan),
 );
 
 
@@ -746,7 +747,7 @@ begin
 		mucPhiQLHangThang = @mucPhiQLHangThang,
 		soLuongTheThangMay = @soLuongTheThangMay,
 		tinhTrangGDHienTai = @tinhTrangGDHienTai,
-		@tinhTrangThanhToan = @tinhTrangThanhToan,
+		tinhTrangThanhToan = @tinhTrangThanhToan,
 		maCuDan = @maCuDan
 	where maCanHo = @maCanHo
 end
