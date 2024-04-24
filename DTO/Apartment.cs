@@ -9,7 +9,7 @@ namespace DTO
 {
     public class Apartment
     {
-        public string MaCanHo {  get; set; }
+        public string MaCanHo {  get; protected set; }
         public float DienTichGSA { get; set; }
         public float DienTichNSA { get; set; }
         public int ViTriTang { get; set; }
