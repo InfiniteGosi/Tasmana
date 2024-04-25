@@ -498,6 +498,12 @@
     <Compile Include="TrangHienThi.Designer.cs">
       <DependentUpon>TrangHienThi.cs</DependentUpon>
     </Compile>
+    <Compile Include="XepHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XepHang.Designer.cs">
+      <DependentUpon>XepHang.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CanHo.resx">
       <DependentUpon>CanHo.cs</DependentUpon>
     </EmbeddedResource>
@@ -586,6 +592,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TrangHienThi.resx">
       <DependentUpon>TrangHienThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XepHang.resx">
+      <DependentUpon>XepHang.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />

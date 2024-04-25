@@ -552,5 +552,11 @@ namespace DangNhap
             }
             LB_ThongKeCV.Text = "THỐNG KÊ CÔNG VIỆC";
         }
+
+        private void BTN_XepHang_Click(object sender, EventArgs e)
+        {
+            XepHang xepHang = new XepHang();    
+            xepHang.ShowDialog();
+        }
     }
 }

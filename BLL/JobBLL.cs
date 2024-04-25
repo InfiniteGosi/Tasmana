@@ -400,5 +400,40 @@ namespace BLL
             }
             return jobs;
         }
+
+        // Xếp hạng nhân viên theo doanh thu
+        public DataTable GetRatingOfEmployeeByRevenue()
+        {
+            DataTable dt = new DataTable();
+            dt = JobDAO.Instance.GetRatingOfEmployeeByRevenue();
+            return dt;
+        }
+        // Xếp hạng nhân viên theo tỉ lệ hoàn thành công việc
+        public DataTable GetRatingOfEmployeeByFinishRate()
+        {
+            DataTable dt = new DataTable();
+            dt = JobDAO.Instance.GetRatingOfEmployeeByFinishRate();
+            return dt;
+        }
+        // Xếp hạng nhân viên theo số công việc đã thực hiện trong khoảng thời gian cho trước
+        public DataTable GetRatingOfEmployeeByNumOfFinishedJob(DateTime tuNgay, DateTime denNgay)
+        {
+            return JobDAO.Instance.GetRatingOfEmployeeByNumOfFinishedJob(tuNgay, denNgay);
+        }
+        // Xếp hạng Phòng ban (Bộ phận) theo doanh thu
+        public DataTable GetRatingOfDivisionByRevenue()
+        {
+            return JobDAO.Instance.GetRatingOfDivisionByRevenue();
+        }
+        // Xếp hạng Phòng ban (Bộ phận) theo tỉ lệ hoành thành công việc
+        public DataTable GetRatingofDivisionByFinishRate()
+        {
+            return JobDAO.Instance.GetRatingOfDivisionByFinishRate();
+        }
+        // Xếp hạng phòng ban (Bộ phận) theo số công việc ĐÃ thực hiện trong khoảng thời gian cho trước
+        public DataTable GetRatingOfDivisionByNumOfFinishedJob(DateTime tuNgay, DateTime denNgay)
+        {
+            return JobDAO.Instance.GetRatingOfDivisionByNumOfFinishedJob(tuNgay, denNgay);
+        }
     }
 }
