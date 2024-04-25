@@ -104,7 +104,7 @@ namespace DangNhap
             mov = 0;
         }
 
-        private void BTN_huy_Click(object sender, EventArgs e)
+        private void BTN_close_Click(object sender, EventArgs e)
         {
             this.Close();
         }

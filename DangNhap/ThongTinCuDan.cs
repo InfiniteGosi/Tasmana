@@ -16,5 +16,10 @@ namespace DangNhap
         {
             InitializeComponent();
         }
+
+        private void BTN_thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -32,12 +32,9 @@ namespace DangNhap
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThongBao));
             this.BTN_chuadoc = new Guna.UI.WinForms.GunaButton();
             this.BTN_dadoc = new Guna.UI.WinForms.GunaButton();
-            this.PN_hienthithongbao = new System.Windows.Forms.Panel();
-            this.TXB_sotrang = new System.Windows.Forms.TextBox();
-            this.BTN_trangtruoc = new System.Windows.Forms.Button();
-            this.BTN_trangsau = new System.Windows.Forms.Button();
-            this.BTN_in = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_biensoan = new Guna.UI.WinForms.GunaButton();
+            this.GGC_thongbao = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
+            ((System.ComponentModel.ISupportInitialize)(this.GGC_thongbao)).BeginInit();
             this.SuspendLayout();
             // 
             // BTN_chuadoc
@@ -94,86 +91,6 @@ namespace DangNhap
             this.BTN_dadoc.TabIndex = 2;
             this.BTN_dadoc.Text = "Đã gửi";
             // 
-            // PN_hienthithongbao
-            // 
-            this.PN_hienthithongbao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PN_hienthithongbao.AutoScroll = true;
-            this.PN_hienthithongbao.AutoScrollMargin = new System.Drawing.Size(2, 0);
-            this.PN_hienthithongbao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.PN_hienthithongbao.Location = new System.Drawing.Point(226, 103);
-            this.PN_hienthithongbao.Name = "PN_hienthithongbao";
-            this.PN_hienthithongbao.Size = new System.Drawing.Size(1087, 401);
-            this.PN_hienthithongbao.TabIndex = 111;
-            // 
-            // TXB_sotrang
-            // 
-            this.TXB_sotrang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.TXB_sotrang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TXB_sotrang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TXB_sotrang.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_sotrang.ForeColor = System.Drawing.Color.White;
-            this.TXB_sotrang.Location = new System.Drawing.Point(1246, 526);
-            this.TXB_sotrang.Multiline = true;
-            this.TXB_sotrang.Name = "TXB_sotrang";
-            this.TXB_sotrang.Size = new System.Drawing.Size(30, 30);
-            this.TXB_sotrang.TabIndex = 115;
-            this.TXB_sotrang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // BTN_trangtruoc
-            // 
-            this.BTN_trangtruoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_trangtruoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_trangtruoc.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_trangtruoc.ForeColor = System.Drawing.Color.White;
-            this.BTN_trangtruoc.Location = new System.Drawing.Point(1209, 526);
-            this.BTN_trangtruoc.Name = "BTN_trangtruoc";
-            this.BTN_trangtruoc.Size = new System.Drawing.Size(30, 30);
-            this.BTN_trangtruoc.TabIndex = 114;
-            this.BTN_trangtruoc.Text = "<";
-            this.BTN_trangtruoc.UseVisualStyleBackColor = true;
-            // 
-            // BTN_trangsau
-            // 
-            this.BTN_trangsau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_trangsau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_trangsau.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_trangsau.ForeColor = System.Drawing.Color.White;
-            this.BTN_trangsau.Location = new System.Drawing.Point(1283, 526);
-            this.BTN_trangsau.Name = "BTN_trangsau";
-            this.BTN_trangsau.Size = new System.Drawing.Size(30, 30);
-            this.BTN_trangsau.TabIndex = 113;
-            this.BTN_trangsau.Text = ">";
-            this.BTN_trangsau.UseVisualStyleBackColor = true;
-            // 
-            // BTN_in
-            // 
-            this.BTN_in.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BTN_in.AnimationHoverSpeed = 0.07F;
-            this.BTN_in.AnimationSpeed = 0.03F;
-            this.BTN_in.BaseColor1 = System.Drawing.Color.Transparent;
-            this.BTN_in.BaseColor2 = System.Drawing.Color.Transparent;
-            this.BTN_in.BorderColor = System.Drawing.Color.White;
-            this.BTN_in.BorderSize = 1;
-            this.BTN_in.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.BTN_in.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_in.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_in.ForeColor = System.Drawing.Color.White;
-            this.BTN_in.Image = ((System.Drawing.Image)(resources.GetObject("BTN_in.Image")));
-            this.BTN_in.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_in.Location = new System.Drawing.Point(226, 525);
-            this.BTN_in.Name = "BTN_in";
-            this.BTN_in.OnHoverBaseColor1 = System.Drawing.Color.DimGray;
-            this.BTN_in.OnHoverBaseColor2 = System.Drawing.Color.DimGray;
-            this.BTN_in.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.BTN_in.OnHoverForeColor = System.Drawing.Color.Black;
-            this.BTN_in.OnHoverImage = null;
-            this.BTN_in.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_in.Size = new System.Drawing.Size(77, 31);
-            this.BTN_in.TabIndex = 112;
-            this.BTN_in.Text = "In";
-            // 
             // BTN_biensoan
             // 
             this.BTN_biensoan.Animated = true;
@@ -203,18 +120,30 @@ namespace DangNhap
             this.BTN_biensoan.Text = "Biên soạn";
             this.BTN_biensoan.Click += new System.EventHandler(this.BTN_biensoan_Click);
             // 
+            // GGC_thongbao
+            // 
+            this.GGC_thongbao.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.GGC_thongbao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GGC_thongbao.BackColor = System.Drawing.SystemColors.Window;
+            this.GGC_thongbao.Location = new System.Drawing.Point(221, 70);
+            this.GGC_thongbao.Name = "GGC_thongbao";
+            this.GGC_thongbao.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
+            this.GGC_thongbao.Size = new System.Drawing.Size(1052, 565);
+            this.GGC_thongbao.TabIndex = 118;
+            this.GGC_thongbao.Text = "gridGroupingControl1";
+            this.GGC_thongbao.UseRightToLeftCompatibleTextBox = true;
+            this.GGC_thongbao.VersionInfo = "25.1462.39";
+            // 
             // ThongBao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1376, 782);
+            this.Controls.Add(this.GGC_thongbao);
             this.Controls.Add(this.BTN_biensoan);
-            this.Controls.Add(this.PN_hienthithongbao);
-            this.Controls.Add(this.TXB_sotrang);
-            this.Controls.Add(this.BTN_trangtruoc);
-            this.Controls.Add(this.BTN_trangsau);
-            this.Controls.Add(this.BTN_in);
             this.Controls.Add(this.BTN_dadoc);
             this.Controls.Add(this.BTN_chuadoc);
             this.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -223,8 +152,8 @@ namespace DangNhap
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ThongBao";
             this.Text = "ThongBao";
+            ((System.ComponentModel.ISupportInitialize)(this.GGC_thongbao)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -232,11 +161,7 @@ namespace DangNhap
 
         private Guna.UI.WinForms.GunaButton BTN_chuadoc;
         private Guna.UI.WinForms.GunaButton BTN_dadoc;
-        private System.Windows.Forms.Panel PN_hienthithongbao;
-        private System.Windows.Forms.TextBox TXB_sotrang;
-        private System.Windows.Forms.Button BTN_trangtruoc;
-        private System.Windows.Forms.Button BTN_trangsau;
-        private Guna.UI.WinForms.GunaGradientButton BTN_in;
         private Guna.UI.WinForms.GunaButton BTN_biensoan;
+        private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl GGC_thongbao;
     }
 }

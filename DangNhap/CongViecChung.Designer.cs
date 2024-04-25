@@ -163,6 +163,9 @@ namespace DangNhap
             // GGC_hienthicongviec
             // 
             this.GGC_hienthicongviec.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.GGC_hienthicongviec.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GGC_hienthicongviec.BackColor = System.Drawing.SystemColors.Window;
             this.GGC_hienthicongviec.Location = new System.Drawing.Point(22, 114);
             this.GGC_hienthicongviec.Name = "GGC_hienthicongviec";
