@@ -377,5 +377,28 @@ namespace BLL
             }
             return jobs;
         }
+        public List<Job> GetJobPbId(string maPhongBan)
+        {
+            List<Job> jobs = new List<Job>();
+            DataTable dt = JobDAO.Instance.GetJobPbId(maPhongBan);
+            for(int i = 0;i < dt.Rows.Count; i++)
+            {
+                Job j = GetJobFromJobID(dt.Rows[i]["maCongViec"].ToString());
+                jobs.Add(j);
+            }
+            return jobs;
+        }
+
+        public List<Job> GetJobGroupId(string maNhom)
+        {
+            List<Job> jobs = new List<Job>();
+            DataTable dt = JobDAO.Instance.GetJobGroupId(maNhom);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                Job j = GetJobFromJobID(dt.Rows[i]["maCongViec"].ToString());
+                jobs.Add(j);
+            }
+            return jobs;
+        }
     }
 }

@@ -25,6 +25,21 @@ namespace DangNhap
             LB_tendangnhap.Text = $"Xin chào, {currentAccount.EmployeeId} - {currentAccount.Level}";
             Timer_KTCongViec.Start();
             appTime = 0;
+            if (!currentAccount.Level.Equals("CEO"))
+            {
+                BTN_nhanvien.Enabled = false;
+                BTN_nhanvien.Visible = false;
+            }
+            if (!currentAccount.Level.Equals("CEO"))
+            {
+                BTN_canho.Enabled = false;
+                BTN_canho.Visible = false;
+            }
+            if (!currentAccount.Level.Equals("CEO"))
+            {
+                BTN_cudan.Enabled = false;
+                BTN_cudan.Visible = false;
+            }
         }
         private Form currentFormChild;
 
