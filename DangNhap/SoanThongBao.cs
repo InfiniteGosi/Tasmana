@@ -16,11 +16,6 @@ namespace DangNhap
         {
             InitializeComponent();
         }
-
-        private void BTN_thoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
         //Di chuyển form
         int mov;
         int movX;
@@ -43,6 +38,11 @@ namespace DangNhap
         private void SoanThongBao_MouseUp(object sender, MouseEventArgs e)
         {
             mov = 0;
+        }
+
+        private void BTN_thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

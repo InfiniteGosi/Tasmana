@@ -33,6 +33,10 @@ namespace DangNhap
         {
             SyncfusionLicenseProvider.RegisterLicense("MzIxOTI2MkAzMjM1MmUzMDJlMzBORkJZeFRVdUQxeERjT2xkWC9vdFgxS29wUmREOU9CZVdENkRUN0lrSStVPQ==;Mgo+DSMBaFt6QHFqVkNrXVNbdV5dVGpAd0N3RGlcdlR1fUUmHVdTRHRbQlliS3xTck1hW35Wcnc=");
             InitializeComponent();
+            BTN_show.Visible = true;
+            BTN_show.Enabled = true;
+            BTN_hide.Visible = false;
+            BTN_hide.Enabled = false;
         }
         private bool CheckAccountExistence(string userId)
         {
@@ -120,19 +124,22 @@ namespace DangNhap
         {
             mov = 0;
         }
-
-        private void VB_HienMatKhau_CheckedChanged(object sender, EventArgs e)
+        private void BTN_show_Click(object sender, EventArgs e)
         {
-            if (VB_HienMatKhau.Checked)
-            {
-                TB_MatKhau.UseSystemPasswordChar = true;
-            }
-            else
-            {
-                TB_MatKhau.UseSystemPasswordChar = false;
-            }
+            TB_MatKhau.UseSystemPasswordChar = true;
+            BTN_show.Visible = false;
+            BTN_show.Enabled = false;
+            BTN_hide.Visible = true;
+            BTN_hide.Enabled = true;
         }
-
+        private void BTN_hide_Click(object sender, EventArgs e)
+        {
+            TB_MatKhau.UseSystemPasswordChar = false;
+            BTN_show.Visible = true;
+            BTN_show.Enabled = true;
+            BTN_hide.Visible = false;
+            BTN_hide.Enabled = false;
+        }
         private void DangNhap_Load(object sender, EventArgs e)
         {
             List<Credential> credentials = CredentialHandler.LoadCredential();

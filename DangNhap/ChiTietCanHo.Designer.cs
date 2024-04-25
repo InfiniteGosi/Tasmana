@@ -41,6 +41,9 @@ namespace DangNhap
             this.LB_thanhtoan = new System.Windows.Forms.Label();
             this.LB_phongngu = new System.Windows.Forms.Label();
             this.PN_hienthi = new System.Windows.Forms.Panel();
+            this.NUD_mucphiql = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
+            this.NUD_vitritang = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
+            this.label22 = new System.Windows.Forms.Label();
             this.TXB_loaicanho = new System.Windows.Forms.TextBox();
             this.TXB_NSA = new System.Windows.Forms.TextBox();
             this.TXB_GSA = new System.Windows.Forms.TextBox();
@@ -93,10 +96,9 @@ namespace DangNhap
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.BTN_thoat = new Guna.UI.WinForms.GunaGradientButton();
-            this.label22 = new System.Windows.Forms.Label();
-            this.NUD_vitritang = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
-            this.NUD_mucphiql = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
             this.PN_hienthi.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_mucphiql)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_vitritang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_thanhtoan)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -107,8 +109,6 @@ namespace DangNhap
             ((System.ComponentModel.ISupportInitialize)(this.NUD_toilet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_phongngu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_hinhcanho)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUD_vitritang)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUD_mucphiql)).BeginInit();
             this.SuspendLayout();
             // 
             // LB_ttch
@@ -269,6 +269,44 @@ namespace DangNhap
             this.PN_hienthi.Name = "PN_hienthi";
             this.PN_hienthi.Size = new System.Drawing.Size(1391, 708);
             this.PN_hienthi.TabIndex = 38;
+            // 
+            // NUD_mucphiql
+            // 
+            this.NUD_mucphiql.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.NUD_mucphiql.BeforeTouchSize = new System.Drawing.Size(375, 30);
+            this.NUD_mucphiql.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUD_mucphiql.ForeColor = System.Drawing.Color.White;
+            this.NUD_mucphiql.Location = new System.Drawing.Point(970, 365);
+            this.NUD_mucphiql.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.NUD_mucphiql.Name = "NUD_mucphiql";
+            this.NUD_mucphiql.Size = new System.Drawing.Size(375, 30);
+            this.NUD_mucphiql.TabIndex = 224;
+            // 
+            // NUD_vitritang
+            // 
+            this.NUD_vitritang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.NUD_vitritang.BeforeTouchSize = new System.Drawing.Size(375, 30);
+            this.NUD_vitritang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUD_vitritang.ForeColor = System.Drawing.Color.White;
+            this.NUD_vitritang.Location = new System.Drawing.Point(194, 167);
+            this.NUD_vitritang.Name = "NUD_vitritang";
+            this.NUD_vitritang.Size = new System.Drawing.Size(375, 30);
+            this.NUD_vitritang.TabIndex = 223;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.White;
+            this.label22.Location = new System.Drawing.Point(33, 167);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(89, 22);
+            this.label22.TabIndex = 220;
+            this.label22.Text = "Vị trí tầng";
             // 
             // TXB_loaicanho
             // 
@@ -918,50 +956,11 @@ namespace DangNhap
             this.BTN_thoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_thoat.Click += new System.EventHandler(this.BTN_thoat_Click);
             // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(33, 167);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(89, 22);
-            this.label22.TabIndex = 220;
-            this.label22.Text = "Vị trí tầng";
-            // 
-            // NUD_vitritang
-            // 
-            this.NUD_vitritang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.NUD_vitritang.BeforeTouchSize = new System.Drawing.Size(375, 30);
-            this.NUD_vitritang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NUD_vitritang.ForeColor = System.Drawing.Color.White;
-            this.NUD_vitritang.Location = new System.Drawing.Point(194, 167);
-            this.NUD_vitritang.Name = "NUD_vitritang";
-            this.NUD_vitritang.Size = new System.Drawing.Size(375, 30);
-            this.NUD_vitritang.TabIndex = 223;
-            // 
-            // NUD_mucphiql
-            // 
-            this.NUD_mucphiql.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.NUD_mucphiql.BeforeTouchSize = new System.Drawing.Size(375, 30);
-            this.NUD_mucphiql.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NUD_mucphiql.ForeColor = System.Drawing.Color.White;
-            this.NUD_mucphiql.Location = new System.Drawing.Point(970, 365);
-            this.NUD_mucphiql.Maximum = new decimal(new int[] {
-            1000000000,
-            0,
-            0,
-            0});
-            this.NUD_mucphiql.Name = "NUD_mucphiql";
-            this.NUD_mucphiql.Size = new System.Drawing.Size(375, 30);
-            this.NUD_mucphiql.TabIndex = 224;
-            // 
             // ChiTietCanHo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1394, 840);
             this.Controls.Add(this.PN_hienthi);
             this.Controls.Add(this.panel5);
@@ -986,6 +985,8 @@ namespace DangNhap
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ChiTietCanHo_MouseUp);
             this.PN_hienthi.ResumeLayout(false);
             this.PN_hienthi.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_mucphiql)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_vitritang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_thanhtoan)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -997,8 +998,6 @@ namespace DangNhap
             ((System.ComponentModel.ISupportInitialize)(this.NUD_toilet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_phongngu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_hinhcanho)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUD_vitritang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUD_mucphiql)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

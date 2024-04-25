@@ -88,5 +88,33 @@ namespace DangNhap
             }
 
         }
+        //Di chuyển form
+        int mov;
+        int movX;
+        int movY;
+        private void QuenMatKhau_MouseDown(object sender, MouseEventArgs e)
+        {
+            mov = 1;
+            movX = e.X;
+            movY = e.Y;
+        }
+
+        private void QuenMatKhau_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mov == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - movX, MousePosition.Y - movY);
+            }
+        }
+
+        private void QuenMatKhau_MouseUp(object sender, MouseEventArgs e)
+        {
+            mov = 0;
+        }
+
+        private void BTN_thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

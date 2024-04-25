@@ -173,16 +173,19 @@ namespace DangNhap
 
         private void BTN_square_Click(object sender, EventArgs e)
         {
-            if(WindowState == FormWindowState.Maximized)
+            if(this.WindowState == FormWindowState.Maximized)
             {
-                WindowState = FormWindowState.Normal;   
+                this.WindowState = FormWindowState.Normal;   
             }
             else
             {
-                WindowState = FormWindowState.Maximized;
+                this.WindowState = FormWindowState.Maximized;
             }
         }
-
+        private void gunaGradientButton1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
         // Thông báo khi sắp tới thời hạn hoàn thành công việc
         public DateTime tomorrowDay = DateTime.Today.AddDays(1); // Lấy thời gian là 1 ngày sau đó là mốc kiểm tra gaanf tới hạn hoàn thành
         public DateTime curDay = DateTime.Today;
@@ -255,5 +258,7 @@ namespace DangNhap
             // reset timer
             appTime = 0;
         }
+
+        
     }
 }

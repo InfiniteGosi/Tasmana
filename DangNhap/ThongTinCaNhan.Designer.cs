@@ -29,6 +29,7 @@ namespace DangNhap
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThongTinCaNhan));
             this.TXB_bhxh = new System.Windows.Forms.TextBox();
             this.TXB_quequan = new System.Windows.Forms.TextBox();
             this.LB_quequan = new System.Windows.Forms.Label();
@@ -102,6 +103,11 @@ namespace DangNhap
             this.LB_ngaysinh = new System.Windows.Forms.Label();
             this.BTN_luu = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.BTN_x = new Guna.UI.WinForms.GunaGradientButton();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -337,9 +343,9 @@ namespace DangNhap
             this.panel5.Controls.Add(this.panel4);
             this.panel5.Controls.Add(this.panel1);
             this.panel5.Controls.Add(this.panel3);
-            this.panel5.Location = new System.Drawing.Point(0, 66);
+            this.panel5.Location = new System.Drawing.Point(0, 85);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1358, 777);
+            this.panel5.Size = new System.Drawing.Size(1358, 758);
             this.panel5.TabIndex = 52;
             // 
             // panel6
@@ -928,7 +934,7 @@ namespace DangNhap
             this.BTN_luu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_luu.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_luu.ForeColor = System.Drawing.Color.White;
-            this.BTN_luu.Location = new System.Drawing.Point(1182, 17);
+            this.BTN_luu.Location = new System.Drawing.Point(1148, 46);
             this.BTN_luu.Name = "BTN_luu";
             this.BTN_luu.Size = new System.Drawing.Size(148, 33);
             this.BTN_luu.TabIndex = 54;
@@ -947,6 +953,70 @@ namespace DangNhap
             this.label3.TabIndex = 57;
             this.label3.Text = "THÔNG TIN NHÂN VIÊN";
             // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.Color.White;
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel22.Location = new System.Drawing.Point(1, 842);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(1356, 1);
+            this.panel22.TabIndex = 61;
+            // 
+            // panel23
+            // 
+            this.panel23.BackColor = System.Drawing.Color.White;
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel23.Location = new System.Drawing.Point(1357, 1);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(1, 842);
+            this.panel23.TabIndex = 60;
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.White;
+            this.panel24.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel24.Location = new System.Drawing.Point(0, 1);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(1, 842);
+            this.panel24.TabIndex = 59;
+            // 
+            // panel25
+            // 
+            this.panel25.BackColor = System.Drawing.Color.White;
+            this.panel25.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel25.Location = new System.Drawing.Point(0, 0);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(1358, 1);
+            this.panel25.TabIndex = 58;
+            // 
+            // BTN_x
+            // 
+            this.BTN_x.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_x.AnimationHoverSpeed = 1F;
+            this.BTN_x.AnimationSpeed = 1F;
+            this.BTN_x.BaseColor1 = System.Drawing.Color.Transparent;
+            this.BTN_x.BaseColor2 = System.Drawing.Color.Transparent;
+            this.BTN_x.BorderColor = System.Drawing.Color.Black;
+            this.BTN_x.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_x.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_x.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_x.ForeColor = System.Drawing.Color.Black;
+            this.BTN_x.Image = ((System.Drawing.Image)(resources.GetObject("BTN_x.Image")));
+            this.BTN_x.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_x.ImageSize = new System.Drawing.Size(10, 10);
+            this.BTN_x.Location = new System.Drawing.Point(1298, 0);
+            this.BTN_x.Name = "BTN_x";
+            this.BTN_x.OnHoverBaseColor1 = System.Drawing.Color.Red;
+            this.BTN_x.OnHoverBaseColor2 = System.Drawing.Color.Red;
+            this.BTN_x.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_x.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_x.OnHoverImage = null;
+            this.BTN_x.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_x.Size = new System.Drawing.Size(60, 30);
+            this.BTN_x.TabIndex = 62;
+            this.BTN_x.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_x.Click += new System.EventHandler(this.BTN_x_Click);
+            // 
             // ThongTinCaNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -954,13 +1024,22 @@ namespace DangNhap
             this.AutoScrollMargin = new System.Drawing.Size(20, 20);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1358, 843);
+            this.Controls.Add(this.panel22);
+            this.Controls.Add(this.panel23);
+            this.Controls.Add(this.panel24);
+            this.Controls.Add(this.panel25);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.BTN_luu);
             this.Controls.Add(this.panel5);
+            this.Controls.Add(this.BTN_x);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ThongTinCaNhan";
             this.Text = "ThongTinCaNhan";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ThongTinCaNhan_FormClosing);
             this.Load += new System.EventHandler(this.ThongTinCaNhan_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ThongTinCaNhan_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ThongTinCaNhan_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ThongTinCaNhan_MouseUp);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -1051,5 +1130,10 @@ namespace DangNhap
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Panel panel25;
+        private Guna.UI.WinForms.GunaGradientButton BTN_x;
     }
 }

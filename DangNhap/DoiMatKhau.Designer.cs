@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoiMatKhau));
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.TXB_mkhientai = new System.Windows.Forms.TextBox();
@@ -43,8 +44,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.BTN_huy = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_luu = new Guna.UI.WinForms.GunaGradientButton();
+            this.BTN_close = new Guna.UI.WinForms.GunaButton();
             this.SuspendLayout();
             // 
             // label1
@@ -198,36 +199,6 @@
             this.panel7.Size = new System.Drawing.Size(570, 1);
             this.panel7.TabIndex = 67;
             // 
-            // BTN_huy
-            // 
-            this.BTN_huy.Animated = true;
-            this.BTN_huy.AnimationHoverSpeed = 0.5F;
-            this.BTN_huy.AnimationSpeed = 0.03F;
-            this.BTN_huy.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_huy.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(218)))), ((int)(((byte)(215)))));
-            this.BTN_huy.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(218)))), ((int)(((byte)(215)))));
-            this.BTN_huy.BorderColor = System.Drawing.Color.Black;
-            this.BTN_huy.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.BTN_huy.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_huy.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_huy.ForeColor = System.Drawing.Color.Black;
-            this.BTN_huy.Image = null;
-            this.BTN_huy.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_huy.Location = new System.Drawing.Point(286, 504);
-            this.BTN_huy.Name = "BTN_huy";
-            this.BTN_huy.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(30)))), ((int)(((byte)(43)))));
-            this.BTN_huy.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(30)))), ((int)(((byte)(43)))));
-            this.BTN_huy.OnHoverBorderColor = System.Drawing.Color.White;
-            this.BTN_huy.OnHoverForeColor = System.Drawing.Color.White;
-            this.BTN_huy.OnHoverImage = null;
-            this.BTN_huy.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_huy.Radius = 5;
-            this.BTN_huy.Size = new System.Drawing.Size(129, 35);
-            this.BTN_huy.TabIndex = 105;
-            this.BTN_huy.Text = "Hủy";
-            this.BTN_huy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.BTN_huy.Click += new System.EventHandler(this.BTN_huy_Click);
-            // 
             // BTN_luu
             // 
             this.BTN_luu.Animated = true;
@@ -258,13 +229,38 @@
             this.BTN_luu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_luu.Click += new System.EventHandler(this.BTN_luu_Click);
             // 
+            // BTN_close
+            // 
+            this.BTN_close.AnimationHoverSpeed = 0.07F;
+            this.BTN_close.AnimationSpeed = 0.03F;
+            this.BTN_close.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_close.BaseColor = System.Drawing.Color.Transparent;
+            this.BTN_close.BorderColor = System.Drawing.Color.Black;
+            this.BTN_close.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_close.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_close.ForeColor = System.Drawing.Color.White;
+            this.BTN_close.Image = ((System.Drawing.Image)(resources.GetObject("BTN_close.Image")));
+            this.BTN_close.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_close.ImageSize = new System.Drawing.Size(10, 10);
+            this.BTN_close.Location = new System.Drawing.Point(511, 1);
+            this.BTN_close.Name = "BTN_close";
+            this.BTN_close.OnHoverBaseColor = System.Drawing.Color.Red;
+            this.BTN_close.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.BTN_close.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_close.OnHoverImage = null;
+            this.BTN_close.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_close.Size = new System.Drawing.Size(60, 30);
+            this.BTN_close.TabIndex = 105;
+            this.BTN_close.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_close.Click += new System.EventHandler(this.BTN_close_Click);
+            // 
             // DoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(572, 552);
-            this.Controls.Add(this.BTN_huy);
             this.Controls.Add(this.BTN_luu);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
@@ -281,6 +277,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.BTN_close);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DoiMatKhau";
             this.Text = "DoiMatKhau";
@@ -309,7 +306,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
-        private Guna.UI.WinForms.GunaGradientButton BTN_huy;
         private Guna.UI.WinForms.GunaGradientButton BTN_luu;
+        private Guna.UI.WinForms.GunaButton BTN_close;
     }
 }
