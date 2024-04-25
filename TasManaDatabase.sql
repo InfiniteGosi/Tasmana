@@ -1207,7 +1207,7 @@ END
 GO
 
 -- Xếp hạng theo tỉ lệ hoàn thành công việc Theo Phòng ban
-CREATE Procedure [dbo].[XepHangTheoTileHoanThanhCongViec]
+CREATE Procedure [dbo].[XepHangTheoTiLeHoanThanhCongViecTheoPhongBan]
 AS
 BEGIN
 	SELECT 
