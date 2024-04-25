@@ -52,6 +52,7 @@ namespace DangNhap
         {
             DataTable dataSource = new DataTable();
             dataSource = JobBLL.Instance.GetRatingOfEmployeeByRevenue();
+            GGC_ThongKe.DataSource = null; // Clear previous data
             GGC_ThongKe.DataSource = dataSource;
             if(dataSource.Columns.Count > 0 )
             {
@@ -66,6 +67,7 @@ namespace DangNhap
         {
             DataTable dataSource = new DataTable();
             dataSource = JobBLL.Instance.GetRatingOfEmployeeByFinishRate();
+            GGC_ThongKe.DataSource = null; // Clear previous data
             GGC_ThongKe.DataSource = dataSource;
             if(dataSource.Columns.Count > 0 )
             {
@@ -85,6 +87,7 @@ namespace DangNhap
             DateTime tuNgay = DTP_TuNgay.Value;
             DateTime denNgay = DTP_DenNgay.Value;
             dataSource = JobBLL.Instance.GetRatingOfEmployeeByNumOfFinishedJob(tuNgay, denNgay);
+            GGC_ThongKe.DataSource = null; // Clear previous data
             GGC_ThongKe.DataSource = dataSource;
             if(dataSource.Columns.Count > 0 )
             {
@@ -99,6 +102,7 @@ namespace DangNhap
         {
             DataTable dataSource = new DataTable();
             dataSource = JobBLL.Instance.GetRatingOfDivisionByRevenue();
+            GGC_ThongKe.DataSource = null; // Clear previous data
             GGC_ThongKe.DataSource = dataSource;
             if (dataSource.Columns.Count > 0)
             {
@@ -114,6 +118,7 @@ namespace DangNhap
         {
             DataTable dataSource = new DataTable();
             dataSource = JobBLL.Instance.GetRatingofDivisionByFinishRate();
+            GGC_ThongKe.DataSource = null; // Clear previous data
             GGC_ThongKe.DataSource = dataSource;
             if (dataSource.Columns.Count > 0)
             {
@@ -133,6 +138,7 @@ namespace DangNhap
             DateTime tuNgay = DTP_TuNgay.Value;
             DateTime denNgay = DTP_DenNgay.Value;
             dataSource = JobBLL.Instance.GetRatingOfDivisionByNumOfFinishedJob(tuNgay, denNgay);
+            GGC_ThongKe.DataSource = null; // Clear previous data
             GGC_ThongKe.DataSource = dataSource;
             if (dataSource.Columns.Count > 0)
             {
