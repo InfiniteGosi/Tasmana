@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Remoting.Messaging;
 using System.Security.Cryptography;
+using System.Reflection.Emit;
 
 namespace DAO
 {
@@ -198,6 +199,52 @@ namespace DAO
         {
             string query = $"SELECT * FROM Congviec_Nhom WHERE maNhom = '{maNhom}'";
             return DataProvider.Instance.ExecuteQuery(query);
+        }
+        // Xếp hạng nhân viên theo doanh thu
+        public DataTable GetRatingOfEmployeeByRevenue()
+        {
+            string query = "EXEC XepHangDoanhThuTheoNV";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        // Xếp hạng nhân viên theo tỉ lệ hoàn thành công việc
+        public DataTable GetRatingOfEmployeeByFinishRate()
+        {
+            string query = "EXEC XepHangTiLeHoanThanhCVTheoNhanVien";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        // Xếp hạng nhân viên theo số công việc đã thực hiện trong khoảng thời gian cho trước
+        public DataTable GetRatingOfEmployeeByNumOfFinishedJob(DateTime tuNgay, DateTime denNgay)
+        {
+            // Tạo dictionary chứa các tham số cho stored procedure
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@tuNgay", tuNgay);
+            parameters.Add("@denNgay", denNgay);
+            // Gọi stored procedure và nhận kết quả vào một DataTable
+            DataTable result = DataProvider.Instance.ExecuteStoredProcedureWithTableReturn("XepHangNhanVienTheoSoCongViecDaHoanThanh", parameters);
+            return result;
+        }
+        // Xếp hạng Phòng ban (Bộ phận) theo doanh thu
+        public DataTable GetRatingOfDivisionByRevenue()
+        {
+            string query = "EXEC XepHangDoanhThuTheoPhongBan";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        // Xếp hạng Phòng ban (Bộ phận) theo tỉ lệ hoành thành công việc
+        public DataTable GetRatingOfDivisionByFinishRate()
+        {
+            string query = "EXEC XepHangTheoTiLeHoanThanhCongViecTheoPhongBan";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        // Xếp hạng phòng ban (Bộ phận) theo số công việc ĐÃ thực hiện trong khoảng thời gian cho trước
+        public DataTable GetRatingOfDivisionByNumOfFinishedJob(DateTime tuNgay, DateTime denNgay)
+        {
+            // Tạo dictionary chứa các tham số cho stored procedure
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@tuNgay", tuNgay);
+            parameters.Add("@denNgay", denNgay);
+            // Gọi stored procedure và nhận kết quả vào một DataTable
+            DataTable result = DataProvider.Instance.ExecuteStoredProcedureWithTableReturn("XepHangPhongBanTheoSoCongViecDaHoanThanh", parameters);
+            return result;
         }
     }
 }

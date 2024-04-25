@@ -852,7 +852,7 @@ BEGIN
         -- Cập nhật trạng thái thành 'Trễ hạn' nếu trạng thái không phải 'Hoàn thành', ngày hoàn thành là NULL, và thời hạn đã qua hoặc ngày hoàn thành muộn hơn thời hạn
         UPDATE CongViec
         SET trangThai = N'Trễ hạn'
-        WHERE (CAST(thoiHan AS datetime) < CAST(GETDATE() AS datetime) OR CAST(ngayHoanThanh AS datetime) > CAST(thoiHan AS datetime));
+        WHERE ngayHoanThanh != null and ((CAST(thoiHan AS datetime) < CAST(GETDATE() AS datetime) OR CAST(ngayHoanThanh AS datetime) > CAST(thoiHan AS datetime))) ;
     END
 END;
 GO
@@ -1097,4 +1097,212 @@ begin
 	inner join NhanVien nv on nv.maNhanVien = cvnv.maNhanVien
 	where yc.maCanHo = @maCanHo
 end
-go
+------------------------------------ XẾP HẠNG/THỐNG KÊ DỮ LIỆU CHUNG --------------------------------------
+GO
+-------------------- XẾP HẠNG THEO DOANH THU -----------------------------
+-- Xếp hạng Phòng Ban theo doanh thu phí dịch vụ 
+Create Procedure [dbo].[XepHangDoanhThuTheoPhongBan]
+As 
+Begin
+	SELECT maBoPhan, tenPB, SUM(TongDoanhThu) AS TongDoanhThu
+	FROM (
+		SELECT PB.maBoPhan, PB.tenPB, SUM(CV.phiDichVu) AS TongDoanhThu
+		FROM PhongBan PB
+		JOIN NhanVien NV ON PB.maBoPhan = NV.maBoPhan
+		JOIN Congviec_NhanVien CVNV ON NV.maNhanVien = CVNV.maNhanVien
+		JOIN CongViec CV ON CVNV.maCongViec = CV.maCongViec
+		GROUP BY PB.maBoPhan, PB.tenPB
+
+		UNION ALL
+
+		SELECT PB.maBoPhan, PB.tenPB, SUM(CV.phiDichVu) AS TongDoanhThu
+		FROM PhongBan PB
+		JOIN Nhom N ON PB.maBoPhan = N.maBoPhan
+		JOIN CongViec_Nhom CVN ON N.maNhom = CVN.maNhom
+		JOIN CongViec CV ON CVN.maCongViec = CV.maCongViec
+		GROUP BY PB.maBoPhan, PB.tenPB
+
+		UNION ALL
+
+		SELECT PB.maBoPhan, PB.tenPB, SUM(CV.phiDichVu) AS TongDoanhThu
+		FROM PhongBan PB
+		JOIN Congviec_PhongBan CVPB ON PB.maBoPhan = CVPB.maBoPhan
+		JOIN CongViec CV ON CVPB.maCongViec = CV.maCongViec
+		GROUP BY PB.maBoPhan, PB.tenPB
+	) AS TongHop
+	GROUP BY maBoPhan, tenPB
+	ORDER BY TongDoanhThu DESC;
+End
+-------------------------------------------------------------------------------------
+GO
+-- Xếp hạng doanh thu theo Nhân viên
+CREATE Procedure [dbo].[XepHangDoanhThuTheoNV]
+AS
+BEGIN
+	SELECT NV.maNhanVien, NV.ho + ' ' + NV.ten AS HoTen, SUM(CV.phiDichVu) AS TongDoanhThu
+	FROM NhanVien NV
+	JOIN CongViec_NhanVien CVNV ON NV.maNhanVien = CVNV.maNhanVien
+	JOIN CongViec CV ON CVNV.maCongViec = CV.maCongViec
+	GROUP BY NV.maNhanVien, NV.ho, NV.ten
+	ORDER BY TongDoanhThu DESC;
+END
+-------------------- HẾT XẾP HẠNG THEO DOANH THU -----------------------------
+GO
+-------------------- XẾP HẠNG THEO TỈ LỆ HOÀN THÀNH CÔNG VIỆC -----------------------------
+-- THEO NHÂN VIÊN
+CREATE Procedure [dbo].[XepHangTiLeHoanThanhCVTheoNhanVien]
+AS
+BEGIN
+	SELECT 
+		NV.maNhanVien, 
+		NV.ho + ' ' + NV.ten AS TenNhanVien, 
+		ROUND(SUM(TongHoanThanhDungHan) * 100.0 / SUM(TongSoCV), 2) AS TiLeHoanThanhDungHan,
+		ROUND(SUM(TongHoanThanhTruocHan) * 100.0 / SUM(TongSoCV), 2) AS TiLeHoanThanhTruocHan,
+		ROUND(SUM(TongHoanThanhTreHan) * 100.0 / SUM(TongSoCV), 2) AS TiLeHoanThanhTreHan,
+		ROUND(SUM(TongKhongHoanThanh) * 100.0 / SUM(TongSoCV), 2) AS TiLeKhongHoanThanh
+	FROM (
+		SELECT NV.maNhanVien,
+			SUM(CASE WHEN CONVERT(date, CV.ngayHoanThanh) = CONVERT(date, CV.thoiHan) THEN 1 ELSE 0 END) AS TongHoanThanhDungHan,
+			SUM(CASE WHEN CV.ngayHoanThanh < CV.thoiHan THEN 1 ELSE 0 END) AS TongHoanThanhTruocHan,
+			SUM(CASE WHEN CV.ngayHoanThanh > CV.thoiHan THEN 1 ELSE 0 END) AS TongHoanThanhTreHan,
+			SUM(CASE WHEN CV.ngayHoanThanh IS NULL THEN 1 ELSE 0 END) AS TongKhongHoanThanh,
+			COUNT(*) AS TongSoCV
+		FROM NhanVien NV
+		JOIN Congviec_NhanVien CVNV ON NV.maNhanVien = CVNV.maNhanVien
+		JOIN CongViec CV ON CVNV.maCongViec = CV.maCongViec
+		GROUP BY NV.maNhanVien
+
+		UNION ALL
+
+		SELECT NV.maNhanVien,
+			SUM(CASE WHEN CONVERT(date, CV.ngayHoanThanh) = CONVERT(date, CV.thoiHan) THEN 1 ELSE 0 END) AS TongHoanThanhDungHan,
+			SUM(CASE WHEN CV.ngayHoanThanh < CV.thoiHan THEN 1 ELSE 0 END) AS TongHoanThanhTruocHan,
+			SUM(CASE WHEN CV.ngayHoanThanh > CV.thoiHan THEN 1 ELSE 0 END) AS TongHoanThanhTreHan,
+			SUM(CASE WHEN CV.ngayHoanThanh IS NULL THEN 1 ELSE 0 END) AS TongKhongHoanThanh,
+			COUNT(*) AS TongSoCV
+		FROM NhanVien NV
+		JOIN Nhom N ON NV.maNhom = N.maNhom
+		JOIN CongViec_Nhom CVN ON N.maNhom = CVN.maNhom
+		JOIN CongViec CV ON CVN.maCongViec = CV.maCongViec
+		GROUP BY NV.maNhanVien
+
+		UNION ALL
+
+		SELECT NV.maNhanVien,
+			SUM(CASE WHEN CONVERT(date, CV.ngayHoanThanh) = CONVERT(date, CV.thoiHan) THEN 1 ELSE 0 END) AS TongHoanThanhDungHan,
+			SUM(CASE WHEN CV.ngayHoanThanh < CV.thoiHan THEN 1 ELSE 0 END) AS TongHoanThanhTruocHan,
+			SUM(CASE WHEN CV.ngayHoanThanh > CV.thoiHan THEN 1 ELSE 0 END) AS TongHoanThanhTreHan,
+			SUM(CASE WHEN CV.ngayHoanThanh IS NULL THEN 1 ELSE 0 END) AS TongKhongHoanThanh,
+			COUNT(*) AS TongSoCV
+		FROM NhanVien NV
+		JOIN Congviec_NhanVien CVNV ON NV.maNhanVien = CVNV.maNhanVien
+		JOIN CongViec_PhongBan CVPB ON NV.maBoPhan = CVPB.maBoPhan
+		JOIN CongViec CV ON CVNV.maCongViec = CV.maCongViec AND CV.maCongViec = CVPB.maCongViec
+		GROUP BY NV.maNhanVien
+	) AS TongHop
+	JOIN NhanVien NV ON TongHop.maNhanVien = NV.maNhanVien
+	GROUP BY NV.maNhanVien, NV.ho, NV.ten
+	ORDER BY  TiLeHoanThanhTruocHan DESC, TiLeHoanThanhDungHan DESC, TiLeHoanThanhTreHan DESC, TiLeKhongHoanThanh DESC;
+END
+GO
+
+-- Xếp hạng theo tỉ lệ hoàn thành công việc Theo Phòng ban
+CREATE Procedure [dbo].[XepHangTheoTileHoanThanhCongViec]
+AS
+BEGIN
+	SELECT 
+		PB.maBoPhan, 
+		PB.tenPB AS TenPhongBan, 
+		ROUND(SUM(TongHoanThanhDungHan) * 100.0 / SUM(TongSoCV), 2) AS TiLeHoanThanhDungHan,
+		ROUND(SUM(TongHoanThanhTruocHan) * 100.0 / SUM(TongSoCV), 2) AS TiLeHoanThanhTruocHan,
+		ROUND(SUM(TongHoanThanhTreHan) * 100.0 / SUM(TongSoCV), 2) AS TiLeHoanThanhTreHan,
+		ROUND(SUM(TongKhongHoanThanh) * 100.0 / SUM(TongSoCV), 2) AS TiLeKhongHoanThanh
+	FROM (
+		SELECT PB.maBoPhan,
+			SUM(CASE WHEN CONVERT(date, CV.ngayHoanThanh) = CONVERT(date, CV.thoiHan) THEN 1 ELSE 0 END) AS TongHoanThanhDungHan,
+			SUM(CASE WHEN CV.ngayHoanThanh < CV.thoiHan THEN 1 ELSE 0 END) AS TongHoanThanhTruocHan,
+			SUM(CASE WHEN CV.ngayHoanThanh > CV.thoiHan THEN 1 ELSE 0 END) AS TongHoanThanhTreHan,
+			SUM(CASE WHEN CV.ngayHoanThanh IS NULL THEN 1 ELSE 0 END) AS TongKhongHoanThanh,
+			COUNT(*) AS TongSoCV
+		FROM PhongBan PB
+		JOIN Congviec_PhongBan CVPB ON PB.maBoPhan = CVPB.maBoPhan
+		JOIN CongViec CV ON CVPB.maCongViec = CV.maCongViec
+		GROUP BY PB.maBoPhan
+
+		UNION ALL
+
+		SELECT PB.maBoPhan,
+			SUM(CASE WHEN CONVERT(date, CV.ngayHoanThanh) = CONVERT(date, CV.thoiHan) THEN 1 ELSE 0 END) AS TongHoanThanhDungHan,
+			SUM(CASE WHEN CV.ngayHoanThanh < CV.thoiHan THEN 1 ELSE 0 END) AS TongHoanThanhTruocHan,
+			SUM(CASE WHEN CV.ngayHoanThanh > CV.thoiHan THEN 1 ELSE 0 END) AS TongHoanThanhTreHan,
+			SUM(CASE WHEN CV.ngayHoanThanh IS NULL THEN 1 ELSE 0 END) AS TongKhongHoanThanh,
+			COUNT(*) AS TongSoCV
+		FROM PhongBan PB
+		JOIN Nhom N ON PB.maBoPhan = N.maBoPhan
+		JOIN CongViec_Nhom CVN ON N.maNhom = CVN.maNhom
+		JOIN CongViec CV ON CVN.maCongViec = CV.maCongViec
+		GROUP BY PB.maBoPhan
+
+		UNION ALL
+
+		SELECT PB.maBoPhan,
+			SUM(CASE WHEN CONVERT(date, CV.ngayHoanThanh) = CONVERT(date, CV.thoiHan) THEN 1 ELSE 0 END) AS TongHoanThanhDungHan,
+			SUM(CASE WHEN CV.ngayHoanThanh < CV.thoiHan THEN 1 ELSE 0 END) AS TongHoanThanhTruocHan,
+			SUM(CASE WHEN CV.ngayHoanThanh > CV.thoiHan THEN 1 ELSE 0 END) AS TongHoanThanhTreHan,
+			SUM(CASE WHEN CV.ngayHoanThanh IS NULL THEN 1 ELSE 0 END) AS TongKhongHoanThanh,
+			COUNT(*) AS TongSoCV
+		FROM PhongBan PB
+		JOIN Congviec_PhongBan CVPB ON PB.maBoPhan = CVPB.maBoPhan
+		JOIN CongViec CV ON CVPB.maCongViec = CV.maCongViec
+		GROUP BY PB.maBoPhan
+	) AS TongHop
+	JOIN PhongBan PB ON TongHop.maBoPhan = PB.maBoPhan
+	GROUP BY PB.maBoPhan, PB.tenPB
+	ORDER BY  TiLeHoanThanhTruocHan DESC, TiLeHoanThanhDungHan DESC, TiLeHoanThanhTreHan DESC, TiLeKhongHoanThanh DESC;
+END
+-------------------- HẾT XẾP HẠNG THEO TỈ LỆ HOÀN THÀNH CÔNG VIỆC -----------------------------
+GO
+-------------------- XẾP HẠNG NHÂN VIÊN THEO SỐ CÔNG VIỆC ĐÃ HOÀN THÀNH ---------------------------------
+CREATE Procedure [dbo].[XepHangNhanVienTheoSoCongViecDaHoanThanh]
+					@tuNgay SMALLDATETIME,
+					@denNgay SMALLDATETIME
+AS
+BEGIN
+	SELECT 
+		NV.maNhanVien, 
+		NV.ho + ' ' + NV.ten AS TenNhanVien, 
+		COUNT(CV.ngayHoanThanh) AS SoCongViecHoanThanh
+	FROM NhanVien NV
+	LEFT JOIN Congviec_NhanVien CVNV ON NV.maNhanVien = CVNV.maNhanVien
+	LEFT JOIN CongViec CV ON CVNV.maCongViec = CV.maCongViec
+	WHERE CV.ngayHoanThanh IS NOT NULL and CV.ngayGiao between @tuNgay AND @denNgay
+	GROUP BY NV.maNhanVien, NV.ho, NV.ten
+	ORDER BY SoCongViecHoanThanh DESC;
+END
+--------------------------------------------------------------------------------------------------
+GO
+-------------------- XẾP HẠNG PHÒNG BAN THEO SỐ CÔNG VIỆC ĐÃ HOÀN THÀNH THEO NGÀY------------------------------
+CREATE PROCEDURE [dbo].[XepHangPhongBanTheoSoCongViecDaHoanThanh]
+					@tuNgay SMALLDATETIME,
+					@denNgay SMALLDATETIME
+AS
+BEGIN
+    SELECT 
+        pb.maBoPhan,
+        pb.tenPB AS TenPhongBan,
+        COUNT(CASE WHEN cv.ngayHoanThanh IS NOT NULL THEN 1 END) AS SoCongViecHoanThanh
+    FROM 
+        PhongBan pb
+    LEFT JOIN 
+        NhanVien nv ON pb.maBoPhan = nv.maBoPhan
+    LEFT JOIN 
+        Congviec_Nhanvien cnv ON nv.maNhanVien = cnv.maNhanVien
+    LEFT JOIN 
+        CongViec cv ON cnv.maCongViec = cv.maCongViec
+	WHERE cv.ngayGiao BETWEEN @tuNgay AND @denNgay
+    GROUP BY 
+        pb.maBoPhan, pb.tenPB
+	ORDER BY SoCongViecHoanThanh;
+END
+----------------------------------------------------------------------------------------------------------------
+------------------------------------HẾT XẾP HẠNG/THỐNG KÊ DỮ LIỆU CHUNG --------------------------------------

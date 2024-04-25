@@ -217,9 +217,9 @@
             this.LB_DuLieuThongKe.ForeColor = System.Drawing.Color.White;
             this.LB_DuLieuThongKe.Location = new System.Drawing.Point(384, 106);
             this.LB_DuLieuThongKe.Name = "LB_DuLieuThongKe";
-            this.LB_DuLieuThongKe.Size = new System.Drawing.Size(140, 22);
+            this.LB_DuLieuThongKe.Size = new System.Drawing.Size(172, 22);
             this.LB_DuLieuThongKe.TabIndex = 264;
-            this.LB_DuLieuThongKe.Text = "Dữ liệu thống kê";
+            this.LB_DuLieuThongKe.Text = "Dữ liệu cần thống kê";
             // 
             // CBB_DuLieuMuonThongKe
             // 
@@ -228,7 +228,7 @@
             "Mã căn hộ",
             "Nhân viên",
             "Cư dân"});
-            this.CBB_DuLieuMuonThongKe.Location = new System.Drawing.Point(549, 104);
+            this.CBB_DuLieuMuonThongKe.Location = new System.Drawing.Point(571, 104);
             this.CBB_DuLieuMuonThongKe.Name = "CBB_DuLieuMuonThongKe";
             this.CBB_DuLieuMuonThongKe.Size = new System.Drawing.Size(231, 24);
             this.CBB_DuLieuMuonThongKe.TabIndex = 265;
