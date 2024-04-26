@@ -104,7 +104,6 @@ CREATE TABLE TaiKhoan
 );
 
 
-
 CREATE TABLE CEO
 (
   maNhanVien VARCHAR(10) NOT NULL,
@@ -130,6 +129,7 @@ CREATE TABLE Congviec_Nhanvien
   FOREIGN KEY (maCongViec) REFERENCES congViec(maCongViec)
 );
 
+
 CREATE TABLE CuDan
 (
   maCuDan VARCHAR(10) NOT NULL,
@@ -152,6 +152,13 @@ CREATE TABLE CuDan
   UNIQUE (soTheTamTru)
 );
 
+CREATE TABLE PhuongTien
+(
+  bienSo VARCHAR(50) NOT NULL,
+  chungLoai NVARCHAR(50) NOT NULL,
+  tinhTrangSoHuu NVARCHAR(50) NOT NULL,
+  PRIMARY KEY (bienSo)
+);
 
 CREATE TABLE ChuHo
 (
@@ -185,10 +192,51 @@ CREATE TABLE NguoiDcUyQuyenChuHo
 
 CREATE TABLE KhachThueKhuThuongMai
 (
-  tenCongTy NVARCHAR(100) NOT NULL,
-  maCuDan VARCHAR(10) NOT NULL,
-  PRIMARY KEY (maCuDan),
-  FOREIGN KEY (maCuDan) REFERENCES CuDan(maCuDan)
+  maKhachDangThue VARCHAR(10) NOT NULL,
+  tenCongTy NVARCHAR(200) NOT NULL,
+  hoTenNguoiDaiDien NVARCHAR(200) NOT NULL,
+  maNhanVienPhuTrach VARCHAR(10) NOT NULL,
+  SDT VARCHAR(20) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  ngayKyHopDongThue DATE NOT NULL,
+  ngayChuyenVao DATE NOT NULL,
+  ngayChuyenDi DATE,
+  phiQuanLy INT NOT NULL,
+  moTaKhuVucChoThue NVARCHAR(500),
+  bienSoXeDangKy VARCHAR(50),
+  PRIMARY KEY (maKhachDangThue),
+  FOREIGN KEY (maNhanVienPhuTrach) REFERENCES NhanVien (maNhanVien),
+  FOREIGN KEY (bienSoXeDangKy) REFERENCES PhuongTien (bienSo)
+);
+
+
+CREATE TABLE KhuThuongMai
+(
+  maCanHo VARCHAR(10) NOT NULL,
+  dienTichGSA FLOAT NOT NULL,
+  dienTichNSA FLOAT NOT NULL,
+  viTriTang INT NOT NULL,
+  soLuongPhongNgu INT NOT NULL,
+  soLuongToilet INT NOT NULL,
+  soDoMatBang IMAGE,
+  mucPhiQLHangThang INT NOT NULL,
+  soLuongTheThangMay INT NOT NULL,
+  tinhTrangThanhToan INT NOT NULL,
+  maKhachDangThue VARCHAR(10) NOT NULL,
+  PRIMARY KEY (maCanHo),
+  FOREIGN KEY (maKhachDangThue) REFERENCES KhachThueKhuThuongMai(maKhachDangThue)
+);
+
+CREATE TABLE LichSuGiaoDichKhuThuongMai
+(
+  maCanHo VARCHAR(10) NOT NULL,
+  maKhachDangThue VARCHAR(10),
+  lichSuNopPhiDV DATE NOT NULL,
+  lichSuDangKyDoXe DATE NOT NULL,
+  tinhTrangCongNo INT NOT NULL,
+  PRIMARY KEY (maCanHo, maKhachDangThue),
+  FOREIGN KEY (maCanHo) REFERENCES KhuThuongMai(maCanHo),
+  FOREIGN KEY (maKhachDangThue) REFERENCES KhachThueKhuThuongMai(maKhachDangThue)
 );
 
 CREATE TABLE CanHo
@@ -206,7 +254,7 @@ CREATE TABLE CanHo
   tinhTrangThanhToan INT NOT NULL,
   maCuDan VARCHAR(10),
   PRIMARY KEY (maCanHo),
-  FOREIGN KEY (maCuDan) REFERENCES cuDan(maCuDan),
+  FOREIGN KEY (maCuDan) REFERENCES CuDan(maCuDan),
 );
 
 
@@ -225,17 +273,6 @@ CREATE TABLE LichSuGiaoDich
   FOREIGN KEY (maCuDanTruoc) REFERENCES CuDan(maCuDan),
 );
 
-
-CREATE TABLE PhuongTien
-(
-  bienSo VARCHAR(50) NOT NULL,
-  chungLoai NVARCHAR(50) NOT NULL,
-  tinhTrangSoHuu NVARCHAR(50) NOT NULL,
-  maCuDan VARCHAR(10) NOT NULL,
-  PRIMARY KEY (bienSo, maCuDan),
-  FOREIGN KEY (maCuDan) REFERENCES cuDan(maCuDan)
-);
-
 CREATE TABLE NhanVienCuaChuHo
 (
   maCuDan VARCHAR(10) NOT NULL,
@@ -245,14 +282,6 @@ CREATE TABLE NhanVienCuaChuHo
   FOREIGN KEY (maCuDanChuHo) REFERENCES chuHo(maCuDan)
 );
 
-CREATE TABLE KhuThuongMai
-(
-  maCanHo VARCHAR(10) NOT NULL,
-  maNhanVien VARCHAR(10) NOT NULL,
-  PRIMARY KEY (maCanHo),
-  FOREIGN KEY (maCanHo) REFERENCES CanHo(maCanHo),
-  FOREIGN KEY (maNhanVien) REFERENCES NhanVien(maNhanVien)
-);
 
 CREATE TABLE YeuCau
 (
@@ -295,10 +324,25 @@ SELECT * FROM Nhom
 INSERT INTO NhanVien VALUES('GD-001', 'jd@gmail.com', 'Ho', 'Khang', '111111111', '1/1/2002', 1, 'TP.HCM', '123456', 'Full-time', N'Độc thân', '1111111', 1, '2024-01-01', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú GD-001', N'Tốt', 'VS', 'VSN01')
 INSERT INTO NhanVien VALUES('VS-002', 'VS002@gmail.com', 'Vu', 'Quang', '1321312', '1/2/2004', 1, 'TP.HCM', '1234576', 'Part-time', N'Độc thân', '1111211', 1, '2024-01-01', '2025-12-31', 'TP.HCM', 'Chua co', N'Tốt', 'VS','VSN02')
 INSERT INTO NhanVien VALUES('VS-003', 'email_nv001@example.com', 'Tran', 'An', '0123456669', '2000-01-01', 0, N'Hà Nội', '072947182653', 'Full-time', N'Độc thân', '01231230213', 1, '2024-01-01', '2025-12-31', N'Địa chỉ thường trú NV001', 'Chua co', N'Tốt', 'VS','VSN01')
+
+INSERT INTO NhanVien VALUES('KT-005', 'hih@gmail.com', 'Ho', 'Khuyen', '121111111', '1/1/2002', 1, 'TP.HCM', '133456', 'Full-time', N'Độc thân', '1121111', 1, '2024-01-01', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú KT-005', N'Tốt', 'VS', 'KT01')
+INSERT INTO NhanVien VALUES('XD-006', 'xd006@gmail.com', 'Vo', 'Van F', '147258369', '6/6/1985', 1, N'Hà Nội', '123461', 'Full-time', N'Độc thân', '1111611', 1, '2024-01-01', '2025-12-31', N'Hà Nội', N'Địa chỉ thường trú XD-006', N'Tốt', 'XD01')
+INSERT INTO NhanVien VALUES('HCNS-007', 'hcns007@gmail.com', 'Nguyen', 'Thi G', '258369147', '7/7/1993', 1, 'TP.HCM', '123462', 'Part-time', N'Độc thân', '1111711', 1, '2024-01-01', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú Q8', N'Tốt', 'HCNS02')
+INSERT INTO NhanVien VALUES('AN-010', 'an010@gmail.com', 'Pham', 'Van K', '258369147', '10/10/1989', 1, 'TP.HCM', '123465', 'Full-time', N'Độc thân', '1111011', 1, '2024-01-01', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú Q7', N'Tốt', 'AN02')
+INSERT INTO NhanVien VALUES('TC-003', 'tc01@gmail.com', 'Phan', 'Quoc Linh', '40284746', '12/10/2003', 1, 'TP.HCM', '12334', 'Full-time', N'Độc thân', '1111016', 1, '2024-01-03', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú Q7', N'Tốt', 'TC01')
+
 -- Insert thông tin NV
 INSERT INTO TaiKhoan VALUES('GD-001.KHANG.111111111', '123', 'GD-001', 0, 1)
 INSERT INTO TaiKhoan VALUES('VS-002.QUANG.1321312', '123', 'VS-002', 0, 0)
 INSERT INTO TaiKhoan VALUES('VS-003.AN.0123456669', '123', 'VS-003', 0, 0)
+
+INSERT INTO TaiKhoan VALUES('KT-005.E.369258147', '123', 'KT-005', 0);
+INSERT INTO TaiKhoan VALUES('XD-006.F.147258369', '123', 'XD-006', 0);
+INSERT INTO TaiKhoan VALUES('HCNS-007.G.258369147', '123', 'HCNS-007', 0);
+INSERT INTO TaiKhoan VALUES('AN-010.K.258369147', '123', 'AN-010', 0);
+INSERT INTO TaiKhoan VALUES('TC-003.LINH.40284746', '123', 'TC-003', 0);
+INSERT INTO TaiKhoan VALUES('ABC-001.THANG.789456', '123', 'ABC-001', 0);
+INSERT INTO TaiKhoan VALUES('XYZ-002.DUONG.456789', '123', 'XYZ-002', 0);
 
 SELECT * FROM TaiKhoan
 SELECT * FROM NhanVien
@@ -342,9 +386,6 @@ INSERT INTO CanHo VALUES ('W3504', 80.0, 100, 35, 5, 1, NULL, 1800000, 1, N'Đã
 INSERT INTO CanHo VALUES ('W3510', 80.0, 100, 35, 5, 1, NULL, 18000000, 1, N'Chưa bàn giao - Cư dân đang ở', 25, 'CD-A009');
 select * from CanHo
 
---delete from LichSuGiaoDich where maCanHo = 'W3510'
---delete from CanHo where maCanHo = 'W3510'
-
 
 insert into LichSuGiaoDich values('WPHA', 'CD-A001', 'CD-A021', 'CD-A012', '1-1-2023', '1-1-2024', 100000000)
 insert into LichSuGiaoDich values('WPHB', 'CD-A002', 'CD-A014', 'CD-A013', '1-1-2023', '1-1-2024', 400000000)
@@ -357,6 +398,30 @@ insert into LichSuGiaoDich values('W3504', NULL, NULL, NULL, '1-1-2023', '1-1-20
 insert into LichSuGiaoDich values('W3510', 'CD-A009', 'CD-A015', 'CD-A021', '1-1-2023', '1-1-2024', 200000000)
 select * from LichSuGiaoDich
 
+
+insert into PhuongTien values('59N2', N'Xe máy', N'Đang sở hữu')
+insert into PhuongTien values('59H1', N'Xe tải', N'Đang thuê')
+select * from PhuongTien
+
+
+insert into KhachThueKhuThuongMai values('K01', N'Công ty A', N'Nguyễn Văn B', 'VS-002', 1234321, 'hyr@gmail.com', '1-1-2023', '1-1-2023', '1-1-2023', 10000000, '', '59N2')
+insert into KhachThueKhuThuongMai values('K02', N'Công ty B', N'Nguyễn Huỳnh A', 'VS-002', 1234321, 'hihi@gmail.com', '1-1-2023', '1-1-2023', '1-1-2023', 20000000, '', '59H1')
+select * from KhachThueKhuThuongMai
+
+
+INSERT INTO KhuThuongMai VALUES ('KTM1', 1000.5, 1000, 1, 0, 0, NULL, 200000000, 0, 25, 'K01');
+INSERT INTO KhuThuongMai VALUES ('KTM2', 1000.5, 1000, 1, 0, 0, NULL, 200000000, 0, 15, 'K02');
+INSERT INTO KhuThuongMai VALUES ('KTM3', 1000.5, 1000, 1, 0, 0, NULL, 200000000, 0, 35, 'K01');
+INSERT INTO KhuThuongMai VALUES ('KTM4', 1000.5, 1000, 1, 0, 0, NULL, 200000000, 0, 40, 'K02');
+INSERT INTO KhuThuongMai VALUES ('KTM5', 1000.5, 1000, 1, 0, 0, NULL, 200000000, 0, 15, 'K01');
+select * from KhuThuongMai
+
+insert into LichSuGiaoDichKhuThuongMai values('KTM1', 'K01', '1-1-2023', '1-1-2024', 100000000)
+insert into LichSuGiaoDichKhuThuongMai values('KTM2', 'K01', '1-1-2023', '1-1-2024', 400000000)
+insert into LichSuGiaoDichKhuThuongMai values('KTM3', 'K01', '1-1-2023', '1-1-2024', 600000000)
+insert into LichSuGiaoDichKhuThuongMai values('KTM4', 'K02', '1-1-2023', '1-1-2024', 600000000)
+insert into LichSuGiaoDichKhuThuongMai values('KTM5', 'K02', '1-1-2023', '1-1-2024', 200000000)
+select * from LichSuGiaoDichKhuThuongMai
 
 -- Insert mẫu công việc
 INSERT INTO CongViec VALUES('CV1', N'Quét nhà', '2024-04-08 9:12:00','2024-04-04 12:30:00',null, '2024-04-08 9:12:00',N'Chưa bắt đầu',null,2,100000)

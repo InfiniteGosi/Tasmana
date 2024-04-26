@@ -8,6 +8,6 @@ namespace DTO
 {
     public class KhachThueKhuThuongMai
     {
-        
+
     }
 }

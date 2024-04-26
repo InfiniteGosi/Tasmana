@@ -268,7 +268,8 @@ namespace DangNhap
             // CHB_luuid
             // 
             this.CHB_luuid.AutoSize = true;
-            this.CHB_luuid.BackColor = System.Drawing.Color.Transparent;
+            this.CHB_luuid.BackColor = System.Drawing.Color.Black;
+            this.CHB_luuid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CHB_luuid.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CHB_luuid.ForeColor = System.Drawing.Color.White;
             this.CHB_luuid.Location = new System.Drawing.Point(627, 367);
