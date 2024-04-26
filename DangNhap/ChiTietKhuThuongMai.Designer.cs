@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChiTietKhuThuongMai));
-            this.label4 = new System.Windows.Forms.Label();
-            this.CBB_tinhtrang = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.NUD_thangmay = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
@@ -44,12 +42,9 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.LB_hinhanhcanho = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.BTN_xoa = new Guna.UI.WinForms.GunaGradientButton();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -65,7 +60,6 @@
             this.NUD_mucphiql = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
             this.NUD_vitritang = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
             this.label22 = new System.Windows.Forms.Label();
-            this.TXB_loaicanho = new System.Windows.Forms.TextBox();
             this.TXB_NSA = new System.Windows.Forms.TextBox();
             this.TXB_GSA = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -75,17 +69,16 @@
             this.BTN_uploadanh = new Guna.UI.WinForms.GunaGradientButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.numericUpDownExt4 = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
             this.label16 = new System.Windows.Forms.Label();
             this.numericUpDownExt5 = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
             this.label17 = new System.Windows.Forms.Label();
             this.numericUpDownExt6 = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
-            this.TXB_chuho = new System.Windows.Forms.TextBox();
+            this.PB_hinhcanho = new System.Windows.Forms.PictureBox();
             this.LB_macanho = new System.Windows.Forms.Label();
             this.TXB_macanho = new System.Windows.Forms.TextBox();
-            this.LB_tinhtrang = new System.Windows.Forms.Label();
-            this.LB_chuho = new System.Windows.Forms.Label();
             this.LB_khachdangthue = new System.Windows.Forms.Label();
             this.TXB_khachdangthue = new System.Windows.Forms.TextBox();
             this.LB_phongngu = new System.Windows.Forms.Label();
@@ -93,8 +86,6 @@
             this.LB_ttktm = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.BTN_thoat = new Guna.UI.WinForms.GunaGradientButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.PB_hinhcanho = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_thangmay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_toilet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_phongngu)).BeginInit();
@@ -103,34 +94,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.NUD_vitritang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_thanhtoan)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_hinhcanho)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(33, 118);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 22);
-            this.label4.TabIndex = 182;
-            this.label4.Text = "Loại căn hộ";
-            // 
-            // CBB_tinhtrang
-            // 
-            this.CBB_tinhtrang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.CBB_tinhtrang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CBB_tinhtrang.ForeColor = System.Drawing.Color.White;
-            this.CBB_tinhtrang.FormattingEnabled = true;
-            this.CBB_tinhtrang.Location = new System.Drawing.Point(194, 277);
-            this.CBB_tinhtrang.Name = "CBB_tinhtrang";
-            this.CBB_tinhtrang.Size = new System.Drawing.Size(375, 30);
-            this.CBB_tinhtrang.TabIndex = 180;
             // 
             // label3
             // 
@@ -160,7 +129,7 @@
             this.NUD_thangmay.BeforeTouchSize = new System.Drawing.Size(375, 30);
             this.NUD_thangmay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUD_thangmay.ForeColor = System.Drawing.Color.White;
-            this.NUD_thangmay.Location = new System.Drawing.Point(970, 116);
+            this.NUD_thangmay.Location = new System.Drawing.Point(970, 110);
             this.NUD_thangmay.Name = "NUD_thangmay";
             this.NUD_thangmay.Size = new System.Drawing.Size(375, 30);
             this.NUD_thangmay.TabIndex = 175;
@@ -193,7 +162,7 @@
             this.NUD_toilet.BeforeTouchSize = new System.Drawing.Size(375, 30);
             this.NUD_toilet.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUD_toilet.ForeColor = System.Drawing.Color.White;
-            this.NUD_toilet.Location = new System.Drawing.Point(970, 45);
+            this.NUD_toilet.Location = new System.Drawing.Point(970, 44);
             this.NUD_toilet.Name = "NUD_toilet";
             this.NUD_toilet.Size = new System.Drawing.Size(375, 30);
             this.NUD_toilet.TabIndex = 173;
@@ -271,17 +240,6 @@
             this.label18.TabIndex = 182;
             this.label18.Text = "Loại căn hộ";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(33, 118);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(102, 22);
-            this.label11.TabIndex = 182;
-            this.label11.Text = "Loại căn hộ";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -293,17 +251,6 @@
             this.label1.TabIndex = 172;
             this.label1.Text = "Số lượng toilet";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(36, 445);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(136, 22);
-            this.label8.TabIndex = 37;
-            this.label8.Text = "Hình ảnh căn hộ";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -311,31 +258,20 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(33, 47);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 22);
+            this.label7.Size = new System.Drawing.Size(161, 22);
             this.label7.TabIndex = 12;
-            this.label7.Text = "Mã căn hộ";
+            this.label7.Text = "Mã khu thương mại";
             // 
             // LB_hinhanhcanho
             // 
             this.LB_hinhanhcanho.AutoSize = true;
             this.LB_hinhanhcanho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_hinhanhcanho.ForeColor = System.Drawing.Color.White;
-            this.LB_hinhanhcanho.Location = new System.Drawing.Point(36, 445);
+            this.LB_hinhanhcanho.Location = new System.Drawing.Point(33, 232);
             this.LB_hinhanhcanho.Name = "LB_hinhanhcanho";
-            this.LB_hinhanhcanho.Size = new System.Drawing.Size(136, 22);
+            this.LB_hinhanhcanho.Size = new System.Drawing.Size(205, 22);
             this.LB_hinhanhcanho.TabIndex = 37;
-            this.LB_hinhanhcanho.Text = "Hình ảnh căn hộ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(33, 226);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(128, 22);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Chủ hộ hiện tại";
+            this.LB_hinhanhcanho.Text = "Hình ảnh khu thương mại";
             // 
             // label5
             // 
@@ -507,7 +443,6 @@
             this.PN_hienthi.Controls.Add(this.NUD_mucphiql);
             this.PN_hienthi.Controls.Add(this.NUD_vitritang);
             this.PN_hienthi.Controls.Add(this.label22);
-            this.PN_hienthi.Controls.Add(this.TXB_loaicanho);
             this.PN_hienthi.Controls.Add(this.TXB_NSA);
             this.PN_hienthi.Controls.Add(this.TXB_GSA);
             this.PN_hienthi.Controls.Add(this.label21);
@@ -517,9 +452,6 @@
             this.PN_hienthi.Controls.Add(this.BTN_uploadanh);
             this.PN_hienthi.Controls.Add(this.panel7);
             this.PN_hienthi.Controls.Add(this.panel1);
-            this.PN_hienthi.Controls.Add(this.label11);
-            this.PN_hienthi.Controls.Add(this.label4);
-            this.PN_hienthi.Controls.Add(this.CBB_tinhtrang);
             this.PN_hienthi.Controls.Add(this.label3);
             this.PN_hienthi.Controls.Add(this.label10);
             this.PN_hienthi.Controls.Add(this.NUD_thangmay);
@@ -528,16 +460,11 @@
             this.PN_hienthi.Controls.Add(this.NUD_toilet);
             this.PN_hienthi.Controls.Add(this.label1);
             this.PN_hienthi.Controls.Add(this.NUD_phongngu);
-            this.PN_hienthi.Controls.Add(this.label8);
-            this.PN_hienthi.Controls.Add(this.TXB_chuho);
             this.PN_hienthi.Controls.Add(this.label7);
             this.PN_hienthi.Controls.Add(this.LB_hinhanhcanho);
             this.PN_hienthi.Controls.Add(this.PB_hinhcanho);
             this.PN_hienthi.Controls.Add(this.LB_macanho);
             this.PN_hienthi.Controls.Add(this.TXB_macanho);
-            this.PN_hienthi.Controls.Add(this.label6);
-            this.PN_hienthi.Controls.Add(this.LB_tinhtrang);
-            this.PN_hienthi.Controls.Add(this.LB_chuho);
             this.PN_hienthi.Controls.Add(this.LB_khachdangthue);
             this.PN_hienthi.Controls.Add(this.label5);
             this.PN_hienthi.Controls.Add(this.TXB_khachdangthue);
@@ -570,7 +497,7 @@
             this.NUD_vitritang.BeforeTouchSize = new System.Drawing.Size(375, 30);
             this.NUD_vitritang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUD_vitritang.ForeColor = System.Drawing.Color.White;
-            this.NUD_vitritang.Location = new System.Drawing.Point(194, 167);
+            this.NUD_vitritang.Location = new System.Drawing.Point(215, 110);
             this.NUD_vitritang.Name = "NUD_vitritang";
             this.NUD_vitritang.Size = new System.Drawing.Size(375, 30);
             this.NUD_vitritang.TabIndex = 223;
@@ -580,21 +507,11 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(33, 167);
+            this.label22.Location = new System.Drawing.Point(33, 110);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(89, 22);
             this.label22.TabIndex = 220;
             this.label22.Text = "Vị trí tầng";
-            // 
-            // TXB_loaicanho
-            // 
-            this.TXB_loaicanho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_loaicanho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_loaicanho.ForeColor = System.Drawing.Color.White;
-            this.TXB_loaicanho.Location = new System.Drawing.Point(194, 110);
-            this.TXB_loaicanho.Name = "TXB_loaicanho";
-            this.TXB_loaicanho.Size = new System.Drawing.Size(375, 30);
-            this.TXB_loaicanho.TabIndex = 219;
             // 
             // TXB_NSA
             // 
@@ -678,7 +595,7 @@
             this.BTN_uploadanh.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.BTN_uploadanh.Image = null;
             this.BTN_uploadanh.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_uploadanh.Location = new System.Drawing.Point(492, 525);
+            this.BTN_uploadanh.Location = new System.Drawing.Point(264, 603);
             this.BTN_uploadanh.Name = "BTN_uploadanh";
             this.BTN_uploadanh.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.BTN_uploadanh.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
@@ -722,6 +639,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1, 600);
             this.panel1.TabIndex = 212;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(-456, 374);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(170, 170);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 36;
+            this.pictureBox2.TabStop = false;
             // 
             // textBox4
             // 
@@ -788,15 +715,15 @@
             this.numericUpDownExt6.Size = new System.Drawing.Size(375, 30);
             this.numericUpDownExt6.TabIndex = 175;
             // 
-            // TXB_chuho
+            // PB_hinhcanho
             // 
-            this.TXB_chuho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_chuho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_chuho.ForeColor = System.Drawing.Color.White;
-            this.TXB_chuho.Location = new System.Drawing.Point(194, 222);
-            this.TXB_chuho.Name = "TXB_chuho";
-            this.TXB_chuho.Size = new System.Drawing.Size(375, 30);
-            this.TXB_chuho.TabIndex = 20;
+            this.PB_hinhcanho.Image = ((System.Drawing.Image)(resources.GetObject("PB_hinhcanho.Image")));
+            this.PB_hinhcanho.Location = new System.Drawing.Point(116, 284);
+            this.PB_hinhcanho.Name = "PB_hinhcanho";
+            this.PB_hinhcanho.Size = new System.Drawing.Size(400, 294);
+            this.PB_hinhcanho.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_hinhcanho.TabIndex = 36;
+            this.PB_hinhcanho.TabStop = false;
             // 
             // LB_macanho
             // 
@@ -814,39 +741,17 @@
             this.TXB_macanho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_macanho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_macanho.ForeColor = System.Drawing.Color.White;
-            this.TXB_macanho.Location = new System.Drawing.Point(194, 45);
+            this.TXB_macanho.Location = new System.Drawing.Point(215, 44);
             this.TXB_macanho.Name = "TXB_macanho";
             this.TXB_macanho.Size = new System.Drawing.Size(375, 30);
             this.TXB_macanho.TabIndex = 13;
-            // 
-            // LB_tinhtrang
-            // 
-            this.LB_tinhtrang.AutoSize = true;
-            this.LB_tinhtrang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_tinhtrang.ForeColor = System.Drawing.Color.White;
-            this.LB_tinhtrang.Location = new System.Drawing.Point(33, 281);
-            this.LB_tinhtrang.Name = "LB_tinhtrang";
-            this.LB_tinhtrang.Size = new System.Drawing.Size(90, 22);
-            this.LB_tinhtrang.TabIndex = 17;
-            this.LB_tinhtrang.Text = "Tình trạng";
-            // 
-            // LB_chuho
-            // 
-            this.LB_chuho.AutoSize = true;
-            this.LB_chuho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_chuho.ForeColor = System.Drawing.Color.White;
-            this.LB_chuho.Location = new System.Drawing.Point(33, 226);
-            this.LB_chuho.Name = "LB_chuho";
-            this.LB_chuho.Size = new System.Drawing.Size(128, 22);
-            this.LB_chuho.TabIndex = 19;
-            this.LB_chuho.Text = "Chủ hộ hiện tại";
             // 
             // LB_khachdangthue
             // 
             this.LB_khachdangthue.AutoSize = true;
             this.LB_khachdangthue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_khachdangthue.ForeColor = System.Drawing.Color.White;
-            this.LB_khachdangthue.Location = new System.Drawing.Point(33, 352);
+            this.LB_khachdangthue.Location = new System.Drawing.Point(33, 170);
             this.LB_khachdangthue.Name = "LB_khachdangthue";
             this.LB_khachdangthue.Size = new System.Drawing.Size(139, 22);
             this.LB_khachdangthue.TabIndex = 21;
@@ -857,7 +762,7 @@
             this.TXB_khachdangthue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_khachdangthue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_khachdangthue.ForeColor = System.Drawing.Color.White;
-            this.TXB_khachdangthue.Location = new System.Drawing.Point(194, 348);
+            this.TXB_khachdangthue.Location = new System.Drawing.Point(215, 170);
             this.TXB_khachdangthue.Name = "TXB_khachdangthue";
             this.TXB_khachdangthue.Size = new System.Drawing.Size(375, 30);
             this.TXB_khachdangthue.TabIndex = 22;
@@ -931,26 +836,7 @@
             this.BTN_thoat.Size = new System.Drawing.Size(60, 30);
             this.BTN_thoat.TabIndex = 220;
             this.BTN_thoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-456, 374);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(170, 170);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 36;
-            this.pictureBox2.TabStop = false;
-            // 
-            // PB_hinhcanho
-            // 
-            this.PB_hinhcanho.Image = ((System.Drawing.Image)(resources.GetObject("PB_hinhcanho.Image")));
-            this.PB_hinhcanho.Location = new System.Drawing.Point(194, 436);
-            this.PB_hinhcanho.Name = "PB_hinhcanho";
-            this.PB_hinhcanho.Size = new System.Drawing.Size(273, 226);
-            this.PB_hinhcanho.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_hinhcanho.TabIndex = 36;
-            this.PB_hinhcanho.TabStop = false;
+            this.BTN_thoat.Click += new System.EventHandler(this.BTN_thoat_Click);
             // 
             // ChiTietKhuThuongMai
             // 
@@ -972,7 +858,10 @@
             this.Controls.Add(this.panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ChiTietKhuThuongMai";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChiTietKhuThuongMai";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChiTietKhuThuongMai_FormClosing);
+            this.Load += new System.EventHandler(this.ChiTietKhuThuongMai_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.KhuThuongMai_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.KhuThuongMai_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.KhuThuongMai_MouseUp);
@@ -986,10 +875,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.NUD_thanhtoan)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_hinhcanho)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -997,9 +886,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox CBB_tinhtrang;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label10;
         private Syncfusion.Windows.Forms.Tools.NumericUpDownExt NUD_thangmay;
@@ -1014,13 +900,10 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label LB_hinhanhcanho;
         private System.Windows.Forms.PictureBox PB_hinhcanho;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private Guna.UI.WinForms.GunaGradientButton BTN_xoa;
         private System.Windows.Forms.Panel panel6;
@@ -1037,7 +920,6 @@
         private Syncfusion.Windows.Forms.Tools.NumericUpDownExt NUD_mucphiql;
         private Syncfusion.Windows.Forms.Tools.NumericUpDownExt NUD_vitritang;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox TXB_loaicanho;
         private System.Windows.Forms.TextBox TXB_NSA;
         private System.Windows.Forms.TextBox TXB_GSA;
         private System.Windows.Forms.Label label21;
@@ -1053,11 +935,8 @@
         private Syncfusion.Windows.Forms.Tools.NumericUpDownExt numericUpDownExt5;
         private System.Windows.Forms.Label label17;
         private Syncfusion.Windows.Forms.Tools.NumericUpDownExt numericUpDownExt6;
-        private System.Windows.Forms.TextBox TXB_chuho;
         private System.Windows.Forms.Label LB_macanho;
         private System.Windows.Forms.TextBox TXB_macanho;
-        private System.Windows.Forms.Label LB_tinhtrang;
-        private System.Windows.Forms.Label LB_chuho;
         private System.Windows.Forms.Label LB_khachdangthue;
         private System.Windows.Forms.TextBox TXB_khachdangthue;
         private System.Windows.Forms.Label LB_phongngu;

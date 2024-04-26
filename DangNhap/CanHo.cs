@@ -23,7 +23,6 @@ namespace DangNhap
         private List<Apartment> apartments;
         private List<KhuThuongMai> arrKhuThuongMai;
         private int index = 0;
-        private string[] hd = null;
         public CanHo()
         {
             SyncfusionLicenseProvider.RegisterLicense("MzIxOTI2MkAzMjM1MmUzMDJlMzBORkJZeFRVdUQxeERjT2xkWC9vdFgxS29wUmREOU9CZVdENkRUN0lrSStVPQ==;Mgo+DSMBaFt6QHFqVkNrXVNbdV5dVGpAd0N3RGlcdlR1fUUmHVdTRHRbQlliS3xTck1hW35Wcnc=");
@@ -43,7 +42,6 @@ namespace DangNhap
         private void DisplayGGC_canho()
         {
             GetApartments();
-            GGC_canho.Size = new Size(1254, 404);
             GGC_canho.DataSource = apartments.Select(e => new
             {
                 e.MaCanHo,
@@ -75,7 +73,6 @@ namespace DangNhap
 
                 // Thiết lập tiêu đề cho các cột
                 string[] headers = { "Mã căn hộ", "Diện tích GSA", "Diện tích NSA", "Vị trí tầng", "Số lượng phòng ngủ", "Số lượng toilet", "Số lượng thẻ thang máy", "Mức phí quản lý hàng tháng", "Tình trạng giao dịch hiện tại", "Mã cư dân" };
-                hd = headers;
                 for (int i = 0; i < columns.Count && i < headers.Length; i++)
                 {
                     columns[i].HeaderText = headers[i];
@@ -101,7 +98,6 @@ namespace DangNhap
         private void DisplayGGC_khuthuongmai()
         {
             GetListKhuThuongMai();
-            GGC_canho.Size = new Size(1254, 404);
             GGC_canho.DataSource = arrKhuThuongMai.Select(e => new
             {
                 e.MaCanHo,
@@ -131,7 +127,6 @@ namespace DangNhap
 
                 // Thiết lập tiêu đề cho các cột
                 string[] headers = { "Mã khu thương mại", "Mã khách đang thuê", "Diện tích GSA", "Diện tích NSA", "Vị trí tầng", "Số lượng phòng ngủ", "Số lượng toilet", "Số lượng thẻ thang máy", "Mức phí quản lý hàng tháng"};
-                hd = headers;
                 for (int i = 0; i < columns.Count && i < headers.Length; i++)
                 {
                     columns[i].HeaderText = headers[i];
@@ -156,7 +151,6 @@ namespace DangNhap
             DisplayGGC_canho();
         }
         
-
         private void GGC_canho_TableControlCellDoubleClick(object sender, GridTableControlCellClickEventArgs e)
         {
             // Get the index of the clicked row
@@ -169,8 +163,16 @@ namespace DangNhap
 
                 // Extract data from the record
                 string maCanHo = record.GetValue("MaCanHo").ToString();
-                ChiTietCanHo ctch = new ChiTietCanHo(this, maCanHo);
-                ctch.ShowDialog();
+                if (!maCanHo.Contains("KTM"))
+                {
+                    ChiTietCanHo ctch = new ChiTietCanHo(this, maCanHo);
+                    ctch.ShowDialog();
+                }
+                else
+                {
+                    ChiTietKhuThuongMai ctktm = new ChiTietKhuThuongMai(this, maCanHo);
+                    ctktm.ShowDialog();
+                }
             }
         }
 
@@ -280,8 +282,10 @@ namespace DangNhap
             GridPrintDocumentAdv gridPrintDocument = new GridPrintDocumentAdv(GGC_canho.TableControl);
             PrintDialog printDialog = new PrintDialog();
             gridPrintDocument.ScaleColumnsToFitPage = true;
-            PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog();
-            printPreviewDialog.Document = gridPrintDocument;
+            PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog
+            {
+                Document = gridPrintDocument
+            };
 
             printPreviewDialog.ShowDialog();
             printDialog.Document = gridPrintDocument;

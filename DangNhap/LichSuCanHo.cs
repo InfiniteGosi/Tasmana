@@ -19,16 +19,14 @@ namespace DangNhap
     public partial class LichSuCanHo : Form
     {
         private Apartment canHoHienTai;
-        private Resident cuDanHienTai;
         public LichSuCanHo()
         {
             InitializeComponent();
         }
-        public LichSuCanHo(Resident cuDanHienTai, Apartment canHoHienTai)
+        public LichSuCanHo(Apartment canHoHienTai)
         {
             InitializeComponent();
             this.canHoHienTai = canHoHienTai;
-            this.cuDanHienTai = cuDanHienTai;
         }
         private void DisplayLichSu()
         {
@@ -36,7 +34,8 @@ namespace DangNhap
             TXB_dv.Text = canHoHienTai.LichSuGiaoDich.LichSuNopPhiDichVu.ToString();
             TXB_doxe.Text = canHoHienTai.LichSuGiaoDich.LichSuDangKyDoXe.ToString();
             string maCuDanTruoc = canHoHienTai.LichSuGiaoDich.MaCuDanTruoc;
-            TXB_chuhotruoc.Text = maCuDanTruoc + "_" + ResidentBLL.Instance.GetNameOfMaCuDan(maCuDanTruoc);
+            if (!string.IsNullOrEmpty(maCuDanTruoc))
+                TXB_chuhotruoc.Text = maCuDanTruoc + "_" + ResidentBLL.Instance.GetNameOfMaCuDan(maCuDanTruoc);
         }
         private void DisplayGGC_Dichvu()
         {

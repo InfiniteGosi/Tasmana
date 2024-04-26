@@ -29,5 +29,10 @@ namespace DAO
             string query = $"select * from CuDan where maCuDan = '{maCuDan}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetAllResidents()
+        {
+            string query = $"select * from CuDan";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

@@ -173,6 +173,7 @@ CREATE TABLE ChuHo
   FOREIGN KEY (banGiao_maCuDan) REFERENCES ChuHo(maCuDan)
 );
 
+
 CREATE TABLE KhachNganNgay
 (
   maCuDan VARCHAR(10) NOT NULL,
@@ -410,12 +411,14 @@ insert into KhachThueKhuThuongMai values('K02', N'Công ty B', N'Nguyễn Huỳn
 select * from KhachThueKhuThuongMai
 
 
+
 INSERT INTO KhuThuongMai VALUES ('KTM1', 1000.5, 1000, 1, 0, 0, NULL, 200000000, 0, 25, 'K01');
 INSERT INTO KhuThuongMai VALUES ('KTM2', 1000.5, 1000, 1, 0, 0, NULL, 200000000, 0, 15, 'K02');
 INSERT INTO KhuThuongMai VALUES ('KTM3', 1000.5, 1000, 1, 0, 0, NULL, 200000000, 0, 35, 'K01');
 INSERT INTO KhuThuongMai VALUES ('KTM4', 1000.5, 1000, 1, 0, 0, NULL, 200000000, 0, 40, 'K02');
 INSERT INTO KhuThuongMai VALUES ('KTM5', 1000.5, 1000, 1, 0, 0, NULL, 200000000, 0, 15, 'K01');
 select * from KhuThuongMai
+
 
 insert into LichSuGiaoDichKhuThuongMai values('KTM1', 'K01', '1-1-2023', '1-1-2024', 100000000)
 insert into LichSuGiaoDichKhuThuongMai values('KTM2', 'K01', '1-1-2023', '1-1-2024', 400000000)

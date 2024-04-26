@@ -67,6 +67,7 @@
     <Compile Include="EmployeeDAO.cs" />
     <Compile Include="GroupDAO.cs" />
     <Compile Include="JobDAO.cs" />
+    <Compile Include="KhachThueKhuThuongMaiDAO.cs" />
     <Compile Include="KhuThuongMaiDAO.cs" />
     <Compile Include="LichSuGiaoDichDAO.cs" />
     <Compile Include="LichSuGiaoDichKhuThuongMaiDAO.cs" />

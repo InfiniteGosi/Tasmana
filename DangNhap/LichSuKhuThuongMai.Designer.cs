@@ -37,8 +37,6 @@
             this.TXB_congno = new System.Windows.Forms.TextBox();
             this.LB_congno = new System.Windows.Forms.Label();
             this.LB_phidichvu = new System.Windows.Forms.Label();
-            this.TXB_chuhotruoc = new System.Windows.Forms.TextBox();
-            this.LB_chuhotruoc = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GGC_dichvu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,7 +69,7 @@
             this.TXB_doxe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_doxe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_doxe.ForeColor = System.Drawing.Color.White;
-            this.TXB_doxe.Location = new System.Drawing.Point(225, 259);
+            this.TXB_doxe.Location = new System.Drawing.Point(218, 180);
             this.TXB_doxe.Multiline = true;
             this.TXB_doxe.Name = "TXB_doxe";
             this.TXB_doxe.Size = new System.Drawing.Size(375, 30);
@@ -82,7 +80,7 @@
             this.TXB_dv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_dv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_dv.ForeColor = System.Drawing.Color.White;
-            this.TXB_dv.Location = new System.Drawing.Point(225, 194);
+            this.TXB_dv.Location = new System.Drawing.Point(218, 115);
             this.TXB_dv.Multiline = true;
             this.TXB_dv.Name = "TXB_dv";
             this.TXB_dv.Size = new System.Drawing.Size(375, 30);
@@ -101,7 +99,7 @@
             this.LB_doxe.AutoSize = true;
             this.LB_doxe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_doxe.ForeColor = System.Drawing.Color.White;
-            this.LB_doxe.Location = new System.Drawing.Point(23, 259);
+            this.LB_doxe.Location = new System.Drawing.Point(16, 180);
             this.LB_doxe.Name = "LB_doxe";
             this.LB_doxe.Size = new System.Drawing.Size(183, 22);
             this.LB_doxe.TabIndex = 227;
@@ -112,7 +110,7 @@
             this.TXB_congno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_congno.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_congno.ForeColor = System.Drawing.Color.White;
-            this.TXB_congno.Location = new System.Drawing.Point(225, 127);
+            this.TXB_congno.Location = new System.Drawing.Point(218, 48);
             this.TXB_congno.Name = "TXB_congno";
             this.TXB_congno.Size = new System.Drawing.Size(375, 30);
             this.TXB_congno.TabIndex = 226;
@@ -122,7 +120,7 @@
             this.LB_congno.AutoSize = true;
             this.LB_congno.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_congno.ForeColor = System.Drawing.Color.White;
-            this.LB_congno.Location = new System.Drawing.Point(33, 131);
+            this.LB_congno.Location = new System.Drawing.Point(16, 56);
             this.LB_congno.Name = "LB_congno";
             this.LB_congno.Size = new System.Drawing.Size(157, 22);
             this.LB_congno.TabIndex = 225;
@@ -133,33 +131,11 @@
             this.LB_phidichvu.AutoSize = true;
             this.LB_phidichvu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_phidichvu.ForeColor = System.Drawing.Color.White;
-            this.LB_phidichvu.Location = new System.Drawing.Point(23, 199);
+            this.LB_phidichvu.Location = new System.Drawing.Point(16, 120);
             this.LB_phidichvu.Name = "LB_phidichvu";
             this.LB_phidichvu.Size = new System.Drawing.Size(196, 22);
             this.LB_phidichvu.TabIndex = 224;
             this.LB_phidichvu.Text = "Lịch sử nộp phí dịch vụ";
-            // 
-            // TXB_chuhotruoc
-            // 
-            this.TXB_chuhotruoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_chuhotruoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_chuhotruoc.ForeColor = System.Drawing.Color.White;
-            this.TXB_chuhotruoc.Location = new System.Drawing.Point(225, 56);
-            this.TXB_chuhotruoc.Multiline = true;
-            this.TXB_chuhotruoc.Name = "TXB_chuhotruoc";
-            this.TXB_chuhotruoc.Size = new System.Drawing.Size(375, 30);
-            this.TXB_chuhotruoc.TabIndex = 223;
-            // 
-            // LB_chuhotruoc
-            // 
-            this.LB_chuhotruoc.AutoSize = true;
-            this.LB_chuhotruoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_chuhotruoc.ForeColor = System.Drawing.Color.White;
-            this.LB_chuhotruoc.Location = new System.Drawing.Point(33, 60);
-            this.LB_chuhotruoc.Name = "LB_chuhotruoc";
-            this.LB_chuhotruoc.Size = new System.Drawing.Size(113, 22);
-            this.LB_chuhotruoc.TabIndex = 222;
-            this.LB_chuhotruoc.Text = "Chủ hộ trước";
             // 
             // LichSuKhuThuongMai
             // 
@@ -176,11 +152,10 @@
             this.Controls.Add(this.TXB_congno);
             this.Controls.Add(this.LB_congno);
             this.Controls.Add(this.LB_phidichvu);
-            this.Controls.Add(this.TXB_chuhotruoc);
-            this.Controls.Add(this.LB_chuhotruoc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LichSuKhuThuongMai";
             this.Text = "LichSuKhuThuongMai";
+            this.Load += new System.EventHandler(this.LichSuKhuThuongMai_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GGC_dichvu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -198,7 +173,5 @@
         private System.Windows.Forms.TextBox TXB_congno;
         private System.Windows.Forms.Label LB_congno;
         private System.Windows.Forms.Label LB_phidichvu;
-        private System.Windows.Forms.TextBox TXB_chuhotruoc;
-        private System.Windows.Forms.Label LB_chuhotruoc;
     }
 }

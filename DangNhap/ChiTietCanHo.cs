@@ -71,7 +71,7 @@ namespace DangNhap
 
         private void BTN_lichsu_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new LichSuCanHo(cuDanCuaCanHo, canHoHienTai));
+            OpenChildForm(new LichSuCanHo(canHoHienTai));
             BTN_lichsu.BackColor = Color.FromArgb(51, 53, 55);
             BTN_chung.BackColor = Color.Transparent;
         }
@@ -94,8 +94,6 @@ namespace DangNhap
                 TXB_macanho.Text,
                 Convert.ToDouble(TXB_GSA.Text),
                 Convert.ToDouble(TXB_NSA.Text),
-                //100,
-                //120.5,
                 (int)NUD_vitritang.Value,
                 (int)NUD_phongngu.Value,
                 (int)NUD_toilet.Value,
@@ -206,8 +204,6 @@ namespace DangNhap
 
         private void ChiTietCanHo_Load(object sender, EventArgs e)
         {
-            
-            //MessageBox.Show(values_ch[1].ToString());
             CBB_tinhtrang.DataSource = arrTinhTrang;
             CBB_tinhtrang.SelectedIndex = -1;
             if (canHoHienTai != null)
@@ -217,7 +213,7 @@ namespace DangNhap
         }
         private void BTN_thoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         //MoveForm
         int mov;
