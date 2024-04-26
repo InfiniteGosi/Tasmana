@@ -70,6 +70,7 @@
     <Compile Include="KhachThueKhuThuongMai.cs" />
     <Compile Include="KhuThuongMai.cs" />
     <Compile Include="LichSuGiaoDich.cs" />
+    <Compile Include="LichSuGiaoDichKhuThuongMai.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resident.cs" />
   </ItemGroup>

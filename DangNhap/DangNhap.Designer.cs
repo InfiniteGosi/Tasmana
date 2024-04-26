@@ -108,21 +108,6 @@ namespace DangNhap
             this.LB_quenpw.Text = "Quên mật khẩu?";
             this.LB_quenpw.Click += new System.EventHandler(this.LB_quenpw_Click);
             // 
-            // VB_HienMatKhau
-            // 
-            this.VB_HienMatKhau.AutoSize = true;
-            this.VB_HienMatKhau.BackColor = System.Drawing.Color.Black;
-            this.VB_HienMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.VB_HienMatKhau.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VB_HienMatKhau.ForeColor = System.Drawing.Color.White;
-            this.VB_HienMatKhau.Location = new System.Drawing.Point(633, 363);
-            this.VB_HienMatKhau.Name = "VB_HienMatKhau";
-            this.VB_HienMatKhau.Size = new System.Drawing.Size(124, 23);
-            this.VB_HienMatKhau.TabIndex = 12;
-            this.VB_HienMatKhau.Text = "Hiện mật khẩu";
-            this.VB_HienMatKhau.UseVisualStyleBackColor = false;
-            this.VB_HienMatKhau.CheckedChanged += new System.EventHandler(this.VB_HienMatKhau_CheckedChanged);
-            // 
             // TB_MatKhau
             // 
             this.TB_MatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(17)))), ((int)(((byte)(26)))));

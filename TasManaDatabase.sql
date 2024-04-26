@@ -203,11 +203,12 @@ CREATE TABLE KhachThueKhuThuongMai
   ngayChuyenDi DATE,
   phiQuanLy INT NOT NULL,
   moTaKhuVucChoThue NVARCHAR(500),
-  bienSoXeDangKy VARCHAR(50) NOT NULL,
+  bienSoXeDangKy VARCHAR(50),
   PRIMARY KEY (maKhachDangThue),
   FOREIGN KEY (maNhanVienPhuTrach) REFERENCES NhanVien (maNhanVien),
   FOREIGN KEY (bienSoXeDangKy) REFERENCES PhuongTien (bienSo)
 );
+
 
 CREATE TABLE KhuThuongMai
 (
@@ -415,11 +416,12 @@ INSERT INTO KhuThuongMai VALUES ('KTM4', 1000.5, 1000, 1, 0, 0, NULL, 200000000,
 INSERT INTO KhuThuongMai VALUES ('KTM5', 1000.5, 1000, 1, 0, 0, NULL, 200000000, 0, 15, 'K01');
 select * from KhuThuongMai
 
-insert into LichSuGiaoDichKhuThuongMai values('KTM1', 'CD-A001', 'CD-A021', 'CD-A012', '1-1-2023', '1-1-2024', 100000000)
-insert into LichSuGiaoDichKhuThuongMai values('KTM2', 'CD-A002', 'CD-A014', 'CD-A013', '1-1-2023', '1-1-2024', 400000000)
-insert into LichSuGiaoDichKhuThuongMai values('KTM3', 'CD-A003', 'CD-A010', 'CD-A014', '1-1-2023', '1-1-2024', 600000000)
-insert into LichSuGiaoDichKhuThuongMai values('KTM4', 'CD-A004', 'CD-A011', 'CD-A015', '1-1-2023', '1-1-2024', 600000000)
-insert into LichSuGiaoDichKhuThuongMai values('KTM5', 'CD-A005', 'CD-A016', 'CD-A017', '1-1-2023', '1-1-2024', 200000000)
+insert into LichSuGiaoDichKhuThuongMai values('KTM1', 'K01', '1-1-2023', '1-1-2024', 100000000)
+insert into LichSuGiaoDichKhuThuongMai values('KTM2', 'K01', '1-1-2023', '1-1-2024', 400000000)
+insert into LichSuGiaoDichKhuThuongMai values('KTM3', 'K01', '1-1-2023', '1-1-2024', 600000000)
+insert into LichSuGiaoDichKhuThuongMai values('KTM4', 'K02', '1-1-2023', '1-1-2024', 600000000)
+insert into LichSuGiaoDichKhuThuongMai values('KTM5', 'K02', '1-1-2023', '1-1-2024', 200000000)
+select * from LichSuGiaoDichKhuThuongMai
 
 -- Insert mẫu công việc
 INSERT INTO CongViec VALUES('CV1', N'Quét nhà', '2024-04-08 9:12:00','2024-04-04 12:30:00',null, '2024-04-08 9:12:00',N'Chưa bắt đầu',null,2,100000)

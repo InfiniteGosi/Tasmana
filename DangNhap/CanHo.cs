@@ -21,6 +21,7 @@ namespace DangNhap
     public partial class CanHo : Form
     {
         private List<Apartment> apartments;
+        private List<KhuThuongMai> arrKhuThuongMai;
         private int index = 0;
         private string[] hd = null;
         public CanHo()
@@ -92,10 +93,61 @@ namespace DangNhap
                 column.Appearance.AnyRecordFieldCell.CellType = "TextBox";
             }
         }
+        private void GetListKhuThuongMai()
+        {
+            arrKhuThuongMai = KhuThuongMaiBLL.Instance.GetAllKhuThuongMai();
+        }
 
         private void DisplayGGC_khuthuongmai()
         {
+            GetListKhuThuongMai();
+            GGC_canho.Size = new Size(1254, 404);
+            GGC_canho.DataSource = arrKhuThuongMai.Select(e => new
+            {
+                e.MaCanHo,
+                e.MaKhachDangThue,
+                e.DienTichGSA,
+                e.DienTichNSA,
+                e.ViTriTang,
+                e.SoLuongPhongNgu,
+                e.SoLuongToilet,
+                e.SoLuongTheThangMay,
+                e.MucPhiQuanLyHangThang,
+            }).ToList(); ;
 
+            GGC_canho.TopLevelGroupOptions.ShowFilterBar = true;
+            GGC_canho.ActivateCurrentCellBehavior = GridCellActivateAction.None;
+            GGC_canho.ShowGroupDropArea = true;
+            GGC_canho.BorderStyle = BorderStyle.FixedSingle;
+
+            GridColumnDescriptorCollection columns = GGC_canho.TableDescriptor.Columns;
+            if (columns.Count > 0)
+            {
+                foreach (GridColumnDescriptor column in columns)
+                {
+                    // Thiết lập thuộc tính cho mỗi cột
+                    column.AllowFilter = true;
+                }
+
+                // Thiết lập tiêu đề cho các cột
+                string[] headers = { "Mã khu thương mại", "Mã khách đang thuê", "Diện tích GSA", "Diện tích NSA", "Vị trí tầng", "Số lượng phòng ngủ", "Số lượng toilet", "Số lượng thẻ thang máy", "Mức phí quản lý hàng tháng"};
+                hd = headers;
+                for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                {
+                    columns[i].HeaderText = headers[i];
+                }
+            }
+            GridDynamicFilter dynamicFilter = new GridDynamicFilter();
+            dynamicFilter.WireGrid(GGC_canho);
+
+            GridExcelFilter excelFilter = new GridExcelFilter();
+            excelFilter.WireGrid(GGC_canho);
+            // Thiết lập AutoSizeMode cho mỗi cột
+            foreach (GridColumnDescriptor column in columns)
+            {
+                column.Appearance.AnyRecordFieldCell.AutoSize = true;
+                column.Appearance.AnyRecordFieldCell.CellType = "TextBox";
+            }
         }
 
         private void CanHo_Load(object sender, EventArgs e)
