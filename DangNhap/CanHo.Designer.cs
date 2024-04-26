@@ -36,6 +36,8 @@ namespace DangNhap
             this.BTN_in = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_PDF = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_excel = new Guna.UI.WinForms.GunaGradientButton();
+            this.CBB_choice = new System.Windows.Forms.ComboBox();
+            this.LB_loai = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GGC_danhsachnv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GGC_canho)).BeginInit();
             this.SuspendLayout();
@@ -192,6 +194,28 @@ namespace DangNhap
             this.BTN_excel.TextOffsetX = 3;
             this.BTN_excel.Click += new System.EventHandler(this.BTN_excel_Click);
             // 
+            // CBB_choice
+            // 
+            this.CBB_choice.FormattingEnabled = true;
+            this.CBB_choice.Items.AddRange(new object[] {
+            "Căn hộ",
+            "Khu thương mại"});
+            this.CBB_choice.Location = new System.Drawing.Point(106, 47);
+            this.CBB_choice.Name = "CBB_choice";
+            this.CBB_choice.Size = new System.Drawing.Size(144, 24);
+            this.CBB_choice.TabIndex = 176;
+            this.CBB_choice.SelectedIndexChanged += new System.EventHandler(this.CBB_choice_SelectedIndexChanged);
+            // 
+            // LB_loai
+            // 
+            this.LB_loai.AutoSize = true;
+            this.LB_loai.ForeColor = System.Drawing.Color.White;
+            this.LB_loai.Location = new System.Drawing.Point(108, 18);
+            this.LB_loai.Name = "LB_loai";
+            this.LB_loai.Size = new System.Drawing.Size(144, 16);
+            this.LB_loai.TabIndex = 177;
+            this.LB_loai.Text = "Chọn loại bất động sản";
+            // 
             // CanHo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -199,6 +223,8 @@ namespace DangNhap
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1376, 782);
+            this.Controls.Add(this.LB_loai);
+            this.Controls.Add(this.CBB_choice);
             this.Controls.Add(this.BTN_in);
             this.Controls.Add(this.BTN_PDF);
             this.Controls.Add(this.BTN_excel);
@@ -211,6 +237,7 @@ namespace DangNhap
             ((System.ComponentModel.ISupportInitialize)(this.GGC_danhsachnv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GGC_canho)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -221,5 +248,7 @@ namespace DangNhap
         private Guna.UI.WinForms.GunaGradientButton BTN_in;
         private Guna.UI.WinForms.GunaGradientButton BTN_PDF;
         private Guna.UI.WinForms.GunaGradientButton BTN_excel;
+        private System.Windows.Forms.ComboBox CBB_choice;
+        private System.Windows.Forms.Label LB_loai;
     }
 }

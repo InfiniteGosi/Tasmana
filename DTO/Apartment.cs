@@ -39,5 +39,21 @@ namespace DTO
             TinhTrangThanhToan = tinhTrangThanhToan;
             MaCuDan = maCuDan;
         }
+        public Apartment(string maCanHo, float dienTichGSA, float dienTichNSA, int viTriTang, int soLuongPhongNgu, int soLuongToilet, Image soDoMatBang, int mucPhiQuanLyHangThang, int soLuongTheThangMay, LichSuGiaoDich lichSuGiaoDich, int tinhTrangThanhToan, string maCuDan)
+        {
+            MaCanHo = maCanHo;
+            DienTichGSA = dienTichGSA;
+            DienTichNSA = dienTichNSA;
+            ViTriTang = viTriTang;
+            SoLuongPhongNgu = soLuongPhongNgu;
+            SoLuongToilet = soLuongToilet;
+            SoDoMatBang = soDoMatBang;
+            MucPhiQuanLyHangThang = mucPhiQuanLyHangThang;
+            SoLuongTheThangMay = soLuongTheThangMay;
+            LichSuGiaoDich = lichSuGiaoDich;
+            TinhTrangThanhToan = tinhTrangThanhToan;
+            MaCuDan = maCuDan;
+        }
+
     }
 }

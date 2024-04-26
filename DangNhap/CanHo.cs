@@ -21,6 +21,8 @@ namespace DangNhap
     public partial class CanHo : Form
     {
         private List<Apartment> apartments;
+        private int index = 0;
+        private string[] hd = null;
         public CanHo()
         {
             SyncfusionLicenseProvider.RegisterLicense("MzIxOTI2MkAzMjM1MmUzMDJlMzBORkJZeFRVdUQxeERjT2xkWC9vdFgxS29wUmREOU9CZVdENkRUN0lrSStVPQ==;Mgo+DSMBaFt6QHFqVkNrXVNbdV5dVGpAd0N3RGlcdlR1fUUmHVdTRHRbQlliS3xTck1hW35Wcnc=");
@@ -37,10 +39,10 @@ namespace DangNhap
             apartments = ApartmentBLL.Instance.GetApartmentList();
         }
 
-        private void DisplayGCC_canho()
+        private void DisplayGGC_canho()
         {
             GetApartments();
-            GGC_canho.DataSource = apartments;
+            GGC_canho.Size = new Size(1254, 404);
             GGC_canho.DataSource = apartments.Select(e => new
             {
                 e.MaCanHo,
@@ -56,27 +58,27 @@ namespace DangNhap
 
             }).ToList();
 
-            GGC_canho.TableDescriptor.Columns[0].HeaderText = "Mã căn hộ";
-            GGC_canho.TableDescriptor.Columns[1].HeaderText = "Diện tích GSA";
-            GGC_canho.TableDescriptor.Columns[2].HeaderText = "Diện tích NSA";
-            GGC_canho.TableDescriptor.Columns[3].HeaderText = "Vị trí tầng";
-            GGC_canho.TableDescriptor.Columns[4].HeaderText = "Số lượng phòng ngủ";
-            GGC_canho.TableDescriptor.Columns[5].HeaderText = "Số lượng toilet";
-            GGC_canho.TableDescriptor.Columns[6].HeaderText = "Số lượng thẻ thang máy";
-            GGC_canho.TableDescriptor.Columns[7].HeaderText = "Mức phí quản lý hàng tháng";
-            GGC_canho.TableDescriptor.Columns[8].HeaderText = "Tình trạng giao dịch hiện tại";
-            GGC_canho.TableDescriptor.Columns[9].HeaderText = "Mã cư dân";
-
             GGC_canho.TopLevelGroupOptions.ShowFilterBar = true;
             GGC_canho.ActivateCurrentCellBehavior = GridCellActivateAction.None;
             GGC_canho.ShowGroupDropArea = true;
             GGC_canho.BorderStyle = BorderStyle.FixedSingle;
 
-            //// Tạo đối tượng GridColumnDescriptorCollection để quản lý các cột
             GridColumnDescriptorCollection columns = GGC_canho.TableDescriptor.Columns;
-            foreach (GridColumnDescriptor column in columns)
+            if (columns.Count > 0)
             {
-                column.AllowFilter = true;
+                foreach (GridColumnDescriptor column in columns)
+                {
+                    // Thiết lập thuộc tính cho mỗi cột
+                    column.AllowFilter = true;
+                }
+
+                // Thiết lập tiêu đề cho các cột
+                string[] headers = { "Mã căn hộ", "Diện tích GSA", "Diện tích NSA", "Vị trí tầng", "Số lượng phòng ngủ", "Số lượng toilet", "Số lượng thẻ thang máy", "Mức phí quản lý hàng tháng", "Tình trạng giao dịch hiện tại", "Mã cư dân" };
+                hd = headers;
+                for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                {
+                    columns[i].HeaderText = headers[i];
+                }
             }
             GridDynamicFilter dynamicFilter = new GridDynamicFilter();
             dynamicFilter.WireGrid(GGC_canho);
@@ -91,9 +93,15 @@ namespace DangNhap
             }
         }
 
+        private void DisplayGGC_khuthuongmai()
+        {
+
+        }
+
         private void CanHo_Load(object sender, EventArgs e)
         {
-            DisplayGCC_canho();
+            CBB_choice.SelectedIndex = index;
+            DisplayGGC_canho();
         }
         
 
@@ -227,6 +235,22 @@ namespace DangNhap
             printDialog.Document = gridPrintDocument;
             if (printDialog.ShowDialog() == DialogResult.OK)
                 gridPrintDocument.Print();
+        }
+
+        private void CBB_choice_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            index = CBB_choice.SelectedIndex;
+            
+            if (CBB_choice.SelectedIndex == 0)
+            {
+                GGC_canho.DataSource = null;
+                DisplayGGC_canho();
+            }
+            else if (CBB_choice.SelectedIndex == 1)
+            {
+                GGC_canho.DataSource = null;
+                DisplayGGC_khuthuongmai();
+            }
         }
     }
 }

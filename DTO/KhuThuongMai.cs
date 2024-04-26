@@ -9,12 +9,12 @@ namespace DTO
 {
     public class KhuThuongMai : Apartment
     {
-        public string MaNhanVien { get; set; }
+        public string MaNhanVienPhuTrach { get; set; }
 
-        public KhuThuongMai(string maCanHo, float dienTichGSA, float dienTichNSA, int viTriTang, int soLuongPhongNgu, int soLuongToilet, Image soDoMatBang, int mucPhiQuanLyHangThang, int soLuongTheThangMay, LichSuGiaoDich lichSuGiaoDich, string tinhTrangGiaoDichHienTai, int tinhTrangThanhToan, string maCuDan, string maNhanVien)
-            : base(maCanHo, dienTichGSA, dienTichNSA, viTriTang, soLuongPhongNgu, soLuongToilet, soDoMatBang, mucPhiQuanLyHangThang, soLuongTheThangMay, lichSuGiaoDich, tinhTrangGiaoDichHienTai, tinhTrangThanhToan, maCuDan)
+        public KhuThuongMai(string maCanHo, float dienTichGSA, float dienTichNSA, int viTriTang, int soLuongPhongNgu, int soLuongToilet, Image soDoMatBang, int mucPhiQuanLyHangThang, int soLuongTheThangMay, LichSuGiaoDich lichSuGiaoDich, int tinhTrangThanhToan, string maCuDan, string maNhanVien)
+            : base(maCanHo, dienTichGSA, dienTichNSA, viTriTang, soLuongPhongNgu, soLuongToilet, soDoMatBang, mucPhiQuanLyHangThang, soLuongTheThangMay, lichSuGiaoDich, tinhTrangThanhToan, maCuDan)
         {
-            MaNhanVien = maNhanVien;
+            MaNhanVienPhuTrach = maNhanVien;
         }
         
     }
