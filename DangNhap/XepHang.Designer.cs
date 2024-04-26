@@ -183,7 +183,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlText;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(1668, 803);
             this.Controls.Add(this.CBB_TieuChiXepHang);
             this.Controls.Add(this.LB_XepHangTheo);
@@ -195,6 +195,7 @@
             this.Controls.Add(this.RBtn_NhanVien);
             this.Controls.Add(this.BTN_XepHang);
             this.Controls.Add(this.GGC_ThongKe);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "XepHang";
             this.Text = "XepHang";
             this.Load += new System.EventHandler(this.XepHang_Load);
