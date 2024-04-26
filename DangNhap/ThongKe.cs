@@ -555,8 +555,8 @@ namespace DangNhap
 
         private void BTN_XepHang_Click(object sender, EventArgs e)
         {
-            XepHang xepHang = new XepHang();    
-            xepHang.ShowDialog();
+            OpenChildForm(new XepHang());
+            LB_ThongKeCV.Text = "BẢNG XẾP HẠNG";
         }
     }
 }
