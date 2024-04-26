@@ -173,6 +173,7 @@ namespace DangNhap
             //dataSource.Columns.Add(col7);
 
             dataSource = GetAllJobs(tuNgay, denNgay);
+            GGC_ThongKe.DataSource = null; // Clear previous data
             GGC_ThongKe.DataSource = dataSource;
             GGC_ThongKe.TableDescriptor.Columns[0].HeaderText = "Mã nhân viên";
             GGC_ThongKe.TableDescriptor.Columns[1].HeaderText = "Họ";
@@ -221,6 +222,7 @@ namespace DangNhap
             string maBoPhan = CBB_PhongBan.SelectedItem.ToString().Split('-')[0];
             DataTable dataSource = new DataTable();
             dataSource = GetAll_DivisionJob(tuNgay, denNgay, maBoPhan);
+            GGC_ThongKe.DataSource = null; // Clear previous data
             GGC_ThongKe.DataSource = dataSource;
             GGC_ThongKe.TableDescriptor.Columns[0].HeaderText = "Mã nhân viên";
             GGC_ThongKe.TableDescriptor.Columns[1].HeaderText = "Họ";
@@ -257,6 +259,7 @@ namespace DangNhap
             string maNhanVien = CBB_NhanVien.SelectedItem.ToString().Split('_')[0];
             DataTable dataSource = new DataTable();
             dataSource = GetAll_EmployeeJob(tuNgay, denNgay, maNhanVien);
+            GGC_ThongKe.DataSource = null; // Clear previous data
             GGC_ThongKe.DataSource = dataSource;
             GGC_ThongKe.TableDescriptor.Columns[0].HeaderText = "Mã nhân viên";
             GGC_ThongKe.TableDescriptor.Columns[1].HeaderText = "Họ";

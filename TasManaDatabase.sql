@@ -165,6 +165,7 @@ CREATE TABLE ChuHo
   maCuDan VARCHAR(10) NOT NULL,
   ngayNhanBanGiaoCanHo DATE NOT NULL,
   soDienNuocNgayBanGiao FLOAT NOT NULL,
+  soDienNuocHangThang FlOAT,
   ngayChuyenNhuongChoChuMoi DATE NOT NULL,
   banGiao_maCuDan VARCHAR(10) NOT NULL,
   PRIMARY KEY (maCuDan),
@@ -1371,3 +1372,29 @@ BEGIN
 END
 ----------------------------------------------------------------------------------------------------------------
 ------------------------------------HẾT XẾP HẠNG/THỐNG KÊ DỮ LIỆU CHUNG --------------------------------------
+GO
+--------------------------- THỐNG KÊ DỮ LIỆU CƯ DÂN -------------------------------------------
+------------------------- Thống kê công nợ theo MÃ CĂN HỘ -------------------------------------
+CREATE PROCEDURE [dbo].[ThongKeCongNo]
+AS
+BEGIN
+	SELECT CH.maCanHo, LSGD.tinhTrangCongNo
+	FROM CanHo CH, LichSuGiaoDich LSGD
+	WHERE CH.maCanHo = LSGD.maCanHo
+	ORDER BY LSGD.tinhTrangCongNo DESC
+END
+------------------------------------------------------------------------------------------------
+GO
+--------------------------  Danh sách các yêu cầu sửa chữa -------------------------------------
+CREATE PROCEDURE [dbo].[DanhSachYeuCauSuaChua]
+AS
+BEGIN
+	SELECT CH.maCanHo, CH.maCuDan, CD.hoTen, CV.trangThai, CVNV.maNhanVien
+	FROM CongViec CV, CanHo CH, Congviec_Nhanvien CVNV, YeuCau YC, CuDan CD
+	WHERE CV.maCongViec = CVNV.maCongViec and YC.maCanHo = CH.maCanHo and YC.maCongViec = CV.maCongViec and CD.maCuDan = CH.maCuDan
+END
+------------------------------------------------------------------------------------------------
+GO
+--------------------------  Tổng chi phí điện nước theo thời gian -------------------------------------
+
+--------------------------------------------------------------------------------------------------------
