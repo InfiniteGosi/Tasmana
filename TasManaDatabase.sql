@@ -325,24 +325,24 @@ INSERT INTO NhanVien VALUES('GD-001', 'jd@gmail.com', 'Ho', 'Khang', '111111111'
 INSERT INTO NhanVien VALUES('VS-002', 'VS002@gmail.com', 'Vu', 'Quang', '1321312', '1/2/2004', 1, 'TP.HCM', '1234576', 'Part-time', N'Độc thân', '1111211', 1, '2024-01-01', '2025-12-31', 'TP.HCM', 'Chua co', N'Tốt', 'VS','VSN02')
 INSERT INTO NhanVien VALUES('VS-003', 'email_nv001@example.com', 'Tran', 'An', '0123456669', '2000-01-01', 0, N'Hà Nội', '072947182653', 'Full-time', N'Độc thân', '01231230213', 1, '2024-01-01', '2025-12-31', N'Địa chỉ thường trú NV001', 'Chua co', N'Tốt', 'VS','VSN01')
 
-INSERT INTO NhanVien VALUES('KT-005', 'hih@gmail.com', 'Ho', 'Khuyen', '121111111', '1/1/2002', 1, 'TP.HCM', '133456', 'Full-time', N'Độc thân', '1121111', 1, '2024-01-01', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú KT-005', N'Tốt', 'VS', 'KT01')
-INSERT INTO NhanVien VALUES('XD-006', 'xd006@gmail.com', 'Vo', 'Van F', '147258369', '6/6/1985', 1, N'Hà Nội', '123461', 'Full-time', N'Độc thân', '1111611', 1, '2024-01-01', '2025-12-31', N'Hà Nội', N'Địa chỉ thường trú XD-006', N'Tốt', 'XD01')
-INSERT INTO NhanVien VALUES('HCNS-007', 'hcns007@gmail.com', 'Nguyen', 'Thi G', '258369147', '7/7/1993', 1, 'TP.HCM', '123462', 'Part-time', N'Độc thân', '1111711', 1, '2024-01-01', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú Q8', N'Tốt', 'HCNS02')
-INSERT INTO NhanVien VALUES('AN-010', 'an010@gmail.com', 'Pham', 'Van K', '258369147', '10/10/1989', 1, 'TP.HCM', '123465', 'Full-time', N'Độc thân', '1111011', 1, '2024-01-01', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú Q7', N'Tốt', 'AN02')
-INSERT INTO NhanVien VALUES('TC-003', 'tc01@gmail.com', 'Phan', 'Quoc Linh', '40284746', '12/10/2003', 1, 'TP.HCM', '12334', 'Full-time', N'Độc thân', '1111016', 1, '2024-01-03', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú Q7', N'Tốt', 'TC01')
+--INSERT INTO NhanVien VALUES('KT-005', 'hih@gmail.com', 'Ho', 'Khuyen', '121111111', '1/1/2002', 1, 'TP.HCM', '133456', 'Full-time', N'Độc thân', '1121111', 1, '2024-01-01', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú KT-005', N'Tốt', 'VS', 'KT01')
+--INSERT INTO NhanVien VALUES('XD-006', 'xd006@gmail.com', 'Vo', 'Van F', '147258369', '6/6/1985', 1, N'Hà Nội', '123461', 'Full-time', N'Độc thân', '1111611', 1, '2024-01-01', '2025-12-31', N'Hà Nội', N'Địa chỉ thường trú XD-006', N'Tốt', 'XD01')
+--INSERT INTO NhanVien VALUES('HCNS-007', 'hcns007@gmail.com', 'Nguyen', 'Thi G', '258369147', '7/7/1993', 1, 'TP.HCM', '123462', 'Part-time', N'Độc thân', '1111711', 1, '2024-01-01', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú Q8', N'Tốt', 'HCNS02')
+--INSERT INTO NhanVien VALUES('AN-010', 'an010@gmail.com', 'Pham', 'Van K', '258369147', '10/10/1989', 1, 'TP.HCM', '123465', 'Full-time', N'Độc thân', '1111011', 1, '2024-01-01', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú Q7', N'Tốt', 'AN02')
+--INSERT INTO NhanVien VALUES('TC-003', 'tc01@gmail.com', 'Phan', 'Quoc Linh', '40284746', '12/10/2003', 1, 'TP.HCM', '12334', 'Full-time', N'Độc thân', '1111016', 1, '2024-01-03', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú Q7', N'Tốt', 'TC01')
 
 -- Insert thông tin NV
 INSERT INTO TaiKhoan VALUES('GD-001.KHANG.111111111', '123', 'GD-001', 0, 1)
 INSERT INTO TaiKhoan VALUES('VS-002.QUANG.1321312', '123', 'VS-002', 0, 0)
 INSERT INTO TaiKhoan VALUES('VS-003.AN.0123456669', '123', 'VS-003', 0, 0)
 
-INSERT INTO TaiKhoan VALUES('KT-005.E.369258147', '123', 'KT-005', 0);
-INSERT INTO TaiKhoan VALUES('XD-006.F.147258369', '123', 'XD-006', 0);
-INSERT INTO TaiKhoan VALUES('HCNS-007.G.258369147', '123', 'HCNS-007', 0);
-INSERT INTO TaiKhoan VALUES('AN-010.K.258369147', '123', 'AN-010', 0);
-INSERT INTO TaiKhoan VALUES('TC-003.LINH.40284746', '123', 'TC-003', 0);
-INSERT INTO TaiKhoan VALUES('ABC-001.THANG.789456', '123', 'ABC-001', 0);
-INSERT INTO TaiKhoan VALUES('XYZ-002.DUONG.456789', '123', 'XYZ-002', 0);
+--INSERT INTO TaiKhoan VALUES('KT-005.E.369258147', '123', 'KT-005', 0);
+--INSERT INTO TaiKhoan VALUES('XD-006.F.147258369', '123', 'XD-006', 0);
+--INSERT INTO TaiKhoan VALUES('HCNS-007.G.258369147', '123', 'HCNS-007', 0);
+--INSERT INTO TaiKhoan VALUES('AN-010.K.258369147', '123', 'AN-010', 0);
+--INSERT INTO TaiKhoan VALUES('TC-003.LINH.40284746', '123', 'TC-003', 0);
+--INSERT INTO TaiKhoan VALUES('ABC-001.THANG.789456', '123', 'ABC-001', 0);
+--INSERT INTO TaiKhoan VALUES('XYZ-002.DUONG.456789', '123', 'XYZ-002', 0);
 
 SELECT * FROM TaiKhoan
 SELECT * FROM NhanVien
