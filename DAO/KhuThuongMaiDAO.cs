@@ -21,5 +21,10 @@ namespace DAO
             string query = $"select * from KhuThuongMai";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetKhuThuongMaiById(string maKhuThuongMai)
+        {
+            string query = $"select * from KhuThuongMai where maCanHo = '{maKhuThuongMai}'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

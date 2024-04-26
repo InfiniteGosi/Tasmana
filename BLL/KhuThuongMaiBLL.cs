@@ -50,5 +50,21 @@ namespace BLL
             }
             return arr;
         }
+        public KhuThuongMai GetKhuThuongMaiById(string maKhuThuongMai)
+        {
+            DataTable dt = KhuThuongMaiDAO.Instance.GetKhuThuongMaiById(maKhuThuongMai);
+            float dienTichGSA = dt.Rows[0]["dienTichGSA"] != DBNull.Value ? Convert.ToSingle(dt.Rows[0]["dienTichGSA"]) : 0.0f;
+            float dienTichNSA = dt.Rows[0]["dienTichNSA"] != DBNull.Value ? Convert.ToSingle(dt.Rows[0]["dienTichNSA"]) : 0.0f;
+            int viTriTang = (int)dt.Rows[0]["viTriTang"];
+            int soLuongPhongNgu = (int)dt.Rows[0]["soLuongPhongNgu"];
+            int soLuongToilet = (int)dt.Rows[0]["soLuongToilet"];
+            Image soDoMatBang = dt.Rows[0]["soDoMatBang"] != DBNull.Value ? ConvertByteArrayToImage((byte[])dt.Rows[0]["soDoMatBang"]) : null;
+            int mucPhiQLHangThang = (int)dt.Rows[0]["mucPhiQLHangThang"];
+            int soLuongTheThangMay = (int)dt.Rows[0]["soLuongTheThangMay"];
+            LichSuGiaoDichKhuThuongMai lichSuGiaoDich = LichSuGiaoDichKhuThuongMaiBLL.Instance.GetLichSuByKhuThuongMaiId(maKhuThuongMai);
+            int tinhTrangThanhToan = (int)dt.Rows[0]["tinhTrangThanhToan"];
+            string maKhachDangThue = dt.Rows[0]["maKhachDangThue"].ToString();
+            return new KhuThuongMai(maKhuThuongMai, dienTichGSA, dienTichNSA, viTriTang, soLuongPhongNgu, soLuongToilet, soDoMatBang, mucPhiQLHangThang, soLuongTheThangMay, lichSuGiaoDich, tinhTrangThanhToan, maKhachDangThue);
+        }
     }
 }

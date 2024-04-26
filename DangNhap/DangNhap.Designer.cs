@@ -260,6 +260,7 @@ namespace DangNhap
             this.CBBB_manguoidung.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBBB_manguoidung.ForeColor = System.Drawing.Color.White;
             this.CBBB_manguoidung.Location = new System.Drawing.Point(627, 227);
+            this.CBBB_manguoidung.MetroBorderColor = System.Drawing.Color.Silver;
             this.CBBB_manguoidung.Name = "CBBB_manguoidung";
             this.CBBB_manguoidung.Size = new System.Drawing.Size(428, 30);
             this.CBBB_manguoidung.TabIndex = 28;
@@ -274,7 +275,7 @@ namespace DangNhap
             this.CHB_luuid.ForeColor = System.Drawing.Color.White;
             this.CHB_luuid.Location = new System.Drawing.Point(627, 367);
             this.CHB_luuid.Name = "CHB_luuid";
-            this.CHB_luuid.Size = new System.Drawing.Size(163, 23);
+            this.CHB_luuid.Size = new System.Drawing.Size(159, 23);
             this.CHB_luuid.TabIndex = 29;
             this.CHB_luuid.Text = "Nhớ mã người dùng";
             this.CHB_luuid.UseVisualStyleBackColor = false;

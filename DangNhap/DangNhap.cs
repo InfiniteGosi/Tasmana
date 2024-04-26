@@ -153,6 +153,8 @@ namespace DangNhap
                 DataSource = usernames
             };
             CBBB_manguoidung.ListControl = listBox;
+            CBBB_manguoidung.ListControl.BackColor = Color.Black;
+            CBBB_manguoidung.ListControl.ForeColor = Color.White;
         }
         private void CBBB_manguoidung_SelectionChangeCommitted(object sender, EventArgs e)
         {

@@ -48,5 +48,30 @@ namespace BLL
                 return dt.Rows[0]["hoTen"].ToString();
             return "";
         }
+        public List<Resident> GetAllResidents()
+        {
+            DataTable dt = ResidentDAO.Instance.GetAllResidents();
+            List<Resident> residents = new List<Resident>();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                string maCuDan = dt.Rows[i]["maCuDan"].ToString();
+                string hoTen = dt.Rows[i]["hoTen"].ToString();
+                DateTime ngaySinh = (DateTime)dt.Rows[i]["ngaySinh"];
+                string maDinhDanh = dt.Rows[i]["maDinhDanh"].ToString();
+                string soDienThoai = dt.Rows[i]["SDT"].ToString();
+                string email = dt.Rows[i]["email"].ToString();
+                string soTheTamTru = dt.Rows[i]["soTheTamTru"].ToString();
+                DateTime ngayChuyenVao = (DateTime)dt.Rows[i]["ngayChuyenVao"];
+                DateTime ngayChuyenDi = (DateTime)dt.Rows[i]["ngayChuyenDi"];
+                float soDienNuocHangThang = dt.Rows[i]["soDienNuocHangThang"] != DBNull.Value ? Convert.ToSingle(dt.Rows[0]["soDienNuocHangThang"]) : 0.0f;
+                float tinhTrangCongNo = dt.Rows[i]["tinhTrangCongNo"] != DBNull.Value ? Convert.ToSingle(dt.Rows[0]["tinhTrangCongNo"]) : 0.0f;
+                string duLieuDangKyThuNuoi = dt.Rows[i]["duLieuDangKyThuNuoi"].ToString();
+                string quocTich = dt.Rows[i]["quocTich"].ToString();
+                string maCuDanNguoiThan = dt.Rows[i]["maCuDanNguoiThan"].ToString();
+                Resident resident = new Resident(maCuDan, hoTen, ngaySinh, maDinhDanh, soDienThoai, email, soTheTamTru, ngayChuyenVao, ngayChuyenDi, soDienNuocHangThang, tinhTrangCongNo, duLieuDangKyThuNuoi, quocTich, maCuDanNguoiThan);
+                residents.Add(resident);
+            }
+            return residents;
+        }
     }
 }

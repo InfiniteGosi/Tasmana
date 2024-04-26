@@ -30,56 +30,15 @@ namespace DangNhap
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CuDan));
             this.TM_nhanvien = new System.Windows.Forms.Timer(this.components);
-            this.DGV_hienthicudan = new System.Windows.Forms.DataGridView();
             this.BTN_themcudan = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_in = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_PDF = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_excel = new Guna.UI.WinForms.GunaGradientButton();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_hienthicudan)).BeginInit();
+            this.GGC_cudan = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
+            ((System.ComponentModel.ISupportInitialize)(this.GGC_cudan)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DGV_hienthicudan
-            // 
-            this.DGV_hienthicudan.AllowUserToAddRows = false;
-            this.DGV_hienthicudan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_hienthicudan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.DGV_hienthicudan.ColumnHeadersHeight = 35;
-            this.DGV_hienthicudan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.DGV_hienthicudan.EnableHeadersVisualStyles = false;
-            this.DGV_hienthicudan.Location = new System.Drawing.Point(65, 120);
-            this.DGV_hienthicudan.Name = "DGV_hienthicudan";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_hienthicudan.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.DGV_hienthicudan.RowHeadersVisible = false;
-            this.DGV_hienthicudan.RowHeadersWidth = 51;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            this.DGV_hienthicudan.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.DGV_hienthicudan.RowTemplate.Height = 24;
-            this.DGV_hienthicudan.Size = new System.Drawing.Size(1248, 401);
-            this.DGV_hienthicudan.TabIndex = 117;
             // 
             // BTN_themcudan
             // 
@@ -99,7 +58,7 @@ namespace DangNhap
             this.BTN_themcudan.Image = ((System.Drawing.Image)(resources.GetObject("BTN_themcudan.Image")));
             this.BTN_themcudan.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_themcudan.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_themcudan.Location = new System.Drawing.Point(1273, 57);
+            this.BTN_themcudan.Location = new System.Drawing.Point(1252, 27);
             this.BTN_themcudan.Name = "BTN_themcudan";
             this.BTN_themcudan.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.BTN_themcudan.OnHoverBaseColor2 = System.Drawing.Color.DarkGreen;
@@ -194,6 +153,19 @@ namespace DangNhap
             this.BTN_excel.Text = "Excel";
             this.BTN_excel.TextOffsetX = 3;
             // 
+            // GGC_cudan
+            // 
+            this.GGC_cudan.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.GGC_cudan.BackColor = System.Drawing.SystemColors.Window;
+            this.GGC_cudan.Location = new System.Drawing.Point(100, 82);
+            this.GGC_cudan.Name = "GGC_cudan";
+            this.GGC_cudan.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
+            this.GGC_cudan.Size = new System.Drawing.Size(1211, 560);
+            this.GGC_cudan.TabIndex = 179;
+            this.GGC_cudan.Text = "gridGroupingControl1";
+            this.GGC_cudan.UseRightToLeftCompatibleTextBox = true;
+            this.GGC_cudan.VersionInfo = "25.1462.39";
+            // 
             // CuDan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -201,25 +173,26 @@ namespace DangNhap
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1376, 782);
+            this.Controls.Add(this.GGC_cudan);
             this.Controls.Add(this.BTN_in);
             this.Controls.Add(this.BTN_PDF);
             this.Controls.Add(this.BTN_excel);
-            this.Controls.Add(this.DGV_hienthicudan);
             this.Controls.Add(this.BTN_themcudan);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CuDan";
             this.Text = "CuDan";
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_hienthicudan)).EndInit();
+            this.Load += new System.EventHandler(this.CuDan_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.GGC_cudan)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Timer TM_nhanvien;
-        private System.Windows.Forms.DataGridView DGV_hienthicudan;
         private Guna.UI.WinForms.GunaGradientButton BTN_themcudan;
         private Guna.UI.WinForms.GunaGradientButton BTN_in;
         private Guna.UI.WinForms.GunaGradientButton BTN_PDF;
         private Guna.UI.WinForms.GunaGradientButton BTN_excel;
+        private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl GGC_cudan;
     }
 }
