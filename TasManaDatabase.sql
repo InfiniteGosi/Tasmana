@@ -304,12 +304,13 @@ CREATE TABLE CuDan_sdtNguoiThan
 CREATE TABLE ChiPhiHangThang
 (
 	maCanHo VARCHAR(10) NOT NULL,
-	soDienNuocHangThang FLOAT ,
+	soDienHangThang FLOAT,
+	soNuocHangThang FLOAT,
 	phiQuanLyHangThang INT,
 	tinhTrangThanhToan NVARCHAR(100),
+	ngayGhi SMALLDATETIME,
 	PRIMARY KEY (maCanHo),
-	FOREIGN KEY (maCanHo) REFERENCES maCanHo (CanHo),
-
+	FOREIGN KEY (maCanHo) REFERENCES CanHo(maCanHo)
 );
 go
 
