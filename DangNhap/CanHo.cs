@@ -305,5 +305,11 @@ namespace DangNhap
                 DisplayGGC_khuthuongmai();
             }
         }
+
+        private void BTN_XemHoaDon_Click(object sender, EventArgs e)
+        {
+            ChiPhiHangThang cpht = new ChiPhiHangThang();
+            cpht.ShowDialog();
+        }
     }
 }

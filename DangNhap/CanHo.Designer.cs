@@ -38,6 +38,7 @@ namespace DangNhap
             this.BTN_excel = new Guna.UI.WinForms.GunaGradientButton();
             this.CBB_choice = new System.Windows.Forms.ComboBox();
             this.LB_loai = new System.Windows.Forms.Label();
+            this.BTN_XemHoaDon = new Guna.UI.WinForms.GunaGradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.GGC_danhsachnv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GGC_canho)).BeginInit();
             this.SuspendLayout();
@@ -216,6 +217,38 @@ namespace DangNhap
             this.LB_loai.TabIndex = 177;
             this.LB_loai.Text = "Chọn loại bất động sản";
             // 
+            // BTN_XemHoaDon
+            // 
+            this.BTN_XemHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_XemHoaDon.Animated = true;
+            this.BTN_XemHoaDon.AnimationHoverSpeed = 1F;
+            this.BTN_XemHoaDon.AnimationSpeed = 0.03F;
+            this.BTN_XemHoaDon.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_XemHoaDon.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.BTN_XemHoaDon.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
+            this.BTN_XemHoaDon.BorderColor = System.Drawing.Color.White;
+            this.BTN_XemHoaDon.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_XemHoaDon.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_XemHoaDon.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_XemHoaDon.ForeColor = System.Drawing.Color.White;
+            this.BTN_XemHoaDon.Image = null;
+            this.BTN_XemHoaDon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_XemHoaDon.ImageSize = new System.Drawing.Size(20, 20);
+            this.BTN_XemHoaDon.Location = new System.Drawing.Point(913, 47);
+            this.BTN_XemHoaDon.Name = "BTN_XemHoaDon";
+            this.BTN_XemHoaDon.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
+            this.BTN_XemHoaDon.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
+            this.BTN_XemHoaDon.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_XemHoaDon.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_XemHoaDon.OnHoverImage = null;
+            this.BTN_XemHoaDon.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_XemHoaDon.Radius = 5;
+            this.BTN_XemHoaDon.Size = new System.Drawing.Size(177, 35);
+            this.BTN_XemHoaDon.TabIndex = 178;
+            this.BTN_XemHoaDon.Text = "Xem hóa đơn hàng tháng";
+            this.BTN_XemHoaDon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_XemHoaDon.Click += new System.EventHandler(this.BTN_XemHoaDon_Click);
+            // 
             // CanHo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -223,6 +256,7 @@ namespace DangNhap
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1376, 782);
+            this.Controls.Add(this.BTN_XemHoaDon);
             this.Controls.Add(this.LB_loai);
             this.Controls.Add(this.CBB_choice);
             this.Controls.Add(this.BTN_in);
@@ -250,5 +284,6 @@ namespace DangNhap
         private Guna.UI.WinForms.GunaGradientButton BTN_excel;
         private System.Windows.Forms.ComboBox CBB_choice;
         private System.Windows.Forms.Label LB_loai;
+        private Guna.UI.WinForms.GunaGradientButton BTN_XemHoaDon;
     }
 }
