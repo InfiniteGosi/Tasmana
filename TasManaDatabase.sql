@@ -165,9 +165,8 @@ CREATE TABLE ChuHo
   maCuDan VARCHAR(10) NOT NULL,
   ngayNhanBanGiaoCanHo DATE NOT NULL,
   soDienNuocNgayBanGiao FLOAT NOT NULL,
-  soDienNuocHangThang FlOAT,
-  ngayChuyenNhuongChoChuMoi DATE NOT NULL,
-  banGiao_maCuDan VARCHAR(10) NOT NULL,
+  ngayChuyenNhuongChoChuMoi DATE,
+  banGiao_maCuDan VARCHAR(10),
   PRIMARY KEY (maCuDan),
   FOREIGN KEY (maCuDan) REFERENCES CuDan(maCuDan),
   FOREIGN KEY (banGiao_maCuDan) REFERENCES ChuHo(maCuDan)
@@ -301,6 +300,17 @@ CREATE TABLE CuDan_sdtNguoiThan
   PRIMARY KEY (sdtNguoiThan, maCuDan),
   FOREIGN KEY (maCuDan) REFERENCES CuDan(maCuDan)
 );
+
+CREATE TABLE ChiPhiHangThang
+(
+	maCanHo VARCHAR(10) NOT NULL,
+	soDienNuocHangThang FLOAT ,
+	phiQuanLyHangThang INT,
+	tinhTrangThanhToan NVARCHAR(100),
+	PRIMARY KEY (maCanHo),
+	FOREIGN KEY (maCanHo) REFERENCES maCanHo (CanHo),
+
+);
 go
 
 
@@ -388,6 +398,11 @@ INSERT INTO CanHo VALUES ('W3504', 80.0, 100, 35, 5, 1, NULL, 1800000, 1, N'Đã
 INSERT INTO CanHo VALUES ('W3510', 80.0, 100, 35, 5, 1, NULL, 18000000, 1, N'Chưa bàn giao - Cư dân đang ở', 25, 'CD-A009');
 select * from CanHo
 
+-- Insert Dữ liệu thử của chủ hộ
+insert into ChuHo VALUES ('CD-A001', '1-1-2024', 0, 205, NULL, NULL)
+insert into ChuHo VALUES ('CD-A013', '05-05-2023', 0, 150, NULL, NULL)
+insert into ChuHo VALUES ('CD-A019', '05-15-2023', 0, 170, NULL, NULL)
+Select * From ChuHo
 
 insert into LichSuGiaoDich values('WPHA', 'CD-A001', 'CD-A021', 'CD-A012', '1-1-2023', '1-1-2024', 100000000)
 insert into LichSuGiaoDich values('WPHB', 'CD-A002', 'CD-A014', 'CD-A013', '1-1-2023', '1-1-2024', 400000000)

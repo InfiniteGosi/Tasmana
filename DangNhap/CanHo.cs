@@ -153,14 +153,11 @@ namespace DangNhap
         
         private void GGC_canho_TableControlCellDoubleClick(object sender, GridTableControlCellClickEventArgs e)
         {
-            // Get the index of the clicked row
-            int rowIndex = e.Inner.RowIndex - 5;
-            // Check if the clicked row index is valid
-            if (rowIndex >= 0 && rowIndex < GGC_canho.Table.Records.Count)
+            GridTableCellStyleInfo style = e.TableControl.GetTableViewStyleInfo(e.Inner.RowIndex, e.Inner.ColIndex);
+            GridTableCellStyleInfoIdentity id = style.TableCellIdentity;
+            if (id.DisplayElement.Kind == DisplayElementKind.Record)
             {
-                // Get the record corresponding to the clicked row
-                Record record = GGC_canho.Table.Records[rowIndex];
-
+                Record record = id.DisplayElement.GetRecord();
                 // Extract data from the record
                 string maCanHo = record.GetValue("MaCanHo").ToString();
                 if (!maCanHo.Contains("KTM"))

@@ -325,28 +325,26 @@ namespace DangNhap
 
         private void GGC_hienthicongviec_TableControlCellDoubleClick(object sender, GridTableControlCellClickEventArgs e)
         {
-            // Get the index of the clicked row
-            int rowIndex = e.Inner.RowIndex - 5;
-            // Check if the clicked row index is valid
-            if (rowIndex >= 0 && rowIndex < GGC_hienthicongviec.Table.Records.Count)
+            GridTableCellStyleInfo style = e.TableControl.GetTableViewStyleInfo(e.Inner.RowIndex, e.Inner.ColIndex);
+            GridTableCellStyleInfoIdentity id = style.TableCellIdentity;
+            if (id.DisplayElement.Kind == DisplayElementKind.Record)
             {
-                // Get the record corresponding to the clicked row
-                Record record = GGC_hienthicongviec.Table.Records[rowIndex];
+                Record record = id.DisplayElement.GetRecord();
 
                 // Extract data from the record
                 string maCongViec = record.GetValue("Mã công việc").ToString();
                 string maNhanVien;
 
-                if (index!=0)
+                if (index != 0)
                 {
                     maNhanVien = null;
                 }
                 else
                     maNhanVien = record.GetValue("Mã nhân viên").ToString();
                 string maCanHo = record.GetValue("Mã căn hộ").ToString();
-                string maPhongBan = record.GetValue("Mã Bộ phận").ToString() ;
+                string maPhongBan = record.GetValue("Mã Bộ phận").ToString();
                 string maNhom;
-                if (index ==2)
+                if (index == 2)
                 {
                     maNhom = null;
                 }
@@ -358,6 +356,7 @@ namespace DangNhap
                 string trangThai = curJob.TrangThai.ToString();
                 DateTime thoiHan = curJob.ThoiHan;
                 int phiDichVu = curJob.PhiDichVu;
+
                 // Add to ChiTietCongViec 
                 ChiTietCongViec ctcv = new ChiTietCongViec();
                 ctcv.TXB_PhongBan.Text = maPhongBan;
@@ -369,6 +368,7 @@ namespace DangNhap
                 ctcv.TXB_MaCV.Text = maCongViec;
                 ctcv.CBB_TrangThai.Text = trangThai;
                 ctcv.TXB_PhiDichVu.Text = phiDichVu.ToString();
+
                 if (thoiHan > DateTime.MinValue)
                 {
                     ctcv.CB_thoihan.Checked = true;
@@ -376,9 +376,11 @@ namespace DangNhap
                     ctcv.DTP_ngay.Text = date.ToString();
                     ctcv.DTP_gio.Text = thoiHan.TimeOfDay.ToString();
                 }
+
                 ctcv.LLB_chỉtietfile.Text = JobBLL.Instance.GetNameFile(maCongViec);
                 ctcv.LLB_chỉtietfile.Show();
                 ctcv.CBB_quyentruycap.SelectedIndex = curJob.QuyenTruyCap;
+
                 // Show Form
                 ctcv.ShowDialog();
                 this.Refresh();
