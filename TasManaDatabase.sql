@@ -310,6 +310,7 @@ CREATE TABLE ChiPhiHangThang
 	phiQuanLyHangThang INT,
 	tinhTrangThanhToan NVARCHAR(100),
 	ngayGhi SMALLDATETIME,
+	ngayThanhToan SMALLDATETIME,
 	PRIMARY KEY (billID, maCanHo),
 	FOREIGN KEY (maCanHo) REFERENCES CanHo(maCanHo)
 );
@@ -450,7 +451,55 @@ Insert into CongViec_NhanVien Values ('VS-003', 'CV1')
 Insert INTO YeuCau VALUES('CV1', 'WPHA')
 go
 
+----------------------------------- PROCEDURE -------------------------------------------------------
+-- Procedure thêm hóa đơn hàng tháng cho căn hộ
+CREATE PROCEDURE [dbo].[SP_ThemChiPhiHangThang]
+	@maCanHo VARCHAR(10),
+	@soDienHangThang float,
+	@soNuocHangThang float,
+	@phiQuanLyHangThang int,
+	@tinhTrangThanhToan NVARCHAR(100),
+	@ngayGhi SMALLDATETIME,
+	@ngayThanhToan SMALLDATETIME
+AS
+BEGIN
+	DECLARE @NewBillID int
 
+    -- Tìm giá trị lớn nhất của billID hiện tại trong bảng
+    SELECT @NewBillID = ISNULL(MAX(billID), 0) + 1
+    FROM ChiPhiHangThang
+
+    -- Trả về giá trị mới cho billID
+    SELECT @NewBillID AS NewBillID
+	
+	-- Thêm hóa đơn 
+	INSERT INTO ChiPhiHangThang 
+	VALUES (@NewBillID, @maCanHo, @soDienHangThang, @soNuocHangThang, @phiQuanLyHangThang, @tinhTrangThanhToan, @ngayGhi, @ngayThanhToan)
+END
+-----------------------------------------------
+GO
+-- Procedure Sửa hóa đơn hàng tháng
+CREATE PROCEDURE [dbo].[EditHoaDonHangThang]
+	@billID int,
+	@maCanHo VARCHAR(10),
+	@soDienNuocHangThang float,
+	@soNuocHangThang float,
+	@phiQuanLyHangThang int,
+	@tinhTrangThanhToan NVARCHAR(100),
+	@ngayGhi SMALLDATETIME,
+	@ngayThanhToan SMALLDATETIME
+AS
+BEGIN
+	UPDATE ChiPhiHangThang
+	SET soDienHangThang = @soDienNuocHangThang, 
+	soNuocHangThang = @soNuocHangThang, 
+	phiQuanLyHangThang = @phiQuanLyHangThang, 
+	tinhTrangThanhToan = @tinhTrangThanhToan, 
+	ngayGhi = @ngayGhi,
+	ngayThanhToan = @ngayThanhToan
+	WHERE billID = @billID
+END
+GO
 --Procedure thêm một nhân viên mới
 create procedure [dbo].[SP_ThemNhanVien]
 	@maNhanVien varchar(10),

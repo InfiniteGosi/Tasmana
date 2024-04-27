@@ -80,5 +80,17 @@ namespace BLL
                 return "Sửa thất bại";
             }
         }
+        public bool AddMonthlyBill(Dictionary<string, object> parameters)
+        {
+            return ApartmentDAO.Instance.AddMonthlyBill(parameters);
+        }
+        public DataTable GetMonthlyBill()
+        {
+            return ApartmentDAO.Instance.GetMonthlyBill();
+        }
+        public bool EditMonthlyBill(Dictionary<string, object> parameters)
+        {
+            return ApartmentDAO.Instance.EditMonthlyBill(parameters);
+        }
     }
 }
