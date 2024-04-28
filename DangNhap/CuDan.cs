@@ -15,20 +15,14 @@ namespace DangNhap
 {
     public partial class CuDan : Form
     {
-        private List<Resident> residents; 
         public CuDan()
         {
             InitializeComponent();
             SyncfusionLicenseProvider.RegisterLicense("MzIxOTI2MkAzMjM1MmUzMDJlMzBORkJZeFRVdUQxeERjT2xkWC9vdFgxS29wUmREOU9CZVdENkRUN0lrSStVPQ==;Mgo+DSMBaFt6QHFqVkNrXVNbdV5dVGpAd0N3RGlcdlR1fUUmHVdTRHRbQlliS3xTck1hW35Wcnc=");
         }
-        private void GetAllResidents()
-        {
-            residents = ResidentBLL.Instance.GetAllResidents();
-        }
         private void DisplayGGC_cudan()
         {
-            GetAllResidents();
-            GGC_cudan.DataSource = residents;
+            GGC_cudan.DataSource = ChuHoBLL.Instance.GetAllChuHo();
         }
 
         private void CuDan_Load(object sender, EventArgs e)

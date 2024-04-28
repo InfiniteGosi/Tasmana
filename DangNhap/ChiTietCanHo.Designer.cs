@@ -828,6 +828,7 @@ namespace DangNhap
             this.BTN_xoa.TabIndex = 210;
             this.BTN_xoa.Text = "Xóa";
             this.BTN_xoa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_xoa.Click += new System.EventHandler(this.BTN_xoa_Click);
             // 
             // BTN_luu
             // 

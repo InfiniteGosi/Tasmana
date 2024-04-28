@@ -26,5 +26,15 @@ namespace DAO
             string query = $"select * from KhuThuongMai where maCanHo = '{maKhuThuongMai}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public bool UpdateKhuThuongMai(Dictionary<string, object> parameters)
+        {
+            int result = DataProvider.Instance.ExecuteStoredProcedure("SP_CapNhatKhuThuongMai", parameters);
+            return result > 0;
+        }
+        public bool DeleteKhuThuongMai(string maKhuThuongMai)
+        {
+            string query = $"exec SP_XoaKhuThuongMai @maCanHo = '{maKhuThuongMai}'";
+            return DataProvider.Instance.ExecuteNonQuery(query) > 0;
+        }
     }
 }

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
+using System.IO;
 
 namespace DangNhap
 {
@@ -30,6 +31,50 @@ namespace DangNhap
             this.maKhuThuongMaiHienTai = maCanHo;
             this.FormClosing += new FormClosingEventHandler(this.ChiTietKhuThuongMai_FormClosing);
             GetKhuThuongMaiById(maKhuThuongMaiHienTai);
+        }
+        private byte[] ConvertImageToBytes(Image img)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                return ms.ToArray();
+            }
+        }
+        private object[] values_ktm;
+        private void InitializeValues_KTM()
+        {
+            values_ktm = new object[]
+            {
+                TXB_macanho.Text,
+                Convert.ToDouble(TXB_GSA.Text),
+                Convert.ToDouble(TXB_NSA.Text),
+                (int)NUD_vitritang.Value,
+                (int)NUD_phongngu.Value,
+                (int)NUD_toilet.Value,
+                ConvertImageToBytes(PB_hinhcanho.Image),
+                (int)NUD_mucphiql.Value,
+                (int)NUD_thangmay.Value,
+                (int)NUD_thanhtoan.Value,
+                TXB_khachdangthue.Text.Split('_')[0]
+            };
+        }
+        private Dictionary<string, object> AddParemeter_KTM()
+        {
+            Dictionary<string, object> dict = new Dictionary<string, object>
+            {
+                { "@maCanHo", values_ktm[0] },
+                { "@dienTichGSA", values_ktm[1] },
+                { "@dienTichNSA", values_ktm[2] },
+                { "@viTriTang", values_ktm[3] },
+                { "@soLuongPhongNgu", values_ktm[4] },
+                { "@soLuongToilet", values_ktm[5] },
+                { "@soDoMatBang", values_ktm[6] },
+                { "@mucPhiQLHangThang", values_ktm[7] },
+                { "@soLuongTheThangMay", values_ktm[8] },
+                { "@tinhTrangThanhToan", values_ktm[9] },
+                { "@maKhachDangThue", values_ktm[10] },
+            };
+            return dict;
         }
         private void GetKhuThuongMaiById(string maKhuThuongMai)
         {
@@ -127,6 +172,35 @@ namespace DangNhap
         private void ChiTietKhuThuongMai_Load(object sender, EventArgs e)
         {
             DisplayKTMInfo();
+        }
+
+        private void BTN_luu_Click(object sender, EventArgs e)
+        {
+            InitializeValues_KTM();
+            MessageBox.Show(KhuThuongMaiBLL.Instance.UpdateKhuThuongMai(AddParemeter_KTM()));
+        }
+
+        private void BTN_uploadanh_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Image Files (*.jpg, *.jpeg, *.png)|*.jpg;*.jpeg;*.png|All files (*.*)|*.*", Multiselect = false })
+            {
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    PB_hinhcanho.Image = Image.FromFile(ofd.FileName);
+                }
+            }
+        }
+
+        private void BTN_xoa_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa khu thương mại này?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                string deleteMessage = KhuThuongMaiBLL.Instance.DeleteKhuThuongMai(maKhuThuongMaiHienTai);
+                MessageBox.Show(deleteMessage);
+                Close();
+            }
         }
     }
 }
