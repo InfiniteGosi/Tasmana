@@ -50,5 +50,33 @@ namespace DAO
         {
             return DataProvider.Instance.ExecuteStoredProcedure("EditHoaDonHangThang", parameters) > 0;
         }
+        // Lấy công nợ của tất cả căn hộ
+        public DataTable GetDebtOfAllApartments()
+        {
+            string query = "EXEC ThongKeCongNo";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        // Lấy công nợ của căn hộ nhất định
+        public DataTable GetDebtOfApartment(string maCanHo) 
+        {
+            // Tạo dictionary chứa các tham số cho stored procedure
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@maCanHo", maCanHo);
+            // Gọi stored procedure và nhận kết quả vào một DataTable
+            DataTable result = DataProvider.Instance.ExecuteStoredProcedureWithTableReturn("ThongKeCongNoTheoCanHo", parameters);
+            return result;
+        }
+        // Lấy danh sách yêu cầu
+        public DataTable GetRequestList()
+        {
+            string query = "EXEC DanhSachYeuCauSuaChua";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        // List Năm có trong csdl
+        public DataTable GetYearList()
+        {
+            string query = "SELECT DISTINCT YEAR(ngayGhi) AS Nam FROM ChiPhiHangThang ORDER BY Nam";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

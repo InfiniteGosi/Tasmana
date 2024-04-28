@@ -1581,12 +1581,25 @@ END
 GO
 --------------------------- THỐNG KÊ DỮ LIỆU CƯ DÂN -------------------------------------------
 ------------------------- Thống kê công nợ theo MÃ CĂN HỘ -------------------------------------
+-- Thống kê công nợ của TẤT CẢ CĂN HỘ
 CREATE PROCEDURE [dbo].[ThongKeCongNo]
 AS
 BEGIN
 	SELECT CH.maCanHo, LSGD.tinhTrangCongNo
 	FROM CanHo CH, LichSuGiaoDich LSGD
 	WHERE CH.maCanHo = LSGD.maCanHo
+	ORDER BY LSGD.tinhTrangCongNo DESC
+END
+------------------------------------------------------------------------------------------------
+GO
+-------------------------- Thống kê công nợ của TỪNG CĂN HỘ ---------------------------------------
+CREATE PROCEDURE  [dbo].[ThongKeCongNoTheoCanHo]
+	@maCanHo VARCHAR(10)
+AS
+BEGIN
+	SELECT CH.maCanHo, LSGD.tinhTrangCongNo
+	FROM CanHo CH, LichSuGiaoDich LSGD
+	WHERE CH.maCanHo = LSGD.maCanHo and CH.maCanHo = @maCanHo
 	ORDER BY LSGD.tinhTrangCongNo DESC
 END
 ------------------------------------------------------------------------------------------------
@@ -1602,5 +1615,50 @@ END
 ------------------------------------------------------------------------------------------------
 GO
 --------------------------  Tổng chi phí điện nước theo thời gian -------------------------------------
-
+CREATE PROCEDURE [dbo].[ChiPhiDienNuoc]
+    @maCanHo VARCHAR(10) = NULL,
+    @tuNgay SMALLDATETIME,
+    @denNgay SMALLDATETIME,
+    @tinhTrang NVARCHAR(100) = NULL
+AS
+BEGIN
+    IF @maCanHo IS NULL
+    BEGIN
+        IF @tinhTrang IS NULL
+        BEGIN
+            SELECT maCanHo, SUM(soDienHangThang) AS TongDien, SUM(soNuocHangThang) AS TongNuoc
+            FROM ChiPhiHangThang
+            WHERE CONVERT(date, ngayGhi) BETWEEN CONVERT(date, @tuNgay) AND CONVERT(date, @denNgay)
+            GROUP BY maCanHo
+        END
+        ELSE
+        BEGIN
+            SELECT maCanHo, SUM(soDienHangThang) AS TongDien, SUM(soNuocHangThang) AS TongNuoc
+            FROM ChiPhiHangThang
+            WHERE CONVERT(date, ngayGhi) BETWEEN CONVERT(date, @tuNgay) AND CONVERT(date, @denNgay)
+                AND tinhTrangThanhToan = @tinhTrang
+            GROUP BY maCanHo
+        END
+    END
+    ELSE
+    BEGIN
+        IF @tinhTrang IS NULL
+        BEGIN
+            SELECT maCanHo, SUM(soDienHangThang) AS TongDien, SUM(soNuocHangThang) AS TongNuoc
+            FROM ChiPhiHangThang
+            WHERE maCanHo = @maCanHo
+                AND CONVERT(date, ngayGhi) BETWEEN CONVERT(date, @tuNgay) AND CONVERT(date, @denNgay)
+            GROUP BY maCanHo
+        END
+        ELSE
+        BEGIN
+            SELECT maCanHo, SUM(soDienHangThang) AS TongDien, SUM(soNuocHangThang) AS TongNuoc
+            FROM ChiPhiHangThang
+            WHERE maCanHo = @maCanHo
+                AND CONVERT(date, ngayGhi) BETWEEN CONVERT(date, @tuNgay) AND CONVERT(date, @denNgay)
+                AND tinhTrangThanhToan = @tinhTrang
+            GROUP BY maCanHo
+        END
+    END
+END
 --------------------------------------------------------------------------------------------------------

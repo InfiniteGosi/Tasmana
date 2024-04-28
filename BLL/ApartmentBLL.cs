@@ -104,5 +104,36 @@ namespace BLL
             }
 
         }
+        // Lấy công nợ của tất cả căn hộ
+        public DataTable GetDebtOfAllApartments()
+        {
+            return ApartmentDAO.Instance.GetDebtOfAllApartments();
+        }
+        // Lấy công nợ của Căn hộ nhất định
+        public DataTable GetDebtOfApartment(string maCanHo)
+        {
+            return ApartmentDAO.Instance.GetDebtOfApartment(maCanHo);
+        }
+        // Lấy danh sách yêu cầu
+        public DataTable GetRequestList()
+        {
+            return ApartmentDAO.Instance.GetRequestList();
+        }
+        // List Năm có trong csdl ChiPhiHangThang
+        public List<int> GetYearList()
+        {
+            DataTable dt = ApartmentDAO.Instance.GetYearList();
+            List<int> list = new List<int>();
+            foreach (DataRow row in dt.Rows)
+            {
+                // Kiểm tra xem cột "Nam" có tồn tại không
+                if (dt.Columns.Contains("Nam"))
+                {
+                    // Ép kiểu giá trị từ dòng sang kiểu int và thêm vào list
+                    list.Add(Convert.ToInt32(row["Nam"]));
+                }
+            }
+            return list;
+        }
     }
 }
