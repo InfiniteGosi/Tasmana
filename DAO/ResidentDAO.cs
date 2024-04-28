@@ -34,5 +34,17 @@ namespace DAO
             string query = $"select * from CuDan";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        // Lấy cư dân có quốc tịch không phải VN
+        public DataTable GetAllForeignNational()
+        {
+            string query = "EXEC ThongKeCuDanNguocNgoai";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        // Lấy cư dân có quốc tịch Việt Nam
+        public DataTable GetVietResidents()
+        {
+            string query = "EXEC ThongKeCuDanVietNam";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

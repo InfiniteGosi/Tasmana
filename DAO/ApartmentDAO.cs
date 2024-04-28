@@ -78,5 +78,65 @@ namespace DAO
             string query = "SELECT DISTINCT YEAR(ngayGhi) AS Nam FROM ChiPhiHangThang ORDER BY Nam";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        // Lấy tổng chi phí điện / nước theo khoảng thời gian
+        public DataTable GetElectricity_WaterCost(DateTime tuNgay, DateTime denNgay)
+        {
+            // Tạo dictionary chứa các tham số cho stored procedure
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@tuNgay", tuNgay);
+            parameters.Add("@denNgay", denNgay);
+            // Gọi stored procedure và nhận kết quả vào một DataTable
+            DataTable result = DataProvider.Instance.ExecuteStoredProcedureWithTableReturn("ChiPhiDienNuoc", parameters);
+            return result;
+        }
+        // Lấy tổng chi phí quản lý hàng tháng theo khoảng thời gian
+        public DataTable GetManagementFee(DateTime tuNgay, DateTime denNgay)
+        {
+            // Tạo dictionary chứa các tham số cho stored procedure
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@tuNgay", tuNgay);
+            parameters.Add("@denNgay", denNgay);
+            // Gọi stored procedure và nhận kết quả vào một DataTable
+            DataTable result = DataProvider.Instance.ExecuteStoredProcedureWithTableReturn("ChiPhiQuanLy", parameters);
+            return result;
+        }
+        // Lấy tổng phí dịch vụ khác theo khoảng thòi gian
+        public DataTable GetServiceFee(DateTime tuNgay, DateTime denNgay)
+        {
+            // Tạo dictionary chứa các tham số cho stored procedure
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@tuNgay", tuNgay);
+            parameters.Add("@denNgay", denNgay);
+            // Gọi stored procedure và nhận kết quả vào một DataTable
+            DataTable result = DataProvider.Instance.ExecuteStoredProcedureWithTableReturn("TongPhiDichVuKhac", parameters);
+            return result;
+        }
+        // Thống kê tình trạng căn hộ
+        public DataTable GetStateOfApartments(string tinhTrangCanHo)
+        {
+            // Tạo dictionary chứa các tham số cho stored procedure
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@tinhTrangCanHo", tinhTrangCanHo);
+            // Gọi stored procedure và nhận kết quả vào một DataTable
+            DataTable result = DataProvider.Instance.ExecuteStoredProcedureWithTableReturn("ThongKeTinhTrangCanHo", parameters);
+            return result;
+        }
+        // Thống kê tất cả nhân viên phụ trách các căn hộ 
+        public DataTable GetAllEmployessOfApartments()
+        {
+            string query = "EXEC ThongKeAllNhanVienOfAparments";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        // Thống kê nhân viên phụ trách công việc tại căn hộ nhất định
+        public DataTable GetEmployeesOfSpecificApartment(string maCanHo)
+        {
+            // Tạo dictionary chứa các tham số cho stored procedure
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@maCanHo", maCanHo);
+            // Gọi stored procedure và nhận kết quả vào một DataTable
+            DataTable result = DataProvider.Instance.ExecuteStoredProcedureWithTableReturn("ThongKeNhanVienPhuTrachCanHo", parameters);
+            return result;
+        }
     }
 }

@@ -73,5 +73,15 @@ namespace BLL
             }
             return residents;
         }
+        // Lấy cư dân có quốc tịch không phải VN
+        public DataTable GetAllForeignNational()
+        {
+            return ResidentDAO.Instance.GetAllForeignNational();
+        }
+        // Lấy cư dân có quốc tịch Việt Nam
+        public DataTable GetVietResidents()
+        {
+            return ResidentDAO.Instance.GetVietResidents();
+        }
     }
 }
