@@ -92,5 +92,17 @@ namespace BLL
         {
             return ApartmentDAO.Instance.EditMonthlyBill(parameters);
         }
+        public string DeleteCanHo(string maCanHo)
+        {
+            if (ApartmentDAO.Instance.DeleteApartment(maCanHo))
+            {
+                return "Xóa thành công";
+            }
+            else
+            {
+                return "Xóa thất bại";
+            }
+
+        }
     }
 }

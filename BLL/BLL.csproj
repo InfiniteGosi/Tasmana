@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="AccountBLL.cs" />
     <Compile Include="ApartmentBLL.cs" />
+    <Compile Include="ChuHoBLL.cs" />
     <Compile Include="DivisionBLL.cs" />
     <Compile Include="EmployeeBLL.cs" />
     <Compile Include="GroupBLL.cs" />

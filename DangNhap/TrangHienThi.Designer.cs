@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrangHienThi));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.gunaCirclePictureBox3 = new Guna.UI.WinForms.GunaCirclePictureBox();
@@ -49,6 +50,7 @@
             this.BTN_canho = new Guna.UI.WinForms.GunaButton();
             this.BTN_logout = new Guna.UI.WinForms.GunaButton();
             this.BTN_thongke = new Guna.UI.WinForms.GunaButton();
+            this.P_logotasmana = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.LB_tendangnhap = new System.Windows.Forms.Label();
@@ -58,22 +60,20 @@
             this.Timer_KTCongViec = new System.Windows.Forms.Timer(this.components);
             this.NTFIcon_ThongBaoCV = new System.Windows.Forms.NotifyIcon(this.components);
             this.PN_main = new System.Windows.Forms.Panel();
+            this.gunaPictureBox3 = new Guna.UI.WinForms.GunaPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
-            this.P_logotasmana = new Guna.UI.WinForms.GunaPictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.gunaPictureBox3 = new Guna.UI.WinForms.GunaPictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P_logotasmana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.PN_main.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P_logotasmana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,6 +106,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(310, 685);
             this.panel1.TabIndex = 25;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label4.Location = new System.Drawing.Point(111, 27);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(147, 37);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "TasMana";
             // 
             // panel2
             // 
@@ -414,6 +425,18 @@
             this.BTN_thongke.TextOffsetX = 9;
             this.BTN_thongke.Click += new System.EventHandler(this.BTN_thongke_Click);
             // 
+            // P_logotasmana
+            // 
+            this.P_logotasmana.BackColor = System.Drawing.Color.Transparent;
+            this.P_logotasmana.BaseColor = System.Drawing.Color.Transparent;
+            this.P_logotasmana.Image = ((System.Drawing.Image)(resources.GetObject("P_logotasmana.Image")));
+            this.P_logotasmana.Location = new System.Drawing.Point(7, 8);
+            this.P_logotasmana.Name = "P_logotasmana";
+            this.P_logotasmana.Size = new System.Drawing.Size(100, 84);
+            this.P_logotasmana.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.P_logotasmana.TabIndex = 35;
+            this.P_logotasmana.TabStop = false;
+            // 
             // gunaPictureBox2
             // 
             this.gunaPictureBox2.BackColor = System.Drawing.Color.White;
@@ -557,6 +580,19 @@
             this.PN_main.Size = new System.Drawing.Size(1189, 622);
             this.PN_main.TabIndex = 33;
             // 
+            // gunaPictureBox3
+            // 
+            this.gunaPictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaPictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.gunaPictureBox3.BaseColor = System.Drawing.Color.Transparent;
+            this.gunaPictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox3.Image")));
+            this.gunaPictureBox3.Location = new System.Drawing.Point(1127, 562);
+            this.gunaPictureBox3.Name = "gunaPictureBox3";
+            this.gunaPictureBox3.Size = new System.Drawing.Size(70, 60);
+            this.gunaPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.gunaPictureBox3.TabIndex = 36;
+            this.gunaPictureBox3.TabStop = false;
+            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -625,42 +661,6 @@
             this.gunaGradientButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaGradientButton1.Click += new System.EventHandler(this.gunaGradientButton1_Click);
             // 
-            // P_logotasmana
-            // 
-            this.P_logotasmana.BackColor = System.Drawing.Color.Transparent;
-            this.P_logotasmana.BaseColor = System.Drawing.Color.Transparent;
-            this.P_logotasmana.Image = ((System.Drawing.Image)(resources.GetObject("P_logotasmana.Image")));
-            this.P_logotasmana.Location = new System.Drawing.Point(7, 8);
-            this.P_logotasmana.Name = "P_logotasmana";
-            this.P_logotasmana.Size = new System.Drawing.Size(100, 84);
-            this.P_logotasmana.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.P_logotasmana.TabIndex = 35;
-            this.P_logotasmana.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label4.Location = new System.Drawing.Point(111, 27);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(152, 38);
-            this.label4.TabIndex = 35;
-            this.label4.Text = "TasMana";
-            // 
-            // gunaPictureBox3
-            // 
-            this.gunaPictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaPictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaPictureBox3.BaseColor = System.Drawing.Color.Transparent;
-            this.gunaPictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox3.Image")));
-            this.gunaPictureBox3.Location = new System.Drawing.Point(1127, 562);
-            this.gunaPictureBox3.Name = "gunaPictureBox3";
-            this.gunaPictureBox3.Size = new System.Drawing.Size(70, 60);
-            this.gunaPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.gunaPictureBox3.TabIndex = 36;
-            this.gunaPictureBox3.TabStop = false;
-            // 
             // TrangHienThi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -691,11 +691,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P_logotasmana)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.PN_main.ResumeLayout(false);
             this.PN_main.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P_logotasmana)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

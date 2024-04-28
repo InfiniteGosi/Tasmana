@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LB_yeucau = new System.Windows.Forms.Label();
-            this.GGC_dichvu = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
             this.TXB_doxe = new System.Windows.Forms.TextBox();
             this.TXB_dv = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -37,32 +35,7 @@
             this.TXB_congno = new System.Windows.Forms.TextBox();
             this.LB_congno = new System.Windows.Forms.Label();
             this.LB_phidichvu = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.GGC_dichvu)).BeginInit();
             this.SuspendLayout();
-            // 
-            // LB_yeucau
-            // 
-            this.LB_yeucau.AutoSize = true;
-            this.LB_yeucau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_yeucau.ForeColor = System.Drawing.Color.White;
-            this.LB_yeucau.Location = new System.Drawing.Point(697, 38);
-            this.LB_yeucau.Name = "LB_yeucau";
-            this.LB_yeucau.Size = new System.Drawing.Size(199, 22);
-            this.LB_yeucau.TabIndex = 232;
-            this.LB_yeucau.Text = "Dịch vụ yêu cầu hiện tại";
-            // 
-            // GGC_dichvu
-            // 
-            this.GGC_dichvu.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.GGC_dichvu.BackColor = System.Drawing.SystemColors.Window;
-            this.GGC_dichvu.Location = new System.Drawing.Point(701, 83);
-            this.GGC_dichvu.Name = "GGC_dichvu";
-            this.GGC_dichvu.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
-            this.GGC_dichvu.Size = new System.Drawing.Size(636, 181);
-            this.GGC_dichvu.TabIndex = 231;
-            this.GGC_dichvu.Text = "gridGroupingControl1";
-            this.GGC_dichvu.UseRightToLeftCompatibleTextBox = true;
-            this.GGC_dichvu.VersionInfo = "25.1462.39";
             // 
             // TXB_doxe
             // 
@@ -143,8 +116,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(1391, 772);
-            this.Controls.Add(this.LB_yeucau);
-            this.Controls.Add(this.GGC_dichvu);
             this.Controls.Add(this.TXB_doxe);
             this.Controls.Add(this.TXB_dv);
             this.Controls.Add(this.panel1);
@@ -156,16 +127,12 @@
             this.Name = "LichSuKhuThuongMai";
             this.Text = "LichSuKhuThuongMai";
             this.Load += new System.EventHandler(this.LichSuKhuThuongMai_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.GGC_dichvu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label LB_yeucau;
-        private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl GGC_dichvu;
         private System.Windows.Forms.TextBox TXB_doxe;
         private System.Windows.Forms.TextBox TXB_dv;
         private System.Windows.Forms.Panel panel1;

@@ -32,6 +32,11 @@ namespace DAO
             int result = DataProvider.Instance.ExecuteStoredProcedure("SP_CapNhatCanHo", parameters);
             return result > 0;
         }
+        public bool DeleteApartment(string maCanHo)
+        {
+            string query = $"exec SP_XoaCanHo @maCanHo = '{maCanHo}'";
+            return DataProvider.Instance.ExecuteNonQuery(query) > 0;
+        }
         public bool AddMonthlyBill(Dictionary<string, object> parameters)
         {
             return DataProvider.Instance.ExecuteStoredProcedure("SP_ThemChiPhiHangThang", parameters) > 0;

@@ -37,6 +37,8 @@ namespace DangNhap
             this.BTN_PDF = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_excel = new Guna.UI.WinForms.GunaGradientButton();
             this.GGC_cudan = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.LB_loai = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GGC_cudan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,6 +168,25 @@ namespace DangNhap
             this.GGC_cudan.UseRightToLeftCompatibleTextBox = true;
             this.GGC_cudan.VersionInfo = "25.1462.39";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(159, 43);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(168, 24);
+            this.comboBox1.TabIndex = 180;
+            // 
+            // LB_loai
+            // 
+            this.LB_loai.AutoSize = true;
+            this.LB_loai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.LB_loai.ForeColor = System.Drawing.Color.White;
+            this.LB_loai.Location = new System.Drawing.Point(169, 9);
+            this.LB_loai.Name = "LB_loai";
+            this.LB_loai.Size = new System.Drawing.Size(106, 16);
+            this.LB_loai.TabIndex = 181;
+            this.LB_loai.Text = "Chọn loại cư dân";
+            // 
             // CuDan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -173,6 +194,8 @@ namespace DangNhap
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1376, 782);
+            this.Controls.Add(this.LB_loai);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.GGC_cudan);
             this.Controls.Add(this.BTN_in);
             this.Controls.Add(this.BTN_PDF);
@@ -184,6 +207,7 @@ namespace DangNhap
             this.Load += new System.EventHandler(this.CuDan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GGC_cudan)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -194,5 +218,7 @@ namespace DangNhap
         private Guna.UI.WinForms.GunaGradientButton BTN_PDF;
         private Guna.UI.WinForms.GunaGradientButton BTN_excel;
         private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl GGC_cudan;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label LB_loai;
     }
 }

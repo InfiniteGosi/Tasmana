@@ -162,6 +162,7 @@ namespace DangNhap
             }
             return last2Characters;
         }
+        // Chuyển file ảnh thành bytes để lưu vào csdl
         private byte[] ConvertImageToBytes(Image img)
         {
             using (MemoryStream ms = new MemoryStream())
@@ -247,7 +248,6 @@ namespace DangNhap
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     PB_hinhcanho.Image = Image.FromFile(ofd.FileName);
-
                 }
             }
         }
@@ -256,6 +256,18 @@ namespace DangNhap
         {
             InitializeValues_CH();
             MessageBox.Show(ApartmentBLL.Instance.UpdateApartment(AddParemeter_CH()));
+        }
+
+        private void BTN_xoa_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa khu thương mại này?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                string deleteMessage = ApartmentBLL.Instance.DeleteCanHo(maCanHoHienTai);
+                MessageBox.Show(deleteMessage);
+                Close();
+            }
         }
     }
 }

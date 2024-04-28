@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Account.cs" />
     <Compile Include="Apartment.cs" />
+    <Compile Include="ChuHo.cs" />
     <Compile Include="Division.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Group.cs" />

@@ -313,6 +313,7 @@
             this.BTN_xoa.TabIndex = 222;
             this.BTN_xoa.Text = "Xóa";
             this.BTN_xoa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_xoa.Click += new System.EventHandler(this.BTN_xoa_Click);
             // 
             // panel6
             // 
@@ -351,6 +352,7 @@
             this.BTN_luu.TabIndex = 221;
             this.BTN_luu.Text = "Lưu";
             this.BTN_luu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_luu.Click += new System.EventHandler(this.BTN_luu_Click);
             // 
             // panel4
             // 
@@ -608,6 +610,7 @@
             this.BTN_uploadanh.TabIndex = 212;
             this.BTN_uploadanh.Text = "Upload ảnh mới";
             this.BTN_uploadanh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_uploadanh.Click += new System.EventHandler(this.BTN_uploadanh_Click);
             // 
             // panel7
             // 

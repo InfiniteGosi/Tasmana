@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="AccountDAO.cs" />
     <Compile Include="ApartmentDAO.cs" />
+    <Compile Include="ChuHoDAO.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="DivisionDAO.cs" />
     <Compile Include="EmployeeDAO.cs" />

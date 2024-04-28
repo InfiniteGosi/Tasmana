@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using System.IO;
+using System.Security.Cryptography;
 
 namespace BLL
 {
@@ -65,6 +66,29 @@ namespace BLL
             int tinhTrangThanhToan = (int)dt.Rows[0]["tinhTrangThanhToan"];
             string maKhachDangThue = dt.Rows[0]["maKhachDangThue"].ToString();
             return new KhuThuongMai(maKhuThuongMai, dienTichGSA, dienTichNSA, viTriTang, soLuongPhongNgu, soLuongToilet, soDoMatBang, mucPhiQLHangThang, soLuongTheThangMay, lichSuGiaoDich, tinhTrangThanhToan, maKhachDangThue);
+        }
+        public string UpdateKhuThuongMai(Dictionary<string, object> parameters)
+        {
+            if (KhuThuongMaiDAO.Instance.UpdateKhuThuongMai(parameters))
+            {
+                return "Sửa thành công";
+            }
+            else
+            {
+                return "Sửa thất bại";
+            }
+        }
+        public string DeleteKhuThuongMai(string maKhuThuongMai)
+        {
+            if (KhuThuongMaiDAO.Instance.DeleteKhuThuongMai(maKhuThuongMai))
+            {
+                return "Xóa thành công";
+            }
+            else
+            {
+                return "Xóa thất bại";
+            }
+
         }
     }
 }
