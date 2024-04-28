@@ -260,15 +260,13 @@ CREATE TABLE ChuHo
   SDT VARCHAR(20) NOT NULL,
   email VARCHAR(100) NOT NULL,
   quocTich NVARCHAR(100) NOT NULL,
-  soTheTamTru VARCHAR(20) NOT NULL,
+  soTheTamTru VARCHAR(20),
   ngayNhanBanGiaoCanHo DATE NOT NULL,
   ngayChuyenVao DATE NOT NULL,
   ngayChuyenDi DATE,
   soDienNuocNgayBanGiao FLOAT NOT NULL,
-  soDienNuocHangThang FlOAT,
-  phiQuanLyHangThang INT NOT NULL,
   bienSoXeDangKy VARCHAR(50),
-  banGiao_maCuDan VARCHAR(10) NOT NULL,
+  banGiao_maCuDan VARCHAR(10),
   maCuDanLuuTruCung VARCHAR(10),
   tinhTrangCongNo INT NOT NULL,
   duLieuDangKyThuNuoi NVARCHAR(100),
@@ -295,14 +293,12 @@ CREATE TABLE NguoiDcUyQuyenChuHo
   SDT VARCHAR(20) NOT NULL,
   email VARCHAR(100) NOT NULL,
   quocTich NVARCHAR(100) NOT NULL,
-  soTheTamTru VARCHAR(20) NOT NULL,
+  soTheTamTru VARCHAR(20),
   ngayChuyenVao DATE NOT NULL,
   ngayChuyenDi DATE,
   maCuDanLuuTruCung VARCHAR(10),
-  soDienNuocHangThang FlOAT,
-  phiQuanLyHangThang INT NOT NULL,
   bienSoXeDangKy VARCHAR(50),
-  banGiao_maCuDan VARCHAR(10) NOT NULL,
+  banGiao_maCuDan VARCHAR(10),
   tinhTrangCongNo INT NOT NULL,
   duLieuDangKyThuNuoi NVARCHAR(100),
   PRIMARY KEY (maCuDan, maCanHo),
@@ -329,14 +325,12 @@ CREATE TABLE KhachNganNgay
   SDT VARCHAR(20) NOT NULL,
   email VARCHAR(100) NOT NULL,
   quocTich NVARCHAR(100) NOT NULL,
-  soTheTamTru VARCHAR(20) NOT NULL,
+  soTheTamTru VARCHAR(20),
   ngayChuyenVao DATE NOT NULL,
   ngayChuyenDi DATE,
   maCuDanLuuTruCung VARCHAR(10),
-  soDienNuocHangThang FlOAT,
-  phiQuanLyHangThang INT NOT NULL,
   bienSoXeDangKy VARCHAR(50),
-  banGiao_maCuDan VARCHAR(10) NOT NULL,
+  banGiao_maCuDan VARCHAR(10),
   tinhTrangCongNo INT NOT NULL,
   duLieuDangKyThuNuoi NVARCHAR(100),
   PRIMARY KEY (maCuDan, maCanHo),
@@ -474,12 +468,6 @@ INSERT INTO CanHo VALUES ('W3509', 80, 100, 35, 1, 2, NULL, 140, 3, N'Đã bàn 
 INSERT INTO CanHo VALUES ('W3510', 80.0, 100, 35, 5, 1, NULL, 18000000, 1, N'Chưa bàn giao - Cư dân đang ở', 25, 'CD-009');
 select * from CanHo
 
--- Insert Dữ liệu thử của chủ hộ
-insert into ChuHo VALUES ('CD-A001', '1-1-2024', 0, 205, NULL, NULL)
-insert into ChuHo VALUES ('CD-A013', '05-05-2023', 0, 150, NULL, NULL)
-insert into ChuHo VALUES ('CD-A019', '05-15-2023', 0, 170, NULL, NULL)
-Select * From ChuHo
-
 insert into LichSuGiaoDich values('WPHA', 'CD-001', 'CD-021', 'CD-012', '1-1-2023', '1-1-2024', 100000000)
 insert into LichSuGiaoDich values('WPHB', 'CD-002', 'CD-014', 'CD-013', '1-1-2023', '1-1-2024', 400000000)
 insert into LichSuGiaoDich values('WPHC', 'CD-003', 'CD-010', 'CD-014', '1-1-2023', '1-1-2024', 600000000)
@@ -532,17 +520,18 @@ select * from LichSuGiaoDichKhuThuongMai
 
 
 
-INSERT INTO ChuHo VALUES('CD-005', 'W3501', N'Chủ hộ', N'Nguyễn Văn A', '1980-05-10', 'CCCD123456789', '0123456789', 'nguyenvana@example.com', N'Việt Nam', '1234567890', '2023-01-01', '2023-01-01', NULL, 50.5, NULL, 100000, NULL, 'CD-016', NULL, 0, 'dog');
-INSERT INTO ChuHo VALUES('CD-006', 'W3502', N'Chủ hộ', N'Phạm Thị B', '1975-08-20', 'CCCD987654321', '0987654321', 'phamthib@example.com', N'Việt Nam', '0987654321', '2023-02-01', '2023-02-01', NULL, 45.3, NULL, 95000, NULL, 'CD-016', NULL, 0, 'dog');
-INSERT INTO ChuHo VALUES('CD-009', 'W3510', N'Chủ hộ', N'Trần Văn C', '1990-03-15', 'CCCD246810135', '0369852471', 'tranvanc@example.com', N'Việt Nam', '0369852471', '2023-03-01', '2023-03-01', NULL, 60.2, NULL, 120000, NULL, 'CD-015', NULL, 0, 'dog');
+INSERT INTO ChuHo VALUES('CD-005', 'W3501', N'Chủ hộ', N'Nguyễn Văn A', '1980-05-10', '123456789', '0123456789', 'nguyenvana@example.com', N'Việt Nam', '1234567890', '2023-01-01', '2023-01-01', NULL, 50.5, '51J9', 'CD-016', NULL, 0, N'Mèo');
+INSERT INTO ChuHo VALUES('CD-006', 'W3502', N'Chủ hộ', N'Phạm Thị B', '1975-08-20', '987654321', '0987654321', 'phamthib@example.com', N'Việt Nam', '0987654321', '2023-02-01', '2023-02-01', NULL, 45.3, '19S6', 'CD-016', NULL, 0, N'Cún con');
+INSERT INTO ChuHo VALUES('CD-009', 'W3510', N'Chủ hộ', N'Trần Văn C', '1990-03-15', '246810135', '0369852471', 'tranvanc@example.com', N'Việt Nam', '0369852471', '2023-03-01', '2023-03-01', NULL, 60.2, '27R9', 'CD-015', 'CD-017', 0, N'Cún con');
 select * from ChuHo
 
 
 
-INSERT INTO ChuHo VALUES('CD-001', 'WPHA', N'Chủ hộ', N'Lê Thị D', '1988-11-05', 'CCCD369852147', '0369852472', 'lethid@example.com', N'Việt Nam', '0369852472', '2023-04-01', '2023-04-01', NULL, 55.8, NULL, 110000, NULL, 'CD-04', 'CD-005', 0, 'dog');
-INSERT INTO ChuHo VALUES('CD-002', 'WPHB', N'Chủ hộ', N'Huỳnh Văn E', '1982-07-25', 'CCCD159263478', '0987654322', 'huynhvane@example.com', N'Việt Nam', '0987654322', '2023-05-01', '2023-05-01', NULL, 48.6, NULL, 98000, NULL, 'CD-05', NULL, 0, 'dog');
-INSERT INTO ChuHo VALUES('CD-003', 'WPHC', N'Chủ hộ', N'Đặng Thị F', '1970-12-30', 'CCCD753159246', '0123456780', 'dangthif@example.com', N'Việt Nam', '0123456780', '2023-06-01', '2023-06-01', NULL, 42.1, NULL, 85000, NULL, 'CD-06', NULL, 0, 'dog');
-INSERT INTO ChuHo VALUES('CD-004', 'WPHD', N'Chủ hộ', N'Nguyễn Văn G', '1995-09-18', 'CCCD357159246', '0369852473', 'nguyenvang@example.com', N'Việt Nam', '0369852473', '2023-07-01', '2023-07-01', NULL, 63.4, NULL, 125000, NULL, 'CD-07', NULL, 0, 'dog');
+-- Do not delete
+--INSERT INTO ChuHo VALUES('CD-001', 'WPHA', N'Chủ hộ', N'Lê Thị D', '1988-11-05', 'CCCD369852147', '0369852472', 'lethid@example.com', N'Việt Nam', '0369852472', '2023-04-01', '2023-04-01', NULL, 55.8, NULL, 110000, NULL, 'CD-04', 'CD-005', 0, 'dog');
+--INSERT INTO ChuHo VALUES('CD-002', 'WPHB', N'Chủ hộ', N'Huỳnh Văn E', '1982-07-25', 'CCCD159263478', '0987654322', 'huynhvane@example.com', N'Việt Nam', '0987654322', '2023-05-01', '2023-05-01', NULL, 48.6, NULL, 98000, NULL, 'CD-05', NULL, 0, 'dog');
+--INSERT INTO ChuHo VALUES('CD-003', 'WPHC', N'Chủ hộ', N'Đặng Thị F', '1970-12-30', 'CCCD753159246', '0123456780', 'dangthif@example.com', N'Việt Nam', '0123456780', '2023-06-01', '2023-06-01', NULL, 42.1, NULL, 85000, NULL, 'CD-06', NULL, 0, 'dog');
+--INSERT INTO ChuHo VALUES('CD-004', 'WPHD', N'Chủ hộ', N'Nguyễn Văn G', '1995-09-18', 'CCCD357159246', '0369852473', 'nguyenvang@example.com', N'Việt Nam', '0369852473', '2023-07-01', '2023-07-01', NULL, 63.4, NULL, 125000, NULL, 'CD-07', NULL, 0, 'dog');
 
 
 -- Insert mẫu công việc
