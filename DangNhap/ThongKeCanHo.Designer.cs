@@ -42,12 +42,19 @@
             this.LB_DuLieuThongKe = new System.Windows.Forms.Label();
             this.CBB_DuLieuMuonThongKe = new System.Windows.Forms.ComboBox();
             this.LB_TongHop = new System.Windows.Forms.Label();
+            this.CBB_LoaiThoiGian = new System.Windows.Forms.ComboBox();
+            this.LB_ThoiGianTK = new System.Windows.Forms.Label();
+            this.CBB_TinhTrang = new System.Windows.Forms.ComboBox();
+            this.LB_KhoangTK = new System.Windows.Forms.Label();
+            this.CBB_ThoiGian = new System.Windows.Forms.ComboBox();
+            this.LB_TimeOption = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GGC_ThongKe)).BeginInit();
             this.SuspendLayout();
             // 
             // DTP_TuNgay
             // 
             this.DTP_TuNgay.CustomFormat = "yyyy-MM-dd HH:MM";
+            this.DTP_TuNgay.Enabled = false;
             this.DTP_TuNgay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTP_TuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DTP_TuNgay.Location = new System.Drawing.Point(90, 30);
@@ -60,7 +67,7 @@
             this.LB_TuNgay.AutoSize = true;
             this.LB_TuNgay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_TuNgay.ForeColor = System.Drawing.Color.White;
-            this.LB_TuNgay.Location = new System.Drawing.Point(10, 29);
+            this.LB_TuNgay.Location = new System.Drawing.Point(10, 32);
             this.LB_TuNgay.Name = "LB_TuNgay";
             this.LB_TuNgay.Size = new System.Drawing.Size(74, 22);
             this.LB_TuNgay.TabIndex = 247;
@@ -71,7 +78,7 @@
             this.LB_ToiNgay.AutoSize = true;
             this.LB_ToiNgay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_ToiNgay.ForeColor = System.Drawing.Color.White;
-            this.LB_ToiNgay.Location = new System.Drawing.Point(384, 30);
+            this.LB_ToiNgay.Location = new System.Drawing.Point(362, 34);
             this.LB_ToiNgay.Name = "LB_ToiNgay";
             this.LB_ToiNgay.Size = new System.Drawing.Size(80, 22);
             this.LB_ToiNgay.TabIndex = 248;
@@ -80,9 +87,10 @@
             // DTP_DenNgay
             // 
             this.DTP_DenNgay.CustomFormat = "yyyy-MM-dd HH:MM";
+            this.DTP_DenNgay.Enabled = false;
             this.DTP_DenNgay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTP_DenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DTP_DenNgay.Location = new System.Drawing.Point(497, 30);
+            this.DTP_DenNgay.Location = new System.Drawing.Point(475, 26);
             this.DTP_DenNgay.Name = "DTP_DenNgay";
             this.DTP_DenNgay.Size = new System.Drawing.Size(248, 30);
             this.DTP_DenNgay.TabIndex = 262;
@@ -90,14 +98,13 @@
             // GGC_ThongKe
             // 
             this.GGC_ThongKe.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.GGC_ThongKe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.GGC_ThongKe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GGC_ThongKe.BackColor = System.Drawing.SystemColors.Window;
             this.GGC_ThongKe.Location = new System.Drawing.Point(16, 146);
             this.GGC_ThongKe.Name = "GGC_ThongKe";
             this.GGC_ThongKe.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
-            this.GGC_ThongKe.Size = new System.Drawing.Size(1585, 583);
+            this.GGC_ThongKe.Size = new System.Drawing.Size(1710, 517);
             this.GGC_ThongKe.TabIndex = 260;
             this.GGC_ThongKe.Text = "gridGroupingControl1";
             this.GGC_ThongKe.UseRightToLeftCompatibleTextBox = true;
@@ -108,7 +115,7 @@
             this.LB_LoaiDoThi.AutoSize = true;
             this.LB_LoaiDoThi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_LoaiDoThi.ForeColor = System.Drawing.Color.White;
-            this.LB_LoaiDoThi.Location = new System.Drawing.Point(883, 29);
+            this.LB_LoaiDoThi.Location = new System.Drawing.Point(748, 32);
             this.LB_LoaiDoThi.Name = "LB_LoaiDoThi";
             this.LB_LoaiDoThi.Size = new System.Drawing.Size(96, 22);
             this.LB_LoaiDoThi.TabIndex = 258;
@@ -121,7 +128,7 @@
             "Pie Chart",
             "Bar Chart",
             "Line Chart"});
-            this.CBB_LoaiDoThi.Location = new System.Drawing.Point(1017, 27);
+            this.CBB_LoaiDoThi.Location = new System.Drawing.Point(882, 30);
             this.CBB_LoaiDoThi.Name = "CBB_LoaiDoThi";
             this.CBB_LoaiDoThi.Size = new System.Drawing.Size(263, 24);
             this.CBB_LoaiDoThi.TabIndex = 257;
@@ -142,7 +149,7 @@
             this.Btn_XuatDoThi.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.Btn_XuatDoThi.Image = null;
             this.Btn_XuatDoThi.ImageSize = new System.Drawing.Size(20, 20);
-            this.Btn_XuatDoThi.Location = new System.Drawing.Point(1322, 25);
+            this.Btn_XuatDoThi.Location = new System.Drawing.Point(1638, 102);
             this.Btn_XuatDoThi.Name = "Btn_XuatDoThi";
             this.Btn_XuatDoThi.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.Btn_XuatDoThi.OnHoverBaseColor2 = System.Drawing.Color.Navy;
@@ -172,7 +179,7 @@
             this.BTN_ThongKe.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.BTN_ThongKe.Image = null;
             this.BTN_ThongKe.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_ThongKe.Location = new System.Drawing.Point(1322, 100);
+            this.BTN_ThongKe.Location = new System.Drawing.Point(1638, 35);
             this.BTN_ThongKe.Name = "BTN_ThongKe";
             this.BTN_ThongKe.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.BTN_ThongKe.OnHoverBaseColor2 = System.Drawing.Color.Navy;
@@ -185,6 +192,7 @@
             this.BTN_ThongKe.TabIndex = 255;
             this.BTN_ThongKe.Text = "Thống kê";
             this.BTN_ThongKe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_ThongKe.Click += new System.EventHandler(this.BTN_ThongKe_Click);
             // 
             // CBB_DuLieuTK
             // 
@@ -215,7 +223,7 @@
             this.LB_DuLieuThongKe.AutoSize = true;
             this.LB_DuLieuThongKe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_DuLieuThongKe.ForeColor = System.Drawing.Color.White;
-            this.LB_DuLieuThongKe.Location = new System.Drawing.Point(384, 106);
+            this.LB_DuLieuThongKe.Location = new System.Drawing.Point(362, 106);
             this.LB_DuLieuThongKe.Name = "LB_DuLieuThongKe";
             this.LB_DuLieuThongKe.Size = new System.Drawing.Size(172, 22);
             this.LB_DuLieuThongKe.TabIndex = 264;
@@ -224,33 +232,96 @@
             // CBB_DuLieuMuonThongKe
             // 
             this.CBB_DuLieuMuonThongKe.FormattingEnabled = true;
-            this.CBB_DuLieuMuonThongKe.Items.AddRange(new object[] {
-            "Mã căn hộ",
-            "Nhân viên",
-            "Cư dân"});
-            this.CBB_DuLieuMuonThongKe.Location = new System.Drawing.Point(571, 104);
+            this.CBB_DuLieuMuonThongKe.Location = new System.Drawing.Point(540, 104);
             this.CBB_DuLieuMuonThongKe.Name = "CBB_DuLieuMuonThongKe";
-            this.CBB_DuLieuMuonThongKe.Size = new System.Drawing.Size(231, 24);
+            this.CBB_DuLieuMuonThongKe.Size = new System.Drawing.Size(183, 24);
             this.CBB_DuLieuMuonThongKe.TabIndex = 265;
+            this.CBB_DuLieuMuonThongKe.SelectedValueChanged += new System.EventHandler(this.CBB_DuLieuMuonThongKe_SelectedValueChanged);
             // 
             // LB_TongHop
             // 
             this.LB_TongHop.AutoSize = true;
             this.LB_TongHop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_TongHop.ForeColor = System.Drawing.Color.White;
-            this.LB_TongHop.Location = new System.Drawing.Point(35, 758);
+            this.LB_TongHop.Location = new System.Drawing.Point(44, 705);
             this.LB_TongHop.Name = "LB_TongHop";
             this.LB_TongHop.Size = new System.Drawing.Size(74, 22);
             this.LB_TongHop.TabIndex = 266;
             this.LB_TongHop.Text = "Từ ngày";
             this.LB_TongHop.Visible = false;
             // 
+            // CBB_LoaiThoiGian
+            // 
+            this.CBB_LoaiThoiGian.FormattingEnabled = true;
+            this.CBB_LoaiThoiGian.Location = new System.Drawing.Point(914, 107);
+            this.CBB_LoaiThoiGian.Name = "CBB_LoaiThoiGian";
+            this.CBB_LoaiThoiGian.Size = new System.Drawing.Size(231, 24);
+            this.CBB_LoaiThoiGian.TabIndex = 268;
+            this.CBB_LoaiThoiGian.SelectedValueChanged += new System.EventHandler(this.CBB_LoaiThoiGian_SelectedValueChanged);
+            // 
+            // LB_ThoiGianTK
+            // 
+            this.LB_ThoiGianTK.AutoSize = true;
+            this.LB_ThoiGianTK.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_ThoiGianTK.ForeColor = System.Drawing.Color.White;
+            this.LB_ThoiGianTK.Location = new System.Drawing.Point(737, 109);
+            this.LB_ThoiGianTK.Name = "LB_ThoiGianTK";
+            this.LB_ThoiGianTK.Size = new System.Drawing.Size(120, 22);
+            this.LB_ThoiGianTK.TabIndex = 267;
+            this.LB_ThoiGianTK.Text = "Thống kê theo";
+            // 
+            // CBB_TinhTrang
+            // 
+            this.CBB_TinhTrang.FormattingEnabled = true;
+            this.CBB_TinhTrang.Location = new System.Drawing.Point(1357, 102);
+            this.CBB_TinhTrang.Name = "CBB_TinhTrang";
+            this.CBB_TinhTrang.Size = new System.Drawing.Size(231, 24);
+            this.CBB_TinhTrang.TabIndex = 270;
+            this.CBB_TinhTrang.SelectedIndexChanged += new System.EventHandler(this.CBB_TinhTrang_SelectedIndexChanged);
+            // 
+            // LB_KhoangTK
+            // 
+            this.LB_KhoangTK.AutoSize = true;
+            this.LB_KhoangTK.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_KhoangTK.ForeColor = System.Drawing.Color.White;
+            this.LB_KhoangTK.Location = new System.Drawing.Point(1180, 104);
+            this.LB_KhoangTK.Name = "LB_KhoangTK";
+            this.LB_KhoangTK.Size = new System.Drawing.Size(129, 22);
+            this.LB_KhoangTK.TabIndex = 269;
+            this.LB_KhoangTK.Text = "Chọn tình trạng";
+            // 
+            // CBB_ThoiGian
+            // 
+            this.CBB_ThoiGian.FormattingEnabled = true;
+            this.CBB_ThoiGian.Location = new System.Drawing.Point(1357, 30);
+            this.CBB_ThoiGian.Name = "CBB_ThoiGian";
+            this.CBB_ThoiGian.Size = new System.Drawing.Size(231, 24);
+            this.CBB_ThoiGian.TabIndex = 272;
+            this.CBB_ThoiGian.SelectedValueChanged += new System.EventHandler(this.CBB_ThoiGian_SelectedValueChanged);
+            // 
+            // LB_TimeOption
+            // 
+            this.LB_TimeOption.AutoSize = true;
+            this.LB_TimeOption.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_TimeOption.ForeColor = System.Drawing.Color.White;
+            this.LB_TimeOption.Location = new System.Drawing.Point(1180, 32);
+            this.LB_TimeOption.Name = "LB_TimeOption";
+            this.LB_TimeOption.Size = new System.Drawing.Size(125, 22);
+            this.LB_TimeOption.TabIndex = 271;
+            this.LB_TimeOption.Text = "Chọn thời gian";
+            // 
             // ThongKeCanHo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(1634, 803);
+            this.ClientSize = new System.Drawing.Size(1779, 777);
+            this.Controls.Add(this.CBB_ThoiGian);
+            this.Controls.Add(this.LB_TimeOption);
+            this.Controls.Add(this.CBB_TinhTrang);
+            this.Controls.Add(this.LB_KhoangTK);
+            this.Controls.Add(this.CBB_LoaiThoiGian);
+            this.Controls.Add(this.LB_ThoiGianTK);
             this.Controls.Add(this.LB_TongHop);
             this.Controls.Add(this.CBB_DuLieuMuonThongKe);
             this.Controls.Add(this.LB_DuLieuThongKe);
@@ -268,6 +339,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ThongKeCanHo";
             this.Text = "ThongKeCanHo";
+            this.Load += new System.EventHandler(this.ThongKeCanHo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GGC_ThongKe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -290,5 +362,11 @@
         private System.Windows.Forms.Label LB_DuLieuThongKe;
         private System.Windows.Forms.ComboBox CBB_DuLieuMuonThongKe;
         private System.Windows.Forms.Label LB_TongHop;
+        private System.Windows.Forms.ComboBox CBB_LoaiThoiGian;
+        private System.Windows.Forms.Label LB_ThoiGianTK;
+        private System.Windows.Forms.ComboBox CBB_TinhTrang;
+        private System.Windows.Forms.Label LB_KhoangTK;
+        private System.Windows.Forms.ComboBox CBB_ThoiGian;
+        private System.Windows.Forms.Label LB_TimeOption;
     }
 }
