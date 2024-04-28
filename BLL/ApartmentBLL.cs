@@ -135,5 +135,35 @@ namespace BLL
             }
             return list;
         }
+        // Lấy tổng chi phí điện / nước theo khoảng thời gian
+        public DataTable GetElectricity_WaterCost(DateTime tuNgay, DateTime denNgay)
+        {
+            return ApartmentDAO.Instance.GetElectricity_WaterCost(tuNgay, denNgay);
+        }
+        // Lấy tổng chi phí quản lý hàng tháng theo khoảng thời gian
+        public DataTable GetManagementFee(DateTime tuNgay, DateTime denNgay)
+        {
+            return ApartmentDAO.Instance.GetManagementFee(tuNgay, denNgay);
+        }
+        // Lấy tổng phí dịch vụ khác theo khoảng thòi gian
+        public DataTable GetServiceFee(DateTime tuNgay, DateTime denNgay)
+        {
+            return ApartmentDAO.Instance.GetServiceFee(tuNgay, denNgay);
+        }
+        // Thống kê tình trạng căn hộ
+        public DataTable GetStateOfApartments(string tinhTrangCanHo)
+        {
+            return ApartmentDAO.Instance.GetStateOfApartments(tinhTrangCanHo);
+        }
+        // Thống kê tất cả nhân viên phụ trách các căn hộ 
+        public DataTable GetAllEmployessOfApartments()
+        {
+            return ApartmentDAO.Instance.GetAllEmployessOfApartments();
+        }
+        // Thống kê nhân viên phụ trách công việc tại căn hộ nhất định
+        public DataTable GetEmployeesOfSpecificApartment(string maCanHo)
+        {
+            return ApartmentDAO.Instance.GetEmployeesOfSpecificApartment(maCanHo);
+        }
     }
 }

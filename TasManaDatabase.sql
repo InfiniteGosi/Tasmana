@@ -1616,49 +1616,92 @@ END
 GO
 --------------------------  Tổng chi phí điện nước theo thời gian -------------------------------------
 CREATE PROCEDURE [dbo].[ChiPhiDienNuoc]
-    @maCanHo VARCHAR(10) = NULL,
     @tuNgay SMALLDATETIME,
-    @denNgay SMALLDATETIME,
-    @tinhTrang NVARCHAR(100) = NULL
+    @denNgay SMALLDATETIME
 AS
 BEGIN
-    IF @maCanHo IS NULL
-    BEGIN
-        IF @tinhTrang IS NULL
-        BEGIN
-            SELECT maCanHo, SUM(soDienHangThang) AS TongDien, SUM(soNuocHangThang) AS TongNuoc
-            FROM ChiPhiHangThang
-            WHERE CONVERT(date, ngayGhi) BETWEEN CONVERT(date, @tuNgay) AND CONVERT(date, @denNgay)
-            GROUP BY maCanHo
-        END
-        ELSE
-        BEGIN
-            SELECT maCanHo, SUM(soDienHangThang) AS TongDien, SUM(soNuocHangThang) AS TongNuoc
-            FROM ChiPhiHangThang
-            WHERE CONVERT(date, ngayGhi) BETWEEN CONVERT(date, @tuNgay) AND CONVERT(date, @denNgay)
-                AND tinhTrangThanhToan = @tinhTrang
-            GROUP BY maCanHo
-        END
-    END
-    ELSE
-    BEGIN
-        IF @tinhTrang IS NULL
-        BEGIN
-            SELECT maCanHo, SUM(soDienHangThang) AS TongDien, SUM(soNuocHangThang) AS TongNuoc
-            FROM ChiPhiHangThang
-            WHERE maCanHo = @maCanHo
-                AND CONVERT(date, ngayGhi) BETWEEN CONVERT(date, @tuNgay) AND CONVERT(date, @denNgay)
-            GROUP BY maCanHo
-        END
-        ELSE
-        BEGIN
-            SELECT maCanHo, SUM(soDienHangThang) AS TongDien, SUM(soNuocHangThang) AS TongNuoc
-            FROM ChiPhiHangThang
-            WHERE maCanHo = @maCanHo
-                AND CONVERT(date, ngayGhi) BETWEEN CONVERT(date, @tuNgay) AND CONVERT(date, @denNgay)
-                AND tinhTrangThanhToan = @tinhTrang
-            GROUP BY maCanHo
-        END
-    END
+    SELECT maCanHo, SUM(soDienHangThang) AS TongDien, SUM(soNuocHangThang) AS TongNuoc
+    FROM ChiPhiHangThang
+    WHERE CONVERT(date, ngayGhi) BETWEEN CONVERT(date, @tuNgay) AND CONVERT(date, @denNgay)
+    GROUP BY maCanHo
 END
 --------------------------------------------------------------------------------------------------------
+GO
+--------------------------  Tổng chi phí Quản lý theo thời gian ----------------------------------------
+CREATE PROCEDURE [dbo].[ChiPhiQuanLy]
+	@tuNgay SMALLDATETIME,
+	@denNgay SMALLDATETIME
+AS
+BEGIN
+	SELECT maCanHo, SUM(phiQuanLyHangThang) AS TongPhiQuanLy
+    FROM ChiPhiHangThang
+    WHERE CONVERT(date, ngayGhi) BETWEEN CONVERT(date, @tuNgay) AND CONVERT(date, @denNgay)
+    GROUP BY maCanHo
+END
+---------------------------------------------------------------------------------------------------------
+GO
+--------------------------------- Tổng các phí dịch vụ khác----- ----------------------------------------
+CREATE PROCEDURE [dbo].[TongPhiDichVuKhac]
+	@tuNgay SMALLDATETIME,
+	@denNgay SMALLDATETIME
+AS
+BEGIN
+	SELECT YC.maCanHo, SUM(CV.phiDichVu) AS TongPhiDichVuKhac
+	FROM CongViec CV, YeuCau YC
+	WHERE CV.maCongViec = YC.maCongViec and  CONVERT(date, ngayGiao) BETWEEN CONVERT(date, @tuNgay) AND CONVERT(date, @denNgay)
+	GROUP BY YC.maCanHo
+END
+--------------------------------------------------------------------------------------------------------------
+GO
+----------------------------------- Thống kê tình trạng căn hộ -----------------------------------------------
+CREATE PROCEDURE [dbo].[ThongKeTinhTrangCanHo]
+	@tinhTrangCanHo NVARCHAR(100)
+AS
+BEGIN
+	SELECT maCanHo as N'Mã căn hộ', tinhTrangGDHienTai
+	FROM CanHo
+	WHERE tinhTrangGDHienTai = @tinhTrangCanHo
+END
+--------------------------------------------------------------------------------------------------------------
+GO
+----------------------------------- Thống kê tất cả Nhân viên phụ trách công việc tại căn hộ -----------------------------------------
+CREATE PROCEDURE [dbo].[ThongKeAllNhanVienOfAparments]
+AS
+BEGIN
+	SELECT  YC.maCanHo, CVNV.maNhanVien, CV.ngayGiao, CV.thoiHan
+	FROM CongViec CV, Congviec_Nhanvien CVNV, YeuCau YC
+	WHERE CV.maCongViec = CVNV.maCongViec and YC.maCongViec = CV.maCongViec
+END
+--------------------------------------------------------------------------------------------------------------------------------------
+GO
+----------------------------------- Thống kê Nhân viên phụ trách công việc tại căn hộ nhất định -----------------------------------------
+CREATE PROCEDURE [dbo].[ThongKeNhanVienPhuTrachCanHo]
+	@maCanHo VARCHAR(10)
+AS
+BEGIN
+	SELECT YC.maCanHo, CVNV.maNhanVien, CV.ngayGiao, CV.thoiHan
+	FROM CongViec CV, Congviec_Nhanvien CVNV, YeuCau YC
+	WHERE CV.maCongViec = CVNV.maCongViec and CV.maCongViec = YC.maCongViec and YC.maCanHo = @maCanHo
+END
+------------------------------------------------------------------------------------------------------------------------------------------
+GO
+--------------------------------------------- Thống kê Cư dân là người nước ngoài --------------------------------------------------------
+CREATE PROCEDURE [dbo].[ThongKeCuDanNguocNgoai]
+AS
+BEGIN
+	SELECT maCuDan as N'Mã cư dân', hoTen as N'Họ tên', SDT as N'Số điện thoại', quocTich as 'Quốc tịch' 
+	FROM CuDan
+	WHERE quocTich != 'vietnam' and quocTich != N'Việt Nam'
+END
+------------------------------------------------------------------------------------------------------------------------------------------
+GO
+--------------------------------------------- Thống kê Cư dân là người Việt Nam --------------------------------------------------------
+CREATE PROCEDURE [dbo].[ThongKeCuDanVietNam]
+AS
+BEGIN
+	SELECT maCuDan as N'Mã cư dân', hoTen as N'Họ tên', SDT as N'Số điện thoại', quocTich as 'Quốc tịch' 
+	FROM CuDan
+	WHERE quocTich = 'vietnam' or quocTich = N'Việt Nam'
+END
+------------------------------------------------------------------------------------------------------------------------------------------
+GO
