@@ -377,8 +377,8 @@ namespace DangNhap
                     ctcv.DTP_gio.Text = thoiHan.TimeOfDay.ToString();
                 }
 
-                ctcv.LLB_chỉtietfile.Text = JobBLL.Instance.GetNameFile(maCongViec);
-                ctcv.LLB_chỉtietfile.Show();
+                ctcv.LLB_chitietfile.Text = JobBLL.Instance.GetNameFile(maCongViec);
+                ctcv.LLB_chitietfile.Show();
                 ctcv.CBB_quyentruycap.SelectedIndex = curJob.QuyenTruyCap;
 
                 // Show Form

@@ -16,6 +16,11 @@ namespace DAO
             private set { instance = value; }
         }
         private GroupDAO() { }
+        public DataTable GetGroupsList()
+        {
+            string query = $"select * from Nhom";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public DataTable GetGroupsByDivisonId(string maBoPhan)
         {
             string query = $"select * from Nhom where maBoPhan = '{maBoPhan}'";

@@ -47,5 +47,20 @@ namespace BLL
         {
             return GroupDAO.Instance.AddGroup(parameters);
         }
+        public List<Group> GetGroupsList()
+        {
+            DataTable dt = GroupDAO.Instance.GetGroupsList();
+            List<Group> groups = new List<Group>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                string MaNhom = dr["maNhom"].ToString();
+                string MaTruongNhom = dr["maTruongNhom"].ToString();
+                string maBoPhan = dr["maBoPhan"].ToString();
+                Group gr = new Group(MaNhom, MaTruongNhom, maBoPhan);
+                groups.Add(gr);
+            }
+            return groups;
+        }
+
     }
 }

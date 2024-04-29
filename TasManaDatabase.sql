@@ -372,6 +372,30 @@ CREATE TABLE ChiPhiHangThang
 	PRIMARY KEY (billID, maCanHo),
 	FOREIGN KEY (maCanHo) REFERENCES CanHo(maCanHo)
 );
+
+CREATE TABLE Notice
+(
+	stt int NOT NULL,
+	title NVARCHAR(100) NOT NULL,
+	content NVARCHAR(500) NOT NULL,
+	dateN SMALLDATETIME NOT NULL,
+	author VARCHAR(10) NOT NULL,
+	fileN VARBINARY(MAX),
+	nameFile NVARCHAR(100),
+	fileExten VARCHAR(10),
+	priority BIT,
+	PRIMARY KEY(stt)
+);
+
+CREATE TABLE Notice_To
+(
+	stt int NOT NULL,
+	maBoPhan VARCHAR(10),
+	maNhom VARCHAR(10),
+	maNhanVien VARCHAR(10),
+	isFull BIT,
+	FOREIGN KEY (stt) REFERENCES Notice(stt)
+);
 go
 
 
@@ -1297,6 +1321,54 @@ BEGIN
     END
 END
 GO
+---Tự động tạo số thứ tự thông báo
+CREATE PROCEDURE [dbo].[Auto_Create_STT]
+    @STT INT OUTPUT
+AS
+BEGIN
+    DECLARE @curNum INT;
+    -- Lấy số lượng công việc hiện tại
+    SELECT @curNum = COUNT(stt) FROM Notice;
+	SET @STT = @curNum +1;
+END
+go
+---Lưu thông báo 
+Create Procedure [dbo].[ThemThongBao]
+			@title NVARCHAR(100),
+			@content NVARCHAR(500),
+			@dateN SMALLDATETIME,
+			@author VARCHAR(10),
+			@fileN VARBINARY(MAX),
+			@fileName NVARCHAR(100),
+			@fileExten VARCHAR(10),
+			@priority int
+AS
+BEGIN
+	DECLARE @stt INT;
+	EXEC [dbo].[Auto_Create_STT] @STT = @stt OUTPUT
+	INSERT INTO Notice
+    VALUES (@stt,@title,@content,@dateN,@author,@fileN,@fileName,@fileExten,@priority)
+END
+go
+
+---Thêm thông báo không có file đính kèm
+Create Procedure [dbo].[ThemThongBaoWithout]
+			@title NVARCHAR(100),
+			@content NVARCHAR(500),
+			@dateN SMALLDATETIME,
+			@author VARCHAR(10),
+			@priority int
+AS
+BEGIN
+	DECLARE @stt INT;
+	DECLARE @fileN VARBINARY(MAX) = NULL; 
+	DECLARE @fileName NVARCHAR(100) = NULL;
+	DECLARE @fileExten VARCHAR(10) = NULL;
+	EXEC [dbo].[Auto_Create_STT] @STT = @stt OUTPUT
+	INSERT INTO Notice
+    VALUES (@stt,@title,@content,@dateN,@author,@fileN,@fileName,@fileExten,@priority)
+END
+go
 
 
 -- Thống kê tình trạng công việc của toàn công ty

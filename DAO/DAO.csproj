@@ -74,6 +74,7 @@
     <Compile Include="LichSuGiaoDichDAO.cs" />
     <Compile Include="LichSuGiaoDichKhuThuongMaiDAO.cs" />
     <Compile Include="NguoiDcUyQuyenChuHoDAO.cs" />
+    <Compile Include="NoticeDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResidentDAO.cs" />
   </ItemGroup>

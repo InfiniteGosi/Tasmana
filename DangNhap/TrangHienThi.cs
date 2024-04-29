@@ -69,7 +69,7 @@ namespace DangNhap
 
         private void BTN_thongbao_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongBao());
+            OpenChildForm(new ThongBao(currentAccount));
             BTN_thongbao.BackColor = Color.FromArgb(51, 53, 55);
             BTN_congviec.BackColor = Color.Transparent;
             BTN_thongke.BackColor = Color.Transparent;
