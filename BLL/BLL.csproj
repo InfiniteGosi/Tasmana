@@ -74,6 +74,7 @@
     <Compile Include="LichSuGiaoDichBLL.cs" />
     <Compile Include="LichSuGiaoDichKhuThuongMaiBLL.cs" />
     <Compile Include="NguoiDcUyQuyenChuHoBLL.cs" />
+    <Compile Include="NoticeBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResidentBLL.cs" />
   </ItemGroup>

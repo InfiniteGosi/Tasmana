@@ -135,7 +135,7 @@ namespace DangNhap
             SaveFileDialog save = new SaveFileDialog
             {
                 Filter = "PDF (*.pdf)|*.pdf",
-                FileName = LLB_chỉtietfile.Text,
+                FileName = LLB_chitietfile.Text,
             };
             bool ErrorMessage = false;
             if (save.ShowDialog() == DialogResult.OK)

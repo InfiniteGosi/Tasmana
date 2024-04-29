@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,16 @@ namespace DangNhap
 {
     public partial class ThongBao : Form
     {
-        public ThongBao()
+        private Account currentAccount;
+        public ThongBao(Account currentAccount)
         {
             InitializeComponent();
+            this.currentAccount = currentAccount;
         }
 
         private void BTN_biensoan_Click(object sender, EventArgs e)
         {
-            SoanThongBao stb = new SoanThongBao();
+            SoanThongBao stb = new SoanThongBao(currentAccount);
             stb.Show();
         }
     }

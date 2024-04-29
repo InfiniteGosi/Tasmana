@@ -59,7 +59,7 @@ namespace DangNhap
             this.TXB_MaCV = new System.Windows.Forms.TextBox();
             this.LB_Ghichu = new System.Windows.Forms.Label();
             this.TXB_GhiChu = new System.Windows.Forms.TextBox();
-            this.LLB_chỉtietfile = new System.Windows.Forms.LinkLabel();
+            this.LLB_chitietfile = new System.Windows.Forms.LinkLabel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.CBB_quyentruycap = new System.Windows.Forms.ComboBox();
@@ -457,18 +457,18 @@ namespace DangNhap
             this.TXB_GhiChu.Size = new System.Drawing.Size(419, 30);
             this.TXB_GhiChu.TabIndex = 189;
             // 
-            // LLB_chỉtietfile
+            // LLB_chitietfile
             // 
-            this.LLB_chỉtietfile.AutoSize = true;
-            this.LLB_chỉtietfile.LinkColor = System.Drawing.Color.White;
-            this.LLB_chỉtietfile.Location = new System.Drawing.Point(182, 558);
-            this.LLB_chỉtietfile.Name = "LLB_chỉtietfile";
-            this.LLB_chỉtietfile.Size = new System.Drawing.Size(68, 16);
-            this.LLB_chỉtietfile.TabIndex = 190;
-            this.LLB_chỉtietfile.TabStop = true;
-            this.LLB_chỉtietfile.Text = "linkLabel1";
-            this.LLB_chỉtietfile.Visible = false;
-            this.LLB_chỉtietfile.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LLB_chỉtietfile_LinkClicked);
+            this.LLB_chitietfile.AutoSize = true;
+            this.LLB_chitietfile.LinkColor = System.Drawing.Color.White;
+            this.LLB_chitietfile.Location = new System.Drawing.Point(182, 558);
+            this.LLB_chitietfile.Name = "LLB_chitietfile";
+            this.LLB_chitietfile.Size = new System.Drawing.Size(68, 16);
+            this.LLB_chitietfile.TabIndex = 190;
+            this.LLB_chitietfile.TabStop = true;
+            this.LLB_chitietfile.Text = "linkLabel1";
+            this.LLB_chitietfile.Visible = false;
+            this.LLB_chitietfile.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LLB_chỉtietfile_LinkClicked);
             // 
             // panel6
             // 
@@ -592,7 +592,7 @@ namespace DangNhap
             this.Controls.Add(this.CBB_quyentruycap);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.LLB_chỉtietfile);
+            this.Controls.Add(this.LLB_chitietfile);
             this.Controls.Add(this.TXB_GhiChu);
             this.Controls.Add(this.LB_Ghichu);
             this.Controls.Add(this.TXB_MaCV);
@@ -662,7 +662,7 @@ namespace DangNhap
         public System.Windows.Forms.TextBox TXB_MaCV;
         private System.Windows.Forms.Label LB_Ghichu;
         public System.Windows.Forms.TextBox TXB_GhiChu;
-        public System.Windows.Forms.LinkLabel LLB_chỉtietfile;
+        public System.Windows.Forms.LinkLabel LLB_chitietfile;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         public System.Windows.Forms.ComboBox CBB_quyentruycap;
