@@ -95,30 +95,6 @@ namespace DangNhap
             return dt;
         }
 
-        private void BTN_file_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog dlg = new OpenFileDialog() { ValidateNames = true })
-            {
-                if (dlg.ShowDialog() == DialogResult.OK)
-                {
-                    DialogResult dialog = MessageBox.Show("Bạn có chắc muốn upload file này chứ?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (dialog == DialogResult.Yes)
-                    {
-                        string file = dlg.FileName;
-                        buffer = File.ReadAllBytes(file);
-                        string[] words = file.Split('\\');
-                        int length = words.Length;
-                        fileName = words[length - 1];
-                        string[] w = fileName.Split('.');
-                        int l = w.Length;
-                        fileExten = w[l - 1];
-                    }
-                }
-            }
-            LLB_hienfile.Text = fileName;
-            LLB_hienfile.Show();
-        }
-
         private Dictionary<string, object> AddParameterNotice()
         {
             Dictionary<string, object> dict = new Dictionary<string, object>
@@ -174,19 +150,15 @@ namespace DangNhap
             }
             if (check)
             {
-                foreach (DataRowView item in MSCBB_thongbao.SelectedItems)
-                {
-                    if (item["ID"].ToString() == "Ct")
+                bool containsct = MSCBB_thongbao.SelectedItems.Cast<DataRowView>().Any(value => value["ID"].ToString() == "Ct");
+                if (containsct)
+                    if (NoticeBLL.Instance.AddNoticeTo(AddParameterNoticeTo(null, null, null, 1)))
                     {
-                        if (NoticeBLL.Instance.AddNoticeTo(AddParameterNoticeTo(null, null, null, 1)))
-                        {
-                            return true;
+                        return true;
 
-                        }
-                        else
-                            return false;
                     }
-                }
+                    else
+                        return false;
 
                 foreach (DataRowView item in MSCBB_thongbao.SelectedItems)
                 {
@@ -266,6 +238,31 @@ namespace DangNhap
             {
                 MessageBox.Show("Gửi thất bại");
             }
+        }
+
+        private void BTN_file_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog dlg = new OpenFileDialog())
+            {
+                dlg.ValidateNames = true;
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    DialogResult dialog = MessageBox.Show("Bạn có chắc muốn upload file này chứ?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        string file = dlg.FileName;
+                        buffer = File.ReadAllBytes(file);
+                        string[] words = file.Split('\\');
+                        int length = words.Length;
+                        fileName = words[length - 1];
+                        string[] w = fileName.Split('.');
+                        int l = w.Length;
+                        fileExten = w[l - 1];
+                    }
+                }
+            }
+            LLB_hienfile.Text = fileName;
+            LLB_hienfile.Show();
         }
     }
 }

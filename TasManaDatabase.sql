@@ -1370,6 +1370,19 @@ BEGIN
 END
 go
 
+---Thêm người nhận
+Create Procedure [dbo].[ThemNguoiNhan]
+			@stt int, 
+			@maBoPhan varchar(10),
+			@maNhom varchar(10),
+			@maNhanVien varchar(10),
+			@isFull bit
+AS
+BEGIN
+	INSERT INTO Notice_To
+    VALUES (@stt,@maBoPhan,@maNhom,@maNhanVien,@isFull)
+END
+go
 
 -- Thống kê tình trạng công việc của toàn công ty
 CREATE PROCEDURE [dbo].[SP_ThongKeCongViecCongTy]

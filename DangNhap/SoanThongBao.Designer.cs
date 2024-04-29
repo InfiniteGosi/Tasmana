@@ -123,7 +123,6 @@
             // 
             // BTN_file
             // 
-            this.BTN_file.Enabled = false;
             this.BTN_file.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_file.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_file.ForeColor = System.Drawing.Color.White;
@@ -134,6 +133,7 @@
             this.BTN_file.Size = new System.Drawing.Size(45, 39);
             this.BTN_file.TabIndex = 185;
             this.BTN_file.UseVisualStyleBackColor = true;
+            this.BTN_file.Click += new System.EventHandler(this.BTN_file_Click);
             // 
             // gunaGradientButton1
             // 
