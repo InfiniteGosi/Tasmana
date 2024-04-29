@@ -109,7 +109,7 @@ namespace DangNhap
                 e.SoLuongToilet,
                 e.SoLuongTheThangMay,
                 e.MucPhiQuanLyHangThang,
-            }).ToList(); ;
+            }).ToList();
 
             GGC_canho.TopLevelGroupOptions.ShowFilterBar = true;
             GGC_canho.ActivateCurrentCellBehavior = GridCellActivateAction.None;

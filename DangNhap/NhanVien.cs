@@ -38,11 +38,6 @@ namespace DangNhap
         {
             DisplayGGC_danhsachnhanvien();
         }
-        // Gọi hàm lấy nhân viên
-        private void GetEmployees()
-        {
-            employees = EmployeeBLL.Instance.GetEmployeeList();
-        }
      
         // Nhấn nút thêm nhân viên sẽ mở cửa sổ thông tin nhân viên
         private void BTN_themnhanvien_Click(object sender, EventArgs e)

@@ -37,7 +37,7 @@ namespace DangNhap
             this.BTN_PDF = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_excel = new Guna.UI.WinForms.GunaGradientButton();
             this.GGC_cudan = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CBB_choice = new System.Windows.Forms.ComboBox();
             this.LB_loai = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GGC_cudan)).BeginInit();
             this.SuspendLayout();
@@ -168,13 +168,19 @@ namespace DangNhap
             this.GGC_cudan.UseRightToLeftCompatibleTextBox = true;
             this.GGC_cudan.VersionInfo = "25.1462.39";
             // 
-            // comboBox1
+            // CBB_choice
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(159, 43);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(168, 24);
-            this.comboBox1.TabIndex = 180;
+            this.CBB_choice.FormattingEnabled = true;
+            this.CBB_choice.Items.AddRange(new object[] {
+            "Chủ hộ",
+            "Người được ủy quyền của chủ hộ",
+            "Nhân viên của chủ hộ / Khách thuê / Khách vãng lai",
+            "Khách thuê khu thương mại"});
+            this.CBB_choice.Location = new System.Drawing.Point(159, 43);
+            this.CBB_choice.Name = "CBB_choice";
+            this.CBB_choice.Size = new System.Drawing.Size(278, 24);
+            this.CBB_choice.TabIndex = 180;
+            this.CBB_choice.SelectedIndexChanged += new System.EventHandler(this.CBB_choice_SelectedIndexChanged);
             // 
             // LB_loai
             // 
@@ -195,7 +201,7 @@ namespace DangNhap
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1376, 782);
             this.Controls.Add(this.LB_loai);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.CBB_choice);
             this.Controls.Add(this.GGC_cudan);
             this.Controls.Add(this.BTN_in);
             this.Controls.Add(this.BTN_PDF);
@@ -218,7 +224,7 @@ namespace DangNhap
         private Guna.UI.WinForms.GunaGradientButton BTN_PDF;
         private Guna.UI.WinForms.GunaGradientButton BTN_excel;
         private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl GGC_cudan;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CBB_choice;
         private System.Windows.Forms.Label LB_loai;
     }
 }

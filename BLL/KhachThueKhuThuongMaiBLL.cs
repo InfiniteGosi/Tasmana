@@ -36,5 +36,29 @@ namespace BLL
             string bienSoXeDangKy = dt.Rows[0]["bienSoXeDangKy"].ToString();
             return new KhachThueKhuThuongMai(maKhachDangThue, tenCongTy, hoTenNguoiDaiDien, maNhanVienPhuTrach, soDienThoai, email, ngayKyHopDongThue, ngayChuyenVao, ngayChuyenDi, phiQuanLy, moTaKhuVucChoThue, bienSoXeDangKy);
         }
+        public List<KhachThueKhuThuongMai> GetAllKhachThue()
+        {
+            DataTable dt = KhachThueKhuThuongMaiDAO.Instance.GetAllKhachThue();
+            List<KhachThueKhuThuongMai> list = new List<KhachThueKhuThuongMai> ();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                string maKhachDangThue = dt.Rows[i]["maKhachDangThue"].ToString();
+                string tenCongTy = dt.Rows[i]["tenCongTy"].ToString();
+                string hoTenNguoiDaiDien = dt.Rows[i]["hoTenNguoiDaiDien"].ToString();
+                string maNhanVienPhuTrach = dt.Rows[i]["maNhanVienPhuTrach"].ToString();
+                string soDienThoai = dt.Rows[i]["SDT"].ToString();
+                string email = dt.Rows[i]["email"].ToString();
+                DateTime ngayKyHopDongThue = (DateTime)dt.Rows[i]["ngayKyHopDongThue"];
+                DateTime ngayChuyenVao = (DateTime)dt.Rows[i]["ngayChuyenVao"];
+                DateTime? ngayChuyenDi = dt.Rows[i]["ngayChuyenDi"] != DBNull.Value
+                ? (DateTime)dt.Rows[i]["ngayChuyenDi"]
+                : (DateTime?)null;
+                int phiQuanLy = (int)dt.Rows[i]["phiQuanLy"];
+                string moTaKhuVucChoThue = dt.Rows[i]["moTaKhuVucChoThue"].ToString();
+                string bienSoXeDangKy = dt.Rows[i]["bienSoXeDangKy"].ToString();
+                list.Add(new KhachThueKhuThuongMai(maKhachDangThue, tenCongTy, hoTenNguoiDaiDien, maNhanVienPhuTrach, soDienThoai, email, ngayKyHopDongThue, ngayChuyenVao, ngayChuyenDi, phiQuanLy, moTaKhuVucChoThue, bienSoXeDangKy));
+            }
+            return list;
+        }
     }
 }
