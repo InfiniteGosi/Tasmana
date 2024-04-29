@@ -25,7 +25,7 @@ namespace DangNhap
         private CanHo parent;
         private string maCanHoHienTai;
         private Apartment canHoHienTai;
-        private Resident cuDanCuaCanHo;
+        private ChuHo chuHo;
         //private readonly string[] arrLoai = { "PENTHOUSE", "01", "02", "03", "04", "04", "05", "06", "07", "08", "09", "10", "11" };
         private readonly string[] arrTinhTrang = { "Chưa bán", "Đã bán", "Chưa bàn giao - Cư dân đang ở", "Đã bàn giao - trống" };
         public ChiTietCanHo()
@@ -51,7 +51,7 @@ namespace DangNhap
         }
         private void GetResidentByApartmentId(string maCanHo)
         {
-            cuDanCuaCanHo = ResidentBLL.Instance.GetResidentByApartmentId(maCanHo);
+            chuHo = ChuHoBLL.Instance.GetChuHoByApartmentId(maCanHo);
         }
 
         private Form currentFormChild;
@@ -179,11 +179,11 @@ namespace DangNhap
             if (canHoHienTai != null)
             {
                 TXB_macanho.Text = maCanHoHienTai;
-                if (cuDanCuaCanHo != null)
+                if (chuHo != null)
                 {
-                    TXB_chuho.Text = cuDanCuaCanHo.MaCuDan + "_" + cuDanCuaCanHo.HoTen;
+                    TXB_chuho.Text = chuHo.MaCuDan + "_" + chuHo.HoTen;
                 }
-                string tenKhachDangThue = ResidentBLL.Instance.GetNameOfMaCuDan(canHoHienTai.LichSuGiaoDich.MaKhachDangThue);
+                string tenKhachDangThue = KhachNganNgayBLL.Instance.GetNameByMaCuDan(canHoHienTai.LichSuGiaoDich.MaKhachDangThue);
                 if (!string.IsNullOrEmpty(tenKhachDangThue))
                     TXB_khachdangthue.Text = canHoHienTai.LichSuGiaoDich.MaKhachDangThue + "_" + tenKhachDangThue;
                 NUD_vitritang.Value = canHoHienTai.ViTriTang;

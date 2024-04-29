@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -19,6 +20,11 @@ namespace DAO
         public DataTable GetAllChuHo()
         {
             string query = $"select * from ChuHo";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public DataTable GetChuHoByApartmentId(string maCanHo)
+        {
+            string query = $"select * from ChuHo where maCanHo = '{maCanHo}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
     }

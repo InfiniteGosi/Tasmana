@@ -16,22 +16,9 @@ namespace DAO
             private set { instance = value; }
         }
         private ResidentDAO() { }
-        public DataTable GetResidentByApartmentId(string maCanHo)
-        {
-            string query = "select cd.* " +
-                           "from CanHo ch inner join CuDan cd " +
-                           "on ch.maCuDan = cd.maCuDan " +
-                           $"where ch.maCanHo = '{maCanHo}'";
-            return DataProvider.Instance.ExecuteQuery(query);
-        }
         public DataTable GetResidentByResidentId(string maCuDan)
         {
             string query = $"select * from CuDan where maCuDan = '{maCuDan}'";
-            return DataProvider.Instance.ExecuteQuery(query);
-        }
-        public DataTable GetAllResidents()
-        {
-            string query = $"select * from CuDan";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         // Lấy cư dân có quốc tịch không phải VN
