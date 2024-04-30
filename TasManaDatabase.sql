@@ -1825,3 +1825,61 @@ BEGIN
 	SET tenPB = @tenPB, SDT = @SDT, email = @email
 	WHERE maBoPhan = @maBoPhan
 END
+---------------------------------------------------------------------------------------
+GO
+------------------------- Đếm tổng số công việc của toàn công ty ------------------------------------
+CREATE PROCEDURE [dbo].[CountAllJobsState]
+AS
+BEGIN
+    SELECT 
+        SUM(SoCVChuaBD) AS TongSoCVChuaBatDau,
+        SUM(SoCVDangLam) AS TongSoCVDangLam,
+        SUM(SoCVTreHan) AS TongSoCVTreHan,
+        SUM(SoCVCoCapNhat) AS TongCVCoCapNhat
+    FROM (
+        SELECT
+            SUM(CASE WHEN CV.trangThai = N'Chưa bắt đầu' THEN 1 ELSE 0 END) AS SoCVChuaBD,
+            SUM(CASE WHEN CV.trangThai = N'Đang thực hiện' THEN 1 ELSE 0 END) AS SoCVDangLam,
+            SUM(CASE WHEN CV.ngayHoanThanh > CV.thoiHan AND CV.ngayHoanThanh IS NOT NULL THEN 1 ELSE 0 END) AS SoCVTreHan,
+            SUM(CASE WHEN  CV.ngayCapNhat IS NOT NULL AND CONVERT(date,CV.ngayCapNhat) = CONVERT(date, GETDATE()) THEN 1 ELSE 0 END) AS SoCVCoCapNhat
+        FROM CongViec CV
+
+        UNION ALL
+
+        SELECT
+            SUM(CASE WHEN CV.trangThai = N'Chưa bắt đầu' THEN 1 ELSE 0 END) AS SoCVChuaBD,
+            SUM(CASE WHEN CV.trangThai = N'Đang thực hiện' THEN 1 ELSE 0 END) AS SoCVDangLam,
+            SUM(CASE WHEN CV.ngayHoanThanh > CV.thoiHan AND CV.ngayHoanThanh IS NOT NULL THEN 1 ELSE 0 END) AS SoCVTreHan,
+            SUM(CASE WHEN CV.ngayCapNhat IS NOT NULL AND CONVERT(date,CV.ngayCapNhat) = CONVERT(date, GETDATE()) THEN 1 ELSE 0 END) AS SoCVCoCapNhat
+        FROM CongViec CV
+        JOIN CongViec_Nhom CVN ON CV.maCongViec = CVN.maCongViec
+
+        UNION ALL
+
+        SELECT
+            SUM(CASE WHEN CV.trangThai = N'Chưa bắt đầu' THEN 1 ELSE 0 END) AS SoCVChuaBD,
+            SUM(CASE WHEN CV.trangThai = N'Đang thực hiện' THEN 1 ELSE 0 END) AS SoCVDangLam,
+            SUM(CASE WHEN CV.ngayHoanThanh > CV.thoiHan AND CV.ngayHoanThanh IS NOT NULL THEN 1 ELSE 0 END) AS SoCVTreHan,
+            SUM(CASE WHEN CV.ngayCapNhat IS NOT NULL AND CONVERT(date,CV.ngayCapNhat) = CONVERT(date, GETDATE()) THEN 1 ELSE 0 END) AS SoCVCoCapNhat
+        FROM CongViec CV
+        JOIN CongViec_PhongBan CVPB ON CV.maCongViec = CVPB.maCongViec
+    ) AS TongHop
+END
+--------------------------------------------------------------------------------------------------------
+GO
+------------------------- Đếm tổng số công việc của toàn nhân viên -------------------------------------
+CREATE PROCEDURE [dbo].[CountJobsStateOfEmployees]
+    @maNhanVien VARCHAR(10)
+AS
+BEGIN
+    SELECT
+        SUM(CASE WHEN CV.trangThai = N'Chưa bắt đầu' THEN 1 ELSE 0 END) AS TongSoCVChuaBatDau,
+        SUM(CASE WHEN CV.trangThai = N'Đang thực hiện' THEN 1 ELSE 0 END) AS TongSoCVDangLam,
+        SUM(CASE WHEN CV.ngayHoanThanh > CV.thoiHan AND CV.ngayHoanThanh IS NOT NULL THEN 1 ELSE 0 END) AS TongSoCVTreHan,
+        SUM(CASE WHEN CV.ngayCapNhat IS NOT NULL THEN 1 ELSE 0 END) AS TongCVCoCapNhat
+    FROM CongViec CV
+    JOIN Congviec_Nhanvien CVNV ON CV.maCongViec = CVNV.maCongViec
+    WHERE CVNV.maNhanVien = @maNhanVien
+END
+--------------------------------------------------------------------------------------------------------
+GO

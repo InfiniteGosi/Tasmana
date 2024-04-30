@@ -40,6 +40,8 @@ namespace DangNhap
                 BTN_cudan.Enabled = false;
                 BTN_cudan.Visible = false;
             }
+            // Hiển thị tình trạng công việc hiện tại
+            CountJobState();
         }
         private Form currentFormChild;
 
@@ -259,6 +261,53 @@ namespace DangNhap
             appTime = 0;
         }
 
-        
+        private void CountJobState()
+        {
+            // Hiện thông tin
+            LB_SoCongViecCBD.Visible = true;
+            LB_SoCV_DangTienHanh.Visible = true;
+            LB_SoCV_TreHan.Visible = true;
+            LB_SoCV_CoCapNhat.Visible = true;
+
+            // Nếu là CEO thì load toàn bộ tình trạng công việc của toàn công ty
+            if (currentAccount.Level.Equals("CEO"))
+            {
+                // Lấy thông tin
+                DataTable data = JobBLL.Instance.GetAllJobsState();
+                if(data.Rows.Count > 0)
+                {
+                    LB_SoCongViecCBD.Text = data.Rows[0]["TongSoCVChuaBatDau"].ToString();
+                    LB_SoCV_DangTienHanh.Text = data.Rows[0]["TongSoCVDangLam"].ToString();
+                    LB_SoCV_TreHan.Text = data.Rows[0]["TongSoCVTreHan"].ToString();
+                    LB_SoCV_CoCapNhat.Text = data.Rows[0]["TongCVCoCapNhat"].ToString();
+                }
+                else
+                {
+                    LB_SoCongViecCBD.Text = "0";
+                    LB_SoCV_DangTienHanh.Text = "0";
+                    LB_SoCV_TreHan.Text = "0";
+                    LB_SoCV_CoCapNhat.Text = "0";
+                }
+            }
+            else
+            {
+                // Lấy thông tin
+                DataTable data = JobBLL.Instance.GetJobsStateOfEmployee(currentAccount.EmployeeId);
+                if (data.Rows.Count > 0)
+                {
+                    LB_SoCongViecCBD.Text = data.Rows[0]["TongSoCVChuaBatDau"].ToString();
+                    LB_SoCV_DangTienHanh.Text = data.Rows[0]["TongSoCVDangLam"].ToString();
+                    LB_SoCV_TreHan.Text = data.Rows[0]["TongSoCVTreHan"].ToString();
+                    LB_SoCV_CoCapNhat.Text = data.Rows[0]["TongCVCoCapNhat"].ToString();
+                }
+                else
+                {
+                    LB_SoCongViecCBD.Text = "0";
+                    LB_SoCV_DangTienHanh.Text = "0";
+                    LB_SoCV_TreHan.Text = "0";
+                    LB_SoCV_CoCapNhat.Text = "0";
+                }
+            }
+        }
     }
 }

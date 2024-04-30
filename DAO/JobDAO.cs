@@ -246,5 +246,19 @@ namespace DAO
             DataTable result = DataProvider.Instance.ExecuteStoredProcedureWithTableReturn("XepHangPhongBanTheoSoCongViecDaHoanThanh", parameters);
             return result;
         }
+        public DataTable GetAllJobsState()
+        {
+            string query = "EXEC CountAllJobsState";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public DataTable GetJobsStateOfEmployee(string maNhanVien) 
+        {
+            // Tạo dictionary chứa các tham số cho stored procedure
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@maNhanVien", maNhanVien);
+            // Gọi stored procedure và nhận kết quả vào một DataTable
+            DataTable result = DataProvider.Instance.ExecuteStoredProcedureWithTableReturn("CountJobsStateOfEmployees", parameters);
+            return result;
+        }
     }
 }
