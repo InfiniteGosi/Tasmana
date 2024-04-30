@@ -38,8 +38,6 @@ namespace DangNhap
         {
             OpenChildForm(new ThemPhongBan());
             LB_themmoi.Text = "THÊM PHÒNG BAN";
-            BTN_nhanvien.BackColor = Color.Transparent;
-            BTN_phongban.BackColor = Color.FromArgb(51, 53, 55);
         }
         private void BTN_nhanvien_Click(object sender, EventArgs e)
         {
@@ -48,8 +46,6 @@ namespace DangNhap
                 currentFormChild.Close();
             }
             LB_themmoi.Text = "THÊM NHÓM";
-            BTN_phongban.BackColor = Color.Transparent;
-            BTN_nhanvien.BackColor = Color.FromArgb(51, 53, 55);
         }
 
         //Di chuyển form
