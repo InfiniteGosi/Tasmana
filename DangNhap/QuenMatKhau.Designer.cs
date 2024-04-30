@@ -55,6 +55,7 @@
             this.TXB_employeId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.TXB_employeId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TXB_employeId.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_employeId.ForeColor = System.Drawing.Color.White;
             this.TXB_employeId.Location = new System.Drawing.Point(51, 146);
             this.TXB_employeId.Name = "TXB_employeId";
             this.TXB_employeId.Size = new System.Drawing.Size(476, 23);
@@ -65,6 +66,7 @@
             this.TXB_verify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.TXB_verify.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TXB_verify.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_verify.ForeColor = System.Drawing.Color.White;
             this.TXB_verify.Location = new System.Drawing.Point(51, 390);
             this.TXB_verify.Name = "TXB_verify";
             this.TXB_verify.Size = new System.Drawing.Size(476, 23);
@@ -124,6 +126,7 @@
             this.TXB_email.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TXB_email.Enabled = false;
             this.TXB_email.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_email.ForeColor = System.Drawing.Color.White;
             this.TXB_email.Location = new System.Drawing.Point(51, 268);
             this.TXB_email.Name = "TXB_email";
             this.TXB_email.Size = new System.Drawing.Size(371, 23);
