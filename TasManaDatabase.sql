@@ -8,7 +8,7 @@ CREATE TABLE PhongBan
   maBoPhan VARCHAR(10) NOT NULL,
   tenPB NVARCHAR(50) NOT NULL,
   SDT VARCHAR(20) NOT NULL,
-  email VARCHAR(100) NOT NULL,
+  email VARCHAR(100),
   PRIMARY KEY (maBoPhan)
 );
 
@@ -1812,3 +1812,16 @@ BEGIN
 END
 ------------------------------------------------------------------------------------------------------------------------------------------
 GO
+-------------------------------------------------Xong thống kê cư dân---------------------------------------------------------------------
+------------------------ Sửa thông tin phòng ban -------------------------------------
+CREATE PROCEDURE [dbo].[SP_EditPhongBan]
+	@maBoPhan VARCHAR(10),
+	@tenPB NVARCHAR(50),
+	@SDT VARCHAR(20),
+	@email VARCHAR(100)
+AS
+BEGIN
+	Update PhongBan
+	SET tenPB = @tenPB, SDT = @SDT, email = @email
+	WHERE maBoPhan = @maBoPhan
+END

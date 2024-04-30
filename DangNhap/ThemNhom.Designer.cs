@@ -44,8 +44,6 @@
             this.PN_main = new System.Windows.Forms.Panel();
             this.BTN_xoa = new Guna.UI.WinForms.GunaGradientButton();
             this.LB_themmoi = new System.Windows.Forms.Label();
-            this.BTN_nhanvien = new System.Windows.Forms.Button();
-            this.BTN_phongban = new System.Windows.Forms.Button();
             this.BTN_thoat = new Guna.UI.WinForms.GunaGradientButton();
             this.PN_main.SuspendLayout();
             this.SuspendLayout();
@@ -256,38 +254,6 @@
             this.LB_themmoi.TabIndex = 206;
             this.LB_themmoi.Text = "THÊM NHÓM";
             // 
-            // BTN_nhanvien
-            // 
-            this.BTN_nhanvien.AutoSize = true;
-            this.BTN_nhanvien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(53)))), ((int)(((byte)(55)))));
-            this.BTN_nhanvien.FlatAppearance.BorderSize = 0;
-            this.BTN_nhanvien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_nhanvien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_nhanvien.ForeColor = System.Drawing.Color.White;
-            this.BTN_nhanvien.Location = new System.Drawing.Point(513, 16);
-            this.BTN_nhanvien.Name = "BTN_nhanvien";
-            this.BTN_nhanvien.Size = new System.Drawing.Size(125, 47);
-            this.BTN_nhanvien.TabIndex = 215;
-            this.BTN_nhanvien.Text = "Nhóm";
-            this.BTN_nhanvien.UseVisualStyleBackColor = false;
-            this.BTN_nhanvien.Click += new System.EventHandler(this.BTN_nhanvien_Click);
-            // 
-            // BTN_phongban
-            // 
-            this.BTN_phongban.AutoSize = true;
-            this.BTN_phongban.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_phongban.FlatAppearance.BorderSize = 0;
-            this.BTN_phongban.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_phongban.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_phongban.ForeColor = System.Drawing.Color.White;
-            this.BTN_phongban.Location = new System.Drawing.Point(644, 16);
-            this.BTN_phongban.Name = "BTN_phongban";
-            this.BTN_phongban.Size = new System.Drawing.Size(125, 47);
-            this.BTN_phongban.TabIndex = 216;
-            this.BTN_phongban.Text = "Phòng Ban";
-            this.BTN_phongban.UseVisualStyleBackColor = false;
-            this.BTN_phongban.Click += new System.EventHandler(this.BTN_phongban_Click);
-            // 
             // BTN_thoat
             // 
             this.BTN_thoat.AnimationHoverSpeed = 0.5F;
@@ -322,8 +288,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(848, 462);
-            this.Controls.Add(this.BTN_phongban);
-            this.Controls.Add(this.BTN_nhanvien);
             this.Controls.Add(this.LB_themmoi);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -362,8 +326,6 @@
         public System.Windows.Forms.TextBox TXB_maNhom;
         private System.Windows.Forms.Panel PN_main;
         private System.Windows.Forms.Label LB_themmoi;
-        private System.Windows.Forms.Button BTN_nhanvien;
-        private System.Windows.Forms.Button BTN_phongban;
         private Guna.UI.WinForms.GunaGradientButton BTN_xoa;
         private Guna.UI.WinForms.GunaGradientButton BTN_thoat;
     }

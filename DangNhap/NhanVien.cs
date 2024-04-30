@@ -244,5 +244,11 @@ namespace DangNhap
             if (printDialog.ShowDialog() == DialogResult.OK)
                 gridPrintDocument.Print();
         }
+
+        private void BTN_PhongBan_Click(object sender, EventArgs e)
+        {
+            ThemPhongBan themPhongBan = new ThemPhongBan();
+            themPhongBan.ShowDialog();
+        }
     }
 }

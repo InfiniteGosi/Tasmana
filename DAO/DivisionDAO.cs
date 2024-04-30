@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,6 +27,11 @@ namespace DAO
         {
             string query = "exec SP_LayPhongBanTheoMaNhanVien @maNhanVien";
             return DataProvider.Instance.ExecuteQuery(query, new object[] { maNhanVien });
+        }
+        public bool EditDivision(Dictionary<string, object> parameters)
+        {
+            int result = DataProvider.Instance.ExecuteStoredProcedure("SP_EditPhongBan", parameters);
+            return result > 0;
         }
     }
 }
