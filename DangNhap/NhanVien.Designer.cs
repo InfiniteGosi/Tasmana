@@ -36,6 +36,7 @@ namespace DangNhap
             this.BTN_in = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_PDF = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_excel = new Guna.UI.WinForms.GunaGradientButton();
+            this.BTN_PhongBan = new Guna.UI.WinForms.GunaGradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.GGC_danhsachnv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -207,12 +208,45 @@ namespace DangNhap
             this.BTN_excel.TextOffsetX = 3;
             this.BTN_excel.Click += new System.EventHandler(this.BTN_excel_Click);
             // 
+            // BTN_PhongBan
+            // 
+            this.BTN_PhongBan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_PhongBan.Animated = true;
+            this.BTN_PhongBan.AnimationHoverSpeed = 0.5F;
+            this.BTN_PhongBan.AnimationSpeed = 0.03F;
+            this.BTN_PhongBan.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_PhongBan.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.BTN_PhongBan.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
+            this.BTN_PhongBan.BorderColor = System.Drawing.Color.Black;
+            this.BTN_PhongBan.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_PhongBan.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_PhongBan.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_PhongBan.ForeColor = System.Drawing.Color.White;
+            this.BTN_PhongBan.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.BTN_PhongBan.Image = null;
+            this.BTN_PhongBan.ImageSize = new System.Drawing.Size(20, 20);
+            this.BTN_PhongBan.Location = new System.Drawing.Point(850, 45);
+            this.BTN_PhongBan.Name = "BTN_PhongBan";
+            this.BTN_PhongBan.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
+            this.BTN_PhongBan.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
+            this.BTN_PhongBan.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_PhongBan.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_PhongBan.OnHoverImage = null;
+            this.BTN_PhongBan.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_PhongBan.Radius = 5;
+            this.BTN_PhongBan.Size = new System.Drawing.Size(129, 35);
+            this.BTN_PhongBan.TabIndex = 173;
+            this.BTN_PhongBan.Text = "Phòng ban";
+            this.BTN_PhongBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_PhongBan.Click += new System.EventHandler(this.BTN_PhongBan_Click);
+            // 
             // NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(1376, 782);
+            this.Controls.Add(this.BTN_PhongBan);
             this.Controls.Add(this.BTN_in);
             this.Controls.Add(this.BTN_PDF);
             this.Controls.Add(this.BTN_excel);
@@ -235,5 +269,6 @@ namespace DangNhap
         private Guna.UI.WinForms.GunaGradientButton BTN_in;
         private Guna.UI.WinForms.GunaGradientButton BTN_PDF;
         private Guna.UI.WinForms.GunaGradientButton BTN_excel;
+        private Guna.UI.WinForms.GunaGradientButton BTN_PhongBan;
     }
 }

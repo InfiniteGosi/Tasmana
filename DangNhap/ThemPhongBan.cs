@@ -1,4 +1,9 @@
-﻿using System;
+﻿using BLL;
+using Syncfusion.GridHelperClasses;
+using Syncfusion.Grouping;
+using Syncfusion.Licensing;
+using Syncfusion.Windows.Forms.Grid.Grouping;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +19,119 @@ namespace DangNhap
     {
         public ThemPhongBan()
         {
+            SyncfusionLicenseProvider.RegisterLicense("MzIxOTI2MkAzMjM1MmUzMDJlMzBORkJZeFRVdUQxeERjT2xkWC9vdFgxS29wUmREOU9CZVdENkRUN0lrSStVPQ==;Mgo+DSMBaFt6QHFqVkNrXVNbdV5dVGpAd0N3RGlcdlR1fUUmHVdTRHRbQlliS3xTck1hW35Wcnc=");
             InitializeComponent();
+        }
+        private void LoadPhongBan()
+        {
+            GGC_PhongBan.DataSource = null;
+            GGC_PhongBan.DataSource = DivisionBLL.Instance.GetAllDivision();
+            GridColumnDescriptorCollection columns = GGC_PhongBan.TableDescriptor.Columns;
+            if (columns.Count > 0)
+            {
+                foreach (GridColumnDescriptor column in columns)
+                {
+                    // Thiết lập thuộc tính cho mỗi cột
+                    column.AllowFilter = true;
+                }
+                // Thiết lập các tiêu đề của cột
+                string[] headers = { "Mã bộ phận", "Tên bộ phận", "Số điện thoại", "Email"};
+                for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                {
+                    columns[i].HeaderText = headers[i];
+                }
+            }
+            GridDynamicFilter dynamicFilter = new GridDynamicFilter();
+            dynamicFilter.WireGrid(GGC_PhongBan);
+
+            GridExcelFilter excelFilter = new GridExcelFilter();
+            excelFilter.WireGrid(GGC_PhongBan);
+            // Thiết lập AutoSizeMode cho mỗi cột
+            foreach (GridColumnDescriptor column in columns)
+            {
+                column.Appearance.AnyRecordFieldCell.AutoSize = true;
+                column.Appearance.AnyRecordFieldCell.CellType = "TextBox";
+            }
+        }
+
+        private void ThemPhongBan_Load(object sender, EventArgs e)
+        {
+            LoadPhongBan();
+        }
+
+        private void BTN_thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void GGC_PhongBan_TableControlCellClick(object sender, GridTableControlCellClickEventArgs e)
+        {
+            GridTableCellStyleInfo style = e.TableControl.GetTableViewStyleInfo(e.Inner.RowIndex, e.Inner.ColIndex);
+            GridTableCellStyleInfoIdentity id = style.TableCellIdentity;
+            if (id.DisplayElement.Kind == DisplayElementKind.Record)
+            {
+                Record record = id.DisplayElement.GetRecord();
+                if (record != null)
+                {
+                    TXB_maphongban.Text = record.GetValue("maBoPhan").ToString();
+                    TXB_tenphongban.Text = record.GetValue("tenPB").ToString();
+                    TXB_SDT.Text = record.GetValue("SDT").ToString();
+                    TXB_Email.Text = record.GetValue("email").ToString();
+                }
+            }
+        }
+
+        private Dictionary<string, object> AddParameterEdit_Division()
+        {
+            Dictionary<string, object> dict = new Dictionary<string, object>
+            {
+                {"@maBoPhan", TXB_maphongban.Text},
+                {"@tenPB", TXB_tenphongban.Text},
+                {"@SDT", TXB_SDT.Text},
+                {"@email", TXB_Email.Text}
+            };
+            return dict;
+        }
+
+        private bool EditDivision()
+        {
+            if (DivisionBLL.Instance.EditDivision(AddParameterEdit_Division()))
+            {
+                return true;
+            }
+            return false;
+        }
+        private void BTN_ok_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(TXB_maphongban.Text))
+            {
+                MessageBox.Show("Vui lòng điền mã phòng ban");
+                return;
+            }
+            if (string.IsNullOrEmpty(TXB_tenphongban.Text))
+            {
+                MessageBox.Show("Vui lòng không để trống tên phòng ban");
+                return;
+            }
+            if (string.IsNullOrEmpty(TXB_SDT.Text))
+            {
+                MessageBox.Show("Vui lòng điền số điện thoại của phòng ban");
+                return;
+            }
+            if(string.IsNullOrEmpty(TXB_Email.Text))
+            {
+                MessageBox.Show("Vui lòng điền địa chỉ email của phòng ban");
+                return;
+            }
+            if(EditDivision())
+            {
+                MessageBox.Show("Thay đổi thành công");
+                LoadPhongBan(); 
+            }
+            else
+            {
+                MessageBox.Show("Thay đổi thất bại");
+            }
         }
     }
 }
