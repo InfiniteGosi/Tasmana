@@ -30,7 +30,6 @@
         {
             this.TXB_doxe = new System.Windows.Forms.TextBox();
             this.TXB_dv = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.LB_doxe = new System.Windows.Forms.Label();
             this.TXB_congno = new System.Windows.Forms.TextBox();
             this.LB_congno = new System.Windows.Forms.Label();
@@ -42,7 +41,7 @@
             this.TXB_doxe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_doxe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_doxe.ForeColor = System.Drawing.Color.White;
-            this.TXB_doxe.Location = new System.Drawing.Point(218, 180);
+            this.TXB_doxe.Location = new System.Drawing.Point(218, 226);
             this.TXB_doxe.Multiline = true;
             this.TXB_doxe.Name = "TXB_doxe";
             this.TXB_doxe.Size = new System.Drawing.Size(375, 30);
@@ -53,26 +52,18 @@
             this.TXB_dv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_dv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_dv.ForeColor = System.Drawing.Color.White;
-            this.TXB_dv.Location = new System.Drawing.Point(218, 115);
+            this.TXB_dv.Location = new System.Drawing.Point(218, 139);
             this.TXB_dv.Multiline = true;
             this.TXB_dv.Name = "TXB_dv";
             this.TXB_dv.Size = new System.Drawing.Size(375, 30);
             this.TXB_dv.TabIndex = 229;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Silver;
-            this.panel1.Location = new System.Drawing.Point(650, 38);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1, 600);
-            this.panel1.TabIndex = 228;
             // 
             // LB_doxe
             // 
             this.LB_doxe.AutoSize = true;
             this.LB_doxe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_doxe.ForeColor = System.Drawing.Color.White;
-            this.LB_doxe.Location = new System.Drawing.Point(16, 180);
+            this.LB_doxe.Location = new System.Drawing.Point(16, 230);
             this.LB_doxe.Name = "LB_doxe";
             this.LB_doxe.Size = new System.Drawing.Size(183, 22);
             this.LB_doxe.TabIndex = 227;
@@ -83,7 +74,7 @@
             this.TXB_congno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_congno.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_congno.ForeColor = System.Drawing.Color.White;
-            this.TXB_congno.Location = new System.Drawing.Point(218, 48);
+            this.TXB_congno.Location = new System.Drawing.Point(218, 52);
             this.TXB_congno.Name = "TXB_congno";
             this.TXB_congno.Size = new System.Drawing.Size(375, 30);
             this.TXB_congno.TabIndex = 226;
@@ -104,7 +95,7 @@
             this.LB_phidichvu.AutoSize = true;
             this.LB_phidichvu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_phidichvu.ForeColor = System.Drawing.Color.White;
-            this.LB_phidichvu.Location = new System.Drawing.Point(16, 120);
+            this.LB_phidichvu.Location = new System.Drawing.Point(16, 143);
             this.LB_phidichvu.Name = "LB_phidichvu";
             this.LB_phidichvu.Size = new System.Drawing.Size(196, 22);
             this.LB_phidichvu.TabIndex = 224;
@@ -118,7 +109,6 @@
             this.ClientSize = new System.Drawing.Size(1391, 772);
             this.Controls.Add(this.TXB_doxe);
             this.Controls.Add(this.TXB_dv);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.LB_doxe);
             this.Controls.Add(this.TXB_congno);
             this.Controls.Add(this.LB_congno);
@@ -135,7 +125,6 @@
         #endregion
         private System.Windows.Forms.TextBox TXB_doxe;
         private System.Windows.Forms.TextBox TXB_dv;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label LB_doxe;
         private System.Windows.Forms.TextBox TXB_congno;
         private System.Windows.Forms.Label LB_congno;
