@@ -45,7 +45,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.LB_hinhanhcanho = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.BTN_xoa = new Guna.UI.WinForms.GunaGradientButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.BTN_luu = new Guna.UI.WinForms.GunaGradientButton();
@@ -106,7 +105,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(705, 373);
+            this.label3.Location = new System.Drawing.Point(705, 388);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(227, 22);
             this.label3.TabIndex = 176;
@@ -117,7 +116,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(705, 118);
+            this.label10.Location = new System.Drawing.Point(705, 116);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(193, 22);
             this.label10.TabIndex = 174;
@@ -129,7 +128,7 @@
             this.NUD_thangmay.BeforeTouchSize = new System.Drawing.Size(375, 30);
             this.NUD_thangmay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUD_thangmay.ForeColor = System.Drawing.Color.White;
-            this.NUD_thangmay.Location = new System.Drawing.Point(970, 110);
+            this.NUD_thangmay.Location = new System.Drawing.Point(970, 112);
             this.NUD_thangmay.Name = "NUD_thangmay";
             this.NUD_thangmay.Size = new System.Drawing.Size(375, 30);
             this.NUD_thangmay.TabIndex = 175;
@@ -162,7 +161,7 @@
             this.NUD_toilet.BeforeTouchSize = new System.Drawing.Size(375, 30);
             this.NUD_toilet.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUD_toilet.ForeColor = System.Drawing.Color.White;
-            this.NUD_toilet.Location = new System.Drawing.Point(970, 44);
+            this.NUD_toilet.Location = new System.Drawing.Point(970, 43);
             this.NUD_toilet.Name = "NUD_toilet";
             this.NUD_toilet.Size = new System.Drawing.Size(375, 30);
             this.NUD_toilet.TabIndex = 173;
@@ -267,22 +266,11 @@
             this.LB_hinhanhcanho.AutoSize = true;
             this.LB_hinhanhcanho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_hinhanhcanho.ForeColor = System.Drawing.Color.White;
-            this.LB_hinhanhcanho.Location = new System.Drawing.Point(33, 232);
+            this.LB_hinhanhcanho.Location = new System.Drawing.Point(27, 254);
             this.LB_hinhanhcanho.Name = "LB_hinhanhcanho";
             this.LB_hinhanhcanho.Size = new System.Drawing.Size(205, 22);
             this.LB_hinhanhcanho.TabIndex = 37;
             this.LB_hinhanhcanho.Text = "Hình ảnh khu thương mại";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(705, 189);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(166, 22);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Số lượng phòng ngủ";
             // 
             // BTN_xoa
             // 
@@ -294,6 +282,7 @@
             this.BTN_xoa.BaseColor2 = System.Drawing.Color.Transparent;
             this.BTN_xoa.BorderColor = System.Drawing.Color.Red;
             this.BTN_xoa.BorderSize = 1;
+            this.BTN_xoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_xoa.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_xoa.FocusedColor = System.Drawing.Color.Empty;
             this.BTN_xoa.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -332,6 +321,7 @@
             this.BTN_luu.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.BTN_luu.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.BTN_luu.BorderColor = System.Drawing.Color.Black;
+            this.BTN_luu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_luu.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_luu.FocusedColor = System.Drawing.Color.Empty;
             this.BTN_luu.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -385,6 +375,7 @@
             // 
             this.BTN_lichsu.AutoSize = true;
             this.BTN_lichsu.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_lichsu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_lichsu.FlatAppearance.BorderSize = 0;
             this.BTN_lichsu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_lichsu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -401,6 +392,7 @@
             // 
             this.BTN_chung.AutoSize = true;
             this.BTN_chung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(53)))), ((int)(((byte)(55)))));
+            this.BTN_chung.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_chung.FlatAppearance.BorderSize = 0;
             this.BTN_chung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_chung.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -419,7 +411,7 @@
             this.NUD_phongngu.BeforeTouchSize = new System.Drawing.Size(375, 30);
             this.NUD_phongngu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUD_phongngu.ForeColor = System.Drawing.Color.White;
-            this.NUD_phongngu.Location = new System.Drawing.Point(970, 187);
+            this.NUD_phongngu.Location = new System.Drawing.Point(970, 181);
             this.NUD_phongngu.Name = "NUD_phongngu";
             this.NUD_phongngu.Size = new System.Drawing.Size(375, 30);
             this.NUD_phongngu.TabIndex = 171;
@@ -468,7 +460,6 @@
             this.PN_hienthi.Controls.Add(this.LB_macanho);
             this.PN_hienthi.Controls.Add(this.TXB_macanho);
             this.PN_hienthi.Controls.Add(this.LB_khachdangthue);
-            this.PN_hienthi.Controls.Add(this.label5);
             this.PN_hienthi.Controls.Add(this.TXB_khachdangthue);
             this.PN_hienthi.Controls.Add(this.LB_phongngu);
             this.PN_hienthi.Controls.Add(this.LB_thanhtoan);
@@ -483,7 +474,7 @@
             this.NUD_mucphiql.BeforeTouchSize = new System.Drawing.Size(375, 30);
             this.NUD_mucphiql.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUD_mucphiql.ForeColor = System.Drawing.Color.White;
-            this.NUD_mucphiql.Location = new System.Drawing.Point(970, 365);
+            this.NUD_mucphiql.Location = new System.Drawing.Point(970, 382);
             this.NUD_mucphiql.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -510,7 +501,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(33, 110);
+            this.label22.Location = new System.Drawing.Point(33, 116);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(89, 22);
             this.label22.TabIndex = 220;
@@ -522,7 +513,7 @@
             this.TXB_NSA.Enabled = false;
             this.TXB_NSA.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_NSA.ForeColor = System.Drawing.Color.White;
-            this.TXB_NSA.Location = new System.Drawing.Point(970, 311);
+            this.TXB_NSA.Location = new System.Drawing.Point(970, 316);
             this.TXB_NSA.Multiline = true;
             this.TXB_NSA.Name = "TXB_NSA";
             this.TXB_NSA.Size = new System.Drawing.Size(375, 27);
@@ -534,7 +525,7 @@
             this.TXB_GSA.Enabled = false;
             this.TXB_GSA.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_GSA.ForeColor = System.Drawing.Color.White;
-            this.TXB_GSA.Location = new System.Drawing.Point(970, 251);
+            this.TXB_GSA.Location = new System.Drawing.Point(970, 250);
             this.TXB_GSA.Multiline = true;
             this.TXB_GSA.Name = "TXB_GSA";
             this.TXB_GSA.Size = new System.Drawing.Size(375, 27);
@@ -545,7 +536,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(707, 316);
+            this.label21.Location = new System.Drawing.Point(707, 321);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(126, 22);
             this.label21.TabIndex = 216;
@@ -556,7 +547,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(705, 256);
+            this.label20.Location = new System.Drawing.Point(705, 254);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(126, 22);
             this.label20.TabIndex = 215;
@@ -567,7 +558,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(1070, 440);
+            this.label19.Location = new System.Drawing.Point(1070, 455);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(27, 22);
             this.label19.TabIndex = 214;
@@ -579,7 +570,7 @@
             this.NUD_thanhtoan.BeforeTouchSize = new System.Drawing.Size(96, 30);
             this.NUD_thanhtoan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUD_thanhtoan.ForeColor = System.Drawing.Color.White;
-            this.NUD_thanhtoan.Location = new System.Drawing.Point(970, 436);
+            this.NUD_thanhtoan.Location = new System.Drawing.Point(970, 451);
             this.NUD_thanhtoan.Name = "NUD_thanhtoan";
             this.NUD_thanhtoan.Size = new System.Drawing.Size(96, 30);
             this.NUD_thanhtoan.TabIndex = 213;
@@ -593,6 +584,7 @@
             this.BTN_uploadanh.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.BTN_uploadanh.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.BTN_uploadanh.BorderColor = System.Drawing.Color.Black;
+            this.BTN_uploadanh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_uploadanh.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_uploadanh.FocusedColor = System.Drawing.Color.Empty;
             this.BTN_uploadanh.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -600,7 +592,7 @@
             this.BTN_uploadanh.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.BTN_uploadanh.Image = null;
             this.BTN_uploadanh.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_uploadanh.Location = new System.Drawing.Point(264, 603);
+            this.BTN_uploadanh.Location = new System.Drawing.Point(244, 568);
             this.BTN_uploadanh.Name = "BTN_uploadanh";
             this.BTN_uploadanh.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.BTN_uploadanh.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
@@ -724,9 +716,9 @@
             // PB_hinhcanho
             // 
             this.PB_hinhcanho.Image = ((System.Drawing.Image)(resources.GetObject("PB_hinhcanho.Image")));
-            this.PB_hinhcanho.Location = new System.Drawing.Point(116, 284);
+            this.PB_hinhcanho.Location = new System.Drawing.Point(177, 316);
             this.PB_hinhcanho.Name = "PB_hinhcanho";
-            this.PB_hinhcanho.Size = new System.Drawing.Size(400, 294);
+            this.PB_hinhcanho.Size = new System.Drawing.Size(273, 226);
             this.PB_hinhcanho.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_hinhcanho.TabIndex = 36;
             this.PB_hinhcanho.TabStop = false;
@@ -748,7 +740,7 @@
             this.TXB_macanho.Enabled = false;
             this.TXB_macanho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_macanho.ForeColor = System.Drawing.Color.White;
-            this.TXB_macanho.Location = new System.Drawing.Point(215, 44);
+            this.TXB_macanho.Location = new System.Drawing.Point(215, 43);
             this.TXB_macanho.Name = "TXB_macanho";
             this.TXB_macanho.Size = new System.Drawing.Size(375, 30);
             this.TXB_macanho.TabIndex = 13;
@@ -758,7 +750,7 @@
             this.LB_khachdangthue.AutoSize = true;
             this.LB_khachdangthue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_khachdangthue.ForeColor = System.Drawing.Color.White;
-            this.LB_khachdangthue.Location = new System.Drawing.Point(33, 170);
+            this.LB_khachdangthue.Location = new System.Drawing.Point(33, 185);
             this.LB_khachdangthue.Name = "LB_khachdangthue";
             this.LB_khachdangthue.Size = new System.Drawing.Size(139, 22);
             this.LB_khachdangthue.TabIndex = 21;
@@ -779,7 +771,7 @@
             this.LB_phongngu.AutoSize = true;
             this.LB_phongngu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_phongngu.ForeColor = System.Drawing.Color.White;
-            this.LB_phongngu.Location = new System.Drawing.Point(705, 189);
+            this.LB_phongngu.Location = new System.Drawing.Point(705, 185);
             this.LB_phongngu.Name = "LB_phongngu";
             this.LB_phongngu.Size = new System.Drawing.Size(166, 22);
             this.LB_phongngu.TabIndex = 29;
@@ -790,7 +782,7 @@
             this.LB_thanhtoan.AutoSize = true;
             this.LB_thanhtoan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_thanhtoan.ForeColor = System.Drawing.Color.White;
-            this.LB_thanhtoan.Location = new System.Drawing.Point(705, 440);
+            this.LB_thanhtoan.Location = new System.Drawing.Point(707, 455);
             this.LB_thanhtoan.Name = "LB_thanhtoan";
             this.LB_thanhtoan.Size = new System.Drawing.Size(174, 22);
             this.LB_thanhtoan.TabIndex = 27;
@@ -911,7 +903,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label LB_hinhanhcanho;
         private System.Windows.Forms.PictureBox PB_hinhcanho;
-        private System.Windows.Forms.Label label5;
         private Guna.UI.WinForms.GunaGradientButton BTN_xoa;
         private System.Windows.Forms.Panel panel6;
         private Guna.UI.WinForms.GunaGradientButton BTN_luu;
