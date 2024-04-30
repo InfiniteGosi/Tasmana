@@ -749,6 +749,7 @@
             this.Controls.Add(this.BTN_square);
             this.Controls.Add(this.BTN_x);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TrangHienThi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrangHienThi";
