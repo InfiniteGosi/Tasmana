@@ -133,5 +133,29 @@ namespace DangNhap
                 MessageBox.Show("Thay đổi thất bại");
             }
         }
+        //Di chuyển form
+        int mov;
+        int movX;
+        int movY;
+
+        private void ThemPhongBan_MouseDown(object sender, MouseEventArgs e)
+        {
+            mov = 1;
+            movX = e.X;
+            movY = e.Y;
+        }
+
+        private void ThemPhongBan_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mov == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - movX, MousePosition.Y - movY);
+            }
+        }
+
+        private void ThemPhongBan_MouseUp(object sender, MouseEventArgs e)
+        {
+            mov = 0;
+        }
     }
 }
