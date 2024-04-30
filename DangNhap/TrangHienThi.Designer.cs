@@ -137,9 +137,9 @@
             this.LB_CapNhat.ForeColor = System.Drawing.Color.White;
             this.LB_CapNhat.Location = new System.Drawing.Point(73, 569);
             this.LB_CapNhat.Name = "LB_CapNhat";
-            this.LB_CapNhat.Size = new System.Drawing.Size(58, 19);
+            this.LB_CapNhat.Size = new System.Drawing.Size(88, 19);
             this.LB_CapNhat.TabIndex = 45;
-            this.LB_CapNhat.Text = "Trễ hạn";
+            this.LB_CapNhat.Text = "Có cập nhật";
             // 
             // gunaCirclePictureBox4
             // 
