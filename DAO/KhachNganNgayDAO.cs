@@ -26,5 +26,10 @@ namespace DAO
             string query = $"select * from KhachNganNgay where maCuDan = '{maCuDan}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public bool DeleteKhachNganNgay(string maCuDan, string maCanHo)
+        {
+            string query = $"delete from KhachNganNgay where maCuDan = '{maCuDan}' and maCanHo = '{maCanHo}'";
+            return DataProvider.Instance.ExecuteNonQuery(query) > 0;
+        }
     }
 }

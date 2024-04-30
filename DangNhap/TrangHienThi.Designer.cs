@@ -31,6 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrangHienThi));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LB_SoCV_CoCapNhat = new System.Windows.Forms.Label();
+            this.LB_CapNhat = new System.Windows.Forms.Label();
+            this.gunaCirclePictureBox4 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.LB_SoCV_TreHan = new System.Windows.Forms.Label();
+            this.LB_SoCV_DangTienHanh = new System.Windows.Forms.Label();
+            this.LB_SoCongViecCBD = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -52,7 +58,6 @@
             this.BTN_thongke = new Guna.UI.WinForms.GunaButton();
             this.P_logotasmana = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
-            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.LB_tendangnhap = new System.Windows.Forms.Label();
             this.BTN_thongtin = new Guna.UI.WinForms.GunaButton();
             this.BTN_square = new Guna.UI.WinForms.GunaGradientButton();
@@ -66,22 +71,15 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
-            this.LB_SoCongViecCBD = new System.Windows.Forms.Label();
-            this.LB_SoCV_DangTienHanh = new System.Windows.Forms.Label();
-            this.LB_SoCV_TreHan = new System.Windows.Forms.Label();
-            this.gunaCirclePictureBox4 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.LB_CapNhat = new System.Windows.Forms.Label();
-            this.LB_SoCV_CoCapNhat = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P_logotasmana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.PN_main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -119,6 +117,76 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(310, 685);
             this.panel1.TabIndex = 25;
+            // 
+            // LB_SoCV_CoCapNhat
+            // 
+            this.LB_SoCV_CoCapNhat.AutoSize = true;
+            this.LB_SoCV_CoCapNhat.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_SoCV_CoCapNhat.ForeColor = System.Drawing.Color.White;
+            this.LB_SoCV_CoCapNhat.Location = new System.Drawing.Point(207, 569);
+            this.LB_SoCV_CoCapNhat.Name = "LB_SoCV_CoCapNhat";
+            this.LB_SoCV_CoCapNhat.Size = new System.Drawing.Size(18, 19);
+            this.LB_SoCV_CoCapNhat.TabIndex = 46;
+            this.LB_SoCV_CoCapNhat.Text = "0";
+            this.LB_SoCV_CoCapNhat.Visible = false;
+            // 
+            // LB_CapNhat
+            // 
+            this.LB_CapNhat.AutoSize = true;
+            this.LB_CapNhat.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_CapNhat.ForeColor = System.Drawing.Color.White;
+            this.LB_CapNhat.Location = new System.Drawing.Point(73, 569);
+            this.LB_CapNhat.Name = "LB_CapNhat";
+            this.LB_CapNhat.Size = new System.Drawing.Size(58, 19);
+            this.LB_CapNhat.TabIndex = 45;
+            this.LB_CapNhat.Text = "Trễ hạn";
+            // 
+            // gunaCirclePictureBox4
+            // 
+            this.gunaCirclePictureBox4.BaseColor = System.Drawing.Color.Orange;
+            this.gunaCirclePictureBox4.Location = new System.Drawing.Point(40, 573);
+            this.gunaCirclePictureBox4.Name = "gunaCirclePictureBox4";
+            this.gunaCirclePictureBox4.Size = new System.Drawing.Size(15, 15);
+            this.gunaCirclePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaCirclePictureBox4.TabIndex = 44;
+            this.gunaCirclePictureBox4.TabStop = false;
+            this.gunaCirclePictureBox4.UseTransfarantBackground = false;
+            // 
+            // LB_SoCV_TreHan
+            // 
+            this.LB_SoCV_TreHan.AutoSize = true;
+            this.LB_SoCV_TreHan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_SoCV_TreHan.ForeColor = System.Drawing.Color.White;
+            this.LB_SoCV_TreHan.Location = new System.Drawing.Point(207, 522);
+            this.LB_SoCV_TreHan.Name = "LB_SoCV_TreHan";
+            this.LB_SoCV_TreHan.Size = new System.Drawing.Size(18, 19);
+            this.LB_SoCV_TreHan.TabIndex = 43;
+            this.LB_SoCV_TreHan.Text = "0";
+            this.LB_SoCV_TreHan.Visible = false;
+            // 
+            // LB_SoCV_DangTienHanh
+            // 
+            this.LB_SoCV_DangTienHanh.AutoSize = true;
+            this.LB_SoCV_DangTienHanh.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_SoCV_DangTienHanh.ForeColor = System.Drawing.Color.White;
+            this.LB_SoCV_DangTienHanh.Location = new System.Drawing.Point(207, 468);
+            this.LB_SoCV_DangTienHanh.Name = "LB_SoCV_DangTienHanh";
+            this.LB_SoCV_DangTienHanh.Size = new System.Drawing.Size(18, 19);
+            this.LB_SoCV_DangTienHanh.TabIndex = 42;
+            this.LB_SoCV_DangTienHanh.Text = "0";
+            this.LB_SoCV_DangTienHanh.Visible = false;
+            // 
+            // LB_SoCongViecCBD
+            // 
+            this.LB_SoCongViecCBD.AutoSize = true;
+            this.LB_SoCongViecCBD.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_SoCongViecCBD.ForeColor = System.Drawing.Color.White;
+            this.LB_SoCongViecCBD.Location = new System.Drawing.Point(207, 408);
+            this.LB_SoCongViecCBD.Name = "LB_SoCongViecCBD";
+            this.LB_SoCongViecCBD.Size = new System.Drawing.Size(18, 19);
+            this.LB_SoCongViecCBD.TabIndex = 41;
+            this.LB_SoCongViecCBD.Text = "0";
+            this.LB_SoCongViecCBD.Visible = false;
             // 
             // label4
             // 
@@ -455,23 +523,12 @@
             this.gunaPictureBox2.BackColor = System.Drawing.Color.White;
             this.gunaPictureBox2.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox2.Image")));
-            this.gunaPictureBox2.Location = new System.Drawing.Point(418, 30);
+            this.gunaPictureBox2.Location = new System.Drawing.Point(354, 27);
             this.gunaPictureBox2.Name = "gunaPictureBox2";
             this.gunaPictureBox2.Size = new System.Drawing.Size(35, 25);
             this.gunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox2.TabIndex = 30;
             this.gunaPictureBox2.TabStop = false;
-            // 
-            // gunaPictureBox1
-            // 
-            this.gunaPictureBox1.BackColor = System.Drawing.Color.White;
-            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox1.Location = new System.Drawing.Point(316, 7);
-            this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaPictureBox1.TabIndex = 29;
-            this.gunaPictureBox1.TabStop = false;
             // 
             // LB_tendangnhap
             // 
@@ -479,7 +536,7 @@
             this.LB_tendangnhap.BackColor = System.Drawing.Color.Transparent;
             this.LB_tendangnhap.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_tendangnhap.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.LB_tendangnhap.Location = new System.Drawing.Point(373, 8);
+            this.LB_tendangnhap.Location = new System.Drawing.Point(316, 1);
             this.LB_tendangnhap.Name = "LB_tendangnhap";
             this.LB_tendangnhap.Size = new System.Drawing.Size(134, 19);
             this.LB_tendangnhap.TabIndex = 27;
@@ -499,7 +556,7 @@
             this.BTN_thongtin.Image = ((System.Drawing.Image)(resources.GetObject("BTN_thongtin.Image")));
             this.BTN_thongtin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_thongtin.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_thongtin.Location = new System.Drawing.Point(376, 30);
+            this.BTN_thongtin.Location = new System.Drawing.Point(316, 27);
             this.BTN_thongtin.Name = "BTN_thongtin";
             this.BTN_thongtin.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.BTN_thongtin.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -674,76 +731,6 @@
             this.gunaGradientButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaGradientButton1.Click += new System.EventHandler(this.gunaGradientButton1_Click);
             // 
-            // LB_SoCongViecCBD
-            // 
-            this.LB_SoCongViecCBD.AutoSize = true;
-            this.LB_SoCongViecCBD.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_SoCongViecCBD.ForeColor = System.Drawing.Color.White;
-            this.LB_SoCongViecCBD.Location = new System.Drawing.Point(207, 408);
-            this.LB_SoCongViecCBD.Name = "LB_SoCongViecCBD";
-            this.LB_SoCongViecCBD.Size = new System.Drawing.Size(18, 19);
-            this.LB_SoCongViecCBD.TabIndex = 41;
-            this.LB_SoCongViecCBD.Text = "0";
-            this.LB_SoCongViecCBD.Visible = false;
-            // 
-            // LB_SoCV_DangTienHanh
-            // 
-            this.LB_SoCV_DangTienHanh.AutoSize = true;
-            this.LB_SoCV_DangTienHanh.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_SoCV_DangTienHanh.ForeColor = System.Drawing.Color.White;
-            this.LB_SoCV_DangTienHanh.Location = new System.Drawing.Point(207, 468);
-            this.LB_SoCV_DangTienHanh.Name = "LB_SoCV_DangTienHanh";
-            this.LB_SoCV_DangTienHanh.Size = new System.Drawing.Size(18, 19);
-            this.LB_SoCV_DangTienHanh.TabIndex = 42;
-            this.LB_SoCV_DangTienHanh.Text = "0";
-            this.LB_SoCV_DangTienHanh.Visible = false;
-            // 
-            // LB_SoCV_TreHan
-            // 
-            this.LB_SoCV_TreHan.AutoSize = true;
-            this.LB_SoCV_TreHan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_SoCV_TreHan.ForeColor = System.Drawing.Color.White;
-            this.LB_SoCV_TreHan.Location = new System.Drawing.Point(207, 522);
-            this.LB_SoCV_TreHan.Name = "LB_SoCV_TreHan";
-            this.LB_SoCV_TreHan.Size = new System.Drawing.Size(18, 19);
-            this.LB_SoCV_TreHan.TabIndex = 43;
-            this.LB_SoCV_TreHan.Text = "0";
-            this.LB_SoCV_TreHan.Visible = false;
-            // 
-            // gunaCirclePictureBox4
-            // 
-            this.gunaCirclePictureBox4.BaseColor = System.Drawing.Color.Orange;
-            this.gunaCirclePictureBox4.Location = new System.Drawing.Point(40, 573);
-            this.gunaCirclePictureBox4.Name = "gunaCirclePictureBox4";
-            this.gunaCirclePictureBox4.Size = new System.Drawing.Size(15, 15);
-            this.gunaCirclePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox4.TabIndex = 44;
-            this.gunaCirclePictureBox4.TabStop = false;
-            this.gunaCirclePictureBox4.UseTransfarantBackground = false;
-            // 
-            // LB_CapNhat
-            // 
-            this.LB_CapNhat.AutoSize = true;
-            this.LB_CapNhat.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_CapNhat.ForeColor = System.Drawing.Color.White;
-            this.LB_CapNhat.Location = new System.Drawing.Point(73, 569);
-            this.LB_CapNhat.Name = "LB_CapNhat";
-            this.LB_CapNhat.Size = new System.Drawing.Size(58, 19);
-            this.LB_CapNhat.TabIndex = 45;
-            this.LB_CapNhat.Text = "Trễ hạn";
-            // 
-            // LB_SoCV_CoCapNhat
-            // 
-            this.LB_SoCV_CoCapNhat.AutoSize = true;
-            this.LB_SoCV_CoCapNhat.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_SoCV_CoCapNhat.ForeColor = System.Drawing.Color.White;
-            this.LB_SoCV_CoCapNhat.Location = new System.Drawing.Point(207, 569);
-            this.LB_SoCV_CoCapNhat.Name = "LB_SoCV_CoCapNhat";
-            this.LB_SoCV_CoCapNhat.Size = new System.Drawing.Size(18, 19);
-            this.LB_SoCV_CoCapNhat.TabIndex = 46;
-            this.LB_SoCV_CoCapNhat.Text = "0";
-            this.LB_SoCV_CoCapNhat.Visible = false;
-            // 
             // TrangHienThi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -757,7 +744,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PN_main);
             this.Controls.Add(this.gunaPictureBox2);
-            this.Controls.Add(this.gunaPictureBox1);
             this.Controls.Add(this.LB_tendangnhap);
             this.Controls.Add(this.BTN_thongtin);
             this.Controls.Add(this.BTN_square);
@@ -771,16 +757,15 @@
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TrangHienThi_MouseUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P_logotasmana)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.PN_main.ResumeLayout(false);
             this.PN_main.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -796,7 +781,6 @@
         private Guna.UI.WinForms.GunaButton BTN_logout;
         private Guna.UI.WinForms.GunaButton BTN_thongke;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox2;
-        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
         private System.Windows.Forms.Label LB_tendangnhap;
         private Guna.UI.WinForms.GunaButton BTN_thongtin;
         private Guna.UI.WinForms.GunaGradientButton BTN_square;

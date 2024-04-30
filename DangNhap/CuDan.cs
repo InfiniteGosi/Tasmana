@@ -1,4 +1,4 @@
-﻿using BLL;
+﻿using DTO;
 using Syncfusion.Licensing;
 using System;
 using System.Collections.Generic;
@@ -9,10 +9,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DTO;
+using BLL;
 using Syncfusion.GridHelperClasses;
 using Syncfusion.Windows.Forms.Grid.Grouping;
-using Microsoft.Office.Interop.Word;
+using Syncfusion.Grouping;
+using Syncfusion.Windows.Forms.Grid;
+using System.IO;
 
 namespace DangNhap
 {
@@ -21,8 +23,8 @@ namespace DangNhap
         private int index = 0;
         public CuDan()
         {
-            InitializeComponent();
             SyncfusionLicenseProvider.RegisterLicense("MzIxOTI2MkAzMjM1MmUzMDJlMzBORkJZeFRVdUQxeERjT2xkWC9vdFgxS29wUmREOU9CZVdENkRUN0lrSStVPQ==;Mgo+DSMBaFt6QHFqVkNrXVNbdV5dVGpAd0N3RGlcdlR1fUUmHVdTRHRbQlliS3xTck1hW35Wcnc=");
+            InitializeComponent();
         }
         private void DisplayGGC_chuho()
         {
@@ -49,6 +51,11 @@ namespace DangNhap
                 e.TinhTrangCongNo,
                 e.DuLieuDangKyThuNuoi,
             }).ToList();
+
+            GGC_cudan.TopLevelGroupOptions.ShowFilterBar = true;
+            GGC_cudan.ActivateCurrentCellBehavior = GridCellActivateAction.None;
+            GGC_cudan.ShowGroupDropArea = true;
+            GGC_cudan.BorderStyle = BorderStyle.FixedSingle;
 
             GridColumnDescriptorCollection columns = GGC_cudan.TableDescriptor.Columns;
             if (columns.Count > 0)
@@ -103,6 +110,12 @@ namespace DangNhap
                 e.TinhTrangCongNo,
                 e.DuLieuDangKyThuNuoi,
             }).ToList();
+
+            GGC_cudan.TopLevelGroupOptions.ShowFilterBar = true;
+            GGC_cudan.ActivateCurrentCellBehavior = GridCellActivateAction.None;
+            GGC_cudan.ShowGroupDropArea = true;
+            GGC_cudan.BorderStyle = BorderStyle.FixedSingle;
+
             GridColumnDescriptorCollection columns = GGC_cudan.TableDescriptor.Columns;
             if (columns.Count > 0)
             {
@@ -155,6 +168,12 @@ namespace DangNhap
                 e.TinhTrangCongNo,
                 e.DuLieuDangKyThuNuoi,
             }).ToList();
+
+            GGC_cudan.TopLevelGroupOptions.ShowFilterBar = true;
+            GGC_cudan.ActivateCurrentCellBehavior = GridCellActivateAction.None;
+            GGC_cudan.ShowGroupDropArea = true;
+            GGC_cudan.BorderStyle = BorderStyle.FixedSingle;
+
             GridColumnDescriptorCollection columns = GGC_cudan.TableDescriptor.Columns;
             if (columns.Count > 0)
             {
@@ -189,6 +208,10 @@ namespace DangNhap
         private void DisplayGGC_khachthuektm()
         {
             GGC_cudan.DataSource = KhachThueKhuThuongMaiBLL.Instance.GetAllKhachThue();
+            GGC_cudan.TopLevelGroupOptions.ShowFilterBar = true;
+            GGC_cudan.ActivateCurrentCellBehavior = GridCellActivateAction.None;
+            GGC_cudan.ShowGroupDropArea = true;
+            GGC_cudan.BorderStyle = BorderStyle.FixedSingle;
             GridColumnDescriptorCollection columns = GGC_cudan.TableDescriptor.Columns;
             if (columns.Count > 0)
             {
@@ -249,6 +272,46 @@ namespace DangNhap
             {
                 GGC_cudan.DataSource = null;
                 DisplayGGC_khachthuektm();
+            }
+        }
+
+        private void GGC_cudan_TableControlCellDoubleClick(object sender, GridTableControlCellClickEventArgs e)
+        {
+            GridTableCellStyleInfo style = e.TableControl.GetTableViewStyleInfo(e.Inner.RowIndex, e.Inner.ColIndex);
+            GridTableCellStyleInfoIdentity id = style.TableCellIdentity;
+            if (id.DisplayElement.Kind == DisplayElementKind.Record)
+            {
+                Record record = id.DisplayElement.GetRecord();
+                ThongTinCuDan ttcd;
+                // Extract data from the record
+                if (record.GetValue("LoaiCuDan") == null)
+                {
+                    string maKhachThue = record.GetValue("MaKhachDangThue").ToString();
+                    ThongTinKhachThueKTM tt = new ThongTinKhachThueKTM(this, KhachThueKhuThuongMaiBLL.Instance.GetKhachThueKTMByMaKhach(maKhachThue));
+                    tt.ShowDialog();
+                }
+                else
+                {
+                    string loaiCuDan = record.GetValue("LoaiCuDan").ToString();
+                    string maCuDan = record.GetValue("MaCuDan").ToString();
+                    switch (loaiCuDan)
+                    {
+                        case "Chủ hộ":
+                            ttcd = new ThongTinCuDan(this, ChuHoBLL.Instance.GetChuHoByMaCuDan(maCuDan));
+                            ttcd.ShowDialog();
+                            break;
+                        case "Người được ủy quyền của chủ hộ":
+                            ttcd = new ThongTinCuDan(this, NguoiDcUyQuyenChuHoBLL.Instance.GetNguoiUyQuyenByMaCuDan(maCuDan));
+                            ttcd.ShowDialog();
+                            break;
+                        case "Khách ngắn ngày":
+                        case "Khách vãng lai":
+                        case "Nhân viên của chủ hộ":
+                            ttcd = new ThongTinCuDan(this, KhachNganNgayBLL.Instance.GetKhachNganNgayByMaCuDan(maCuDan));
+                            ttcd.ShowDialog();
+                            break;
+                    }
+                }
             }
         }
     }

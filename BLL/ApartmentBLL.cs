@@ -92,7 +92,7 @@ namespace BLL
         {
             return ApartmentDAO.Instance.EditMonthlyBill(parameters);
         }
-        public string DeleteCanHo(string maCanHo)
+        public string DeleteApartment(string maCanHo)
         {
             if (ApartmentDAO.Instance.DeleteApartment(maCanHo))
             {

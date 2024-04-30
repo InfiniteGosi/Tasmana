@@ -21,5 +21,15 @@ namespace DAO
             string query = "select * from NguoiDcUyQuyenChuHo";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetNguoiUyQuyenByMaCuDan(string maCuDan)
+        {
+            string query = $"select * from NguoiDcUyQuyenChuHo where maCuDan = '{maCuDan}'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public bool DeleteNguoiUyQuyen(string maCuDan, string maCanHo)
+        {
+            string query = $"delete from NguoiDcUyQuyenChuHo where maCuDan = '{maCuDan}' and maCanHo = '{maCanHo}'";
+            return DataProvider.Instance.ExecuteNonQuery(query) > 0;
+        }
     }
 }

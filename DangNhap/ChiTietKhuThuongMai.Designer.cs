@@ -497,6 +497,7 @@
             // 
             this.NUD_vitritang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.NUD_vitritang.BeforeTouchSize = new System.Drawing.Size(375, 30);
+            this.NUD_vitritang.Enabled = false;
             this.NUD_vitritang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUD_vitritang.ForeColor = System.Drawing.Color.White;
             this.NUD_vitritang.Location = new System.Drawing.Point(215, 110);
@@ -518,6 +519,7 @@
             // TXB_NSA
             // 
             this.TXB_NSA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_NSA.Enabled = false;
             this.TXB_NSA.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_NSA.ForeColor = System.Drawing.Color.White;
             this.TXB_NSA.Location = new System.Drawing.Point(970, 311);
@@ -529,6 +531,7 @@
             // TXB_GSA
             // 
             this.TXB_GSA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_GSA.Enabled = false;
             this.TXB_GSA.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_GSA.ForeColor = System.Drawing.Color.White;
             this.TXB_GSA.Location = new System.Drawing.Point(970, 251);
@@ -742,6 +745,7 @@
             // TXB_macanho
             // 
             this.TXB_macanho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_macanho.Enabled = false;
             this.TXB_macanho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_macanho.ForeColor = System.Drawing.Color.White;
             this.TXB_macanho.Location = new System.Drawing.Point(215, 44);

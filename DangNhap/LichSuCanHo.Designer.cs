@@ -46,6 +46,7 @@ namespace DangNhap
             // TXB_chuhotruoc
             // 
             this.TXB_chuhotruoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_chuhotruoc.Enabled = false;
             this.TXB_chuhotruoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_chuhotruoc.ForeColor = System.Drawing.Color.White;
             this.TXB_chuhotruoc.Location = new System.Drawing.Point(225, 56);
@@ -119,6 +120,7 @@ namespace DangNhap
             // TXB_dv
             // 
             this.TXB_dv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_dv.Enabled = false;
             this.TXB_dv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_dv.ForeColor = System.Drawing.Color.White;
             this.TXB_dv.Location = new System.Drawing.Point(225, 194);
@@ -130,6 +132,7 @@ namespace DangNhap
             // TXB_doxe
             // 
             this.TXB_doxe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_doxe.Enabled = false;
             this.TXB_doxe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_doxe.ForeColor = System.Drawing.Color.White;
             this.TXB_doxe.Location = new System.Drawing.Point(225, 259);

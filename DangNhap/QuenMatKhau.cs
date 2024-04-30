@@ -51,8 +51,8 @@ namespace DangNhap
             timer.Stop();
             string to, from, pass;
             to = employee.Email;
-            from = "duyenman19@gmail.com";
-            pass = "xglr vuyt mzre mmlp";
+            from = "tasmanahr@gmail.com";
+            pass = "aakj tdjj vpsa kkap";
             MailMessage message = new MailMessage();
             message.To.Add(to);
             message.From = new MailAddress(from);
