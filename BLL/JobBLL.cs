@@ -105,7 +105,7 @@ namespace BLL
                 DateTime ngayGiao = (DateTime)dt.Rows[i]["ngayGiao"];
                 DateTime thoihan = dt.Rows[i]["thoiHan"] == DBNull.Value ? DateTime.MinValue : (DateTime)dt.Rows[i]["thoiHan"];
                 DateTime ngayHoanThanh = dt.Rows[i]["ngayHoanThanh"] == DBNull.Value ? DateTime.MinValue : (DateTime)dt.Rows[i]["ngayHoanThanh"];
-                DateTime ngayCapNhat = (DateTime)dt.Rows[i]["ngayCapNhat"];
+                DateTime ngayCapNhat = dt.Rows[i]["ngayCapNhat"] == DBNull.Value ? DateTime.MinValue : (DateTime)dt.Rows[i]["ngayCapNhat"];
                 string trangThai = dt.Rows[i]["trangThai"].ToString();
                 string ghiChu = dt.Rows[i]["ghiChu"].ToString();
                 int quyenTruyCap = (int)dt.Rows[i]["quyenTruyCap"];
@@ -126,7 +126,7 @@ namespace BLL
                 DateTime ngayGiao = (DateTime)dt.Rows[i]["ngayGiao"];
                 DateTime thoihan = dt.Rows[i]["thoiHan"] == DBNull.Value ? DateTime.MinValue : (DateTime)dt.Rows[i]["thoiHan"];
                 DateTime ngayHoanThanh = dt.Rows[i]["ngayHoanThanh"] == DBNull.Value ? DateTime.MinValue : (DateTime)dt.Rows[i]["ngayHoanThanh"];
-                DateTime ngayCapNhat = (DateTime)dt.Rows[i]["ngayCapNhat"];
+                DateTime ngayCapNhat = dt.Rows[i]["ngayCapNhat"] == DBNull.Value ? DateTime.MinValue : (DateTime)dt.Rows[i]["ngayCapNhat"];
                 string trangThai = dt.Rows[i]["trangThai"].ToString();
                 string ghiChu = dt.Rows[i]["ghiChu"].ToString();
                 int quyenTruyCap = (int)dt.Rows[i]["quyenTruyCap"];
@@ -147,7 +147,7 @@ namespace BLL
                 DateTime ngayGiao = (DateTime)dt.Rows[i]["ngayGiao"];
                 DateTime thoihan = dt.Rows[i]["thoiHan"] == DBNull.Value ? DateTime.MinValue : (DateTime)dt.Rows[i]["thoiHan"];
                 DateTime ngayHoanThanh = dt.Rows[i]["ngayHoanThanh"] == DBNull.Value ? DateTime.MinValue : (DateTime)dt.Rows[i]["ngayHoanThanh"];
-                DateTime ngayCapNhat = (DateTime)dt.Rows[i]["ngayCapNhat"];
+                DateTime ngayCapNhat = dt.Rows[i]["ngayCapNhat"] == DBNull.Value ? DateTime.MinValue : (DateTime)dt.Rows[i]["ngayCapNhat"];
                 string trangThai = dt.Rows[i]["trangThai"].ToString();
                 string ghiChu = dt.Rows[i]["ghiChu"].ToString();
                 int quyenTruyCap = (int)dt.Rows[i]["quyenTruyCap"];
@@ -167,7 +167,7 @@ namespace BLL
             DateTime ngayGiao = (DateTime)dt.Rows[i]["ngayGiao"];
             DateTime thoihan = dt.Rows[i]["thoiHan"] == DBNull.Value ? DateTime.MinValue : (DateTime)dt.Rows[i]["thoiHan"];
             DateTime ngayHoanThanh = dt.Rows[i]["ngayHoanThanh"] == DBNull.Value ? DateTime.MinValue : (DateTime)dt.Rows[i]["ngayHoanThanh"];
-            DateTime ngayCapNhat = (DateTime)dt.Rows[i]["ngayCapNhat"];
+            DateTime ngayCapNhat = dt.Rows[i]["ngayCapNhat"] == DBNull.Value ? DateTime.MinValue : (DateTime)dt.Rows[i]["ngayCapNhat"];
             string trangThai = dt.Rows[i]["trangThai"].ToString();
             string ghiChu = dt.Rows[i]["ghiChu"].ToString();
             int quyenTruyCap = (int)dt.Rows[i]["quyenTruyCap"];
@@ -434,6 +434,15 @@ namespace BLL
         public DataTable GetRatingOfDivisionByNumOfFinishedJob(DateTime tuNgay, DateTime denNgay)
         {
             return JobDAO.Instance.GetRatingOfDivisionByNumOfFinishedJob(tuNgay, denNgay);
+        }
+        // Đếm tổng tình trạng công việc hiện tại của công ty
+        public DataTable GetAllJobsState()
+        {
+            return JobDAO.Instance.GetAllJobsState();
+        }
+        public DataTable GetJobsStateOfEmployee(string maNhanVien)
+        {
+            return JobDAO.Instance.GetJobsStateOfEmployee(maNhanVien);
         }
     }
 }

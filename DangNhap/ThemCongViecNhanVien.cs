@@ -234,7 +234,7 @@ namespace DangNhap
                 {"@ngayGiao", DateTime.Now.ToString("yyyy-MM-dd'T'HH:mm:ss")},
                 {"@thoihan", thoiHan},
                 {"@ngayHoanThanh", null},
-                {"@ngayCapNhat", DateTime.Now.ToString("yyyy-MM-dd'T'HH:mm:ss")},
+                {"@ngayCapNhat", null},
                 {"@trangThai", "Chưa bắt đầu"},
                 {"@ghiChu", TXB_ghiChu.Text},
                 {"@quyenTruyCap", GetQuyenTruyCap()},
