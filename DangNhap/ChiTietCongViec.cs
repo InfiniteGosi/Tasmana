@@ -130,7 +130,7 @@ namespace DangNhap
             }
         }
 
-        private void LLB_chỉtietfile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LLB_chitietfile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             SaveFileDialog save = new SaveFileDialog
             {

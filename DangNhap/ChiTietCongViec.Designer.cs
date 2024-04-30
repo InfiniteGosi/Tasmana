@@ -468,7 +468,7 @@ namespace DangNhap
             this.LLB_chitietfile.TabStop = true;
             this.LLB_chitietfile.Text = "linkLabel1";
             this.LLB_chitietfile.Visible = false;
-            this.LLB_chitietfile.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LLB_chỉtietfile_LinkClicked);
+            this.LLB_chitietfile.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LLB_chitietfile_LinkClicked);
             // 
             // panel6
             // 

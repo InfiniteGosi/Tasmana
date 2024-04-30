@@ -374,6 +374,12 @@
     <Compile Include="ChiTietKhuThuongMai.Designer.cs">
       <DependentUpon>ChiTietKhuThuongMai.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChiTietThongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTietThongBao.Designer.cs">
+      <DependentUpon>ChiTietThongBao.cs</DependentUpon>
+    </Compile>
     <Compile Include="CongViecChung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -552,6 +558,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChiTietKhuThuongMai.resx">
       <DependentUpon>ChiTietKhuThuongMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietThongBao.resx">
+      <DependentUpon>ChiTietThongBao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CongViecChung.resx">
       <DependentUpon>CongViecChung.cs</DependentUpon>
