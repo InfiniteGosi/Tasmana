@@ -35,7 +35,6 @@ namespace DangNhap
             this.LB_macanho = new System.Windows.Forms.Label();
             this.LB_tinhtrang = new System.Windows.Forms.Label();
             this.TXB_chuho = new System.Windows.Forms.TextBox();
-            this.LB_chuho = new System.Windows.Forms.Label();
             this.TXB_khachdangthue = new System.Windows.Forms.TextBox();
             this.LB_khachdangthue = new System.Windows.Forms.Label();
             this.LB_thanhtoan = new System.Windows.Forms.Label();
@@ -80,7 +79,6 @@ namespace DangNhap
             this.NUD_toilet = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
             this.label1 = new System.Windows.Forms.Label();
             this.NUD_phongngu = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.LB_hinhanhcanho = new System.Windows.Forms.Label();
             this.PB_hinhcanho = new System.Windows.Forms.PictureBox();
@@ -150,7 +148,7 @@ namespace DangNhap
             this.LB_tinhtrang.AutoSize = true;
             this.LB_tinhtrang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_tinhtrang.ForeColor = System.Drawing.Color.White;
-            this.LB_tinhtrang.Location = new System.Drawing.Point(33, 281);
+            this.LB_tinhtrang.Location = new System.Drawing.Point(33, 327);
             this.LB_tinhtrang.Name = "LB_tinhtrang";
             this.LB_tinhtrang.Size = new System.Drawing.Size(90, 22);
             this.LB_tinhtrang.TabIndex = 17;
@@ -161,28 +159,17 @@ namespace DangNhap
             this.TXB_chuho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_chuho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_chuho.ForeColor = System.Drawing.Color.White;
-            this.TXB_chuho.Location = new System.Drawing.Point(194, 222);
+            this.TXB_chuho.Location = new System.Drawing.Point(194, 252);
             this.TXB_chuho.Name = "TXB_chuho";
             this.TXB_chuho.Size = new System.Drawing.Size(375, 30);
             this.TXB_chuho.TabIndex = 20;
-            // 
-            // LB_chuho
-            // 
-            this.LB_chuho.AutoSize = true;
-            this.LB_chuho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_chuho.ForeColor = System.Drawing.Color.White;
-            this.LB_chuho.Location = new System.Drawing.Point(33, 226);
-            this.LB_chuho.Name = "LB_chuho";
-            this.LB_chuho.Size = new System.Drawing.Size(128, 22);
-            this.LB_chuho.TabIndex = 19;
-            this.LB_chuho.Text = "Chủ hộ hiện tại";
             // 
             // TXB_khachdangthue
             // 
             this.TXB_khachdangthue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_khachdangthue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_khachdangthue.ForeColor = System.Drawing.Color.White;
-            this.TXB_khachdangthue.Location = new System.Drawing.Point(194, 348);
+            this.TXB_khachdangthue.Location = new System.Drawing.Point(194, 390);
             this.TXB_khachdangthue.Name = "TXB_khachdangthue";
             this.TXB_khachdangthue.Size = new System.Drawing.Size(375, 30);
             this.TXB_khachdangthue.TabIndex = 22;
@@ -192,7 +179,7 @@ namespace DangNhap
             this.LB_khachdangthue.AutoSize = true;
             this.LB_khachdangthue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_khachdangthue.ForeColor = System.Drawing.Color.White;
-            this.LB_khachdangthue.Location = new System.Drawing.Point(33, 352);
+            this.LB_khachdangthue.Location = new System.Drawing.Point(33, 397);
             this.LB_khachdangthue.Name = "LB_khachdangthue";
             this.LB_khachdangthue.Size = new System.Drawing.Size(139, 22);
             this.LB_khachdangthue.TabIndex = 21;
@@ -203,7 +190,7 @@ namespace DangNhap
             this.LB_thanhtoan.AutoSize = true;
             this.LB_thanhtoan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_thanhtoan.ForeColor = System.Drawing.Color.White;
-            this.LB_thanhtoan.Location = new System.Drawing.Point(705, 440);
+            this.LB_thanhtoan.Location = new System.Drawing.Point(705, 467);
             this.LB_thanhtoan.Name = "LB_thanhtoan";
             this.LB_thanhtoan.Size = new System.Drawing.Size(174, 22);
             this.LB_thanhtoan.TabIndex = 27;
@@ -251,7 +238,6 @@ namespace DangNhap
             this.PN_hienthi.Controls.Add(this.NUD_toilet);
             this.PN_hienthi.Controls.Add(this.label1);
             this.PN_hienthi.Controls.Add(this.NUD_phongngu);
-            this.PN_hienthi.Controls.Add(this.label8);
             this.PN_hienthi.Controls.Add(this.TXB_chuho);
             this.PN_hienthi.Controls.Add(this.label7);
             this.PN_hienthi.Controls.Add(this.LB_hinhanhcanho);
@@ -260,7 +246,6 @@ namespace DangNhap
             this.PN_hienthi.Controls.Add(this.TXB_macanho);
             this.PN_hienthi.Controls.Add(this.label6);
             this.PN_hienthi.Controls.Add(this.LB_tinhtrang);
-            this.PN_hienthi.Controls.Add(this.LB_chuho);
             this.PN_hienthi.Controls.Add(this.LB_khachdangthue);
             this.PN_hienthi.Controls.Add(this.label5);
             this.PN_hienthi.Controls.Add(this.TXB_khachdangthue);
@@ -277,7 +262,7 @@ namespace DangNhap
             this.NUD_mucphiql.BeforeTouchSize = new System.Drawing.Size(375, 30);
             this.NUD_mucphiql.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUD_mucphiql.ForeColor = System.Drawing.Color.White;
-            this.NUD_mucphiql.Location = new System.Drawing.Point(970, 365);
+            this.NUD_mucphiql.Location = new System.Drawing.Point(970, 389);
             this.NUD_mucphiql.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -294,7 +279,7 @@ namespace DangNhap
             this.NUD_vitritang.Enabled = false;
             this.NUD_vitritang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUD_vitritang.ForeColor = System.Drawing.Color.White;
-            this.NUD_vitritang.Location = new System.Drawing.Point(194, 167);
+            this.NUD_vitritang.Location = new System.Drawing.Point(194, 183);
             this.NUD_vitritang.Name = "NUD_vitritang";
             this.NUD_vitritang.Size = new System.Drawing.Size(375, 30);
             this.NUD_vitritang.TabIndex = 223;
@@ -304,7 +289,7 @@ namespace DangNhap
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(33, 167);
+            this.label22.Location = new System.Drawing.Point(33, 187);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(89, 22);
             this.label22.TabIndex = 220;
@@ -316,7 +301,7 @@ namespace DangNhap
             this.TXB_loaicanho.Enabled = false;
             this.TXB_loaicanho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_loaicanho.ForeColor = System.Drawing.Color.White;
-            this.TXB_loaicanho.Location = new System.Drawing.Point(194, 110);
+            this.TXB_loaicanho.Location = new System.Drawing.Point(194, 114);
             this.TXB_loaicanho.Name = "TXB_loaicanho";
             this.TXB_loaicanho.Size = new System.Drawing.Size(375, 30);
             this.TXB_loaicanho.TabIndex = 219;
@@ -327,7 +312,7 @@ namespace DangNhap
             this.TXB_NSA.Enabled = false;
             this.TXB_NSA.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_NSA.ForeColor = System.Drawing.Color.White;
-            this.TXB_NSA.Location = new System.Drawing.Point(970, 311);
+            this.TXB_NSA.Location = new System.Drawing.Point(970, 322);
             this.TXB_NSA.Multiline = true;
             this.TXB_NSA.Name = "TXB_NSA";
             this.TXB_NSA.Size = new System.Drawing.Size(375, 27);
@@ -339,7 +324,7 @@ namespace DangNhap
             this.TXB_GSA.Enabled = false;
             this.TXB_GSA.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXB_GSA.ForeColor = System.Drawing.Color.White;
-            this.TXB_GSA.Location = new System.Drawing.Point(970, 251);
+            this.TXB_GSA.Location = new System.Drawing.Point(970, 255);
             this.TXB_GSA.Multiline = true;
             this.TXB_GSA.Name = "TXB_GSA";
             this.TXB_GSA.Size = new System.Drawing.Size(375, 27);
@@ -350,7 +335,7 @@ namespace DangNhap
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(707, 316);
+            this.label21.Location = new System.Drawing.Point(707, 327);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(126, 22);
             this.label21.TabIndex = 216;
@@ -361,7 +346,7 @@ namespace DangNhap
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(705, 256);
+            this.label20.Location = new System.Drawing.Point(705, 257);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(126, 22);
             this.label20.TabIndex = 215;
@@ -372,7 +357,7 @@ namespace DangNhap
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(1070, 440);
+            this.label19.Location = new System.Drawing.Point(1070, 463);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(27, 22);
             this.label19.TabIndex = 214;
@@ -384,7 +369,7 @@ namespace DangNhap
             this.NUD_thanhtoan.BeforeTouchSize = new System.Drawing.Size(96, 30);
             this.NUD_thanhtoan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUD_thanhtoan.ForeColor = System.Drawing.Color.White;
-            this.NUD_thanhtoan.Location = new System.Drawing.Point(970, 436);
+            this.NUD_thanhtoan.Location = new System.Drawing.Point(970, 459);
             this.NUD_thanhtoan.Name = "NUD_thanhtoan";
             this.NUD_thanhtoan.Size = new System.Drawing.Size(96, 30);
             this.NUD_thanhtoan.TabIndex = 213;
@@ -398,6 +383,7 @@ namespace DangNhap
             this.BTN_uploadanh.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.BTN_uploadanh.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.BTN_uploadanh.BorderColor = System.Drawing.Color.Black;
+            this.BTN_uploadanh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_uploadanh.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_uploadanh.FocusedColor = System.Drawing.Color.Empty;
             this.BTN_uploadanh.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -615,7 +601,7 @@ namespace DangNhap
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(33, 118);
+            this.label11.Location = new System.Drawing.Point(33, 117);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(102, 22);
             this.label11.TabIndex = 182;
@@ -638,7 +624,7 @@ namespace DangNhap
             this.CBB_tinhtrang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBB_tinhtrang.ForeColor = System.Drawing.Color.White;
             this.CBB_tinhtrang.FormattingEnabled = true;
-            this.CBB_tinhtrang.Location = new System.Drawing.Point(194, 277);
+            this.CBB_tinhtrang.Location = new System.Drawing.Point(194, 321);
             this.CBB_tinhtrang.Name = "CBB_tinhtrang";
             this.CBB_tinhtrang.Size = new System.Drawing.Size(375, 30);
             this.CBB_tinhtrang.TabIndex = 180;
@@ -648,7 +634,7 @@ namespace DangNhap
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(705, 373);
+            this.label3.Location = new System.Drawing.Point(705, 397);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(227, 22);
             this.label3.TabIndex = 176;
@@ -659,7 +645,7 @@ namespace DangNhap
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(705, 118);
+            this.label10.Location = new System.Drawing.Point(705, 117);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(193, 22);
             this.label10.TabIndex = 174;
@@ -672,7 +658,7 @@ namespace DangNhap
             this.NUD_thangmay.Enabled = false;
             this.NUD_thangmay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUD_thangmay.ForeColor = System.Drawing.Color.White;
-            this.NUD_thangmay.Location = new System.Drawing.Point(970, 116);
+            this.NUD_thangmay.Location = new System.Drawing.Point(970, 115);
             this.NUD_thangmay.Name = "NUD_thangmay";
             this.NUD_thangmay.Size = new System.Drawing.Size(375, 30);
             this.NUD_thangmay.TabIndex = 175;
@@ -729,21 +715,10 @@ namespace DangNhap
             this.NUD_phongngu.Enabled = false;
             this.NUD_phongngu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUD_phongngu.ForeColor = System.Drawing.Color.White;
-            this.NUD_phongngu.Location = new System.Drawing.Point(970, 187);
+            this.NUD_phongngu.Location = new System.Drawing.Point(970, 185);
             this.NUD_phongngu.Name = "NUD_phongngu";
             this.NUD_phongngu.Size = new System.Drawing.Size(375, 30);
             this.NUD_phongngu.TabIndex = 171;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(36, 445);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(136, 22);
-            this.label8.TabIndex = 37;
-            this.label8.Text = "Hình ảnh căn hộ";
             // 
             // label7
             // 
@@ -761,7 +736,7 @@ namespace DangNhap
             this.LB_hinhanhcanho.AutoSize = true;
             this.LB_hinhanhcanho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_hinhanhcanho.ForeColor = System.Drawing.Color.White;
-            this.LB_hinhanhcanho.Location = new System.Drawing.Point(36, 445);
+            this.LB_hinhanhcanho.Location = new System.Drawing.Point(33, 467);
             this.LB_hinhanhcanho.Name = "LB_hinhanhcanho";
             this.LB_hinhanhcanho.Size = new System.Drawing.Size(136, 22);
             this.LB_hinhanhcanho.TabIndex = 37;
@@ -770,7 +745,7 @@ namespace DangNhap
             // PB_hinhcanho
             // 
             this.PB_hinhcanho.Image = ((System.Drawing.Image)(resources.GetObject("PB_hinhcanho.Image")));
-            this.PB_hinhcanho.Location = new System.Drawing.Point(194, 436);
+            this.PB_hinhcanho.Location = new System.Drawing.Point(194, 470);
             this.PB_hinhcanho.Name = "PB_hinhcanho";
             this.PB_hinhcanho.Size = new System.Drawing.Size(273, 226);
             this.PB_hinhcanho.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -782,7 +757,7 @@ namespace DangNhap
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(33, 226);
+            this.label6.Location = new System.Drawing.Point(33, 257);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(128, 22);
             this.label6.TabIndex = 19;
@@ -793,7 +768,7 @@ namespace DangNhap
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(705, 189);
+            this.label5.Location = new System.Drawing.Point(705, 187);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(166, 22);
             this.label5.TabIndex = 29;
@@ -817,6 +792,7 @@ namespace DangNhap
             this.BTN_xoa.BaseColor2 = System.Drawing.Color.Transparent;
             this.BTN_xoa.BorderColor = System.Drawing.Color.Red;
             this.BTN_xoa.BorderSize = 1;
+            this.BTN_xoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_xoa.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_xoa.FocusedColor = System.Drawing.Color.Empty;
             this.BTN_xoa.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -847,6 +823,7 @@ namespace DangNhap
             this.BTN_luu.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.BTN_luu.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.BTN_luu.BorderColor = System.Drawing.Color.Black;
+            this.BTN_luu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_luu.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_luu.FocusedColor = System.Drawing.Color.Empty;
             this.BTN_luu.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -873,6 +850,7 @@ namespace DangNhap
             // 
             this.BTN_chung.AutoSize = true;
             this.BTN_chung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(53)))), ((int)(((byte)(55)))));
+            this.BTN_chung.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_chung.FlatAppearance.BorderSize = 0;
             this.BTN_chung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_chung.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -889,6 +867,7 @@ namespace DangNhap
             // 
             this.BTN_lichsu.AutoSize = true;
             this.BTN_lichsu.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_lichsu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_lichsu.FlatAppearance.BorderSize = 0;
             this.BTN_lichsu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_lichsu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1019,7 +998,6 @@ namespace DangNhap
         private System.Windows.Forms.Label LB_macanho;
         private System.Windows.Forms.Label LB_tinhtrang;
         private System.Windows.Forms.TextBox TXB_chuho;
-        private System.Windows.Forms.Label LB_chuho;
         private System.Windows.Forms.TextBox TXB_khachdangthue;
         private System.Windows.Forms.Label LB_khachdangthue;
         private System.Windows.Forms.Label LB_thanhtoan;
@@ -1049,7 +1027,6 @@ namespace DangNhap
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox PB_hinhcanho;
         private System.Windows.Forms.Label label6;
