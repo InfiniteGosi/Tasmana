@@ -1883,7 +1883,6 @@ BEGIN
 END
 --------------------------------------------------------------------------------------------------------
 GO
-
 ---Lấy thông báo quan trọng
 CREATE PROCEDURE [dbo].[GetNoticesPriority]
     @maBoPhan VARCHAR(10) = NULL,

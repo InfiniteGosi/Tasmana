@@ -30,7 +30,6 @@ namespace DangNhap
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangNhap));
-            this.LB_error = new System.Windows.Forms.Label();
             this.BT_DangNhap = new Guna.UI.WinForms.GunaButton();
             this.LB_quenpw = new System.Windows.Forms.Label();
             this.TB_MatKhau = new System.Windows.Forms.TextBox();
@@ -51,20 +50,9 @@ namespace DangNhap
             this.BTN_facelogin = new Guna.UI.WinForms.GunaButton();
             this.BTN_show = new System.Windows.Forms.Button();
             this.BTN_hide = new System.Windows.Forms.Button();
+            this.LB_Wrong = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.CBBB_manguoidung)).BeginInit();
             this.SuspendLayout();
-            // 
-            // LB_error
-            // 
-            this.LB_error.AutoSize = true;
-            this.LB_error.BackColor = System.Drawing.Color.Transparent;
-            this.LB_error.Enabled = false;
-            this.LB_error.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_error.ForeColor = System.Drawing.Color.Red;
-            this.LB_error.Location = new System.Drawing.Point(630, 407);
-            this.LB_error.Name = "LB_error";
-            this.LB_error.Size = new System.Drawing.Size(0, 17);
-            this.LB_error.TabIndex = 18;
             // 
             // BT_DangNhap
             // 
@@ -345,6 +333,19 @@ namespace DangNhap
             this.BTN_hide.UseVisualStyleBackColor = false;
             this.BTN_hide.Click += new System.EventHandler(this.BTN_hide_Click);
             // 
+            // LB_Wrong
+            // 
+            this.LB_Wrong.AutoSize = true;
+            this.LB_Wrong.BackColor = System.Drawing.Color.Transparent;
+            this.LB_Wrong.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_Wrong.ForeColor = System.Drawing.Color.Red;
+            this.LB_Wrong.Location = new System.Drawing.Point(629, 406);
+            this.LB_Wrong.Name = "LB_Wrong";
+            this.LB_Wrong.Size = new System.Drawing.Size(51, 19);
+            this.LB_Wrong.TabIndex = 35;
+            this.LB_Wrong.Text = "label1";
+            this.LB_Wrong.Visible = false;
+            // 
             // DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -353,6 +354,7 @@ namespace DangNhap
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1129, 587);
+            this.Controls.Add(this.LB_Wrong);
             this.Controls.Add(this.LB_tasmana);
             this.Controls.Add(this.BTN_show);
             this.Controls.Add(this.BTN_hide);
@@ -366,7 +368,6 @@ namespace DangNhap
             this.Controls.Add(this.LB_dangnhap);
             this.Controls.Add(this.LB_welcometo);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.LB_error);
             this.Controls.Add(this.BTN_close);
             this.Controls.Add(this.BT_DangNhap);
             this.Controls.Add(this.LB_quenpw);
@@ -397,7 +398,6 @@ namespace DangNhap
         private System.Windows.Forms.Label LB_quenpw;
         private Guna.UI.WinForms.GunaButton BT_DangNhap;
         private Guna.UI.WinForms.GunaButton BTN_close;
-        private System.Windows.Forms.Label LB_error;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label LB_welcometo;
         private System.Windows.Forms.Label LB_dangnhap;
@@ -411,6 +411,7 @@ namespace DangNhap
         private Guna.UI.WinForms.GunaButton BTN_facelogin;
         private System.Windows.Forms.Button BTN_show;
         private System.Windows.Forms.Button BTN_hide;
+        private System.Windows.Forms.Label LB_Wrong;
     }
 }
 

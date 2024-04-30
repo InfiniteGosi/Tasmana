@@ -82,19 +82,21 @@ namespace DangNhap
                     }
                     else
                     {
-                        LB_error.Text = "Tài khoản đã bị vô hiệu hóa";
+                        LB_Wrong.Text = "Tài khoản đã bị vô hiệu hóa";
                         return;
                     }
                 }
                 else
                 {
-                    LB_error.Text = "Mật khẩu không đúng";
+                    LB_Wrong.Text = "Mật khẩu không đúng";
+                    LB_Wrong.Visible = true;
+                    //LB_error.ForeColor = Color.Red;
                     return;
                 }
             }
             else
             {
-                LB_error.Text = "Tài khoản không tồn tại";
+                LB_Wrong.Text = "Tài khoản không tồn tại";
                 return;
             }
         }
