@@ -123,5 +123,34 @@ namespace DangNhap
                 MessageBox.Show("Thêm thất bại");
             }
         }
+
+        private void BTN_thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        //MoveForm
+        int mov;
+        int movX;
+        int movY;
+        private void ThemHoaDon_MouseDown(object sender, MouseEventArgs e)
+        {
+            mov = 1;
+            movX = e.X;
+            movY = e.Y;
+        }
+
+        private void ThemHoaDon_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mov == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - movX, MousePosition.Y - movY);
+            }
+        }
+
+        private void ThemHoaDon_MouseUp(object sender, MouseEventArgs e)
+        {
+            mov = 0;
+        }
     }
 }
