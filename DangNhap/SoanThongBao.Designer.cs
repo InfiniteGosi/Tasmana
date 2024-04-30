@@ -242,18 +242,23 @@
             // MSCBB_thongbao
             // 
             this.MSCBB_thongbao.AutoSizeMode = Syncfusion.Windows.Forms.Tools.AutoSizeModes.None;
+            this.MSCBB_thongbao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.MSCBB_thongbao.BeforeTouchSize = new System.Drawing.Size(579, 35);
             this.MSCBB_thongbao.ButtonStyle = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
             this.MSCBB_thongbao.DataSource = ((object)(resources.GetObject("MSCBB_thongbao.DataSource")));
+            this.MSCBB_thongbao.FlatBorderColor = System.Drawing.Color.White;
             this.MSCBB_thongbao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MSCBB_thongbao.Location = new System.Drawing.Point(123, 68);
+            this.MSCBB_thongbao.MetroColor = System.Drawing.Color.White;
             this.MSCBB_thongbao.Name = "MSCBB_thongbao";
             this.MSCBB_thongbao.ShowCheckBox = true;
             this.MSCBB_thongbao.ShowGroups = true;
             this.MSCBB_thongbao.Size = new System.Drawing.Size(579, 35);
             this.MSCBB_thongbao.TabIndex = 125;
             this.MSCBB_thongbao.ThemeName = "Metro";
+            this.MSCBB_thongbao.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.MSCBB_thongbao.UseVisualStyle = true;
+            this.MSCBB_thongbao.VisualItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             // 
             // label1
             // 
@@ -269,7 +274,7 @@
             // CB_priority
             // 
             this.CB_priority.AutoSize = true;
-            this.CB_priority.Location = new System.Drawing.Point(167, 158);
+            this.CB_priority.Location = new System.Drawing.Point(147, 163);
             this.CB_priority.Name = "CB_priority";
             this.CB_priority.Size = new System.Drawing.Size(18, 17);
             this.CB_priority.TabIndex = 127;

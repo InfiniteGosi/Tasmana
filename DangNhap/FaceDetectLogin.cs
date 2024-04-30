@@ -102,5 +102,34 @@ namespace DangNhap
                 return;
             }
         }
+
+        private void BTN_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        //Di chuyển form
+        int mov;
+        int movX;
+        int movY;
+        private void Faceid_MouseDown(object sender, MouseEventArgs e)
+        {
+            mov = 1;
+            movX = e.X;
+            movY = e.Y;
+        }
+
+        private void Faceid_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mov == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - movX, MousePosition.Y - movY);
+            }
+        }
+
+        private void Faceid_MouseUp(object sender, MouseEventArgs e)
+        {
+            mov = 0;
+        }
     }
 }
