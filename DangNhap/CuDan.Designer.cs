@@ -167,6 +167,7 @@ namespace DangNhap
             this.GGC_cudan.Text = "gridGroupingControl1";
             this.GGC_cudan.UseRightToLeftCompatibleTextBox = true;
             this.GGC_cudan.VersionInfo = "25.1462.39";
+            this.GGC_cudan.TableControlCellDoubleClick += new Syncfusion.Windows.Forms.Grid.Grouping.GridTableControlCellClickEventHandler(this.GGC_cudan_TableControlCellDoubleClick);
             // 
             // CBB_choice
             // 

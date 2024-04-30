@@ -78,5 +78,38 @@ namespace BLL
             }
             return null;
         }
+        public ChuHo GetChuHoByMaCuDan(string maCuDan)
+        {
+            DataTable dt = ChuHoDAO.Instance.GetChuHoByMaCuDan(maCuDan);
+            string maCanHo = dt.Rows[0]["maCanHo"].ToString();
+            string loaiCuDan = dt.Rows[0]["loaiCuDan"].ToString();
+            string hoTen = dt.Rows[0]["hoTen"].ToString();
+            DateTime ngaySinh = (DateTime)dt.Rows[0]["ngayThangNamSinh"];
+            string maDinhDanh = dt.Rows[0]["maDinhDanh"].ToString();
+            string soDienThoai = dt.Rows[0]["SDT"].ToString();
+            string email = dt.Rows[0]["email"].ToString();
+            string quocTich = dt.Rows[0]["quocTich"].ToString();
+            string soTheTamTru = dt.Rows[0]["soTheTamTru"].ToString();
+            DateTime ngayNhanBanGiaoCanHo = (DateTime)dt.Rows[0]["ngayNhanBanGiaoCanHo"];
+            DateTime ngayChuyenVao = (DateTime)dt.Rows[0]["ngayChuyenVao"];
+            DateTime? ngayChuyenDi = dt.Rows[0]["ngayChuyenDi"] != DBNull.Value
+            ? (DateTime)dt.Rows[0]["ngayChuyenDi"]
+            : (DateTime?)null;
+            float soDienNuocNgayBanGiao = dt.Rows[0]["soDienNuocNgayBanGiao"] != DBNull.Value ? Convert.ToSingle(dt.Rows[0]["soDienNuocNgayBanGiao"]) : 0.0f;
+            string bienSoXeDangKy = dt.Rows[0]["bienSoXeDangKy"].ToString();
+            string maCuDanBanGiao = dt.Rows[0]["banGiao_maCuDan"].ToString();
+            string maCuDanLuuTruCung = dt.Rows[0]["maCuDanLuuTruCung"].ToString();
+            int tinhTrangCongNo = (int)dt.Rows[0]["tinhTrangCongNo"];
+            string duLieuDangKyThuNuoi = dt.Rows[0]["duLieuDangKyThuNuoi"].ToString();
+            return new ChuHo(maCuDan, maCanHo, hoTen, ngaySinh, maDinhDanh, soDienThoai, email, quocTich, soTheTamTru, ngayChuyenVao, ngayChuyenDi, maCuDanLuuTruCung, bienSoXeDangKy, tinhTrangCongNo, duLieuDangKyThuNuoi, loaiCuDan, ngayNhanBanGiaoCanHo, soDienNuocNgayBanGiao, maCuDanBanGiao);
+        }
+        public string DeleteChuHo(string maCuDan, string maCanHo)
+        {
+            if (ChuHoDAO.Instance.DeleteChuHo(maCuDan, maCanHo))
+            {
+                return "Xóa thành công";
+            }
+            return "Xóa thất bại";
+        }
     }
 }

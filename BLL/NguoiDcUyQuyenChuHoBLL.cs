@@ -46,5 +46,35 @@ namespace BLL
             }
             return list;
         }
+        public NguoiDcUyQuyenChuHo GetNguoiUyQuyenByMaCuDan(string maCuDan)
+        {
+            DataTable dt = NguoiDcUyQuyenChuHoDAO.Instance.GetNguoiUyQuyenByMaCuDan(maCuDan);
+            string maCanHo = dt.Rows[0]["maCanHo"].ToString();
+            string loaiCuDan = dt.Rows[0]["loaiCuDan"].ToString();
+            string hoTen = dt.Rows[0]["hoTen"].ToString();
+            DateTime ngaySinh = (DateTime)dt.Rows[0]["ngayThangNamSinh"];
+            string maDinhDanh = dt.Rows[0]["maDinhDanh"].ToString();
+            string soDienThoai = dt.Rows[0]["SDT"].ToString();
+            string email = dt.Rows[0]["email"].ToString();
+            string quocTich = dt.Rows[0]["quocTich"].ToString();
+            string soTheTamTru = dt.Rows[0]["soTheTamTru"].ToString();
+            DateTime ngayChuyenVao = (DateTime)dt.Rows[0]["ngayChuyenVao"];
+            DateTime? ngayChuyenDi = dt.Rows[0]["ngayChuyenDi"] != DBNull.Value
+            ? (DateTime)dt.Rows[0]["ngayChuyenDi"]
+            : (DateTime?)null;
+            string bienSoXeDangKy = dt.Rows[0]["bienSoXeDangKy"].ToString();
+            string maCuDanLuuTruCung = dt.Rows[0]["maCuDanLuuTruCung"].ToString();
+            int tinhTrangCongNo = (int)dt.Rows[0]["tinhTrangCongNo"];
+            string duLieuDangKyThuNuoi = dt.Rows[0]["duLieuDangKyThuNuoi"].ToString();
+            return new NguoiDcUyQuyenChuHo(maCuDan, maCanHo, hoTen, ngaySinh, maDinhDanh, soDienThoai, email, quocTich, soTheTamTru, ngayChuyenVao, ngayChuyenDi, maCuDanLuuTruCung, bienSoXeDangKy, tinhTrangCongNo, duLieuDangKyThuNuoi, loaiCuDan);
+        }
+        public string DeleteNguoiUyQuyen(string maCuDan, string maCanHo)
+        {
+            if (NguoiDcUyQuyenChuHoDAO.Instance.DeleteNguoiUyQuyen(maCuDan, maCanHo))
+            {
+                return "Xóa thành công";
+            }
+            return "Xóa thất bại";
+        }
     }
 }

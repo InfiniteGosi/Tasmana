@@ -36,6 +36,46 @@ namespace DangNhap
             this.panel2 = new System.Windows.Forms.Panel();
             this.LB_ttcd = new System.Windows.Forms.Label();
             this.PN_hienthi = new System.Windows.Forms.Panel();
+            this.TXB_tinhtrangxe = new System.Windows.Forms.TextBox();
+            this.LB_tinhtrangxe = new System.Windows.Forms.Label();
+            this.TXB_loaixe = new System.Windows.Forms.TextBox();
+            this.LB_loaixe = new System.Windows.Forms.Label();
+            this.TXB_nguoithan = new System.Windows.Forms.TextBox();
+            this.LB_nguoithan = new System.Windows.Forms.Label();
+            this.TXB_bienso = new System.Windows.Forms.TextBox();
+            this.LB_bienso = new System.Windows.Forms.Label();
+            this.TXB_diennuoc = new System.Windows.Forms.TextBox();
+            this.LB_diennuoc = new System.Windows.Forms.Label();
+            this.DTP_di = new System.Windows.Forms.DateTimePicker();
+            this.DTP_vao = new System.Windows.Forms.DateTimePicker();
+            this.LB_di = new System.Windows.Forms.Label();
+            this.DTP_bangiao = new System.Windows.Forms.DateTimePicker();
+            this.DTP_ngaysinh = new System.Windows.Forms.DateTimePicker();
+            this.LB_bangiao = new System.Windows.Forms.Label();
+            this.LB_macd = new System.Windows.Forms.Label();
+            this.TXB_macd = new System.Windows.Forms.TextBox();
+            this.LB_loaicudan = new System.Windows.Forms.Label();
+            this.TXB_loaicd = new System.Windows.Forms.TextBox();
+            this.LB_quoctich = new System.Windows.Forms.Label();
+            this.TXB_quoctich = new System.Windows.Forms.TextBox();
+            this.LB_thunuoi = new System.Windows.Forms.Label();
+            this.TXB_thunuoi = new System.Windows.Forms.TextBox();
+            this.LB_congno = new System.Windows.Forms.Label();
+            this.TXB_tinhtrangcongno = new System.Windows.Forms.TextBox();
+            this.LB_vao = new System.Windows.Forms.Label();
+            this.LB_email = new System.Windows.Forms.Label();
+            this.TXB_email = new System.Windows.Forms.TextBox();
+            this.LB_tamtru = new System.Windows.Forms.Label();
+            this.TXB_sothetamtru = new System.Windows.Forms.TextBox();
+            this.LB_sdt = new System.Windows.Forms.Label();
+            this.TXB_sdt = new System.Windows.Forms.TextBox();
+            this.LB_dinhdanh = new System.Windows.Forms.Label();
+            this.TXB_madinhdanh = new System.Windows.Forms.TextBox();
+            this.LB_ngaysinh = new System.Windows.Forms.Label();
+            this.LB_hoten = new System.Windows.Forms.Label();
+            this.TXB_hovaten = new System.Windows.Forms.TextBox();
+            this.LB_macanho = new System.Windows.Forms.Label();
+            this.TXB_macanho = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -43,6 +83,7 @@ namespace DangNhap
             this.label13 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -52,46 +93,16 @@ namespace DangNhap
             this.numericUpDownExt5 = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
             this.label17 = new System.Windows.Forms.Label();
             this.numericUpDownExt6 = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.TXB_macanho = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TXB_hovaten = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.TXB_ngaysinh = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.TXB_madinhdanh = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.TXB_sdt = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.TXB_sothetamtru = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.TXB_email = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.TXB_chuyenvao = new System.Windows.Forms.TextBox();
-            this.TXB_chuyendi = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.TXB_diennuoc = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.TXB_tinhtrangcongno = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.TXB_thunuoi = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.TXB_quoctich = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.TXB_nguoithan = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.TXB_macudan = new System.Windows.Forms.TextBox();
             this.BTN_thoat = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_xoa = new Guna.UI.WinForms.GunaGradientButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.BTN_luu = new Guna.UI.WinForms.GunaGradientButton();
             this.PN_hienthi.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -149,34 +160,45 @@ namespace DangNhap
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PN_hienthi.AutoScroll = true;
             this.PN_hienthi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
-            this.PN_hienthi.Controls.Add(this.label22);
-            this.PN_hienthi.Controls.Add(this.TXB_macudan);
-            this.PN_hienthi.Controls.Add(this.label21);
+            this.PN_hienthi.Controls.Add(this.TXB_tinhtrangxe);
+            this.PN_hienthi.Controls.Add(this.LB_tinhtrangxe);
+            this.PN_hienthi.Controls.Add(this.TXB_loaixe);
+            this.PN_hienthi.Controls.Add(this.LB_loaixe);
             this.PN_hienthi.Controls.Add(this.TXB_nguoithan);
-            this.PN_hienthi.Controls.Add(this.label20);
-            this.PN_hienthi.Controls.Add(this.TXB_quoctich);
-            this.PN_hienthi.Controls.Add(this.label19);
-            this.PN_hienthi.Controls.Add(this.TXB_thunuoi);
-            this.PN_hienthi.Controls.Add(this.label11);
-            this.PN_hienthi.Controls.Add(this.TXB_tinhtrangcongno);
-            this.PN_hienthi.Controls.Add(this.label10);
+            this.PN_hienthi.Controls.Add(this.LB_nguoithan);
+            this.PN_hienthi.Controls.Add(this.TXB_bienso);
+            this.PN_hienthi.Controls.Add(this.LB_bienso);
             this.PN_hienthi.Controls.Add(this.TXB_diennuoc);
-            this.PN_hienthi.Controls.Add(this.TXB_chuyendi);
-            this.PN_hienthi.Controls.Add(this.label8);
-            this.PN_hienthi.Controls.Add(this.TXB_chuyenvao);
-            this.PN_hienthi.Controls.Add(this.label6);
+            this.PN_hienthi.Controls.Add(this.LB_diennuoc);
+            this.PN_hienthi.Controls.Add(this.DTP_di);
+            this.PN_hienthi.Controls.Add(this.DTP_vao);
+            this.PN_hienthi.Controls.Add(this.LB_di);
+            this.PN_hienthi.Controls.Add(this.DTP_bangiao);
+            this.PN_hienthi.Controls.Add(this.DTP_ngaysinh);
+            this.PN_hienthi.Controls.Add(this.LB_bangiao);
+            this.PN_hienthi.Controls.Add(this.LB_macd);
+            this.PN_hienthi.Controls.Add(this.TXB_macd);
+            this.PN_hienthi.Controls.Add(this.LB_loaicudan);
+            this.PN_hienthi.Controls.Add(this.TXB_loaicd);
+            this.PN_hienthi.Controls.Add(this.LB_quoctich);
+            this.PN_hienthi.Controls.Add(this.TXB_quoctich);
+            this.PN_hienthi.Controls.Add(this.LB_thunuoi);
+            this.PN_hienthi.Controls.Add(this.TXB_thunuoi);
+            this.PN_hienthi.Controls.Add(this.LB_congno);
+            this.PN_hienthi.Controls.Add(this.TXB_tinhtrangcongno);
+            this.PN_hienthi.Controls.Add(this.LB_vao);
+            this.PN_hienthi.Controls.Add(this.LB_email);
             this.PN_hienthi.Controls.Add(this.TXB_email);
-            this.PN_hienthi.Controls.Add(this.label5);
+            this.PN_hienthi.Controls.Add(this.LB_tamtru);
             this.PN_hienthi.Controls.Add(this.TXB_sothetamtru);
-            this.PN_hienthi.Controls.Add(this.label4);
+            this.PN_hienthi.Controls.Add(this.LB_sdt);
             this.PN_hienthi.Controls.Add(this.TXB_sdt);
-            this.PN_hienthi.Controls.Add(this.label3);
+            this.PN_hienthi.Controls.Add(this.LB_dinhdanh);
             this.PN_hienthi.Controls.Add(this.TXB_madinhdanh);
-            this.PN_hienthi.Controls.Add(this.label2);
-            this.PN_hienthi.Controls.Add(this.TXB_ngaysinh);
-            this.PN_hienthi.Controls.Add(this.label1);
+            this.PN_hienthi.Controls.Add(this.LB_ngaysinh);
+            this.PN_hienthi.Controls.Add(this.LB_hoten);
             this.PN_hienthi.Controls.Add(this.TXB_hovaten);
-            this.PN_hienthi.Controls.Add(this.label7);
+            this.PN_hienthi.Controls.Add(this.LB_macanho);
             this.PN_hienthi.Controls.Add(this.TXB_macanho);
             this.PN_hienthi.Controls.Add(this.panel7);
             this.PN_hienthi.Controls.Add(this.panel1);
@@ -184,6 +206,414 @@ namespace DangNhap
             this.PN_hienthi.Name = "PN_hienthi";
             this.PN_hienthi.Size = new System.Drawing.Size(1391, 708);
             this.PN_hienthi.TabIndex = 49;
+            // 
+            // TXB_tinhtrangxe
+            // 
+            this.TXB_tinhtrangxe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_tinhtrangxe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_tinhtrangxe.ForeColor = System.Drawing.Color.White;
+            this.TXB_tinhtrangxe.Location = new System.Drawing.Point(911, 564);
+            this.TXB_tinhtrangxe.Name = "TXB_tinhtrangxe";
+            this.TXB_tinhtrangxe.Size = new System.Drawing.Size(382, 30);
+            this.TXB_tinhtrangxe.TabIndex = 261;
+            // 
+            // LB_tinhtrangxe
+            // 
+            this.LB_tinhtrangxe.AutoSize = true;
+            this.LB_tinhtrangxe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_tinhtrangxe.ForeColor = System.Drawing.Color.White;
+            this.LB_tinhtrangxe.Location = new System.Drawing.Point(718, 564);
+            this.LB_tinhtrangxe.Name = "LB_tinhtrangxe";
+            this.LB_tinhtrangxe.Size = new System.Drawing.Size(188, 22);
+            this.LB_tinhtrangxe.TabIndex = 260;
+            this.LB_tinhtrangxe.Text = "Tình trạng phương tiện";
+            // 
+            // TXB_loaixe
+            // 
+            this.TXB_loaixe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_loaixe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_loaixe.ForeColor = System.Drawing.Color.White;
+            this.TXB_loaixe.Location = new System.Drawing.Point(1167, 512);
+            this.TXB_loaixe.Name = "TXB_loaixe";
+            this.TXB_loaixe.Size = new System.Drawing.Size(126, 30);
+            this.TXB_loaixe.TabIndex = 259;
+            // 
+            // LB_loaixe
+            // 
+            this.LB_loaixe.AutoSize = true;
+            this.LB_loaixe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_loaixe.ForeColor = System.Drawing.Color.White;
+            this.LB_loaixe.Location = new System.Drawing.Point(1043, 517);
+            this.LB_loaixe.Name = "LB_loaixe";
+            this.LB_loaixe.Size = new System.Drawing.Size(118, 22);
+            this.LB_loaixe.TabIndex = 258;
+            this.LB_loaixe.Text = "Chủng loại xe";
+            // 
+            // TXB_nguoithan
+            // 
+            this.TXB_nguoithan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_nguoithan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_nguoithan.ForeColor = System.Drawing.Color.White;
+            this.TXB_nguoithan.Location = new System.Drawing.Point(923, 330);
+            this.TXB_nguoithan.Name = "TXB_nguoithan";
+            this.TXB_nguoithan.Size = new System.Drawing.Size(375, 30);
+            this.TXB_nguoithan.TabIndex = 257;
+            // 
+            // LB_nguoithan
+            // 
+            this.LB_nguoithan.AutoSize = true;
+            this.LB_nguoithan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_nguoithan.ForeColor = System.Drawing.Color.White;
+            this.LB_nguoithan.Location = new System.Drawing.Point(750, 338);
+            this.LB_nguoithan.Name = "LB_nguoithan";
+            this.LB_nguoithan.Size = new System.Drawing.Size(167, 22);
+            this.LB_nguoithan.TabIndex = 256;
+            this.LB_nguoithan.Text = "Cư dân lưu trú cùng";
+            // 
+            // TXB_bienso
+            // 
+            this.TXB_bienso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_bienso.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_bienso.ForeColor = System.Drawing.Color.White;
+            this.TXB_bienso.Location = new System.Drawing.Point(911, 511);
+            this.TXB_bienso.Name = "TXB_bienso";
+            this.TXB_bienso.Size = new System.Drawing.Size(126, 30);
+            this.TXB_bienso.TabIndex = 255;
+            // 
+            // LB_bienso
+            // 
+            this.LB_bienso.AutoSize = true;
+            this.LB_bienso.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_bienso.ForeColor = System.Drawing.Color.White;
+            this.LB_bienso.Location = new System.Drawing.Point(746, 511);
+            this.LB_bienso.Name = "LB_bienso";
+            this.LB_bienso.Size = new System.Drawing.Size(159, 22);
+            this.LB_bienso.TabIndex = 254;
+            this.LB_bienso.Text = "Biển số xe đăng ký";
+            // 
+            // TXB_diennuoc
+            // 
+            this.TXB_diennuoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_diennuoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_diennuoc.ForeColor = System.Drawing.Color.White;
+            this.TXB_diennuoc.Location = new System.Drawing.Point(923, 274);
+            this.TXB_diennuoc.Name = "TXB_diennuoc";
+            this.TXB_diennuoc.Size = new System.Drawing.Size(381, 30);
+            this.TXB_diennuoc.TabIndex = 253;
+            // 
+            // LB_diennuoc
+            // 
+            this.LB_diennuoc.AutoSize = true;
+            this.LB_diennuoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_diennuoc.ForeColor = System.Drawing.Color.White;
+            this.LB_diennuoc.Location = new System.Drawing.Point(689, 277);
+            this.LB_diennuoc.Name = "LB_diennuoc";
+            this.LB_diennuoc.Size = new System.Drawing.Size(228, 22);
+            this.LB_diennuoc.TabIndex = 252;
+            this.LB_diennuoc.Text = "Số điện nước ngày bàn giao";
+            // 
+            // DTP_di
+            // 
+            this.DTP_di.Location = new System.Drawing.Point(923, 166);
+            this.DTP_di.Name = "DTP_di";
+            this.DTP_di.Size = new System.Drawing.Size(262, 22);
+            this.DTP_di.TabIndex = 251;
+            // 
+            // DTP_vao
+            // 
+            this.DTP_vao.Location = new System.Drawing.Point(923, 126);
+            this.DTP_vao.Name = "DTP_vao";
+            this.DTP_vao.Size = new System.Drawing.Size(262, 22);
+            this.DTP_vao.TabIndex = 250;
+            // 
+            // LB_di
+            // 
+            this.LB_di.AutoSize = true;
+            this.LB_di.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_di.ForeColor = System.Drawing.Color.White;
+            this.LB_di.Location = new System.Drawing.Point(719, 167);
+            this.LB_di.Name = "LB_di";
+            this.LB_di.Size = new System.Drawing.Size(131, 22);
+            this.LB_di.TabIndex = 249;
+            this.LB_di.Text = "Ngày chuyển đi";
+            // 
+            // DTP_bangiao
+            // 
+            this.DTP_bangiao.Location = new System.Drawing.Point(923, 212);
+            this.DTP_bangiao.Name = "DTP_bangiao";
+            this.DTP_bangiao.Size = new System.Drawing.Size(262, 22);
+            this.DTP_bangiao.TabIndex = 248;
+            // 
+            // DTP_ngaysinh
+            // 
+            this.DTP_ngaysinh.Location = new System.Drawing.Point(182, 379);
+            this.DTP_ngaysinh.Name = "DTP_ngaysinh";
+            this.DTP_ngaysinh.Size = new System.Drawing.Size(262, 22);
+            this.DTP_ngaysinh.TabIndex = 247;
+            // 
+            // LB_bangiao
+            // 
+            this.LB_bangiao.AutoSize = true;
+            this.LB_bangiao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_bangiao.ForeColor = System.Drawing.Color.White;
+            this.LB_bangiao.Location = new System.Drawing.Point(719, 212);
+            this.LB_bangiao.Name = "LB_bangiao";
+            this.LB_bangiao.Size = new System.Drawing.Size(164, 22);
+            this.LB_bangiao.TabIndex = 245;
+            this.LB_bangiao.Text = "Ngày nhận bàn giao";
+            // 
+            // LB_macd
+            // 
+            this.LB_macd.AutoSize = true;
+            this.LB_macd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_macd.ForeColor = System.Drawing.Color.White;
+            this.LB_macd.Location = new System.Drawing.Point(33, 185);
+            this.LB_macd.Name = "LB_macd";
+            this.LB_macd.Size = new System.Drawing.Size(94, 22);
+            this.LB_macd.TabIndex = 243;
+            this.LB_macd.Text = "Mã cư dân";
+            // 
+            // TXB_macd
+            // 
+            this.TXB_macd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_macd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_macd.ForeColor = System.Drawing.Color.White;
+            this.TXB_macd.Location = new System.Drawing.Point(182, 181);
+            this.TXB_macd.Name = "TXB_macd";
+            this.TXB_macd.Size = new System.Drawing.Size(375, 30);
+            this.TXB_macd.TabIndex = 244;
+            // 
+            // LB_loaicudan
+            // 
+            this.LB_loaicudan.AutoSize = true;
+            this.LB_loaicudan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_loaicudan.ForeColor = System.Drawing.Color.White;
+            this.LB_loaicudan.Location = new System.Drawing.Point(33, 130);
+            this.LB_loaicudan.Name = "LB_loaicudan";
+            this.LB_loaicudan.Size = new System.Drawing.Size(104, 22);
+            this.LB_loaicudan.TabIndex = 241;
+            this.LB_loaicudan.Text = "Loại cư dân";
+            // 
+            // TXB_loaicd
+            // 
+            this.TXB_loaicd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_loaicd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_loaicd.ForeColor = System.Drawing.Color.White;
+            this.TXB_loaicd.Location = new System.Drawing.Point(182, 126);
+            this.TXB_loaicd.Name = "TXB_loaicd";
+            this.TXB_loaicd.Size = new System.Drawing.Size(375, 30);
+            this.TXB_loaicd.TabIndex = 242;
+            // 
+            // LB_quoctich
+            // 
+            this.LB_quoctich.AutoSize = true;
+            this.LB_quoctich.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_quoctich.ForeColor = System.Drawing.Color.White;
+            this.LB_quoctich.Location = new System.Drawing.Point(33, 296);
+            this.LB_quoctich.Name = "LB_quoctich";
+            this.LB_quoctich.Size = new System.Drawing.Size(86, 22);
+            this.LB_quoctich.TabIndex = 237;
+            this.LB_quoctich.Text = "Quốc tịch";
+            // 
+            // TXB_quoctich
+            // 
+            this.TXB_quoctich.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_quoctich.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_quoctich.ForeColor = System.Drawing.Color.White;
+            this.TXB_quoctich.Location = new System.Drawing.Point(182, 292);
+            this.TXB_quoctich.Name = "TXB_quoctich";
+            this.TXB_quoctich.Size = new System.Drawing.Size(375, 30);
+            this.TXB_quoctich.TabIndex = 238;
+            // 
+            // LB_thunuoi
+            // 
+            this.LB_thunuoi.AutoSize = true;
+            this.LB_thunuoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_thunuoi.ForeColor = System.Drawing.Color.White;
+            this.LB_thunuoi.Location = new System.Drawing.Point(827, 446);
+            this.LB_thunuoi.Name = "LB_thunuoi";
+            this.LB_thunuoi.Size = new System.Drawing.Size(80, 22);
+            this.LB_thunuoi.TabIndex = 235;
+            this.LB_thunuoi.Text = "Thú nuôi";
+            // 
+            // TXB_thunuoi
+            // 
+            this.TXB_thunuoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_thunuoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_thunuoi.ForeColor = System.Drawing.Color.White;
+            this.TXB_thunuoi.Location = new System.Drawing.Point(923, 446);
+            this.TXB_thunuoi.Name = "TXB_thunuoi";
+            this.TXB_thunuoi.Size = new System.Drawing.Size(375, 30);
+            this.TXB_thunuoi.TabIndex = 236;
+            // 
+            // LB_congno
+            // 
+            this.LB_congno.AutoSize = true;
+            this.LB_congno.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_congno.ForeColor = System.Drawing.Color.White;
+            this.LB_congno.Location = new System.Drawing.Point(750, 391);
+            this.LB_congno.Name = "LB_congno";
+            this.LB_congno.Size = new System.Drawing.Size(157, 22);
+            this.LB_congno.TabIndex = 233;
+            this.LB_congno.Text = "Tình trạng công nợ";
+            // 
+            // TXB_tinhtrangcongno
+            // 
+            this.TXB_tinhtrangcongno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_tinhtrangcongno.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_tinhtrangcongno.ForeColor = System.Drawing.Color.White;
+            this.TXB_tinhtrangcongno.Location = new System.Drawing.Point(923, 391);
+            this.TXB_tinhtrangcongno.Name = "TXB_tinhtrangcongno";
+            this.TXB_tinhtrangcongno.Size = new System.Drawing.Size(375, 30);
+            this.TXB_tinhtrangcongno.TabIndex = 234;
+            // 
+            // LB_vao
+            // 
+            this.LB_vao.AutoSize = true;
+            this.LB_vao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_vao.ForeColor = System.Drawing.Color.White;
+            this.LB_vao.Location = new System.Drawing.Point(719, 130);
+            this.LB_vao.Name = "LB_vao";
+            this.LB_vao.Size = new System.Drawing.Size(144, 22);
+            this.LB_vao.TabIndex = 227;
+            this.LB_vao.Text = "Ngày chuyển vào";
+            // 
+            // LB_email
+            // 
+            this.LB_email.AutoSize = true;
+            this.LB_email.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_email.ForeColor = System.Drawing.Color.White;
+            this.LB_email.Location = new System.Drawing.Point(33, 628);
+            this.LB_email.Name = "LB_email";
+            this.LB_email.Size = new System.Drawing.Size(57, 22);
+            this.LB_email.TabIndex = 225;
+            this.LB_email.Text = "Email";
+            // 
+            // TXB_email
+            // 
+            this.TXB_email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_email.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_email.ForeColor = System.Drawing.Color.White;
+            this.TXB_email.Location = new System.Drawing.Point(182, 624);
+            this.TXB_email.Name = "TXB_email";
+            this.TXB_email.Size = new System.Drawing.Size(375, 30);
+            this.TXB_email.TabIndex = 226;
+            // 
+            // LB_tamtru
+            // 
+            this.LB_tamtru.AutoSize = true;
+            this.LB_tamtru.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_tamtru.ForeColor = System.Drawing.Color.White;
+            this.LB_tamtru.Location = new System.Drawing.Point(719, 47);
+            this.LB_tamtru.Name = "LB_tamtru";
+            this.LB_tamtru.Size = new System.Drawing.Size(119, 22);
+            this.LB_tamtru.TabIndex = 223;
+            this.LB_tamtru.Text = "Số thẻ tạm trú";
+            // 
+            // TXB_sothetamtru
+            // 
+            this.TXB_sothetamtru.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_sothetamtru.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_sothetamtru.ForeColor = System.Drawing.Color.White;
+            this.TXB_sothetamtru.Location = new System.Drawing.Point(918, 43);
+            this.TXB_sothetamtru.Name = "TXB_sothetamtru";
+            this.TXB_sothetamtru.Size = new System.Drawing.Size(375, 30);
+            this.TXB_sothetamtru.TabIndex = 224;
+            // 
+            // LB_sdt
+            // 
+            this.LB_sdt.AutoSize = true;
+            this.LB_sdt.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_sdt.ForeColor = System.Drawing.Color.White;
+            this.LB_sdt.Location = new System.Drawing.Point(33, 545);
+            this.LB_sdt.Name = "LB_sdt";
+            this.LB_sdt.Size = new System.Drawing.Size(114, 22);
+            this.LB_sdt.TabIndex = 221;
+            this.LB_sdt.Text = "Số điện thoại";
+            // 
+            // TXB_sdt
+            // 
+            this.TXB_sdt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_sdt.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_sdt.ForeColor = System.Drawing.Color.White;
+            this.TXB_sdt.Location = new System.Drawing.Point(182, 541);
+            this.TXB_sdt.Name = "TXB_sdt";
+            this.TXB_sdt.Size = new System.Drawing.Size(375, 30);
+            this.TXB_sdt.TabIndex = 222;
+            // 
+            // LB_dinhdanh
+            // 
+            this.LB_dinhdanh.AutoSize = true;
+            this.LB_dinhdanh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_dinhdanh.ForeColor = System.Drawing.Color.White;
+            this.LB_dinhdanh.Location = new System.Drawing.Point(33, 462);
+            this.LB_dinhdanh.Name = "LB_dinhdanh";
+            this.LB_dinhdanh.Size = new System.Drawing.Size(117, 22);
+            this.LB_dinhdanh.TabIndex = 219;
+            this.LB_dinhdanh.Text = "Mã định danh";
+            // 
+            // TXB_madinhdanh
+            // 
+            this.TXB_madinhdanh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_madinhdanh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_madinhdanh.ForeColor = System.Drawing.Color.White;
+            this.TXB_madinhdanh.Location = new System.Drawing.Point(182, 458);
+            this.TXB_madinhdanh.Name = "TXB_madinhdanh";
+            this.TXB_madinhdanh.Size = new System.Drawing.Size(375, 30);
+            this.TXB_madinhdanh.TabIndex = 220;
+            // 
+            // LB_ngaysinh
+            // 
+            this.LB_ngaysinh.AutoSize = true;
+            this.LB_ngaysinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_ngaysinh.ForeColor = System.Drawing.Color.White;
+            this.LB_ngaysinh.Location = new System.Drawing.Point(33, 379);
+            this.LB_ngaysinh.Name = "LB_ngaysinh";
+            this.LB_ngaysinh.Size = new System.Drawing.Size(88, 22);
+            this.LB_ngaysinh.TabIndex = 217;
+            this.LB_ngaysinh.Text = "Ngày sinh";
+            // 
+            // LB_hoten
+            // 
+            this.LB_hoten.AutoSize = true;
+            this.LB_hoten.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_hoten.ForeColor = System.Drawing.Color.White;
+            this.LB_hoten.Location = new System.Drawing.Point(33, 242);
+            this.LB_hoten.Name = "LB_hoten";
+            this.LB_hoten.Size = new System.Drawing.Size(86, 22);
+            this.LB_hoten.TabIndex = 215;
+            this.LB_hoten.Text = "Họ và tên";
+            // 
+            // TXB_hovaten
+            // 
+            this.TXB_hovaten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_hovaten.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_hovaten.ForeColor = System.Drawing.Color.White;
+            this.TXB_hovaten.Location = new System.Drawing.Point(182, 238);
+            this.TXB_hovaten.Name = "TXB_hovaten";
+            this.TXB_hovaten.Size = new System.Drawing.Size(375, 30);
+            this.TXB_hovaten.TabIndex = 216;
+            // 
+            // LB_macanho
+            // 
+            this.LB_macanho.AutoSize = true;
+            this.LB_macanho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_macanho.ForeColor = System.Drawing.Color.White;
+            this.LB_macanho.Location = new System.Drawing.Point(33, 47);
+            this.LB_macanho.Name = "LB_macanho";
+            this.LB_macanho.Size = new System.Drawing.Size(92, 22);
+            this.LB_macanho.TabIndex = 213;
+            this.LB_macanho.Text = "Mã căn hộ";
+            // 
+            // TXB_macanho
+            // 
+            this.TXB_macanho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.TXB_macanho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXB_macanho.ForeColor = System.Drawing.Color.White;
+            this.TXB_macanho.Location = new System.Drawing.Point(182, 43);
+            this.TXB_macanho.Name = "TXB_macanho";
+            this.TXB_macanho.Size = new System.Drawing.Size(375, 30);
+            this.TXB_macanho.TabIndex = 214;
             // 
             // panel7
             // 
@@ -266,6 +696,16 @@ namespace DangNhap
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(375, 30);
             this.comboBox2.TabIndex = 183;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(-456, 374);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(170, 170);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 36;
+            this.pictureBox2.TabStop = false;
             // 
             // label14
             // 
@@ -365,320 +805,6 @@ namespace DangNhap
             this.numericUpDownExt6.Size = new System.Drawing.Size(375, 30);
             this.numericUpDownExt6.TabIndex = 175;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-456, 374);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(170, 170);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 36;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(33, 47);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 22);
-            this.label7.TabIndex = 213;
-            this.label7.Text = "Mã căn hộ";
-            // 
-            // TXB_macanho
-            // 
-            this.TXB_macanho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_macanho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_macanho.ForeColor = System.Drawing.Color.White;
-            this.TXB_macanho.Location = new System.Drawing.Point(182, 43);
-            this.TXB_macanho.Name = "TXB_macanho";
-            this.TXB_macanho.Size = new System.Drawing.Size(375, 30);
-            this.TXB_macanho.TabIndex = 214;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(33, 213);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 22);
-            this.label1.TabIndex = 215;
-            this.label1.Text = "Họ và tên";
-            // 
-            // TXB_hovaten
-            // 
-            this.TXB_hovaten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_hovaten.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_hovaten.ForeColor = System.Drawing.Color.White;
-            this.TXB_hovaten.Location = new System.Drawing.Point(182, 209);
-            this.TXB_hovaten.Name = "TXB_hovaten";
-            this.TXB_hovaten.Size = new System.Drawing.Size(375, 30);
-            this.TXB_hovaten.TabIndex = 216;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(33, 379);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 22);
-            this.label2.TabIndex = 217;
-            this.label2.Text = "Ngày sinh";
-            // 
-            // TXB_ngaysinh
-            // 
-            this.TXB_ngaysinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_ngaysinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_ngaysinh.ForeColor = System.Drawing.Color.White;
-            this.TXB_ngaysinh.Location = new System.Drawing.Point(182, 375);
-            this.TXB_ngaysinh.Name = "TXB_ngaysinh";
-            this.TXB_ngaysinh.Size = new System.Drawing.Size(375, 30);
-            this.TXB_ngaysinh.TabIndex = 218;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(33, 462);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 22);
-            this.label3.TabIndex = 219;
-            this.label3.Text = "Mã định danh";
-            // 
-            // TXB_madinhdanh
-            // 
-            this.TXB_madinhdanh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_madinhdanh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_madinhdanh.ForeColor = System.Drawing.Color.White;
-            this.TXB_madinhdanh.Location = new System.Drawing.Point(182, 458);
-            this.TXB_madinhdanh.Name = "TXB_madinhdanh";
-            this.TXB_madinhdanh.Size = new System.Drawing.Size(375, 30);
-            this.TXB_madinhdanh.TabIndex = 220;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(33, 545);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 22);
-            this.label4.TabIndex = 221;
-            this.label4.Text = "Số điện thoại";
-            // 
-            // TXB_sdt
-            // 
-            this.TXB_sdt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_sdt.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_sdt.ForeColor = System.Drawing.Color.White;
-            this.TXB_sdt.Location = new System.Drawing.Point(182, 541);
-            this.TXB_sdt.Name = "TXB_sdt";
-            this.TXB_sdt.Size = new System.Drawing.Size(375, 30);
-            this.TXB_sdt.TabIndex = 222;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(719, 47);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(119, 22);
-            this.label5.TabIndex = 223;
-            this.label5.Text = "Số thẻ tạm trú";
-            // 
-            // TXB_sothetamtru
-            // 
-            this.TXB_sothetamtru.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_sothetamtru.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_sothetamtru.ForeColor = System.Drawing.Color.White;
-            this.TXB_sothetamtru.Location = new System.Drawing.Point(918, 43);
-            this.TXB_sothetamtru.Name = "TXB_sothetamtru";
-            this.TXB_sothetamtru.Size = new System.Drawing.Size(375, 30);
-            this.TXB_sothetamtru.TabIndex = 224;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(33, 628);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 22);
-            this.label6.TabIndex = 225;
-            this.label6.Text = "Email";
-            // 
-            // TXB_email
-            // 
-            this.TXB_email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_email.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_email.ForeColor = System.Drawing.Color.White;
-            this.TXB_email.Location = new System.Drawing.Point(182, 624);
-            this.TXB_email.Name = "TXB_email";
-            this.TXB_email.Size = new System.Drawing.Size(375, 30);
-            this.TXB_email.TabIndex = 226;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(719, 130);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(198, 22);
-            this.label8.TabIndex = 227;
-            this.label8.Text = "Chuyển vào - Chuyển đi";
-            // 
-            // TXB_chuyenvao
-            // 
-            this.TXB_chuyenvao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_chuyenvao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_chuyenvao.ForeColor = System.Drawing.Color.White;
-            this.TXB_chuyenvao.Location = new System.Drawing.Point(918, 126);
-            this.TXB_chuyenvao.Name = "TXB_chuyenvao";
-            this.TXB_chuyenvao.Size = new System.Drawing.Size(181, 30);
-            this.TXB_chuyenvao.TabIndex = 228;
-            // 
-            // TXB_chuyendi
-            // 
-            this.TXB_chuyendi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_chuyendi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_chuyendi.ForeColor = System.Drawing.Color.White;
-            this.TXB_chuyendi.Location = new System.Drawing.Point(1118, 126);
-            this.TXB_chuyendi.Name = "TXB_chuyendi";
-            this.TXB_chuyendi.Size = new System.Drawing.Size(175, 30);
-            this.TXB_chuyendi.TabIndex = 230;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(719, 213);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(180, 22);
-            this.label10.TabIndex = 231;
-            this.label10.Text = "Điện nước hàng tháng";
-            // 
-            // TXB_diennuoc
-            // 
-            this.TXB_diennuoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_diennuoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_diennuoc.ForeColor = System.Drawing.Color.White;
-            this.TXB_diennuoc.Location = new System.Drawing.Point(918, 209);
-            this.TXB_diennuoc.Name = "TXB_diennuoc";
-            this.TXB_diennuoc.Size = new System.Drawing.Size(375, 30);
-            this.TXB_diennuoc.TabIndex = 232;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(719, 296);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(157, 22);
-            this.label11.TabIndex = 233;
-            this.label11.Text = "Tình trạng công nợ";
-            // 
-            // TXB_tinhtrangcongno
-            // 
-            this.TXB_tinhtrangcongno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_tinhtrangcongno.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_tinhtrangcongno.ForeColor = System.Drawing.Color.White;
-            this.TXB_tinhtrangcongno.Location = new System.Drawing.Point(918, 292);
-            this.TXB_tinhtrangcongno.Name = "TXB_tinhtrangcongno";
-            this.TXB_tinhtrangcongno.Size = new System.Drawing.Size(375, 30);
-            this.TXB_tinhtrangcongno.TabIndex = 234;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(719, 379);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(80, 22);
-            this.label19.TabIndex = 235;
-            this.label19.Text = "Thú nuôi";
-            // 
-            // TXB_thunuoi
-            // 
-            this.TXB_thunuoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_thunuoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_thunuoi.ForeColor = System.Drawing.Color.White;
-            this.TXB_thunuoi.Location = new System.Drawing.Point(918, 375);
-            this.TXB_thunuoi.Name = "TXB_thunuoi";
-            this.TXB_thunuoi.Size = new System.Drawing.Size(375, 30);
-            this.TXB_thunuoi.TabIndex = 236;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(33, 296);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(86, 22);
-            this.label20.TabIndex = 237;
-            this.label20.Text = "Quốc tịch";
-            // 
-            // TXB_quoctich
-            // 
-            this.TXB_quoctich.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_quoctich.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_quoctich.ForeColor = System.Drawing.Color.White;
-            this.TXB_quoctich.Location = new System.Drawing.Point(182, 292);
-            this.TXB_quoctich.Name = "TXB_quoctich";
-            this.TXB_quoctich.Size = new System.Drawing.Size(375, 30);
-            this.TXB_quoctich.TabIndex = 238;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(719, 462);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(344, 22);
-            this.label21.TabIndex = 239;
-            this.label21.Text = "Người thân (người ở chung căn hộ chăng?)";
-            // 
-            // TXB_nguoithan
-            // 
-            this.TXB_nguoithan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_nguoithan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_nguoithan.ForeColor = System.Drawing.Color.White;
-            this.TXB_nguoithan.Location = new System.Drawing.Point(918, 504);
-            this.TXB_nguoithan.Name = "TXB_nguoithan";
-            this.TXB_nguoithan.Size = new System.Drawing.Size(375, 30);
-            this.TXB_nguoithan.TabIndex = 240;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(33, 130);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(94, 22);
-            this.label22.TabIndex = 241;
-            this.label22.Text = "Mã cư dân";
-            // 
-            // TXB_macudan
-            // 
-            this.TXB_macudan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_macudan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXB_macudan.ForeColor = System.Drawing.Color.White;
-            this.TXB_macudan.Location = new System.Drawing.Point(182, 126);
-            this.TXB_macudan.Name = "TXB_macudan";
-            this.TXB_macudan.Size = new System.Drawing.Size(375, 30);
-            this.TXB_macudan.TabIndex = 242;
-            // 
             // BTN_thoat
             // 
             this.BTN_thoat.AnimationHoverSpeed = 0.5F;
@@ -736,6 +862,7 @@ namespace DangNhap
             this.BTN_xoa.TabIndex = 213;
             this.BTN_xoa.Text = "Xóa";
             this.BTN_xoa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_xoa.Click += new System.EventHandler(this.BTN_xoa_Click);
             // 
             // panel6
             // 
@@ -794,14 +921,15 @@ namespace DangNhap
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ThongTinCuDan";
             this.Text = "ThongTinCuDan";
+            this.Load += new System.EventHandler(this.ThongTinCuDan_Load);
             this.PN_hienthi.ResumeLayout(false);
             this.PN_hienthi.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -832,38 +960,49 @@ namespace DangNhap
         private Syncfusion.Windows.Forms.Tools.NumericUpDownExt numericUpDownExt5;
         private System.Windows.Forms.Label label17;
         private Syncfusion.Windows.Forms.Tools.NumericUpDownExt numericUpDownExt6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label LB_macanho;
         private System.Windows.Forms.TextBox TXB_macanho;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label LB_congno;
         private System.Windows.Forms.TextBox TXB_tinhtrangcongno;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox TXB_diennuoc;
-        private System.Windows.Forms.TextBox TXB_chuyendi;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox TXB_chuyenvao;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label LB_vao;
+        private System.Windows.Forms.Label LB_email;
         private System.Windows.Forms.TextBox TXB_email;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label LB_tamtru;
         private System.Windows.Forms.TextBox TXB_sothetamtru;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label LB_sdt;
         private System.Windows.Forms.TextBox TXB_sdt;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LB_dinhdanh;
         private System.Windows.Forms.TextBox TXB_madinhdanh;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TXB_ngaysinh;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LB_ngaysinh;
+        private System.Windows.Forms.Label LB_hoten;
         private System.Windows.Forms.TextBox TXB_hovaten;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox TXB_macudan;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox TXB_nguoithan;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label LB_loaicudan;
+        private System.Windows.Forms.TextBox TXB_loaicd;
+        private System.Windows.Forms.Label LB_quoctich;
         private System.Windows.Forms.TextBox TXB_quoctich;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label LB_thunuoi;
         private System.Windows.Forms.TextBox TXB_thunuoi;
         private Guna.UI.WinForms.GunaGradientButton BTN_thoat;
         private Guna.UI.WinForms.GunaGradientButton BTN_xoa;
         private System.Windows.Forms.Panel panel6;
         private Guna.UI.WinForms.GunaGradientButton BTN_luu;
+        private System.Windows.Forms.Label LB_macd;
+        private System.Windows.Forms.TextBox TXB_macd;
+        private System.Windows.Forms.Label LB_bangiao;
+        private System.Windows.Forms.DateTimePicker DTP_bangiao;
+        private System.Windows.Forms.DateTimePicker DTP_ngaysinh;
+        private System.Windows.Forms.DateTimePicker DTP_di;
+        private System.Windows.Forms.DateTimePicker DTP_vao;
+        private System.Windows.Forms.Label LB_di;
+        private System.Windows.Forms.Label LB_bienso;
+        private System.Windows.Forms.TextBox TXB_diennuoc;
+        private System.Windows.Forms.Label LB_diennuoc;
+        private System.Windows.Forms.TextBox TXB_tinhtrangxe;
+        private System.Windows.Forms.Label LB_tinhtrangxe;
+        private System.Windows.Forms.TextBox TXB_loaixe;
+        private System.Windows.Forms.Label LB_loaixe;
+        private System.Windows.Forms.TextBox TXB_nguoithan;
+        private System.Windows.Forms.Label LB_nguoithan;
+        private System.Windows.Forms.TextBox TXB_bienso;
     }
 }

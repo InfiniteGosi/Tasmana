@@ -264,7 +264,7 @@ namespace DangNhap
 
             if (result == DialogResult.Yes)
             {
-                string deleteMessage = ApartmentBLL.Instance.DeleteCanHo(maCanHoHienTai);
+                string deleteMessage = ApartmentBLL.Instance.DeleteApartment(maCanHoHienTai);
                 MessageBox.Show(deleteMessage);
                 Close();
             }

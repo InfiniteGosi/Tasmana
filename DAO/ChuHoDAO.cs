@@ -27,5 +27,15 @@ namespace DAO
             string query = $"select * from ChuHo where maCanHo = '{maCanHo}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetChuHoByMaCuDan(string maCuDan)
+        {
+            string query = $"select * from ChuHo where maCuDan = '{maCuDan}'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public bool DeleteChuHo(string maCuDan, string maCanHo)
+        {
+            string query = $"delete from ChuHo where maCuDan = '{maCuDan}' and maCanHo = '{maCanHo}'";
+            return DataProvider.Instance.ExecuteNonQuery(query) > 0;
+        }
     }
 }

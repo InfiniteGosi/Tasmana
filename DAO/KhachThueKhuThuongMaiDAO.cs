@@ -26,5 +26,10 @@ namespace DAO
             string query = $"select * from KhachThueKhuThuongMai";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetKhachThueKTMByMaKhach(string maKhachDangThue)
+        {
+            string query = $"select * from KhachThueKhuThuongMai where maKhachDangThue = '{maKhachDangThue}'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }
