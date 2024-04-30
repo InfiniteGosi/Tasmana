@@ -1883,3 +1883,62 @@ BEGIN
 END
 --------------------------------------------------------------------------------------------------------
 GO
+
+---Lấy thông báo quan trọng
+CREATE PROCEDURE [dbo].[GetNoticesPriority]
+    @maBoPhan VARCHAR(10) = NULL,
+    @maNhom VARCHAR(10) = NULL,
+    @maNhanVien VARCHAR(10) = NULL
+AS
+BEGIN
+    SELECT N.*
+    FROM Notice N
+    INNER JOIN Notice_To NT ON N.stt = NT.stt
+    WHERE N.priority = 1
+        AND (
+            NT.isFull = 1
+            OR NT.maBoPhan = @maBoPhan
+            OR NT.maNhom = @maNhom
+            OR NT.maNhanVien = @maNhanVien
+        )
+    ORDER BY N.dateN DESC;
+END;
+GO
+
+---Lấy tất cả thông báo
+CREATE PROCEDURE [dbo].[GetAllNotices]
+    @maBoPhan VARCHAR(10) = NULL,
+    @maNhom VARCHAR(10) = NULL,
+    @maNhanVien VARCHAR(10) = NULL
+AS
+BEGIN
+    SELECT N.*
+    FROM Notice N
+    INNER JOIN Notice_To NT ON N.stt = NT.stt
+    WHERE (
+            NT.isFull = 1
+            OR NT.maBoPhan = @maBoPhan
+            OR NT.maNhom = @maNhom
+            OR NT.maNhanVien = @maNhanVien
+        )
+    ORDER BY N.dateN DESC;
+END;
+GO
+
+---Lấy tất cả thông báo đã gửi
+CREATE PROCEDURE [dbo].[GetNoticesSend]
+    @maBoPhan VARCHAR(10) = NULL,
+    @maNhom VARCHAR(10) = NULL,
+    @maNhanVien VARCHAR(10)
+AS
+BEGIN
+    SELECT N.*
+    FROM Notice N
+	INNER JOIN (
+	    SELECT DISTINCT stt
+	    FROM Notice_To
+	) NT ON N.stt = NT.stt
+    WHERE N.author = @maNhanVien
+	ORDER BY N.dateN DESC;
+END;
+GO

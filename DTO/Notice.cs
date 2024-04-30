@@ -16,12 +16,12 @@ namespace DTO
         public byte[] File { get; set; }
         public string FileName { get; set; }
         public string FileExten { get; set; }
-        public int Priority { get; set; }
+        public bool Priority { get; set; }
         public List<Division> Divisions { get; set; }
         public List<Group> Groups { get; set; }
         public List<Employee> Employees { get; set; }
 
-        public Notice(int stt, string title, string content, DateTime date, string author, byte[] file, string fileName, string fileExten, int priority, List<Division> division, List<Group> group, List<Employee> employee)
+        public Notice(int stt, string title, string content, DateTime date, string author, byte[] file, string fileName, string fileExten, bool priority, List<Division> division, List<Group> group, List<Employee> employee)
         {
             this.STT = stt;
             this.Title = title;
@@ -36,7 +36,7 @@ namespace DTO
             this.Groups = group;
             this.Employees = employee;
         }
-        public Notice(int stt, string title, string content, DateTime date, string author, byte[] file, string fileName, string fileExten, int priority)
+        public Notice(int stt, string title, string content, DateTime date, string author, byte[] file, string fileName, string fileExten, bool priority)
         {
             this.STT = stt;
             this.Title = title;
@@ -48,7 +48,7 @@ namespace DTO
             this.FileExten = fileExten;
             this.Priority = priority;
         }
-        public Notice(int stt, string title, string content, DateTime date, string author, int priority)
+        public Notice(int stt, string title, string content, DateTime date, string author, bool priority)
         {
             this.STT = stt;
             this.Title = title;

@@ -233,6 +233,7 @@ namespace DangNhap
             if (Save())
             {
                 MessageBox.Show("Gửi thành công");
+                this.Close();
             }
             else
             {

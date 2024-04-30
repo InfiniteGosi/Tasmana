@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DTO;
 using DAO;
 using System.Security.Cryptography;
+using System.Data;
 
 namespace DAO
 {
@@ -38,6 +39,21 @@ namespace DAO
         {
             string query = $"SELECT MAX(stt) AS max_stt FROM Notice";
             return (int)DataProvider.Instance.ExecuteScalar(query);
+        }
+
+        public DataTable GetNoticesPriority(Dictionary<string, object> parameters)
+        {
+            return DataProvider.Instance.ExecuteStoredProcedureWithTableReturn("GetNoticesPriority",parameters);
+        }
+
+        public DataTable GetAllNotices(Dictionary<string, object> parameters)
+        {
+            return DataProvider.Instance.ExecuteStoredProcedureWithTableReturn("GetAllNotices", parameters);
+        }
+
+        public DataTable GetNoticesSend(Dictionary<string, object> parameters)
+        {
+            return DataProvider.Instance.ExecuteStoredProcedureWithTableReturn("GetNoticesSend", parameters);
         }
     }
 }
