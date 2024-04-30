@@ -61,11 +61,10 @@ namespace DangNhap
             this.LB_error.Enabled = false;
             this.LB_error.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_error.ForeColor = System.Drawing.Color.Red;
-            this.LB_error.Location = new System.Drawing.Point(632, 347);
+            this.LB_error.Location = new System.Drawing.Point(630, 407);
             this.LB_error.Name = "LB_error";
             this.LB_error.Size = new System.Drawing.Size(0, 17);
             this.LB_error.TabIndex = 18;
-            this.LB_error.Visible = false;
             // 
             // BT_DangNhap
             // 
