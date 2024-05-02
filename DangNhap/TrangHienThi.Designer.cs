@@ -467,7 +467,6 @@
             // CBB_ngonngu
             // 
             resources.ApplyResources(this.CBB_ngonngu, "CBB_ngonngu");
-            this.CBB_ngonngu.FormattingEnabled = true;
             this.CBB_ngonngu.Items.AddRange(new object[] {
             resources.GetString("CBB_ngonngu.Items"),
             resources.GetString("CBB_ngonngu.Items1")});

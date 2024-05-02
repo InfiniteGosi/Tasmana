@@ -318,21 +318,34 @@ namespace DangNhap
 
         private void TrangHienThi_Load(object sender, EventArgs e)
         {
+            // Set Default Language
+            CBB_ngonngu.SelectedIndex = 0;
             PhanQuyen();
         }
+
+        
+
+        int currentLanguage = -1;
         private void UpdateLanguageEn()
         {
             LB_tendangnhap.Text = $"Hello, {currentAccount.EmployeeId} - {currentAccount.Level}";
-            CountJobState();
+            // Show current used language
+            currentLanguage = 1;
+            CBB_ngonngu.SelectedIndex = 1;
         }
         private void UpdateLanguageVi()
         {
             LB_tendangnhap.Text = $"Xin chào, {currentAccount.EmployeeId} - {currentAccount.Level}";
-            CountJobState();
+            // Show current used language
+            currentLanguage = 0;
+            CBB_ngonngu.SelectedIndex = 0;
         }
 
         private void CBB_ngonngu_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // prevent infinite loop
+            if (currentLanguage == CBB_ngonngu.SelectedIndex)
+                return;
             switch (CBB_ngonngu.SelectedIndex)
             {
                 case 0:
@@ -350,6 +363,8 @@ namespace DangNhap
             }
             // Phân quyền chức năng khi load lại 
             PhanQuyen();
+            // Load lại tình trạng công việc
+            CountJobState();
         }
     }
 }
