@@ -611,6 +611,9 @@
     <EmbeddedResource Include="CuDan.resx">
       <DependentUpon>CuDan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CuDan.vi.resx">
+      <DependentUpon>CuDan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.en.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
