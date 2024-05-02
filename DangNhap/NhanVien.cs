@@ -62,21 +62,40 @@ namespace DangNhap
         {
             GGC_danhsachnv.Size = new System.Drawing.Size(950, 404);
             GGC_danhsachnv.DataSource = EmployeeBLL.Instance.GetEmployees();
-            
-            GGC_danhsachnv.TableDescriptor.Columns[0].HeaderText = "Mã nhân viên";
-            GGC_danhsachnv.TableDescriptor.Columns[1].HeaderText = "Họ";
-            GGC_danhsachnv.TableDescriptor.Columns[2].HeaderText = "Tên";
-            GGC_danhsachnv.TableDescriptor.Columns[3].HeaderText = "Mã định danh";
-            GGC_danhsachnv.TableDescriptor.Columns[4].HeaderText = "Mã Bộ phận";
-            GGC_danhsachnv.TableDescriptor.Columns[5].HeaderText = "Chức vụ";
-            GGC_danhsachnv.TableDescriptor.Columns[6].HeaderText = "Tổng công việc";
-            GGC_danhsachnv.TableDescriptor.Columns[7].HeaderText = "Hoàn thành";
-            GGC_danhsachnv.TableDescriptor.Columns[8].HeaderText = "Chưa bắt đầu";
-            GGC_danhsachnv.TableDescriptor.Columns[9].HeaderText = "Đang thực hiện";
-            GGC_danhsachnv.TableDescriptor.Columns[10].HeaderText = "Trễ hạn";
-            GGC_danhsachnv.TableDescriptor.Columns[11].HeaderText = "Công việc Phòng ban";
-            GGC_danhsachnv.TableDescriptor.Columns[12].HeaderText = "Công việc Nhóm";
-
+            //Tiếng Việt
+            if (BTN_themnhanvien.Text == "Thêm nhân viên")
+            {
+                GGC_danhsachnv.TableDescriptor.Columns[0].HeaderText = "Mã nhân viên";
+                GGC_danhsachnv.TableDescriptor.Columns[1].HeaderText = "Họ";
+                GGC_danhsachnv.TableDescriptor.Columns[2].HeaderText = "Tên";
+                GGC_danhsachnv.TableDescriptor.Columns[3].HeaderText = "Mã định danh";
+                GGC_danhsachnv.TableDescriptor.Columns[4].HeaderText = "Mã Bộ phận";
+                GGC_danhsachnv.TableDescriptor.Columns[5].HeaderText = "Chức vụ";
+                GGC_danhsachnv.TableDescriptor.Columns[6].HeaderText = "Tổng công việc";
+                GGC_danhsachnv.TableDescriptor.Columns[7].HeaderText = "Hoàn thành";
+                GGC_danhsachnv.TableDescriptor.Columns[8].HeaderText = "Chưa bắt đầu";
+                GGC_danhsachnv.TableDescriptor.Columns[9].HeaderText = "Đang thực hiện";
+                GGC_danhsachnv.TableDescriptor.Columns[10].HeaderText = "Trễ hạn";
+                GGC_danhsachnv.TableDescriptor.Columns[11].HeaderText = "Công việc Phòng ban";
+                GGC_danhsachnv.TableDescriptor.Columns[12].HeaderText = "Công việc Nhóm";
+            }
+            //Tiếng Anh
+            else
+            {
+                GGC_danhsachnv.TableDescriptor.Columns[0].HeaderText = "Employees ID";
+                GGC_danhsachnv.TableDescriptor.Columns[1].HeaderText = "Surname";
+                GGC_danhsachnv.TableDescriptor.Columns[2].HeaderText = "Name";
+                GGC_danhsachnv.TableDescriptor.Columns[3].HeaderText = "Identifier";
+                GGC_danhsachnv.TableDescriptor.Columns[4].HeaderText = "Division ID";
+                GGC_danhsachnv.TableDescriptor.Columns[5].HeaderText = "Position";
+                GGC_danhsachnv.TableDescriptor.Columns[6].HeaderText = "Total tasks";
+                GGC_danhsachnv.TableDescriptor.Columns[7].HeaderText = "Completed tasks";
+                GGC_danhsachnv.TableDescriptor.Columns[8].HeaderText = "Not started tasks";
+                GGC_danhsachnv.TableDescriptor.Columns[9].HeaderText = "On going tasks";
+                GGC_danhsachnv.TableDescriptor.Columns[10].HeaderText = "Late tasks";
+                GGC_danhsachnv.TableDescriptor.Columns[11].HeaderText = "Division tasks";
+                GGC_danhsachnv.TableDescriptor.Columns[12].HeaderText = "Group tasks";
+            }
 
             GGC_danhsachnv.TopLevelGroupOptions.ShowFilterBar = true;
             GGC_danhsachnv.ActivateCurrentCellBehavior = GridCellActivateAction.None;

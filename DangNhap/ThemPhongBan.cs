@@ -35,11 +35,26 @@ namespace DangNhap
                     column.AllowFilter = true;
                 }
                 // Thiết lập các tiêu đề của cột
-                string[] headers = { "Mã bộ phận", "Tên bộ phận", "Số điện thoại", "Email"};
-                for (int i = 0; i < columns.Count && i < headers.Length; i++)
+
+                //Tiếng Việt
+                if(LB_Phongban.Text == "THÔNG TIN PHÒNG BAN")
                 {
-                    columns[i].HeaderText = headers[i];
+                    string[] headers = { "Mã bộ phận", "Tên bộ phận", "Số điện thoại", "Email" };
+                    for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                    {
+                        columns[i].HeaderText = headers[i];
+                    }
                 }
+                //Tiếng Anh
+                else
+                {
+                    string[] headers = { "Division ID", "Division name", "Phone", "Email" };
+                    for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                    {
+                        columns[i].HeaderText = headers[i];
+                    }
+                }
+                
             }
             GridDynamicFilter dynamicFilter = new GridDynamicFilter();
             dynamicFilter.WireGrid(GGC_PhongBan);
@@ -101,7 +116,8 @@ namespace DangNhap
             }
             return false;
         }
-        private void BTN_ok_Click(object sender, EventArgs e)
+        //Tiếng Việt
+        private void ThongTinPhongBan_Vi()
         {
             if (string.IsNullOrEmpty(TXB_maphongban.Text))
             {
@@ -118,19 +134,63 @@ namespace DangNhap
                 MessageBox.Show("Vui lòng điền số điện thoại của phòng ban");
                 return;
             }
-            if(string.IsNullOrEmpty(TXB_Email.Text))
+            if (string.IsNullOrEmpty(TXB_Email.Text))
             {
                 MessageBox.Show("Vui lòng điền địa chỉ email của phòng ban");
                 return;
             }
-            if(EditDivision())
+            if (EditDivision())
             {
                 MessageBox.Show("Thay đổi thành công");
-                LoadPhongBan(); 
+                LoadPhongBan();
             }
             else
             {
                 MessageBox.Show("Thay đổi thất bại");
+            }
+        }
+        //Tiếng Anh
+        private void ThongTinPhongBan_En()
+        {
+            if (string.IsNullOrEmpty(TXB_maphongban.Text))
+            {
+                MessageBox.Show("Please fill \"Division ID \"");
+                return;
+            }
+            if (string.IsNullOrEmpty(TXB_tenphongban.Text))
+            {
+                MessageBox.Show("Please fill \"Division name\"");
+                return;
+            }
+            if (string.IsNullOrEmpty(TXB_SDT.Text))
+            {
+                MessageBox.Show("\"Please fill \"Phone\"");
+                return;
+            }
+            if (string.IsNullOrEmpty(TXB_Email.Text))
+            {
+                MessageBox.Show("\"Please fill \"Email\"");
+                return;
+            }
+            if (EditDivision())
+            {
+                MessageBox.Show("Successful change");
+                LoadPhongBan();
+            }
+            else
+            {
+                MessageBox.Show("Change failed");
+            }
+        }
+        private void BTN_ok_Click(object sender, EventArgs e)
+        {
+            if(LB_Phongban.Text == "THÔNG TIN PHÒNG BAN")
+            {
+                ThongTinPhongBan_Vi();
+            }
+            else
+            {
+                ThongTinPhongBan_En();
             }
         }
         //Di chuyển form

@@ -715,6 +715,9 @@
     <EmbeddedResource Include="ThemPhongBan.resx">
       <DependentUpon>ThemPhongBan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThemPhongBan.vi.resx">
+      <DependentUpon>ThemPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThongBao.en.resx">
       <DependentUpon>ThongBao.cs</DependentUpon>
     </EmbeddedResource>

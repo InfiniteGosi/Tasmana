@@ -148,24 +148,25 @@ namespace DangNhap
             }
             return false;
         }
-        private void BTN_ok_Click(object sender, EventArgs e)
+        //Tiếng Việt
+        private void ThemNhom_Vi()
         {
-            if(CBB_phongban.SelectedIndex == -1)
+            if (CBB_phongban.SelectedIndex == -1)
             {
                 MessageBox.Show("Vui lòng chọn Phòng ban");
                 return;
             }
-            if(CBB_nhanvien.SelectedIndex == -1) 
+            if (CBB_nhanvien.SelectedIndex == -1)
             {
                 MessageBox.Show("Vui lòng chọn nhóm trưởng");
                 return;
             }
-            if(string.IsNullOrEmpty(TXB_maNhom.Text))
+            if (string.IsNullOrEmpty(TXB_maNhom.Text))
             {
                 MessageBox.Show("Vui lòng điền mã nhóm");
                 return;
             }
-            if(SaveGroup())
+            if (SaveGroup())
             {
                 MessageBox.Show("Thêm thành công");
                 this.Close();
@@ -173,6 +174,45 @@ namespace DangNhap
             else
             {
                 MessageBox.Show("Thêm thất bại");
+            }
+        }
+        //Tiếng Anh
+        private void ThemNhom_En()
+        {
+            if (CBB_phongban.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a Division");
+                return;
+            }
+            if (CBB_nhanvien.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a Group Leader ID");
+                return;
+            }
+            if (string.IsNullOrEmpty(TXB_maNhom.Text))
+            {
+                MessageBox.Show("Please fill \"Group ID\"");
+                return;
+            }
+            if (SaveGroup())
+            {
+                MessageBox.Show("Successful change");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Change failed");
+            }
+        }
+        private void BTN_ok_Click(object sender, EventArgs e)
+        {
+            if(LB_themmoi.Text == "THÊM NHÓM")
+            {
+                ThemNhom_Vi();
+            }
+            else
+            {
+                ThemNhom_En();
             }
         }
 
