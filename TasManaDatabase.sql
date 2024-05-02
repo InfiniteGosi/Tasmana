@@ -1074,6 +1074,9 @@ begin
 end
 go
 
+
+	
+
 -- Procedure thêm Nhóm
 Create PROCEDURE [dbo].[SP_ThemNhom]
 	@maNhom VARCHAR(10),
