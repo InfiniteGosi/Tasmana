@@ -326,6 +326,27 @@
   <data name="label1.Text" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="Rad_nu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Rad_nu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 27</value>
+  </data>
+  <data name="Rad_nu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 26</value>
+  </data>
+  <data name="Rad_nu.Text" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="Rad_nam.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Rad_nam.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 26</value>
+  </data>
+  <data name="Rad_nam.Text" xml:space="preserve">
+    <value>Male</value>
+  </data>
   <data name="GB_gioitinh.Text" xml:space="preserve">
     <value>Gender</value>
   </data>
@@ -355,27 +376,6 @@
   </data>
   <data name="LB_ngaysinh.Text" xml:space="preserve">
     <value>Date of birth</value>
-  </data>
-  <data name="Rad_nu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Rad_nu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>123, 27</value>
-  </data>
-  <data name="Rad_nu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 26</value>
-  </data>
-  <data name="Rad_nu.Text" xml:space="preserve">
-    <value>Female</value>
-  </data>
-  <data name="Rad_nam.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Rad_nam.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 26</value>
-  </data>
-  <data name="Rad_nam.Text" xml:space="preserve">
-    <value>Male</value>
   </data>
   <data name="BTN_luu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>

@@ -154,22 +154,22 @@ namespace DangNhap
         {
             if (string.IsNullOrEmpty(TXB_maphongban.Text))
             {
-                MessageBox.Show("Please fill \"Division ID \"");
+                MessageBox.Show("Please enter \"Division ID \"");
                 return;
             }
             if (string.IsNullOrEmpty(TXB_tenphongban.Text))
             {
-                MessageBox.Show("Please fill \"Division name\"");
+                MessageBox.Show("Please enter \"Division name\"");
                 return;
             }
             if (string.IsNullOrEmpty(TXB_SDT.Text))
             {
-                MessageBox.Show("\"Please fill \"Phone\"");
+                MessageBox.Show("\"Please enter \"Phone\"");
                 return;
             }
             if (string.IsNullOrEmpty(TXB_Email.Text))
             {
-                MessageBox.Show("\"Please fill \"Email\"");
+                MessageBox.Show("\"Please enter \"Email\"");
                 return;
             }
             if (EditDivision())

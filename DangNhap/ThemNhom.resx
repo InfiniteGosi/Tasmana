@@ -154,9 +154,6 @@
   <data name="&gt;&gt;panel3.Name" xml:space="preserve">
     <value>panel3</value>
   </data>
-  <data name="&gt;&gt;LB_themmoi.Name" xml:space="preserve">
-    <value>LB_themmoi</value>
-  </data>
   <data name="&gt;&gt;panel2.Name" xml:space="preserve">
     <value>panel2</value>
   </data>
@@ -195,8 +192,8 @@
   <data name="BTN_xoa.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="&gt;&gt;LB_maphongban.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="CBB_nhanvien.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -559,8 +556,8 @@
   <data name="BTN_xoa.Location" type="System.Drawing.Point, System.Drawing">
     <value>557, 345</value>
   </data>
-  <data name="&gt;&gt;CBB_nhanvien.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;CBB_nhanvien.Parent" xml:space="preserve">
+    <value>PN_main</value>
   </data>
   <data name="&gt;&gt;BTN_ok.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -625,8 +622,8 @@
   <data name="TXB_maNhom.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
   </data>
-  <data name="&gt;&gt;CBB_nhanvien.Parent" xml:space="preserve">
-    <value>PN_main</value>
+  <data name="&gt;&gt;LB_themmoi.Name" xml:space="preserve">
+    <value>LB_themmoi</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>847, 1</value>
@@ -646,8 +643,11 @@
   <data name="&gt;&gt;BTN_ok.Name" xml:space="preserve">
     <value>BTN_ok</value>
   </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;CBB_nhanvien.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LB_maphongban.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="LB_maphongban.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
@@ -680,6 +680,6 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>vi</value>
+    <value>en</value>
   </metadata>
 </root>

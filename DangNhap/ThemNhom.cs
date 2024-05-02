@@ -181,17 +181,17 @@ namespace DangNhap
         {
             if (CBB_phongban.SelectedIndex == -1)
             {
-                MessageBox.Show("Please select a Division");
+                MessageBox.Show("Please select \"Division\"");
                 return;
             }
             if (CBB_nhanvien.SelectedIndex == -1)
             {
-                MessageBox.Show("Please select a Group Leader ID");
+                MessageBox.Show("Please select \"Group Leader ID\"");
                 return;
             }
             if (string.IsNullOrEmpty(TXB_maNhom.Text))
             {
-                MessageBox.Show("Please fill \"Group ID\"");
+                MessageBox.Show("Please enter \"Group ID\"");
                 return;
             }
             if (SaveGroup())
