@@ -291,8 +291,8 @@ namespace DangNhap
                 }
             }
         }
-
-        private void TrangHienThi_Load(object sender, EventArgs e)
+        // Phân quyền chức năng
+        private void PhanQuyen()
         {
             LB_tendangnhap.Text = $"Hello, {currentAccount.EmployeeId} - {currentAccount.Level}";
             Timer_KTCongViec.Start();
@@ -314,6 +314,11 @@ namespace DangNhap
             }
             // Hiển thị tình trạng công việc hiện tại
             CountJobState();
+        }
+
+        private void TrangHienThi_Load(object sender, EventArgs e)
+        {
+            PhanQuyen();
         }
         private void UpdateLanguageEn()
         {
@@ -343,6 +348,8 @@ namespace DangNhap
                     UpdateLanguageEn();
                     break;
             }
+            // Phân quyền chức năng khi load lại 
+            PhanQuyen();
         }
     }
 }
