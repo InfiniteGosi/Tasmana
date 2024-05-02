@@ -267,8 +267,8 @@
   <data name="LB_Phongban.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 16</value>
   </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>235</value>
+  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
+    <value>panel3</value>
   </data>
   <data name="LB_SDT.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
@@ -303,9 +303,6 @@
   <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
-    <value>panel3</value>
-  </data>
   <data name="GGC_PhongBan.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 29</value>
   </data>
@@ -321,6 +318,9 @@
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="&gt;&gt;LB_Phongban.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;LB_Email.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -354,9 +354,6 @@
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ThemPhongBan</value>
-  </data>
-  <data name="&gt;&gt;LB_maphongban.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="TXB_tenphongban.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -406,9 +403,6 @@
   <data name="TXB_maphongban.TabIndex" type="System.Int32, mscorlib">
     <value>223</value>
   </data>
-  <data name="LB_Phongban.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="LB_maphongban.Text" xml:space="preserve">
     <value>Mã phòng ban</value>
   </data>
@@ -439,6 +433,9 @@
   <data name="LB_maphongban.TabIndex" type="System.Int32, mscorlib">
     <value>214</value>
   </data>
+  <data name="TXB_tenphongban.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
   <data name="LB_MaNhom.Text" xml:space="preserve">
     <value>Tên phòng ban</value>
   </data>
@@ -463,6 +460,9 @@
   <data name="&gt;&gt;LB_Phongban.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;LB_MaNhom.Parent" xml:space="preserve">
+    <value>PN_main</value>
+  </data>
   <data name="GGC_PhongBan.Text" xml:space="preserve">
     <value>gridGroupingControl1</value>
   </data>
@@ -481,8 +481,8 @@
   <data name="panel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
   </data>
-  <data name="&gt;&gt;LB_Phongban.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>235</value>
   </data>
   <data name="TXB_Email.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -553,6 +553,9 @@
   <data name="LB_Phongban.Text" xml:space="preserve">
     <value>THÔNG TIN PHÒNG BAN</value>
   </data>
+  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>238</value>
   </data>
@@ -580,6 +583,9 @@
   <data name="LB_Email.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 22</value>
   </data>
+  <data name="&gt;&gt;TXB_maphongban.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Right</value>
   </data>
@@ -594,9 +600,6 @@
   </data>
   <data name="&gt;&gt;TXB_SDT.Name" xml:space="preserve">
     <value>TXB_SDT</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;TXB_maphongban.Name" xml:space="preserve">
     <value>TXB_maphongban</value>
@@ -627,6 +630,9 @@
   </data>
   <data name="&gt;&gt;TXB_Email.Parent" xml:space="preserve">
     <value>PN_main</value>
+  </data>
+  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
+    <value>236</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -661,9 +667,6 @@
   <data name="&gt;&gt;GGC_PhongBan.Parent" xml:space="preserve">
     <value>PN_main</value>
   </data>
-  <data name="&gt;&gt;LB_Email.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>1477, 1</value>
   </data>
@@ -682,37 +685,34 @@
   <data name="&gt;&gt;LB_SDT.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="LB_Email.TabIndex" type="System.Int32, mscorlib">
-    <value>231</value>
-  </data>
-  <data name="TXB_tenphongban.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
+  <data name="&gt;&gt;LB_maphongban.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="LB_maphongban.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
   </data>
-  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="LB_Email.TabIndex" type="System.Int32, mscorlib">
+    <value>231</value>
   </data>
   <data name="&gt;&gt;LB_maphongban.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
-    <value>236</value>
+  <data name="&gt;&gt;LB_Email.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;LB_maphongban.Parent" xml:space="preserve">
     <value>PN_main</value>
   </data>
-  <data name="&gt;&gt;LB_MaNhom.Parent" xml:space="preserve">
-    <value>PN_main</value>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TXB_maphongban.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="LB_Phongban.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>vi</value>
+    <value>en</value>
   </metadata>
 </root>
