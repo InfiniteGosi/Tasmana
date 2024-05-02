@@ -117,21 +117,143 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;LB_quyen.Name" xml:space="preserve">
+    <value>LB_quyen</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="BTN_excel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAf9JREFUWEftlzEoRVEYx19mySSTDDLJLJNBBpNMkkEyyCQZbQaTJEkmk8FgNJok
-        mWSQJBkMkiSDJMPz+x/f4bnn3nef+84rg1/96n3fd865/17XfVepknK5vIhPEbzBXju2dth0irF4wN+F
-        YIMPsIcTBX1Gzz322PH5sNgHWLTWr2HvHZ7hiw4C1d02rg4LYwXYwEF8RXGLXbYkGxbFCrBun4fxDYVu
-        zA63KAsWRPsGrFQ9iu8orrDdRiEMYwU4wTlzHg/Rs29LQxjGClCNM1sawjBGgJYMF1Cc29IQhnUHyIIz
-        Zz+PLl9YK4RhEIDPTdiesM3GDmqZXNNqYwe1D3BprRCGaQE6UQ+VyhtJzNlcrrrOT3bdAQZ14QDNqP4A
-        rmAlusvTLi5m7AgHdbEAgroNj7EfkyHSWLKtX9ArHkDQU4gj7MNqIdbQdn1Dr74Agn5eiG1ssuU/oO8D
-        XFkrhGFeALmFeulIhtADaAr1kzyOQ7bNQV1fAHpSX68nLUQlJ7bVQV08AHXy4h4fIu0vYdK2O6h9gGtr
-        hTAMAvA56+IevQEpRHKNe054qAsH0ItqHj7Epqu+mbVj6gqgO1svmHk+oi7iX0DEgR1TPECtsGcMpxMO
-        27jxAfLgzD8T4MZaIQz/A/yZADs4Eln9hoiaAjSSqgGW0f+L3Si37HJQKn0AqxM8fx1MQc4AAAAASUVO
-        RK5CYII=
-</value>
+  <data name="GGC_hienthicongviec.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 114</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="LB_loai.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;LB_quyen.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="BTN_in.Text" xml:space="preserve">
+    <value>In</value>
+  </data>
+  <data name="&gt;&gt;LB_loai.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BTN_PDF.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="CBB_loaicv.TabIndex" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BTN_themcongviec.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="BTN_in.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="CBB_loaicv.Items" xml:space="preserve">
+    <value>Nhân viên</value>
+  </data>
+  <data name="GGC_hienthicongviec.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <data name="&gt;&gt;BTN_PDF.Name" xml:space="preserve">
+    <value>BTN_PDF</value>
+  </data>
+  <data name="LB_loai.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 53</value>
+  </data>
+  <data name="LB_quyen.Text" xml:space="preserve">
+    <value>Chọn phân quyền</value>
+  </data>
+  <data name="BTN_PDF.TabIndex" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="&gt;&gt;CBB_phanquyen.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;BTN_excel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="CBB_loaicv.Items2" xml:space="preserve">
+    <value>Phòng ban</value>
+  </data>
+  <data name="LB_quyen.TabIndex" type="System.Int32, mscorlib">
+    <value>103</value>
+  </data>
+  <data name="&gt;&gt;CBB_phanquyen.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="BTN_excel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="BTN_in.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="&gt;&gt;CBB_loaicv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BTN_PDF.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="GGC_hienthicongviec.Text" xml:space="preserve">
+    <value>gridGroupingControl1</value>
+  </data>
+  <data name="BTN_PDF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 37</value>
+  </data>
+  <data name="CBB_phanquyen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 72</value>
+  </data>
+  <data name="&gt;&gt;LB_loai.Name" xml:space="preserve">
+    <value>LB_loai</value>
+  </data>
+  <data name="&gt;&gt;GGC_hienthicongviec.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl, Syncfusion.Grid.Grouping.Windows, Version=25.1462.39.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="BTN_PDF.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="&gt;&gt;BTN_in.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;BTN_in.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="GGC_hienthicongviec.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;GGC_hienthicongviec.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GGC_hienthicongviec.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="BTN_PDF.Text" xml:space="preserve">
+    <value>PDF</value>
+  </data>
+  <data name="&gt;&gt;BTN_themcongviec.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;BTN_in.Name" xml:space="preserve">
+    <value>BTN_in</value>
+  </data>
+  <data name="&gt;&gt;GGC_hienthicongviec.Name" xml:space="preserve">
+    <value>GGC_hienthicongviec</value>
+  </data>
+  <data name="&gt;&gt;CBB_phanquyen.Name" xml:space="preserve">
+    <value>CBB_phanquyen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>CongViecChung</value>
+  </data>
+  <data name="BTN_themcongviec.Text" xml:space="preserve">
+    <value>Thêm công việc</value>
+  </data>
+  <data name="BTN_excel.Text" xml:space="preserve">
+    <value>Excel</value>
   </data>
   <data name="BTN_PDF.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -150,6 +272,114 @@
         C8+dvVnp9HTELlMujNrjr4KW3t6f5VXQsn0DuiP9NnykVusv6k2HR9P7+Z8AAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="&gt;&gt;BTN_themcongviec.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="BTN_excel.TabIndex" type="System.Int32, mscorlib">
+    <value>83</value>
+  </data>
+  <data name="LB_loai.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 16</value>
+  </data>
+  <data name="&gt;&gt;BTN_excel.Name" xml:space="preserve">
+    <value>BTN_excel</value>
+  </data>
+  <data name="&gt;&gt;LB_quyen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CBB_phanquyen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 24</value>
+  </data>
+  <data name="GGC_hienthicongviec.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1254, 393</value>
+  </data>
+  <data name="BTN_themcongviec.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 35</value>
+  </data>
+  <data name="CBB_phanquyen.Items1" xml:space="preserve">
+    <value>Bộ phận</value>
+  </data>
+  <data name="BTN_themcongviec.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
+  <data name="&gt;&gt;CBB_loaicv.Name" xml:space="preserve">
+    <value>CBB_loaicv</value>
+  </data>
+  <data name="&gt;&gt;CBB_loaicv.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="BTN_in.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 37</value>
+  </data>
+  <data name="BTN_PDF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>130, 690</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1376, 782</value>
+  </data>
+  <data name="CBB_loaicv.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 24</value>
+  </data>
+  <data name="BTN_excel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10.2pt</value>
+  </data>
+  <data name="&gt;&gt;BTN_PDF.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="CBB_phanquyen.Items3" xml:space="preserve">
+    <value>Toàn bộ</value>
+  </data>
+  <data name="CBB_phanquyen.Items" xml:space="preserve">
+    <value>Cá nhân</value>
+  </data>
+  <data name="BTN_themcongviec.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1147, 39</value>
+  </data>
+  <data name="CBB_loaicv.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 72</value>
+  </data>
+  <data name="&gt;&gt;LB_quyen.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CBB_phanquyen.TabIndex" type="System.Int32, mscorlib">
+    <value>101</value>
+  </data>
+  <data name="&gt;&gt;LB_loai.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;CBB_loaicv.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="LB_loai.TabIndex" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <data name="BTN_PDF.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10.2pt</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>CongViecChung</value>
+  </data>
+  <data name="BTN_themcongviec.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;BTN_themcongviec.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="BTN_in.Location" type="System.Drawing.Point, System.Drawing">
+    <value>238, 690</value>
+  </data>
+  <data name="LB_quyen.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LB_loai.Text" xml:space="preserve">
+    <value>Chọn loại công việc</value>
+  </data>
+  <data name="&gt;&gt;CBB_phanquyen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LB_quyen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 16</value>
+  </data>
   <data name="BTN_in.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -162,4 +392,61 @@
         7ohcAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="BTN_excel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 37</value>
+  </data>
+  <data name="&gt;&gt;BTN_themcongviec.Name" xml:space="preserve">
+    <value>BTN_themcongviec</value>
+  </data>
+  <data name="LB_quyen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>183, 53</value>
+  </data>
+  <data name="&gt;&gt;BTN_excel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="BTN_excel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 690</value>
+  </data>
+  <data name="&gt;&gt;BTN_in.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;LB_loai.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="CBB_loaicv.Items1" xml:space="preserve">
+    <value>Nhóm</value>
+  </data>
+  <data name="BTN_in.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10.2pt</value>
+  </data>
+  <data name="CBB_phanquyen.Items2" xml:space="preserve">
+    <value>Công ty</value>
+  </data>
+  <data name="&gt;&gt;BTN_excel.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="BTN_excel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAf9JREFUWEftlzEoRVEYx19mySSTDDLJLJNBBpNMkkEyyCQZbQaTJEkmk8FgNJok
+        mWSQJBkMkiSDJMPz+x/f4bnn3nef+84rg1/96n3fd865/17XfVepknK5vIhPEbzBXju2dth0irF4wN+F
+        YIMPsIcTBX1Gzz322PH5sNgHWLTWr2HvHZ7hiw4C1d02rg4LYwXYwEF8RXGLXbYkGxbFCrBun4fxDYVu
+        zA63KAsWRPsGrFQ9iu8orrDdRiEMYwU4wTlzHg/Rs29LQxjGClCNM1sawjBGgJYMF1Cc29IQhnUHyIIz
+        Zz+PLl9YK4RhEIDPTdiesM3GDmqZXNNqYwe1D3BprRCGaQE6UQ+VyhtJzNlcrrrOT3bdAQZ14QDNqP4A
+        rmAlusvTLi5m7AgHdbEAgroNj7EfkyHSWLKtX9ArHkDQU4gj7MNqIdbQdn1Dr74Agn5eiG1ssuU/oO8D
+        XFkrhGFeALmFeulIhtADaAr1kzyOQ7bNQV1fAHpSX68nLUQlJ7bVQV08AHXy4h4fIu0vYdK2O6h9gGtr
+        hTAMAvA56+IevQEpRHKNe054qAsH0ItqHj7Epqu+mbVj6gqgO1svmHk+oi7iX0DEgR1TPECtsGcMpxMO
+        27jxAfLgzD8T4MZaIQz/A/yZADs4Eln9hoiaAjSSqgGW0f+L3Si37HJQKn0AqxM8fx1MQc4AAAAASUVO
+        RK5CYII=
+</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>vi</value>
+  </metadata>
 </root>

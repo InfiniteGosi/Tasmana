@@ -117,4 +117,526 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1779, 777</value>
+  </data>
+  <data name="CBB_Nam.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1357, 102</value>
+  </data>
+  <data name="&gt;&gt;LB_TongHop.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="LB_ThoiGianTK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 22</value>
+  </data>
+  <data name="&gt;&gt;LB_TongHop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LB_ToiNgay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>362, 34</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="LB_MucTieuThongKe.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;LB_MucTieuThongKe.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;CBB_DuLieuMuonThongKe.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LB_ThoiGianTK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LB_Nam.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LB_TimeOption.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="LB_DuLieuThongKe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>362, 106</value>
+  </data>
+  <data name="LB_MucTieuThongKe.TabIndex" type="System.Int32, mscorlib">
+    <value>253</value>
+  </data>
+  <data name="LB_ThoiGianTK.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GGC_ThongKe.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;GGC_ThongKe.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="LB_DuLieuThongKe.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="CBB_DuLieuTK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 107</value>
+  </data>
+  <data name="LB_ThoiGianTK.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Btn_XuatDoThi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1638, 102</value>
+  </data>
+  <data name="&gt;&gt;LB_Nam.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="DTP_DenNgay.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="&gt;&gt;CBB_LoaiThoiGian.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CBB_ThoiGian.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DTP_DenNgay.TabIndex" type="System.Int32, mscorlib">
+    <value>262</value>
+  </data>
+  <data name="&gt;&gt;LB_Nam.Name" xml:space="preserve">
+    <value>LB_Nam</value>
+  </data>
+  <data name="&gt;&gt;DTP_TuNgay.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="LB_TongHop.TabIndex" type="System.Int32, mscorlib">
+    <value>266</value>
+  </data>
+  <data name="LB_Nam.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CBB_DuLieuTK.TabIndex" type="System.Int32, mscorlib">
+    <value>251</value>
+  </data>
+  <data name="&gt;&gt;BTN_ThongKe.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="LB_TimeOption.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="&gt;&gt;BTN_ThongKe.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;CBB_Nam.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;BTN_ThongKe.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="GGC_ThongKe.TabIndex" type="System.Int32, mscorlib">
+    <value>260</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CBB_ThoiGian.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;DTP_DenNgay.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LB_ToiNgay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LB_TuNgay.Name" xml:space="preserve">
+    <value>LB_TuNgay</value>
+  </data>
+  <data name="&gt;&gt;CBB_Nam.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ThongKeCanHo</value>
+  </data>
+  <data name="CBB_LoaiThoiGian.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 24</value>
+  </data>
+  <data name="BTN_ThongKe.TabIndex" type="System.Int32, mscorlib">
+    <value>255</value>
+  </data>
+  <data name="&gt;&gt;Btn_XuatDoThi.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="LB_TimeOption.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CBB_ThoiGian.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1357, 30</value>
+  </data>
+  <data name="&gt;&gt;LB_DuLieuThongKe.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CBB_Nam.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="LB_ThoiGianTK.Text" xml:space="preserve">
+    <value>Thống kê theo</value>
+  </data>
+  <data name="LB_ToiNgay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 22</value>
+  </data>
+  <data name="LB_DuLieuThongKe.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CBB_LoaiThoiGian.Location" type="System.Drawing.Point, System.Drawing">
+    <value>914, 107</value>
+  </data>
+  <data name="&gt;&gt;Btn_XuatDoThi.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CBB_DuLieuTK.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="DTP_DenNgay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>475, 26</value>
+  </data>
+  <data name="CBB_ThoiGian.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 24</value>
+  </data>
+  <data name="LB_TuNgay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 22</value>
+  </data>
+  <data name="&gt;&gt;LB_TongHop.Name" xml:space="preserve">
+    <value>LB_TongHop</value>
+  </data>
+  <data name="&gt;&gt;Btn_XuatDoThi.Name" xml:space="preserve">
+    <value>Btn_XuatDoThi</value>
+  </data>
+  <data name="&gt;&gt;CBB_DuLieuTK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Btn_XuatDoThi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 26</value>
+  </data>
+  <data name="GGC_ThongKe.Text" xml:space="preserve">
+    <value>gridGroupingControl1</value>
+  </data>
+  <data name="CBB_DuLieuMuonThongKe.TabIndex" type="System.Int32, mscorlib">
+    <value>265</value>
+  </data>
+  <data name="LB_DuLieuThongKe.Text" xml:space="preserve">
+    <value>Dữ liệu cần thống kê</value>
+  </data>
+  <data name="&gt;&gt;LB_TimeOption.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CBB_LoaiThoiGian.TabIndex" type="System.Int32, mscorlib">
+    <value>268</value>
+  </data>
+  <data name="BTN_ThongKe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1638, 35</value>
+  </data>
+  <data name="LB_MucTieuThongKe.Text" xml:space="preserve">
+    <value>Thống kê</value>
+  </data>
+  <data name="&gt;&gt;CBB_DuLieuMuonThongKe.Name" xml:space="preserve">
+    <value>CBB_DuLieuMuonThongKe</value>
+  </data>
+  <data name="&gt;&gt;LB_TongHop.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="LB_TimeOption.Text" xml:space="preserve">
+    <value>Chọn thời gian</value>
+  </data>
+  <data name="LB_Nam.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 22</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>ThongKeCanHo</value>
+  </data>
+  <data name="GGC_ThongKe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1710, 517</value>
+  </data>
+  <data name="&gt;&gt;DTP_TuNgay.Name" xml:space="preserve">
+    <value>DTP_TuNgay</value>
+  </data>
+  <data name="LB_TuNgay.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="&gt;&gt;CBB_DuLieuTK.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;CBB_DuLieuMuonThongKe.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LB_ToiNgay.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;LB_DuLieuThongKe.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="Btn_XuatDoThi.TabIndex" type="System.Int32, mscorlib">
+    <value>256</value>
+  </data>
+  <data name="LB_TongHop.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="&gt;&gt;DTP_TuNgay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LB_Nam.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1180, 104</value>
+  </data>
+  <data name="LB_MucTieuThongKe.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="LB_Nam.Text" xml:space="preserve">
+    <value>Chọn năm</value>
+  </data>
+  <data name="DTP_TuNgay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>90, 30</value>
+  </data>
+  <data name="CBB_DuLieuTK.Items1" xml:space="preserve">
+    <value>Cư dân</value>
+  </data>
+  <data name="&gt;&gt;LB_DuLieuThongKe.Name" xml:space="preserve">
+    <value>LB_DuLieuThongKe</value>
+  </data>
+  <data name="&gt;&gt;CBB_DuLieuMuonThongKe.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;CBB_ThoiGian.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="DTP_DenNgay.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="LB_TongHop.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="CBB_Nam.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 24</value>
+  </data>
+  <data name="CBB_Nam.TabIndex" type="System.Int32, mscorlib">
+    <value>270</value>
+  </data>
+  <data name="LB_TuNgay.TabIndex" type="System.Int32, mscorlib">
+    <value>247</value>
+  </data>
+  <data name="&gt;&gt;LB_TuNgay.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LB_Nam.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LB_MucTieuThongKe.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LB_ToiNgay.Name" xml:space="preserve">
+    <value>LB_ToiNgay</value>
+  </data>
+  <data name="GGC_ThongKe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 146</value>
+  </data>
+  <data name="LB_TongHop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 22</value>
+  </data>
+  <data name="LB_MucTieuThongKe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 22</value>
+  </data>
+  <data name="&gt;&gt;LB_MucTieuThongKe.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="LB_ToiNgay.TabIndex" type="System.Int32, mscorlib">
+    <value>248</value>
+  </data>
+  <data name="LB_Nam.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="Btn_XuatDoThi.Text" xml:space="preserve">
+    <value>Xuất đồ thị</value>
+  </data>
+  <data name="&gt;&gt;GGC_ThongKe.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GGC_ThongKe.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl, Syncfusion.Grid.Grouping.Windows, Version=25.1462.39.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;GGC_ThongKe.Name" xml:space="preserve">
+    <value>GGC_ThongKe</value>
+  </data>
+  <data name="LB_Nam.TabIndex" type="System.Int32, mscorlib">
+    <value>269</value>
+  </data>
+  <data name="LB_ToiNgay.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Btn_XuatDoThi.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
+  <data name="&gt;&gt;CBB_DuLieuTK.Name" xml:space="preserve">
+    <value>CBB_DuLieuTK</value>
+  </data>
+  <data name="BTN_ThongKe.Text" xml:space="preserve">
+    <value>Thống kê</value>
+  </data>
+  <data name="&gt;&gt;LB_ThoiGianTK.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LB_DuLieuThongKe.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CBB_DuLieuTK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 24</value>
+  </data>
+  <data name="BTN_ThongKe.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
+  <data name="LB_ToiNgay.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="&gt;&gt;CBB_ThoiGian.Name" xml:space="preserve">
+    <value>CBB_ThoiGian</value>
+  </data>
+  <data name="CBB_DuLieuMuonThongKe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>540, 104</value>
+  </data>
+  <data name="&gt;&gt;DTP_TuNgay.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CBB_Nam.Name" xml:space="preserve">
+    <value>CBB_Nam</value>
+  </data>
+  <data name="DTP_DenNgay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 30</value>
+  </data>
+  <data name="&gt;&gt;DTP_DenNgay.Name" xml:space="preserve">
+    <value>DTP_DenNgay</value>
+  </data>
+  <data name="LB_DuLieuThongKe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 22</value>
+  </data>
+  <data name="&gt;&gt;LB_TimeOption.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="LB_TongHop.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DTP_TuNgay.CustomFormat" xml:space="preserve">
+    <value>yyyy-MM-dd HH:MM</value>
+  </data>
+  <data name="&gt;&gt;CBB_LoaiThoiGian.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="LB_TongHop.Text" xml:space="preserve">
+    <value>Từ ngày</value>
+  </data>
+  <data name="LB_DuLieuThongKe.TabIndex" type="System.Int32, mscorlib">
+    <value>264</value>
+  </data>
+  <data name="&gt;&gt;CBB_LoaiThoiGian.Name" xml:space="preserve">
+    <value>CBB_LoaiThoiGian</value>
+  </data>
+  <data name="LB_ThoiGianTK.TabIndex" type="System.Int32, mscorlib">
+    <value>267</value>
+  </data>
+  <data name="DTP_DenNgay.CustomFormat" xml:space="preserve">
+    <value>yyyy-MM-dd HH:MM</value>
+  </data>
+  <data name="Btn_XuatDoThi.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;LB_TimeOption.Name" xml:space="preserve">
+    <value>LB_TimeOption</value>
+  </data>
+  <data name="&gt;&gt;Btn_XuatDoThi.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="LB_TimeOption.TabIndex" type="System.Int32, mscorlib">
+    <value>271</value>
+  </data>
+  <data name="CBB_ThoiGian.TabIndex" type="System.Int32, mscorlib">
+    <value>272</value>
+  </data>
+  <data name="DTP_TuNgay.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="DTP_TuNgay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 30</value>
+  </data>
+  <data name="&gt;&gt;LB_TuNgay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CBB_DuLieuMuonThongKe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 24</value>
+  </data>
+  <data name="LB_ToiNgay.Text" xml:space="preserve">
+    <value>Tới ngày</value>
+  </data>
+  <data name="LB_MucTieuThongKe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 106</value>
+  </data>
+  <data name="DTP_TuNgay.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="LB_TimeOption.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1180, 32</value>
+  </data>
+  <data name="&gt;&gt;LB_ThoiGianTK.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="LB_ThoiGianTK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>737, 109</value>
+  </data>
+  <data name="&gt;&gt;DTP_DenNgay.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="LB_TimeOption.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 22</value>
+  </data>
+  <data name="&gt;&gt;LB_TuNgay.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="LB_TuNgay.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LB_TuNgay.Text" xml:space="preserve">
+    <value>Từ ngày</value>
+  </data>
+  <data name="LB_TongHop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 705</value>
+  </data>
+  <data name="&gt;&gt;LB_ThoiGianTK.Name" xml:space="preserve">
+    <value>LB_ThoiGianTK</value>
+  </data>
+  <data name="LB_TuNgay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 32</value>
+  </data>
+  <data name="&gt;&gt;LB_MucTieuThongKe.Name" xml:space="preserve">
+    <value>LB_MucTieuThongKe</value>
+  </data>
+  <data name="&gt;&gt;LB_ToiNgay.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="DTP_TuNgay.TabIndex" type="System.Int32, mscorlib">
+    <value>261</value>
+  </data>
+  <data name="&gt;&gt;BTN_ThongKe.Name" xml:space="preserve">
+    <value>BTN_ThongKe</value>
+  </data>
+  <data name="&gt;&gt;CBB_LoaiThoiGian.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DTP_DenNgay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BTN_ThongKe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 28</value>
+  </data>
+  <data name="CBB_DuLieuTK.Items" xml:space="preserve">
+    <value>Mã căn hộ</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>vi</value>
+  </metadata>
 </root>

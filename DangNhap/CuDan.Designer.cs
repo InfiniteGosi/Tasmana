@@ -44,7 +44,7 @@ namespace DangNhap
             // 
             // BTN_themcudan
             // 
-            this.BTN_themcudan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.BTN_themcudan, "BTN_themcudan");
             this.BTN_themcudan.Animated = true;
             this.BTN_themcudan.AnimationHoverSpeed = 1F;
             this.BTN_themcudan.AnimationSpeed = 0.03F;
@@ -55,12 +55,10 @@ namespace DangNhap
             this.BTN_themcudan.BorderSize = 1;
             this.BTN_themcudan.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_themcudan.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_themcudan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_themcudan.ForeColor = System.Drawing.Color.White;
             this.BTN_themcudan.Image = ((System.Drawing.Image)(resources.GetObject("BTN_themcudan.Image")));
             this.BTN_themcudan.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_themcudan.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_themcudan.Location = new System.Drawing.Point(1252, 27);
             this.BTN_themcudan.Name = "BTN_themcudan";
             this.BTN_themcudan.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.BTN_themcudan.OnHoverBaseColor2 = System.Drawing.Color.DarkGreen;
@@ -68,12 +66,10 @@ namespace DangNhap
             this.BTN_themcudan.OnHoverForeColor = System.Drawing.Color.Black;
             this.BTN_themcudan.OnHoverImage = null;
             this.BTN_themcudan.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_themcudan.Size = new System.Drawing.Size(40, 40);
-            this.BTN_themcudan.TabIndex = 107;
             // 
             // BTN_in
             // 
-            this.BTN_in.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            resources.ApplyResources(this.BTN_in, "BTN_in");
             this.BTN_in.AnimationHoverSpeed = 0.07F;
             this.BTN_in.AnimationSpeed = 0.03F;
             this.BTN_in.BaseColor1 = System.Drawing.Color.Silver;
@@ -82,11 +78,9 @@ namespace DangNhap
             this.BTN_in.BorderSize = 1;
             this.BTN_in.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_in.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_in.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_in.ForeColor = System.Drawing.Color.White;
             this.BTN_in.Image = ((System.Drawing.Image)(resources.GetObject("BTN_in.Image")));
             this.BTN_in.ImageSize = new System.Drawing.Size(15, 15);
-            this.BTN_in.Location = new System.Drawing.Point(238, 690);
             this.BTN_in.Name = "BTN_in";
             this.BTN_in.OnHoverBaseColor1 = System.Drawing.Color.DimGray;
             this.BTN_in.OnHoverBaseColor2 = System.Drawing.Color.Silver;
@@ -94,14 +88,11 @@ namespace DangNhap
             this.BTN_in.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_in.OnHoverImage = null;
             this.BTN_in.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_in.Size = new System.Drawing.Size(102, 37);
-            this.BTN_in.TabIndex = 178;
-            this.BTN_in.Text = "In";
             this.BTN_in.TextOffsetX = 3;
             // 
             // BTN_PDF
             // 
-            this.BTN_PDF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            resources.ApplyResources(this.BTN_PDF, "BTN_PDF");
             this.BTN_PDF.AnimationHoverSpeed = 0.07F;
             this.BTN_PDF.AnimationSpeed = 0.03F;
             this.BTN_PDF.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(131)))), ((int)(((byte)(18)))));
@@ -110,11 +101,9 @@ namespace DangNhap
             this.BTN_PDF.BorderSize = 1;
             this.BTN_PDF.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_PDF.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_PDF.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_PDF.ForeColor = System.Drawing.Color.White;
             this.BTN_PDF.Image = ((System.Drawing.Image)(resources.GetObject("BTN_PDF.Image")));
             this.BTN_PDF.ImageSize = new System.Drawing.Size(15, 15);
-            this.BTN_PDF.Location = new System.Drawing.Point(130, 690);
             this.BTN_PDF.Name = "BTN_PDF";
             this.BTN_PDF.OnHoverBaseColor1 = System.Drawing.Color.Coral;
             this.BTN_PDF.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(131)))), ((int)(((byte)(18)))));
@@ -122,14 +111,11 @@ namespace DangNhap
             this.BTN_PDF.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_PDF.OnHoverImage = null;
             this.BTN_PDF.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_PDF.Size = new System.Drawing.Size(102, 37);
-            this.BTN_PDF.TabIndex = 177;
-            this.BTN_PDF.Text = "PDF";
             this.BTN_PDF.TextOffsetX = 3;
             // 
             // BTN_excel
             // 
-            this.BTN_excel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            resources.ApplyResources(this.BTN_excel, "BTN_excel");
             this.BTN_excel.AnimationHoverSpeed = 0.07F;
             this.BTN_excel.AnimationSpeed = 0.03F;
             this.BTN_excel.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(95)))), ((int)(((byte)(45)))));
@@ -138,11 +124,9 @@ namespace DangNhap
             this.BTN_excel.BorderSize = 1;
             this.BTN_excel.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_excel.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_excel.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_excel.ForeColor = System.Drawing.Color.White;
             this.BTN_excel.Image = ((System.Drawing.Image)(resources.GetObject("BTN_excel.Image")));
             this.BTN_excel.ImageSize = new System.Drawing.Size(15, 15);
-            this.BTN_excel.Location = new System.Drawing.Point(22, 690);
             this.BTN_excel.Name = "BTN_excel";
             this.BTN_excel.OnHoverBaseColor1 = System.Drawing.Color.Green;
             this.BTN_excel.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(95)))), ((int)(((byte)(45)))));
@@ -150,57 +134,43 @@ namespace DangNhap
             this.BTN_excel.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_excel.OnHoverImage = null;
             this.BTN_excel.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_excel.Size = new System.Drawing.Size(102, 37);
-            this.BTN_excel.TabIndex = 176;
-            this.BTN_excel.Text = "Excel";
             this.BTN_excel.TextOffsetX = 3;
             // 
             // GGC_cudan
             // 
+            resources.ApplyResources(this.GGC_cudan, "GGC_cudan");
             this.GGC_cudan.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.GGC_cudan.BackColor = System.Drawing.SystemColors.Window;
-            this.GGC_cudan.Location = new System.Drawing.Point(100, 82);
             this.GGC_cudan.Name = "GGC_cudan";
             this.GGC_cudan.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
-            this.GGC_cudan.Size = new System.Drawing.Size(1211, 560);
-            this.GGC_cudan.TabIndex = 179;
-            this.GGC_cudan.Text = "gridGroupingControl1";
             this.GGC_cudan.UseRightToLeftCompatibleTextBox = true;
             this.GGC_cudan.VersionInfo = "25.1462.39";
             this.GGC_cudan.TableControlCellDoubleClick += new Syncfusion.Windows.Forms.Grid.Grouping.GridTableControlCellClickEventHandler(this.GGC_cudan_TableControlCellDoubleClick);
             // 
             // CBB_choice
             // 
+            resources.ApplyResources(this.CBB_choice, "CBB_choice");
             this.CBB_choice.FormattingEnabled = true;
             this.CBB_choice.Items.AddRange(new object[] {
-            "Chủ hộ",
-            "Người được ủy quyền của chủ hộ",
-            "Nhân viên của chủ hộ / Khách thuê / Khách vãng lai",
-            "Khách thuê khu thương mại"});
-            this.CBB_choice.Location = new System.Drawing.Point(159, 43);
+            resources.GetString("CBB_choice.Items"),
+            resources.GetString("CBB_choice.Items1"),
+            resources.GetString("CBB_choice.Items2"),
+            resources.GetString("CBB_choice.Items3")});
             this.CBB_choice.Name = "CBB_choice";
-            this.CBB_choice.Size = new System.Drawing.Size(278, 24);
-            this.CBB_choice.TabIndex = 180;
             this.CBB_choice.SelectedIndexChanged += new System.EventHandler(this.CBB_choice_SelectedIndexChanged);
             // 
             // LB_loai
             // 
-            this.LB_loai.AutoSize = true;
+            resources.ApplyResources(this.LB_loai, "LB_loai");
             this.LB_loai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.LB_loai.ForeColor = System.Drawing.Color.White;
-            this.LB_loai.Location = new System.Drawing.Point(169, 9);
             this.LB_loai.Name = "LB_loai";
-            this.LB_loai.Size = new System.Drawing.Size(106, 16);
-            this.LB_loai.TabIndex = 181;
-            this.LB_loai.Text = "Chọn loại cư dân";
             // 
             // CuDan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1376, 782);
             this.Controls.Add(this.LB_loai);
             this.Controls.Add(this.CBB_choice);
             this.Controls.Add(this.GGC_cudan);
@@ -210,7 +180,6 @@ namespace DangNhap
             this.Controls.Add(this.BTN_themcudan);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CuDan";
-            this.Text = "CuDan";
             this.Load += new System.EventHandler(this.CuDan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GGC_cudan)).EndInit();
             this.ResumeLayout(false);
