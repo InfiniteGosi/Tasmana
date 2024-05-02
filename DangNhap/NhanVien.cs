@@ -83,9 +83,9 @@ namespace DangNhap
             else
             {
                 GGC_danhsachnv.TableDescriptor.Columns[0].HeaderText = "Employees ID";
-                GGC_danhsachnv.TableDescriptor.Columns[1].HeaderText = "Surname";
+                GGC_danhsachnv.TableDescriptor.Columns[1].HeaderText = "Family name";
                 GGC_danhsachnv.TableDescriptor.Columns[2].HeaderText = "Name";
-                GGC_danhsachnv.TableDescriptor.Columns[3].HeaderText = "Identifier";
+                GGC_danhsachnv.TableDescriptor.Columns[3].HeaderText = "Crendential number";
                 GGC_danhsachnv.TableDescriptor.Columns[4].HeaderText = "Division ID";
                 GGC_danhsachnv.TableDescriptor.Columns[5].HeaderText = "Position";
                 GGC_danhsachnv.TableDescriptor.Columns[6].HeaderText = "Total tasks";

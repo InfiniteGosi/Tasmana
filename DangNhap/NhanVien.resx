@@ -117,77 +117,158 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;BTN_PhongBan.Parent" xml:space="preserve">
-    <value>$this</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BTN_themnhanvien.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BTN_themnhanvien.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
   </data>
-  <data name="&gt;&gt;BTN_PDF.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="BTN_themnhanvien.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1216, 59</value>
   </data>
-  <data name="&gt;&gt;BTN_PhongBan.Name" xml:space="preserve">
-    <value>BTN_PhongBan</value>
+  <data name="BTN_themnhanvien.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 35</value>
   </data>
-  <data name="&gt;&gt;BTN_themnhanvien.Parent" xml:space="preserve">
-    <value>$this</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BTN_themnhanvien.TabIndex" type="System.Int32, mscorlib">
+    <value>94</value>
+  </data>
+  <data name="BTN_themnhanvien.Text" xml:space="preserve">
+    <value>Thêm nhân viên</value>
   </data>
   <data name="&gt;&gt;BTN_themnhanvien.Name" xml:space="preserve">
     <value>BTN_themnhanvien</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="BTN_in.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.2pt</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="GGC_danhsachnv.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="BTN_in.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="&gt;&gt;BTN_PDF.Name" xml:space="preserve">
-    <value>BTN_PDF</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="BTN_PDF.TabIndex" type="System.Int32, mscorlib">
-    <value>171</value>
-  </data>
-  <data name="&gt;&gt;BTN_themnhom.Type" xml:space="preserve">
+  <data name="&gt;&gt;BTN_themnhanvien.Type" xml:space="preserve">
     <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="BTN_themnhom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 35</value>
-  </data>
-  <data name="&gt;&gt;BTN_themnhom.Name" xml:space="preserve">
-    <value>BTN_themnhom</value>
-  </data>
-  <data name="&gt;&gt;BTN_themnhom.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="GGC_danhsachnv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>65, 100</value>
-  </data>
-  <data name="BTN_in.TabIndex" type="System.Int32, mscorlib">
-    <value>172</value>
-  </data>
-  <data name="&gt;&gt;BTN_PDF.Parent" xml:space="preserve">
+  <data name="&gt;&gt;BTN_themnhanvien.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="BTN_PDF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 37</value>
   </data>
   <data name="&gt;&gt;BTN_themnhanvien.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="BTN_themnhom.TabIndex" type="System.Int32, mscorlib">
-    <value>169</value>
+  <data name="GGC_danhsachnv.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="BTN_PDF.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
+  <data name="GGC_danhsachnv.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 100</value>
+  </data>
+  <data name="GGC_danhsachnv.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1281, 599</value>
+  </data>
+  <data name="GGC_danhsachnv.TabIndex" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="GGC_danhsachnv.Text" xml:space="preserve">
+    <value>gridGroupingControl1</value>
+  </data>
+  <data name="&gt;&gt;GGC_danhsachnv.Name" xml:space="preserve">
+    <value>GGC_danhsachnv</value>
+  </data>
+  <data name="&gt;&gt;GGC_danhsachnv.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl, Syncfusion.Grid.Grouping.Windows, Version=25.1462.39.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;GGC_danhsachnv.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GGC_danhsachnv.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="BTN_themnhom.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
+  </data>
+  <data name="BTN_themnhom.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
+  <data name="BTN_themnhom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1068, 59</value>
+  </data>
+  <data name="BTN_themnhom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 35</value>
+  </data>
+  <data name="BTN_themnhom.TabIndex" type="System.Int32, mscorlib">
+    <value>169</value>
+  </data>
+  <data name="BTN_themnhom.Text" xml:space="preserve">
+    <value>Tạo mới</value>
+  </data>
+  <data name="&gt;&gt;BTN_themnhom.Name" xml:space="preserve">
+    <value>BTN_themnhom</value>
+  </data>
+  <data name="&gt;&gt;BTN_themnhom.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;BTN_themnhom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BTN_themnhom.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="BTN_PhongBan.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="BTN_PhongBan.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
+  <data name="BTN_PhongBan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>920, 59</value>
+  </data>
+  <data name="BTN_PhongBan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 35</value>
+  </data>
+  <data name="BTN_PhongBan.TabIndex" type="System.Int32, mscorlib">
+    <value>173</value>
+  </data>
+  <data name="BTN_PhongBan.Text" xml:space="preserve">
+    <value>Phòng ban</value>
+  </data>
+  <data name="&gt;&gt;BTN_PhongBan.Name" xml:space="preserve">
+    <value>BTN_PhongBan</value>
+  </data>
+  <data name="&gt;&gt;BTN_PhongBan.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;BTN_PhongBan.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BTN_PhongBan.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="BTN_in.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="BTN_in.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10.2pt</value>
+  </data>
+  <data name="BTN_in.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAVVJREFUWEftl71KA0EUhbeSkEqsLFJZBPEZxEpCsBAJKa3F1xARCyufRCSlhYVY
+        W/gIKSxTpghyPefOHdkN4+JOZtfC+eAjuzN37j1hIT9Fpgkisg+f4HNDe9YiHjTh8A8YQ9/axIEGB3B9
+        +C2c1ngOPfEBcDg0nJxYSRDs912ZEhcAB38aTtoNgENbsO6Ztx6g3CBEpwHu4M2aQysNgv2kARo34Bl3
+        VMkBfncehXRgDqFn0wDs5ftaRQBsXsEQmwYoc20lVbBx4faDpAxALq3MgYUzuNItkUe4C/f0znEKRw3l
+        GQ97seeD3ol8wokffgiXXAWvUN8tX3UlDb5nD77oipt5xMW53oq8wx0WElyz+C2R378HcL0NOYvMubBw
+        1/UfrSnBrLEbKYtygJHttw5mHbuROUAOkANUA9xDfh90IWeRSoC/QAPMYOjvVBfO7Kn8W4riCzJw4a5u
+        7ohcAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="BTN_in.Location" type="System.Drawing.Point, System.Drawing">
+    <value>281, 705</value>
+  </data>
+  <data name="BTN_in.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 37</value>
+  </data>
+  <data name="BTN_in.TabIndex" type="System.Int32, mscorlib">
+    <value>172</value>
+  </data>
+  <data name="BTN_in.Text" xml:space="preserve">
+    <value>In</value>
+  </data>
+  <data name="&gt;&gt;BTN_in.Name" xml:space="preserve">
+    <value>BTN_in</value>
   </data>
   <data name="&gt;&gt;BTN_in.Type" xml:space="preserve">
     <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
@@ -195,38 +276,14 @@
   <data name="&gt;&gt;BTN_in.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;BTN_PhongBan.Type" xml:space="preserve">
-    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  <data name="&gt;&gt;BTN_in.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="BTN_PhongBan.TabIndex" type="System.Int32, mscorlib">
-    <value>173</value>
+  <data name="BTN_PDF.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
   </data>
-  <data name="BTN_PDF.Text" xml:space="preserve">
-    <value>PDF</value>
-  </data>
-  <data name="&gt;&gt;BTN_in.Name" xml:space="preserve">
-    <value>BTN_in</value>
-  </data>
-  <data name="BTN_excel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 690</value>
-  </data>
-  <data name="BTN_themnhanvien.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1147, 45</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>NhanVien</value>
-  </data>
-  <data name="&gt;&gt;BTN_PhongBan.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="BTN_themnhanvien.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="&gt;&gt;BTN_themnhom.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="BTN_excel.Text" xml:space="preserve">
-    <value>Excel</value>
+  <data name="BTN_PDF.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10.2pt</value>
   </data>
   <data name="BTN_PDF.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -245,131 +302,35 @@
         C8+dvVnp9HTELlMujNrjr4KW3t6f5VXQsn0DuiP9NnykVusv6k2HR9P7+Z8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="BTN_excel.TabIndex" type="System.Int32, mscorlib">
-    <value>170</value>
-  </data>
-  <data name="BTN_themnhom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1001, 45</value>
-  </data>
-  <data name="BTN_PhongBan.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 35</value>
-  </data>
-  <data name="&gt;&gt;BTN_themnhanvien.Type" xml:space="preserve">
-    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="BTN_themnhanvien.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 9pt</value>
-  </data>
-  <data name="&gt;&gt;BTN_excel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="BTN_excel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 37</value>
-  </data>
-  <data name="BTN_in.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 37</value>
-  </data>
   <data name="BTN_PDF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>130, 690</value>
+    <value>173, 705</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1376, 782</value>
+  <data name="BTN_PDF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 37</value>
   </data>
-  <data name="BTN_themnhanvien.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 35</value>
+  <data name="BTN_PDF.TabIndex" type="System.Int32, mscorlib">
+    <value>171</value>
   </data>
-  <data name="BTN_excel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.2pt</value>
+  <data name="BTN_PDF.Text" xml:space="preserve">
+    <value>PDF</value>
+  </data>
+  <data name="&gt;&gt;BTN_PDF.Name" xml:space="preserve">
+    <value>BTN_PDF</value>
   </data>
   <data name="&gt;&gt;BTN_PDF.Type" xml:space="preserve">
     <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
-  </data>
-  <data name="BTN_in.Text" xml:space="preserve">
-    <value>In</value>
-  </data>
-  <data name="BTN_PhongBan.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="BTN_PhongBan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>850, 45</value>
-  </data>
-  <data name="GGC_danhsachnv.Text" xml:space="preserve">
-    <value>gridGroupingControl1</value>
-  </data>
-  <data name="&gt;&gt;GGC_danhsachnv.Name" xml:space="preserve">
-    <value>GGC_danhsachnv</value>
-  </data>
-  <data name="BTN_PDF.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.2pt</value>
-  </data>
-  <data name="&gt;&gt;BTN_excel.Name" xml:space="preserve">
-    <value>BTN_excel</value>
-  </data>
-  <data name="BTN_themnhanvien.TabIndex" type="System.Int32, mscorlib">
-    <value>94</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>NhanVien</value>
-  </data>
-  <data name="BTN_themnhom.Text" xml:space="preserve">
-    <value>Tạo mới</value>
-  </data>
-  <data name="BTN_in.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 690</value>
-  </data>
-  <data name="BTN_themnhanvien.Text" xml:space="preserve">
-    <value>Thêm nhân viên</value>
-  </data>
-  <data name="BTN_in.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAVVJREFUWEftl71KA0EUhbeSkEqsLFJZBPEZxEpCsBAJKa3F1xARCyufRCSlhYVY
-        W/gIKSxTpghyPefOHdkN4+JOZtfC+eAjuzN37j1hIT9Fpgkisg+f4HNDe9YiHjTh8A8YQ9/axIEGB3B9
-        +C2c1ngOPfEBcDg0nJxYSRDs912ZEhcAB38aTtoNgENbsO6Ztx6g3CBEpwHu4M2aQysNgv2kARo34Bl3
-        VMkBfncehXRgDqFn0wDs5ftaRQBsXsEQmwYoc20lVbBx4faDpAxALq3MgYUzuNItkUe4C/f0znEKRw3l
-        GQ97seeD3ol8wokffgiXXAWvUN8tX3UlDb5nD77oipt5xMW53oq8wx0WElyz+C2R378HcL0NOYvMubBw
-        1/UfrSnBrLEbKYtygJHttw5mHbuROUAOkANUA9xDfh90IWeRSoC/QAPMYOjvVBfO7Kn8W4riCzJw4a5u
-        7ohcAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="&gt;&gt;BTN_excel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;BTN_PDF.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="BTN_themnhom.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 9pt</value>
-  </data>
-  <data name="&gt;&gt;GGC_danhsachnv.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;BTN_in.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="BTN_PhongBan.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 9pt</value>
-  </data>
-  <data name="BTN_PhongBan.Text" xml:space="preserve">
-    <value>Phòng ban</value>
-  </data>
-  <data name="GGC_danhsachnv.TabIndex" type="System.Int32, mscorlib">
-    <value>112</value>
-  </data>
-  <data name="&gt;&gt;GGC_danhsachnv.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl, Syncfusion.Grid.Grouping.Windows, Version=25.1462.39.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
-  </data>
-  <data name="&gt;&gt;GGC_danhsachnv.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;BTN_PDF.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="BTN_excel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
-  <data name="GGC_danhsachnv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1211, 565</value>
-  </data>
-  <data name="&gt;&gt;BTN_excel.Type" xml:space="preserve">
-    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  <data name="BTN_excel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 10.2pt</value>
   </data>
   <data name="BTN_excel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -386,10 +347,46 @@
         RK5CYII=
 </value>
   </data>
+  <data name="BTN_excel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 705</value>
+  </data>
+  <data name="BTN_excel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 37</value>
+  </data>
+  <data name="BTN_excel.TabIndex" type="System.Int32, mscorlib">
+    <value>170</value>
+  </data>
+  <data name="BTN_excel.Text" xml:space="preserve">
+    <value>Excel</value>
+  </data>
+  <data name="&gt;&gt;BTN_excel.Name" xml:space="preserve">
+    <value>BTN_excel</value>
+  </data>
+  <data name="&gt;&gt;BTN_excel.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;BTN_excel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BTN_excel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>vi</value>
-  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1376, 782</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>NhanVien</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>NhanVien</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

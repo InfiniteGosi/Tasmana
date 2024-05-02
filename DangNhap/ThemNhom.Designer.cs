@@ -106,12 +106,13 @@
             // 
             resources.ApplyResources(this.BTN_ok, "BTN_ok");
             this.BTN_ok.Animated = true;
-            this.BTN_ok.AnimationHoverSpeed = 0.5F;
+            this.BTN_ok.AnimationHoverSpeed = 0.3F;
             this.BTN_ok.AnimationSpeed = 0.03F;
             this.BTN_ok.BackColor = System.Drawing.Color.Transparent;
             this.BTN_ok.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.BTN_ok.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.BTN_ok.BorderColor = System.Drawing.Color.Black;
+            this.BTN_ok.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_ok.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_ok.FocusedColor = System.Drawing.Color.Empty;
             this.BTN_ok.ForeColor = System.Drawing.Color.White;
@@ -119,8 +120,8 @@
             this.BTN_ok.Image = null;
             this.BTN_ok.ImageSize = new System.Drawing.Size(20, 20);
             this.BTN_ok.Name = "BTN_ok";
-            this.BTN_ok.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
-            this.BTN_ok.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
+            this.BTN_ok.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(184)))));
+            this.BTN_ok.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(184)))));
             this.BTN_ok.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_ok.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_ok.OnHoverImage = null;
@@ -167,13 +168,14 @@
             // 
             resources.ApplyResources(this.BTN_xoa, "BTN_xoa");
             this.BTN_xoa.Animated = true;
-            this.BTN_xoa.AnimationHoverSpeed = 1F;
+            this.BTN_xoa.AnimationHoverSpeed = 0.3F;
             this.BTN_xoa.AnimationSpeed = 0.03F;
             this.BTN_xoa.BackColor = System.Drawing.Color.Transparent;
             this.BTN_xoa.BaseColor1 = System.Drawing.Color.Transparent;
             this.BTN_xoa.BaseColor2 = System.Drawing.Color.Transparent;
             this.BTN_xoa.BorderColor = System.Drawing.Color.Red;
             this.BTN_xoa.BorderSize = 1;
+            this.BTN_xoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_xoa.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_xoa.FocusedColor = System.Drawing.Color.Empty;
             this.BTN_xoa.ForeColor = System.Drawing.Color.Red;

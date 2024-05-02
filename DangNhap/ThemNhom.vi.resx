@@ -121,43 +121,16 @@
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Group leader ID</value>
-  </data>
   <data name="LB_maphongban.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="LB_maphongban.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 22</value>
-  </data>
-  <data name="LB_maphongban.Text" xml:space="preserve">
-    <value>Division</value>
-  </data>
-  <data name="BTN_ok.Text" xml:space="preserve">
-    <value>Save</value>
   </data>
   <data name="LB_MaNhom.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="LB_MaNhom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 22</value>
-  </data>
-  <data name="LB_MaNhom.Text" xml:space="preserve">
-    <value>Group ID</value>
-  </data>
-  <data name="BTN_xoa.Text" xml:space="preserve">
-    <value>Delete</value>
-  </data>
   <data name="LB_themmoi.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="LB_themmoi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 32</value>
-  </data>
-  <data name="LB_themmoi.Text" xml:space="preserve">
-    <value>ADD GROUP</value>
-  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="BTN_thoat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -269,5 +242,8 @@
         ADZUJn97x293/G/Hu/xZx/c/f8vL+oLv6Pj5jj/tmP6BoOntgq90/FbHFzs++/ylAMAgyufpvwv4uY7f
         7/jjjj/s+OWOH+l4K7s/85n/AwcgzALB8zWpAAAAAElFTkSuQmCC
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
 </root>

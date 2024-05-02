@@ -197,94 +197,189 @@ namespace DangNhap
             TXB_manguoidung.Text = output;
         }
         // Kiểm tra các trường hợp khi ấn nút lưu
+
         private void BTN_luu_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(TXB_manv.Text))
+            //Tiếng Việt
+            if (label3.Text == "THÔNG TIN NHÂN VIÊN")
             {
-                MessageBox.Show("Vui lòng nhập mã nhân viên");
-                return;
+                if (string.IsNullOrEmpty(TXB_manv.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập mã nhân viên");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_ho.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập họ");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_ten.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập tên");
+                    return;
+                }
+                if (!Rad_nam.Checked && !Rad_nu.Checked)
+                {
+                    MessageBox.Show("Vui lòng chọn giới tính");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_honnhan.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập tình trạng hôn nhân");
+                    return;
+                }
+                if (CBB_loainv.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Vui lòng chọn loại nhân viên");
+                    return;
+                }
+                //if (CBB_phongban.SelectedIndex == -1)
+                //{
+                //    MessageBox.Show("Vui lòng chọn phòng ban");
+                //    return;
+                //}
+                //if (CBB_phongban.SelectedIndex == -1)
+                //{
+                //    MessageBox.Show("Vui lòng chọn mã nhóm");
+                //    return;
+                //}
+                if (string.IsNullOrEmpty(TXB_tinhtrangHDLD.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập tình trạng hợp đồng lao động");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_sdt.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập số điện thoại");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_email.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập email");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_cccd.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập mã định danh");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_bhxh.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập mã số bảo hiểm xã hội");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_quequan.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập quê quán");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_thuongtru.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập địa chỉ thường trú");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_matkhau.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập mật khẩu cho tài khoản nhân viên");
+                    return;
+                }
+                // Địa chỉ tạm trú không cần check
+                //if (string.IsNullOrEmpty(TXB_tamtru.Text))
+                //{
+                //    MessageBox.Show("Vui lòng nhập địa chỉ tạm trú");
+                //    return;
+                //}
             }
-            if (string.IsNullOrEmpty(TXB_ho.Text))
+            //Tiếng Anh
+            else
             {
-                MessageBox.Show("Vui lòng nhập họ");
-                return;
+                if (string.IsNullOrEmpty(TXB_manv.Text))
+                {
+                    MessageBox.Show("Please enter \"Employee ID\"");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_ho.Text))
+                {
+                    MessageBox.Show("Please enter \"Family Name\"");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_ten.Text))
+                {
+                    MessageBox.Show("Please enter \"Name\"");
+                    return;
+                }
+                if (!Rad_nam.Checked && !Rad_nu.Checked)
+                {
+                    MessageBox.Show("Please select \"Gender\"");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_honnhan.Text))
+                {
+                    MessageBox.Show("Please enter \"Marital status\"");
+                    return;
+                }
+                if (CBB_loainv.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Please select \"Employee type\"");
+                    return;
+                }
+                //if (CBB_phongban.SelectedIndex == -1)
+                //{
+                //    MessageBox.Show("Vui lòng chọn phòng ban");
+                //    return;
+                //}
+                //if (CBB_phongban.SelectedIndex == -1)
+                //{
+                //    MessageBox.Show("Vui lòng chọn mã nhóm");
+                //    return;
+                //}
+                if (string.IsNullOrEmpty(TXB_tinhtrangHDLD.Text))
+                {
+                    MessageBox.Show("Please enter \"Labour contact status\"");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_sdt.Text))
+                {
+                    MessageBox.Show("Please enter \"Phone\"");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_email.Text))
+                {
+                    MessageBox.Show("Please enter \"Email\"");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_cccd.Text))
+                {
+                    MessageBox.Show("Please enter \"Crendential number\"");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_bhxh.Text))
+                {
+                    MessageBox.Show("Please enter \"Health insurance number\"");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_quequan.Text))
+                {
+                    MessageBox.Show("Please enter \"Home town\"");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_thuongtru.Text))
+                {
+                    MessageBox.Show("Please enter \"Residency\"");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_matkhau.Text))
+                {
+                    MessageBox.Show("Please enter default \"Password\"");
+                    return;
+                }
+                // Địa chỉ tạm trú không cần check
+                //if (string.IsNullOrEmpty(TXB_tamtru.Text))
+                //{
+                //    MessageBox.Show("Vui lòng nhập địa chỉ tạm trú");
+                //    return;
+                //}
             }
-            if (string.IsNullOrEmpty(TXB_ten.Text))
-            {
-                MessageBox.Show("Vui lòng nhập tên");
-                return;
-            }
-            if (!Rad_nam.Checked && !Rad_nu.Checked)
-            {
-                MessageBox.Show("Vui lòng chọn giới tính");
-                return;
-            }
-            if (string.IsNullOrEmpty(TXB_honnhan.Text))
-            {
-                MessageBox.Show("Vui lòng nhập tình trạng hôn nhân");
-                return;
-            }
-            if (CBB_loainv.SelectedIndex == -1)
-            {
-                MessageBox.Show("Vui lòng chọn loại nhân viên");
-                return;
-            }
-            //if (CBB_phongban.SelectedIndex == -1)
-            //{
-            //    MessageBox.Show("Vui lòng chọn phòng ban");
-            //    return;
-            //}
-            //if (CBB_phongban.SelectedIndex == -1)
-            //{
-            //    MessageBox.Show("Vui lòng chọn mã nhóm");
-            //    return;
-            //}
-            if (string.IsNullOrEmpty(TXB_tinhtrangHDLD.Text))
-            {
-                MessageBox.Show("Vui lòng nhập tình trạng hợp đồng lao động");
-                return;
-            }
-            if (string.IsNullOrEmpty(TXB_sdt.Text))
-            {
-                MessageBox.Show("Vui lòng nhập số điện thoại");
-                return;
-            }
-            if (string.IsNullOrEmpty(TXB_email.Text))
-            {
-                MessageBox.Show("Vui lòng nhập email");
-                return;
-            }
-            if (string.IsNullOrEmpty(TXB_cccd.Text))
-            {
-                MessageBox.Show("Vui lòng nhập mã định danh");
-                return;
-            }
-            if (string.IsNullOrEmpty(TXB_bhxh.Text))
-            {
-                MessageBox.Show("Vui lòng nhập mã số bảo hiểm xã hội");
-                return;
-            }
-            if (string.IsNullOrEmpty(TXB_quequan.Text))
-            {
-                MessageBox.Show("Vui lòng nhập quê quán");
-                return;
-            }
-            if (string.IsNullOrEmpty(TXB_thuongtru.Text))
-            {
-                MessageBox.Show("Vui lòng nhập địa chỉ thường trú");
-                return;
-            }
-            if (string.IsNullOrEmpty(TXB_matkhau.Text))
-            {
-                MessageBox.Show("Vui lòng nhập mật khẩu cho tài khoản nhân viên");
-                return;
-            }
-            // Địa chỉ tạm trú không cần check
-            //if (string.IsNullOrEmpty(TXB_tamtru.Text))
-            //{
-            //    MessageBox.Show("Vui lòng nhập địa chỉ tạm trú");
-            //    return;
-            //}
             InitializeValues_NV();
             InitializeValues_TK();
             // Trường hợp tạo nhân viên mới

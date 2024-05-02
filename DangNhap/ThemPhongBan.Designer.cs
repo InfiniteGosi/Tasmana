@@ -80,7 +80,7 @@
             // 
             resources.ApplyResources(this.BTN_ok, "BTN_ok");
             this.BTN_ok.Animated = true;
-            this.BTN_ok.AnimationHoverSpeed = 0.5F;
+            this.BTN_ok.AnimationHoverSpeed = 0.3F;
             this.BTN_ok.AnimationSpeed = 0.03F;
             this.BTN_ok.BackColor = System.Drawing.Color.Transparent;
             this.BTN_ok.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
