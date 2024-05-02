@@ -71,6 +71,7 @@
             this.BTN_square = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_x = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox3)).BeginInit();
@@ -79,6 +80,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.P_logotasmana)).BeginInit();
             this.PN_main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -467,6 +469,8 @@
             // CBB_ngonngu
             // 
             resources.ApplyResources(this.CBB_ngonngu, "CBB_ngonngu");
+            this.CBB_ngonngu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            this.CBB_ngonngu.ForeColor = System.Drawing.Color.White;
             this.CBB_ngonngu.Items.AddRange(new object[] {
             resources.GetString("CBB_ngonngu.Items"),
             resources.GetString("CBB_ngonngu.Items1")});
@@ -568,11 +572,18 @@
             this.gunaGradientButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaGradientButton1.Click += new System.EventHandler(this.gunaGradientButton1_Click);
             // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
             // TrangHienThi
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.CBB_ngonngu);
             this.Controls.Add(this.gunaGradientButton1);
             this.Controls.Add(this.panel8);
@@ -600,6 +611,7 @@
             this.PN_main.ResumeLayout(false);
             this.PN_main.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -647,5 +659,6 @@
         private System.Windows.Forms.Label LB_CapNhat;
         private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox4;
         private System.Windows.Forms.ComboBox CBB_ngonngu;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

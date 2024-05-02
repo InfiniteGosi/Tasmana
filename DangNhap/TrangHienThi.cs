@@ -340,6 +340,13 @@ namespace DangNhap
             currentLanguage = 0;
             CBB_ngonngu.SelectedIndex = 0;
         }
+        private void UpdateWindowsState()
+        { 
+            if(this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
 
         private void CBB_ngonngu_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -350,17 +357,16 @@ namespace DangNhap
             {
                 case 0:
                     Thread.CurrentThread.CurrentUICulture = new CultureInfo("vi");
-                    Controls.Clear();
-                    InitializeComponent();
                     UpdateLanguageVi();
                     break;
                 case 1:
                     Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
-                    Controls.Clear();
-                    InitializeComponent();
                     UpdateLanguageEn();
                     break;
             }
+            Controls.Clear();
+            UpdateWindowsState();
+            InitializeComponent();
             // Phân quyền chức năng khi load lại 
             PhanQuyen();
             // Load lại tình trạng công việc
