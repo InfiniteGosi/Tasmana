@@ -71,35 +71,39 @@ namespace BLL
         public Employee GetEmployeeByEmployeeId(string maNhanVien)
         {
             DataTable dt = EmployeeDAO.Instance.GetEmployeeByEmployeeId(maNhanVien);
-            string email = dt.Rows[0]["email"].ToString();
-            string ho = dt.Rows[0]["ho"].ToString();
-            string ten = dt.Rows[0]["ten"].ToString();
-            string soDienThoai = dt.Rows[0]["SDT"].ToString();
-            DateTime ngaySinh = (DateTime)dt.Rows[0]["ngaySinh"];
-            bool gioiTinh = (bool)dt.Rows[0]["gioiTinh"];
-            string queQuan = dt.Rows[0]["queQuan"].ToString();
-            string maDinhDanh = dt.Rows[0]["maDinhDanh"].ToString();
-            string loaiNhanVien = dt.Rows[0]["loaiNhanVien"].ToString();
-            string tinhTrangHonNhan = dt.Rows[0]["tinhTrangHonNhan"].ToString();
-            string maSoBHXH = dt.Rows[0]["maSoBHXH"].ToString();
-            bool daTungLamNV = (bool)dt.Rows[0]["daTungLamNV"];
-            DateTime ngayKyHDLD = (DateTime)dt.Rows[0]["ngayKyHDLD"];
-            DateTime ngayHetHDLD = (DateTime)dt.Rows[0]["ngayHetHDLD"];
-            string diaChiThuongTru = dt.Rows[0]["dChiThuongTru"].ToString();
-            string diaChiaTamTru = dt.Rows[0]["dChiTamTru"].ToString();
-            string tinhTrangHDLD = dt.Rows[0]["tinhTrangHDLD"].ToString();
-            string maBoPhan = dt.Rows[0]["maBoPhan"].ToString();
-            string maNhom = dt.Rows[0]["maNhom"].ToString();
+            if (dt.Rows.Count > 0)
+            {
+                string email = dt.Rows[0]["email"].ToString();
+                string ho = dt.Rows[0]["ho"].ToString();
+                string ten = dt.Rows[0]["ten"].ToString();
+                string soDienThoai = dt.Rows[0]["SDT"].ToString();
+                DateTime ngaySinh = (DateTime)dt.Rows[0]["ngaySinh"];
+                bool gioiTinh = (bool)dt.Rows[0]["gioiTinh"];
+                string queQuan = dt.Rows[0]["queQuan"].ToString();
+                string maDinhDanh = dt.Rows[0]["maDinhDanh"].ToString();
+                string loaiNhanVien = dt.Rows[0]["loaiNhanVien"].ToString();
+                string tinhTrangHonNhan = dt.Rows[0]["tinhTrangHonNhan"].ToString();
+                string maSoBHXH = dt.Rows[0]["maSoBHXH"].ToString();
+                bool daTungLamNV = (bool)dt.Rows[0]["daTungLamNV"];
+                DateTime ngayKyHDLD = (DateTime)dt.Rows[0]["ngayKyHDLD"];
+                DateTime ngayHetHDLD = (DateTime)dt.Rows[0]["ngayHetHDLD"];
+                string diaChiThuongTru = dt.Rows[0]["dChiThuongTru"].ToString();
+                string diaChiaTamTru = dt.Rows[0]["dChiTamTru"].ToString();
+                string tinhTrangHDLD = dt.Rows[0]["tinhTrangHDLD"].ToString();
+                string maBoPhan = dt.Rows[0]["maBoPhan"].ToString();
+                string maNhom = dt.Rows[0]["maNhom"].ToString();
 
-            DataTable dt1 = AccountDAO.Instance.GetAccountByEmployeeId(maNhanVien);
-            string maNguoiDung = dt1.Rows[0]["maNguoiDung"].ToString();
-            string matKhau = dt1.Rows[0]["matKhau"].ToString();
-            bool disable = (bool)dt1.Rows[0]["disable"];
-            Account account = new Account(maNguoiDung, matKhau, maNhanVien, disable);
-            Employee employee = new Employee(maNhanVien, email, ho, ten, soDienThoai, ngaySinh, gioiTinh, queQuan, maDinhDanh,
-                                                loaiNhanVien, tinhTrangHonNhan, maSoBHXH, daTungLamNV, ngayKyHDLD, ngayHetHDLD,
-                                                diaChiThuongTru, diaChiaTamTru, tinhTrangHDLD, maBoPhan, maNhom, account);
-            return employee;
+                DataTable dt1 = AccountDAO.Instance.GetAccountByEmployeeId(maNhanVien);
+                string maNguoiDung = dt1.Rows[0]["maNguoiDung"].ToString();
+                string matKhau = dt1.Rows[0]["matKhau"].ToString();
+                bool disable = (bool)dt1.Rows[0]["disable"];
+                Account account = new Account(maNguoiDung, matKhau, maNhanVien, disable);
+                Employee employee = new Employee(maNhanVien, email, ho, ten, soDienThoai, ngaySinh, gioiTinh, queQuan, maDinhDanh,
+                                                    loaiNhanVien, tinhTrangHonNhan, maSoBHXH, daTungLamNV, ngayKyHDLD, ngayHetHDLD,
+                                                    diaChiThuongTru, diaChiaTamTru, tinhTrangHDLD, maBoPhan, maNhom, account);
+                return employee;
+            }
+            return null;
         }
         public Group GetGroupByEmployeeId(string maNhanVien)
         {

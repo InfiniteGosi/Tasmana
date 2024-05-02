@@ -36,9 +36,17 @@ namespace DangNhap
 
         private void BTN_guima_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(TXB_employeId.Text))
+            if (string.IsNullOrEmpty(TXB_employeId.Text))
             {
                 MessageBox.Show("Vui lòng nhập mã nhân viên để xác minh email");
+                return;
+            }
+            string maNV = TXB_employeId.Text;
+            if (!maNV.Contains("GD") && !maNV.Contains("DV") && !maNV.Contains("TC") &&
+                !maNV.Contains("VS") && !maNV.Contains("AN") && !maNV.Contains("KT") &&
+                !maNV.Contains("XD"))
+            {
+                MessageBox.Show("Vui lòng nhập đúng định dạng mã nhân viên");
                 return;
             }
             GetEmployeeByEmployeeId(TXB_employeId.Text);
