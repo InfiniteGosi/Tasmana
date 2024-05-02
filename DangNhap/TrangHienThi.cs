@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using System.Globalization;
 
 namespace DangNhap
 {
@@ -22,26 +24,6 @@ namespace DangNhap
         {
             InitializeComponent();
             this.currentAccount = currentAccount;
-            LB_tendangnhap.Text = $"Xin chào, {currentAccount.EmployeeId} - {currentAccount.Level}";
-            Timer_KTCongViec.Start();
-            appTime = 0;
-            if (!currentAccount.Level.Equals("CEO"))
-            {
-                BTN_nhanvien.Enabled = false;
-                BTN_nhanvien.Visible = false;
-            }
-            if (!currentAccount.Level.Equals("CEO"))
-            {
-                BTN_canho.Enabled = false;
-                BTN_canho.Visible = false;
-            }
-            if (!currentAccount.Level.Equals("CEO"))
-            {
-                BTN_cudan.Enabled = false;
-                BTN_cudan.Visible = false;
-            }
-            // Hiển thị tình trạng công việc hiện tại
-            CountJobState();
         }
         private Form currentFormChild;
 
@@ -307,6 +289,59 @@ namespace DangNhap
                     LB_SoCV_TreHan.Text = "0";
                     LB_SoCV_CoCapNhat.Text = "0";
                 }
+            }
+        }
+
+        private void TrangHienThi_Load(object sender, EventArgs e)
+        {
+            LB_tendangnhap.Text = $"Hello, {currentAccount.EmployeeId} - {currentAccount.Level}";
+            Timer_KTCongViec.Start();
+            appTime = 0;
+            if (!currentAccount.Level.Equals("CEO"))
+            {
+                BTN_nhanvien.Enabled = false;
+                BTN_nhanvien.Visible = false;
+            }
+            if (!currentAccount.Level.Equals("CEO"))
+            {
+                BTN_canho.Enabled = false;
+                BTN_canho.Visible = false;
+            }
+            if (!currentAccount.Level.Equals("CEO"))
+            {
+                BTN_cudan.Enabled = false;
+                BTN_cudan.Visible = false;
+            }
+            // Hiển thị tình trạng công việc hiện tại
+            CountJobState();
+        }
+        private void UpdateLanguageEn()
+        {
+            LB_tendangnhap.Text = $"Hello, {currentAccount.EmployeeId} - {currentAccount.Level}";
+            CountJobState();
+        }
+        private void UpdateLanguageVi()
+        {
+            LB_tendangnhap.Text = $"Xin chào, {currentAccount.EmployeeId} - {currentAccount.Level}";
+            CountJobState();
+        }
+
+        private void CBB_ngonngu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (CBB_ngonngu.SelectedIndex)
+            {
+                case 0:
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("vi");
+                    Controls.Clear();
+                    InitializeComponent();
+                    UpdateLanguageVi();
+                    break;
+                case 1:
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+                    Controls.Clear();
+                    InitializeComponent();
+                    UpdateLanguageEn();
+                    break;
             }
         }
     }

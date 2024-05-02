@@ -24,11 +24,6 @@ namespace DangNhap
         private int quyen = 0;
         private string[] hd = null;
 
-        private void GetJobs()
-        {
-            jobs = JobBLL.Instance.GetAllJob();
-        }
-
         public CongViecChung(Account currentAccount)
         {
             SyncfusionLicenseProvider.RegisterLicense("MzIxOTI2MkAzMjM1MmUzMDJlMzBORkJZeFRVdUQxeERjT2xkWC9vdFgxS29wUmREOU9CZVdENkRUN0lrSStVPQ==;Mgo+DSMBaFt6QHFqVkNrXVNbdV5dVGpAd0N3RGlcdlR1fUUmHVdTRHRbQlliS3xTck1hW35Wcnc=");

@@ -58,6 +58,7 @@ namespace DangNhap
             // 
             // BT_DangNhap
             // 
+            resources.ApplyResources(this.BT_DangNhap, "BT_DangNhap");
             this.BT_DangNhap.Animated = true;
             this.BT_DangNhap.AnimationHoverSpeed = 0.3F;
             this.BT_DangNhap.AnimationSpeed = 0.03F;
@@ -67,87 +68,58 @@ namespace DangNhap
             this.BT_DangNhap.BorderSize = 2;
             this.BT_DangNhap.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BT_DangNhap.FocusedColor = System.Drawing.Color.Empty;
-            this.BT_DangNhap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BT_DangNhap.ForeColor = System.Drawing.Color.White;
             this.BT_DangNhap.Image = null;
             this.BT_DangNhap.ImageSize = new System.Drawing.Size(20, 20);
-            this.BT_DangNhap.Location = new System.Drawing.Point(522, 528);
             this.BT_DangNhap.Name = "BT_DangNhap";
             this.BT_DangNhap.OnHoverBaseColor = System.Drawing.Color.White;
             this.BT_DangNhap.OnHoverBorderColor = System.Drawing.Color.Black;
             this.BT_DangNhap.OnHoverForeColor = System.Drawing.Color.Black;
             this.BT_DangNhap.OnHoverImage = null;
             this.BT_DangNhap.OnPressedColor = System.Drawing.Color.DimGray;
-            this.BT_DangNhap.Size = new System.Drawing.Size(160, 56);
-            this.BT_DangNhap.TabIndex = 17;
-            this.BT_DangNhap.Text = "Đăng Nhập";
             this.BT_DangNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BT_DangNhap.Click += new System.EventHandler(this.BT_DangNhap_Click);
             // 
             // LB_quenpw
             // 
-            this.LB_quenpw.AutoSize = true;
+            resources.ApplyResources(this.LB_quenpw, "LB_quenpw");
             this.LB_quenpw.BackColor = System.Drawing.Color.Transparent;
-            this.LB_quenpw.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_quenpw.ForeColor = System.Drawing.Color.Silver;
-            this.LB_quenpw.Location = new System.Drawing.Point(823, 379);
             this.LB_quenpw.Name = "LB_quenpw";
-            this.LB_quenpw.Size = new System.Drawing.Size(97, 15);
-            this.LB_quenpw.TabIndex = 13;
-            this.LB_quenpw.Text = "Quên mật khẩu?";
             this.LB_quenpw.Click += new System.EventHandler(this.LB_quenpw_Click);
             // 
             // TB_MatKhau
             // 
+            resources.ApplyResources(this.TB_MatKhau, "TB_MatKhau");
             this.TB_MatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(17)))), ((int)(((byte)(26)))));
             this.TB_MatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TB_MatKhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TB_MatKhau.ForeColor = System.Drawing.Color.White;
-            this.TB_MatKhau.Location = new System.Drawing.Point(499, 345);
-            this.TB_MatKhau.Multiline = true;
             this.TB_MatKhau.Name = "TB_MatKhau";
-            this.TB_MatKhau.PasswordChar = '*';
-            this.TB_MatKhau.Size = new System.Drawing.Size(420, 26);
-            this.TB_MatKhau.TabIndex = 8;
             // 
             // LB_pw
             // 
-            this.LB_pw.AutoSize = true;
+            resources.ApplyResources(this.LB_pw, "LB_pw");
             this.LB_pw.BackColor = System.Drawing.Color.Transparent;
-            this.LB_pw.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_pw.ForeColor = System.Drawing.Color.Silver;
-            this.LB_pw.Location = new System.Drawing.Point(495, 314);
             this.LB_pw.Name = "LB_pw";
-            this.LB_pw.Size = new System.Drawing.Size(82, 22);
-            this.LB_pw.TabIndex = 6;
-            this.LB_pw.Text = "Mật khẩu";
             // 
             // LB_id
             // 
-            this.LB_id.AutoSize = true;
+            resources.ApplyResources(this.LB_id, "LB_id");
             this.LB_id.BackColor = System.Drawing.Color.Transparent;
-            this.LB_id.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_id.ForeColor = System.Drawing.Color.Silver;
-            this.LB_id.Location = new System.Drawing.Point(493, 191);
             this.LB_id.Name = "LB_id";
-            this.LB_id.Size = new System.Drawing.Size(130, 22);
-            this.LB_id.TabIndex = 5;
-            this.LB_id.Text = "Mã người dùng";
             // 
             // LB_tasmana
             // 
-            this.LB_tasmana.AutoSize = true;
+            resources.ApplyResources(this.LB_tasmana, "LB_tasmana");
             this.LB_tasmana.BackColor = System.Drawing.Color.Transparent;
-            this.LB_tasmana.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_tasmana.ForeColor = System.Drawing.Color.White;
-            this.LB_tasmana.Location = new System.Drawing.Point(77, 276);
             this.LB_tasmana.Name = "LB_tasmana";
-            this.LB_tasmana.Size = new System.Drawing.Size(327, 68);
-            this.LB_tasmana.TabIndex = 1;
-            this.LB_tasmana.Text = "TASMANA";
             // 
             // BTN_close
             // 
+            resources.ApplyResources(this.BTN_close, "BTN_close");
             this.BTN_close.AnimationHoverSpeed = 0.07F;
             this.BTN_close.AnimationSpeed = 0.03F;
             this.BTN_close.BackColor = System.Drawing.Color.Transparent;
@@ -155,130 +127,93 @@ namespace DangNhap
             this.BTN_close.BorderColor = System.Drawing.Color.Black;
             this.BTN_close.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_close.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_close.ForeColor = System.Drawing.Color.White;
             this.BTN_close.Image = ((System.Drawing.Image)(resources.GetObject("BTN_close.Image")));
             this.BTN_close.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_close.ImageSize = new System.Drawing.Size(15, 15);
-            this.BTN_close.Location = new System.Drawing.Point(908, 2);
             this.BTN_close.Name = "BTN_close";
             this.BTN_close.OnHoverBaseColor = System.Drawing.Color.Red;
             this.BTN_close.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.BTN_close.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_close.OnHoverImage = null;
             this.BTN_close.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_close.Size = new System.Drawing.Size(60, 30);
-            this.BTN_close.TabIndex = 1;
             this.BTN_close.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_close.Click += new System.EventHandler(this.BTN_close_Click);
             // 
             // panel2
             // 
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Location = new System.Drawing.Point(500, 369);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(420, 2);
-            this.panel2.TabIndex = 20;
             // 
             // LB_welcometo
             // 
-            this.LB_welcometo.AutoSize = true;
+            resources.ApplyResources(this.LB_welcometo, "LB_welcometo");
             this.LB_welcometo.BackColor = System.Drawing.Color.Transparent;
-            this.LB_welcometo.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_welcometo.ForeColor = System.Drawing.Color.White;
-            this.LB_welcometo.Location = new System.Drawing.Point(40, 214);
             this.LB_welcometo.Name = "LB_welcometo";
-            this.LB_welcometo.Size = new System.Drawing.Size(207, 46);
-            this.LB_welcometo.TabIndex = 21;
-            this.LB_welcometo.Text = "Welcome to";
             // 
             // LB_dangnhap
             // 
-            this.LB_dangnhap.AutoSize = true;
+            resources.ApplyResources(this.LB_dangnhap, "LB_dangnhap");
             this.LB_dangnhap.BackColor = System.Drawing.Color.Transparent;
-            this.LB_dangnhap.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_dangnhap.ForeColor = System.Drawing.Color.White;
-            this.LB_dangnhap.Location = new System.Drawing.Point(645, 64);
             this.LB_dangnhap.Name = "LB_dangnhap";
-            this.LB_dangnhap.Size = new System.Drawing.Size(147, 32);
-            this.LB_dangnhap.TabIndex = 22;
-            this.LB_dangnhap.Text = "Đăng nhập";
             // 
             // panel3
             // 
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.Color.Silver;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1, 669);
-            this.panel3.TabIndex = 23;
             // 
             // panel4
             // 
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.BackColor = System.Drawing.Color.Silver;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(1, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(963, 1);
-            this.panel4.TabIndex = 24;
             // 
             // panel5
             // 
+            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.BackColor = System.Drawing.Color.Silver;
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(1, 668);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(963, 1);
-            this.panel5.TabIndex = 25;
             // 
             // panel6
             // 
+            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.BackColor = System.Drawing.Color.Silver;
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(963, 1);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1, 667);
-            this.panel6.TabIndex = 26;
             // 
             // CBBB_manguoidung
             // 
+            resources.ApplyResources(this.CBBB_manguoidung, "CBBB_manguoidung");
             this.CBBB_manguoidung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(16)))), ((int)(((byte)(22)))));
             this.CBBB_manguoidung.BeforeTouchSize = new System.Drawing.Size(452, 30);
             this.CBBB_manguoidung.FlatBorderColor = System.Drawing.Color.Transparent;
             this.CBBB_manguoidung.FlatStyle = Syncfusion.Windows.Forms.Tools.ComboFlatStyle.Flat;
-            this.CBBB_manguoidung.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBBB_manguoidung.ForeColor = System.Drawing.Color.White;
-            this.CBBB_manguoidung.Location = new System.Drawing.Point(492, 230);
             this.CBBB_manguoidung.MetroBorderColor = System.Drawing.Color.Silver;
             this.CBBB_manguoidung.Name = "CBBB_manguoidung";
-            this.CBBB_manguoidung.Size = new System.Drawing.Size(452, 30);
-            this.CBBB_manguoidung.TabIndex = 28;
             this.CBBB_manguoidung.SelectionChangeCommitted += new System.EventHandler(this.CBBB_manguoidung_SelectionChangeCommitted);
             // 
             // CHB_luuid
             // 
-            this.CHB_luuid.AutoSize = true;
+            resources.ApplyResources(this.CHB_luuid, "CHB_luuid");
             this.CHB_luuid.BackColor = System.Drawing.Color.Transparent;
             this.CHB_luuid.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CHB_luuid.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CHB_luuid.ForeColor = System.Drawing.Color.Silver;
-            this.CHB_luuid.Location = new System.Drawing.Point(502, 401);
             this.CHB_luuid.Name = "CHB_luuid";
-            this.CHB_luuid.Size = new System.Drawing.Size(163, 23);
-            this.CHB_luuid.TabIndex = 29;
-            this.CHB_luuid.Text = "Nhớ mã người dùng";
             this.CHB_luuid.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Location = new System.Drawing.Point(500, 258);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(420, 2);
-            this.panel1.TabIndex = 30;
             // 
             // BTN_facelogin
             // 
+            resources.ApplyResources(this.BTN_facelogin, "BTN_facelogin");
             this.BTN_facelogin.Animated = true;
             this.BTN_facelogin.AnimationHoverSpeed = 0.3F;
             this.BTN_facelogin.AnimationSpeed = 0.03F;
@@ -288,87 +223,58 @@ namespace DangNhap
             this.BTN_facelogin.BorderSize = 2;
             this.BTN_facelogin.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_facelogin.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_facelogin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_facelogin.ForeColor = System.Drawing.Color.White;
             this.BTN_facelogin.Image = null;
             this.BTN_facelogin.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_facelogin.Location = new System.Drawing.Point(760, 528);
             this.BTN_facelogin.Name = "BTN_facelogin";
             this.BTN_facelogin.OnHoverBaseColor = System.Drawing.Color.White;
             this.BTN_facelogin.OnHoverBorderColor = System.Drawing.Color.Black;
             this.BTN_facelogin.OnHoverForeColor = System.Drawing.Color.Black;
             this.BTN_facelogin.OnHoverImage = null;
             this.BTN_facelogin.OnPressedColor = System.Drawing.Color.DimGray;
-            this.BTN_facelogin.Size = new System.Drawing.Size(160, 56);
-            this.BTN_facelogin.TabIndex = 32;
-            this.BTN_facelogin.Text = "Face rec";
             this.BTN_facelogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_facelogin.Click += new System.EventHandler(this.BTN_facelogin_Click);
             // 
             // BTN_show
             // 
+            resources.ApplyResources(this.BTN_show, "BTN_show");
             this.BTN_show.BackColor = System.Drawing.Color.Transparent;
             this.BTN_show.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.BTN_show.FlatAppearance.BorderSize = 0;
-            this.BTN_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_show.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_show.Image = ((System.Drawing.Image)(resources.GetObject("BTN_show.Image")));
-            this.BTN_show.Location = new System.Drawing.Point(914, 340);
             this.BTN_show.Name = "BTN_show";
-            this.BTN_show.Size = new System.Drawing.Size(41, 23);
-            this.BTN_show.TabIndex = 33;
             this.BTN_show.UseVisualStyleBackColor = false;
             this.BTN_show.Click += new System.EventHandler(this.BTN_show_Click);
             // 
             // BTN_hide
             // 
+            resources.ApplyResources(this.BTN_hide, "BTN_hide");
             this.BTN_hide.BackColor = System.Drawing.Color.Transparent;
             this.BTN_hide.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.BTN_hide.FlatAppearance.BorderSize = 0;
-            this.BTN_hide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_hide.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_hide.Image = ((System.Drawing.Image)(resources.GetObject("BTN_hide.Image")));
-            this.BTN_hide.Location = new System.Drawing.Point(914, 340);
             this.BTN_hide.Name = "BTN_hide";
-            this.BTN_hide.Size = new System.Drawing.Size(41, 23);
-            this.BTN_hide.TabIndex = 34;
             this.BTN_hide.UseVisualStyleBackColor = false;
             this.BTN_hide.Click += new System.EventHandler(this.BTN_hide_Click);
             // 
             // LB_Wrong
             // 
-            this.LB_Wrong.AutoSize = true;
+            resources.ApplyResources(this.LB_Wrong, "LB_Wrong");
             this.LB_Wrong.BackColor = System.Drawing.Color.Transparent;
-            this.LB_Wrong.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_Wrong.ForeColor = System.Drawing.Color.Red;
-            this.LB_Wrong.Location = new System.Drawing.Point(498, 377);
             this.LB_Wrong.Name = "LB_Wrong";
-            this.LB_Wrong.Size = new System.Drawing.Size(51, 19);
-            this.LB_Wrong.TabIndex = 35;
-            this.LB_Wrong.Text = "label1";
-            this.LB_Wrong.Visible = false;
             // 
             // gunaPictureBox3
             // 
-            this.gunaPictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.gunaPictureBox3, "gunaPictureBox3");
             this.gunaPictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.gunaPictureBox3.BaseColor = System.Drawing.Color.Transparent;
-            this.gunaPictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox3.Image")));
-            this.gunaPictureBox3.Location = new System.Drawing.Point(916, 618);
             this.gunaPictureBox3.Name = "gunaPictureBox3";
-            this.gunaPictureBox3.Size = new System.Drawing.Size(58, 48);
-            this.gunaPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.gunaPictureBox3.TabIndex = 37;
             this.gunaPictureBox3.TabStop = false;
             // 
             // DangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(964, 669);
             this.Controls.Add(this.CHB_luuid);
             this.Controls.Add(this.LB_tasmana);
             this.Controls.Add(this.LB_Wrong);
@@ -393,10 +299,7 @@ namespace DangNhap
             this.Controls.Add(this.gunaPictureBox3);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DangNhap";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
             this.Load += new System.EventHandler(this.DangNhap_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DangNhap_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DangNhap_MouseMove);

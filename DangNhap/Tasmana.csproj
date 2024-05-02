@@ -546,37 +546,79 @@
     <Compile Include="XepHang.Designer.cs">
       <DependentUpon>XepHang.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CanHo.en.resx">
+      <DependentUpon>CanHo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CanHo.resx">
       <DependentUpon>CanHo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiPhiHangThang.en.resx">
+      <DependentUpon>ChiPhiHangThang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChiPhiHangThang.resx">
       <DependentUpon>ChiPhiHangThang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietCanHo.en.resx">
+      <DependentUpon>ChiTietCanHo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChiTietCanHo.resx">
       <DependentUpon>ChiTietCanHo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietCanHo.vi.resx">
+      <DependentUpon>ChiTietCanHo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietCongViec.en.resx">
+      <DependentUpon>ChiTietCongViec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChiTietCongViec.resx">
       <DependentUpon>ChiTietCongViec.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietCongViec.vi.resx">
+      <DependentUpon>ChiTietCongViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietHoaDonHangThang.en.resx">
+      <DependentUpon>ChiTietHoaDonHangThang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChiTietHoaDonHangThang.resx">
       <DependentUpon>ChiTietHoaDonHangThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietHoaDonHangThang.vi.resx">
+      <DependentUpon>ChiTietHoaDonHangThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietKhuThuongMai.en.resx">
+      <DependentUpon>ChiTietKhuThuongMai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChiTietKhuThuongMai.resx">
       <DependentUpon>ChiTietKhuThuongMai.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietThongBao.en.resx">
+      <DependentUpon>ChiTietThongBao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChiTietThongBao.resx">
       <DependentUpon>ChiTietThongBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CongViecChung.en.resx">
+      <DependentUpon>CongViecChung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CongViecChung.resx">
       <DependentUpon>CongViecChung.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="CuDan.en.resx">
+      <DependentUpon>CuDan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CuDan.resx">
       <DependentUpon>CuDan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DangNhap.en.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoiMatKhau.en.resx">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoiMatKhau.resx">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
@@ -587,11 +629,20 @@
     <EmbeddedResource Include="HeThongBanDo.resx">
       <DependentUpon>HeThongBanDo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LichSuCanHo.en.resx">
+      <DependentUpon>LichSuCanHo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LichSuCanHo.resx">
       <DependentUpon>LichSuCanHo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LichSuKhuThuongMai.en.resx">
+      <DependentUpon>LichSuKhuThuongMai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LichSuKhuThuongMai.resx">
       <DependentUpon>LichSuKhuThuongMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien.en.resx">
+      <DependentUpon>NhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien.resx">
       <DependentUpon>NhanVien.cs</DependentUpon>
@@ -606,46 +657,94 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QuenMatKhau.en.resx">
+      <DependentUpon>QuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuenMatKhau.resx">
       <DependentUpon>QuenMatKhau.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SoanThongBao.en.resx">
+      <DependentUpon>SoanThongBao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SoanThongBao.resx">
+      <DependentUpon>SoanThongBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoanThongBao.vi.resx">
       <DependentUpon>SoanThongBao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemCanHo.resx">
       <DependentUpon>ThemCanHo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThemCongViecNhanVien.en.resx">
+      <DependentUpon>ThemCongViecNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThemCongViecNhanVien.resx">
       <DependentUpon>ThemCongViecNhanVien.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThemCongViecNhom.en.resx">
+      <DependentUpon>ThemCongViecNhom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThemCongViecNhom.resx">
       <DependentUpon>ThemCongViecNhom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemCongViecPhongBan.en.resx">
+      <DependentUpon>ThemCongViecPhongBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemCongViecPhongBan.resx">
       <DependentUpon>ThemCongViecPhongBan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThemHoaDonHangThang.en.resx">
+      <DependentUpon>ThemHoaDonHangThang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThemHoaDonHangThang.resx">
       <DependentUpon>ThemHoaDonHangThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemNhom.en.resx">
+      <DependentUpon>ThemNhom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemNhom.resx">
       <DependentUpon>ThemNhom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThemPhongBan.en.resx">
+      <DependentUpon>ThemPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThemPhongBan.resx">
       <DependentUpon>ThemPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongBao.en.resx">
+      <DependentUpon>ThongBao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongBao.resx">
       <DependentUpon>ThongBao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe.en.resx">
+      <DependentUpon>ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThongKe.resx">
       <DependentUpon>ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKeCanHo.en.resx">
+      <DependentUpon>ThongKeCanHo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongKeCanHo.resx">
       <DependentUpon>ThongKeCanHo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinCaNhan.en.resx">
+      <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThongTinCaNhan.resx">
       <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinCaNhan.vi.resx">
+      <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinCuDan.en.resx">
+      <DependentUpon>ThongTinCuDan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinKhachThueKTM.en.resx">
+      <DependentUpon>ThongTinKhachThueKTM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinKhachThueKTM.resx">
       <DependentUpon>ThongTinKhachThueKTM.cs</DependentUpon>
@@ -653,14 +752,27 @@
     <EmbeddedResource Include="ThongTinCuDan.resx">
       <DependentUpon>ThongTinCuDan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinNhanVien.en.resx">
+      <DependentUpon>ThongTinNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThongTinNhanVien.resx">
       <DependentUpon>ThongTinNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrangHienThi.en.resx">
+      <DependentUpon>TrangHienThi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangHienThi.resx">
       <DependentUpon>TrangHienThi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TrangHienThi.vi.resx">
+      <DependentUpon>TrangHienThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XepHang.en.resx">
+      <DependentUpon>XepHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="XepHang.resx">
       <DependentUpon>XepHang.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
