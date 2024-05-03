@@ -1454,7 +1454,7 @@ Begin
         COUNT(CASE WHEN cv.ngayHoanThanh IS NOT NULL AND CAST(cv.ngayHoanThanh AS DATE) = CAST(cv.thoiHan AS DATE) AND cv.trangThai = N'Hoàn thành' THEN 1 END) AS 'dungHan',
         COUNT(CASE WHEN cv.ngayHoanThanh IS NOT NULL AND CAST(cv.ngayHoanThanh AS DATE) < CAST(cv.thoiHan AS DATE) AND cv.trangThai = N'Hoàn thành' THEN 1 END) AS 'trcHan',
         COUNT(CASE WHEN cv.thoiHan IS NOT NULL AND (cv.trangThai = N'Trễ hạn' OR cv.thoiHan < GETDATE()) THEN 1 END) AS 'treHan',
-        COUNT(CASE WHEN cv.trangThai != N'Trễ hạn' and cv.trangThai != N'Hoàn thành' THEN 1 END) AS 'chuaBatDau'
+        COUNT(CASE WHEN cv.trangThai != N'Trễ hạn' and cv.trangThai != N'Hoàn thành' and cv.thoiHan >= GETDATE()THEN 1 END) AS 'chuaBatDau'
     FROM 
         CongViec cv
     INNER JOIN 
@@ -1921,7 +1921,7 @@ BEGIN
             NT.isFull = 1
             OR NT.maBoPhan = @maBoPhan
             OR NT.maNhom = @maNhom
-            OR NT.maNhanVien = @maNhanVien
+            OR NT.maNhanVien = @maNhanVienại
         )
     ORDER BY N.dateN DESC;
 END;

@@ -26,24 +26,47 @@ namespace DangNhap
         private string maCanHoHienTai;
         private Apartment canHoHienTai;
         private ChuHo chuHo;
+        private Account currentAccount;
         //private readonly string[] arrLoai = { "PENTHOUSE", "01", "02", "03", "04", "04", "05", "06", "07", "08", "09", "10", "11" };
         private readonly string[] arrTinhTrang = { "Chưa bán", "Đã bán", "Chưa bàn giao - Cư dân đang ở", "Đã bàn giao - trống" };
         public ChiTietCanHo()
         {
+            InitializeComponent();;
+            PhanQuyen();
+        }
+
+        public ChiTietCanHo(Account currentAccount)
+        {
             InitializeComponent();
+            this.currentAccount = currentAccount;
+            PhanQuyen();
+        }
+
+        private void PhanQuyen()
+        {
+            if(!currentAccount.Level.Equals("CEO") && !currentAccount.Level.Equals("DV"))
+            {
+                BTN_luu.Enabled = false;
+                BTN_luu.Visible = false;
+                
+                BTN_xoa.Enabled = false;
+                BTN_xoa.Visible = false;
+            }
         }
         public ChiTietCanHo(CanHo parent)
         {
             InitializeComponent();
             this.parent = parent;
         }
-        public ChiTietCanHo(CanHo parent, string maCanHo)
+        public ChiTietCanHo(CanHo parent, string maCanHo, Account currentAccount)
         {
             InitializeComponent();
             this.parent = parent;
             this.maCanHoHienTai = maCanHo;
+            this.currentAccount = currentAccount;
             this.FormClosing += new FormClosingEventHandler(this.ChiTietCanHo_FormClosing);
             GetApartmentById(maCanHoHienTai);
+            PhanQuyen();
         }
         private void GetApartmentById(string maCanHo)
         {
