@@ -1,4 +1,6 @@
 ﻿using BLL;
+using DTO;
+using Guna.UI.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,10 +17,13 @@ namespace DangNhap
 {
     public partial class ChiTietCongViec : Form
     {
-        
-        public ChiTietCongViec()
+        private Account currentAccount;
+        public ChiTietCongViec(Account currentAccount)
         {
             InitializeComponent();
+            this.currentAccount = currentAccount;
+            // Phân quyền chức năng
+            PhanQuyen();
         }
         //Di chuyển form
         int mov;
@@ -46,6 +51,15 @@ namespace DangNhap
         private void BTN_thoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        // Phân quyền
+        private void PhanQuyen()
+        {
+            if (!currentAccount.Level.Equals("CEO")){
+                gunaGradientButton1.Visible = false;
+                gunaGradientButton1.Enabled = false;
+            }
         }
 
         private bool GetNgayHoanThanhCongViec()

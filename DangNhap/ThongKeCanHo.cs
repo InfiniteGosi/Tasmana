@@ -410,7 +410,7 @@ namespace DangNhap
         }
         private void LoadGGC()
         {
-            GGC_ThongKe.Size = new System.Drawing.Size(950, 404);
+            //GGC_ThongKe.Size = new System.Drawing.Size(950, 404);
             GGC_ThongKe.TopLevelGroupOptions.ShowFilterBar = true;
             GGC_ThongKe.ActivateCurrentCellBehavior = Syncfusion.Windows.Forms.Grid.GridCellActivateAction.None;
             //GGC_ThongKe.ShowGroupDropArea = true;

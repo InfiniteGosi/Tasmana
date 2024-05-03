@@ -39,7 +39,7 @@ namespace DangNhap
 
         private void BTN_chitietcongviec_Click(object sender, EventArgs e)
         {
-            ChiTietCongViec ctcv = new ChiTietCongViec();
+            ChiTietCongViec ctcv = new ChiTietCongViec(currentAccount);
             ctcv.Show();
         }
         private void CongViecChung_Load(object sender, EventArgs e)
@@ -353,7 +353,7 @@ namespace DangNhap
                 int phiDichVu = curJob.PhiDichVu;
 
                 // Add to ChiTietCongViec 
-                ChiTietCongViec ctcv = new ChiTietCongViec();
+                ChiTietCongViec ctcv = new ChiTietCongViec(currentAccount);
                 ctcv.TXB_PhongBan.Text = maPhongBan;
                 ctcv.TXB_Nhom.Text = maNhom;
                 ctcv.TXB_MaNV.Text = maNhanVien;

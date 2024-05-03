@@ -157,6 +157,7 @@ namespace DangNhap
             this.RBtn_Congty.Name = "RBtn_Congty";
             this.RBtn_Congty.TabStop = true;
             this.RBtn_Congty.UseVisualStyleBackColor = true;
+            this.RBtn_Congty.CheckedChanged += new System.EventHandler(this.RBtn_PhongBan_CheckedChanged);
             // 
             // LB_ThongBao1
             // 
@@ -257,6 +258,7 @@ namespace DangNhap
             resources.ApplyResources(this.CBB_PhongBan, "CBB_PhongBan");
             this.CBB_PhongBan.FormattingEnabled = true;
             this.CBB_PhongBan.Name = "CBB_PhongBan";
+            this.CBB_PhongBan.SelectedValueChanged += new System.EventHandler(this.CBB_PhongBan_SelectedValueChanged);
             // 
             // RBtn_NhanVien
             // 
@@ -265,6 +267,7 @@ namespace DangNhap
             this.RBtn_NhanVien.Name = "RBtn_NhanVien";
             this.RBtn_NhanVien.TabStop = true;
             this.RBtn_NhanVien.UseVisualStyleBackColor = true;
+            this.RBtn_NhanVien.CheckedChanged += new System.EventHandler(this.RBtn_PhongBan_CheckedChanged);
             // 
             // RBtn_PhongBan
             // 
@@ -273,6 +276,7 @@ namespace DangNhap
             this.RBtn_PhongBan.Name = "RBtn_PhongBan";
             this.RBtn_PhongBan.TabStop = true;
             this.RBtn_PhongBan.UseVisualStyleBackColor = true;
+            this.RBtn_PhongBan.CheckedChanged += new System.EventHandler(this.RBtn_PhongBan_CheckedChanged);
             // 
             // LB_ToiNgay
             // 

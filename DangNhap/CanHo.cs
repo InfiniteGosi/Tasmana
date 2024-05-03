@@ -23,10 +23,15 @@ namespace DangNhap
         private List<Apartment> apartments;
         private List<KhuThuongMai> arrKhuThuongMai;
         private int index = 0;
-        public CanHo()
+        protected Account currentAccount;
+        public CanHo(Account currentAccount)
         {
             SyncfusionLicenseProvider.RegisterLicense("MzIxOTI2MkAzMjM1MmUzMDJlMzBORkJZeFRVdUQxeERjT2xkWC9vdFgxS29wUmREOU9CZVdENkRUN0lrSStVPQ==;Mgo+DSMBaFt6QHFqVkNrXVNbdV5dVGpAd0N3RGlcdlR1fUUmHVdTRHRbQlliS3xTck1hW35Wcnc=");
             InitializeComponent();
+            this.currentAccount = currentAccount;
+
+            // Phân quyền
+            PhanQuyen();
         }
 
         private void BTN_themcanho_Click(object sender, EventArgs e)
@@ -39,6 +44,21 @@ namespace DangNhap
             apartments = ApartmentBLL.Instance.GetApartmentList();
         }
 
+        private void PhanQuyen()
+        {
+            if (!currentAccount.Level.Equals("CEO"))
+            {
+                // Thêm căn hộ
+                BTN_themcanho.Enabled = false;
+                BTN_themcanho.Visible = false;
+            }
+            if (!currentAccount.Level.Equals("TC") && !currentAccount.Level.Equals("CEO"))
+            {
+                // Xem hóa đơn
+                BTN_XemHoaDon.Enabled = false;
+                BTN_XemHoaDon.Visible = false;
+            }
+        }
         private void DisplayGGC_canho()
         {
             GetApartments();
@@ -162,12 +182,12 @@ namespace DangNhap
                 string maCanHo = record.GetValue("MaCanHo").ToString();
                 if (!maCanHo.Contains("KTM"))
                 {
-                    ChiTietCanHo ctch = new ChiTietCanHo(this, maCanHo);
+                    ChiTietCanHo ctch = new ChiTietCanHo(this, maCanHo, currentAccount);
                     ctch.ShowDialog();
                 }
                 else
                 {
-                    ChiTietKhuThuongMai ctktm = new ChiTietKhuThuongMai(this, maCanHo);
+                    ChiTietKhuThuongMai ctktm = new ChiTietKhuThuongMai(this, maCanHo, currentAccount);
                     ctktm.ShowDialog();
                 }
             }

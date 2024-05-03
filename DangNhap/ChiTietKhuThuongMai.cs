@@ -19,18 +19,32 @@ namespace DangNhap
         private string maKhuThuongMaiHienTai;
         private KhuThuongMai khuThuongMai;
         private KhachThueKhuThuongMai khachThue;
+        private Account currentAccount;
         public ChiTietKhuThuongMai()
         {
             InitializeComponent();
         }
         private Form currentFormChild;
-        public ChiTietKhuThuongMai(CanHo parent, string maCanHo)
+        public ChiTietKhuThuongMai(CanHo parent, string maCanHo, Account currentAccount)
         {
             InitializeComponent();
             this.parent = parent;
             this.maKhuThuongMaiHienTai = maCanHo;
             this.FormClosing += new FormClosingEventHandler(this.ChiTietKhuThuongMai_FormClosing);
             GetKhuThuongMaiById(maKhuThuongMaiHienTai);
+            this.currentAccount = currentAccount;
+            PhanQuyen();
+        }
+        private void PhanQuyen()
+        {
+            if (!currentAccount.Level.Equals("CEO") && !currentAccount.Level.Equals("DV"))
+            {
+                BTN_luu.Enabled = false;
+                BTN_luu.Visible = false;
+
+                BTN_xoa.Enabled = false;
+                BTN_xoa.Visible = false;
+            }
         }
         private byte[] ConvertImageToBytes(Image img)
         {

@@ -97,7 +97,7 @@ namespace DangNhap
 
         private void BTN_canho_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new CanHo());
+            OpenChildForm(new CanHo(currentAccount));
             BTN_canho.BackColor = Color.FromArgb(51, 53, 55);
             BTN_thongbao.BackColor = Color.Transparent;
             BTN_thongke.BackColor = Color.Transparent;
@@ -302,15 +302,48 @@ namespace DangNhap
                 BTN_nhanvien.Enabled = false;
                 BTN_nhanvien.Visible = false;
             }
-            if (!currentAccount.Level.Equals("CEO"))
+            
+            // Vệ sinh 
+            if (currentAccount.Level.Equals("VS"))
             {
-                BTN_canho.Enabled = false;
-                BTN_canho.Visible = false;
-            }
-            if (!currentAccount.Level.Equals("CEO"))
-            {
+                // Thống kê 
+                BTN_thongke.Enabled = false;
+                BTN_thongke.Visible = false;
+
+                // Cư dân
                 BTN_cudan.Enabled = false;
                 BTN_cudan.Visible = false;
+
+                // Nhân viên
+                BTN_nhanvien.Enabled = false;
+                BTN_nhanvien.Visible = false;
+            }
+            
+            // Tài chính
+            if (currentAccount.Level.Equals("TC"))
+            {
+                // Nhân viên
+                BTN_nhanvien.Enabled = false;
+                BTN_nhanvien.Visible = false;
+            }
+            
+            // Hành chính Nhân sự & Dịch vụ Cư dân
+            if (currentAccount.Level.Equals("DV"))
+            {
+                // Thống kê 
+                BTN_thongke.Enabled = false;
+                BTN_thongke.Visible = false;
+            }
+            // An ninh || Kỹ thuật || Xây dựng
+            if (currentAccount.Level.Equals("AN") || currentAccount.Level.Equals("KT") || currentAccount.Level.Equals("XD"))
+            {
+                // Thống kê 
+                BTN_thongke.Enabled = false;
+                BTN_thongke.Visible = false;
+
+                // Nhân viên
+                BTN_nhanvien.Enabled = false;
+                BTN_nhanvien.Visible = false;
             }
             // Hiển thị tình trạng công việc hiện tại
             CountJobState();
