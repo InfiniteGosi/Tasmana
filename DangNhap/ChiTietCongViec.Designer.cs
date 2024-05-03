@@ -64,7 +64,6 @@ namespace DangNhap
             this.CB_thoihan = new System.Windows.Forms.CheckBox();
             this.PN_nen = new System.Windows.Forms.Panel();
             this.BTN_thoat = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaGradientButton2 = new Guna.UI.WinForms.GunaGradientButton();
             this.LB_PhiDichVu = new System.Windows.Forms.Label();
             this.TXB_PhiDichVu = new System.Windows.Forms.TextBox();
             this.BTN_file = new System.Windows.Forms.Button();
@@ -370,31 +369,6 @@ namespace DangNhap
             this.BTN_thoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_thoat.Click += new System.EventHandler(this.BTN_thoat_Click);
             // 
-            // gunaGradientButton2
-            // 
-            resources.ApplyResources(this.gunaGradientButton2, "gunaGradientButton2");
-            this.gunaGradientButton2.Animated = true;
-            this.gunaGradientButton2.AnimationHoverSpeed = 1F;
-            this.gunaGradientButton2.AnimationSpeed = 0.03F;
-            this.gunaGradientButton2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton2.BaseColor1 = System.Drawing.Color.Yellow;
-            this.gunaGradientButton2.BaseColor2 = System.Drawing.Color.Yellow;
-            this.gunaGradientButton2.BorderColor = System.Drawing.Color.Red;
-            this.gunaGradientButton2.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton2.ForeColor = System.Drawing.Color.Black;
-            this.gunaGradientButton2.Image = null;
-            this.gunaGradientButton2.ImageSize = new System.Drawing.Size(10, 10);
-            this.gunaGradientButton2.Name = "gunaGradientButton2";
-            this.gunaGradientButton2.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.gunaGradientButton2.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.gunaGradientButton2.OnHoverBorderColor = System.Drawing.Color.White;
-            this.gunaGradientButton2.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton2.OnHoverImage = null;
-            this.gunaGradientButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton2.Radius = 5;
-            this.gunaGradientButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // LB_PhiDichVu
             // 
             resources.ApplyResources(this.LB_PhiDichVu, "LB_PhiDichVu");
@@ -422,7 +396,6 @@ namespace DangNhap
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.Controls.Add(this.LB_PhiDichVu);
             this.Controls.Add(this.TXB_PhiDichVu);
-            this.Controls.Add(this.gunaGradientButton2);
             this.Controls.Add(this.CB_thoihan);
             this.Controls.Add(this.CBB_quyentruycap);
             this.Controls.Add(this.panel6);
@@ -501,7 +474,6 @@ namespace DangNhap
         public System.Windows.Forms.ComboBox CBB_quyentruycap;
         public System.Windows.Forms.CheckBox CB_thoihan;
         private System.Windows.Forms.Panel PN_nen;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton2;
         private System.Windows.Forms.Label LB_PhiDichVu;
         public System.Windows.Forms.TextBox TXB_PhiDichVu;
     }
