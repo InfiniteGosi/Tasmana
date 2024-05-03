@@ -140,9 +140,19 @@ namespace DangNhap
             };
             return dict;
         }
+
+        private Dictionary<string, object> AddParametersForEditGroupOfEmployee()
+        {
+            Dictionary<string, object> dict = new Dictionary<string, object>
+            {
+                {"@maNhanVien", CBB_nhanvien.SelectedItem.ToString().Split('_')[0]},
+                {"@maNhom",  TXB_maNhom.Text}
+            };
+            return dict;
+        }
         private bool SaveGroup()
         {
-            if (GroupBLL.Instance.AddGroup(AddParametersForGroup()))
+            if (GroupBLL.Instance.AddGroup(AddParametersForGroup()) && EmployeeBLL.Instance.EditEmployeeGroup(AddParametersForEditGroupOfEmployee()))
             {
                 return true;
             }
