@@ -56,19 +56,19 @@ namespace DTO
                         level = "DV";
                         break;
                     case "TC":
-                        level = "TaiChinh";
+                        level = "TC";
                         break;
                     case "VS":
-                        level = "VeSinh";
+                        level = "VS";
                         break;
                     case "AN":
-                        level = "AnNinh";
+                        level = "AN";
                         break;
                     case "KT":
-                        level = "KyThuat";
+                        level = "KT";
                         break;
                     case "XD":
-                        level = "XayDung";
+                        level = "XD";
                         break;
                     default:
                         break;

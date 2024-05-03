@@ -60,7 +60,7 @@ namespace DangNhap
         // Hiển thị dữ liệu lên GGC_danhsachnhanvien
         private void DisplayGGC_danhsachnhanvien()
         {
-            GGC_danhsachnv.Size = new System.Drawing.Size(950, 404);
+            //GGC_danhsachnv.Size = new System.Drawing.Size(950, 404);
             GGC_danhsachnv.DataSource = EmployeeBLL.Instance.GetEmployees();
             //Tiếng Việt
             if (BTN_themnhanvien.Text == "Thêm nhân viên")

@@ -70,7 +70,7 @@ namespace DangNhap
         }
         private void Display_GGC_nhanvien()
         {
-            GGC_hienthicongviec.Size = new System.Drawing.Size(1254, 404);
+            //GGC_hienthicongviec.Size = new System.Drawing.Size(1254, 404);
             GGC_hienthicongviec.DataSource = JobBLL.Instance.GetJobOfEmployeesPQ(quyen, this.currentUser, this.currentAccount.Level);
 
             GGC_hienthicongviec.TopLevelGroupOptions.ShowFilterBar = true;
@@ -114,7 +114,7 @@ namespace DangNhap
 
         private void Display_GGC_nhom()
         {
-            GGC_hienthicongviec.Size = new System.Drawing.Size(1254, 404);
+            //GGC_hienthicongviec.Size = new System.Drawing.Size(1254, 404);
             GGC_hienthicongviec.DataSource = JobBLL.Instance.GetJobOfGroupsPQ(quyen, this.currentUser, this.currentAccount.Level);
 
             GGC_hienthicongviec.TopLevelGroupOptions.ShowFilterBar = true;
@@ -154,7 +154,7 @@ namespace DangNhap
 
         private void Display_GGC_phongban()
         {
-            GGC_hienthicongviec.Size = new System.Drawing.Size(1254, 404);
+            //GGC_hienthicongviec.Size = new System.Drawing.Size(1254, 404);
             GGC_hienthicongviec.DataSource = JobBLL.Instance.GetJobOfDivisionsPQ(quyen, this.currentUser, this.currentAccount.Level);
 
             GGC_hienthicongviec.TopLevelGroupOptions.ShowFilterBar = true;
