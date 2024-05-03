@@ -62,5 +62,11 @@ namespace DAO
             string query = $"EXEC [dbo].[Count_Job_State]";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        // cập nhật lại nhóm của nhân viên là nhóm trưởng
+        public bool EditEmployeeGroup(Dictionary<string, object> parameters)
+        {
+            int result = DataProvider.Instance.ExecuteStoredProcedure("EditEmployeeGroup", parameters);
+            return result > 0;
+        }
     }
 }

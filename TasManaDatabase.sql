@@ -1944,3 +1944,13 @@ BEGIN
 	ORDER BY N.dateN DESC;
 END;
 GO
+--- Cập nhật nhóm của nhân viên
+CREATE PROCEDURE [dbo].[EditEmployeeGroup]
+	@maNhanVien VARCHAR(10),
+	@maNhom VARCHAR(10)
+AS
+BEGIN
+	UPDATE NhanVien
+	SET maNhom = @maNhom
+	WHERE maNhanVien = @maNhanVien
+END

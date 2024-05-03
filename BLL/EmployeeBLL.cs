@@ -277,6 +277,11 @@ namespace BLL
             }
             return employees;
         }
+        // cập nhật lại nhóm của nhân viên là nhóm trưởng
+        public bool EditEmployeeGroup(Dictionary<string, object> parameters)
+        {
+            return EmployeeDAO.Instance.EditEmployeeGroup(parameters);
+        }
 
     }
 }
