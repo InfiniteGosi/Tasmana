@@ -133,14 +133,22 @@ namespace DangNhap
         }
         private void gunaGradientButton1_Click(object sender, EventArgs e)
         {
-            if (JobBLL.Instance.DeleteJobOfEmployee(AddParameterDeleteJobOfEmployee()))
+            // Hiển thị hộp thoại xác nhận trước khi xóa
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa công việc của nhân viên này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            // Kiểm tra xem người dùng đã chọn Yes hay không
+            if (result == DialogResult.Yes)
             {
-                MessageBox.Show("Xóa thành công");
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Xóa thất bại");
+                // Thực hiện xóa nếu người dùng chọn Yes
+                if (JobBLL.Instance.DeleteJobOfEmployee(AddParameterDeleteJobOfEmployee()))
+                {
+                    MessageBox.Show("Xóa thành công");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thất bại");
+                }
             }
         }
 
