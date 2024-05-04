@@ -269,7 +269,7 @@ namespace DangNhap
         {
             DataTable dataTable = GetDataTable(hd);
             Export export = new Export();
-            export.ToExcel(dataTable, "Cong_viec", "CÔNG VIỆC CHUNG", index);
+            export.ToExcel(dataTable, "Cong_viec", "CÔNG VIỆC CHUNG");
 
         }
 

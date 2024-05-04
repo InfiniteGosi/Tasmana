@@ -736,6 +736,9 @@
     <EmbeddedResource Include="ThongKe.resx">
       <DependentUpon>ThongKe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe.vi.resx">
+      <DependentUpon>ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThongKeCanHo.en.resx">
       <DependentUpon>ThongKeCanHo.cs</DependentUpon>
     </EmbeddedResource>
