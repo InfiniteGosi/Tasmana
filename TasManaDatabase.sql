@@ -182,7 +182,6 @@ CREATE TABLE KhachThueKhuThuongMai
   bienSoXeDangKy VARCHAR(50),
   PRIMARY KEY (maKhachDangThue),
   FOREIGN KEY (maNhanVienPhuTrach) REFERENCES NhanVien (maNhanVien),
-  FOREIGN KEY (bienSoXeDangKy) REFERENCES PhuongTien (bienSo)
 );
 
 
@@ -200,7 +199,6 @@ CREATE TABLE KhuThuongMai
   tinhTrangThanhToan INT NOT NULL,
   maKhachDangThue VARCHAR(10) NOT NULL,
   PRIMARY KEY (maCanHo),
-  FOREIGN KEY (maKhachDangThue) REFERENCES KhachThueKhuThuongMai(maKhachDangThue)
 );
 
 CREATE TABLE LichSuGiaoDichKhuThuongMai
@@ -212,7 +210,6 @@ CREATE TABLE LichSuGiaoDichKhuThuongMai
   tinhTrangCongNo INT NOT NULL,
   PRIMARY KEY (maCanHo, maKhachDangThue),
   FOREIGN KEY (maCanHo) REFERENCES KhuThuongMai(maCanHo),
-  FOREIGN KEY (maKhachDangThue) REFERENCES KhachThueKhuThuongMai(maKhachDangThue)
 );
 
 CREATE TABLE CanHo
@@ -273,7 +270,6 @@ CREATE TABLE ChuHo
   PRIMARY KEY (maCuDan, maCanHo),
   FOREIGN KEY (maCuDan) REFERENCES CuDan(maCuDan),
   FOREIGN KEY (maCanHo) REFERENCES CanHo(maCanHo),
-  FOREIGN KEY (banGiao_maCuDan) REFERENCES CuDan(maCuDan),
   FOREIGN KEY (maCuDanLuuTruCung) REFERENCES CuDan(maCuDan),
   UNIQUE (maDinhDanh),
   UNIQUE (soTheTamTru),
@@ -487,6 +483,18 @@ INSERT INTO CanHo VALUES ('W3507', 100, 100, 35, 3, 2, NULL, 170, 3, N'Đã bàn
 INSERT INTO CanHo VALUES ('W3508', 90, 100, 35, 3, 1, NULL, 160, 3, N'Đã bàn giao - trống', 15, NULL);
 INSERT INTO CanHo VALUES ('W3509', 80, 100, 35, 1, 2, NULL, 140, 3, N'Đã bàn giao - trống', 15, NULL);
 INSERT INTO CanHo VALUES ('W3510', 80.0, 100, 35, 5, 1, NULL, 18000000, 1, N'Chưa bàn giao - Cư dân đang ở', 25, 'CD-009');
+
+INSERT INTO CanHo VALUES ('W3401', 60, 34, 3, 2, 1, NULL, 100, 3, N'Đã bàn giao - trống', 15, NULL);
+INSERT INTO CanHo VALUES ('W3402', 110, 34, 3, 2, 1, NULL, 150, 3, N'Đã bàn giao - trống', 15, NULL);
+INSERT INTO CanHo VALUES ('W3403', 130, 34, 1, 3, 1, NULL, 180, 3, N'Đã bàn giao - trống', 15, NULL);
+INSERT INTO CanHo VALUES ('W3404', 140, 34, 2, 2, 1, NULL, 190, 3, N'Đã bàn giao - trống', 15, NULL);
+INSERT INTO CanHo VALUES ('W3405', 90, 34, 2, 3, 1, NULL, 200, 3, N'Đã bàn giao - trống', 15, NULL);
+INSERT INTO CanHo VALUES ('W3406', 70, 34, 1, 1, 1, NULL, 130, 3, N'Đã bàn giao - trống', 15, NULL);
+INSERT INTO CanHo VALUES ('W3407', 80, 34, 3, 2, 1, NULL, 170, 3, N'Đã bàn giao - trống', 15, NULL);
+INSERT INTO CanHo VALUES ('W3408', 100, 34, 3, 1, 1, NULL, 160, 3, N'Đã bàn giao - trống', 15, NULL);
+INSERT INTO CanHo VALUES ('W3409', 150, 34, 1, 2, 1, NULL, 140, 3, N'Đã bàn giao - trống', 15, NULL);
+INSERT INTO CanHo VALUES ('W3410', 120, 34, 1, 3, 1, NULL, 195, 3, N'Đã bàn giao - trống', 15, NULL);
+INSERT INTO CanHo VALUES ('W3411', 80, 34, 3, 2, 1, NULL, 155, 3, N'Đã bàn giao - trống', 15, NULL);
 select * from CanHo
 
 insert into LichSuGiaoDich values('WPHA', 'CD-001', 'CD-021', 'CD-012', '1-1-2023', '1-1-2024', 100000000)
@@ -503,6 +511,17 @@ insert into LichSuGiaoDich values('W3507', NULL, NULL, NULL, '1-1-2023', '1-1-20
 insert into LichSuGiaoDich values('W3508', NULL, NULL, NULL, '1-1-2023', '1-1-2024', 200000000)
 insert into LichSuGiaoDich values('W3509', NULL, NULL, NULL, '1-1-2023', '1-1-2024', 200000000)
 insert into LichSuGiaoDich values('W3510', 'CD-009', 'CD-015', 'CD-021', '1-1-2023', '1-1-2024', 200000000)
+INSERT INTO LichSuGiaoDich VALUES ('W3401', NULL, NULL, NULL, '2023-01-01', '2024-01-01', 200000000);
+INSERT INTO LichSuGiaoDich VALUES ('W3402', NULL, NULL, NULL, '2023-01-01', '2024-01-01', 200000000);
+INSERT INTO LichSuGiaoDich VALUES ('W3403', NULL, NULL, NULL, '2023-01-01', '2024-01-01', 200000000);
+INSERT INTO LichSuGiaoDich VALUES ('W3404', NULL, NULL, NULL, '2023-01-01', '2024-01-01', 200000000);
+INSERT INTO LichSuGiaoDich VALUES ('W3405', NULL, NULL, NULL, '2023-01-01', '2024-01-01', 200000000);
+INSERT INTO LichSuGiaoDich VALUES ('W3406', NULL, NULL, NULL, '2023-01-01', '2024-01-01', 200000000);
+INSERT INTO LichSuGiaoDich VALUES ('W3407', NULL, NULL, NULL, '2023-01-01', '2024-01-01', 200000000);
+INSERT INTO LichSuGiaoDich VALUES ('W3408', NULL, NULL, NULL, '2023-01-01', '2024-01-01', 200000000);
+INSERT INTO LichSuGiaoDich VALUES ('W3409', NULL, NULL, NULL, '2023-01-01', '2024-01-01', 200000000);
+INSERT INTO LichSuGiaoDich VALUES ('W3410', NULL, NULL, NULL, '2023-01-01', '2024-01-01', 200000000);
+INSERT INTO LichSuGiaoDich VALUES ('W3411', NULL, NULL, NULL, '2023-01-01', '2024-01-01', 200000000);
 select * from LichSuGiaoDich
 
 
@@ -531,9 +550,8 @@ select * from PhuongTien
 
 
 insert into KhachThueKhuThuongMai values('K01', N'Công ty A', N'Nguyễn Văn B', 'VS-002', 1234321, 'hyr@gmail.com', '1-1-2023', '1-1-2023', NULL, 10000000, '', '59N2')
-insert into KhachThueKhuThuongMai values('K02', N'Công ty B', N'Nguyễn Huỳnh A', 'VS-002', 1234321, 'hihi@gmail.com', '1-1-2023', '1-1-2023', '1-1-2023', 20000000, '', '59H1')
+insert into KhachThueKhuThuongMai values('K02', N'Công ty B', N'Nguyễn Huỳnh A', 'VS-002', 1234321, 'hihi@gmail.com', '1-1-2023', '1-1-2023', '1-1-2023', 20000000, '', '')
 select * from KhachThueKhuThuongMai
-
 
 INSERT INTO KhuThuongMai VALUES ('KTM1', 1000.5, 1000, 1, 0, 0, NULL, 200000000, 0, 25, 'K01');
 INSERT INTO KhuThuongMai VALUES ('KTM2', 1000.5, 1000, 1, 0, 0, NULL, 200000000, 0, 15, 'K02');
@@ -552,12 +570,12 @@ select * from LichSuGiaoDichKhuThuongMai
 
 
 INSERT INTO ChuHo VALUES('CD-001', 'WPHA', N'Chủ hộ', N'Nguyen Dan', '1980-05-10', '123426739', '0123456489', 'test@example.com', N'Việt Nam', '1234367890', '2023-01-01', '2023-01-01', NULL, 50.5, '51J9', 'CD-016', NULL, 20000000, N'Mèo');
-INSERT INTO ChuHo VALUES('CD-002', 'WPHB', N'Chủ hộ', N'Hoang Thi Thanh', '1980-05-10', '223456739', '0123156789', 'xoadi@example.com', N'Việt Nam', '2234567890', '2023-01-01', '2023-01-01', NULL, 50.5, '51J9', 'CD-016', NULL, 20000000, N'Mèo');
-INSERT INTO ChuHo VALUES('CD-003', 'WPHC', N'Chủ hộ', N'Nguyen An', '1980-05-10', '123436789', '0123456719', 'annguyen@example.com', N'Việt Nam', '3234567890', '2023-01-01', '2023-01-01', NULL, 50.5, '51J9', 'CD-016', NULL, 20000000, N'Mèo');
-INSERT INTO ChuHo VALUES('CD-004', 'WPHD', N'Chủ hộ', N'Thi Thao', '1980-05-10', '123256789', '0123456589', 'nguyenthanh@example.com', N'Việt Nam', '4234567890', '2023-01-01', '2023-01-01', NULL, 50.5, '51J9', 'CD-016', NULL, 20000000, N'Mèo');
-INSERT INTO ChuHo VALUES('CD-005', 'W3501', N'Chủ hộ', N'Hoang Thi Thu', '1980-05-10', '124456789', '0123455789', 'nguyenvana@example.com', N'Việt Nam', '5234567890', '2023-01-01', '2023-01-01', NULL, 50.5, '51J9', 'CD-016', NULL, 20000000, N'Mèo');
-INSERT INTO ChuHo VALUES('CD-006', 'W3502', N'Chủ hộ', N'Vu Duc Trung', '1975-08-20', '987654321', '0987654321', 'phamthib@example.com', N'Việt Nam', '0987654321', '2023-02-01', '2023-02-01', NULL, 45.3, '19S6', 'CD-016', NULL, 0, N'Cún con');
-INSERT INTO ChuHo VALUES('CD-009', 'W3510', N'Chủ hộ', N'Le Van Huy', '1990-03-15', '246810235', '1369852471', 'tranan@example.com', N'Việt Nam', '0369252471', '2023-03-01', '2023-03-01', NULL, 60.2, '51HB', 'CD-015', 'CD-017', 150000, N'Cún con');
+INSERT INTO ChuHo VALUES('CD-002', 'WPHB', N'Chủ hộ', N'Hoang Thi Thanh', '1980-05-10', '223456739', '0123156789', 'xoadi@example.com', N'Việt Nam', '2234567890', '2023-01-01', '2023-01-01', NULL, 50.5, '57G2', 'CD-016', NULL, 20000000, N'Mèo');
+INSERT INTO ChuHo VALUES('CD-003', 'WPHC', N'Chủ hộ', N'Nguyen An', '1980-05-10', '123436789', '0123456719', 'annguyen@example.com', N'Việt Nam', '3234567890', '2023-01-01', '2023-01-01', NULL, 50.5, '62G4', 'CD-016', NULL, 20000000, N'Mèo');
+INSERT INTO ChuHo VALUES('CD-004', 'WPHD', N'Chủ hộ', N'Thi Thao', '1980-05-10', '123256789', '0123456589', 'nguyenthanh@example.com', N'Việt Nam', '4234567890', '2023-01-01', '2023-01-01', NULL, 50.5, '72L3', 'CD-016', NULL, 20000000, N'Mèo');
+INSERT INTO ChuHo VALUES('CD-005', 'W3501', N'Chủ hộ', N'Hoang Thi Thu', '1980-05-10', '124456789', '0123455789', 'nguyenvana@example.com', N'Việt Nam', '5234567890', '2023-01-01', '2023-01-01', NULL, 50.5, '93M2', 'CD-016', NULL, 20000000, N'Mèo');
+INSERT INTO ChuHo VALUES('CD-006', 'W3502', N'Chủ hộ', N'Vu Duc Trung', '1975-08-20', '987654321', '0987654321', 'phamthib@example.com', N'Việt Nam', '0987654321', '2023-02-01', '2023-02-01', NULL, 45.3, '81L8', 'CD-016', NULL, 0, N'Cún con');
+INSERT INTO ChuHo VALUES('CD-009', 'W3510', N'Chủ hộ', N'Le Van Huy', '1990-03-15', '246810235', '1369852471', 'tranan@example.com', N'Việt Nam', '0369252471', '2023-03-01', '2023-03-01', NULL, 60.2, NULL, 'CD-015', 'CD-017', 150000, N'Cún con');
 select * from ChuHo
 
 
@@ -1075,7 +1093,393 @@ end
 go
 
 
-	
+create procedure [dbo].[ThemPhuongTien]
+	@bienSo VARCHAR(50),
+	@chungLoai NVARCHAR(50),
+	@tinhTrangSoHuu NVARCHAR(50)
+as
+begin
+	insert into PhuongTien
+	values(@bienSo, @chungLoai, @tinhTrangSoHuu)
+end
+go
+
+create procedure [dbo].[SuaPhuongTien]
+	@bienSo VARCHAR(50),
+	@chungLoai NVARCHAR(50),
+	@tinhTrangSoHuu NVARCHAR(50)
+as
+begin
+	update PhuongTien
+	set chungLoai = @chungLoai,
+		tinhTrangSoHuu = @tinhTrangSoHuu
+	where bienSo = @bienSo
+end
+go
+
+
+
+CREATE PROCEDURE [dbo].[SP_ThemKhachThueKTM]
+    @maKhachDangThue VARCHAR(10),
+    @tenCongTy NVARCHAR(200),
+    @hoTenNguoiDaiDien NVARCHAR(200),
+    @maNhanVienPhuTrach VARCHAR(10),
+    @SDT VARCHAR(20),
+    @email VARCHAR(100),
+    @ngayKyHopDongThue DATE,
+    @ngayChuyenVao DATE,
+    @ngayChuyenDi DATE,
+    @phiQuanLy INT,
+    @moTaKhuVucChoThue NVARCHAR(500),
+    @bienSoXeDangKy VARCHAR(50)
+AS
+BEGIN
+    INSERT INTO KhachThueKhuThuongMai 
+    VALUES (
+        @maKhachDangThue,
+        @tenCongTy,
+        @hoTenNguoiDaiDien,
+        @maNhanVienPhuTrach,
+        @SDT,
+        @email,
+        @ngayKyHopDongThue,
+        @ngayChuyenVao,
+        @ngayChuyenDi,
+        @phiQuanLy,
+        @moTaKhuVucChoThue,
+        @bienSoXeDangKy
+    );
+END
+go
+
+
+
+CREATE PROCEDURE [dbo].[SuaKhachThueKTM]
+    @maKhachDangThue VARCHAR(10),
+    @tenCongTy NVARCHAR(200),
+    @hoTenNguoiDaiDien NVARCHAR(200),
+    @maNhanVienPhuTrach VARCHAR(10),
+    @SDT VARCHAR(20),
+    @email VARCHAR(100),
+    @ngayKyHopDongThue DATE,
+    @ngayChuyenVao DATE,
+    @ngayChuyenDi DATE,
+    @phiQuanLy INT,
+    @moTaKhuVucChoThue NVARCHAR(500),
+    @bienSoXeDangKy VARCHAR(50)
+AS
+BEGIN
+    UPDATE KhachThueKhuThuongMai
+    SET tenCongTy = @tenCongTy,
+        hoTenNguoiDaiDien = @hoTenNguoiDaiDien,
+        maNhanVienPhuTrach = @maNhanVienPhuTrach,
+        SDT = @SDT,
+        email = @email,
+        ngayKyHopDongThue = @ngayKyHopDongThue,
+        ngayChuyenVao = @ngayChuyenVao,
+        ngayChuyenDi = @ngayChuyenDi,
+        phiQuanLy = @phiQuanLy,
+        moTaKhuVucChoThue = @moTaKhuVucChoThue,
+        bienSoXeDangKy = @bienSoXeDangKy
+    WHERE maKhachDangThue = @maKhachDangThue;
+END
+GO
+
+
+create procedure [dbo].[XoaKhachThueKTM]
+	@maKhachDangThue varchar(10),
+	@bienSo varchar(10)
+as
+begin
+	delete from KhachThueKhuThuongMai where maKhachDangThue = @maKhachDangThue
+	delete from PhuongTien where bienSo = @bienSo
+end
+go
+
+CREATE PROCEDURE [dbo].[ThemChuHo]
+    @maCuDan VARCHAR(10),
+    @maCanHo VARCHAR(10),
+    @loaiCuDan NVARCHAR(100),
+    @hoTen NVARCHAR(100),
+    @ngayThangNamSinh DATE,
+    @maDinhDanh VARCHAR(20),
+    @SDT VARCHAR(20),
+    @email VARCHAR(100),
+    @quocTich NVARCHAR(100),
+    @soTheTamTru VARCHAR(20),
+    @ngayNhanBanGiaoCanHo DATE,
+    @ngayChuyenVao DATE,
+    @ngayChuyenDi DATE,
+    @soDienNuocNgayBanGiao FLOAT,
+    @bienSoXeDangKy VARCHAR(50),
+    @banGiao_maCuDan VARCHAR(10),
+    @maCuDanLuuTruCung VARCHAR(10),
+    @tinhTrangCongNo INT,
+    @duLieuDangKyThuNuoi NVARCHAR(100)
+AS
+BEGIN
+    INSERT INTO ChuHo
+    VALUES (
+        @maCuDan, 
+        @maCanHo, 
+        @loaiCuDan, 
+        @hoTen, 
+        @ngayThangNamSinh, 
+        @maDinhDanh, 
+        @SDT, 
+        @email,
+        @quocTich,
+        @soTheTamTru,
+        @ngayNhanBanGiaoCanHo,
+        @ngayChuyenVao,
+        @ngayChuyenDi,
+        @soDienNuocNgayBanGiao,
+        @bienSoXeDangKy,
+        @banGiao_maCuDan,
+        @maCuDanLuuTruCung,
+        @tinhTrangCongNo,
+        @duLieuDangKyThuNuoi
+    );
+END
+GO
+
+CREATE PROCEDURE [dbo].[SuaChuHo]
+    @maCuDan VARCHAR(10),
+    @maCanHo VARCHAR(10),
+    @loaiCuDan NVARCHAR(100),
+    @hoTen NVARCHAR(100),
+    @ngayThangNamSinh DATE,
+    @maDinhDanh VARCHAR(20),
+    @SDT VARCHAR(20),
+    @email VARCHAR(100),
+    @quocTich NVARCHAR(100),
+    @soTheTamTru VARCHAR(20),
+    @ngayNhanBanGiaoCanHo DATE,
+    @ngayChuyenVao DATE,
+    @ngayChuyenDi DATE,
+    @soDienNuocNgayBanGiao FLOAT,
+    @bienSoXeDangKy VARCHAR(50),
+    @banGiao_maCuDan VARCHAR(10),
+    @maCuDanLuuTruCung VARCHAR(10),
+    @tinhTrangCongNo INT,
+    @duLieuDangKyThuNuoi NVARCHAR(100)
+AS
+BEGIN
+    UPDATE ChuHo
+    SET
+        loaiCuDan = @loaiCuDan,
+        hoTen = @hoTen,
+        ngayThangNamSinh = @ngayThangNamSinh,
+        maDinhDanh = @maDinhDanh,
+        SDT = @SDT,
+        email = @email,
+        quocTich = @quocTich,
+        soTheTamTru = @soTheTamTru,
+        ngayNhanBanGiaoCanHo = @ngayNhanBanGiaoCanHo,
+        ngayChuyenVao = @ngayChuyenVao,
+        ngayChuyenDi = @ngayChuyenDi,
+        soDienNuocNgayBanGiao = @soDienNuocNgayBanGiao,
+        bienSoXeDangKy = @bienSoXeDangKy,
+        banGiao_maCuDan = @banGiao_maCuDan,
+        maCuDanLuuTruCung = @maCuDanLuuTruCung,
+        tinhTrangCongNo = @tinhTrangCongNo,
+        duLieuDangKyThuNuoi = @duLieuDangKyThuNuoi
+    WHERE maCuDan = @maCuDan AND maCanHo = @maCanHo;
+END
+GO
+
+create procedure [dbo].[XoaChuHo]
+	@maCuDan varchar(10),
+	@bienSo varchar(10)
+as
+begin
+	delete from ChuHo where maCuDan = @maCuDan
+	delete from PhuongTien where bienSo = @bienSo
+end
+go
+
+
+CREATE PROCEDURE [dbo].[ThemNguoiUyQuyen]
+    @maCuDan VARCHAR(10),
+    @maCanHo VARCHAR(10),
+    @loaiCuDan NVARCHAR(100),
+    @hoTen NVARCHAR(100),
+    @ngayThangNamSinh DATE,
+    @maDinhDanh VARCHAR(20),
+    @SDT VARCHAR(20),
+    @email VARCHAR(100),
+    @quocTich NVARCHAR(100),
+    @soTheTamTru VARCHAR(20),
+    @ngayChuyenVao DATE,
+    @ngayChuyenDi DATE,
+    @maCuDanLuuTruCung VARCHAR(10),
+    @bienSoXeDangKy VARCHAR(50),
+    @tinhTrangCongNo INT,
+    @duLieuDangKyThuNuoi NVARCHAR(100)
+AS
+BEGIN
+    INSERT INTO NguoiDcUyQuyenChuHo
+    VALUES (
+        @maCuDan, 
+        @maCanHo, 
+        @loaiCuDan, 
+        @hoTen, 
+        @ngayThangNamSinh, 
+        @maDinhDanh, 
+        @SDT, 
+        @email,
+        @quocTich,
+        @soTheTamTru,
+        @ngayChuyenVao,
+        @ngayChuyenDi,
+        @maCuDanLuuTruCung,
+        @bienSoXeDangKy,
+        @tinhTrangCongNo,
+        @duLieuDangKyThuNuoi
+    );
+END
+GO
+
+
+CREATE PROCEDURE [dbo].[SuaNguoiUyQuyen]
+    @maCuDan VARCHAR(10),
+    @maCanHo VARCHAR(10),
+    @loaiCuDan NVARCHAR(100),
+    @hoTen NVARCHAR(100),
+    @ngayThangNamSinh DATE,
+    @maDinhDanh VARCHAR(20),
+    @SDT VARCHAR(20),
+    @email VARCHAR(100),
+    @quocTich NVARCHAR(100),
+    @soTheTamTru VARCHAR(20),
+    @ngayChuyenVao DATE,
+    @ngayChuyenDi DATE,
+    @maCuDanLuuTruCung VARCHAR(10),
+    @bienSoXeDangKy VARCHAR(50),
+    @tinhTrangCongNo INT,
+    @duLieuDangKyThuNuoi NVARCHAR(100)
+AS
+BEGIN
+    UPDATE NguoiDcUyQuyenChuHo
+    SET
+        loaiCuDan = @loaiCuDan,
+        hoTen = @hoTen,
+        ngayThangNamSinh = @ngayThangNamSinh,
+        maDinhDanh = @maDinhDanh,
+        SDT = @SDT,
+        email = @email,
+        quocTich = @quocTich,
+        soTheTamTru = @soTheTamTru,
+        ngayChuyenVao = @ngayChuyenVao,
+        ngayChuyenDi = @ngayChuyenDi,
+        maCuDanLuuTruCung = @maCuDanLuuTruCung,
+        bienSoXeDangKy = @bienSoXeDangKy,
+        tinhTrangCongNo = @tinhTrangCongNo,
+        duLieuDangKyThuNuoi = @duLieuDangKyThuNuoi
+    WHERE maCuDan = @maCuDan AND maCanHo = @maCanHo;
+END
+GO
+
+create procedure [dbo].[XoaNguoiUyQuyen]
+	@maCuDan varchar(10),
+	@bienSo varchar(10)
+as
+begin
+	delete from NguoiDcUyQuyenChuHo where maCuDan = @maCuDan
+	delete from PhuongTien where bienSo = @bienSo
+end
+go
+
+CREATE PROCEDURE [dbo].[ThemKhachNganNgay]
+    @maCuDan VARCHAR(10),
+    @maCanHo VARCHAR(10),
+    @loaiCuDan NVARCHAR(100),
+    @hoTen NVARCHAR(100),
+    @ngayThangNamSinh DATE,
+    @maDinhDanh VARCHAR(20),
+    @SDT VARCHAR(20),
+    @email VARCHAR(100),
+    @quocTich NVARCHAR(100),
+    @soTheTamTru VARCHAR(20),
+    @ngayChuyenVao DATE,
+    @ngayChuyenDi DATE,
+    @maCuDanLuuTruCung VARCHAR(10),
+    @bienSoXeDangKy VARCHAR(50),
+    @tinhTrangCongNo INT,
+    @duLieuDangKyThuNuoi NVARCHAR(100)
+AS
+BEGIN
+    INSERT INTO KhachNganNgay
+    VALUES (
+        @maCuDan, 
+        @maCanHo, 
+        @loaiCuDan, 
+        @hoTen, 
+        @ngayThangNamSinh, 
+        @maDinhDanh, 
+        @SDT, 
+        @email,
+        @quocTich,
+        @soTheTamTru,
+        @ngayChuyenVao,
+        @ngayChuyenDi,
+        @maCuDanLuuTruCung,
+        @bienSoXeDangKy,
+        @tinhTrangCongNo,
+        @duLieuDangKyThuNuoi
+    );
+END
+GO
+
+
+CREATE PROCEDURE [dbo].[SuaKhachNganNgay]
+    @maCuDan VARCHAR(10),
+    @maCanHo VARCHAR(10),
+    @loaiCuDan NVARCHAR(100),
+    @hoTen NVARCHAR(100),
+    @ngayThangNamSinh DATE,
+    @maDinhDanh VARCHAR(20),
+    @SDT VARCHAR(20),
+    @email VARCHAR(100),
+    @quocTich NVARCHAR(100),
+    @soTheTamTru VARCHAR(20),
+    @ngayChuyenVao DATE,
+    @ngayChuyenDi DATE,
+    @maCuDanLuuTruCung VARCHAR(10),
+    @bienSoXeDangKy VARCHAR(50),
+    @tinhTrangCongNo INT,
+    @duLieuDangKyThuNuoi NVARCHAR(100)
+AS
+BEGIN
+    UPDATE KhachNganNgay
+    SET
+        loaiCuDan = @loaiCuDan,
+        hoTen = @hoTen,
+        ngayThangNamSinh = @ngayThangNamSinh,
+        maDinhDanh = @maDinhDanh,
+        SDT = @SDT,
+        email = @email,
+        quocTich = @quocTich,
+        soTheTamTru = @soTheTamTru,
+        ngayChuyenVao = @ngayChuyenVao,
+        ngayChuyenDi = @ngayChuyenDi,
+        maCuDanLuuTruCung = @maCuDanLuuTruCung,
+        bienSoXeDangKy = @bienSoXeDangKy,
+        tinhTrangCongNo = @tinhTrangCongNo,
+        duLieuDangKyThuNuoi = @duLieuDangKyThuNuoi
+    WHERE maCuDan = @maCuDan AND maCanHo = @maCanHo;
+END
+GO
+
+create procedure [dbo].[XoaKhachNganNgay]
+	@maCuDan varchar(10),
+	@bienSo varchar(10)
+as
+begin
+	delete from KhachNganNgay where maCuDan = @maCuDan
+	delete from PhuongTien where bienSo = @bienSo
+end
+go
 
 -- Procedure thêm Nhóm
 Create PROCEDURE [dbo].[SP_ThemNhom]

@@ -21,5 +21,15 @@ namespace DAO
             string query = $"select * from PhuongTien where bienSo = '{bienSo}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public bool AddVehicle(Dictionary<string, object> parameters)
+        {
+            int result = DataProvider.Instance.ExecuteStoredProcedure("ThemPhuongTien", parameters);
+            return result > 0;
+        }
+        public bool UpdateVehicle(Dictionary<string, object> parameters)
+        {
+            int result = DataProvider.Instance.ExecuteStoredProcedure("SuaPhuongTien", parameters);
+            return result > 0;
+        }
     }
 }

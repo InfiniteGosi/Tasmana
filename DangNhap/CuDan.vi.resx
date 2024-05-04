@@ -179,6 +179,15 @@
   <data name="GGC_cudan.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <data name="CBB_choice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 43</value>
+  </data>
+  <data name="CBB_choice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>380, 24</value>
+  </data>
+  <data name="LB_loai.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 24</value>
+  </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABiIAAAQ4CAYAAACE8MRvAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS

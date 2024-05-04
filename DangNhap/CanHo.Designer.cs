@@ -30,7 +30,6 @@ namespace DangNhap
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CanHo));
-            this.BTN_themcanho = new Guna.UI.WinForms.GunaGradientButton();
             this.GGC_danhsachnv = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
             this.GGC_canho = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
             this.CBB_choice = new System.Windows.Forms.ComboBox();
@@ -42,34 +41,6 @@ namespace DangNhap
             ((System.ComponentModel.ISupportInitialize)(this.GGC_danhsachnv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GGC_canho)).BeginInit();
             this.SuspendLayout();
-            // 
-            // BTN_themcanho
-            // 
-            resources.ApplyResources(this.BTN_themcanho, "BTN_themcanho");
-            this.BTN_themcanho.Animated = true;
-            this.BTN_themcanho.AnimationHoverSpeed = 0.3F;
-            this.BTN_themcanho.AnimationSpeed = 0.03F;
-            this.BTN_themcanho.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_themcanho.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
-            this.BTN_themcanho.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
-            this.BTN_themcanho.BorderColor = System.Drawing.Color.White;
-            this.BTN_themcanho.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BTN_themcanho.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.BTN_themcanho.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_themcanho.ForeColor = System.Drawing.Color.White;
-            this.BTN_themcanho.Image = null;
-            this.BTN_themcanho.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.BTN_themcanho.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_themcanho.Name = "BTN_themcanho";
-            this.BTN_themcanho.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(30)))), ((int)(((byte)(184)))));
-            this.BTN_themcanho.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(30)))), ((int)(((byte)(184)))));
-            this.BTN_themcanho.OnHoverBorderColor = System.Drawing.Color.White;
-            this.BTN_themcanho.OnHoverForeColor = System.Drawing.Color.White;
-            this.BTN_themcanho.OnHoverImage = null;
-            this.BTN_themcanho.OnPressedColor = System.Drawing.Color.Black;
-            this.BTN_themcanho.Radius = 5;
-            this.BTN_themcanho.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.BTN_themcanho.Click += new System.EventHandler(this.BTN_themcanho_Click);
             // 
             // GGC_danhsachnv
             // 
@@ -228,7 +199,6 @@ namespace DangNhap
             this.Controls.Add(this.BTN_PDF);
             this.Controls.Add(this.BTN_excel);
             this.Controls.Add(this.GGC_canho);
-            this.Controls.Add(this.BTN_themcanho);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CanHo";
             this.Load += new System.EventHandler(this.CanHo_Load);
@@ -240,7 +210,6 @@ namespace DangNhap
         }
 
         #endregion
-        private Guna.UI.WinForms.GunaGradientButton BTN_themcanho;
         private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl GGC_danhsachnv;
         private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl GGC_canho;
         private Guna.UI.WinForms.GunaGradientButton BTN_in;

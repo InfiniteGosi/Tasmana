@@ -66,6 +66,7 @@ namespace DangNhap
             this.BTN_themcudan.OnHoverForeColor = System.Drawing.Color.Black;
             this.BTN_themcudan.OnHoverImage = null;
             this.BTN_themcudan.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_themcudan.Click += new System.EventHandler(this.BTN_themcudan_Click);
             // 
             // BTN_in
             // 

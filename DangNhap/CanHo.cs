@@ -46,12 +46,6 @@ namespace DangNhap
 
         private void PhanQuyen()
         {
-            if (!currentAccount.Level.Equals("CEO"))
-            {
-                // Thêm căn hộ
-                BTN_themcanho.Enabled = false;
-                BTN_themcanho.Visible = false;
-            }
             if (!currentAccount.Level.Equals("TC") && !currentAccount.Level.Equals("CEO"))
             {
                 // Xem hóa đơn
@@ -59,7 +53,7 @@ namespace DangNhap
                 BTN_XemHoaDon.Visible = false;
             }
         }
-        private void DisplayGGC_canho()
+        public void DisplayGGC_canho()
         {
             GetApartments();
             GGC_canho.DataSource = apartments.Select(e => new
@@ -115,7 +109,7 @@ namespace DangNhap
             arrKhuThuongMai = KhuThuongMaiBLL.Instance.GetAllKhuThuongMai();
         }
 
-        private void DisplayGGC_khuthuongmai()
+        public void DisplayGGC_khuthuongmai()
         {
             GetListKhuThuongMai();
             GGC_canho.DataSource = arrKhuThuongMai.Select(e => new

@@ -27,15 +27,25 @@ namespace DAO
             string query = $"select * from ChuHo where maCanHo = '{maCanHo}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
-        public DataTable GetChuHoByMaCuDan(string maCuDan)
+        public DataTable GetChuHoByMaCuDan(string maCuDan, string maCanHo)
         {
-            string query = $"select * from ChuHo where maCuDan = '{maCuDan}'";
+            string query = $"select * from ChuHo where maCuDan = '{maCuDan}' and maCanHo = '{maCanHo}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
-        public bool DeleteChuHo(string maCuDan, string maCanHo)
+        public bool DeleteChuHo(string maCuDan, string bienSo)
         {
-            string query = $"delete from ChuHo where maCuDan = '{maCuDan}' and maCanHo = '{maCanHo}'";
+            string query = $"exec XoaChuHo @maCuDan = '{maCuDan}', @bienSo = '{bienSo}'";
             return DataProvider.Instance.ExecuteNonQuery(query) > 0;
+        }
+        public bool AddChuHo(Dictionary<string, object> parameters)
+        {
+            int result = DataProvider.Instance.ExecuteStoredProcedure("ThemChuHo", parameters);
+            return result > 0;
+        }
+        public bool UpdateChuHo(Dictionary<string, object> parameters)
+        {
+            int result = DataProvider.Instance.ExecuteStoredProcedure("SuaChuHo", parameters);
+            return result > 0;
         }
     }
 }

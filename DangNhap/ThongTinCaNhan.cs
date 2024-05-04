@@ -200,185 +200,80 @@ namespace DangNhap
 
         private void BTN_luu_Click(object sender, EventArgs e)
         {
-            //Tiếng Việt
-            if (label3.Text == "THÔNG TIN NHÂN VIÊN")
+            int error = 0;
+            if (string.IsNullOrEmpty(TXB_manv.Text))
             {
-                if (string.IsNullOrEmpty(TXB_manv.Text))
-                {
-                    MessageBox.Show("Vui lòng nhập mã nhân viên");
-                    return;
-                }
-                if (string.IsNullOrEmpty(TXB_ho.Text))
-                {
-                    MessageBox.Show("Vui lòng nhập họ");
-                    return;
-                }
-                if (string.IsNullOrEmpty(TXB_ten.Text))
-                {
-                    MessageBox.Show("Vui lòng nhập tên");
-                    return;
-                }
-                if (!Rad_nam.Checked && !Rad_nu.Checked)
-                {
-                    MessageBox.Show("Vui lòng chọn giới tính");
-                    return;
-                }
-                if (string.IsNullOrEmpty(TXB_honnhan.Text))
-                {
-                    MessageBox.Show("Vui lòng nhập tình trạng hôn nhân");
-                    return;
-                }
-                if (CBB_loainv.SelectedIndex == -1)
-                {
-                    MessageBox.Show("Vui lòng chọn loại nhân viên");
-                    return;
-                }
-                //if (CBB_phongban.SelectedIndex == -1)
-                //{
-                //    MessageBox.Show("Vui lòng chọn phòng ban");
-                //    return;
-                //}
-                //if (CBB_phongban.SelectedIndex == -1)
-                //{
-                //    MessageBox.Show("Vui lòng chọn mã nhóm");
-                //    return;
-                //}
-                if (string.IsNullOrEmpty(TXB_tinhtrangHDLD.Text))
-                {
-                    MessageBox.Show("Vui lòng nhập tình trạng hợp đồng lao động");
-                    return;
-                }
-                if (string.IsNullOrEmpty(TXB_sdt.Text))
-                {
-                    MessageBox.Show("Vui lòng nhập số điện thoại");
-                    return;
-                }
-                if (string.IsNullOrEmpty(TXB_email.Text))
-                {
-                    MessageBox.Show("Vui lòng nhập email");
-                    return;
-                }
-                if (string.IsNullOrEmpty(TXB_cccd.Text))
-                {
-                    MessageBox.Show("Vui lòng nhập mã định danh");
-                    return;
-                }
-                if (string.IsNullOrEmpty(TXB_bhxh.Text))
-                {
-                    MessageBox.Show("Vui lòng nhập mã số bảo hiểm xã hội");
-                    return;
-                }
-                if (string.IsNullOrEmpty(TXB_quequan.Text))
-                {
-                    MessageBox.Show("Vui lòng nhập quê quán");
-                    return;
-                }
-                if (string.IsNullOrEmpty(TXB_thuongtru.Text))
-                {
-                    MessageBox.Show("Vui lòng nhập địa chỉ thường trú");
-                    return;
-                }
-                if (string.IsNullOrEmpty(TXB_matkhau.Text))
-                {
-                    MessageBox.Show("Vui lòng nhập mật khẩu cho tài khoản nhân viên");
-                    return;
-                }
-                // Địa chỉ tạm trú không cần check
-                //if (string.IsNullOrEmpty(TXB_tamtru.Text))
-                //{
-                //    MessageBox.Show("Vui lòng nhập địa chỉ tạm trú");
-                //    return;
-                //}
+                LB_emanv.Visible = true;
+                error++;
             }
-            //Tiếng Anh
-            else
+            if (string.IsNullOrEmpty(TXB_ho.Text))
             {
-                if (string.IsNullOrEmpty(TXB_manv.Text))
-                {
-                    MessageBox.Show("Please enter \"Employee ID\"");
-                    return;
-                }
-                if (string.IsNullOrEmpty(TXB_ho.Text))
-                {
-                    MessageBox.Show("Please enter \"Family Name\"");
-                    return;
-                }
-                if (string.IsNullOrEmpty(TXB_ten.Text))
-                {
-                    MessageBox.Show("Please enter \"Name\"");
-                    return;
-                }
-                if (!Rad_nam.Checked && !Rad_nu.Checked)
-                {
-                    MessageBox.Show("Please select \"Gender\"");
-                    return;
-                }
-                if (string.IsNullOrEmpty(TXB_honnhan.Text))
-                {
-                    MessageBox.Show("Please enter \"Marital status\"");
-                    return;
-                }
-                if (CBB_loainv.SelectedIndex == -1)
-                {
-                    MessageBox.Show("Please select \"Employee type\"");
-                    return;
-                }
-                //if (CBB_phongban.SelectedIndex == -1)
-                //{
-                //    MessageBox.Show("Vui lòng chọn phòng ban");
-                //    return;
-                //}
-                //if (CBB_phongban.SelectedIndex == -1)
-                //{
-                //    MessageBox.Show("Vui lòng chọn mã nhóm");
-                //    return;
-                //}
-                if (string.IsNullOrEmpty(TXB_tinhtrangHDLD.Text))
-                {
-                    MessageBox.Show("Please enter \"Labour contact status\"");
-                    return;
-                }
-                if (string.IsNullOrEmpty(TXB_sdt.Text))
-                {
-                    MessageBox.Show("Please enter \"Phone\"");
-                    return;
-                }
-                if (string.IsNullOrEmpty(TXB_email.Text))
-                {
-                    MessageBox.Show("Please enter \"Email\"");
-                    return;
-                }
-                if (string.IsNullOrEmpty(TXB_cccd.Text))
-                {
-                    MessageBox.Show("Please enter \"Crendential number\"");
-                    return;
-                }
-                if (string.IsNullOrEmpty(TXB_bhxh.Text))
-                {
-                    MessageBox.Show("Please enter \"Health insurance number\"");
-                    return;
-                }
-                if (string.IsNullOrEmpty(TXB_quequan.Text))
-                {
-                    MessageBox.Show("Please enter \"Home town\"");
-                    return;
-                }
-                if (string.IsNullOrEmpty(TXB_thuongtru.Text))
-                {
-                    MessageBox.Show("Please enter \"Residency\"");
-                    return;
-                }
-                if (string.IsNullOrEmpty(TXB_matkhau.Text))
-                {
-                    MessageBox.Show("Please enter default \"Password\"");
-                    return;
-                }
-                // Địa chỉ tạm trú không cần check
-                //if (string.IsNullOrEmpty(TXB_tamtru.Text))
-                //{
-                //    MessageBox.Show("Vui lòng nhập địa chỉ tạm trú");
-                //    return;
-                //}
+                LB_eho.Visible = true;
+                error++;
+            }
+            if (string.IsNullOrEmpty(TXB_ten.Text))
+            {
+                LB_eten.Visible = true;
+                error++;
+            }
+            if (!Rad_nam.Checked && !Rad_nu.Checked)
+            {
+                LB_egioitinh.Visible = true;
+                error++;
+            }
+            if (string.IsNullOrEmpty(TXB_honnhan.Text))
+            {
+                LB_ehonnhan.Visible = true;
+                error++;
+            }
+            if (CBB_loainv.SelectedIndex == -1)
+            {
+                LB_eloainv.Visible = true;
+                error++;
+            }
+            if (string.IsNullOrEmpty(TXB_tinhtrangHDLD.Text))
+            {
+                LB_ehdld.Visible = true;
+                error++;
+            }
+            if (string.IsNullOrEmpty(TXB_sdt.Text))
+            {
+                LB_esdt.Visible = true;
+                error++;
+            }
+            if (string.IsNullOrEmpty(TXB_email.Text))
+            {
+                LB_eemail.Visible = true;
+                error++;
+            }
+            if (string.IsNullOrEmpty(TXB_cccd.Text))
+            {
+                LB_ecccd.Visible = true;
+                error++;
+            }
+            if (string.IsNullOrEmpty(TXB_bhxh.Text))
+            {
+                LB_ebaohiem.Visible = true;
+                error++;
+            }
+            if (string.IsNullOrEmpty(TXB_quequan.Text))
+            {
+                LB_equequan.Visible = true;
+                error++;
+            }
+            if (string.IsNullOrEmpty(TXB_thuongtru.Text))
+            {
+                LB_ethuongtru.Visible = true;
+                error++;
+            }
+            if (string.IsNullOrEmpty(TXB_matkhau.Text))
+            {
+                LB_emk.Visible = true;
+                error++;
+            }
+            if (error > 0)
+            {
+                return;
             }
             InitializeValues_NV();
             InitializeValues_TK();
@@ -396,16 +291,19 @@ namespace DangNhap
         }
         private void TXB_manv_TextChanged(object sender, EventArgs e)
         {
+            LB_emanv.Visible = false;
             GenerateUserId();
         }
 
         private void TXB_ten_TextChanged(object sender, EventArgs e)
         {
+            LB_eten.Visible = false;
             GenerateUserId();
         }
 
         private void TXB_sdt_TextChanged(object sender, EventArgs e)
         {
+            LB_esdt.Visible = false;
             GenerateUserId();
         }
 
@@ -544,6 +442,66 @@ namespace DangNhap
         private void BTN_x_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void TXB_matkhau_TextChanged(object sender, EventArgs e)
+        {
+            LB_emk.Visible = false;
+        }
+
+        private void TXB_email_TextChanged(object sender, EventArgs e)
+        {
+            LB_eemail.Visible = false;
+        }
+
+        private void TXB_cccd_TextChanged(object sender, EventArgs e)
+        {
+            LB_ecccd.Visible = false;
+        }
+
+        private void TXB_bhxh_TextChanged(object sender, EventArgs e)
+        {
+            LB_ebaohiem.Visible = false;
+        }
+
+        private void TXB_quequan_TextChanged(object sender, EventArgs e)
+        {
+            LB_equequan.Visible = false;
+        }
+
+        private void TXB_thuongtru_TextChanged(object sender, EventArgs e)
+        {
+            LB_ethuongtru.Visible = false;
+        }
+
+        private void TXB_ho_TextChanged(object sender, EventArgs e)
+        {
+            LB_eho.Visible = false;
+        }
+
+        private void TXB_honnhan_TextChanged(object sender, EventArgs e)
+        {
+            LB_ehonnhan.Visible = false;
+        }
+
+        private void Rad_nam_CheckedChanged(object sender, EventArgs e)
+        {
+            LB_egioitinh.Visible = false;
+        }
+
+        private void Rad_nu_CheckedChanged(object sender, EventArgs e)
+        {
+            LB_egioitinh.Visible = false;
+        }
+
+        private void CBB_loainv_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LB_eloainv.Visible = false;
+        }
+
+        private void TXB_tinhtrangHDLD_TextChanged(object sender, EventArgs e)
+        {
+            LB_ehdld.Visible = false;
         }
     }
 }

@@ -20,7 +20,7 @@ namespace BLL
         private KhachNganNgayBLL() { }
         public string GetNameByMaCuDan(string maCuDan)
         {
-            DataTable dt = KhachNganNgayDAO.Instance.GetKhachByMaCuDan(maCuDan);
+            DataTable dt = KhachNganNgayDAO.Instance.GetNameByMaCuDan(maCuDan);
             if (dt.Rows.Count > 0)
                 return dt.Rows[0]["hoTen"].ToString();
             return "";
@@ -53,10 +53,9 @@ namespace BLL
             }
             return list;
         }
-        public KhachNganNgay GetKhachNganNgayByMaCuDan(string maCuDan)
+        public KhachNganNgay GetKhachNganNgayByMaCuDan(string maCuDan, string maCanHo)
         {
-            DataTable dt = KhachNganNgayDAO.Instance.GetKhachByMaCuDan(maCuDan);
-            string maCanHo = dt.Rows[0]["maCanHo"].ToString();
+            DataTable dt = KhachNganNgayDAO.Instance.GetKhachByMaCuDan(maCuDan, maCanHo);
             string loaiCuDan = dt.Rows[0]["loaiCuDan"].ToString();
             string hoTen = dt.Rows[0]["hoTen"].ToString();
             DateTime ngaySinh = (DateTime)dt.Rows[0]["ngayThangNamSinh"];
@@ -75,13 +74,29 @@ namespace BLL
             string duLieuDangKyThuNuoi = dt.Rows[0]["duLieuDangKyThuNuoi"].ToString();
             return new KhachNganNgay(maCuDan, maCanHo, hoTen, ngaySinh, maDinhDanh, soDienThoai, email, quocTich, soTheTamTru, ngayChuyenVao, ngayChuyenDi, maCuDanLuuTruCung, bienSoXeDangKy, tinhTrangCongNo, duLieuDangKyThuNuoi, loaiCuDan);
         }
-        public string DeleteKhachNganNgay(string maCuDan, string maCanHo)
+        public string DeleteKhachNganNgay(string maCuDan, string bienSo)
         {
-            if (KhachNganNgayDAO.Instance.DeleteKhachNganNgay(maCuDan, maCanHo))
+            if (KhachNganNgayDAO.Instance.DeleteKhachNganNgay(maCuDan, bienSo))
             {
                 return "Xóa thành công";
             }
             return "Xóa thất bại";
+        }
+        public string AddKhachNganNgay(Dictionary<string, object> parameters)
+        {
+            if (KhachNganNgayDAO.Instance.AddKhachNganNgay(parameters))
+            {
+                return "Thêm thành công";
+            }
+            return "Thêm thất bại";
+        }
+        public string UpdateKhachNganNgay(Dictionary<string, object> parameters)
+        {
+            if (KhachNganNgayDAO.Instance.UpdateKhachNganNgay(parameters))
+            {
+                return "Sửa thành công";
+            }
+            return "Sửa thất bại";
         }
     }
 }

@@ -552,6 +552,9 @@
     <EmbeddedResource Include="CanHo.resx">
       <DependentUpon>CanHo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CanHo.vi.resx">
+      <DependentUpon>CanHo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChiPhiHangThang.en.resx">
       <DependentUpon>ChiPhiHangThang.cs</DependentUpon>
     </EmbeddedResource>
@@ -620,6 +623,9 @@
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DangNhap.vi.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DoiMatKhau.en.resx">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
@@ -667,6 +673,9 @@
       <DependentUpon>QuenMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuenMatKhau.resx">
+      <DependentUpon>QuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuenMatKhau.vi.resx">
       <DependentUpon>QuenMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SoanThongBao.en.resx">
@@ -753,6 +762,9 @@
       <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinCuDan.en.resx">
+      <DependentUpon>ThongTinCuDan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinCuDan.vi.resx">
       <DependentUpon>ThongTinCuDan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinKhachThueKTM.en.resx">

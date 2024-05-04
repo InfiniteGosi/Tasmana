@@ -261,10 +261,10 @@
     <value>LOGIN</value>
   </data>
   <data name="CHB_luuid.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 23</value>
+    <value>164, 23</value>
   </data>
   <data name="CHB_luuid.Text" xml:space="preserve">
-    <value>Remember User Id</value>
+    <value>Remember User ID</value>
   </data>
   <data name="BTN_show.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

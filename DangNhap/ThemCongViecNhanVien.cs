@@ -10,10 +10,11 @@ namespace DangNhap
 {
     public partial class ThemCongViecNhanVien : Form
     {
-        
-        public ThemCongViecNhanVien()
+        private CongViecChung parent;
+        public ThemCongViecNhanVien(CongViecChung parent)
         {
             InitializeComponent();
+            this.parent = parent;
         }
         private Form currentFormChild;
         private void OpenChildForm(Form childForm)
@@ -50,7 +51,7 @@ namespace DangNhap
 
         private void BTN_phongban_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThemCongViecPhongBan());
+            OpenChildForm(new ThemCongViecPhongBan(parent));
             BTN_phongban.BackColor = Color.FromArgb(51, 53, 55);
             BTN_nhanvien.BackColor = Color.Transparent;
             BTN_nhom.BackColor = Color.Transparent;
@@ -58,7 +59,7 @@ namespace DangNhap
 
         private void BTN_nhom_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThemCongViecNhom());
+            OpenChildForm(new ThemCongViecNhom(parent));
             BTN_nhom.BackColor = Color.FromArgb(51, 53, 55);
             BTN_phongban.BackColor = Color.Transparent;
             BTN_nhanvien.BackColor = Color.Transparent;
@@ -338,6 +339,7 @@ namespace DangNhap
             if (SaveCongViec())
             {
                 MessageBox.Show("Thêm thành công");
+                parent.Display_GGC_nhanvien();
                 this.Close();
             }
             else

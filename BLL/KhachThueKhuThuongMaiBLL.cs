@@ -78,5 +78,29 @@ namespace BLL
             string bienSoXeDangKy = dt.Rows[0]["bienSoXeDangKy"].ToString();
             return new KhachThueKhuThuongMai(maKhachDangThue, tenCongTy, hoTenNguoiDaiDien, maNhanVienPhuTrach, soDienThoai, email, ngayKyHopDongThue, ngayChuyenVao, ngayChuyenDi, phiQuanLy, moTaKhuVucChoThue, bienSoXeDangKy);
         }
+        public string AddKhachThueKTM(Dictionary<string, object> parameters)
+        {
+            if (KhachThueKhuThuongMaiDAO.Instance.AddKhachThueKTM(parameters))
+            {
+                return "Thêm thành công";
+            }
+            return "Thêm thất bại";
+        }
+        public string DeleteKhachThueKTM(string maKhachDangThue, string bienSo)
+        {
+            if (KhachThueKhuThuongMaiDAO.Instance.DeleteKhachThueKTM(maKhachDangThue, bienSo))
+            {
+                return "Xóa thành công";
+            }
+            return "Xóa thất bại";
+        }
+        public string UpdateKhachThueKTM(Dictionary<string, object> parameters)
+        {
+            if (KhachThueKhuThuongMaiDAO.Instance.UpdateKhachThueKTM(parameters))
+            {
+                return "Sửa thành công";
+            }
+            return "Sửa thất bại";
+        }
     }
 }

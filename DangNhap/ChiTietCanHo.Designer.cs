@@ -58,6 +58,7 @@ namespace DangNhap
             this.label13 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -78,6 +79,7 @@ namespace DangNhap
             this.NUD_phongngu = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
             this.label7 = new System.Windows.Forms.Label();
             this.LB_hinhanhcanho = new System.Windows.Forms.Label();
+            this.PB_hinhcanho = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.BTN_xoa = new Guna.UI.WinForms.GunaGradientButton();
@@ -88,21 +90,19 @@ namespace DangNhap
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.PB_hinhcanho = new System.Windows.Forms.PictureBox();
             this.BTN_thoat = new Guna.UI.WinForms.GunaGradientButton();
             this.PN_hienthi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_mucphiql)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_vitritang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_thanhtoan)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_thangmay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_toilet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_phongngu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_hinhcanho)).BeginInit();
             this.SuspendLayout();
             // 
@@ -366,6 +366,12 @@ namespace DangNhap
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Name = "comboBox2";
             // 
+            // pictureBox2
+            // 
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
             // label14
             // 
             resources.ApplyResources(this.label14, "label14");
@@ -501,6 +507,12 @@ namespace DangNhap
             this.LB_hinhanhcanho.ForeColor = System.Drawing.Color.White;
             this.LB_hinhanhcanho.Name = "LB_hinhanhcanho";
             // 
+            // PB_hinhcanho
+            // 
+            resources.ApplyResources(this.PB_hinhcanho, "PB_hinhcanho");
+            this.PB_hinhcanho.Name = "PB_hinhcanho";
+            this.PB_hinhcanho.TabStop = false;
+            // 
             // label6
             // 
             resources.ApplyResources(this.label6, "label6");
@@ -615,18 +627,6 @@ namespace DangNhap
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Name = "panel5";
             // 
-            // pictureBox2
-            // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            // 
-            // PB_hinhcanho
-            // 
-            resources.ApplyResources(this.PB_hinhcanho, "PB_hinhcanho");
-            this.PB_hinhcanho.Name = "PB_hinhcanho";
-            this.PB_hinhcanho.TabStop = false;
-            // 
             // BTN_thoat
             // 
             resources.ApplyResources(this.BTN_thoat, "BTN_thoat");
@@ -683,13 +683,13 @@ namespace DangNhap
             ((System.ComponentModel.ISupportInitialize)(this.NUD_thanhtoan)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_thangmay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_toilet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_phongngu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_hinhcanho)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

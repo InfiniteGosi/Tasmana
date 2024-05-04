@@ -279,6 +279,7 @@ namespace DangNhap
         {
             InitializeValues_CH();
             MessageBox.Show(ApartmentBLL.Instance.UpdateApartment(AddParemeter_CH()));
+            parent.DisplayGGC_canho();
         }
 
         private void BTN_xoa_Click(object sender, EventArgs e)

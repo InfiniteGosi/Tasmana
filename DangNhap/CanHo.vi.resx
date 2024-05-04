@@ -122,17 +122,8 @@
     <value>NoControl</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="LB_loai.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 19</value>
-  </data>
-  <data name="LB_loai.Text" xml:space="preserve">
-    <value>Choose real estate type</value>
-  </data>
   <data name="BTN_XemHoaDon.Location" type="System.Drawing.Point, System.Drawing">
     <value>1152, 55</value>
-  </data>
-  <data name="BTN_XemHoaDon.Text" xml:space="preserve">
-    <value>See monthly bill</value>
   </data>
   <data name="BTN_in.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -145,9 +136,6 @@
         1/UfrSnBrLEbKYtygJHttw5mHbuROUAOkANUA9xDfh90IWeRSoC/QAPMYOjvVBfO7Kn8W4riCzJw4a5u
         7ohcAAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="BTN_in.Text" xml:space="preserve">
-    <value>Print</value>
   </data>
   <data name="BTN_PDF.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -180,5 +168,8 @@
         27jxAfLgzD8T4MZaIQz/A/yZADs4Eln9hoiaAjSSqgGW0f+L3Si37HJQKn0AqxM8fx1MQc4AAAAASUVO
         RK5CYII=
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
 </root>

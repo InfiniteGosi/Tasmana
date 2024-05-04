@@ -36,11 +36,25 @@ namespace DangNhap
             this.panel2 = new System.Windows.Forms.Panel();
             this.LB_ttcd = new System.Windows.Forms.Label();
             this.PN_hienthi = new System.Windows.Forms.Panel();
+            this.CBB_nguoithan = new System.Windows.Forms.ComboBox();
+            this.CBB_loaicd = new System.Windows.Forms.ComboBox();
+            this.LB_etinhtrangxe = new System.Windows.Forms.Label();
+            this.LB_eloaixe = new System.Windows.Forms.Label();
+            this.LB_ediennuoc = new System.Windows.Forms.Label();
+            this.LB_etamtru = new System.Windows.Forms.Label();
+            this.LB_eemail = new System.Windows.Forms.Label();
+            this.LB_esdt = new System.Windows.Forms.Label();
+            this.LB_ecccd = new System.Windows.Forms.Label();
+            this.LB_equoctich = new System.Windows.Forms.Label();
+            this.LB_ehoten = new System.Windows.Forms.Label();
+            this.LB_emacd = new System.Windows.Forms.Label();
+            this.LB_eloaicd = new System.Windows.Forms.Label();
+            this.LB_emacanho = new System.Windows.Forms.Label();
+            this.NUD_congno = new System.Windows.Forms.NumericUpDown();
             this.TXB_tinhtrangxe = new System.Windows.Forms.TextBox();
             this.LB_tinhtrangxe = new System.Windows.Forms.Label();
             this.TXB_loaixe = new System.Windows.Forms.TextBox();
             this.LB_loaixe = new System.Windows.Forms.Label();
-            this.TXB_nguoithan = new System.Windows.Forms.TextBox();
             this.LB_nguoithan = new System.Windows.Forms.Label();
             this.TXB_bienso = new System.Windows.Forms.TextBox();
             this.LB_bienso = new System.Windows.Forms.Label();
@@ -55,13 +69,11 @@ namespace DangNhap
             this.LB_macd = new System.Windows.Forms.Label();
             this.TXB_macd = new System.Windows.Forms.TextBox();
             this.LB_loaicudan = new System.Windows.Forms.Label();
-            this.TXB_loaicd = new System.Windows.Forms.TextBox();
             this.LB_quoctich = new System.Windows.Forms.Label();
             this.TXB_quoctich = new System.Windows.Forms.TextBox();
             this.LB_thunuoi = new System.Windows.Forms.Label();
             this.TXB_thunuoi = new System.Windows.Forms.TextBox();
             this.LB_congno = new System.Windows.Forms.Label();
-            this.TXB_tinhtrangcongno = new System.Windows.Forms.TextBox();
             this.LB_vao = new System.Windows.Forms.Label();
             this.LB_email = new System.Windows.Forms.Label();
             this.TXB_email = new System.Windows.Forms.TextBox();
@@ -83,6 +95,7 @@ namespace DangNhap
             this.label13 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -96,13 +109,13 @@ namespace DangNhap
             this.panel6 = new System.Windows.Forms.Panel();
             this.BTN_luu = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_thoat = new Guna.UI.WinForms.GunaGradientButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PN_hienthi.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_congno)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -140,11 +153,25 @@ namespace DangNhap
             // 
             resources.ApplyResources(this.PN_hienthi, "PN_hienthi");
             this.PN_hienthi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            this.PN_hienthi.Controls.Add(this.CBB_nguoithan);
+            this.PN_hienthi.Controls.Add(this.CBB_loaicd);
+            this.PN_hienthi.Controls.Add(this.LB_etinhtrangxe);
+            this.PN_hienthi.Controls.Add(this.LB_eloaixe);
+            this.PN_hienthi.Controls.Add(this.LB_ediennuoc);
+            this.PN_hienthi.Controls.Add(this.LB_etamtru);
+            this.PN_hienthi.Controls.Add(this.LB_eemail);
+            this.PN_hienthi.Controls.Add(this.LB_esdt);
+            this.PN_hienthi.Controls.Add(this.LB_ecccd);
+            this.PN_hienthi.Controls.Add(this.LB_equoctich);
+            this.PN_hienthi.Controls.Add(this.LB_ehoten);
+            this.PN_hienthi.Controls.Add(this.LB_emacd);
+            this.PN_hienthi.Controls.Add(this.LB_eloaicd);
+            this.PN_hienthi.Controls.Add(this.LB_emacanho);
+            this.PN_hienthi.Controls.Add(this.NUD_congno);
             this.PN_hienthi.Controls.Add(this.TXB_tinhtrangxe);
             this.PN_hienthi.Controls.Add(this.LB_tinhtrangxe);
             this.PN_hienthi.Controls.Add(this.TXB_loaixe);
             this.PN_hienthi.Controls.Add(this.LB_loaixe);
-            this.PN_hienthi.Controls.Add(this.TXB_nguoithan);
             this.PN_hienthi.Controls.Add(this.LB_nguoithan);
             this.PN_hienthi.Controls.Add(this.TXB_bienso);
             this.PN_hienthi.Controls.Add(this.LB_bienso);
@@ -159,13 +186,11 @@ namespace DangNhap
             this.PN_hienthi.Controls.Add(this.LB_macd);
             this.PN_hienthi.Controls.Add(this.TXB_macd);
             this.PN_hienthi.Controls.Add(this.LB_loaicudan);
-            this.PN_hienthi.Controls.Add(this.TXB_loaicd);
             this.PN_hienthi.Controls.Add(this.LB_quoctich);
             this.PN_hienthi.Controls.Add(this.TXB_quoctich);
             this.PN_hienthi.Controls.Add(this.LB_thunuoi);
             this.PN_hienthi.Controls.Add(this.TXB_thunuoi);
             this.PN_hienthi.Controls.Add(this.LB_congno);
-            this.PN_hienthi.Controls.Add(this.TXB_tinhtrangcongno);
             this.PN_hienthi.Controls.Add(this.LB_vao);
             this.PN_hienthi.Controls.Add(this.LB_email);
             this.PN_hienthi.Controls.Add(this.TXB_email);
@@ -184,12 +209,114 @@ namespace DangNhap
             this.PN_hienthi.Controls.Add(this.panel1);
             this.PN_hienthi.Name = "PN_hienthi";
             // 
+            // CBB_nguoithan
+            // 
+            resources.ApplyResources(this.CBB_nguoithan, "CBB_nguoithan");
+            this.CBB_nguoithan.FormattingEnabled = true;
+            this.CBB_nguoithan.Name = "CBB_nguoithan";
+            // 
+            // CBB_loaicd
+            // 
+            resources.ApplyResources(this.CBB_loaicd, "CBB_loaicd");
+            this.CBB_loaicd.FormattingEnabled = true;
+            this.CBB_loaicd.Items.AddRange(new object[] {
+            resources.GetString("CBB_loaicd.Items"),
+            resources.GetString("CBB_loaicd.Items1"),
+            resources.GetString("CBB_loaicd.Items2"),
+            resources.GetString("CBB_loaicd.Items3"),
+            resources.GetString("CBB_loaicd.Items4")});
+            this.CBB_loaicd.Name = "CBB_loaicd";
+            this.CBB_loaicd.SelectedIndexChanged += new System.EventHandler(this.CBB_loaicd_SelectedIndexChanged);
+            // 
+            // LB_etinhtrangxe
+            // 
+            resources.ApplyResources(this.LB_etinhtrangxe, "LB_etinhtrangxe");
+            this.LB_etinhtrangxe.ForeColor = System.Drawing.Color.Red;
+            this.LB_etinhtrangxe.Name = "LB_etinhtrangxe";
+            // 
+            // LB_eloaixe
+            // 
+            resources.ApplyResources(this.LB_eloaixe, "LB_eloaixe");
+            this.LB_eloaixe.ForeColor = System.Drawing.Color.Red;
+            this.LB_eloaixe.Name = "LB_eloaixe";
+            // 
+            // LB_ediennuoc
+            // 
+            resources.ApplyResources(this.LB_ediennuoc, "LB_ediennuoc");
+            this.LB_ediennuoc.ForeColor = System.Drawing.Color.Red;
+            this.LB_ediennuoc.Name = "LB_ediennuoc";
+            // 
+            // LB_etamtru
+            // 
+            resources.ApplyResources(this.LB_etamtru, "LB_etamtru");
+            this.LB_etamtru.ForeColor = System.Drawing.Color.Red;
+            this.LB_etamtru.Name = "LB_etamtru";
+            // 
+            // LB_eemail
+            // 
+            resources.ApplyResources(this.LB_eemail, "LB_eemail");
+            this.LB_eemail.ForeColor = System.Drawing.Color.Red;
+            this.LB_eemail.Name = "LB_eemail";
+            // 
+            // LB_esdt
+            // 
+            resources.ApplyResources(this.LB_esdt, "LB_esdt");
+            this.LB_esdt.ForeColor = System.Drawing.Color.Red;
+            this.LB_esdt.Name = "LB_esdt";
+            // 
+            // LB_ecccd
+            // 
+            resources.ApplyResources(this.LB_ecccd, "LB_ecccd");
+            this.LB_ecccd.ForeColor = System.Drawing.Color.Red;
+            this.LB_ecccd.Name = "LB_ecccd";
+            // 
+            // LB_equoctich
+            // 
+            resources.ApplyResources(this.LB_equoctich, "LB_equoctich");
+            this.LB_equoctich.ForeColor = System.Drawing.Color.Red;
+            this.LB_equoctich.Name = "LB_equoctich";
+            // 
+            // LB_ehoten
+            // 
+            resources.ApplyResources(this.LB_ehoten, "LB_ehoten");
+            this.LB_ehoten.ForeColor = System.Drawing.Color.Red;
+            this.LB_ehoten.Name = "LB_ehoten";
+            // 
+            // LB_emacd
+            // 
+            resources.ApplyResources(this.LB_emacd, "LB_emacd");
+            this.LB_emacd.ForeColor = System.Drawing.Color.Red;
+            this.LB_emacd.Name = "LB_emacd";
+            // 
+            // LB_eloaicd
+            // 
+            resources.ApplyResources(this.LB_eloaicd, "LB_eloaicd");
+            this.LB_eloaicd.ForeColor = System.Drawing.Color.Red;
+            this.LB_eloaicd.Name = "LB_eloaicd";
+            // 
+            // LB_emacanho
+            // 
+            resources.ApplyResources(this.LB_emacanho, "LB_emacanho");
+            this.LB_emacanho.ForeColor = System.Drawing.Color.Red;
+            this.LB_emacanho.Name = "LB_emacanho";
+            // 
+            // NUD_congno
+            // 
+            resources.ApplyResources(this.NUD_congno, "NUD_congno");
+            this.NUD_congno.Maximum = new decimal(new int[] {
+            -1530494977,
+            232830,
+            0,
+            0});
+            this.NUD_congno.Name = "NUD_congno";
+            // 
             // TXB_tinhtrangxe
             // 
             resources.ApplyResources(this.TXB_tinhtrangxe, "TXB_tinhtrangxe");
             this.TXB_tinhtrangxe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_tinhtrangxe.ForeColor = System.Drawing.Color.White;
             this.TXB_tinhtrangxe.Name = "TXB_tinhtrangxe";
+            this.TXB_tinhtrangxe.TextChanged += new System.EventHandler(this.TXB_tinhtrangxe_TextChanged);
             // 
             // LB_tinhtrangxe
             // 
@@ -203,19 +330,13 @@ namespace DangNhap
             this.TXB_loaixe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_loaixe.ForeColor = System.Drawing.Color.White;
             this.TXB_loaixe.Name = "TXB_loaixe";
+            this.TXB_loaixe.TextChanged += new System.EventHandler(this.TXB_loaixe_TextChanged);
             // 
             // LB_loaixe
             // 
             resources.ApplyResources(this.LB_loaixe, "LB_loaixe");
             this.LB_loaixe.ForeColor = System.Drawing.Color.White;
             this.LB_loaixe.Name = "LB_loaixe";
-            // 
-            // TXB_nguoithan
-            // 
-            resources.ApplyResources(this.TXB_nguoithan, "TXB_nguoithan");
-            this.TXB_nguoithan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_nguoithan.ForeColor = System.Drawing.Color.White;
-            this.TXB_nguoithan.Name = "TXB_nguoithan";
             // 
             // LB_nguoithan
             // 
@@ -242,6 +363,7 @@ namespace DangNhap
             this.TXB_diennuoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_diennuoc.ForeColor = System.Drawing.Color.White;
             this.TXB_diennuoc.Name = "TXB_diennuoc";
+            this.TXB_diennuoc.TextChanged += new System.EventHandler(this.TXB_diennuoc_TextChanged);
             // 
             // LB_diennuoc
             // 
@@ -293,19 +415,13 @@ namespace DangNhap
             this.TXB_macd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_macd.ForeColor = System.Drawing.Color.White;
             this.TXB_macd.Name = "TXB_macd";
+            this.TXB_macd.TextChanged += new System.EventHandler(this.TXB_macd_TextChanged);
             // 
             // LB_loaicudan
             // 
             resources.ApplyResources(this.LB_loaicudan, "LB_loaicudan");
             this.LB_loaicudan.ForeColor = System.Drawing.Color.White;
             this.LB_loaicudan.Name = "LB_loaicudan";
-            // 
-            // TXB_loaicd
-            // 
-            resources.ApplyResources(this.TXB_loaicd, "TXB_loaicd");
-            this.TXB_loaicd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_loaicd.ForeColor = System.Drawing.Color.White;
-            this.TXB_loaicd.Name = "TXB_loaicd";
             // 
             // LB_quoctich
             // 
@@ -319,6 +435,7 @@ namespace DangNhap
             this.TXB_quoctich.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_quoctich.ForeColor = System.Drawing.Color.White;
             this.TXB_quoctich.Name = "TXB_quoctich";
+            this.TXB_quoctich.TextChanged += new System.EventHandler(this.TXB_quoctich_TextChanged);
             // 
             // LB_thunuoi
             // 
@@ -339,13 +456,6 @@ namespace DangNhap
             this.LB_congno.ForeColor = System.Drawing.Color.White;
             this.LB_congno.Name = "LB_congno";
             // 
-            // TXB_tinhtrangcongno
-            // 
-            resources.ApplyResources(this.TXB_tinhtrangcongno, "TXB_tinhtrangcongno");
-            this.TXB_tinhtrangcongno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.TXB_tinhtrangcongno.ForeColor = System.Drawing.Color.White;
-            this.TXB_tinhtrangcongno.Name = "TXB_tinhtrangcongno";
-            // 
             // LB_vao
             // 
             resources.ApplyResources(this.LB_vao, "LB_vao");
@@ -364,6 +474,7 @@ namespace DangNhap
             this.TXB_email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_email.ForeColor = System.Drawing.Color.White;
             this.TXB_email.Name = "TXB_email";
+            this.TXB_email.TextChanged += new System.EventHandler(this.TXB_email_TextChanged);
             // 
             // LB_tamtru
             // 
@@ -377,6 +488,7 @@ namespace DangNhap
             this.TXB_sothetamtru.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_sothetamtru.ForeColor = System.Drawing.Color.White;
             this.TXB_sothetamtru.Name = "TXB_sothetamtru";
+            this.TXB_sothetamtru.TextChanged += new System.EventHandler(this.TXB_sothetamtru_TextChanged);
             // 
             // LB_sdt
             // 
@@ -390,6 +502,7 @@ namespace DangNhap
             this.TXB_sdt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_sdt.ForeColor = System.Drawing.Color.White;
             this.TXB_sdt.Name = "TXB_sdt";
+            this.TXB_sdt.TextChanged += new System.EventHandler(this.TXB_sdt_TextChanged);
             // 
             // LB_dinhdanh
             // 
@@ -403,6 +516,7 @@ namespace DangNhap
             this.TXB_madinhdanh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_madinhdanh.ForeColor = System.Drawing.Color.White;
             this.TXB_madinhdanh.Name = "TXB_madinhdanh";
+            this.TXB_madinhdanh.TextChanged += new System.EventHandler(this.TXB_madinhdanh_TextChanged);
             // 
             // LB_ngaysinh
             // 
@@ -422,6 +536,7 @@ namespace DangNhap
             this.TXB_hovaten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_hovaten.ForeColor = System.Drawing.Color.White;
             this.TXB_hovaten.Name = "TXB_hovaten";
+            this.TXB_hovaten.TextChanged += new System.EventHandler(this.TXB_hovaten_TextChanged);
             // 
             // LB_macanho
             // 
@@ -435,6 +550,7 @@ namespace DangNhap
             this.TXB_macanho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_macanho.ForeColor = System.Drawing.Color.White;
             this.TXB_macanho.Name = "TXB_macanho";
+            this.TXB_macanho.TextChanged += new System.EventHandler(this.TXB_macanho_TextChanged);
             // 
             // panel7
             // 
@@ -495,6 +611,12 @@ namespace DangNhap
             this.comboBox2.ForeColor = System.Drawing.Color.White;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Name = "comboBox2";
+            // 
+            // pictureBox2
+            // 
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
             // 
             // label14
             // 
@@ -615,6 +737,7 @@ namespace DangNhap
             this.BTN_luu.OnPressedColor = System.Drawing.Color.Black;
             this.BTN_luu.Radius = 5;
             this.BTN_luu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_luu.Click += new System.EventHandler(this.BTN_luu_Click);
             // 
             // BTN_thoat
             // 
@@ -641,12 +764,6 @@ namespace DangNhap
             this.BTN_thoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_thoat.Click += new System.EventHandler(this.BTN_thoat_Click);
             // 
-            // pictureBox2
-            // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            // 
             // ThongTinCuDan
             // 
             resources.ApplyResources(this, "$this");
@@ -667,12 +784,13 @@ namespace DangNhap
             this.Load += new System.EventHandler(this.ThongTinCuDan_Load);
             this.PN_hienthi.ResumeLayout(false);
             this.PN_hienthi.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUD_congno)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -706,7 +824,6 @@ namespace DangNhap
         private System.Windows.Forms.Label LB_macanho;
         private System.Windows.Forms.TextBox TXB_macanho;
         private System.Windows.Forms.Label LB_congno;
-        private System.Windows.Forms.TextBox TXB_tinhtrangcongno;
         private System.Windows.Forms.Label LB_vao;
         private System.Windows.Forms.Label LB_email;
         private System.Windows.Forms.TextBox TXB_email;
@@ -720,7 +837,6 @@ namespace DangNhap
         private System.Windows.Forms.Label LB_hoten;
         private System.Windows.Forms.TextBox TXB_hovaten;
         private System.Windows.Forms.Label LB_loaicudan;
-        private System.Windows.Forms.TextBox TXB_loaicd;
         private System.Windows.Forms.Label LB_quoctich;
         private System.Windows.Forms.TextBox TXB_quoctich;
         private System.Windows.Forms.Label LB_thunuoi;
@@ -744,8 +860,22 @@ namespace DangNhap
         private System.Windows.Forms.Label LB_tinhtrangxe;
         private System.Windows.Forms.TextBox TXB_loaixe;
         private System.Windows.Forms.Label LB_loaixe;
-        private System.Windows.Forms.TextBox TXB_nguoithan;
         private System.Windows.Forms.Label LB_nguoithan;
         private System.Windows.Forms.TextBox TXB_bienso;
+        private System.Windows.Forms.NumericUpDown NUD_congno;
+        private System.Windows.Forms.Label LB_etinhtrangxe;
+        private System.Windows.Forms.Label LB_eloaixe;
+        private System.Windows.Forms.Label LB_ediennuoc;
+        private System.Windows.Forms.Label LB_etamtru;
+        private System.Windows.Forms.Label LB_eemail;
+        private System.Windows.Forms.Label LB_esdt;
+        private System.Windows.Forms.Label LB_ecccd;
+        private System.Windows.Forms.Label LB_equoctich;
+        private System.Windows.Forms.Label LB_ehoten;
+        private System.Windows.Forms.Label LB_emacd;
+        private System.Windows.Forms.Label LB_eloaicd;
+        private System.Windows.Forms.Label LB_emacanho;
+        private System.Windows.Forms.ComboBox CBB_loaicd;
+        private System.Windows.Forms.ComboBox CBB_nguoithan;
     }
 }

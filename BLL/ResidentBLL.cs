@@ -26,6 +26,16 @@ namespace BLL
             return "";
         }
         // Lấy cư dân có quốc tịch không phải VN
+        public List<string> GetAllResidentID()
+        {
+            DataTable dt = ResidentDAO.Instance.GetAllResidentID();
+            List<string> list = new List<string>();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                list.Add(dt.Rows[i]["maCuDan"].ToString());
+            }
+            return list;
+        }
         public DataTable GetAllForeignNational()
         {
             return ResidentDAO.Instance.GetAllForeignNational();

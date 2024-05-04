@@ -21,6 +21,11 @@ namespace DAO
             string query = $"select * from CuDan where maCuDan = '{maCuDan}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable GetAllResidentID()
+        {
+            string query = $"select * from CuDan";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         // Lấy cư dân có quốc tịch không phải VN
         public DataTable GetAllForeignNational()
         {

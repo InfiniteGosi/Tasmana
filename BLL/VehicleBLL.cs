@@ -21,7 +21,27 @@ namespace BLL
         public Vehicle GetVehicleByBienSo(string bienSo)
         {
             DataTable dt = VehicleDAO.Instance.GetVehicleByBienSo(bienSo);
-            return new Vehicle(bienSo, dt.Rows[0]["chungLoai"].ToString(), dt.Rows[0]["tinhTrangSoHuu"].ToString());
+            if (dt.Rows.Count > 0 )
+            {
+                return new Vehicle(bienSo, dt.Rows[0]["chungLoai"].ToString(), dt.Rows[0]["tinhTrangSoHuu"].ToString());
+            }
+            return null;
+        }
+        public string AddVehicle(Dictionary<string, object> parameters)
+        {
+            if (VehicleDAO.Instance.AddVehicle(parameters))
+            {
+                return "Thêm thành công";
+            }
+            return "Thêm thất bại";
+        }
+        public string UpdateVehicle(Dictionary<string, object> parameters)
+        {
+            if (VehicleDAO.Instance.UpdateVehicle(parameters))
+            {
+                return "Sửa thành công";
+            }
+            return "Sửa thất bại";
         }
     }
 }

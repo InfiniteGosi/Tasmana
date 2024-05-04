@@ -122,6 +122,9 @@
     <value>NoControl</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="LB_quequan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 482</value>
+  </data>
   <data name="LB_quequan.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 22</value>
   </data>
@@ -130,6 +133,9 @@
   </data>
   <data name="LB_tamtru.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="LB_tamtru.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 690</value>
   </data>
   <data name="LB_tamtru.Size" type="System.Drawing.Size, System.Drawing">
     <value>177, 22</value>
@@ -149,6 +155,9 @@
   <data name="LB_thuongtru.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="LB_thuongtru.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 586</value>
+  </data>
   <data name="LB_thuongtru.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 22</value>
   </data>
@@ -157,6 +166,9 @@
   </data>
   <data name="LB_id.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="LB_id.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 274</value>
   </data>
   <data name="LB_id.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 22</value>
@@ -203,6 +215,15 @@
   <data name="LB_email.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="LB_emk.Location" type="System.Drawing.Point, System.Drawing">
+    <value>281, 218</value>
+  </data>
+  <data name="LB_emk.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 20</value>
+  </data>
+  <data name="LB_emk.Text" xml:space="preserve">
+    <value>Please enter password</value>
+  </data>
   <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -227,6 +248,42 @@
   <data name="CHB_vohieuhoa.Text" xml:space="preserve">
     <value>Disable account</value>
   </data>
+  <data name="LB_ethuongtru.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 20</value>
+  </data>
+  <data name="LB_ethuongtru.Text" xml:space="preserve">
+    <value>Please enter residency</value>
+  </data>
+  <data name="LB_equequan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 20</value>
+  </data>
+  <data name="LB_equequan.Text" xml:space="preserve">
+    <value>Please enter home town</value>
+  </data>
+  <data name="LB_ebaohiem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 20</value>
+  </data>
+  <data name="LB_ebaohiem.Text" xml:space="preserve">
+    <value>Please enter health insurance number</value>
+  </data>
+  <data name="LB_ecccd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 20</value>
+  </data>
+  <data name="LB_ecccd.Text" xml:space="preserve">
+    <value>Please enter credential number</value>
+  </data>
+  <data name="LB_eemail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 20</value>
+  </data>
+  <data name="LB_eemail.Text" xml:space="preserve">
+    <value>Please enter mail</value>
+  </data>
+  <data name="LB_esdt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 20</value>
+  </data>
+  <data name="LB_esdt.Text" xml:space="preserve">
+    <value>Please enter phone</value>
+  </data>
   <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -235,6 +292,18 @@
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>Contract details</value>
+  </data>
+  <data name="LB_ehdld.Size" type="System.Drawing.Size, System.Drawing">
+    <value>249, 20</value>
+  </data>
+  <data name="LB_ehdld.Text" xml:space="preserve">
+    <value>Please enter labour contact status</value>
+  </data>
+  <data name="LB_eloainv.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 20</value>
+  </data>
+  <data name="LB_eloainv.Text" xml:space="preserve">
+    <value>Please choose employee type</value>
   </data>
   <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -307,6 +376,36 @@
   </data>
   <data name="LB_ngaykyHDLD.Text" xml:space="preserve">
     <value>Labour contact signing date</value>
+  </data>
+  <data name="LB_egioitinh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 20</value>
+  </data>
+  <data name="LB_egioitinh.Text" xml:space="preserve">
+    <value>Please choose gender</value>
+  </data>
+  <data name="LB_ehonnhan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 20</value>
+  </data>
+  <data name="LB_ehonnhan.Text" xml:space="preserve">
+    <value>Please enter marital status</value>
+  </data>
+  <data name="LB_eten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 20</value>
+  </data>
+  <data name="LB_eten.Text" xml:space="preserve">
+    <value>Please enter name</value>
+  </data>
+  <data name="LB_eho.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 20</value>
+  </data>
+  <data name="LB_eho.Text" xml:space="preserve">
+    <value>Please enter family name</value>
+  </data>
+  <data name="LB_emanv.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 20</value>
+  </data>
+  <data name="LB_emanv.Text" xml:space="preserve">
+    <value>Please enter employee ID</value>
   </data>
   <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>

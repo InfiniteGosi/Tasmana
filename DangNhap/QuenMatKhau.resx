@@ -164,6 +164,9 @@
   <data name="&gt;&gt;BTN_guima.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;BTN_ok.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -330,8 +333,8 @@
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>51, 174</value>
   </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
+  <data name="TXB_email.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Nhập mã nhân viên</value>
@@ -360,8 +363,8 @@
   <data name="&gt;&gt;panel5.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>47, 243</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Email</value>
@@ -384,8 +387,8 @@
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
   </data>
-  <data name="&gt;&gt;TXB_employeId.ZOrder" xml:space="preserve">
-    <value>15</value>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 22</value>
@@ -407,9 +410,6 @@
   </data>
   <data name="BTN_ok.Location" type="System.Drawing.Point, System.Drawing">
     <value>165, 454</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>6</value>
   </data>
   <data name="&gt;&gt;TXB_verify.Parent" xml:space="preserve">
     <value>$this</value>
@@ -496,6 +496,9 @@
   <data name="&gt;&gt;BTN_thoat.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
     <value>553, 0</value>
   </data>
@@ -544,14 +547,11 @@
   <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
   <data name="&gt;&gt;panel4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="TXB_email.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
+  <data name="&gt;&gt;TXB_employeId.ZOrder" xml:space="preserve">
+    <value>15</value>
   </data>
   <data name="&gt;&gt;label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -562,14 +562,17 @@
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="TXB_email.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 268</value>
   </data>
   <data name="&gt;&gt;label3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Right</value>
+  </data>
+  <data name="BTN_thoat.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 7.8pt, style=Bold</value>
   </data>
   <data name="&gt;&gt;panel4.Name" xml:space="preserve">
     <value>panel4</value>
@@ -579,9 +582,6 @@
   </data>
   <data name="TXB_verify.Size" type="System.Drawing.Size, System.Drawing">
     <value>476, 23</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>47, 243</value>
   </data>
   <data name="BTN_guima.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 9pt</value>
@@ -631,8 +631,8 @@
   <data name="TXB_email.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="BTN_thoat.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 7.8pt, style=Bold</value>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
@@ -661,8 +661,8 @@
   <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="TXB_email.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 268</value>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="TXB_verify.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>

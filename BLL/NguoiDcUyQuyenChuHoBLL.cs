@@ -46,10 +46,9 @@ namespace BLL
             }
             return list;
         }
-        public NguoiDcUyQuyenChuHo GetNguoiUyQuyenByMaCuDan(string maCuDan)
+        public NguoiDcUyQuyenChuHo GetNguoiUyQuyenByMaCuDan(string maCuDan, string maCanHo)
         {
-            DataTable dt = NguoiDcUyQuyenChuHoDAO.Instance.GetNguoiUyQuyenByMaCuDan(maCuDan);
-            string maCanHo = dt.Rows[0]["maCanHo"].ToString();
+            DataTable dt = NguoiDcUyQuyenChuHoDAO.Instance.GetNguoiUyQuyenByMaCuDan(maCuDan, maCanHo);
             string loaiCuDan = dt.Rows[0]["loaiCuDan"].ToString();
             string hoTen = dt.Rows[0]["hoTen"].ToString();
             DateTime ngaySinh = (DateTime)dt.Rows[0]["ngayThangNamSinh"];
@@ -68,13 +67,29 @@ namespace BLL
             string duLieuDangKyThuNuoi = dt.Rows[0]["duLieuDangKyThuNuoi"].ToString();
             return new NguoiDcUyQuyenChuHo(maCuDan, maCanHo, hoTen, ngaySinh, maDinhDanh, soDienThoai, email, quocTich, soTheTamTru, ngayChuyenVao, ngayChuyenDi, maCuDanLuuTruCung, bienSoXeDangKy, tinhTrangCongNo, duLieuDangKyThuNuoi, loaiCuDan);
         }
-        public string DeleteNguoiUyQuyen(string maCuDan, string maCanHo)
+        public string DeleteNguoiUyQuyen(string maCuDan, string bienSo)
         {
-            if (NguoiDcUyQuyenChuHoDAO.Instance.DeleteNguoiUyQuyen(maCuDan, maCanHo))
+            if (NguoiDcUyQuyenChuHoDAO.Instance.DeleteNguoiUyQuyen(maCuDan, bienSo))
             {
                 return "Xóa thành công";
             }
             return "Xóa thất bại";
+        }
+        public string AddNguoiUyQuyen(Dictionary<string, object> parameters)
+        {
+            if (NguoiDcUyQuyenChuHoDAO.Instance.AddNguoiUyQuyen(parameters))
+            {
+                return "Thêm thành công";
+            }
+            return "Thêm thất bại";
+        }
+        public string UpdateNguoiUyQuyen(Dictionary<string, object> parameters)
+        {
+            if (NguoiDcUyQuyenChuHoDAO.Instance.UpdateNguoiUyQuyen(parameters))
+            {
+                return "Sửa thành công";
+            }
+            return "Sửa thất bại";
         }
     }
 }

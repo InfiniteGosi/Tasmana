@@ -26,7 +26,7 @@ namespace DangNhap
             SyncfusionLicenseProvider.RegisterLicense("MzIxOTI2MkAzMjM1MmUzMDJlMzBORkJZeFRVdUQxeERjT2xkWC9vdFgxS29wUmREOU9CZVdENkRUN0lrSStVPQ==;Mgo+DSMBaFt6QHFqVkNrXVNbdV5dVGpAd0N3RGlcdlR1fUUmHVdTRHRbQlliS3xTck1hW35Wcnc=");
             InitializeComponent();
         }
-        private void DisplayGGC_chuho()
+        public void DisplayGGC_chuho()
         {
             Console.WriteLine(ChuHoBLL.Instance.GetAllChuHo());
             GGC_cudan.DataSource = ChuHoBLL.Instance.GetAllChuHo().Select(e => new
@@ -89,7 +89,7 @@ namespace DangNhap
                 column.Appearance.AnyRecordFieldCell.CellType = "TextBox";
             }
         }
-        private void DisplayGGC_uyquyen()
+        public void DisplayGGC_uyquyen()
         {
             GGC_cudan.DataSource = NguoiDcUyQuyenChuHoBLL.Instance.GetAllNguoiUyQuyen().Select(e => new
             {
@@ -147,7 +147,7 @@ namespace DangNhap
                 column.Appearance.AnyRecordFieldCell.CellType = "TextBox";
             }
         }
-        private void DisplayGGC_khachnganngay()
+        public void DisplayGGC_khachnganngay()
         {
             GGC_cudan.DataSource = KhachNganNgayBLL.Instance.GetAllKhachNganNgay().Select(e => new
             {
@@ -205,7 +205,7 @@ namespace DangNhap
                 column.Appearance.AnyRecordFieldCell.CellType = "TextBox";
             }
         }
-        private void DisplayGGC_khachthuektm()
+        public void DisplayGGC_khachthuektm()
         {
             GGC_cudan.DataSource = KhachThueKhuThuongMaiBLL.Instance.GetAllKhachThue();
             GGC_cudan.TopLevelGroupOptions.ShowFilterBar = true;
@@ -294,23 +294,52 @@ namespace DangNhap
                 {
                     string loaiCuDan = record.GetValue("LoaiCuDan").ToString();
                     string maCuDan = record.GetValue("MaCuDan").ToString();
+                    string maCanHo = record.GetValue("MaCanHo").ToString();
                     switch (loaiCuDan)
                     {
                         case "Chủ hộ":
-                            ttcd = new ThongTinCuDan(this, ChuHoBLL.Instance.GetChuHoByMaCuDan(maCuDan));
+                            ttcd = new ThongTinCuDan(this, ChuHoBLL.Instance.GetChuHoByMaCuDan(maCuDan, maCanHo));
                             ttcd.ShowDialog();
                             break;
                         case "Người được ủy quyền của chủ hộ":
-                            ttcd = new ThongTinCuDan(this, NguoiDcUyQuyenChuHoBLL.Instance.GetNguoiUyQuyenByMaCuDan(maCuDan));
+                            ttcd = new ThongTinCuDan(this, NguoiDcUyQuyenChuHoBLL.Instance.GetNguoiUyQuyenByMaCuDan(maCuDan, maCanHo));
                             ttcd.ShowDialog();
                             break;
                         case "Khách ngắn ngày":
                         case "Khách vãng lai":
                         case "Nhân viên của chủ hộ":
-                            ttcd = new ThongTinCuDan(this, KhachNganNgayBLL.Instance.GetKhachNganNgayByMaCuDan(maCuDan));
+                            ttcd = new ThongTinCuDan(this, KhachNganNgayBLL.Instance.GetKhachNganNgayByMaCuDan(maCuDan, maCanHo));
                             ttcd.ShowDialog();
                             break;
                     }
+                }
+            }
+        }
+
+        private void BTN_themcudan_Click(object sender, EventArgs e)
+        {
+            ThongTinCuDan ttcd;
+            if (CBB_choice.SelectedIndex == 3)
+            {
+                ThongTinKhachThueKTM tt = new ThongTinKhachThueKTM(this);
+                tt.ShowDialog();
+            }
+            else
+            {
+                switch (CBB_choice.SelectedIndex)
+                {
+                    case 0:
+                        ttcd = new ThongTinCuDan(this, 0);
+                        ttcd.ShowDialog();
+                        break;
+                    case 1:
+                        ttcd = new ThongTinCuDan(this, 1);
+                        ttcd.ShowDialog();
+                        break;
+                    case 2:
+                        ttcd = new ThongTinCuDan(this, 2);
+                        ttcd.ShowDialog();
+                        break;
                 }
             }
         }

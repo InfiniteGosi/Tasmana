@@ -16,9 +16,11 @@ namespace DangNhap
 {
     public partial class ThemCongViecNhom : Form
     {
-        public ThemCongViecNhom()
+        private CongViecChung parent;
+        public ThemCongViecNhom(CongViecChung parent)
         {
             InitializeComponent();
+            this.parent = parent;
         }
 
         private List<Division> GetPhongBan()
@@ -227,6 +229,7 @@ namespace DangNhap
             if (SaveCongViec())
             {
                 MessageBox.Show("Thêm thành công");
+                parent.Display_GGC_nhom();
                 this.Close();
             }
             else

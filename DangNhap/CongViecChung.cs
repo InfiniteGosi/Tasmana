@@ -33,7 +33,7 @@ namespace DangNhap
         }
         private void BTN_themcongviec_Click(object sender, EventArgs e)
         {
-            ThemCongViecNhanVien tcv = new ThemCongViecNhanVien();
+            ThemCongViecNhanVien tcv = new ThemCongViecNhanVien(this);
             tcv.Show();
         }
 
@@ -68,7 +68,7 @@ namespace DangNhap
                 BTN_themcongviec.Visible = false;
             }
         }
-        private void Display_GGC_nhanvien()
+        public void Display_GGC_nhanvien()
         {
             //GGC_hienthicongviec.Size = new System.Drawing.Size(1254, 404);
             GGC_hienthicongviec.DataSource = JobBLL.Instance.GetJobOfEmployeesPQ(quyen, this.currentUser, this.currentAccount.Level);
@@ -109,10 +109,7 @@ namespace DangNhap
             }
         }
 
-            
-        
-
-        private void Display_GGC_nhom()
+        public void Display_GGC_nhom()
         {
             //GGC_hienthicongviec.Size = new System.Drawing.Size(1254, 404);
             GGC_hienthicongviec.DataSource = JobBLL.Instance.GetJobOfGroupsPQ(quyen, this.currentUser, this.currentAccount.Level);
@@ -152,7 +149,7 @@ namespace DangNhap
             }
         }
 
-        private void Display_GGC_phongban()
+        public void Display_GGC_phongban()
         {
             //GGC_hienthicongviec.Size = new System.Drawing.Size(1254, 404);
             GGC_hienthicongviec.DataSource = JobBLL.Instance.GetJobOfDivisionsPQ(quyen, this.currentUser, this.currentAccount.Level);

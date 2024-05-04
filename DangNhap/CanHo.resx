@@ -162,11 +162,11 @@
   <data name="&gt;&gt;BTN_themcanho.Type" xml:space="preserve">
     <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
+  <data name="&gt;&gt;BTN_excel.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
   <data name="CBB_choice.TabIndex" type="System.Int32, mscorlib">
     <value>176</value>
-  </data>
-  <data name="&gt;&gt;BTN_PDF.Name" xml:space="preserve">
-    <value>BTN_PDF</value>
   </data>
   <data name="LB_loai.Location" type="System.Drawing.Point, System.Drawing">
     <value>61, 33</value>
@@ -192,9 +192,6 @@
   <data name="BTN_in.TabIndex" type="System.Int32, mscorlib">
     <value>175</value>
   </data>
-  <data name="GGC_danhsachnv.Text" xml:space="preserve">
-    <value>gridGroupingControl1</value>
-  </data>
   <data name="BTN_XemHoaDon.Location" type="System.Drawing.Point, System.Drawing">
     <value>1001, 55</value>
   </data>
@@ -215,9 +212,6 @@
   </data>
   <data name="&gt;&gt;LB_loai.Name" xml:space="preserve">
     <value>LB_loai</value>
-  </data>
-  <data name="&gt;&gt;BTN_excel.Type" xml:space="preserve">
-    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
   <data name="BTN_PDF.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -287,9 +281,6 @@
   <data name="BTN_excel.Text" xml:space="preserve">
     <value>Excel</value>
   </data>
-  <data name="LB_loai.TabIndex" type="System.Int32, mscorlib">
-    <value>177</value>
-  </data>
   <data name="BTN_excel.TabIndex" type="System.Int32, mscorlib">
     <value>173</value>
   </data>
@@ -356,11 +347,11 @@
   <data name="CBB_choice.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="&gt;&gt;GGC_canho.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="GGC_danhsachnv.Text" xml:space="preserve">
+    <value>gridGroupingControl1</value>
   </data>
-  <data name="GGC_canho.Location" type="System.Drawing.Point, System.Drawing">
-    <value>65, 100</value>
+  <data name="LB_loai.TabIndex" type="System.Int32, mscorlib">
+    <value>177</value>
   </data>
   <data name="&gt;&gt;GGC_danhsachnv.Name" xml:space="preserve">
     <value>GGC_danhsachnv</value>
@@ -380,6 +371,9 @@
   <data name="BTN_in.Location" type="System.Drawing.Point, System.Drawing">
     <value>281, 705</value>
   </data>
+  <data name="GGC_canho.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 100</value>
+  </data>
   <data name="LB_loai.Text" xml:space="preserve">
     <value>Chọn loại bất động sản</value>
   </data>
@@ -397,6 +391,9 @@
         1/UfrSnBrLEbKYtygJHttw5mHbuROUAOkANUA9xDfh90IWeRSoC/QAPMYOjvVBfO7Kn8W4riCzJw4a5u
         7ohcAAAAAElFTkSuQmCC
 </value>
+  </data>
+  <data name="&gt;&gt;BTN_PDF.Name" xml:space="preserve">
+    <value>BTN_PDF</value>
   </data>
   <data name="&gt;&gt;BTN_excel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -422,6 +419,9 @@
   <data name="BTN_XemHoaDon.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 9pt</value>
   </data>
+  <data name="&gt;&gt;GGC_canho.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <data name="BTN_excel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
@@ -445,8 +445,5 @@
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>vi</value>
   </metadata>
 </root>

@@ -36,6 +36,15 @@ namespace DangNhap
             this.panel2 = new System.Windows.Forms.Panel();
             this.LB_ttcd = new System.Windows.Forms.Label();
             this.PN_hienthi = new System.Windows.Forms.Panel();
+            this.LB_errortinhtrangxe = new System.Windows.Forms.Label();
+            this.LB_errorloaixe = new System.Windows.Forms.Label();
+            this.CBB_manv = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.LB_erroremail = new System.Windows.Forms.Label();
+            this.LB_errorsdt = new System.Windows.Forms.Label();
+            this.LB_errhoten = new System.Windows.Forms.Label();
+            this.LB_errortencty = new System.Windows.Forms.Label();
+            this.LB_errmakhachthue = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.NUD_phiql = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
@@ -127,6 +136,15 @@ namespace DangNhap
             // 
             resources.ApplyResources(this.PN_hienthi, "PN_hienthi");
             this.PN_hienthi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            this.PN_hienthi.Controls.Add(this.LB_errortinhtrangxe);
+            this.PN_hienthi.Controls.Add(this.LB_errorloaixe);
+            this.PN_hienthi.Controls.Add(this.CBB_manv);
+            this.PN_hienthi.Controls.Add(this.label1);
+            this.PN_hienthi.Controls.Add(this.LB_erroremail);
+            this.PN_hienthi.Controls.Add(this.LB_errorsdt);
+            this.PN_hienthi.Controls.Add(this.LB_errhoten);
+            this.PN_hienthi.Controls.Add(this.LB_errortencty);
+            this.PN_hienthi.Controls.Add(this.LB_errmakhachthue);
             this.PN_hienthi.Controls.Add(this.label10);
             this.PN_hienthi.Controls.Add(this.NUD_phiql);
             this.PN_hienthi.Controls.Add(this.label5);
@@ -156,6 +174,60 @@ namespace DangNhap
             this.PN_hienthi.Controls.Add(this.panel7);
             this.PN_hienthi.Controls.Add(this.panel1);
             this.PN_hienthi.Name = "PN_hienthi";
+            // 
+            // LB_errortinhtrangxe
+            // 
+            resources.ApplyResources(this.LB_errortinhtrangxe, "LB_errortinhtrangxe");
+            this.LB_errortinhtrangxe.ForeColor = System.Drawing.Color.Red;
+            this.LB_errortinhtrangxe.Name = "LB_errortinhtrangxe";
+            // 
+            // LB_errorloaixe
+            // 
+            resources.ApplyResources(this.LB_errorloaixe, "LB_errorloaixe");
+            this.LB_errorloaixe.ForeColor = System.Drawing.Color.Red;
+            this.LB_errorloaixe.Name = "LB_errorloaixe";
+            // 
+            // CBB_manv
+            // 
+            resources.ApplyResources(this.CBB_manv, "CBB_manv");
+            this.CBB_manv.FormattingEnabled = true;
+            this.CBB_manv.Name = "CBB_manv";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Name = "label1";
+            // 
+            // LB_erroremail
+            // 
+            resources.ApplyResources(this.LB_erroremail, "LB_erroremail");
+            this.LB_erroremail.ForeColor = System.Drawing.Color.Red;
+            this.LB_erroremail.Name = "LB_erroremail";
+            // 
+            // LB_errorsdt
+            // 
+            resources.ApplyResources(this.LB_errorsdt, "LB_errorsdt");
+            this.LB_errorsdt.ForeColor = System.Drawing.Color.Red;
+            this.LB_errorsdt.Name = "LB_errorsdt";
+            // 
+            // LB_errhoten
+            // 
+            resources.ApplyResources(this.LB_errhoten, "LB_errhoten");
+            this.LB_errhoten.ForeColor = System.Drawing.Color.Red;
+            this.LB_errhoten.Name = "LB_errhoten";
+            // 
+            // LB_errortencty
+            // 
+            resources.ApplyResources(this.LB_errortencty, "LB_errortencty");
+            this.LB_errortencty.ForeColor = System.Drawing.Color.Red;
+            this.LB_errortencty.Name = "LB_errortencty";
+            // 
+            // LB_errmakhachthue
+            // 
+            resources.ApplyResources(this.LB_errmakhachthue, "LB_errmakhachthue");
+            this.LB_errmakhachthue.ForeColor = System.Drawing.Color.Red;
+            this.LB_errmakhachthue.Name = "LB_errmakhachthue";
             // 
             // label10
             // 
@@ -192,6 +264,7 @@ namespace DangNhap
             this.TXB_tinhtrangxe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_tinhtrangxe.ForeColor = System.Drawing.Color.White;
             this.TXB_tinhtrangxe.Name = "TXB_tinhtrangxe";
+            this.TXB_tinhtrangxe.TextChanged += new System.EventHandler(this.TXB_tinhtrangxe_TextChanged);
             // 
             // label27
             // 
@@ -205,6 +278,7 @@ namespace DangNhap
             this.TXB_loaixe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_loaixe.ForeColor = System.Drawing.Color.White;
             this.TXB_loaixe.Name = "TXB_loaixe";
+            this.TXB_loaixe.TextChanged += new System.EventHandler(this.TXB_loaixe_TextChanged);
             // 
             // label21
             // 
@@ -258,6 +332,7 @@ namespace DangNhap
             this.TXB_hotendaidien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_hotendaidien.ForeColor = System.Drawing.Color.White;
             this.TXB_hotendaidien.Name = "TXB_hotendaidien";
+            this.TXB_hotendaidien.TextChanged += new System.EventHandler(this.TXB_hotendaidien_TextChanged);
             // 
             // label22
             // 
@@ -271,6 +346,7 @@ namespace DangNhap
             this.TXB_tencongty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_tencongty.ForeColor = System.Drawing.Color.White;
             this.TXB_tencongty.Name = "TXB_tencongty";
+            this.TXB_tencongty.TextChanged += new System.EventHandler(this.TXB_tencongty_TextChanged);
             // 
             // label8
             // 
@@ -290,6 +366,7 @@ namespace DangNhap
             this.TXB_email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_email.ForeColor = System.Drawing.Color.White;
             this.TXB_email.Name = "TXB_email";
+            this.TXB_email.TextChanged += new System.EventHandler(this.TXB_email_TextChanged);
             // 
             // label4
             // 
@@ -303,6 +380,7 @@ namespace DangNhap
             this.TXB_sdt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_sdt.ForeColor = System.Drawing.Color.White;
             this.TXB_sdt.Name = "TXB_sdt";
+            this.TXB_sdt.TextChanged += new System.EventHandler(this.TXB_sdt_TextChanged);
             // 
             // label2
             // 
@@ -322,6 +400,7 @@ namespace DangNhap
             this.TXB_makhachthue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_makhachthue.ForeColor = System.Drawing.Color.White;
             this.TXB_makhachthue.Name = "TXB_makhachthue";
+            this.TXB_makhachthue.TextChanged += new System.EventHandler(this.TXB_makhachthue_TextChanged);
             // 
             // panel7
             // 
@@ -475,6 +554,7 @@ namespace DangNhap
             this.BTN_luu.OnPressedColor = System.Drawing.Color.Black;
             this.BTN_luu.Radius = 5;
             this.BTN_luu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_luu.Click += new System.EventHandler(this.BTN_luu_Click);
             // 
             // BTN_xoa
             // 
@@ -501,6 +581,7 @@ namespace DangNhap
             this.BTN_xoa.OnPressedColor = System.Drawing.Color.Black;
             this.BTN_xoa.Radius = 5;
             this.BTN_xoa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_xoa.Click += new System.EventHandler(this.BTN_xoa_Click);
             // 
             // BTN_thoat
             // 
@@ -620,5 +701,14 @@ namespace DangNhap
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TXB_mota;
         private Guna.UI.WinForms.GunaGradientButton BTN_xoa;
+        private System.Windows.Forms.Label LB_erroremail;
+        private System.Windows.Forms.Label LB_errorsdt;
+        private System.Windows.Forms.Label LB_errhoten;
+        private System.Windows.Forms.Label LB_errortencty;
+        private System.Windows.Forms.Label LB_errmakhachthue;
+        private System.Windows.Forms.ComboBox CBB_manv;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LB_errortinhtrangxe;
+        private System.Windows.Forms.Label LB_errorloaixe;
     }
 }
