@@ -745,10 +745,16 @@
     <EmbeddedResource Include="ThongKe.resx">
       <DependentUpon>ThongKe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe.vi.resx">
+      <DependentUpon>ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThongKeCanHo.en.resx">
       <DependentUpon>ThongKeCanHo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongKeCanHo.resx">
+      <DependentUpon>ThongKeCanHo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKeCanHo.vi.resx">
       <DependentUpon>ThongKeCanHo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinCaNhan.en.resx">
@@ -797,6 +803,9 @@
     <EmbeddedResource Include="XepHang.resx">
       <DependentUpon>XepHang.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XepHang.vi.resx">
+      <DependentUpon>XepHang.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />

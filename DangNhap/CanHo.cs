@@ -190,53 +190,34 @@ namespace DangNhap
         private DataTable GetDataTable()
         {
             DataTable dataTable = new DataTable();
-
-            DataColumn col1 = new DataColumn("Mã căn hộ");
-            DataColumn col2 = new DataColumn("Diện tích");
-            DataColumn col3 = new DataColumn("Vị trí tầng");
-            DataColumn col4 = new DataColumn("Số lượng phòng ngủ");
-            DataColumn col5 = new DataColumn("Số lượng toilet");
-            DataColumn col6 = new DataColumn("Số lượng thẻ thang máy");
-            DataColumn col7 = new DataColumn("Mức phí quản lý hàng tháng");
-            DataColumn col8 = new DataColumn("Lịch sử giao dịch");
-            DataColumn col9 = new DataColumn("Tình trạng giao dịch hiện tại");
-            DataColumn col10 = new DataColumn("Mã cư dân");
-
-            dataTable.Columns.Add(col1);
-            dataTable.Columns.Add(col2);
-            dataTable.Columns.Add(col3);
-            dataTable.Columns.Add(col4);
-            dataTable.Columns.Add(col5);
-            dataTable.Columns.Add(col6);
-            dataTable.Columns.Add(col7);
-            dataTable.Columns.Add(col8);
-            dataTable.Columns.Add(col9);
-            dataTable.Columns.Add(col10);
-
+            string[] headers = new string[GGC_canho.TableDescriptor.Columns.Count];
+            for (int i = 0; i < GGC_canho.TableDescriptor.Columns.Count; i++)
+            {
+                headers[i] = GGC_canho.TableDescriptor.Columns[i].HeaderText;
+            }
+            foreach (string header in headers)
+            {
+                DataColumn col = new DataColumn(header);
+                dataTable.Columns.Add(col);
+            }
             foreach (Record record in GGC_canho.Table.Records)
             {
                 DataRow dtRow = dataTable.NewRow();
-
-                dtRow[0] = record.GetValue("MaCanHo");
-                dtRow[1] = record.GetValue("DienTich");
-                dtRow[2] = record.GetValue("ViTriTang");
-                dtRow[3] = record.GetValue("SoLuongPhongNgu");
-                dtRow[4] = record.GetValue("SoLuongToilet");
-                dtRow[5] = record.GetValue("SoLuongTheThangMay");
-                dtRow[6] = record.GetValue("MucPhiQuanLyHangThang");
-                dtRow[7] = record.GetValue("LichSuGiaoDich");
-                dtRow[8] = record.GetValue("TinhTrangGiaoDichHienTai");
-                dtRow[9] = record.GetValue("MaCuDan");
+                for (int i = 0; i < headers.Length; i++)
+                {
+                    dtRow[i] = record.GetValue(GGC_canho.TableDescriptor.Columns[i].Name);
+                }
 
                 dataTable.Rows.Add(dtRow);
             }
+
             return dataTable;
         }
         private void BTN_excel_Click(object sender, EventArgs e)
         {
             DataTable dataTable = GetDataTable();
             Export export = new Export();
-            export.ToExcelCH(dataTable, "Can_Ho", "CĂN HỘ");
+            export.ToExcel(dataTable, "Can_Ho", "CĂN HỘ/APARTMENTS");
         }
 
         private void BTN_PDF_Click(object sender, EventArgs e)

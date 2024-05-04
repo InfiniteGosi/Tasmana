@@ -58,7 +58,7 @@ CREATE TABLE CongViec_PDF
 (
 	maCongViec VARCHAR(10) NOT NULL,
 	pdfFile VARBINARY(MAX) NOT NULL ,
-	tenFile VARCHAR(50) NOT NULL,
+	tenFile NVARCHAR(50) NOT NULL,
 	fileExten VARCHAR(10) NOT NULL
 	PRIMARY KEY (maCongViec),
 	FOREIGN KEY (maCongViec) REFERENCES congViec(maCongViec)
@@ -414,7 +414,7 @@ SELECT * FROM Nhom
 
 
 -- Insert thông tin tài khoản
-INSERT INTO NhanVien VALUES('GD-001', 'jd@gmail.com', 'Ho', 'Khang', '111111111', '1/1/2002', 1, 'TP.HCM', '123456', 'Full-time', N'Độc thân', '1111111', 1, '2024-01-01', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú GD-001', N'Tốt', 'VS', 'VSN01')
+INSERT INTO NhanVien VALUES('GD-001', 'jd@gmail.com', 'Ho', 'Khang', '111111111', '1/1/2002', 1, 'TP.HCM', '123456', 'Full-time', N'Độc thân', '1111111', 1, '2024-01-01', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú GD-001', N'Tốt', null, null)
 INSERT INTO NhanVien VALUES('VS-002', 'VS002@gmail.com', 'Vu', 'Quang', '1321312', '1/2/2004', 1, 'TP.HCM', '1234576', 'Part-time', N'Độc thân', '1111211', 1, '2024-01-01', '2025-12-31', 'TP.HCM', 'Chua co', N'Tốt', 'VS','VSN02')
 INSERT INTO NhanVien VALUES('VS-003', 'email_nv001@example.com', 'Tran', 'An', '0123456669', '2000-01-01', 0, N'Hà Nội', '072947182653', 'Full-time', N'Độc thân', '01231230213', 1, '2024-01-01', '2025-12-31', N'Địa chỉ thường trú NV001', 'Chua co', N'Tốt', 'VS','VSN01')
 
@@ -2325,7 +2325,7 @@ BEGIN
             NT.isFull = 1
             OR NT.maBoPhan = @maBoPhan
             OR NT.maNhom = @maNhom
-            OR NT.maNhanVien = @maNhanVienại
+            OR NT.maNhanVien = @maNhanVien
         )
     ORDER BY N.dateN DESC;
 END;

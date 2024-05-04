@@ -343,5 +343,107 @@ namespace DangNhap
                 }
             }
         }
+        private DataTable GetDataTable()
+        {
+            string[] headers = new string[GGC_cudan.TableDescriptor.Columns.Count];
+            for (int i = 0; i < GGC_cudan.TableDescriptor.Columns.Count; i++)
+            {
+                headers[i] = GGC_cudan.TableDescriptor.Columns[i].HeaderText;
+            }
+            DataTable dt = new DataTable();
+
+            // Khởi tạo các cột trong DataTable từ mảng headers
+            foreach (string header in headers)
+            {
+                DataColumn col = new DataColumn(header);
+                dt.Columns.Add(col);
+            }
+
+            // Lấy dữ liệu từ GridGroupingControl và thêm vào DataTable
+            foreach (GridRecord record in GGC_cudan.Table.Records)
+            {
+                DataRow row = dt.NewRow();
+
+                for (int i = 0; i < headers.Length; i++)
+                {
+                    row[i] = record.GetValue(GGC_cudan.TableDescriptor.Columns[i].Name);
+                }
+
+                // Thêm row vào DataTable
+                dt.Rows.Add(row);
+            }
+            return dt;
+        }
+        private void BTN_excel_Click(object sender, EventArgs e)
+        {
+            DataTable dataTable = GetDataTable();
+            Export export = new Export();
+            export.ToExcel(dataTable, "Cu_Dan", "CƯ DÂN/RESIDENTS");
+        }
+
+        private void BTN_PDF_Click(object sender, EventArgs e)
+        {
+            if (GGC_cudan.Table.Records.Count > 0)
+            {
+                SaveFileDialog save = new SaveFileDialog
+                {
+                    Filter = "PDF (*.pdf)|*.pdf",
+                    FileName = "CuDan.pdf"
+                };
+                bool ErrorMessage = false;
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(save.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(save.FileName);
+                        }
+                        catch (Exception ex)
+                        {
+                            ErrorMessage = true;
+                            MessageBox.Show("Unable to write data in disk" + ex.Message);
+                        }
+                    }
+                    if (!ErrorMessage)
+                    {
+                        try
+                        {
+                            DataTable dataTable = GetDataTable();
+                            Export export = new Export();
+                            export.ToPDF(dataTable, save.FileName);
+
+                            MessageBox.Show("Successful", "Info");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error while exporting Data" + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No record found", "Info");
+            }
+        }
+
+        private void BTN_in_Click(object sender, EventArgs e)
+        {
+            GGC_cudan.TableModel.Properties.PrintFrame = false;
+
+            GridPrintDocumentAdv gridPrintDocument = new GridPrintDocumentAdv(GGC_cudan.TableControl);
+            PrintDialog printDialog = new PrintDialog();
+            gridPrintDocument.ScaleColumnsToFitPage = true;
+            PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog
+            {
+                Document = gridPrintDocument
+            };
+
+            printPreviewDialog.ShowDialog();
+            printDialog.Document = gridPrintDocument;
+            if (printDialog.ShowDialog() == DialogResult.OK)
+                gridPrintDocument.Print();
+        }
     }
 }

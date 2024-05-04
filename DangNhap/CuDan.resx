@@ -126,7 +126,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="CBB_choice.Location" type="System.Drawing.Point, System.Drawing">
-    <value>159, 43</value>
+    <value>100, 43</value>
   </data>
   <data name="LB_loai.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -159,9 +159,6 @@
   <data name="&gt;&gt;BTN_themcudan.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;BTN_excel.Type" xml:space="preserve">
-    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
   <data name="CBB_choice.TabIndex" type="System.Int32, mscorlib">
     <value>180</value>
   </data>
@@ -172,7 +169,7 @@
     <value>177</value>
   </data>
   <data name="LB_loai.Location" type="System.Drawing.Point, System.Drawing">
-    <value>169, 9</value>
+    <value>97, 9</value>
   </data>
   <data name="&gt;&gt;BTN_excel.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -1675,8 +1672,8 @@
   <data name="&gt;&gt;BTN_in.Name" xml:space="preserve">
     <value>BTN_in</value>
   </data>
-  <data name="&gt;&gt;GGC_cudan.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="BTN_excel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 690</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>CuDan</value>
@@ -1701,6 +1698,9 @@
   </data>
   <data name="BTN_themcudan.Location" type="System.Drawing.Point, System.Drawing">
     <value>1252, 27</value>
+  </data>
+  <data name="CBB_choice.Items1" xml:space="preserve">
+    <value>Người được ủy quyền của chủ hộ</value>
   </data>
   <data name="GGC_cudan.Text" xml:space="preserve">
     <value>gridGroupingControl1</value>
@@ -1747,6 +1747,9 @@
   <data name="LB_loai.Text" xml:space="preserve">
     <value>Chọn loại cư dân</value>
   </data>
+  <data name="&gt;&gt;GGC_cudan.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="BTN_in.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -1767,9 +1770,6 @@
   </data>
   <data name="&gt;&gt;BTN_excel.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="BTN_excel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 690</value>
   </data>
   <data name="&gt;&gt;BTN_in.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -1798,8 +1798,8 @@
   <data name="CBB_choice.Items2" xml:space="preserve">
     <value>Nhân viên của chủ hộ / Khách thuê / Khách vãng lai</value>
   </data>
-  <data name="CBB_choice.Items1" xml:space="preserve">
-    <value>Người được ủy quyền của chủ hộ</value>
+  <data name="&gt;&gt;BTN_excel.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
   <data name="BTN_excel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

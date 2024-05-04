@@ -89,7 +89,12 @@ namespace DangNhap
             {
                 DataRow dataRow = dt.NewRow();
                 dataRow[0] = e.MaNhanVien;
-                dataRow[1] = $"{e.MaBoPhan}-NV:{e.MaNhanVien}";
+                if (e.MaNhanVien.Split('-')[0] == "GD")
+                {
+                    dataRow[1] = $"CEO: {e.MaNhanVien}";
+                }
+                else
+                    dataRow[1] = $"{e.MaNhanVien}-NV:{e.Ho} {e.Ten}";
                 dt.Rows.Add(dataRow);
             }
             return dt;

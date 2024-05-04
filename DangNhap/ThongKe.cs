@@ -1,14 +1,21 @@
 ﻿using BLL;
 using DTO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using Spire.Xls.AI;
 using Syncfusion.GridHelperClasses;
 using Syncfusion.Grouping;
 using Syncfusion.Licensing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 using Syncfusion.Windows.Forms.Grid.Grouping;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -182,6 +189,7 @@ namespace DangNhap
             GGC_ThongKe.TableDescriptor.Columns[4].HeaderText = "Số công việc trước hạn";
             GGC_ThongKe.TableDescriptor.Columns[5].HeaderText = "Số công việc trễ hạn";
             GGC_ThongKe.TableDescriptor.Columns[6].HeaderText = "Số công việc chưa bắt đầu";
+
 
             // Tạo đối tượng GridColumnDescriptorCollection để quản lý các cột
             GridColumnDescriptorCollection columns = GGC_ThongKe.TableDescriptor.Columns;
@@ -560,6 +568,216 @@ namespace DangNhap
         {
             OpenChildForm(new XepHang());
             LB_ThongKeCV.Text = "BẢNG XẾP HẠNG";
+        }
+        private DataTable GetDataTable()
+        {
+            string[] headers = new string[GGC_ThongKe.TableDescriptor.Columns.Count];
+            for (int i = 0; i < GGC_ThongKe.TableDescriptor.Columns.Count; i++)
+            {
+                headers[i] = GGC_ThongKe.TableDescriptor.Columns[i].HeaderText;
+            }
+            DataTable dt = new DataTable();
+
+            // Khởi tạo các cột trong DataTable từ mảng headers
+            foreach (string header in headers)
+            {
+                DataColumn col = new DataColumn(header);
+                dt.Columns.Add(col);
+            }
+
+            // Lấy dữ liệu từ GridGroupingControl và thêm vào DataTable
+            foreach (GridRecord record in GGC_ThongKe.Table.Records)
+            {
+                DataRow row = dt.NewRow();
+
+                for (int i = 0; i < headers.Length; i++)
+                {
+                    row[i] = record.GetValue(GGC_ThongKe.TableDescriptor.Columns[i].Name);
+                }
+
+                // Thêm row vào DataTable
+                dt.Rows.Add(row);
+            }
+            return dt;
+        }
+        private void BTN_excel_Click(object sender, EventArgs e)
+        {
+            if(GGC_ThongKe.Visible == false && GGC_ThongKe.TableDescriptor.Columns.Count>0)
+            {
+                Microsoft.Office.Interop.Excel.Application xlApp;
+                Microsoft.Office.Interop.Excel.Workbook xlWorkBook;
+                Microsoft.Office.Interop.Excel.Worksheet xlWorkSheet;
+                object misValue = System.Reflection.Missing.Value;
+
+                // Khởi tạo ứng dụng Excel
+                xlApp = new Microsoft.Office.Interop.Excel.Application();
+                xlWorkBook = xlApp.Workbooks.Add(misValue);
+                xlWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+
+                // Chụp lại hình ảnh của biểu đồ từ C_ThongKe
+                Bitmap bitmap = new Bitmap(C_ThongKe.Width, C_ThongKe.Height);
+                C_ThongKe.DrawToBitmap(bitmap, new System.Drawing.Rectangle(0, 0, C_ThongKe.Width, C_ThongKe.Height));
+
+                // Chèn hình ảnh đã chụp vào Excel
+                Clipboard.SetDataObject(bitmap);
+                xlWorkSheet.Paste(xlWorkSheet.Cells[1, 1]);
+
+                // Hiển thị ứng dụng Excel
+                xlApp.Visible = true;
+
+                // Giải phóng tài nguyên
+                releaseObject(xlWorkSheet);
+                releaseObject(xlWorkBook);
+                releaseObject(xlApp);
+            }
+            else
+            {
+
+                Export export = new Export();
+                DataTable dt = GetDataTable();
+                export.ToExcel(dt, "Thong_Ke", "Thống Kê");
+            }
+        }
+
+
+        private void releaseObject(object obj)
+        {
+            try
+            {
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
+                obj = null;
+            }
+            catch (Exception ex)
+            {
+                obj = null;
+                MessageBox.Show("Exception Occured while releasing object " + ex.ToString());
+            }
+            finally
+            {
+                GC.Collect();
+            }
+        }
+
+        private void BTN_PDF_Click(object sender, EventArgs e)
+        {
+            // Tạo SaveFileDialog để chọn vị trí lưu tệp PDF
+            SaveFileDialog save = new SaveFileDialog
+            {
+                Filter = "PDF (*.pdf)|*.pdf",
+                FileName = "ThongKe.pdf"
+            };
+
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    // Xóa tệp PDF nếu đã tồn tại
+                    if (File.Exists(save.FileName))
+                    {
+                        File.Delete(save.FileName);
+                    }
+
+                    if(GGC_ThongKe.Visible == false)
+                    {
+                        // Tạo tệp PDF mới
+                        Document document = new Document(PageSize.A4.Rotate()); // Xoay trang A4 ngang
+                        PdfWriter.GetInstance(document, new FileStream(save.FileName, FileMode.Create));
+                        document.Open();
+
+                        // Chụp lại hình ảnh của biểu đồ từ C_ThongKe
+                        Bitmap bitmap = new Bitmap(C_ThongKe.Width, C_ThongKe.Height);
+                        C_ThongKe.DrawToBitmap(bitmap, new System.Drawing.Rectangle(0, 0, C_ThongKe.Width, C_ThongKe.Height));
+
+                        // Thu nhỏ ảnh lại 0.7 lần
+                        double scaleRatio = 0.7;
+                        int newWidth = (int)(bitmap.Width * scaleRatio);
+                        int newHeight = (int)(bitmap.Height * scaleRatio);
+                        Bitmap resizedBitmap = new Bitmap(bitmap, newWidth, newHeight);
+
+                        // Tính toán vị trí căn giữa trang A4
+                        float offsetX = (PageSize.A4.Height - newWidth) / 2;
+                        float offsetY = (PageSize.A4.Width - newHeight) / 2;
+
+                        // Chuyển đổi hình ảnh thu nhỏ thành byte array
+                        MemoryStream ms = new MemoryStream();
+                        resizedBitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                        byte[] imgBytes = ms.ToArray();
+
+                        // Chèn hình ảnh vào tệp PDF với kích thước đã được thu nhỏ và căn giữa trang A4
+                        iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(imgBytes);
+                        img.ScaleAbsolute(newWidth, newHeight);
+                        img.SetAbsolutePosition(offsetX, offsetY);
+                        document.Add(img);
+
+                        // Đóng tệp PDF
+                        document.Close();
+                    }
+                    else
+                    {
+                        DataTable dataTable = GetDataTable();
+                        Export export = new Export();
+                        export.ToPDF(dataTable, save.FileName);
+                    }
+
+                    MessageBox.Show("Successful");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error while exporting Data: " + ex.Message);
+                }
+            }
+        }
+        private void pd_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            // Tạo một Bitmap để chứa hình ảnh của biểu đồ
+            Bitmap bitmap = new Bitmap(C_ThongKe.Width, C_ThongKe.Height);
+            C_ThongKe.DrawToBitmap(bitmap, new System.Drawing.Rectangle(0, 0, C_ThongKe.Width, C_ThongKe.Height));
+
+            // Thu nhỏ ảnh lại 0.7 lần
+            double scaleRatio = 0.7;
+            int newWidth = (int)(bitmap.Width * scaleRatio);
+            int newHeight = (int)(bitmap.Height * scaleRatio);
+            Bitmap resizedBitmap = new Bitmap(bitmap, newWidth, newHeight);
+
+            // Xoay ảnh 90 độ theo chiều kim đồng hồ
+            bitmap.RotateFlip(RotateFlipType.Rotate90FlipNone);
+
+            // Vẽ hình ảnh của biểu đồ lên trang in
+            e.Graphics.DrawImage(bitmap, e.MarginBounds);
+        }
+
+        private void BTN_in_Click(object sender, EventArgs e)
+        {
+            if(GGC_ThongKe.Visible == false)
+            {
+                // Tạo một PrintDocument
+                PrintDocument pd = new PrintDocument();
+                pd.PrintPage += new PrintPageEventHandler(pd_PrintPage);
+
+                // Tạo một PrintPreviewDialog
+                PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog();
+                printPreviewDialog.Document = pd;
+
+                // Hiển thị PrintPreviewDialog
+                printPreviewDialog.ShowDialog();
+            }
+            else
+            {
+                GGC_ThongKe.TableModel.Properties.PrintFrame = false;
+
+                GridPrintDocumentAdv gridPrintDocument = new GridPrintDocumentAdv(GGC_ThongKe.TableControl);
+                PrintDialog printDialog = new PrintDialog();
+                gridPrintDocument.ScaleColumnsToFitPage = true;
+                PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog
+                {
+                    Document = gridPrintDocument
+                };
+
+                printPreviewDialog.ShowDialog();
+                printDialog.Document = gridPrintDocument;
+                if (printDialog.ShowDialog() == DialogResult.OK)
+                    gridPrintDocument.Print();
+            }
         }
     }
 }
