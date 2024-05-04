@@ -1921,7 +1921,7 @@ BEGIN
             NT.isFull = 1
             OR NT.maBoPhan = @maBoPhan
             OR NT.maNhom = @maNhom
-            OR NT.maNhanVien = @maNhanVienại
+            OR NT.maNhanVien = @maNhanVien
         )
     ORDER BY N.dateN DESC;
 END;
