@@ -58,6 +58,9 @@ namespace DangNhap
             this.LB_ToiNgay = new System.Windows.Forms.Label();
             this.LB_TuNgay = new System.Windows.Forms.Label();
             this.PN_hienthi = new System.Windows.Forms.Panel();
+            this.BTN_in = new Guna.UI.WinForms.GunaGradientButton();
+            this.BTN_PDF = new Guna.UI.WinForms.GunaGradientButton();
+            this.BTN_excel = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_thongkecongviec = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_XepHang = new Guna.UI.WinForms.GunaGradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.C_ThongKe)).BeginInit();
@@ -294,6 +297,9 @@ namespace DangNhap
             // 
             resources.ApplyResources(this.PN_hienthi, "PN_hienthi");
             this.PN_hienthi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            this.PN_hienthi.Controls.Add(this.BTN_in);
+            this.PN_hienthi.Controls.Add(this.BTN_PDF);
+            this.PN_hienthi.Controls.Add(this.BTN_excel);
             this.PN_hienthi.Controls.Add(this.DTP_TuNgay);
             this.PN_hienthi.Controls.Add(this.LB_TuNgay);
             this.PN_hienthi.Controls.Add(this.C_ThongKe);
@@ -313,6 +319,78 @@ namespace DangNhap
             this.PN_hienthi.Controls.Add(this.BTN_ThongKe);
             this.PN_hienthi.Controls.Add(this.Btn_XuatDoThi);
             this.PN_hienthi.Name = "PN_hienthi";
+            // 
+            // BTN_in
+            // 
+            resources.ApplyResources(this.BTN_in, "BTN_in");
+            this.BTN_in.AnimationHoverSpeed = 0.07F;
+            this.BTN_in.AnimationSpeed = 0.03F;
+            this.BTN_in.BaseColor1 = System.Drawing.Color.Silver;
+            this.BTN_in.BaseColor2 = System.Drawing.Color.DimGray;
+            this.BTN_in.BorderColor = System.Drawing.Color.White;
+            this.BTN_in.BorderSize = 1;
+            this.BTN_in.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_in.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_in.ForeColor = System.Drawing.Color.White;
+            this.BTN_in.Image = ((System.Drawing.Image)(resources.GetObject("BTN_in.Image")));
+            this.BTN_in.ImageSize = new System.Drawing.Size(15, 15);
+            this.BTN_in.Name = "BTN_in";
+            this.BTN_in.OnHoverBaseColor1 = System.Drawing.Color.DimGray;
+            this.BTN_in.OnHoverBaseColor2 = System.Drawing.Color.Silver;
+            this.BTN_in.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.BTN_in.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_in.OnHoverImage = null;
+            this.BTN_in.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_in.TextOffsetX = 3;
+            this.BTN_in.Click += new System.EventHandler(this.BTN_in_Click);
+            // 
+            // BTN_PDF
+            // 
+            resources.ApplyResources(this.BTN_PDF, "BTN_PDF");
+            this.BTN_PDF.AnimationHoverSpeed = 0.07F;
+            this.BTN_PDF.AnimationSpeed = 0.03F;
+            this.BTN_PDF.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(131)))), ((int)(((byte)(18)))));
+            this.BTN_PDF.BaseColor2 = System.Drawing.Color.Coral;
+            this.BTN_PDF.BorderColor = System.Drawing.Color.White;
+            this.BTN_PDF.BorderSize = 1;
+            this.BTN_PDF.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_PDF.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_PDF.ForeColor = System.Drawing.Color.White;
+            this.BTN_PDF.Image = ((System.Drawing.Image)(resources.GetObject("BTN_PDF.Image")));
+            this.BTN_PDF.ImageSize = new System.Drawing.Size(15, 15);
+            this.BTN_PDF.Name = "BTN_PDF";
+            this.BTN_PDF.OnHoverBaseColor1 = System.Drawing.Color.Coral;
+            this.BTN_PDF.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(131)))), ((int)(((byte)(18)))));
+            this.BTN_PDF.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.BTN_PDF.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_PDF.OnHoverImage = null;
+            this.BTN_PDF.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_PDF.TextOffsetX = 3;
+            this.BTN_PDF.Click += new System.EventHandler(this.BTN_PDF_Click);
+            // 
+            // BTN_excel
+            // 
+            resources.ApplyResources(this.BTN_excel, "BTN_excel");
+            this.BTN_excel.AnimationHoverSpeed = 0.07F;
+            this.BTN_excel.AnimationSpeed = 0.03F;
+            this.BTN_excel.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(95)))), ((int)(((byte)(45)))));
+            this.BTN_excel.BaseColor2 = System.Drawing.Color.Green;
+            this.BTN_excel.BorderColor = System.Drawing.Color.White;
+            this.BTN_excel.BorderSize = 1;
+            this.BTN_excel.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_excel.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_excel.ForeColor = System.Drawing.Color.White;
+            this.BTN_excel.Image = ((System.Drawing.Image)(resources.GetObject("BTN_excel.Image")));
+            this.BTN_excel.ImageSize = new System.Drawing.Size(15, 15);
+            this.BTN_excel.Name = "BTN_excel";
+            this.BTN_excel.OnHoverBaseColor1 = System.Drawing.Color.Green;
+            this.BTN_excel.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(95)))), ((int)(((byte)(45)))));
+            this.BTN_excel.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.BTN_excel.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_excel.OnHoverImage = null;
+            this.BTN_excel.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_excel.TextOffsetX = 3;
+            this.BTN_excel.Click += new System.EventHandler(this.BTN_excel_Click);
             // 
             // BTN_thongkecongviec
             // 
@@ -417,5 +495,8 @@ namespace DangNhap
         private System.Windows.Forms.Panel PN_hienthi;
         private Guna.UI.WinForms.GunaGradientButton BTN_thongkecongviec;
         private Guna.UI.WinForms.GunaGradientButton BTN_XepHang;
+        private Guna.UI.WinForms.GunaGradientButton BTN_in;
+        private Guna.UI.WinForms.GunaGradientButton BTN_PDF;
+        private Guna.UI.WinForms.GunaGradientButton BTN_excel;
     }
 }

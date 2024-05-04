@@ -2,31 +2,21 @@
 using BLL;
 using DTO;
 using Syncfusion.GridHelperClasses;
+using Syncfusion.Grouping;
 using Syncfusion.Licensing;
+using Syncfusion.Windows.Forms.Grid;
 using Syncfusion.Windows.Forms.Grid.Grouping;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.Common;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web;
-using System.Windows.Forms;
-using Syncfusion.Grouping;
-using Syncfusion.Windows.Forms.Grid;
-using Syncfusion.Windows.Shared;
-using DAO;
 using System.IO;
+using System.Windows.Forms;
 
 namespace DangNhap
 {
     public partial class NhanVien : Form
     {
+        private string[] headers = null;
         private Employee nhanVienChiTiet;
         private List<Employee> employees = new List<Employee>();
         public NhanVien()
@@ -38,7 +28,7 @@ namespace DangNhap
         {
             DisplayGGC_danhsachnhanvien();
         }
-     
+
         // Nhấn nút thêm nhân viên sẽ mở cửa sổ thông tin nhân viên
         private void BTN_themnhanvien_Click(object sender, EventArgs e)
         {
@@ -49,7 +39,7 @@ namespace DangNhap
         // Lấy thông tin nhân viên bằng mã nhân viên
         private void GetEmployeeByEmployeeId(string maNhanVien)
         {
-            nhanVienChiTiet =  EmployeeBLL.Instance.GetEmployeeByEmployeeId(maNhanVien);
+            nhanVienChiTiet = EmployeeBLL.Instance.GetEmployeeByEmployeeId(maNhanVien);
         }
         // Phương thức refresh lại GGC
         public override void Refresh()
@@ -62,40 +52,24 @@ namespace DangNhap
         {
             //GGC_danhsachnv.Size = new System.Drawing.Size(950, 404);
             GGC_danhsachnv.DataSource = EmployeeBLL.Instance.GetEmployees();
-            //Tiếng Việt
+
             if (BTN_themnhanvien.Text == "Thêm nhân viên")
             {
-                GGC_danhsachnv.TableDescriptor.Columns[0].HeaderText = "Mã nhân viên";
-                GGC_danhsachnv.TableDescriptor.Columns[1].HeaderText = "Họ";
-                GGC_danhsachnv.TableDescriptor.Columns[2].HeaderText = "Tên";
-                GGC_danhsachnv.TableDescriptor.Columns[3].HeaderText = "Mã định danh";
-                GGC_danhsachnv.TableDescriptor.Columns[4].HeaderText = "Mã Bộ phận";
-                GGC_danhsachnv.TableDescriptor.Columns[5].HeaderText = "Chức vụ";
-                GGC_danhsachnv.TableDescriptor.Columns[6].HeaderText = "Tổng công việc";
-                GGC_danhsachnv.TableDescriptor.Columns[7].HeaderText = "Hoàn thành";
-                GGC_danhsachnv.TableDescriptor.Columns[8].HeaderText = "Chưa bắt đầu";
-                GGC_danhsachnv.TableDescriptor.Columns[9].HeaderText = "Đang thực hiện";
-                GGC_danhsachnv.TableDescriptor.Columns[10].HeaderText = "Trễ hạn";
-                GGC_danhsachnv.TableDescriptor.Columns[11].HeaderText = "Công việc Phòng ban";
-                GGC_danhsachnv.TableDescriptor.Columns[12].HeaderText = "Công việc Nhóm";
+                headers = new string[] { "Mã nhân viên", "Họ", "Tên", "Mã định danh", "Mã Bộ phận", "Chức vụ", "Tổng công việc", "Hoàn thành", "Chưa bắt đầu", "Đang thực hiện", "Trễ hạn", "Công việc Phòng ban", "Công việc Nhóm" };
+                for (int i = 0; i < headers.Length && i < GGC_danhsachnv.TableDescriptor.Columns.Count; i++)
+                {
+                    GGC_danhsachnv.TableDescriptor.Columns[i].HeaderText = headers[i];
+                }
             }
-            //Tiếng Anh
             else
             {
-                GGC_danhsachnv.TableDescriptor.Columns[0].HeaderText = "Employees ID";
-                GGC_danhsachnv.TableDescriptor.Columns[1].HeaderText = "Family name";
-                GGC_danhsachnv.TableDescriptor.Columns[2].HeaderText = "Name";
-                GGC_danhsachnv.TableDescriptor.Columns[3].HeaderText = "Crendential number";
-                GGC_danhsachnv.TableDescriptor.Columns[4].HeaderText = "Division ID";
-                GGC_danhsachnv.TableDescriptor.Columns[5].HeaderText = "Position";
-                GGC_danhsachnv.TableDescriptor.Columns[6].HeaderText = "Total tasks";
-                GGC_danhsachnv.TableDescriptor.Columns[7].HeaderText = "Completed tasks";
-                GGC_danhsachnv.TableDescriptor.Columns[8].HeaderText = "Not started tasks";
-                GGC_danhsachnv.TableDescriptor.Columns[9].HeaderText = "On going tasks";
-                GGC_danhsachnv.TableDescriptor.Columns[10].HeaderText = "Late tasks";
-                GGC_danhsachnv.TableDescriptor.Columns[11].HeaderText = "Division tasks";
-                GGC_danhsachnv.TableDescriptor.Columns[12].HeaderText = "Group tasks";
+                headers = new string[] { "Employees ID", "Family name", "Name", "Crendential number", "Division ID", "Position", "Total tasks", "Completed tasks", "Not started tasks", "On going tasks", "Late tasks", "Division tasks", "Group tasks" };
+                for (int i = 0; i < headers.Length && i < GGC_danhsachnv.TableDescriptor.Columns.Count; i++)
+                {
+                    GGC_danhsachnv.TableDescriptor.Columns[i].HeaderText = headers[i];
+                }
             }
+
 
             GGC_danhsachnv.TopLevelGroupOptions.ShowFilterBar = true;
             GGC_danhsachnv.ActivateCurrentCellBehavior = GridCellActivateAction.None;
@@ -144,51 +118,19 @@ namespace DangNhap
         private DataTable GetDataTable()
         {
             DataTable dataTable = new DataTable();
-
-            DataColumn col1 = new DataColumn("Mã nhân viên");
-            DataColumn col2 = new DataColumn("Họ");
-            DataColumn col3 = new DataColumn("Tên");
-            DataColumn col4 = new DataColumn("Mã định danh");
-            DataColumn col5 = new DataColumn("Mã Bộ phận");
-            DataColumn col6 = new DataColumn("Chức vụ");
-            DataColumn col7 = new DataColumn("Tổng công việc");
-            DataColumn col8 = new DataColumn("Hoàn thành");
-            DataColumn col9 = new DataColumn("Chưa bắt đầu");
-            DataColumn col10 = new DataColumn("Đang thực hiện");
-            DataColumn col11 = new DataColumn("Trễ hạn");
-            DataColumn col12 = new DataColumn("Công việc Phòng ban");
-            DataColumn col13 = new DataColumn("Công việc Nhóm");
-
-            dataTable.Columns.Add(col1);
-            dataTable.Columns.Add(col2);
-            dataTable.Columns.Add(col3);
-            dataTable.Columns.Add(col4);
-            dataTable.Columns.Add(col5);
-            dataTable.Columns.Add(col6);
-            dataTable.Columns.Add(col7);
-            dataTable.Columns.Add(col8);
-            dataTable.Columns.Add(col9);
-            dataTable.Columns.Add(col10);
-            dataTable.Columns.Add(col11);
-            dataTable.Columns.Add(col12);
-            dataTable.Columns.Add(col13);
-
+            foreach (string header in headers)
+            {
+                DataColumn col = new DataColumn(header);
+                dataTable.Columns.Add(col);
+            }
             foreach (Record record in GGC_danhsachnv.Table.Records)
             {
                 DataRow dtRow = dataTable.NewRow();
-                dtRow[0] = record.GetValue("maNhanVien");
-                dtRow[1] = record.GetValue("ho");
-                dtRow[2] = record.GetValue("ten");
-                dtRow[3] = record.GetValue("maDinhDanh");
-                dtRow[4] = record.GetValue("maBoPhan");
-                dtRow[5] = record.GetValue("chucVu");
-                dtRow[6] = record.GetValue("tongCongViec");
-                dtRow[7] = record.GetValue("hoanThanh");
-                dtRow[8] = record.GetValue("chuaBatDau");
-                dtRow[9] = record.GetValue("dangThucHien");
-                dtRow[10] = record.GetValue("treHan");
-                dtRow[11] = record.GetValue("congViecPhongBan");
-                dtRow[12] = record.GetValue("congViecNhom");
+                for (int i = 0; i < headers.Length; i++)
+                {
+                    dtRow[i] = record.GetValue(GGC_danhsachnv.TableDescriptor.Columns[i].Name);
+                }
+
                 dataTable.Rows.Add(dtRow);
             }
             return dataTable;
@@ -197,7 +139,7 @@ namespace DangNhap
         {
             DataTable dataTable = GetDataTable();
             Export export = new Export();
-            export.ToExcelNV(dataTable, "Nhan_vien", "NHÂN VIÊN");
+            export.ToExcel(dataTable, "Nhan_vien", "NHÂN VIÊN/EMPLOYEES");
 
         }
 
