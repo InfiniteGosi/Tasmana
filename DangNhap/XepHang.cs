@@ -1,6 +1,7 @@
 ﻿using BLL;
 using DTO;
 using Syncfusion.GridHelperClasses;
+using Syncfusion.Grouping;
 using Syncfusion.Windows.Forms.Grid.Grouping;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Design;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -208,6 +210,103 @@ namespace DangNhap
             GGC_ThongKe.ActivateCurrentCellBehavior = Syncfusion.Windows.Forms.Grid.GridCellActivateAction.None;
             //GGC_ThongKe.ShowGroupDropArea = true;
             GGC_ThongKe.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private DataTable GetDataTable()
+        {
+            DataTable dataTable = new DataTable();
+            string[] headers = new string[GGC_ThongKe.TableDescriptor.Columns.Count];
+            for (int i = 0; i < GGC_ThongKe.TableDescriptor.Columns.Count; i++)
+            {
+                headers[i] = GGC_ThongKe.TableDescriptor.Columns[i].HeaderText;
+            }
+            foreach (string header in headers)
+            {
+                DataColumn col = new DataColumn(header);
+                dataTable.Columns.Add(col);
+            }
+            foreach (Record record in GGC_ThongKe.Table.Records)
+            {
+                DataRow dtRow = dataTable.NewRow();
+                for (int i = 0; i < headers.Length; i++)
+                {
+                    dtRow[i] = record.GetValue(GGC_ThongKe.TableDescriptor.Columns[i].Name);
+                }
+
+                dataTable.Rows.Add(dtRow);
+            }
+
+            return dataTable;
+        }
+
+        private void BTN_excel_Click(object sender, EventArgs e)
+        {
+            Export export = new Export();
+            DataTable dt = GetDataTable();
+            export.ToExcel(dt, "Thong_Ke", "Thống Kê");
+        }
+
+        private void BTN_PDF_Click(object sender, EventArgs e)
+        {
+            if (GGC_ThongKe.Table.Records.Count > 0)
+            {
+                SaveFileDialog save = new SaveFileDialog
+                {
+                    Filter = "PDF (*.pdf)|*.pdf",
+                    FileName = "ThongKe.pdf"
+                };
+                bool ErrorMessage = false;
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(save.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(save.FileName);
+                        }
+                        catch (Exception ex)
+                        {
+                            ErrorMessage = true;
+                            MessageBox.Show("Unable to write data in disk" + ex.Message);
+                        }
+                    }
+                    if (!ErrorMessage)
+                    {
+                        try
+                        {
+                            DataTable dataTable = GetDataTable();
+                            Export export = new Export();
+                            export.ToPDF(dataTable, save.FileName);
+
+                            MessageBox.Show("Successful", "Info");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error while exporting Data" + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No record found", "Info");
+            }
+        }
+
+        private void BTN_in_Click(object sender, EventArgs e)
+        {
+            GGC_ThongKe.TableModel.Properties.PrintFrame = false;
+
+            GridPrintDocumentAdv gridPrintDocument = new GridPrintDocumentAdv(GGC_ThongKe.TableControl);
+            PrintDialog printDialog = new PrintDialog();
+            gridPrintDocument.ScaleColumnsToFitPage = true;
+            PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog();
+            printPreviewDialog.Document = gridPrintDocument;
+
+            printPreviewDialog.ShowDialog();
+            printDialog.Document = gridPrintDocument;
+            if (printDialog.ShowDialog() == DialogResult.OK)
+                gridPrintDocument.Print();
         }
     }
 }
