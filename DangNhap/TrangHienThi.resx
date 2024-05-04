@@ -136,6 +136,10 @@
   <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 19.8pt, style=Bold</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BTN_x.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="&gt;&gt;gunaGradientButton1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -149,7 +153,6 @@
   <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
     <value>1186, 1</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="gunaCirclePictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
   </data>
@@ -439,6 +442,9 @@
   </data>
   <data name="LB_SoCongViecCBD.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;panel8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="BTN_thongtin.Location" type="System.Drawing.Point, System.Drawing">
     <value>320, 28</value>
@@ -2699,9 +2705,6 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfgQED/j8jkc9i9imhoQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 19</value>
-  </data>
   <data name="&gt;&gt;LB_chuabatdau.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
@@ -3396,6 +3399,9 @@
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>309, 1</value>
   </data>
+  <data name="&gt;&gt;P_logotasmana.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaPictureBox, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
   <data name="&gt;&gt;BTN_thongke.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
@@ -3416,9 +3422,6 @@
   </data>
   <data name="CBB_ngonngu.Items" xml:space="preserve">
     <value>Tiếng Việt</value>
-  </data>
-  <data name="&gt;&gt;CBB_ngonngu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="gunaCirclePictureBox3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -3501,6 +3504,9 @@
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>73, 466</value>
   </data>
+  <data name="LB_SoCV_TreHan.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
@@ -3509,9 +3515,6 @@
   </data>
   <data name="LB_SoCongViecCBD.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
-  </data>
-  <data name="&gt;&gt;panel8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;BTN_thongtin.Parent" xml:space="preserve">
     <value>$this</value>
@@ -3558,8 +3561,8 @@
   <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="BTN_nhanvien.Text" xml:space="preserve">
-    <value>Nhân Viên</value>
+  <data name="&gt;&gt;LB_SoCV_CoCapNhat.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 19</value>
@@ -3576,8 +3579,8 @@
   <data name="LB_tendangnhap.Text" xml:space="preserve">
     <value>Xin Chào, NAME!</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>TrangHienThi</value>
+  <data name="LB_SoCV_DangTienHanh.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
   </data>
   <data name="&gt;&gt;BTN_canho.Name" xml:space="preserve">
     <value>BTN_canho</value>
@@ -9473,6 +9476,9 @@
   <data name="&gt;&gt;gunaCirclePictureBox4.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
+  <data name="BTN_nhanvien.Text" xml:space="preserve">
+    <value>Nhân Viên</value>
+  </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -9657,9 +9663,6 @@
   <data name="&gt;&gt;gunaCirclePictureBox3.Name" xml:space="preserve">
     <value>gunaCirclePictureBox3</value>
   </data>
-  <data name="&gt;&gt;LB_SoCV_CoCapNhat.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="BTN_congviec.Text" xml:space="preserve">
     <value>Công Việc</value>
   </data>
@@ -9762,9 +9765,6 @@
   <data name="LB_CapNhat.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;LB_SoCV_CoCapNhat.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
   <data name="panel4.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
@@ -9824,9 +9824,6 @@
   </data>
   <data name="P_logotasmana.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 8</value>
-  </data>
-  <data name="PN_main.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1189, 622</value>
   </data>
   <data name="&gt;&gt;BTN_nhanvien.ZOrder" xml:space="preserve">
     <value>18</value>
@@ -10020,6 +10017,9 @@
   <data name="CBB_ngonngu.Items1" xml:space="preserve">
     <value>English</value>
   </data>
+  <data name="LB_SoCV_CoCapNhat.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;panel2.Name" xml:space="preserve">
     <value>panel2</value>
   </data>
@@ -10029,8 +10029,8 @@
   <data name="gunaCirclePictureBox3.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
   </data>
-  <data name="BTN_x.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="PN_main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1189, 622</value>
   </data>
   <data name="NTFIcon_ThongBaoCV.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -10038,8 +10038,8 @@
   <data name="gunaCirclePictureBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 15</value>
   </data>
-  <data name="LB_SoCV_TreHan.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 19</value>
   </data>
   <data name="&gt;&gt;BTN_x.Name" xml:space="preserve">
     <value>BTN_x</value>
@@ -10080,8 +10080,8 @@
   <data name="&gt;&gt;LB_SoCV_DangTienHanh.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;P_logotasmana.Type" xml:space="preserve">
-    <value>Guna.UI.WinForms.GunaPictureBox, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  <data name="&gt;&gt;LB_SoCV_CoCapNhat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;LB_SoCV_CoCapNhat.Name" xml:space="preserve">
     <value>LB_SoCV_CoCapNhat</value>
@@ -10107,8 +10107,8 @@
   <data name="panel3.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
-  <data name="LB_SoCV_DangTienHanh.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
+  <data name="&gt;&gt;CBB_ngonngu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;gunaPictureBox3.Type" xml:space="preserve">
     <value>Guna.UI.WinForms.GunaPictureBox, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
@@ -10689,8 +10689,8 @@
   <data name="BTN_canho.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 303</value>
   </data>
-  <data name="LB_SoCV_CoCapNhat.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>TrangHienThi</value>
   </data>
   <data name="&gt;&gt;LB_SoCV_TreHan.Parent" xml:space="preserve">
     <value>panel1</value>

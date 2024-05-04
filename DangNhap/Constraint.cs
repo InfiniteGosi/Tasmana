@@ -9,6 +9,6 @@ namespace DangNhap
     class Constraint
     {
         public static int NotifyTime = 1;
-        public static int NotifyTimeOut = 5000;
+        public static int NotifyTimeOut = 250;
     }
 }
