@@ -7,6 +7,8 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net.Mail;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -159,8 +161,34 @@ namespace DangNhap
                 if (containsct)
                     if (NoticeBLL.Instance.AddNoticeTo(AddParameterNoticeTo(null, null, null, 1)))
                     {
-                        return true;
-
+                        List<Employee> emp = EmployeeBLL.Instance.GetEmployeeList();
+                        foreach (Employee employee in emp)
+                        {
+                            string to, from, pass;
+                            to = employee.Email;
+                            from = "tasmanahr@gmail.com";
+                            pass = "aakj tdjj vpsa kkap";
+                            MailMessage message = new MailMessage();
+                            message.To.Add(to);
+                            message.From = new MailAddress(from);
+                            message.Subject = $"Thông báo/Báo cáo từ {currentUser.MaNhanVien}";
+                            message.Body = $"Bạn vừa nhận được 1 thông báo/báo cáo từ {currentUser.Ho} {currentUser.Ten} \nVui lòng đăng nhập vào phần mềm Tasmana để xem chi tiết";
+                            SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+                            smtp.UseDefaultCredentials = false;
+                            smtp.EnableSsl = true;
+                            smtp.Port = 587;
+                            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                            smtp.Credentials = new NetworkCredential(from, pass);
+                            try
+                            {
+                                smtp.Send(message);
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show($"Có lỗi xảy ra khi gửi thông báo đến với nhân viên: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            return true;
+                        }
                     }
                     else
                         return false;
@@ -173,7 +201,37 @@ namespace DangNhap
                         if (d.MaBoPhan == item["ID"].ToString())
                         {
                             if (NoticeBLL.Instance.AddNoticeTo(AddParameterNoticeTo(d.MaBoPhan, null, null, 0)))
+                            {
+                                List<Employee> emp = EmployeeBLL.Instance.GetEmployeeByDivision(item["ID"].ToString());
+                                foreach(Employee employee in emp)
+                                {
+                                    string to, from, pass;
+                                    to = employee.Email;
+                                    from = "tasmanahr@gmail.com";
+                                    pass = "aakj tdjj vpsa kkap";
+                                    MailMessage message = new MailMessage();
+                                    message.To.Add(to);
+                                    message.From = new MailAddress(from);
+                                    message.Subject = $"Thông báo/Báo cáo từ {currentUser.MaNhanVien}";
+                                    message.Body = $"Bạn vừa nhận được 1 thông báo/báo cáo từ {currentUser.Ho} {currentUser.Ten} \nVui lòng đăng nhập vào phần mềm Tasmana để xem chi tiết";
+                                    SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+                                    smtp.UseDefaultCredentials = false;
+                                    smtp.EnableSsl = true;
+                                    smtp.Port = 587;
+                                    smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                                    smtp.Credentials = new NetworkCredential(from, pass);
+                                    try
+                                    {
+                                        smtp.Send(message);
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MessageBox.Show($"Có lỗi xảy ra khi gửi thông báo đến với nhân viên: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+                                }
                                 break;
+                            }
+                                
                             else
                                 return false;
                         }
@@ -188,7 +246,37 @@ namespace DangNhap
                         if (gr.MaNhom == item["ID"].ToString())
                         {
                             if (NoticeBLL.Instance.AddNoticeTo(AddParameterNoticeTo(null, gr.MaNhom, null, 0)))
+                            {
+                                List<Employee> emp = EmployeeBLL.Instance.GetEmployeeByDivision(item["ID"].ToString());
+                                foreach (Employee employee in emp)
+                                {
+                                    string to, from, pass;
+                                    to = employee.Email;
+                                    from = "tasmanahr@gmail.com";
+                                    pass = "aakj tdjj vpsa kkap";
+                                    MailMessage message = new MailMessage();
+                                    message.To.Add(to);
+                                    message.From = new MailAddress(from);
+                                    message.Subject = $"Thông báo/Báo cáo từ {currentUser.MaNhanVien}";
+                                    message.Body = $"Bạn vừa nhận được 1 thông báo/báo cáo từ {currentUser.Ho} {currentUser.Ten} \nVui lòng đăng nhập vào phần mềm Tasmana để xem chi tiết";
+                                    SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+                                    smtp.UseDefaultCredentials = false;
+                                    smtp.EnableSsl = true;
+                                    smtp.Port = 587;
+                                    smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                                    smtp.Credentials = new NetworkCredential(from, pass);
+                                    try
+                                    {
+                                        smtp.Send(message);
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MessageBox.Show($"Có lỗi xảy ra khi gửi thông báo đến với nhân viên: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+                                }
                                 break;
+                            }
+                                
                             else
                                 return false;
                         }
@@ -200,10 +288,35 @@ namespace DangNhap
                         bool containsgr = MSCBB_thongbao.SelectedItems.Cast<DataRowView>().Any(value => value["ID"].ToString() == e.MaBoPhan);
                         if (containsem || containsgr)
                             break;
-                        if (e.MaNhanVien == item.ToString())
+                        if (e.MaNhanVien == item["ID"].ToString())
                         {
                             if (NoticeBLL.Instance.AddNoticeTo(AddParameterNoticeTo(null, null, e.MaNhanVien, 0)))
-                                break;
+                            {
+                                string to, from, pass;
+                                to = e.Email;
+                                from = "tasmanahr@gmail.com";
+                                pass = "aakj tdjj vpsa kkap";
+                                MailMessage message = new MailMessage();
+                                message.To.Add(to);
+                                message.From = new MailAddress(from);
+                                message.Subject = $"Bạn vừa nhận được 1 thông báo/báo cáo từ {currentUser.MaNhanVien}";
+                                message.Body = $"Bạn vừa nhận được 1 thông báo/báo cáo từ {currentUser.Ho} {currentUser.Ten} \nVui lòng đăng nhập vào phần mềm Tasmana để xem chi tiết";
+                                SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+                                smtp.UseDefaultCredentials = false;
+                                smtp.EnableSsl = true;
+                                smtp.Port = 587;
+                                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                                smtp.Credentials = new NetworkCredential(from, pass);
+                                try
+                                {
+                                    smtp.Send(message);
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show($"Có lỗi xảy ra khi gửi thông báo đến với nhân viên: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+
                             else
                                 return false;
                         }
@@ -238,6 +351,7 @@ namespace DangNhap
             if (Save())
             {
                 MessageBox.Show("Gửi thành công");
+
                 this.Close();
             }
             else
