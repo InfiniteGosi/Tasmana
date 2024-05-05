@@ -198,6 +198,9 @@ namespace DangNhap
                 soCongViec = tomorowJobs.Count;
                 NTFIcon_ThongBaoCV.Visible = true;
                 NTFIcon_ThongBaoCV.ShowBalloonTip(Constraint.NotifyTimeOut, "Thông báo công việc chưa hoàn thành", string.Format("Bạn có {0} công việc sắp đến hạn vào ngày mai", soCongViec), ToolTipIcon.Info);
+                // Reset apptime
+                appTime = 0;
+                return;
             }
 
             // Kiểm tra những công việc của NHÂN VIÊN chưa bắt đầu làm

@@ -314,7 +314,7 @@ namespace DangNhap
                 CongViecChung_Load(sender, e);
             }
         }
-
+        private ChiTietCongViec ctcv;
         private void GGC_hienthicongviec_TableControlCellDoubleClick(object sender, GridTableControlCellClickEventArgs e)
         {
             GridTableCellStyleInfo style = e.TableControl.GetTableViewStyleInfo(e.Inner.RowIndex, e.Inner.ColIndex);
@@ -350,7 +350,7 @@ namespace DangNhap
                 int phiDichVu = curJob.PhiDichVu;
 
                 // Add to ChiTietCongViec 
-                ChiTietCongViec ctcv = new ChiTietCongViec(currentAccount);
+                ctcv = new ChiTietCongViec(currentAccount);
                 ctcv.TXB_PhongBan.Text = maPhongBan;
                 ctcv.TXB_Nhom.Text = maNhom;
                 ctcv.TXB_MaNV.Text = maNhanVien;
@@ -374,9 +374,14 @@ namespace DangNhap
                 ctcv.CBB_quyentruycap.SelectedIndex = curJob.QuyenTruyCap;
 
                 // Show Form
+                ctcv.FormClosed += Ctcv_FormClosed; // Attach event handler for form closed event
                 ctcv.ShowDialog();
-                this.Refresh();
             }
         }
+        private void Ctcv_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            CongViecChung_Load(sender, e);
+        }
+
     }
 }

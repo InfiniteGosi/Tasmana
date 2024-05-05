@@ -319,6 +319,10 @@ namespace DangNhap
         {
             DTP_TuNgay.Enabled = false;
             DTP_DenNgay.Enabled = false;
+            if(CBB_DuLieuMuonThongKe.SelectedIndex == -1)
+            {
+                return;
+            }
             if (CBB_DuLieuMuonThongKe.SelectedItem.Equals("Tổng chi phí điện/nước") || CBB_DuLieuMuonThongKe.SelectedItem.Equals("Tổng chi phí quản lý") || CBB_DuLieuMuonThongKe.SelectedItem.Equals("Các phí dịch vụ khác"))
             {
                 if(CBB_LoaiThoiGian.SelectedIndex == -1)

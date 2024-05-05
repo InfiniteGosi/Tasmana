@@ -42,11 +42,15 @@ namespace BLL
         public Division GetDivisionByEmployeeId(string maNhanVien)
         {
             DataTable dt = DivisionDAO.Instance.GetDivisionByEmployeeId(maNhanVien);
-            string maBoPhan = dt.Rows[0]["maBoPhan"].ToString();
-            string tenBoPhan = dt.Rows[0]["tenPB"].ToString();
-            string soDienThoai = dt.Rows[0]["SDT"].ToString();
-            string email = dt.Rows[0]["email"].ToString();
-            return new Division(maBoPhan, tenBoPhan, soDienThoai, email);
+            if(dt.Rows.Count > 0)
+            {
+                string maBoPhan = dt.Rows[0]["maBoPhan"].ToString();
+                string tenBoPhan = dt.Rows[0]["tenPB"].ToString();
+                string soDienThoai = dt.Rows[0]["SDT"].ToString();
+                string email = dt.Rows[0]["email"].ToString();
+                return new Division(maBoPhan, tenBoPhan, soDienThoai, email);
+            }
+            return null;
         }
         public bool EditDivision(Dictionary<string, object> parameters)
         {
