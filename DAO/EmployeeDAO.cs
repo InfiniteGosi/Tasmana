@@ -73,5 +73,15 @@ namespace DAO
             string query = $"insert into CEO values('{maNhanVien}')";
             return DataProvider.Instance.ExecuteNonQuery(query) > 0;
         }
+        // Thêm Quản lý
+        public bool AddManager(Dictionary<string, object> parameters)
+        {
+            return DataProvider.Instance.ExecuteStoredProcedure("AddManager", parameters) > 0;
+        }
+        public DataTable GetManager()
+        {
+            string query = $"SELECT * FROM QuanLy";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

@@ -31,7 +31,24 @@ namespace DangNhap
         }
         private void PhanQuyen()
         {
-            if(currentAccount.Level.Equals("CEO") || currentAccount.Level.Equals("DV"))
+            DataTable listQuanLy = EmployeeBLL.Instance.GetManager();
+            bool isManager = false;
+
+            foreach (DataRow row in listQuanLy.Rows)
+            {
+                if (row["maNhanVien"].ToString().Equals(currentAccount.EmployeeId))
+                {
+                    isManager = true;
+                    break;
+                }
+            }
+
+            if (isManager)
+            {
+                BTN_themcudan.Enabled = true;
+                BTN_themcudan.Visible = true;
+            }
+            else if (currentAccount.Level.Equals("CEO") || currentAccount.Level.Equals("DV"))
             {
                 BTN_themcudan.Enabled = true;
                 BTN_themcudan.Visible = true;

@@ -2421,3 +2421,14 @@ BEGIN
 	SET maNhom = @maNhom
 	WHERE maNhanVien = @maNhanVien
 END
+GO
+-- Thêm Quản lý
+CREATE PROCEDURE [dbo].[AddManager]
+	@maNhanVien VARCHAR(10),
+	@maBoPhan VARCHAR(10)
+AS
+BEGIN
+	INSERT INTO QuanLy
+	VALUES (@maNhanVien, @maBoPhan)
+END
+GO

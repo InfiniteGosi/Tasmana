@@ -148,7 +148,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BTN_themnhanvien.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="GGC_danhsachnv.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -175,7 +175,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;GGC_danhsachnv.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="BTN_themnhom.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -184,7 +184,7 @@
     <value>Times New Roman, 9pt</value>
   </data>
   <data name="BTN_themnhom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1068, 59</value>
+    <value>761, 59</value>
   </data>
   <data name="BTN_themnhom.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 35</value>
@@ -193,7 +193,7 @@
     <value>169</value>
   </data>
   <data name="BTN_themnhom.Text" xml:space="preserve">
-    <value>Tạo mới</value>
+    <value>Thêm nhóm</value>
   </data>
   <data name="&gt;&gt;BTN_themnhom.Name" xml:space="preserve">
     <value>BTN_themnhom</value>
@@ -205,7 +205,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BTN_themnhom.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="BTN_PhongBan.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -235,7 +235,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BTN_PhongBan.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="BTN_in.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -277,7 +277,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BTN_in.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="BTN_PDF.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -324,7 +324,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BTN_PDF.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="BTN_excel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -369,7 +369,37 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BTN_excel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
+  </data>
+  <data name="BTN_ThemQuanLy.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="BTN_ThemQuanLy.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
+  <data name="BTN_ThemQuanLy.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1072, 59</value>
+  </data>
+  <data name="BTN_ThemQuanLy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 35</value>
+  </data>
+  <data name="BTN_ThemQuanLy.TabIndex" type="System.Int32, mscorlib">
+    <value>174</value>
+  </data>
+  <data name="BTN_ThemQuanLy.Text" xml:space="preserve">
+    <value>Thêm Quản lý</value>
+  </data>
+  <data name="&gt;&gt;BTN_ThemQuanLy.Name" xml:space="preserve">
+    <value>BTN_ThemQuanLy</value>
+  </data>
+  <data name="&gt;&gt;BTN_ThemQuanLy.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;BTN_ThemQuanLy.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BTN_ThemQuanLy.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

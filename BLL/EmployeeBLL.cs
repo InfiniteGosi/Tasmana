@@ -290,5 +290,17 @@ namespace BLL
             }
             return "Thêm thất bại";
         }
+
+        // Thêm Quản lý
+        public bool AddManager(Dictionary<string, object> parameters)
+        {
+            return EmployeeDAO.Instance.AddManager(parameters);
+        }
+
+        // lấy quản lý
+        public DataTable GetManager()
+        {
+            return EmployeeDAO.Instance.GetManager();
+        }
     }
 }
