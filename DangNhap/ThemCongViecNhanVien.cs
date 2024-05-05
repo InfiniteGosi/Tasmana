@@ -6,15 +6,19 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using System.Configuration;
+using System.Data;
+using Syncfusion.Windows.Forms.Tools.MultiColumnTreeView;
 namespace DangNhap
 {
     public partial class ThemCongViecNhanVien : Form
     {
         private CongViecChung parent;
-        public ThemCongViecNhanVien(CongViecChung parent)
+        Account currentAccount;
+        public ThemCongViecNhanVien(CongViecChung parent, Account currentAccount)
         {
             InitializeComponent();
             this.parent = parent;
+            this.currentAccount = currentAccount;
         }
         private Form currentFormChild;
         private void OpenChildForm(Form childForm)
@@ -51,7 +55,7 @@ namespace DangNhap
 
         private void BTN_phongban_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThemCongViecPhongBan(parent));
+            OpenChildForm(new ThemCongViecPhongBan(parent, currentAccount));
             BTN_phongban.BackColor = Color.FromArgb(51, 53, 55);
             BTN_nhanvien.BackColor = Color.Transparent;
             BTN_nhom.BackColor = Color.Transparent;
@@ -59,7 +63,7 @@ namespace DangNhap
 
         private void BTN_nhom_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThemCongViecNhom(parent));
+            OpenChildForm(new ThemCongViecNhom(parent, currentAccount));
             BTN_nhom.BackColor = Color.FromArgb(51, 53, 55);
             BTN_phongban.BackColor = Color.Transparent;
             BTN_nhanvien.BackColor = Color.Transparent;
@@ -100,8 +104,42 @@ namespace DangNhap
             CBB_phongban.Enabled = true;
             CBB_phongban.Items.Clear();
             listPB = GetPhongBan();
+
+            DataTable listQuanLy = EmployeeBLL.Instance.GetManager();
+            bool isManager = false;
+            bool isDV = false;
+            string maBoPhan = "";
+
+            foreach (DataRow row in listQuanLy.Rows)
+            {
+                if (row["maNhanVien"].ToString().Equals(currentAccount.EmployeeId) )
+                {
+                    isManager = true;
+                    if (row["maNhanVien"].ToString().Split('-')[0].Equals("DV"))
+                    {
+                        isDV = true;
+                    }
+                    maBoPhan = row["maNhanVien"].ToString().Split('-')[0];
+                    break;
+                }
+            }
+
+            // Quản lý chỉ có thể thêm công việc cho Phòng ban mình quản lý và không phải DV
+            if (isManager && !isDV)
+            {
+                for (int i = 0; i < listPB.Count; i++)
+                {
+                    if(!string.IsNullOrEmpty(maBoPhan))
+                        if(listPB[i].MaBoPhan.Equals(maBoPhan))
+                            CBB_phongban.Items.Add(listPB[i].MaBoPhan + "-" + listPB[i].TenBoPhan);
+                }
+                return;
+            }
+            // Nếu không phải quản lý và là DV
             for (int i = 0; i < listPB.Count; i++)
             {
+                if (currentAccount.Level.Equals("DV") && listPB[i].MaBoPhan.Equals("TC"))
+                    continue;
                 CBB_phongban.Items.Add(listPB[i].MaBoPhan + "-" + listPB[i].TenBoPhan);
             }
         }

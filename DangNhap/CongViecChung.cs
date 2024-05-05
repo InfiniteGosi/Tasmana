@@ -33,7 +33,7 @@ namespace DangNhap
         }
         private void BTN_themcongviec_Click(object sender, EventArgs e)
         {
-            ThemCongViecNhanVien tcv = new ThemCongViecNhanVien(this);
+            ThemCongViecNhanVien tcv = new ThemCongViecNhanVien(this, currentAccount);
             tcv.Show();
         }
 
@@ -41,6 +41,39 @@ namespace DangNhap
         {
             ChiTietCongViec ctcv = new ChiTietCongViec(currentAccount);
             ctcv.Show();
+        }
+
+        private void PhanQuyen()
+        {
+            DataTable listQuanLy = EmployeeBLL.Instance.GetManager();
+            bool isManager = false;
+
+            foreach (DataRow row in listQuanLy.Rows)
+            {
+                if (row["maNhanVien"].ToString().Equals(currentAccount.EmployeeId))
+                {
+                    isManager = true;
+                    break;
+                }
+            }
+
+            if (isManager)
+            {
+                BTN_themcongviec.Enabled = true;
+                BTN_themcongviec.Visible = true;
+                return;
+            }
+
+            if (currentAccount.Level.Equals("CEO") || currentAccount.Level.Equals("DV"))
+            {
+                BTN_themcongviec.Enabled = true;
+                BTN_themcongviec.Visible = true;
+            }
+            else
+            {
+                BTN_themcongviec.Enabled = false;
+                BTN_themcongviec.Visible = false;
+            }
         }
         private void CongViecChung_Load(object sender, EventArgs e)
         {
@@ -62,11 +95,7 @@ namespace DangNhap
             }
             else
                 GGC_hienthicongviec.DataSource = null;
-            if (!currentAccount.Level.Equals("CEO"))
-            {
-                BTN_themcongviec.Enabled = false;
-                BTN_themcongviec.Visible = false;
-            }
+            PhanQuyen();
         }
         public void Display_GGC_nhanvien()
         {

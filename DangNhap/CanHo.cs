@@ -46,7 +46,13 @@ namespace DangNhap
 
         private void PhanQuyen()
         {
-            if (!currentAccount.Level.Equals("TC") && !currentAccount.Level.Equals("CEO"))
+            if (currentAccount.Level.Equals("TC") || currentAccount.Level.Equals("CEO") || currentAccount.Level.Equals("KT"))
+            {
+                // Xem hóa đơn
+                BTN_XemHoaDon.Enabled = true;
+                BTN_XemHoaDon.Visible = true;
+            }
+            else
             {
                 // Xem hóa đơn
                 BTN_XemHoaDon.Enabled = false;
