@@ -1481,6 +1481,50 @@ begin
 end
 go
 
+CREATE PROCEDURE [dbo].[KiemTraTrungMaCuDan]
+    @maCuDan VARCHAR(10),
+    @exists BIT OUTPUT
+AS
+BEGIN
+    DECLARE @user_count INT;
+
+    -- Check Table 1
+    SELECT @user_count = COUNT(*)
+    FROM ChuHo
+    WHERE maCuDan = @maCuDan;
+
+    IF @user_count > 0
+    BEGIN
+        SET @exists = 1;
+        RETURN;
+    END
+
+    -- Check Table 2
+    SELECT @user_count = COUNT(*)
+    FROM NguoiDcUyQuyenChuHo
+    WHERE maCuDan = @maCuDan;
+
+    IF @user_count > 0
+    BEGIN
+        SET @exists = 1;
+        RETURN;
+    END
+
+    -- Check Table 3
+    SELECT @user_count = COUNT(*)
+    FROM KhachNganNgay
+    WHERE maCuDan = @maCuDan;
+
+    IF @user_count > 0
+    BEGIN
+        SET @exists = 1;
+        RETURN;
+    END
+
+    SET @exists = 0;
+END
+go
+
 -- Procedure thêm Nhóm
 Create PROCEDURE [dbo].[SP_ThemNhom]
 	@maNhom VARCHAR(10),

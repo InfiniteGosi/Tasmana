@@ -45,5 +45,10 @@ namespace BLL
         {
             return ResidentDAO.Instance.GetVietResidents();
         }
+        public bool CheckMaCuDan(string maCuDan)
+        {
+            DataTable dt = ResidentDAO.Instance.CheckMaCuDan(maCuDan);
+            return (bool)dt.Rows[0]["exists_flag"];
+        }
     }
 }

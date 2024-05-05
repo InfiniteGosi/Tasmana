@@ -38,5 +38,10 @@ namespace DAO
             string query = "EXEC ThongKeCuDanVietNam";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable CheckMaCuDan(string maCuDan)
+        {
+            string query = $"DECLARE @exists BIT; EXEC [dbo].[KiemTraTrungMaCuDan] @maCuDan = '{maCuDan}', @exists = @exists OUTPUT; SELECT @exists AS exists_flag;";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }
