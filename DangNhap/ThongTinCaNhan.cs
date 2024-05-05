@@ -282,6 +282,11 @@ namespace DangNhap
             {
                 MessageBox.Show(AddEmployee(AddParameter_NV()));
                 AddAccount(AddParameter_TK());
+                string maCEO = TXB_manv.Text.Split('-')[0];
+                if (maCEO == "GD")
+                {
+                    EmployeeBLL.Instance.AddCEO(TXB_manv.Text);
+                }
             }
             else // Trường hợp chỉnh sửa nhân viên
             {

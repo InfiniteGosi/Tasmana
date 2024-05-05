@@ -282,6 +282,13 @@ namespace BLL
         {
             return EmployeeDAO.Instance.EditEmployeeGroup(parameters);
         }
-
+        public string AddCEO(string maNhanVien)
+        {
+            if (EmployeeDAO.Instance.AddCEO(maNhanVien))
+            {
+                return "Thêm thành công";
+            }
+            return "Thêm thất bại";
+        }
     }
 }
