@@ -136,6 +136,9 @@
   <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
     <value>1350, 1</value>
   </data>
+  <data name="label15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
   <data name="&gt;&gt;textBox3.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
@@ -152,18 +155,9 @@
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>1, 838</value>
   </data>
-  <data name="LB_ttktm.TabIndex" type="System.Int32, mscorlib">
-    <value>212</value>
-  </data>
-  <data name="&gt;&gt;LB_khachdangthue.Parent" xml:space="preserve">
-    <value>PN_hienthi</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
-  </data>
-  <data name="numericUpDownExt4.TabIndex" type="System.Int32, mscorlib">
-    <value>171</value>
   </data>
   <data name="&gt;&gt;LB_thanhtoan.ZOrder" xml:space="preserve">
     <value>24</value>
@@ -198,9 +192,6 @@
   <data name="NUD_thanhtoan.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
   </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1394, 1</value>
-  </data>
   <data name="BTN_luu.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 35</value>
   </data>
@@ -210,14 +201,20 @@
   <data name="TXB_khachdangthue.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
   </data>
+  <data name="label13.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
   <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
     <value>193, 22</value>
   </data>
-  <data name="textBox4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
+  <data name="label21.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 22</value>
   </data>
-  <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1, 600</value>
+  <data name="label22.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TXB_NSA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>970, 316</value>
   </data>
   <data name="LB_hinhanhcanho.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
@@ -237,14 +234,17 @@
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>172</value>
   </data>
-  <data name="&gt;&gt;LB_khachdangthue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 22</value>
   </data>
   <data name="&gt;&gt;label17.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
   <data name="LB_thanhtoan.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="BTN_luu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
   </data>
   <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
     <value>707, 321</value>
@@ -272,9 +272,6 @@
   </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
     <value>705, 116</value>
-  </data>
-  <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
   </data>
   <data name="&gt;&gt;NUD_thangmay.Name" xml:space="preserve">
     <value>NUD_thangmay</value>
@@ -9752,6 +9749,9 @@
         Kv76++l4tTULTJXi1bNi/H1rJn74eip+2CqwbzFebhXi/5eYkqkqw4ApAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="BTN_lichsu.TabIndex" type="System.Int32, mscorlib">
+    <value>215</value>
+  </data>
   <data name="&gt;&gt;label17.Name" xml:space="preserve">
     <value>label17</value>
   </data>
@@ -9767,8 +9767,8 @@
   <data name="LB_ttktm.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 21</value>
   </data>
-  <data name="label17.TabIndex" type="System.Int32, mscorlib">
-    <value>174</value>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>PN_hienthi</value>
   </data>
   <data name="&gt;&gt;NUD_phongngu.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
@@ -9791,8 +9791,8 @@
   <data name="LB_thanhtoan.Size" type="System.Drawing.Size, System.Drawing">
     <value>174, 22</value>
   </data>
-  <data name="BTN_xoa.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 9pt</value>
+  <data name="LB_thanhtoan.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
     <value>1393, 1</value>
@@ -9830,6 +9830,9 @@
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="NUD_phongngu.Size" type="System.Drawing.Size, System.Drawing">
     <value>375, 30</value>
   </data>
@@ -9838,9 +9841,6 @@
   </data>
   <data name="&gt;&gt;panel6.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 151</value>
   </data>
   <data name="&gt;&gt;LB_ttktm.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -9880,6 +9880,9 @@
   </data>
   <data name="label13.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;NUD_phongngu.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.NumericUpDownExt, Syncfusion.Tools.Windows, Version=25.1462.39.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="numericUpDownExt5.Location" type="System.Drawing.Point, System.Drawing">
     <value>320, 7</value>
@@ -9923,12 +9926,6 @@
   <data name="label17.Text" xml:space="preserve">
     <value>Số lượng thẻ thang máy</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Số lượng toilet</value>
-  </data>
-  <data name="&gt;&gt;NUD_thangmay.Parent" xml:space="preserve">
-    <value>PN_hienthi</value>
-  </data>
   <data name="LB_hinhanhcanho.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
   </data>
@@ -9950,14 +9947,20 @@
   <data name="LB_ttktm.Size" type="System.Drawing.Size, System.Drawing">
     <value>439, 32</value>
   </data>
+  <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 22</value>
+  </data>
+  <data name="NUD_thanhtoan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>970, 451</value>
+  </data>
   <data name="numericUpDownExt6.Size" type="System.Drawing.Size, System.Drawing">
     <value>375, 30</value>
   </data>
   <data name="&gt;&gt;label16.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label15.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>212</value>
   </data>
   <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 22</value>
@@ -9983,8 +9986,8 @@
   <data name="&gt;&gt;LB_macanho.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
-  <data name="LB_thanhtoan.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
+  <data name="LB_ttktm.TabIndex" type="System.Int32, mscorlib">
+    <value>212</value>
   </data>
   <data name="&gt;&gt;LB_ttktm.Name" xml:space="preserve">
     <value>LB_ttktm</value>
@@ -10003,9 +10006,6 @@
   </data>
   <data name="&gt;&gt;label20.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
-  </data>
-  <data name="BTN_lichsu.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
   </data>
   <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
@@ -10115,8 +10115,8 @@
   <data name="LB_phongngu.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>ChiTietKhuThuongMai</value>
+  <data name="textBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>375, 30</value>
   </data>
   <data name="label19.Text" xml:space="preserve">
     <value>%</value>
@@ -10124,8 +10124,8 @@
   <data name="NUD_mucphiql.TabIndex" type="System.Int32, mscorlib">
     <value>224</value>
   </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>212</value>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="NUD_mucphiql.Size" type="System.Drawing.Size, System.Drawing">
     <value>375, 30</value>
@@ -10139,6 +10139,9 @@
   <data name="TXB_macanho.Location" type="System.Drawing.Point, System.Drawing">
     <value>215, 43</value>
   </data>
+  <data name="BTN_luu.Text" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
   <data name="&gt;&gt;NUD_phongngu.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
@@ -10148,8 +10151,8 @@
   <data name="&gt;&gt;TXB_NSA.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label15.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
+  <data name="&gt;&gt;BTN_lichsu.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>705, 118</value>
@@ -10159,9 +10162,6 @@
   </data>
   <data name="&gt;&gt;label7.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;NUD_mucphiql.Parent" xml:space="preserve">
-    <value>PN_hienthi</value>
   </data>
   <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
     <value>27, 22</value>
@@ -10196,11 +10196,8 @@
   <data name="textBox4.Location" type="System.Drawing.Point, System.Drawing">
     <value>-456, 147</value>
   </data>
-  <data name="label19.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;TXB_khachdangthue.ZOrder" xml:space="preserve">
-    <value>22</value>
+  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.Name" xml:space="preserve">
     <value>panel1</value>
@@ -10229,20 +10226,23 @@
   <data name="label14.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
+  <data name="&gt;&gt;BTN_chung.Name" xml:space="preserve">
+    <value>BTN_chung</value>
+  </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 47</value>
   </data>
   <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="BTN_xoa.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
   <data name="TXB_GSA.TabIndex" type="System.Int32, mscorlib">
     <value>217</value>
   </data>
   <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;LB_thanhtoan.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -10258,9 +10258,6 @@
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 170</value>
-  </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>705, 388</value>
@@ -10286,6 +10283,9 @@
   <data name="comboBox2.TabIndex" type="System.Int32, mscorlib">
     <value>183</value>
   </data>
+  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
   <data name="numericUpDownExt5.TabIndex" type="System.Int32, mscorlib">
     <value>173</value>
   </data>
@@ -10297,6 +10297,9 @@
   </data>
   <data name="&gt;&gt;comboBox2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownExt6.Name" xml:space="preserve">
+    <value>numericUpDownExt6</value>
   </data>
   <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 22</value>
@@ -10312,6 +10315,9 @@
   </data>
   <data name="NUD_toilet.Location" type="System.Drawing.Point, System.Drawing">
     <value>970, 43</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Số lượng thẻ thang máy</value>
   </data>
   <data name="&gt;&gt;label13.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -10334,17 +10340,14 @@
   <data name="&gt;&gt;label16.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="label22.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 22</value>
+  <data name="LB_macanho.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
   <data name="&gt;&gt;NUD_thanhtoan.Type" xml:space="preserve">
     <value>Syncfusion.Windows.Forms.Tools.NumericUpDownExt, Syncfusion.Tools.Windows, Version=25.1462.39.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="NUD_toilet.Size" type="System.Drawing.Size, System.Drawing">
     <value>375, 30</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownExt4.Name" xml:space="preserve">
-    <value>numericUpDownExt4</value>
   </data>
   <data name="label14.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -10364,8 +10367,8 @@
   <data name="&gt;&gt;label10.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
   </data>
-  <data name="BTN_luu.Text" xml:space="preserve">
-    <value>Lưu</value>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1394, 1</value>
   </data>
   <data name="TXB_khachdangthue.Size" type="System.Drawing.Size, System.Drawing">
     <value>375, 30</value>
@@ -10376,9 +10379,6 @@
   <data name="&gt;&gt;LB_macanho.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BTN_lichsu.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
   </data>
@@ -10387,6 +10387,12 @@
   </data>
   <data name="&gt;&gt;LB_macanho.Name" xml:space="preserve">
     <value>LB_macanho</value>
+  </data>
+  <data name="&gt;&gt;BTN_uploadanh.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;TXB_GSA.Name" xml:space="preserve">
     <value>TXB_GSA</value>
@@ -10406,9 +10412,6 @@
   <data name="&gt;&gt;label3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TXB_khachdangthue.Name" xml:space="preserve">
-    <value>TXB_khachdangthue</value>
-  </data>
   <data name="&gt;&gt;NUD_thangmay.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
@@ -10427,6 +10430,9 @@
   <data name="&gt;&gt;LB_khachdangthue.Name" xml:space="preserve">
     <value>LB_khachdangthue</value>
   </data>
+  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
+    <value>218</value>
+  </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -10442,9 +10448,6 @@
   <data name="&gt;&gt;panel8.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="&gt;&gt;LB_phongngu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -10454,8 +10457,8 @@
   <data name="LB_khachdangthue.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 185</value>
   </data>
-  <data name="panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
+  <data name="&gt;&gt;label15.Name" xml:space="preserve">
+    <value>label15</value>
   </data>
   <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -10469,8 +10472,8 @@
   <data name="BTN_thoat.Location" type="System.Drawing.Point, System.Drawing">
     <value>1332, 1</value>
   </data>
-  <data name="&gt;&gt;comboBox2.Name" xml:space="preserve">
-    <value>comboBox2</value>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Chủ hộ hiện tại</value>
   </data>
   <data name="textBox3.Size" type="System.Drawing.Size, System.Drawing">
     <value>375, 30</value>
@@ -10481,11 +10484,8 @@
   <data name="&gt;&gt;label13.Name" xml:space="preserve">
     <value>label13</value>
   </data>
-  <data name="LB_thanhtoan.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="LB_macanho.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="TXB_khachdangthue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 170</value>
   </data>
   <data name="BTN_chung.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -10493,8 +10493,8 @@
   <data name="&gt;&gt;panel8.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="TXB_khachdangthue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 170</value>
+  <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Mức phí quản lý hằng tháng</value>
@@ -10502,7 +10502,7 @@
   <data name="PN_hienthi.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 67</value>
   </data>
-  <data name="&gt;&gt;label19.Parent" xml:space="preserve">
+  <data name="&gt;&gt;PN_hienthi.Name" xml:space="preserve">
     <value>PN_hienthi</value>
   </data>
   <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
@@ -10516,6 +10516,9 @@
   </data>
   <data name="&gt;&gt;NUD_toilet.Type" xml:space="preserve">
     <value>Syncfusion.Windows.Forms.Tools.NumericUpDownExt, Syncfusion.Tools.Windows, Version=25.1462.39.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="PB_hinhcanho.Size" type="System.Drawing.Size, System.Drawing">
+    <value>273, 226</value>
   </data>
   <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
     <value>pictureBox2</value>
@@ -10532,11 +10535,11 @@
   <data name="panel8.TabIndex" type="System.Int32, mscorlib">
     <value>212</value>
   </data>
-  <data name="&gt;&gt;TXB_macanho.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;label14.Name" xml:space="preserve">
     <value>label14</value>
+  </data>
+  <data name="comboBox2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
   </data>
   <data name="BTN_xoa.Text" xml:space="preserve">
     <value>Xóa</value>
@@ -10580,14 +10583,14 @@
   <data name="NUD_thangmay.TabIndex" type="System.Int32, mscorlib">
     <value>175</value>
   </data>
-  <data name="comboBox2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
+  <data name="&gt;&gt;BTN_lichsu.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="LB_khachdangthue.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
+  <data name="&gt;&gt;BTN_uploadanh.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
-  <data name="label13.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+  <data name="&gt;&gt;comboBox2.Name" xml:space="preserve">
+    <value>comboBox2</value>
   </data>
   <data name="NUD_mucphiql.Location" type="System.Drawing.Point, System.Drawing">
     <value>970, 382</value>
@@ -10601,11 +10604,11 @@
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 22</value>
   </data>
-  <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 22</value>
+  <data name="&gt;&gt;LB_thanhtoan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
-    <value>218</value>
+  <data name="&gt;&gt;TXB_khachdangthue.Name" xml:space="preserve">
+    <value>TXB_khachdangthue</value>
   </data>
   <data name="&gt;&gt;comboBox2.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -10643,11 +10646,8 @@
   <data name="&gt;&gt;label22.Name" xml:space="preserve">
     <value>label22</value>
   </data>
-  <data name="&gt;&gt;BTN_uploadanh.Type" xml:space="preserve">
-    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1, 600</value>
   </data>
   <data name="LB_hinhanhcanho.Location" type="System.Drawing.Point, System.Drawing">
     <value>27, 254</value>
@@ -10664,6 +10664,9 @@
   <data name="&gt;&gt;BTN_xoa.Name" xml:space="preserve">
     <value>BTN_xoa</value>
   </data>
+  <data name="label14.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
   <data name="panel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
   </data>
@@ -10673,8 +10676,8 @@
   <data name="&gt;&gt;NUD_mucphiql.Name" xml:space="preserve">
     <value>NUD_mucphiql</value>
   </data>
-  <data name="LB_khachdangthue.Text" xml:space="preserve">
-    <value>Khách đang thuê</value>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 151</value>
   </data>
   <data name="&gt;&gt;label12.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -10685,11 +10688,11 @@
   <data name="&gt;&gt;numericUpDownExt6.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="&gt;&gt;LB_hinhanhcanho.Name" xml:space="preserve">
-    <value>LB_hinhanhcanho</value>
+  <data name="label22.Text" xml:space="preserve">
+    <value>Vị trí tầng</value>
   </data>
-  <data name="&gt;&gt;PN_hienthi.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="LB_thanhtoan.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>193, 22</value>
@@ -10706,14 +10709,11 @@
   <data name="&gt;&gt;numericUpDownExt5.Type" xml:space="preserve">
     <value>Syncfusion.Windows.Forms.Tools.NumericUpDownExt, Syncfusion.Tools.Windows, Version=25.1462.39.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
-  <data name="&gt;&gt;BTN_luu.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="&gt;&gt;textBox4.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="textBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>375, 30</value>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Số lượng toilet</value>
   </data>
   <data name="BTN_chung.Location" type="System.Drawing.Point, System.Drawing">
     <value>1075, 28</value>
@@ -10721,35 +10721,29 @@
   <data name="LB_macanho.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="PB_hinhcanho.Size" type="System.Drawing.Size, System.Drawing">
-    <value>273, 226</value>
+  <data name="LB_khachdangthue.Text" xml:space="preserve">
+    <value>Khách đang thuê</value>
   </data>
   <data name="numericUpDownExt5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
   </data>
-  <data name="&gt;&gt;NUD_phongngu.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.NumericUpDownExt, Syncfusion.Tools.Windows, Version=25.1462.39.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  <data name="label15.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
   </data>
-  <data name="BTN_lichsu.TabIndex" type="System.Int32, mscorlib">
-    <value>215</value>
+  <data name="&gt;&gt;numericUpDownExt4.Name" xml:space="preserve">
+    <value>numericUpDownExt4</value>
   </data>
   <data name="PN_hienthi.Size" type="System.Drawing.Size, System.Drawing">
     <value>1391, 708</value>
   </data>
-  <data name="NUD_thangmay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>375, 30</value>
-  </data>
-  <data name="&gt;&gt;NUD_thanhtoan.Name" xml:space="preserve">
-    <value>NUD_thanhtoan</value>
-  </data>
-  <data name="label15.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1, 838</value>
   </data>
   <data name="NUD_phongngu.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
   </data>
-  <data name="&gt;&gt;label13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;PN_hienthi.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
     <value>13</value>
@@ -10769,11 +10763,11 @@
   <data name="&gt;&gt;textBox4.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="label10.Text" xml:space="preserve">
-    <value>Số lượng thẻ thang máy</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>ChiTietKhuThuongMai</value>
   </data>
-  <data name="BTN_luu.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 9pt</value>
+  <data name="NUD_thangmay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>375, 30</value>
   </data>
   <data name="panel7.TabIndex" type="System.Int32, mscorlib">
     <value>212</value>
@@ -10796,8 +10790,8 @@
   <data name="BTN_lichsu.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label13.Text" xml:space="preserve">
-    <value>Chủ hộ hiện tại</value>
+  <data name="&gt;&gt;NUD_thanhtoan.Name" xml:space="preserve">
+    <value>NUD_thanhtoan</value>
   </data>
   <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -10805,7 +10799,7 @@
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;BTN_luu.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel2.Name" xml:space="preserve">
@@ -10819,9 +10813,6 @@
   </data>
   <data name="&gt;&gt;LB_thanhtoan.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownExt5.Name" xml:space="preserve">
-    <value>numericUpDownExt5</value>
   </data>
   <data name="&gt;&gt;PN_hienthi.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -20290,29 +20281,29 @@
   <data name="NUD_thanhtoan.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 30</value>
   </data>
-  <data name="numericUpDownExt5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>375, 30</value>
-  </data>
   <data name="&gt;&gt;LB_khachdangthue.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
   <data name="&gt;&gt;panel8.Name" xml:space="preserve">
     <value>panel8</value>
   </data>
-  <data name="TXB_NSA.Multiline" type="System.Boolean, mscorlib">
+  <data name="label15.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label22.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="NUD_vitritang.TabIndex" type="System.Int32, mscorlib">
+    <value>223</value>
+  </data>
+  <data name="LB_khachdangthue.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
   </data>
-  <data name="&gt;&gt;BTN_lichsu.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="numericUpDownExt5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>375, 30</value>
   </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>PN_hienthi</value>
+  <data name="label17.TabIndex" type="System.Int32, mscorlib">
+    <value>174</value>
   </data>
   <data name="&gt;&gt;BTN_lichsu.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -20320,17 +20311,17 @@
   <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 781</value>
   </data>
-  <data name="TXB_NSA.Location" type="System.Drawing.Point, System.Drawing">
-    <value>970, 316</value>
+  <data name="&gt;&gt;numericUpDownExt5.Name" xml:space="preserve">
+    <value>numericUpDownExt5</value>
   </data>
   <data name="NUD_mucphiql.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
   </data>
+  <data name="&gt;&gt;LB_khachdangthue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="textBox4.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
-  </data>
-  <data name="BTN_chung.TabIndex" type="System.Int32, mscorlib">
-    <value>213</value>
   </data>
   <data name="BTN_lichsu.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 40</value>
@@ -20340,6 +20331,9 @@
   </data>
   <data name="&gt;&gt;numericUpDownExt4.Type" xml:space="preserve">
     <value>Syncfusion.Windows.Forms.Tools.NumericUpDownExt, Syncfusion.Tools.Windows, Version=25.1462.39.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>15</value>
@@ -20371,16 +20365,16 @@
   <data name="BTN_chung.Text" xml:space="preserve">
     <value>Chung</value>
   </data>
-  <data name="NUD_vitritang.TabIndex" type="System.Int32, mscorlib">
-    <value>223</value>
+  <data name="BTN_lichsu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
   </data>
   <data name="NUD_vitritang.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
+  <data name="&gt;&gt;LB_hinhanhcanho.Name" xml:space="preserve">
+    <value>LB_hinhanhcanho</value>
   </data>
-  <data name="&gt;&gt;label21.Parent" xml:space="preserve">
+  <data name="&gt;&gt;NUD_thangmay.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
   </data>
   <data name="NUD_phongngu.Location" type="System.Drawing.Point, System.Drawing">
@@ -20401,11 +20395,14 @@
   <data name="LB_phongngu.Text" xml:space="preserve">
     <value>Số lượng phòng ngủ</value>
   </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
   <data name="label9.TabIndex" type="System.Int32, mscorlib">
     <value>172</value>
   </data>
-  <data name="&gt;&gt;BTN_chung.Name" xml:space="preserve">
-    <value>BTN_chung</value>
+  <data name="panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
   </data>
   <data name="LB_phongngu.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -20421,6 +20418,9 @@
   </data>
   <data name="BTN_uploadanh.Location" type="System.Drawing.Point, System.Drawing">
     <value>244, 568</value>
+  </data>
+  <data name="TXB_GSA.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -20543,8 +20543,8 @@
   <data name="&gt;&gt;BTN_thoat.Type" xml:space="preserve">
     <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="&gt;&gt;BTN_uploadanh.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="BTN_chung.TabIndex" type="System.Int32, mscorlib">
+    <value>213</value>
   </data>
   <data name="&gt;&gt;label12.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -20555,14 +20555,14 @@
   <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
     <value>650, 38</value>
   </data>
-  <data name="TXB_GSA.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;label19.Parent" xml:space="preserve">
+    <value>PN_hienthi</value>
   </data>
   <data name="&gt;&gt;LB_phongngu.Name" xml:space="preserve">
     <value>LB_phongngu</value>
   </data>
-  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1, 838</value>
+  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="&gt;&gt;NUD_thangmay.Type" xml:space="preserve">
     <value>Syncfusion.Windows.Forms.Tools.NumericUpDownExt, Syncfusion.Tools.Windows, Version=25.1462.39.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
@@ -20570,8 +20570,8 @@
   <data name="LB_phongngu.Location" type="System.Drawing.Point, System.Drawing">
     <value>705, 185</value>
   </data>
-  <data name="label21.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 22</value>
+  <data name="numericUpDownExt4.TabIndex" type="System.Int32, mscorlib">
+    <value>171</value>
   </data>
   <data name="&gt;&gt;label16.Name" xml:space="preserve">
     <value>label16</value>
@@ -20579,8 +20579,8 @@
   <data name="label12.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;numericUpDownExt6.Name" xml:space="preserve">
-    <value>numericUpDownExt6</value>
+  <data name="TXB_NSA.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="panel6.TabIndex" type="System.Int32, mscorlib">
     <value>223</value>
@@ -20606,20 +20606,20 @@
   <data name="&gt;&gt;numericUpDownExt5.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="&gt;&gt;PN_hienthi.Name" xml:space="preserve">
+  <data name="&gt;&gt;label21.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
   </data>
-  <data name="NUD_thanhtoan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>970, 451</value>
+  <data name="&gt;&gt;LB_phongngu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label14.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="textBox4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
   </data>
-  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="&gt;&gt;LB_khachdangthue.Parent" xml:space="preserve">
+    <value>PN_hienthi</value>
   </data>
-  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;TXB_khachdangthue.ZOrder" xml:space="preserve">
+    <value>22</value>
   </data>
   <data name="&gt;&gt;label20.Name" xml:space="preserve">
     <value>label20</value>
@@ -20633,8 +20633,8 @@
   <data name="LB_hinhanhcanho.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
+  <data name="label19.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="numericUpDownExt4.Location" type="System.Drawing.Point, System.Drawing">
     <value>320, 149</value>
@@ -20645,8 +20645,8 @@
   <data name="&gt;&gt;textBox3.Name" xml:space="preserve">
     <value>textBox3</value>
   </data>
-  <data name="&gt;&gt;label15.Name" xml:space="preserve">
-    <value>label15</value>
+  <data name="&gt;&gt;NUD_mucphiql.Parent" xml:space="preserve">
+    <value>PN_hienthi</value>
   </data>
   <data name="&gt;&gt;label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -20657,8 +20657,8 @@
   <data name="&gt;&gt;label2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label22.Text" xml:space="preserve">
-    <value>Vị trí tầng</value>
+  <data name="&gt;&gt;TXB_macanho.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="TXB_GSA.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
@@ -20670,6 +20670,6 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>vi</value>
+    <value>en</value>
   </metadata>
 </root>

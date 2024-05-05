@@ -733,6 +733,9 @@
     <EmbeddedResource Include="ThemHoaDonHangThang.resx">
       <DependentUpon>ThemHoaDonHangThang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThemHoaDonHangThang.vi.resx">
+      <DependentUpon>ThemHoaDonHangThang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThemNhom.en.resx">
       <DependentUpon>ThemNhom.cs</DependentUpon>
     </EmbeddedResource>

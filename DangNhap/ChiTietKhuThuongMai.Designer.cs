@@ -66,12 +66,14 @@
             this.BTN_uploadanh = new Guna.UI.WinForms.GunaGradientButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.numericUpDownExt4 = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
             this.label16 = new System.Windows.Forms.Label();
             this.numericUpDownExt5 = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
             this.label17 = new System.Windows.Forms.Label();
             this.numericUpDownExt6 = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
+            this.PB_hinhcanho = new System.Windows.Forms.PictureBox();
             this.TXB_macanho = new System.Windows.Forms.TextBox();
             this.LB_khachdangthue = new System.Windows.Forms.Label();
             this.TXB_khachdangthue = new System.Windows.Forms.TextBox();
@@ -80,8 +82,6 @@
             this.LB_ttktm = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.BTN_thoat = new Guna.UI.WinForms.GunaGradientButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.PB_hinhcanho = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_thangmay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_toilet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_phongngu)).BeginInit();
@@ -90,10 +90,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.NUD_vitritang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_thanhtoan)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_hinhcanho)).BeginInit();
             this.SuspendLayout();
             // 
@@ -458,6 +458,12 @@
             this.panel1.Controls.Add(this.numericUpDownExt6);
             this.panel1.Name = "panel1";
             // 
+            // pictureBox2
+            // 
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
             // textBox4
             // 
             resources.ApplyResources(this.textBox4, "textBox4");
@@ -500,6 +506,12 @@
             this.numericUpDownExt6.BeforeTouchSize = new System.Drawing.Size(375, 30);
             this.numericUpDownExt6.ForeColor = System.Drawing.Color.White;
             this.numericUpDownExt6.Name = "numericUpDownExt6";
+            // 
+            // PB_hinhcanho
+            // 
+            resources.ApplyResources(this.PB_hinhcanho, "PB_hinhcanho");
+            this.PB_hinhcanho.Name = "PB_hinhcanho";
+            this.PB_hinhcanho.TabStop = false;
             // 
             // TXB_macanho
             // 
@@ -571,18 +583,6 @@
             this.BTN_thoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_thoat.Click += new System.EventHandler(this.BTN_thoat_Click);
             // 
-            // pictureBox2
-            // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            // 
-            // PB_hinhcanho
-            // 
-            resources.ApplyResources(this.PB_hinhcanho, "PB_hinhcanho");
-            this.PB_hinhcanho.Name = "PB_hinhcanho";
-            this.PB_hinhcanho.TabStop = false;
-            // 
             // ChiTietKhuThuongMai
             // 
             resources.ApplyResources(this, "$this");
@@ -617,10 +617,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.NUD_thanhtoan)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_hinhcanho)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
