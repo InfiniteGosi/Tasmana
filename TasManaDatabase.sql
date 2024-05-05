@@ -113,6 +113,7 @@ CREATE TABLE CEO
   FOREIGN KEY (maNhanVien) REFERENCES nhanVien(maNhanVien)
 );
 
+
 CREATE TABLE QuanLy
 (
   maNhanVien VARCHAR(10) NOT NULL,
@@ -1335,6 +1336,7 @@ BEGIN
     );
 END
 GO
+
 
 
 CREATE PROCEDURE [dbo].[SuaNguoiUyQuyen]

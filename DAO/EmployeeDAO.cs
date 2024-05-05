@@ -68,5 +68,10 @@ namespace DAO
             int result = DataProvider.Instance.ExecuteStoredProcedure("EditEmployeeGroup", parameters);
             return result > 0;
         }
+        public bool AddCEO(string maNhanVien)
+        {
+            string query = $"insert into CEO values('{maNhanVien}')";
+            return DataProvider.Instance.ExecuteNonQuery(query) > 0;
+        }
     }
 }
