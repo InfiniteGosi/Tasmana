@@ -92,11 +92,25 @@ namespace DangNhap
                 }
 
                 // Thiết lập tiêu đề cho các cột
-                string[] headers = { "Mã căn hộ", "Diện tích GSA", "Diện tích NSA", "Vị trí tầng", "Số lượng phòng ngủ", "Số lượng toilet", "Số lượng thẻ thang máy", "Mức phí quản lý hàng tháng", "Tình trạng giao dịch hiện tại", "Mã cư dân" };
-                for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                //Tiếng Việt
+                if(LB_loai.Text == "Chọn loại bất động sản")
                 {
-                    columns[i].HeaderText = headers[i];
+                    string[] headers = { "Mã căn hộ", "Diện tích GSA", "Diện tích NSA", "Vị trí tầng", "Số lượng phòng ngủ", "Số lượng toilet", "Số lượng thẻ thang máy", "Mức phí quản lý hàng tháng", "Tình trạng giao dịch hiện tại", "Mã cư dân" };
+                    for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                    {
+                        columns[i].HeaderText = headers[i];
+                    }
                 }
+                //Tiếng Anh
+                else
+                {
+                    string[] headers = { "Apartment ID", "GSA area", "NSA area", "Floor", "No. of bedrooms", "No. of toilets", "No. of elevator cards", "Monthly management fee", "Payment status", "Resident ID" };
+                    for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                    {
+                        columns[i].HeaderText = headers[i];
+                    }
+                }
+
             }
             GridDynamicFilter dynamicFilter = new GridDynamicFilter();
             dynamicFilter.WireGrid(GGC_canho);
@@ -146,11 +160,25 @@ namespace DangNhap
                 }
 
                 // Thiết lập tiêu đề cho các cột
-                string[] headers = { "Mã khu thương mại", "Mã khách đang thuê", "Diện tích GSA", "Diện tích NSA", "Vị trí tầng", "Số lượng phòng ngủ", "Số lượng toilet", "Số lượng thẻ thang máy", "Mức phí quản lý hàng tháng"};
-                for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                //Tiếng Việt
+                if(LB_loai.Text == "Chọn loại bất động sản")
                 {
-                    columns[i].HeaderText = headers[i];
+                    string[] headers = { "Mã khu thương mại", "Mã khách đang thuê", "Diện tích GSA", "Diện tích NSA", "Vị trí tầng", "Số lượng phòng ngủ", "Số lượng toilet", "Số lượng thẻ thang máy", "Mức phí quản lý hàng tháng"};
+                    for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                    {
+                        columns[i].HeaderText = headers[i];
+                    }
                 }
+                //Tiếng Anh
+                else
+                {
+                    string[] headers = { "Mall ID", "Hiring resident ID", "GSA area", "NSA area", "Floor",  "No. of bedrooms", "No. of toilets", "No. of elevator cards", "Monthly management fee"};
+                    for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                    {
+                        columns[i].HeaderText = headers[i];
+                    }
+                }
+
             }
             GridDynamicFilter dynamicFilter = new GridDynamicFilter();
             dynamicFilter.WireGrid(GGC_canho);

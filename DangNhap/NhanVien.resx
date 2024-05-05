@@ -153,6 +153,9 @@
   <data name="GGC_danhsachnv.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <data name="GGC_danhsachnv.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
   <data name="GGC_danhsachnv.Location" type="System.Drawing.Point, System.Drawing">
     <value>65, 88</value>
   </data>

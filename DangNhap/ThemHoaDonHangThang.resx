@@ -117,56 +117,542 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>860, 678</value>
-  </data>
-  <data name="LB_MaCanHo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 22</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="LB_MaCanHo.AutoSize" type="System.Boolean, mscorlib">
+  <data name="LB_BillHangThang.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="LB_BillHangThang.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 16.2pt, style=Bold</value>
+  </data>
+  <data name="LB_BillHangThang.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="LB_BillHangThang.Size" type="System.Drawing.Size, System.Drawing">
+    <value>436, 32</value>
+  </data>
+  <data name="LB_BillHangThang.TabIndex" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="LB_BillHangThang.Text" xml:space="preserve">
+    <value>THÊM HÓA ĐƠN HÀNG THÁNG</value>
+  </data>
+  <data name="&gt;&gt;LB_BillHangThang.Name" xml:space="preserve">
+    <value>LB_BillHangThang</value>
+  </data>
+  <data name="&gt;&gt;LB_BillHangThang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LB_BillHangThang.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LB_BillHangThang.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="panel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
+  <data name="BTN_ok.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
-  <data name="TXB_soNuocHangThang.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
+  <data name="BTN_ok.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
   </data>
-  <data name="&gt;&gt;TXB_soNuocHangThang.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="BTN_ok.Location" type="System.Drawing.Point, System.Drawing">
+    <value>719, 631</value>
+  </data>
+  <data name="BTN_ok.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 35</value>
+  </data>
+  <data name="BTN_ok.TabIndex" type="System.Int32, mscorlib">
+    <value>169</value>
+  </data>
+  <data name="BTN_ok.Text" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="&gt;&gt;BTN_ok.Name" xml:space="preserve">
+    <value>BTN_ok</value>
+  </data>
+  <data name="&gt;&gt;BTN_ok.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
   <data name="&gt;&gt;BTN_ok.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
-    <value>245</value>
+  <data name="&gt;&gt;BTN_ok.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;TXB_soDienHangThang.Name" xml:space="preserve">
-    <value>TXB_soDienHangThang</value>
+  <data name="LB_MaCanHo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="TXB_soDienHangThang.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="LB_MaCanHo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="LB_MaCanHo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 41</value>
+  </data>
+  <data name="LB_MaCanHo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 22</value>
+  </data>
+  <data name="LB_MaCanHo.TabIndex" type="System.Int32, mscorlib">
+    <value>170</value>
+  </data>
+  <data name="LB_MaCanHo.Text" xml:space="preserve">
+    <value>Mã căn hộ</value>
+  </data>
+  <data name="&gt;&gt;LB_MaCanHo.Name" xml:space="preserve">
+    <value>LB_MaCanHo</value>
+  </data>
+  <data name="&gt;&gt;LB_MaCanHo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LB_MaCanHo.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;LB_MaCanHo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CBB_MaCanHo.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="CBB_MaCanHo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="CBB_MaCanHo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 37</value>
+  </data>
+  <data name="CBB_MaCanHo.Size" type="System.Drawing.Size, System.Drawing">
     <value>419, 30</value>
   </data>
-  <data name="&gt;&gt;TXB_phiQuanLy.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;LB_soNuocHangThang.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="CBB_MaCanHo.TabIndex" type="System.Int32, mscorlib">
+    <value>209</value>
   </data>
   <data name="&gt;&gt;CBB_MaCanHo.Name" xml:space="preserve">
     <value>CBB_MaCanHo</value>
   </data>
-  <data name="&gt;&gt;BTN_ok.Type" xml:space="preserve">
-    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  <data name="&gt;&gt;CBB_MaCanHo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CBB_MaCanHo.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;CBB_MaCanHo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="LB_soNuocHangThang.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LB_soNuocHangThang.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="LB_soNuocHangThang.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 211</value>
+  </data>
+  <data name="LB_soNuocHangThang.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 22</value>
+  </data>
+  <data name="LB_soNuocHangThang.TabIndex" type="System.Int32, mscorlib">
+    <value>210</value>
+  </data>
+  <data name="LB_soNuocHangThang.Text" xml:space="preserve">
+    <value>Chỉ số nước hàng tháng</value>
+  </data>
+  <data name="&gt;&gt;LB_soNuocHangThang.Name" xml:space="preserve">
+    <value>LB_soNuocHangThang</value>
+  </data>
+  <data name="&gt;&gt;LB_soNuocHangThang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LB_soNuocHangThang.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;LB_soNuocHangThang.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TXB_soNuocHangThang.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="TXB_soNuocHangThang.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 207</value>
+  </data>
+  <data name="TXB_soNuocHangThang.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TXB_soNuocHangThang.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 30</value>
+  </data>
+  <data name="TXB_soNuocHangThang.TabIndex" type="System.Int32, mscorlib">
+    <value>211</value>
+  </data>
+  <data name="&gt;&gt;TXB_soNuocHangThang.Name" xml:space="preserve">
+    <value>TXB_soNuocHangThang</value>
+  </data>
+  <data name="&gt;&gt;TXB_soNuocHangThang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TXB_soNuocHangThang.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;TXB_soNuocHangThang.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="LB_soDienHangThang.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LB_soDienHangThang.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="LB_soDienHangThang.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 126</value>
+  </data>
+  <data name="LB_soDienHangThang.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 22</value>
+  </data>
+  <data name="LB_soDienHangThang.TabIndex" type="System.Int32, mscorlib">
+    <value>212</value>
+  </data>
+  <data name="LB_soDienHangThang.Text" xml:space="preserve">
+    <value>Số điện sử dụng hàng tháng</value>
+  </data>
+  <data name="&gt;&gt;LB_soDienHangThang.Name" xml:space="preserve">
+    <value>LB_soDienHangThang</value>
+  </data>
+  <data name="&gt;&gt;LB_soDienHangThang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LB_soDienHangThang.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;LB_soDienHangThang.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="TXB_soDienHangThang.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="TXB_soDienHangThang.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 122</value>
+  </data>
+  <data name="TXB_soDienHangThang.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TXB_soDienHangThang.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 30</value>
+  </data>
+  <data name="TXB_soDienHangThang.TabIndex" type="System.Int32, mscorlib">
+    <value>213</value>
+  </data>
+  <data name="&gt;&gt;TXB_soDienHangThang.Name" xml:space="preserve">
+    <value>TXB_soDienHangThang</value>
+  </data>
+  <data name="&gt;&gt;TXB_soDienHangThang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TXB_soDienHangThang.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;TXB_soDienHangThang.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="DTP_ngay.CustomFormat" xml:space="preserve">
+    <value>yyyy-MM-dd</value>
+  </data>
+  <data name="DTP_ngay.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="DTP_ngay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 377</value>
+  </data>
+  <data name="DTP_ngay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 30</value>
+  </data>
+  <data name="DTP_ngay.TabIndex" type="System.Int32, mscorlib">
+    <value>214</value>
+  </data>
+  <data name="&gt;&gt;DTP_ngay.Name" xml:space="preserve">
+    <value>DTP_ngay</value>
+  </data>
+  <data name="&gt;&gt;DTP_ngay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DTP_ngay.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;DTP_ngay.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="LB_NgayGhi.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LB_NgayGhi.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="LB_NgayGhi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 381</value>
+  </data>
+  <data name="LB_NgayGhi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 22</value>
+  </data>
+  <data name="LB_NgayGhi.TabIndex" type="System.Int32, mscorlib">
+    <value>215</value>
+  </data>
+  <data name="LB_NgayGhi.Text" xml:space="preserve">
+    <value>Ngày ghi</value>
+  </data>
+  <data name="&gt;&gt;LB_NgayGhi.Name" xml:space="preserve">
+    <value>LB_NgayGhi</value>
+  </data>
+  <data name="&gt;&gt;LB_NgayGhi.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LB_NgayGhi.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;LB_NgayGhi.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="LB_tinhTrangThanhToan.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LB_tinhTrangThanhToan.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="LB_tinhTrangThanhToan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 466</value>
+  </data>
+  <data name="LB_tinhTrangThanhToan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 22</value>
+  </data>
+  <data name="LB_tinhTrangThanhToan.TabIndex" type="System.Int32, mscorlib">
+    <value>216</value>
+  </data>
+  <data name="LB_tinhTrangThanhToan.Text" xml:space="preserve">
+    <value>Tình trạng thanh toán</value>
+  </data>
+  <data name="&gt;&gt;LB_tinhTrangThanhToan.Name" xml:space="preserve">
+    <value>LB_tinhTrangThanhToan</value>
+  </data>
+  <data name="&gt;&gt;LB_tinhTrangThanhToan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LB_tinhTrangThanhToan.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;LB_tinhTrangThanhToan.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="CBB_tinhTrangThanhToan.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="CBB_tinhTrangThanhToan.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="CBB_tinhTrangThanhToan.Items" xml:space="preserve">
+    <value>Chưa thanh toán</value>
+  </data>
+  <data name="CBB_tinhTrangThanhToan.Items1" xml:space="preserve">
+    <value>Đã thanh toán</value>
+  </data>
+  <data name="CBB_tinhTrangThanhToan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 462</value>
+  </data>
+  <data name="CBB_tinhTrangThanhToan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 30</value>
+  </data>
+  <data name="CBB_tinhTrangThanhToan.TabIndex" type="System.Int32, mscorlib">
+    <value>217</value>
+  </data>
+  <data name="&gt;&gt;CBB_tinhTrangThanhToan.Name" xml:space="preserve">
+    <value>CBB_tinhTrangThanhToan</value>
+  </data>
+  <data name="&gt;&gt;CBB_tinhTrangThanhToan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CBB_tinhTrangThanhToan.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;CBB_tinhTrangThanhToan.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="LB_phiQuanLy.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LB_phiQuanLy.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="LB_phiQuanLy.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 296</value>
+  </data>
+  <data name="LB_phiQuanLy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 22</value>
+  </data>
+  <data name="LB_phiQuanLy.TabIndex" type="System.Int32, mscorlib">
+    <value>218</value>
+  </data>
+  <data name="LB_phiQuanLy.Text" xml:space="preserve">
+    <value>Phí quản lý hàng tháng</value>
+  </data>
+  <data name="&gt;&gt;LB_phiQuanLy.Name" xml:space="preserve">
+    <value>LB_phiQuanLy</value>
+  </data>
+  <data name="&gt;&gt;LB_phiQuanLy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LB_phiQuanLy.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;LB_phiQuanLy.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="TXB_phiQuanLy.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="TXB_phiQuanLy.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 292</value>
+  </data>
+  <data name="TXB_phiQuanLy.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TXB_phiQuanLy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>419, 30</value>
+  </data>
+  <data name="TXB_phiQuanLy.TabIndex" type="System.Int32, mscorlib">
+    <value>219</value>
+  </data>
+  <data name="&gt;&gt;TXB_phiQuanLy.Name" xml:space="preserve">
+    <value>TXB_phiQuanLy</value>
+  </data>
+  <data name="&gt;&gt;TXB_phiQuanLy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TXB_phiQuanLy.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;TXB_phiQuanLy.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>859, 1</value>
+  </data>
+  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1, 676</value>
+  </data>
+  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
+    <value>246</value>
+  </data>
+  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 1</value>
+  </data>
+  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1, 676</value>
+  </data>
+  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
+    <value>245</value>
+  </data>
+  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>860, 1</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>244</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 677</value>
+  </data>
+  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>860, 1</value>
+  </data>
+  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
+    <value>247</value>
+  </data>
+  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 64</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>858, 550</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>249</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="BTN_thoat.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="BTN_thoat.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 7.8pt, style=Bold</value>
   </data>
   <data name="BTN_thoat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -280,532 +766,46 @@
         7/jjjj/s+OWOH+l4K7s/85n/AwcgzALB8zWpAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="TXB_phiQuanLy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>419, 30</value>
-  </data>
-  <data name="DTP_ngay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 377</value>
-  </data>
-  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;LB_tinhTrangThanhToan.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1, 676</value>
-  </data>
-  <data name="CBB_MaCanHo.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="LB_tinhTrangThanhToan.Text" xml:space="preserve">
-    <value>Tình trạng thanh toán</value>
-  </data>
-  <data name="LB_tinhTrangThanhToan.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
-  </data>
-  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>860, 1</value>
-  </data>
-  <data name="TXB_soNuocHangThang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>419, 30</value>
-  </data>
-  <data name="&gt;&gt;BTN_thoat.Name" xml:space="preserve">
-    <value>BTN_thoat</value>
-  </data>
-  <data name="LB_soNuocHangThang.Text" xml:space="preserve">
-    <value>Chỉ số nước hàng tháng</value>
-  </data>
-  <data name="TXB_soNuocHangThang.TabIndex" type="System.Int32, mscorlib">
-    <value>211</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;DTP_ngay.Name" xml:space="preserve">
-    <value>DTP_ngay</value>
-  </data>
-  <data name="&gt;&gt;LB_NgayGhi.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;TXB_soNuocHangThang.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;LB_NgayGhi.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 1</value>
-  </data>
-  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>859, 1</value>
-  </data>
-  <data name="&gt;&gt;CBB_MaCanHo.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;CBB_MaCanHo.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;CBB_tinhTrangThanhToan.Name" xml:space="preserve">
-    <value>CBB_tinhTrangThanhToan</value>
-  </data>
-  <data name="DTP_ngay.CustomFormat" xml:space="preserve">
-    <value>yyyy-MM-dd</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 64</value>
-  </data>
-  <data name="LB_soDienHangThang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>223, 22</value>
-  </data>
-  <data name="&gt;&gt;TXB_soDienHangThang.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="LB_soDienHangThang.Text" xml:space="preserve">
-    <value>Số điện sử dụng hàng tháng</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>ThemHoaDonHangThang</value>
-  </data>
-  <data name="&gt;&gt;LB_NgayGhi.Name" xml:space="preserve">
-    <value>LB_NgayGhi</value>
-  </data>
-  <data name="&gt;&gt;TXB_soNuocHangThang.Name" xml:space="preserve">
-    <value>TXB_soNuocHangThang</value>
-  </data>
-  <data name="TXB_phiQuanLy.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 292</value>
-  </data>
-  <data name="LB_soNuocHangThang.TabIndex" type="System.Int32, mscorlib">
-    <value>210</value>
-  </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="BTN_ok.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 35</value>
-  </data>
-  <data name="&gt;&gt;DTP_ngay.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="LB_soDienHangThang.TabIndex" type="System.Int32, mscorlib">
-    <value>212</value>
-  </data>
-  <data name="&gt;&gt;LB_MaCanHo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="CBB_MaCanHo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 37</value>
-  </data>
-  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LB_NgayGhi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 22</value>
-  </data>
-  <data name="LB_tinhTrangThanhToan.TabIndex" type="System.Int32, mscorlib">
-    <value>216</value>
-  </data>
-  <data name="LB_MaCanHo.Text" xml:space="preserve">
-    <value>Mã căn hộ</value>
-  </data>
-  <data name="TXB_soDienHangThang.TabIndex" type="System.Int32, mscorlib">
-    <value>213</value>
-  </data>
-  <data name="TXB_soNuocHangThang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 207</value>
-  </data>
-  <data name="&gt;&gt;LB_MaCanHo.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="LB_soNuocHangThang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 22</value>
-  </data>
-  <data name="&gt;&gt;TXB_soDienHangThang.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;LB_tinhTrangThanhToan.Name" xml:space="preserve">
-    <value>LB_tinhTrangThanhToan</value>
-  </data>
-  <data name="&gt;&gt;LB_soNuocHangThang.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="CBB_tinhTrangThanhToan.Items1" xml:space="preserve">
-    <value>Đã thanh toán</value>
-  </data>
-  <data name="BTN_ok.Location" type="System.Drawing.Point, System.Drawing">
-    <value>719, 631</value>
-  </data>
-  <data name="&gt;&gt;LB_NgayGhi.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LB_BillHangThang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>436, 32</value>
-  </data>
-  <data name="LB_soDienHangThang.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
-  </data>
-  <data name="LB_phiQuanLy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 22</value>
-  </data>
-  <data name="&gt;&gt;LB_BillHangThang.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>ThemHoaDonHangThang</value>
-  </data>
-  <data name="LB_MaCanHo.TabIndex" type="System.Int32, mscorlib">
-    <value>170</value>
-  </data>
-  <data name="&gt;&gt;BTN_thoat.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;LB_soDienHangThang.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="CBB_tinhTrangThanhToan.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
-  </data>
-  <data name="&gt;&gt;LB_soDienHangThang.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="CBB_MaCanHo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>419, 30</value>
-  </data>
-  <data name="CBB_tinhTrangThanhToan.Items" xml:space="preserve">
-    <value>Chưa thanh toán</value>
-  </data>
-  <data name="&gt;&gt;LB_phiQuanLy.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="BTN_ok.Text" xml:space="preserve">
-    <value>Thêm</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
-  </data>
-  <data name="CBB_tinhTrangThanhToan.TabIndex" type="System.Int32, mscorlib">
-    <value>217</value>
-  </data>
-  <data name="LB_phiQuanLy.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LB_tinhTrangThanhToan.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 22</value>
-  </data>
-  <data name="LB_tinhTrangThanhToan.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;TXB_phiQuanLy.Name" xml:space="preserve">
-    <value>TXB_phiQuanLy</value>
-  </data>
-  <data name="&gt;&gt;TXB_soNuocHangThang.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="TXB_soNuocHangThang.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;LB_soDienHangThang.Name" xml:space="preserve">
-    <value>LB_soDienHangThang</value>
-  </data>
-  <data name="CBB_tinhTrangThanhToan.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="LB_soNuocHangThang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 211</value>
-  </data>
-  <data name="LB_phiQuanLy.Text" xml:space="preserve">
-    <value>Phí quản lý hàng tháng</value>
-  </data>
-  <data name="&gt;&gt;LB_MaCanHo.Name" xml:space="preserve">
-    <value>LB_MaCanHo</value>
-  </data>
-  <data name="&gt;&gt;CBB_tinhTrangThanhToan.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>249</value>
-  </data>
-  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="&gt;&gt;LB_tinhTrangThanhToan.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TXB_phiQuanLy.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="LB_soDienHangThang.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="TXB_soDienHangThang.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
-  </data>
-  <data name="&gt;&gt;CBB_tinhTrangThanhToan.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="BTN_ok.TabIndex" type="System.Int32, mscorlib">
-    <value>169</value>
-  </data>
-  <data name="LB_NgayGhi.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
-  </data>
-  <data name="&gt;&gt;BTN_thoat.Type" xml:space="preserve">
-    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="DTP_ngay.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
-  </data>
-  <data name="&gt;&gt;LB_soNuocHangThang.Name" xml:space="preserve">
-    <value>LB_soNuocHangThang</value>
-  </data>
-  <data name="LB_BillHangThang.Text" xml:space="preserve">
-    <value>THÊM HÓA ĐƠN HÀNG THÁNG</value>
-  </data>
   <data name="BTN_thoat.Location" type="System.Drawing.Point, System.Drawing">
     <value>799, 1</value>
-  </data>
-  <data name="LB_soDienHangThang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 126</value>
-  </data>
-  <data name="&gt;&gt;TXB_phiQuanLy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LB_BillHangThang.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 677</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>858, 550</value>
-  </data>
-  <data name="&gt;&gt;LB_phiQuanLy.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1, 676</value>
-  </data>
-  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>244</value>
-  </data>
-  <data name="BTN_ok.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 9pt</value>
-  </data>
-  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="LB_BillHangThang.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 16.2pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;LB_phiQuanLy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LB_tinhTrangThanhToan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 466</value>
-  </data>
-  <data name="LB_BillHangThang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 16</value>
-  </data>
-  <data name="DTP_ngay.TabIndex" type="System.Int32, mscorlib">
-    <value>214</value>
-  </data>
-  <data name="LB_phiQuanLy.TabIndex" type="System.Int32, mscorlib">
-    <value>218</value>
-  </data>
-  <data name="LB_NgayGhi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 381</value>
-  </data>
-  <data name="&gt;&gt;LB_MaCanHo.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TXB_soDienHangThang.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="TXB_soDienHangThang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 122</value>
-  </data>
-  <data name="&gt;&gt;LB_BillHangThang.Name" xml:space="preserve">
-    <value>LB_BillHangThang</value>
-  </data>
-  <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="CBB_tinhTrangThanhToan.Size" type="System.Drawing.Size, System.Drawing">
-    <value>419, 30</value>
-  </data>
-  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="CBB_MaCanHo.TabIndex" type="System.Int32, mscorlib">
-    <value>209</value>
-  </data>
-  <data name="BTN_thoat.TabIndex" type="System.Int32, mscorlib">
-    <value>248</value>
-  </data>
-  <data name="LB_NgayGhi.TabIndex" type="System.Int32, mscorlib">
-    <value>215</value>
-  </data>
-  <data name="CBB_tinhTrangThanhToan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 462</value>
-  </data>
-  <data name="&gt;&gt;BTN_ok.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="LB_phiQuanLy.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 296</value>
-  </data>
-  <data name="LB_NgayGhi.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="BTN_thoat.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 30</value>
   </data>
-  <data name="BTN_thoat.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="BTN_thoat.TabIndex" type="System.Int32, mscorlib">
+    <value>248</value>
   </data>
-  <data name="&gt;&gt;LB_BillHangThang.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;BTN_thoat.Name" xml:space="preserve">
+    <value>BTN_thoat</value>
   </data>
-  <data name="LB_soNuocHangThang.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
+  <data name="&gt;&gt;BTN_thoat.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="&gt;&gt;LB_phiQuanLy.Name" xml:space="preserve">
-    <value>LB_phiQuanLy</value>
-  </data>
-  <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="LB_NgayGhi.Text" xml:space="preserve">
-    <value>Ngày ghi</value>
-  </data>
-  <data name="&gt;&gt;LB_soDienHangThang.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="BTN_ok.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="&gt;&gt;DTP_ngay.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="BTN_thoat.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 7.8pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;CBB_tinhTrangThanhToan.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="DTP_ngay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>419, 30</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;BTN_thoat.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;BTN_thoat.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;LB_tinhTrangThanhToan.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
-    <value>247</value>
-  </data>
-  <data name="LB_soNuocHangThang.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="TXB_phiQuanLy.TabIndex" type="System.Int32, mscorlib">
-    <value>219</value>
-  </data>
-  <data name="TXB_phiQuanLy.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
-  </data>
-  <data name="LB_MaCanHo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 41</value>
-  </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>860, 1</value>
-  </data>
-  <data name="LB_MaCanHo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
-  </data>
-  <data name="LB_phiQuanLy.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
-  </data>
-  <data name="&gt;&gt;CBB_MaCanHo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;BTN_ok.Name" xml:space="preserve">
-    <value>BTN_ok</value>
-  </data>
-  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="CBB_MaCanHo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
-  </data>
-  <data name="&gt;&gt;TXB_soDienHangThang.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LB_soNuocHangThang.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;DTP_ngay.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
-    <value>246</value>
-  </data>
-  <data name="LB_BillHangThang.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="TXB_phiQuanLy.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LB_BillHangThang.TabIndex" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>vi</value>
-  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>860, 678</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>ThemHoaDonHangThang</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ThemHoaDonHangThang</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

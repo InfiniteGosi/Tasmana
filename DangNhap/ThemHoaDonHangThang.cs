@@ -66,62 +66,128 @@ namespace DangNhap
         }
         private void BTN_ok_Click(object sender, EventArgs e)
         {
-            if(CBB_MaCanHo.SelectedIndex == -1) 
+            //Tiếng Việt
+            if(LB_BillHangThang.Text == "THÊM HÓA ĐƠN HÀNG THÁNG")
             {
-                MessageBox.Show("Vui lòng chọn mã căn hộ");
-                CBB_MaCanHo.Focus();
-                return;
+                if(CBB_MaCanHo.SelectedIndex == -1) 
+                {
+                    MessageBox.Show("Vui lòng chọn mã căn hộ");
+                    CBB_MaCanHo.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_soNuocHangThang.Text))
+                {
+                    MessageBox.Show("Vui lòng điền chỉ số nước sử dụng hàng tháng");
+                    TXB_soNuocHangThang.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_soDienHangThang.Text))
+                {
+                    MessageBox.Show("Vui lòng điền chỉ số điện sử dụng hàng tháng");
+                    TXB_soDienHangThang.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_phiQuanLy.Text)){
+                    MessageBox.Show("Vui lòng điền phí quản lý hàng tháng");
+                    TXB_phiQuanLy.Focus();
+                    return;
+                }
+                if(CBB_tinhTrangThanhToan.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Vui lòng chọn tình trạng thanh toán");
+                    CBB_tinhTrangThanhToan.Focus();
+                    return; 
+                }
+                if (!IsValidFloat(TXB_soNuocHangThang.Text))
+                {
+                    MessageBox.Show("Vui lòng điền chỉ số nước hợp lệ");
+                    TXB_soNuocHangThang.Focus();
+                    return;
+                }
+                if (!IsValidFloat(TXB_soDienHangThang.Text))
+                {
+                    MessageBox.Show("Vui lòng điền số điện sử dụng hợp lệ");
+                    TXB_soDienHangThang.Focus();
+                    return;
+                }
+                if (!IsValidInteger(TXB_phiQuanLy.Text))
+                {
+                    MessageBox.Show("Vui lòng điền phí quản lý hợp lệ");
+                    TXB_phiQuanLy.Focus();
+                    return;
+                }
+                if (ThemHoaDon())
+                {
+                    MessageBox.Show("Thêm thành công");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại");
+                }
             }
-            if (string.IsNullOrEmpty(TXB_soNuocHangThang.Text))
-            {
-                MessageBox.Show("Vui lòng điền chỉ số nước sử dụng hàng tháng");
-                TXB_soNuocHangThang.Focus();
-                return;
-            }
-            if (string.IsNullOrEmpty(TXB_soDienHangThang.Text))
-            {
-                MessageBox.Show("Vui lòng điền chỉ số điện sử dụng hàng tháng");
-                TXB_soDienHangThang.Focus();
-                return;
-            }
-            if (string.IsNullOrEmpty(TXB_phiQuanLy.Text)){
-                MessageBox.Show("Vui lòng điền phí quản lý hàng tháng");
-                TXB_phiQuanLy.Focus();
-                return;
-            }
-            if(CBB_tinhTrangThanhToan.SelectedIndex == -1)
-            {
-                MessageBox.Show("Vui lòng chọn tình trạng thanh toán");
-                CBB_tinhTrangThanhToan.Focus();
-                return; 
-            }
-            if (!IsValidFloat(TXB_soNuocHangThang.Text))
-            {
-                MessageBox.Show("Vui lòng điền chỉ số nước hợp lệ");
-                TXB_soNuocHangThang.Focus();
-                return;
-            }
-            if (!IsValidFloat(TXB_soDienHangThang.Text))
-            {
-                MessageBox.Show("Vui lòng điền số điện sử dụng hợp lệ");
-                TXB_soDienHangThang.Focus();
-                return;
-            }
-            if (!IsValidInteger(TXB_phiQuanLy.Text))
-            {
-                MessageBox.Show("Vui lòng điền phí quản lý hợp lệ");
-                TXB_phiQuanLy.Focus();
-                return;
-            }
-            if (ThemHoaDon())
-            {
-                MessageBox.Show("Thêm thành công");
-                this.Close();
-            }
+            //Tiếng Anh
             else
             {
-                MessageBox.Show("Thêm thất bại");
+                if (CBB_MaCanHo.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Please select \"Apartment ID\"");
+                    CBB_MaCanHo.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_soNuocHangThang.Text))
+                {
+                    MessageBox.Show("Please enter \"Monthly water number\"");
+                    TXB_soNuocHangThang.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_soDienHangThang.Text))
+                {
+                    MessageBox.Show("Please enter \"Monthly electricity number\"");
+                    TXB_soDienHangThang.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_phiQuanLy.Text))
+                {
+                    MessageBox.Show("Please enter \"Monthly management fee\"");
+                    TXB_phiQuanLy.Focus();
+                    return;
+                }
+                if (CBB_tinhTrangThanhToan.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Please select \"Payment status\"");
+                    CBB_tinhTrangThanhToan.Focus();
+                    return;
+                }
+                if (!IsValidFloat(TXB_soNuocHangThang.Text))
+                {
+                    MessageBox.Show("\"Monthly water number\" is invalid");
+                    TXB_soNuocHangThang.Focus();
+                    return;
+                }
+                if (!IsValidFloat(TXB_soDienHangThang.Text))
+                {
+                    MessageBox.Show("\"Monthly electricity number\" is invalid");
+                    TXB_soDienHangThang.Focus();
+                    return;
+                }
+                if (!IsValidInteger(TXB_phiQuanLy.Text))
+                {
+                    MessageBox.Show("\"Monthly management fee\" is invalid");
+                    TXB_phiQuanLy.Focus();
+                    return;
+                }
+                if (ThemHoaDon())
+                {
+                    MessageBox.Show("Added Successfully");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Added Failed");
+                }
             }
+
         }
 
         private void BTN_thoat_Click(object sender, EventArgs e)
