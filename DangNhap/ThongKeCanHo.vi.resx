@@ -124,13 +124,13 @@
   <data name="LB_ToiNgay.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="GGC_ThongKe.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <data name="LB_MucTieuThongKe.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="LB_DuLieuThongKe.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LB_TongHop.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="LB_ThoiGianTK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -162,7 +162,7 @@
 </value>
   </data>
   <data name="BTN_in.Location" type="System.Drawing.Point, System.Drawing">
-    <value>648, 705</value>
+    <value>260, 705</value>
   </data>
   <data name="BTN_in.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 37</value>
@@ -194,7 +194,7 @@
 </value>
   </data>
   <data name="BTN_PDF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>540, 705</value>
+    <value>152, 705</value>
   </data>
   <data name="BTN_PDF.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 37</value>
@@ -224,15 +224,12 @@
 </value>
   </data>
   <data name="BTN_excel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>432, 705</value>
+    <value>44, 705</value>
   </data>
   <data name="BTN_excel.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 37</value>
   </data>
   <data name="BTN_excel.Text" xml:space="preserve">
     <value>Excel</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
 </root>

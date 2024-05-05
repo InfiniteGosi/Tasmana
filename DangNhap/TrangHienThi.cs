@@ -86,7 +86,7 @@ namespace DangNhap
 
         private void BTN_cudan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new CuDan());
+            OpenChildForm(new CuDan(currentAccount));
             BTN_cudan.BackColor = Color.FromArgb(51, 53, 55);
             BTN_thongbao.BackColor = Color.Transparent;
             BTN_thongke.BackColor = Color.Transparent;
@@ -182,71 +182,71 @@ namespace DangNhap
             NTFIcon_ThongBaoCV.Visible = false;
             if (appTime < Constraint.NotifyTime)
                 return;
-            // Kiểm tra những công việc gần đến hạn nhưng chưa hoàn thành
-            int curUnfJob = 0;
-            string maNV = currentAccount.EmployeeId;
-            List<Job> tomorowJobs;
-            tomorowJobs = JobBLL.Instance.GetJobOfEmployeeByDate(maNV, tomorrowDay.Date.ToString("yyyy-MM-dd"));
-            foreach (Job job in tomorowJobs)
+            else if (appTime == Constraint.NotifyTime)
             {
-                if (!job.TrangThai.Equals("Hoàn thành")){
-                    curUnfJob++;
-                }
-            }
-            if (curUnfJob > 0 && soCongViec != curUnfJob)
-            {
-                soCongViec = tomorowJobs.Count;
-                NTFIcon_ThongBaoCV.Visible = true;
-                NTFIcon_ThongBaoCV.ShowBalloonTip(Constraint.NotifyTimeOut, "Thông báo công việc chưa hoàn thành", string.Format("Bạn có {0} công việc sắp đến hạn vào ngày mai", soCongViec), ToolTipIcon.Info);
-                // Reset apptime
-                appTime = 0;
-                return;
-            }
-
-            // Kiểm tra những công việc của NHÂN VIÊN chưa bắt đầu làm
-            // Chỉ thông báo cho nhân viên như yêu cầu 10
-            if (currentAccount.Level.Equals("CEO"))
-            {
-                List<Job> allJobs;
-                allJobs = JobBLL.Instance.GetAllJob();
-                int curAllJobs = 0; // số công việc chưa cập nhật tình trạng
-                foreach (Job job in allJobs)
+                // Kiểm tra những công việc gần đến hạn nhưng chưa hoàn thành
+                int curUnfJob = 0;
+                string maNV = currentAccount.EmployeeId;
+                List<Job> tomorowJobs;
+                tomorowJobs = JobBLL.Instance.GetJobOfEmployeeByDate(maNV, tomorrowDay.Date.ToString("yyyy-MM-dd"));
+                foreach (Job job in tomorowJobs)
                 {
-                    if(!job.TrangThai.Equals("Hoàn thành"))
+                    if (!job.TrangThai.Equals("Hoàn thành"))
                     {
-                        curAllJobs++;
+                        curUnfJob++;
                     }
                 }
-                if(curAllJobs > 0 && curAllJobs != AllUndoJob)
+                if (curUnfJob > 0 && soCongViec != curUnfJob)
                 {
-                    AllUndoJob = curAllJobs;
+                    soCongViec = tomorowJobs.Count;
                     NTFIcon_ThongBaoCV.Visible = true;
-                    NTFIcon_ThongBaoCV.ShowBalloonTip(Constraint.NotifyTimeOut, "Thông báo công việc chưa cập nhật của toàn bộ Nhân viên", string.Format("Có {0} công việc chưa được cập nhật tình trạng", curAllJobs), ToolTipIcon.Info);
+                    NTFIcon_ThongBaoCV.ShowBalloonTip(Constraint.NotifyTimeOut, "Thông báo công việc chưa hoàn thành", string.Format("Bạn có {0} công việc sắp đến hạn vào ngày mai", soCongViec), ToolTipIcon.Info);
                 }
-            }
-            else
-            {
-                List<Job> allJobs;
-                allJobs = JobBLL.Instance.GetAllJobOfEmployee(maNV);
-                int curUndoJob = 0;
-                foreach (Job job in allJobs)
+
+                // Kiểm tra những công việc của NHÂN VIÊN chưa bắt đầu làm
+                // Chỉ thông báo cho nhân viên như yêu cầu 10
+                if (currentAccount.Level.Equals("CEO"))
                 {
-                    if (job.TrangThai.Equals("Chưa bắt đầu"))
+                    List<Job> allJobs;
+                    allJobs = JobBLL.Instance.GetAllJob();
+                    int curAllJobs = 0; // số công việc chưa cập nhật tình trạng
+                    foreach (Job job in allJobs)
                     {
-                        curUndoJob++;
+                        if (!job.TrangThai.Equals("Hoàn thành"))
+                        {
+                            curAllJobs++;
+                        }
+                    }
+                    if (curAllJobs > 0 && curAllJobs != AllUndoJob)
+                    {
+                        AllUndoJob = curAllJobs;
+                        NTFIcon_ThongBaoCV.Visible = true;
+                        NTFIcon_ThongBaoCV.ShowBalloonTip(Constraint.NotifyTimeOut, "Thông báo công việc chưa cập nhật của toàn bộ Nhân viên", string.Format("Có {0} công việc chưa được cập nhật tình trạng", curAllJobs), ToolTipIcon.Info);
                     }
                 }
-                if (curUndoJob > 0 && curUndoJob != undoJob)
+                else
                 {
-                    undoJob = curUndoJob;
-                    NTFIcon_ThongBaoCV.Visible = true;
-                    NTFIcon_ThongBaoCV.ShowBalloonTip(Constraint.NotifyTimeOut, "Thông báo công việc chưa bắt đầu", string.Format("Bạn có {0} công việc chưa bắt đầu", curUndoJob), ToolTipIcon.Info);
+                    List<Job> allJobs;
+                    allJobs = JobBLL.Instance.GetAllJobOfEmployee(maNV);
+                    int curUndoJob = 0;
+                    foreach (Job job in allJobs)
+                    {
+                        if (job.TrangThai.Equals("Chưa bắt đầu"))
+                        {
+                            curUndoJob++;
+                        }
+                    }
+                    if (curUndoJob > 0 && curUndoJob != undoJob)
+                    {
+                        undoJob = curUndoJob;
+                        NTFIcon_ThongBaoCV.Visible = true;
+                        NTFIcon_ThongBaoCV.ShowBalloonTip(Constraint.NotifyTimeOut, "Thông báo công việc chưa bắt đầu", string.Format("Bạn có {0} công việc chưa bắt đầu", curUndoJob), ToolTipIcon.Info);
+                    }
                 }
+
             }
-
-
             // reset timer
-            appTime = 0;
+            Timer_KTCongViec.Stop();
             NTFIcon_ThongBaoCV.Visible = false;
         }
 
@@ -304,11 +304,6 @@ namespace DangNhap
             LB_tendangnhap.Text = $"Hello, {currentAccount.EmployeeId} - {currentAccount.Level}";
             Timer_KTCongViec.Start();
             appTime = 0;
-            if (!currentAccount.Level.Equals("CEO"))
-            {
-                BTN_nhanvien.Enabled = false;
-                BTN_nhanvien.Visible = false;
-            }
             
             // Vệ sinh 
             if (currentAccount.Level.Equals("VS"))
@@ -324,6 +319,9 @@ namespace DangNhap
                 // Nhân viên
                 BTN_nhanvien.Enabled = false;
                 BTN_nhanvien.Visible = false;
+
+                // Đổi lại vị trí các Button
+                BTN_canho.Location = new Point(0, 145);
             }
             
             // Tài chính
@@ -332,6 +330,9 @@ namespace DangNhap
                 // Nhân viên
                 BTN_nhanvien.Enabled = false;
                 BTN_nhanvien.Visible = false;
+
+                // Đổi lại vị trí các Button
+                BTN_canho.Location = new Point(0, 180);
             }
             
             // Hành chính Nhân sự & Dịch vụ Cư dân
@@ -340,6 +341,9 @@ namespace DangNhap
                 // Thống kê 
                 BTN_thongke.Enabled = false;
                 BTN_thongke.Visible = false;
+
+                // Đổi lại vị trí các Button
+                BTN_canho.Location = new Point(0, 145);
             }
             // An ninh || Kỹ thuật || Xây dựng
             if (currentAccount.Level.Equals("AN") || currentAccount.Level.Equals("KT") || currentAccount.Level.Equals("XD"))
@@ -351,6 +355,10 @@ namespace DangNhap
                 // Nhân viên
                 BTN_nhanvien.Enabled = false;
                 BTN_nhanvien.Visible = false;
+
+                // Đổi lại vị trí các Button
+                BTN_cudan.Location = new Point(0, 145);
+                BTN_canho.Location = new Point(0, 180);
             }
             // Hiển thị tình trạng công việc hiện tại
             CountJobState();

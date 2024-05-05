@@ -1152,8 +1152,6 @@ BEGIN
 END
 go
 
-
-
 CREATE PROCEDURE [dbo].[SuaKhachThueKTM]
     @maKhachDangThue VARCHAR(10),
     @tenCongTy NVARCHAR(200),
@@ -1297,8 +1295,6 @@ begin
 	delete from PhuongTien where bienSo = @bienSo
 end
 go
-
-
 CREATE PROCEDURE [dbo].[ThemNguoiUyQuyen]
     @maCuDan VARCHAR(10),
     @maCanHo VARCHAR(10),
@@ -1469,8 +1465,9 @@ BEGIN
         duLieuDangKyThuNuoi = @duLieuDangKyThuNuoi
     WHERE maCuDan = @maCuDan AND maCanHo = @maCanHo;
 END
+--------------------------------
 GO
-
+-- Xóa khách ngắn ngày
 create procedure [dbo].[XoaKhachNganNgay]
 	@maCuDan varchar(10),
 	@bienSo varchar(10)
@@ -1480,7 +1477,7 @@ begin
 	delete from PhuongTien where bienSo = @bienSo
 end
 go
-
+-- Kiểm tra trùng mã cư dân
 CREATE PROCEDURE [dbo].[KiemTraTrungMaCuDan]
     @maCuDan VARCHAR(10),
     @exists BIT OUTPUT
@@ -1523,8 +1520,8 @@ BEGIN
 
     SET @exists = 0;
 END
+---------------------------------------------------------------------------------
 go
-
 -- Procedure thêm Nhóm
 Create PROCEDURE [dbo].[SP_ThemNhom]
 	@maNhom VARCHAR(10),

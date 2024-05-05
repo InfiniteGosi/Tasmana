@@ -40,7 +40,6 @@
             this.LB_MucTieuThongKe = new System.Windows.Forms.Label();
             this.LB_DuLieuThongKe = new System.Windows.Forms.Label();
             this.CBB_DuLieuMuonThongKe = new System.Windows.Forms.ComboBox();
-            this.LB_TongHop = new System.Windows.Forms.Label();
             this.CBB_LoaiThoiGian = new System.Windows.Forms.ComboBox();
             this.LB_ThoiGianTK = new System.Windows.Forms.Label();
             this.CBB_Nam = new System.Windows.Forms.ComboBox();
@@ -169,12 +168,6 @@
             this.CBB_DuLieuMuonThongKe.Name = "CBB_DuLieuMuonThongKe";
             this.CBB_DuLieuMuonThongKe.SelectedValueChanged += new System.EventHandler(this.CBB_DuLieuMuonThongKe_SelectedValueChanged);
             // 
-            // LB_TongHop
-            // 
-            resources.ApplyResources(this.LB_TongHop, "LB_TongHop");
-            this.LB_TongHop.ForeColor = System.Drawing.Color.White;
-            this.LB_TongHop.Name = "LB_TongHop";
-            // 
             // CBB_LoaiThoiGian
             // 
             resources.ApplyResources(this.CBB_LoaiThoiGian, "CBB_LoaiThoiGian");
@@ -300,7 +293,6 @@
             this.Controls.Add(this.LB_Nam);
             this.Controls.Add(this.CBB_LoaiThoiGian);
             this.Controls.Add(this.LB_ThoiGianTK);
-            this.Controls.Add(this.LB_TongHop);
             this.Controls.Add(this.CBB_DuLieuMuonThongKe);
             this.Controls.Add(this.LB_DuLieuThongKe);
             this.Controls.Add(this.DTP_TuNgay);
@@ -333,7 +325,6 @@
         private System.Windows.Forms.Label LB_MucTieuThongKe;
         private System.Windows.Forms.Label LB_DuLieuThongKe;
         private System.Windows.Forms.ComboBox CBB_DuLieuMuonThongKe;
-        private System.Windows.Forms.Label LB_TongHop;
         private System.Windows.Forms.ComboBox CBB_LoaiThoiGian;
         private System.Windows.Forms.Label LB_ThoiGianTK;
         private System.Windows.Forms.ComboBox CBB_Nam;
