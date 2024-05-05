@@ -28,75 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemQuanLy));
             this.LB_themmoi = new System.Windows.Forms.Label();
             this.LB_maphongban = new System.Windows.Forms.Label();
             this.CBB_phongban = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.CBB_nhanvien = new System.Windows.Forms.ComboBox();
             this.BTN_ok = new Guna.UI.WinForms.GunaGradientButton();
+            this.PN_main = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.BTN_thoat = new Guna.UI.WinForms.GunaGradientButton();
+            this.PN_main.SuspendLayout();
             this.SuspendLayout();
             // 
             // LB_themmoi
             // 
-            this.LB_themmoi.AutoSize = true;
-            this.LB_themmoi.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold);
+            resources.ApplyResources(this.LB_themmoi, "LB_themmoi");
             this.LB_themmoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.LB_themmoi.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.LB_themmoi.Location = new System.Drawing.Point(23, 19);
             this.LB_themmoi.Name = "LB_themmoi";
-            this.LB_themmoi.Size = new System.Drawing.Size(228, 32);
-            this.LB_themmoi.TabIndex = 207;
-            this.LB_themmoi.Text = "ADD MANAGER";
             // 
             // LB_maphongban
             // 
-            this.LB_maphongban.AutoSize = true;
-            this.LB_maphongban.Font = new System.Drawing.Font("Times New Roman", 12F);
+            resources.ApplyResources(this.LB_maphongban, "LB_maphongban");
             this.LB_maphongban.ForeColor = System.Drawing.Color.White;
-            this.LB_maphongban.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.LB_maphongban.Location = new System.Drawing.Point(106, 166);
             this.LB_maphongban.Name = "LB_maphongban";
-            this.LB_maphongban.Size = new System.Drawing.Size(79, 22);
-            this.LB_maphongban.TabIndex = 208;
-            this.LB_maphongban.Text = "Division";
             // 
             // CBB_phongban
             // 
             this.CBB_phongban.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.CBB_phongban.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CBB_phongban.Font = new System.Drawing.Font("Times New Roman", 12F);
+            resources.ApplyResources(this.CBB_phongban, "CBB_phongban");
             this.CBB_phongban.ForeColor = System.Drawing.Color.White;
             this.CBB_phongban.FormattingEnabled = true;
-            this.CBB_phongban.Location = new System.Drawing.Point(276, 162);
             this.CBB_phongban.Name = "CBB_phongban";
-            this.CBB_phongban.Size = new System.Drawing.Size(419, 30);
-            this.CBB_phongban.TabIndex = 209;
             this.CBB_phongban.SelectedIndexChanged += new System.EventHandler(this.CBB_phongban_SelectedIndexChanged);
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(106, 263);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 22);
-            this.label1.TabIndex = 210;
-            this.label1.Text = "Manager ID";
             // 
             // CBB_nhanvien
             // 
             this.CBB_nhanvien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.CBB_nhanvien.Enabled = false;
-            this.CBB_nhanvien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CBB_nhanvien.Font = new System.Drawing.Font("Times New Roman", 12F);
+            resources.ApplyResources(this.CBB_nhanvien, "CBB_nhanvien");
             this.CBB_nhanvien.ForeColor = System.Drawing.Color.White;
             this.CBB_nhanvien.FormattingEnabled = true;
-            this.CBB_nhanvien.Location = new System.Drawing.Point(276, 259);
             this.CBB_nhanvien.Name = "CBB_nhanvien";
-            this.CBB_nhanvien.Size = new System.Drawing.Size(419, 30);
-            this.CBB_nhanvien.TabIndex = 211;
             // 
             // BTN_ok
             // 
@@ -110,12 +92,11 @@
             this.BTN_ok.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_ok.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_ok.FocusedColor = System.Drawing.Color.Empty;
-            this.BTN_ok.Font = new System.Drawing.Font("Times New Roman", 9F);
+            resources.ApplyResources(this.BTN_ok, "BTN_ok");
             this.BTN_ok.ForeColor = System.Drawing.Color.White;
             this.BTN_ok.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.BTN_ok.Image = null;
             this.BTN_ok.ImageSize = new System.Drawing.Size(20, 20);
-            this.BTN_ok.Location = new System.Drawing.Point(659, 403);
             this.BTN_ok.Name = "BTN_ok";
             this.BTN_ok.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(184)))));
             this.BTN_ok.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(184)))));
@@ -124,26 +105,95 @@
             this.BTN_ok.OnHoverImage = null;
             this.BTN_ok.OnPressedColor = System.Drawing.Color.Black;
             this.BTN_ok.Radius = 5;
-            this.BTN_ok.Size = new System.Drawing.Size(129, 35);
-            this.BTN_ok.TabIndex = 212;
-            this.BTN_ok.Text = "Save";
             this.BTN_ok.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_ok.Click += new System.EventHandler(this.BTN_ok_Click);
             // 
+            // PN_main
+            // 
+            this.PN_main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.PN_main.Controls.Add(this.panel5);
+            this.PN_main.Controls.Add(this.BTN_ok);
+            this.PN_main.Controls.Add(this.LB_maphongban);
+            this.PN_main.Controls.Add(this.CBB_phongban);
+            this.PN_main.Controls.Add(this.label1);
+            this.PN_main.Controls.Add(this.CBB_nhanvien);
+            resources.ApplyResources(this.PN_main, "PN_main");
+            this.PN_main.Name = "PN_main";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.Name = "panel5";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.Name = "panel4";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Name = "panel3";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
+            // BTN_thoat
+            // 
+            this.BTN_thoat.AnimationHoverSpeed = 0.5F;
+            this.BTN_thoat.AnimationSpeed = 0.03F;
+            this.BTN_thoat.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_thoat.BaseColor1 = System.Drawing.Color.Transparent;
+            this.BTN_thoat.BaseColor2 = System.Drawing.Color.Transparent;
+            this.BTN_thoat.BorderColor = System.Drawing.Color.Transparent;
+            this.BTN_thoat.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_thoat.FocusedColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.BTN_thoat, "BTN_thoat");
+            this.BTN_thoat.ForeColor = System.Drawing.Color.Black;
+            this.BTN_thoat.Image = ((System.Drawing.Image)(resources.GetObject("BTN_thoat.Image")));
+            this.BTN_thoat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_thoat.ImageSize = new System.Drawing.Size(10, 10);
+            this.BTN_thoat.Name = "BTN_thoat";
+            this.BTN_thoat.OnHoverBaseColor1 = System.Drawing.Color.Red;
+            this.BTN_thoat.OnHoverBaseColor2 = System.Drawing.Color.Red;
+            this.BTN_thoat.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.BTN_thoat.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_thoat.OnHoverImage = null;
+            this.BTN_thoat.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_thoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_thoat.Click += new System.EventHandler(this.BTN_thoat_Click);
+            // 
             // ThemQuanLy
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlText;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.BTN_ok);
-            this.Controls.Add(this.LB_maphongban);
-            this.Controls.Add(this.CBB_phongban);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.CBB_nhanvien);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.BTN_thoat);
             this.Controls.Add(this.LB_themmoi);
+            this.Controls.Add(this.PN_main);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ThemQuanLy";
-            this.Text = "ThemQuanLy";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ThemQuanLy_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ThemQuanLy_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ThemQuanLy_MouseUp);
+            this.PN_main.ResumeLayout(false);
+            this.PN_main.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,5 +207,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox CBB_nhanvien;
         private Guna.UI.WinForms.GunaGradientButton BTN_ok;
+        private System.Windows.Forms.Panel PN_main;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI.WinForms.GunaGradientButton BTN_thoat;
     }
 }

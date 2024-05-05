@@ -132,16 +132,16 @@ namespace DangNhap
             // 
             // TXB_bhxh
             // 
-            resources.ApplyResources(this.TXB_bhxh, "TXB_bhxh");
             this.TXB_bhxh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            resources.ApplyResources(this.TXB_bhxh, "TXB_bhxh");
             this.TXB_bhxh.ForeColor = System.Drawing.Color.White;
             this.TXB_bhxh.Name = "TXB_bhxh";
             this.TXB_bhxh.TextChanged += new System.EventHandler(this.TXB_bhxh_TextChanged);
             // 
             // TXB_quequan
             // 
-            resources.ApplyResources(this.TXB_quequan, "TXB_quequan");
             this.TXB_quequan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            resources.ApplyResources(this.TXB_quequan, "TXB_quequan");
             this.TXB_quequan.ForeColor = System.Drawing.Color.White;
             this.TXB_quequan.Name = "TXB_quequan";
             this.TXB_quequan.TextChanged += new System.EventHandler(this.TXB_quequan_TextChanged);
@@ -178,39 +178,39 @@ namespace DangNhap
             // 
             // TXB_cccd
             // 
-            resources.ApplyResources(this.TXB_cccd, "TXB_cccd");
             this.TXB_cccd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            resources.ApplyResources(this.TXB_cccd, "TXB_cccd");
             this.TXB_cccd.ForeColor = System.Drawing.Color.White;
             this.TXB_cccd.Name = "TXB_cccd";
             this.TXB_cccd.TextChanged += new System.EventHandler(this.TXB_cccd_TextChanged);
             // 
             // TXB_tamtru
             // 
-            resources.ApplyResources(this.TXB_tamtru, "TXB_tamtru");
             this.TXB_tamtru.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            resources.ApplyResources(this.TXB_tamtru, "TXB_tamtru");
             this.TXB_tamtru.ForeColor = System.Drawing.Color.White;
             this.TXB_tamtru.Name = "TXB_tamtru";
             // 
             // TXB_thuongtru
             // 
-            resources.ApplyResources(this.TXB_thuongtru, "TXB_thuongtru");
             this.TXB_thuongtru.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            resources.ApplyResources(this.TXB_thuongtru, "TXB_thuongtru");
             this.TXB_thuongtru.ForeColor = System.Drawing.Color.White;
             this.TXB_thuongtru.Name = "TXB_thuongtru";
             this.TXB_thuongtru.TextChanged += new System.EventHandler(this.TXB_thuongtru_TextChanged);
             // 
             // TXB_matkhau
             // 
-            resources.ApplyResources(this.TXB_matkhau, "TXB_matkhau");
             this.TXB_matkhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            resources.ApplyResources(this.TXB_matkhau, "TXB_matkhau");
             this.TXB_matkhau.ForeColor = System.Drawing.Color.White;
             this.TXB_matkhau.Name = "TXB_matkhau";
             this.TXB_matkhau.TextChanged += new System.EventHandler(this.TXB_matkhau_TextChanged);
             // 
             // TXB_manguoidung
             // 
-            resources.ApplyResources(this.TXB_manguoidung, "TXB_manguoidung");
             this.TXB_manguoidung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            resources.ApplyResources(this.TXB_manguoidung, "TXB_manguoidung");
             this.TXB_manguoidung.ForeColor = System.Drawing.Color.White;
             this.TXB_manguoidung.Name = "TXB_manguoidung";
             // 
@@ -234,8 +234,8 @@ namespace DangNhap
             // 
             // TXB_honnhan
             // 
-            resources.ApplyResources(this.TXB_honnhan, "TXB_honnhan");
             this.TXB_honnhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            resources.ApplyResources(this.TXB_honnhan, "TXB_honnhan");
             this.TXB_honnhan.ForeColor = System.Drawing.Color.White;
             this.TXB_honnhan.Name = "TXB_honnhan";
             this.TXB_honnhan.TextChanged += new System.EventHandler(this.TXB_honnhan_TextChanged);
@@ -254,16 +254,16 @@ namespace DangNhap
             // 
             // TXB_sdt
             // 
-            resources.ApplyResources(this.TXB_sdt, "TXB_sdt");
             this.TXB_sdt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            resources.ApplyResources(this.TXB_sdt, "TXB_sdt");
             this.TXB_sdt.ForeColor = System.Drawing.Color.White;
             this.TXB_sdt.Name = "TXB_sdt";
             this.TXB_sdt.TextChanged += new System.EventHandler(this.TXB_sdt_TextChanged);
             // 
             // TXB_email
             // 
-            resources.ApplyResources(this.TXB_email, "TXB_email");
             this.TXB_email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            resources.ApplyResources(this.TXB_email, "TXB_email");
             this.TXB_email.ForeColor = System.Drawing.Color.White;
             this.TXB_email.Name = "TXB_email";
             this.TXB_email.TextChanged += new System.EventHandler(this.TXB_email_TextChanged);
@@ -310,26 +310,26 @@ namespace DangNhap
             // 
             // panel9
             // 
-            resources.ApplyResources(this.panel9, "panel9");
             this.panel9.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel9, "panel9");
             this.panel9.Name = "panel9";
             // 
             // panel8
             // 
-            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.Name = "panel8";
             // 
             // panel7
             // 
-            resources.ApplyResources(this.panel7, "panel7");
             this.panel7.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel7, "panel7");
             this.panel7.Name = "panel7";
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // CHB_matkhau
@@ -422,26 +422,26 @@ namespace DangNhap
             // 
             // panel18
             // 
-            resources.ApplyResources(this.panel18, "panel18");
             this.panel18.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel18, "panel18");
             this.panel18.Name = "panel18";
             // 
             // panel19
             // 
-            resources.ApplyResources(this.panel19, "panel19");
             this.panel19.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel19, "panel19");
             this.panel19.Name = "panel19";
             // 
             // panel20
             // 
-            resources.ApplyResources(this.panel20, "panel20");
             this.panel20.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel20, "panel20");
             this.panel20.Name = "panel20";
             // 
             // panel21
             // 
-            resources.ApplyResources(this.panel21, "panel21");
             this.panel21.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel21, "panel21");
             this.panel21.Name = "panel21";
             // 
             // panel1
@@ -490,40 +490,40 @@ namespace DangNhap
             // 
             // panel14
             // 
-            resources.ApplyResources(this.panel14, "panel14");
             this.panel14.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel14, "panel14");
             this.panel14.Name = "panel14";
             // 
             // panel15
             // 
-            resources.ApplyResources(this.panel15, "panel15");
             this.panel15.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel15, "panel15");
             this.panel15.Name = "panel15";
             // 
             // panel16
             // 
-            resources.ApplyResources(this.panel16, "panel16");
             this.panel16.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel16, "panel16");
             this.panel16.Name = "panel16";
             // 
             // panel17
             // 
-            resources.ApplyResources(this.panel17, "panel17");
             this.panel17.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel17, "panel17");
             this.panel17.Name = "panel17";
             // 
             // TXB_tinhtrangHDLD
             // 
-            resources.ApplyResources(this.TXB_tinhtrangHDLD, "TXB_tinhtrangHDLD");
             this.TXB_tinhtrangHDLD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            resources.ApplyResources(this.TXB_tinhtrangHDLD, "TXB_tinhtrangHDLD");
             this.TXB_tinhtrangHDLD.ForeColor = System.Drawing.Color.White;
             this.TXB_tinhtrangHDLD.Name = "TXB_tinhtrangHDLD";
             this.TXB_tinhtrangHDLD.TextChanged += new System.EventHandler(this.TXB_tinhtrangHDLD_TextChanged);
             // 
             // CBB_loainv
             // 
-            resources.ApplyResources(this.CBB_loainv, "CBB_loainv");
             this.CBB_loainv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            resources.ApplyResources(this.CBB_loainv, "CBB_loainv");
             this.CBB_loainv.ForeColor = System.Drawing.Color.White;
             this.CBB_loainv.FormattingEnabled = true;
             this.CBB_loainv.Name = "CBB_loainv";
@@ -537,8 +537,8 @@ namespace DangNhap
             // 
             // CBB_phongban
             // 
-            resources.ApplyResources(this.CBB_phongban, "CBB_phongban");
             this.CBB_phongban.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            resources.ApplyResources(this.CBB_phongban, "CBB_phongban");
             this.CBB_phongban.ForeColor = System.Drawing.Color.White;
             this.CBB_phongban.FormattingEnabled = true;
             this.CBB_phongban.Name = "CBB_phongban";
@@ -546,8 +546,8 @@ namespace DangNhap
             // 
             // CBB_nhom
             // 
-            resources.ApplyResources(this.CBB_nhom, "CBB_nhom");
             this.CBB_nhom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            resources.ApplyResources(this.CBB_nhom, "CBB_nhom");
             this.CBB_nhom.ForeColor = System.Drawing.Color.White;
             this.CBB_nhom.FormattingEnabled = true;
             this.CBB_nhom.Name = "CBB_nhom";
@@ -664,32 +664,32 @@ namespace DangNhap
             // 
             // panel10
             // 
-            resources.ApplyResources(this.panel10, "panel10");
             this.panel10.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel10, "panel10");
             this.panel10.Name = "panel10";
             // 
             // panel11
             // 
-            resources.ApplyResources(this.panel11, "panel11");
             this.panel11.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel11, "panel11");
             this.panel11.Name = "panel11";
             // 
             // panel12
             // 
-            resources.ApplyResources(this.panel12, "panel12");
             this.panel12.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel12, "panel12");
             this.panel12.Name = "panel12";
             // 
             // panel13
             // 
-            resources.ApplyResources(this.panel13, "panel13");
             this.panel13.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel13, "panel13");
             this.panel13.Name = "panel13";
             // 
             // TXB_ten
             // 
-            resources.ApplyResources(this.TXB_ten, "TXB_ten");
             this.TXB_ten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            resources.ApplyResources(this.TXB_ten, "TXB_ten");
             this.TXB_ten.ForeColor = System.Drawing.Color.White;
             this.TXB_ten.Name = "TXB_ten";
             this.TXB_ten.TextChanged += new System.EventHandler(this.TXB_ten_TextChanged);
@@ -707,9 +707,9 @@ namespace DangNhap
             // 
             // GB_gioitinh
             // 
-            resources.ApplyResources(this.GB_gioitinh, "GB_gioitinh");
             this.GB_gioitinh.Controls.Add(this.Rad_nu);
             this.GB_gioitinh.Controls.Add(this.Rad_nam);
+            resources.ApplyResources(this.GB_gioitinh, "GB_gioitinh");
             this.GB_gioitinh.ForeColor = System.Drawing.Color.White;
             this.GB_gioitinh.Name = "GB_gioitinh";
             this.GB_gioitinh.TabStop = false;
@@ -734,16 +734,16 @@ namespace DangNhap
             // 
             // TXB_ho
             // 
-            resources.ApplyResources(this.TXB_ho, "TXB_ho");
             this.TXB_ho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            resources.ApplyResources(this.TXB_ho, "TXB_ho");
             this.TXB_ho.ForeColor = System.Drawing.Color.White;
             this.TXB_ho.Name = "TXB_ho";
             this.TXB_ho.TextChanged += new System.EventHandler(this.TXB_ho_TextChanged);
             // 
             // TXB_manv
             // 
-            resources.ApplyResources(this.TXB_manv, "TXB_manv");
             this.TXB_manv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            resources.ApplyResources(this.TXB_manv, "TXB_manv");
             this.TXB_manv.ForeColor = System.Drawing.Color.White;
             this.TXB_manv.Name = "TXB_manv";
             this.TXB_manv.TextChanged += new System.EventHandler(this.TXB_manv_TextChanged);
@@ -785,26 +785,26 @@ namespace DangNhap
             // 
             // panel22
             // 
-            resources.ApplyResources(this.panel22, "panel22");
             this.panel22.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel22, "panel22");
             this.panel22.Name = "panel22";
             // 
             // panel23
             // 
-            resources.ApplyResources(this.panel23, "panel23");
             this.panel23.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel23, "panel23");
             this.panel23.Name = "panel23";
             // 
             // panel24
             // 
-            resources.ApplyResources(this.panel24, "panel24");
             this.panel24.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel24, "panel24");
             this.panel24.Name = "panel24";
             // 
             // panel25
             // 
-            resources.ApplyResources(this.panel25, "panel25");
             this.panel25.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel25, "panel25");
             this.panel25.Name = "panel25";
             // 
             // BTN_x

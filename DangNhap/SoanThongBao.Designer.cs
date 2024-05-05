@@ -52,26 +52,26 @@
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // panel3
             // 
-            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
             // panel4
             // 
-            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
             // LB_den
@@ -82,12 +82,12 @@
             // 
             // PN_hienthi
             // 
-            resources.ApplyResources(this.PN_hienthi, "PN_hienthi");
             this.PN_hienthi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.PN_hienthi.Controls.Add(this.LLB_hienfile);
             this.PN_hienthi.Controls.Add(this.BTN_file);
             this.PN_hienthi.Controls.Add(this.gunaGradientButton1);
             this.PN_hienthi.Controls.Add(this.TXB_noidung);
+            resources.ApplyResources(this.PN_hienthi, "PN_hienthi");
             this.PN_hienthi.Name = "PN_hienthi";
             // 
             // LLB_hienfile
@@ -99,16 +99,16 @@
             // 
             // TXB_noidung
             // 
-            resources.ApplyResources(this.TXB_noidung, "TXB_noidung");
             this.TXB_noidung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.TXB_noidung.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.TXB_noidung, "TXB_noidung");
             this.TXB_noidung.ForeColor = System.Drawing.Color.White;
             this.TXB_noidung.Name = "TXB_noidung";
             // 
             // TXB_tieude
             // 
-            resources.ApplyResources(this.TXB_tieude, "TXB_tieude");
             this.TXB_tieude.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            resources.ApplyResources(this.TXB_tieude, "TXB_tieude");
             this.TXB_tieude.ForeColor = System.Drawing.Color.White;
             this.TXB_tieude.Name = "TXB_tieude";
             // 
@@ -126,12 +126,12 @@
             // 
             // MSCBB_thongbao
             // 
-            resources.ApplyResources(this.MSCBB_thongbao, "MSCBB_thongbao");
             this.MSCBB_thongbao.AutoSizeMode = Syncfusion.Windows.Forms.Tools.AutoSizeModes.None;
             this.MSCBB_thongbao.BeforeTouchSize = new System.Drawing.Size(579, 35);
             this.MSCBB_thongbao.ButtonStyle = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
             this.MSCBB_thongbao.DataSource = ((object)(resources.GetObject("MSCBB_thongbao.DataSource")));
             this.MSCBB_thongbao.FlatBorderColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.MSCBB_thongbao, "MSCBB_thongbao");
             this.MSCBB_thongbao.MetroColor = System.Drawing.Color.White;
             this.MSCBB_thongbao.Name = "MSCBB_thongbao";
             this.MSCBB_thongbao.ShowCheckBox = true;
@@ -140,6 +140,7 @@
             this.MSCBB_thongbao.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.MSCBB_thongbao.UseVisualStyle = true;
             this.MSCBB_thongbao.VisualItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.MSCBB_thongbao.VisualItemForeColor = System.Drawing.Color.White;
             // 
             // label1
             // 
@@ -163,7 +164,6 @@
             // 
             // gunaGradientButton1
             // 
-            resources.ApplyResources(this.gunaGradientButton1, "gunaGradientButton1");
             this.gunaGradientButton1.AnimationHoverSpeed = 0.5F;
             this.gunaGradientButton1.AnimationSpeed = 0.03F;
             this.gunaGradientButton1.BackColor = System.Drawing.Color.Transparent;
@@ -173,16 +173,17 @@
             this.gunaGradientButton1.BorderSize = 1;
             this.gunaGradientButton1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.gunaGradientButton1.FocusedColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.gunaGradientButton1, "gunaGradientButton1");
             this.gunaGradientButton1.ForeColor = System.Drawing.Color.White;
             this.gunaGradientButton1.Image = null;
             this.gunaGradientButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaGradientButton1.ImageSize = new System.Drawing.Size(10, 10);
+            this.gunaGradientButton1.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaGradientButton1.Name = "gunaGradientButton1";
             this.gunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.gunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.gunaGradientButton1.OnHoverBorderColor = System.Drawing.Color.White;
-            this.gunaGradientButton1.OnHoverForeColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton1.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton1.OnHoverImage")));
+            this.gunaGradientButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaGradientButton1.OnHoverImage = null;
             this.gunaGradientButton1.OnPressedColor = System.Drawing.Color.Black;
             this.gunaGradientButton1.Radius = 5;
             this.gunaGradientButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -190,7 +191,6 @@
             // 
             // BTN_thoat
             // 
-            resources.ApplyResources(this.BTN_thoat, "BTN_thoat");
             this.BTN_thoat.AnimationHoverSpeed = 0.5F;
             this.BTN_thoat.AnimationSpeed = 0.03F;
             this.BTN_thoat.BackColor = System.Drawing.Color.Transparent;
@@ -199,6 +199,7 @@
             this.BTN_thoat.BorderColor = System.Drawing.Color.DimGray;
             this.BTN_thoat.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_thoat.FocusedColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.BTN_thoat, "BTN_thoat");
             this.BTN_thoat.ForeColor = System.Drawing.Color.Black;
             this.BTN_thoat.Image = ((System.Drawing.Image)(resources.GetObject("BTN_thoat.Image")));
             this.BTN_thoat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;

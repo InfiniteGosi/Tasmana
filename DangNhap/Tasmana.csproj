@@ -607,6 +607,9 @@
     <EmbeddedResource Include="ChiTietThongBao.resx">
       <DependentUpon>ChiTietThongBao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietThongBao.vi.resx">
+      <DependentUpon>ChiTietThongBao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CongViecChung.en.resx">
       <DependentUpon>CongViecChung.cs</DependentUpon>
     </EmbeddedResource>
@@ -636,6 +639,9 @@
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoiMatKhau.resx">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoiMatKhau.vi.resx">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FaceDetectLogin.resx">
@@ -739,13 +745,22 @@
     <EmbeddedResource Include="ThemPhongBan.vi.resx">
       <DependentUpon>ThemPhongBan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThemQuanLy.en.resx">
+      <DependentUpon>ThemQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThemQuanLy.resx">
+      <DependentUpon>ThemQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemQuanLy.vi.resx">
       <DependentUpon>ThemQuanLy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongBao.en.resx">
       <DependentUpon>ThongBao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongBao.resx">
+      <DependentUpon>ThongBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongBao.vi.resx">
       <DependentUpon>ThongBao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongKe.en.resx">

@@ -64,15 +64,15 @@
             // 
             // TXB_tenphongban
             // 
-            resources.ApplyResources(this.TXB_tenphongban, "TXB_tenphongban");
             this.TXB_tenphongban.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            resources.ApplyResources(this.TXB_tenphongban, "TXB_tenphongban");
             this.TXB_tenphongban.ForeColor = System.Drawing.Color.White;
             this.TXB_tenphongban.Name = "TXB_tenphongban";
             // 
             // TXB_maphongban
             // 
-            resources.ApplyResources(this.TXB_maphongban, "TXB_maphongban");
             this.TXB_maphongban.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            resources.ApplyResources(this.TXB_maphongban, "TXB_maphongban");
             this.TXB_maphongban.ForeColor = System.Drawing.Color.White;
             this.TXB_maphongban.Name = "TXB_maphongban";
             // 
@@ -106,8 +106,8 @@
             // 
             // TXB_SDT
             // 
-            resources.ApplyResources(this.TXB_SDT, "TXB_SDT");
             this.TXB_SDT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            resources.ApplyResources(this.TXB_SDT, "TXB_SDT");
             this.TXB_SDT.ForeColor = System.Drawing.Color.White;
             this.TXB_SDT.Name = "TXB_SDT";
             // 
@@ -119,9 +119,9 @@
             // 
             // GGC_PhongBan
             // 
-            resources.ApplyResources(this.GGC_PhongBan, "GGC_PhongBan");
             this.GGC_PhongBan.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.GGC_PhongBan.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.GGC_PhongBan, "GGC_PhongBan");
             this.GGC_PhongBan.Name = "GGC_PhongBan";
             this.GGC_PhongBan.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
             this.GGC_PhongBan.UseRightToLeftCompatibleTextBox = true;
@@ -130,8 +130,8 @@
             // 
             // TXB_Email
             // 
-            resources.ApplyResources(this.TXB_Email, "TXB_Email");
             this.TXB_Email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            resources.ApplyResources(this.TXB_Email, "TXB_Email");
             this.TXB_Email.ForeColor = System.Drawing.Color.White;
             this.TXB_Email.Name = "TXB_Email";
             // 
@@ -150,26 +150,26 @@
             // 
             // panel4
             // 
-            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
             // panel3
             // 
-            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // PN_main
@@ -189,7 +189,6 @@
             // 
             // BTN_thoat
             // 
-            resources.ApplyResources(this.BTN_thoat, "BTN_thoat");
             this.BTN_thoat.AnimationHoverSpeed = 0.5F;
             this.BTN_thoat.AnimationSpeed = 0.03F;
             this.BTN_thoat.BackColor = System.Drawing.Color.Transparent;
@@ -198,6 +197,7 @@
             this.BTN_thoat.BorderColor = System.Drawing.Color.Transparent;
             this.BTN_thoat.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_thoat.FocusedColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.BTN_thoat, "BTN_thoat");
             this.BTN_thoat.ForeColor = System.Drawing.Color.Black;
             this.BTN_thoat.Image = ((System.Drawing.Image)(resources.GetObject("BTN_thoat.Image")));
             this.BTN_thoat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;

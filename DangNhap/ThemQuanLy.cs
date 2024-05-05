@@ -81,28 +81,86 @@ namespace DangNhap
             return false;
         }
         private void BTN_ok_Click(object sender, EventArgs e)
-        {
-            if(CBB_phongban.SelectedIndex == -1)
+        {   
+            //Tiếng Việt
+            if(LB_themmoi.Text == "THÊM QUẢN LÝ")
             {
-                MessageBox.Show("Vui lòng chọn phòng ban");
-                CBB_phongban.Focus();
-                return;
+                if(CBB_phongban.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Vui lòng chọn phòng ban");
+                    CBB_phongban.Focus();
+                    return;
+                }
+                if(CBB_nhanvien.SelectedIndex == -1) 
+                {
+                    MessageBox.Show("Vui lòng chọn Nhân viên");
+                    CBB_nhanvien.Focus();
+                    return; 
+                            }
+                 if (SaveManager())
+                 {
+                     MessageBox.Show("Thêm thành công");
+                     this.Close();
+                 }
+                 else
+                 {
+                    MessageBox.Show("Thêm thất bại");
+                 }
             }
-            if(CBB_nhanvien.SelectedIndex == -1) 
-            {
-                MessageBox.Show("Vui lòng chọn Nhân viên");
-                CBB_nhanvien.Focus();
-                return; 
-            }
-            if (SaveManager())
-            {
-                MessageBox.Show("Thêm thành công");
-                this.Close();
-            }
+            //Tiếng Anh
             else
             {
-                MessageBox.Show("Thêm thất bại");
+                if (CBB_phongban.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Please select \"Division\"");
+                    CBB_phongban.Focus();
+                    return;
+                }
+                if (CBB_nhanvien.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Please select \"Manager ID\"");
+                    CBB_nhanvien.Focus();
+                    return;
+                }
+                if (SaveManager())
+                {
+                    MessageBox.Show("Added Successfully");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Added Failed");
+                }
             }
+            
+        }
+        
+        private void BTN_thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        //Di chuyển form
+        int mov;
+        int movX;
+        int movY;
+        private void ThemQuanLy_MouseDown(object sender, MouseEventArgs e)
+        {
+            mov = 1;
+            movX = e.X;
+            movY = e.Y;
+        }
+
+        private void ThemQuanLy_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mov == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - movX, MousePosition.Y - movY);
+            }
+        }
+
+        private void ThemQuanLy_MouseUp(object sender, MouseEventArgs e)
+        {
+            mov = 0;
         }
     }
 }

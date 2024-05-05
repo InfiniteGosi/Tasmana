@@ -129,13 +129,10 @@
         QmCC
 </value>
   </data>
-  <data name="BTN_dagui.Text" xml:space="preserve">
-    <value>Sent</value>
-  </data>
   <data name="BTN_quantrong.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAEsnSURBVHhe7d0H
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAEsnSURBVHhe7d0H
         1CVVlfbxobvpBpqcQZAMEhQRkRFRQJIDSA5iwISomGZAAVFHDDjoJwJixICIGTMCYkaSWTCAiiBBkYyS
         QcDv2XWeVmg6vKHuOaeq/r+19lqspvs9u/bZt+q+FU79B4Bu+Oc//zldsZJiI8VWir0UL1O8UXGc4pOK
         MxTfVnxf8TPHJYrLHTcrblHcrpgl/jv+LP7frL8X/2bWv4+fFT8zfnaMEWO9QRFjRw6RS+QUuU13ugAA
@@ -459,13 +456,10 @@
         UrxXcZ4ifru/xxH/HX8W/y/+znT/MwC99R//8f8B8sjdQZqofPcAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="BTN_quantrong.Text" xml:space="preserve">
-    <value>Important</value>
-  </data>
   <data name="BTN_tatca.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACYWSURBVHhe7d3b
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACYWSURBVHhe7d3b
         y6/5Wd9xj+qONtYkBCmiprRaaJUSUy09sKQkuMFAaIm7uEEa24OCUErpYU9qVbTUTWtM3FB34I4WKrGe
         V2L9A9wctNhCMoli1Bwk0ez6udZ1h+B3voaZ/DLzve7h9YIbVtZs+Dwz153nPWs9s+ZTno2PfOQjL8nz
         LXl+Is9v5vn9PO/PAzw778vzrjxvy/OmPN+Q57OuV+0FKx/jX83zjXl+NE997PXXoP5aAM9Ofe6tz8H/
@@ -631,13 +625,10 @@
         99bn4Ppc/OY835TnWfxrwp/yKf8fsa6vItoJ5AMAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="BTN_tatca.Text" xml:space="preserve">
-    <value>All</value>
-  </data>
   <data name="BTN_biensoan.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAByzSURBVHhe7d1/
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAByzSURBVHhe7d1/
         qK1ZWQdwUzNHM2WmTDSMyQokQ0QNSqUG1KnAQijoRhkJGhT5R0IKoV6KyL9K5o9y8JzZnn0HHY6QWBpT
         M3pT0rGYsSzBH0SmTengj5xRJweamZ49s05z7zv73LPPOWu/73re9fnAw4bj9ey1196zvs96915nPwIA
         LmV/f/8xy+XymXt7ez//9re//bVRfxb1rqib4mcfjtuPxe2n4vbWqJuj/iLq+vjZ78ftK+L2x9/xjnd8
@@ -762,8 +753,5 @@
         BGzj7QC7fABoWflMwGk/GGiXDwAZRSNwdYT4X0dt+seC7PIBYC5WfzEwdvGvjFp9d8D5qH+MWn2V8Eei
         4seL345m4Xl2+QDQukc84v8AuAyRFh+E8pUAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="BTN_biensoan.Text" xml:space="preserve">
-    <value>Compose</value>
   </data>
 </root>
