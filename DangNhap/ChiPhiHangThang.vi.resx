@@ -119,26 +119,17 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="GGC_BillHangThang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>58, 115</value>
+    <value>58, 118</value>
   </data>
   <data name="GGC_BillHangThang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1291, 581</value>
+    <value>1291, 578</value>
   </data>
   <data name="BTN_ThemBill.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1220, 74</value>
-  </data>
-  <data name="BTN_ThemBill.Text" xml:space="preserve">
-    <value>Add bill</value>
+    <value>1220, 77</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="LB_BillHangThang.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <data name="LB_BillHangThang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 32</value>
-  </data>
-  <data name="LB_BillHangThang.Text" xml:space="preserve">
-    <value>MONTHLY BILL</value>
   </data>
   <data name="BTN_thoat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -251,5 +242,8 @@
         ADZUJn97x293/G/Hu/xZx/c/f8vL+oLv6Pj5jj/tmP6BoOntgq90/FbHFzs++/ylAMAgyufpvwv4uY7f
         7/jjjj/s+OWOH+l4K7s/85n/AwcgzALB8zWpAAAAAElFTkSuQmCC
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
 </root>

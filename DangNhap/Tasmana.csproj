@@ -567,6 +567,9 @@
     <EmbeddedResource Include="ChiPhiHangThang.resx">
       <DependentUpon>ChiPhiHangThang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChiPhiHangThang.vi.resx">
+      <DependentUpon>ChiPhiHangThang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChiTietCanHo.en.resx">
       <DependentUpon>ChiTietCanHo.cs</DependentUpon>
     </EmbeddedResource>
@@ -599,6 +602,9 @@
       <DependentUpon>ChiTietKhuThuongMai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChiTietKhuThuongMai.resx">
+      <DependentUpon>ChiTietKhuThuongMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietKhuThuongMai.vi.resx">
       <DependentUpon>ChiTietKhuThuongMai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChiTietThongBao.en.resx">

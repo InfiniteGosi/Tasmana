@@ -123,13 +123,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="LB_loai.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 19</value>
+    <value>193, 22</value>
   </data>
   <data name="LB_loai.Text" xml:space="preserve">
     <value>Choose real estate type</value>
-  </data>
-  <data name="BTN_XemHoaDon.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1152, 55</value>
   </data>
   <data name="BTN_XemHoaDon.Text" xml:space="preserve">
     <value>See monthly bill</value>

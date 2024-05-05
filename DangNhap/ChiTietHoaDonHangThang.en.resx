@@ -170,6 +170,9 @@
   <data name="LB_MaCanHo.Text" xml:space="preserve">
     <value>Apartment ID</value>
   </data>
+  <data name="BTN_Edit.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
   <data name="LB_BillHangThang.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>

@@ -112,7 +112,6 @@ namespace DangNhap
             // BTN_in
             // 
             resources.ApplyResources(this.BTN_in, "BTN_in");
-            this.BTN_in.Animated = true;
             this.BTN_in.AnimationHoverSpeed = 0.03F;
             this.BTN_in.AnimationSpeed = 0.03F;
             this.BTN_in.BaseColor1 = System.Drawing.Color.Silver;
@@ -138,7 +137,6 @@ namespace DangNhap
             // BTN_PDF
             // 
             resources.ApplyResources(this.BTN_PDF, "BTN_PDF");
-            this.BTN_PDF.Animated = true;
             this.BTN_PDF.AnimationHoverSpeed = 0.03F;
             this.BTN_PDF.AnimationSpeed = 0.03F;
             this.BTN_PDF.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(131)))), ((int)(((byte)(18)))));
@@ -164,7 +162,6 @@ namespace DangNhap
             // BTN_excel
             // 
             resources.ApplyResources(this.BTN_excel, "BTN_excel");
-            this.BTN_excel.Animated = true;
             this.BTN_excel.AnimationHoverSpeed = 0.03F;
             this.BTN_excel.AnimationSpeed = 0.03F;
             this.BTN_excel.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(95)))), ((int)(((byte)(45)))));
