@@ -855,6 +855,11 @@ namespace DangNhap
         }
         private void BTN_luu_Click(object sender, EventArgs e)
         {
+            if (ResidentBLL.Instance.CheckMaCuDan(TXB_macd.Text))
+            {
+                MessageBox.Show("Mã cư dân đã tồn tại");
+                return;
+            }
             if (chuHo == null && nguoiDcUyQuyen == null && khachNganNgay == null)
             {
                 switch(type)
