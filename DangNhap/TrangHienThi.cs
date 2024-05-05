@@ -181,7 +181,6 @@ namespace DangNhap
         private void Timer_KTCongViec_Tick(object sender, EventArgs e)
         {
             appTime++;
-            NTFIcon_ThongBaoCV.Visible = false;
             if (appTime < Constraint.NotifyTime)
                 return;
             else if (appTime == Constraint.NotifyTime)
@@ -201,8 +200,7 @@ namespace DangNhap
                 if (curUnfJob > 0 && soCongViec != curUnfJob)
                 {
                     soCongViec = tomorowJobs.Count;
-                    NTFIcon_ThongBaoCV.Visible = true;
-                    NTFIcon_ThongBaoCV.ShowBalloonTip(Constraint.NotifyTimeOut, "Thông báo công việc chưa hoàn thành", string.Format("Bạn có {0} công việc sắp đến hạn vào ngày mai", soCongViec), ToolTipIcon.Info);
+                    ShowNotification("Thông báo công việc chưa hoàn thành", string.Format("Bạn có {0} công việc sắp đến hạn vào ngày mai", soCongViec));
                 }
 
                 // Kiểm tra những công việc của NHÂN VIÊN chưa bắt đầu làm
@@ -222,8 +220,7 @@ namespace DangNhap
                     if (curAllJobs > 0 && curAllJobs != AllUndoJob)
                     {
                         AllUndoJob = curAllJobs;
-                        NTFIcon_ThongBaoCV.Visible = true;
-                        NTFIcon_ThongBaoCV.ShowBalloonTip(Constraint.NotifyTimeOut, "Thông báo công việc chưa cập nhật của toàn bộ Nhân viên", string.Format("Có {0} công việc chưa được cập nhật tình trạng", curAllJobs), ToolTipIcon.Info);
+                        ShowNotification("Thông báo công việc chưa cập nhật của toàn bộ Nhân viên", string.Format("Có {0} công việc chưa được cập nhật tình trạng", curAllJobs));
                     }
                 }
                 else
@@ -241,15 +238,18 @@ namespace DangNhap
                     if (curUndoJob > 0 && curUndoJob != undoJob)
                     {
                         undoJob = curUndoJob;
-                        NTFIcon_ThongBaoCV.Visible = true;
-                        NTFIcon_ThongBaoCV.ShowBalloonTip(Constraint.NotifyTimeOut, "Thông báo công việc chưa bắt đầu", string.Format("Bạn có {0} công việc chưa bắt đầu", curUndoJob), ToolTipIcon.Info);
+                        ShowNotification("Thông báo công việc chưa bắt đầu", string.Format("Bạn có {0} công việc chưa bắt đầu", curUndoJob));
                     }
                 }
-
             }
             // reset timer
             Timer_KTCongViec.Stop();
-            NTFIcon_ThongBaoCV.Visible = false;
+        }
+
+        private void ShowNotification(string title, string content)
+        {
+            NTFIcon_ThongBaoCV.Visible = true;
+            NTFIcon_ThongBaoCV.ShowBalloonTip(Constraint.NotifyTimeOut, title, content, ToolTipIcon.Info);
         }
 
         private void CountJobState()

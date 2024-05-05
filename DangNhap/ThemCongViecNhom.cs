@@ -17,10 +17,12 @@ namespace DangNhap
     public partial class ThemCongViecNhom : Form
     {
         private CongViecChung parent;
-        public ThemCongViecNhom(CongViecChung parent)
+        Account currentAccount;
+        public ThemCongViecNhom(CongViecChung parent, Account currentAccount)
         {
             InitializeComponent();
             this.parent = parent;
+            this.currentAccount = currentAccount;
         }
 
         private List<Division> GetPhongBan()
@@ -34,8 +36,42 @@ namespace DangNhap
             CBB_phongban.Enabled = true;
             CBB_phongban.Items.Clear();
             List<Division> listPhongBan = GetPhongBan();
+
+            DataTable listQuanLy = EmployeeBLL.Instance.GetManager();
+            bool isManager = false;
+            bool isDV = false;
+            string maBoPhan = "";
+
+            foreach (DataRow row in listQuanLy.Rows)
+            {
+                if (row["maNhanVien"].ToString().Equals(currentAccount.EmployeeId))
+                {
+                    isManager = true;
+                    if (row["maNhanVien"].ToString().Split('-')[0].Equals("DV"))
+                    {
+                        isDV = true;
+                    }
+                    maBoPhan = row["maNhanVien"].ToString().Split('-')[0];
+                    break;
+                }
+            }
+
+            // Quản lý chỉ có thể thêm công việc cho Phòng ban mình quản lý và không phải DV
+            if (isManager && !isDV)
+            {
+                for (int i = 0; i < listPhongBan.Count; i++)
+                {
+                    if (!string.IsNullOrEmpty(maBoPhan))
+                        if (listPhongBan[i].MaBoPhan.Equals(maBoPhan))
+                            CBB_phongban.Items.Add(listPhongBan[i].MaBoPhan + "-" + listPhongBan[i].TenBoPhan);
+                }
+                return;
+            }
+
             for (int i = 0; i < listPhongBan.Count; i++)
             {
+                if (currentAccount.Level.Equals("DV") && listPhongBan[i].MaBoPhan.Equals("TC"))
+                    continue;
                 CBB_phongban.Items.Add(listPhongBan[i].MaBoPhan + "-" + listPhongBan[i].TenBoPhan);
             }
         }
