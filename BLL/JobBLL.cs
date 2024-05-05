@@ -238,6 +238,42 @@ namespace BLL
         public DataTable GetJobOfEmployeesPQ(int quyen,Employee e, String level)
         {
             DataTable jobs = JobDAO.Instance.GetJobOfEmployees(quyen);
+            // kiểm tra có phải là quản lý hay không
+            DataTable listQuanLy = EmployeeBLL.Instance.GetManager();
+            bool isManager = false;
+
+            foreach (DataRow row in listQuanLy.Rows)
+            {
+                if (row["maNhanVien"].ToString().Equals(e.MaNhanVien))
+                {
+                    isManager = true;
+                    break;
+                }
+            }
+
+            if (isManager)
+            {
+                DataTable job = new DataTable();
+
+                foreach (DataColumn column in jobs.Columns)
+                {
+                    job.Columns.Add(new DataColumn(column.ColumnName, column.DataType));
+                }
+
+                foreach (DataRow jRow in jobs.Rows)
+                {
+                    if (jRow["Mã Bộ phận"].ToString().Equals(e.MaBoPhan))
+                    {
+                        DataRow newRow = job.NewRow();
+                        foreach (DataColumn column in jobs.Columns)
+                        {
+                            newRow[column.ColumnName] = jRow[column.ColumnName];
+                        }
+                        job.Rows.Add(newRow);
+                    }
+                }
+                return job;
+            }
             DataTable GetJob0()
             {
                 DataTable jobs0 = new DataTable();
@@ -317,6 +353,42 @@ namespace BLL
         public DataTable GetJobOfGroupsPQ(int quyen, Employee e, String level)
         {
             DataTable jobs = JobDAO.Instance.GetJobOfGroups(quyen);
+            // kiểm tra có phải là quản lý hay không
+            DataTable listQuanLy = EmployeeBLL.Instance.GetManager();
+            bool isManager = false;
+
+            foreach (DataRow row in listQuanLy.Rows)
+            {
+                if (row["maNhanVien"].ToString().Equals(e.MaNhanVien))
+                {
+                    isManager = true;
+                    break;
+                }
+            }
+
+            if (isManager)
+            {
+                DataTable job = new DataTable();
+
+                foreach (DataColumn column in jobs.Columns)
+                {
+                    job.Columns.Add(new DataColumn(column.ColumnName, column.DataType));
+                }
+
+                foreach (DataRow jRow in jobs.Rows)
+                {
+                    if (jRow["Mã Bộ phận"].ToString().Equals(e.MaBoPhan))
+                    {
+                        DataRow newRow = job.NewRow();
+                        foreach (DataColumn column in jobs.Columns)
+                        {
+                            newRow[column.ColumnName] = jRow[column.ColumnName];
+                        }
+                        job.Rows.Add(newRow);
+                    }
+                }
+                return job;
+            }
             DataTable GetJob0()
             {
                 DataTable jobs0 = new DataTable();
@@ -395,6 +467,42 @@ namespace BLL
             if(quyen == 0)
                 quyen = 1;
             DataTable jobs = JobDAO.Instance.GetJobOfDivisions(quyen);
+            // kiểm tra có phải là quản lý hay không
+            DataTable listQuanLy = EmployeeBLL.Instance.GetManager();
+            bool isManager = false;
+
+            foreach (DataRow row in listQuanLy.Rows)
+            {
+                if (row["maNhanVien"].ToString().Equals(e.MaNhanVien))
+                {
+                    isManager = true;
+                    break;
+                }
+            }
+
+            if (isManager)
+            {
+                DataTable job = new DataTable();
+
+                foreach (DataColumn column in jobs.Columns)
+                {
+                    job.Columns.Add(new DataColumn(column.ColumnName, column.DataType));
+                }
+
+                foreach (DataRow jRow in jobs.Rows)
+                {
+                    if (jRow["Mã Bộ phận"].ToString().Equals(e.MaBoPhan))
+                    {
+                        DataRow newRow = job.NewRow();
+                        foreach (DataColumn column in jobs.Columns)
+                        {
+                            newRow[column.ColumnName] = jRow[column.ColumnName];
+                        }
+                        job.Rows.Add(newRow);
+                    }
+                }
+                return job;
+            }
             DataTable GetJob1()
             {
                 DataTable jobs1 = new DataTable();
