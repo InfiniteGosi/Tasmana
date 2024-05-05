@@ -140,6 +140,9 @@
         7ohcAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="BTN_in.Location" type="System.Drawing.Point, System.Drawing">
+    <value>277, 735</value>
+  </data>
   <data name="BTN_in.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 37</value>
   </data>
@@ -169,6 +172,9 @@
         C8+dvVnp9HTELlMujNrjr4KW3t6f5VXQsn0DuiP9NnykVusv6k2HR9P7+Z8AAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="BTN_PDF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>169, 735</value>
+  </data>
   <data name="BTN_PDF.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 37</value>
   </data>
@@ -195,6 +201,9 @@
         27jxAfLgzD8T4MZaIQz/A/yZADs4Eln9hoiaAjSSqgGW0f+L3Si37HJQKn0AqxM8fx1MQc4AAAAASUVO
         RK5CYII=
 </value>
+  </data>
+  <data name="BTN_excel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 735</value>
   </data>
   <data name="BTN_excel.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 37</value>

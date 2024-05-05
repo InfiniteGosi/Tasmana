@@ -21,10 +21,26 @@ namespace DangNhap
     public partial class CuDan : Form
     {
         private int index = 0;
-        public CuDan()
+        Account currentAccount;
+        public CuDan(Account currentAccount)
         {
             SyncfusionLicenseProvider.RegisterLicense("MzIxOTI2MkAzMjM1MmUzMDJlMzBORkJZeFRVdUQxeERjT2xkWC9vdFgxS29wUmREOU9CZVdENkRUN0lrSStVPQ==;Mgo+DSMBaFt6QHFqVkNrXVNbdV5dVGpAd0N3RGlcdlR1fUUmHVdTRHRbQlliS3xTck1hW35Wcnc=");
             InitializeComponent();
+            this.currentAccount = currentAccount;
+            PhanQuyen();
+        }
+        private void PhanQuyen()
+        {
+            if(currentAccount.Level.Equals("CEO") || currentAccount.Level.Equals("DV"))
+            {
+                BTN_themcudan.Enabled = true;
+                BTN_themcudan.Visible = true;
+            }
+            else
+            {
+                BTN_themcudan.Enabled = false;
+                BTN_themcudan.Visible = false;
+            }
         }
         public void DisplayGGC_chuho()
         {

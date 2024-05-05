@@ -44,7 +44,6 @@ namespace DangNhap
             this.DTP_TuNgay = new System.Windows.Forms.DateTimePicker();
             this.GGC_ThongKe = new Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl();
             this.RBtn_Congty = new System.Windows.Forms.RadioButton();
-            this.LB_ThongBao1 = new System.Windows.Forms.Label();
             this.LB_LoaiDoThi = new System.Windows.Forms.Label();
             this.CBB_LoaiDoThi = new System.Windows.Forms.ComboBox();
             this.Btn_XuatDoThi = new Guna.UI.WinForms.GunaGradientButton();
@@ -161,12 +160,6 @@ namespace DangNhap
             this.RBtn_Congty.TabStop = true;
             this.RBtn_Congty.UseVisualStyleBackColor = true;
             this.RBtn_Congty.CheckedChanged += new System.EventHandler(this.RBtn_PhongBan_CheckedChanged);
-            // 
-            // LB_ThongBao1
-            // 
-            resources.ApplyResources(this.LB_ThongBao1, "LB_ThongBao1");
-            this.LB_ThongBao1.ForeColor = System.Drawing.Color.White;
-            this.LB_ThongBao1.Name = "LB_ThongBao1";
             // 
             // LB_LoaiDoThi
             // 
@@ -311,7 +304,6 @@ namespace DangNhap
             this.PN_hienthi.Controls.Add(this.CBB_PhongBan);
             this.PN_hienthi.Controls.Add(this.RBtn_Congty);
             this.PN_hienthi.Controls.Add(this.CBB_NhanVien);
-            this.PN_hienthi.Controls.Add(this.LB_ThongBao1);
             this.PN_hienthi.Controls.Add(this.LB_PhongBan);
             this.PN_hienthi.Controls.Add(this.LB_LoaiDoThi);
             this.PN_hienthi.Controls.Add(this.LB_NhanVien);
@@ -479,7 +471,6 @@ namespace DangNhap
         private System.Windows.Forms.DateTimePicker DTP_TuNgay;
         private Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl GGC_ThongKe;
         private System.Windows.Forms.RadioButton RBtn_Congty;
-        private System.Windows.Forms.Label LB_ThongBao1;
         private System.Windows.Forms.Label LB_LoaiDoThi;
         private System.Windows.Forms.ComboBox CBB_LoaiDoThi;
         private Guna.UI.WinForms.GunaGradientButton Btn_XuatDoThi;
