@@ -33,7 +33,14 @@ namespace DangNhap
             // Load dữ liệu lên CBB căn hộ
             LoadCanHo();    
         }
-
+        private bool CheckPayState()
+        {
+            if (CBB_tinhTrangThanhToan.SelectedItem.Equals("Đã thanh toán"))
+            {
+                return true;
+            }
+            return false;
+        }
         private Dictionary<string, object> AddParameterChiPhiHangThang()
         {
             Dictionary<string, object> dict = new Dictionary<string, object>
@@ -44,7 +51,7 @@ namespace DangNhap
                 {"@phiQuanLyHangThang", int.Parse(TXB_phiQuanLy.Text) },
                 {"@tinhTrangThanhToan", CBB_tinhTrangThanhToan.SelectedItem.ToString()},
                 {"@ngayGhi", DTP_ngay.Value},
-                {"@ngayThanhToan", null}
+                {"@ngayThanhToan", CheckPayState() ? (object)DateTime.Now : null}
             };
             return dict;
         }
