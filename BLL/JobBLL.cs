@@ -242,10 +242,25 @@ namespace BLL
             {
                 DataTable jobs0 = new DataTable();
                 DataTable j = JobDAO.Instance.GetJobOfEmployees(0);
-                for (int i = 0; i < j.Rows.Count; i++)
+
+                // Create columns in the DataTable based on the columns in 'j' DataTable
+                foreach (DataColumn column in j.Columns)
                 {
-                    if (j.Rows[i]["Mã nhân viên"].ToString() == e.MaNhanVien)
-                        jobs0.ImportRow(j.Rows[i]);
+                    jobs0.Columns.Add(new DataColumn(column.ColumnName, column.DataType));
+                }
+
+                // Iterate through each row in 'j' DataTable and copy rows for the specified employee to 'jobs0' DataTable
+                foreach (DataRow jRow in j.Rows)
+                {
+                    if (jRow["Mã nhân viên"].ToString().Equals(e.MaNhanVien))
+                    {
+                        DataRow newRow = jobs0.NewRow();
+                        foreach (DataColumn column in j.Columns)
+                        {
+                            newRow[column.ColumnName] = jRow[column.ColumnName];
+                        }
+                        jobs0.Rows.Add(newRow);
+                    }
                 }
                 return jobs0;
             }
@@ -253,13 +268,25 @@ namespace BLL
             {
                 DataTable jobs1 = new DataTable();
                 DataTable j = JobDAO.Instance.GetJobOfEmployees(1);
-                for (int i = 0; i < j.Rows.Count; i++)
+
+                // Create columns in the DataTable based on the columns in 'j' DataTable
+                foreach (DataColumn column in j.Columns)
                 {
-                    if (j.Rows[i]["Mã Bộ phận"].ToString() == e.MaBoPhan)
-                        jobs1.ImportRow(j.Rows[i]);
+                    jobs1.Columns.Add(new DataColumn(column.ColumnName, column.DataType));
                 }
+
+                // Iterate through each row in 'j' DataTable and copy rows for the specified department to 'jobs1' DataTable
+                foreach (DataRow jRow in j.Rows)
+                {
+                    if (jRow["Mã Bộ phận"].ToString() == e.MaBoPhan)
+                    {
+                        jobs1.ImportRow(jRow);
+                    }
+                }
+
                 return jobs1;
             }
+
             DataTable GetJob2()
             {
                 DataTable j = JobDAO.Instance.GetJobOfEmployees(2);
@@ -294,24 +321,48 @@ namespace BLL
             {
                 DataTable jobs0 = new DataTable();
                 DataTable j = JobDAO.Instance.GetJobOfGroups(0);
-                for (int i = 0; i < j.Rows.Count; i++)
+
+                // Create columns in the DataTable based on the columns in 'j' DataTable
+                foreach (DataColumn column in j.Columns)
                 {
-                    if (j.Rows[i]["Mã nhóm"].ToString() == e.MaNhom)
-                        jobs0.ImportRow(j.Rows[i]);
+                    jobs0.Columns.Add(new DataColumn(column.ColumnName, column.DataType));
                 }
+
+                // Iterate through each row in 'j' DataTable and copy rows for the specified group to 'jobs0' DataTable
+                foreach (DataRow jRow in j.Rows)
+                {
+                    if (jRow["Mã nhóm"].ToString() == e.MaNhom)
+                    {
+                        jobs0.ImportRow(jRow);
+                    }
+                }
+
                 return jobs0;
             }
+
             DataTable GetJob1()
             {
                 DataTable jobs1 = new DataTable();
                 DataTable j = JobDAO.Instance.GetJobOfGroups(1);
-                for (int i = 0; i < j.Rows.Count; i++)
+
+                // Create columns in the DataTable based on the columns in 'j' DataTable
+                foreach (DataColumn column in j.Columns)
                 {
-                    if (j.Rows[i]["Mã Bộ phận"].ToString() == e.MaBoPhan)
-                        jobs1.ImportRow(j.Rows[i]);
+                    jobs1.Columns.Add(new DataColumn(column.ColumnName, column.DataType));
                 }
+
+                // Iterate through each row in 'j' DataTable and copy rows for the specified department to 'jobs1' DataTable
+                foreach (DataRow jRow in j.Rows)
+                {
+                    if (jRow["Mã Bộ phận"].ToString() == e.MaBoPhan)
+                    {
+                        jobs1.ImportRow(jRow);
+                    }
+                }
+
                 return jobs1;
             }
+
             DataTable GetJob2()
             {
                 DataTable j = JobDAO.Instance.GetJobOfGroups(2);
@@ -348,13 +399,25 @@ namespace BLL
             {
                 DataTable jobs1 = new DataTable();
                 DataTable j = JobDAO.Instance.GetJobOfGroups(1);
-                for (int i = 0; i < j.Rows.Count; i++)
+
+                // Create columns in the DataTable based on the columns in 'j' DataTable
+                foreach (DataColumn column in j.Columns)
                 {
-                    if (j.Rows[i]["Mã Bộ phận"].ToString() == e.MaBoPhan)
-                        jobs1.ImportRow(j.Rows[i]);
+                    jobs1.Columns.Add(new DataColumn(column.ColumnName, column.DataType));
                 }
+
+                // Iterate through each row in 'j' DataTable and copy rows for the specified department to 'jobs1' DataTable
+                foreach (DataRow jRow in j.Rows)
+                {
+                    if (jRow["Mã Bộ phận"].ToString() == e.MaBoPhan)
+                    {
+                        jobs1.ImportRow(jRow);
+                    }
+                }
+
                 return jobs1;
             }
+
             DataTable GetJob2()
             {
                 DataTable j = JobDAO.Instance.GetJobOfGroups(2);
