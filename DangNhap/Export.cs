@@ -12,6 +12,8 @@ using Syncfusion.Pdf.Graphics;
 using Syncfusion.Windows.Forms.Grid.Grouping;
 using Syncfusion.XlsIO;
 using Syncfusion.Pdf;
+
+
 namespace DangNhap
 {
     internal class Export
@@ -95,39 +97,55 @@ namespace DangNhap
             oSheet.get_Range(c1, c2).HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
             oSheet.Columns.AutoFit();
         }
-        public void ToPDF(DataTable dataTable, String path)
+        public void ToPDF(DataTable dataTable, string path, string title)
         {
-            // Tạo một tệp PDF mới
-            Document document = new Document();
-            PdfWriter.GetInstance(document, new FileStream(path, FileMode.Create));
+            // Create a document with landscape orientation
+            Document document = new Document(PageSize.A4.Rotate());
 
-            // Mở tài liệu để bắt đầu viết dữ liệu vào
+            PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(path, FileMode.Create));
             document.Open();
 
-            // Tạo một bảng PDF với số cột bằng với số cột trong DataTable
+            // Create font
+            BaseFont baseFont = BaseFont.CreateFont(@"C:\Windows\Fonts\times.ttf", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
+            Font font = new Font(baseFont);
+
+            // Create a font for the title (larger size and bold)
+            Font titleFont = new Font(baseFont, 20, Font.BOLD);
+
+            // Create a paragraph with the title
+            Paragraph titleParagraph = new Paragraph(title, titleFont);
+
+            // Set alignment to center
+            titleParagraph.Alignment = iTextSharp.text.Element.ALIGN_CENTER;
+
+            // Add some space between title and table
+            titleParagraph.SpacingAfter = 10f;
+
+            // Add the paragraph to the document
+            document.Add(titleParagraph);
+
+            // Create table
             PdfPTable pdfTable = new PdfPTable(dataTable.Columns.Count);
 
-            // Thêm tiêu đề cho từng cột
+            // Add headers
             foreach (DataColumn column in dataTable.Columns)
             {
-                pdfTable.AddCell(new Phrase(column.ColumnName));
+                PdfPCell cell = new PdfPCell(new Phrase(column.ColumnName, font));
+                pdfTable.AddCell(cell);
             }
 
-            // Thêm dữ liệu từ DataTable vào bảng PDF
+            // Add data rows
             foreach (DataRow row in dataTable.Rows)
             {
-                foreach (object item in row.ItemArray)
+                foreach (object cellValue in row.ItemArray)
                 {
-                    pdfTable.AddCell(new Phrase(item.ToString()));
+                    PdfPCell cell = new PdfPCell(new Phrase(cellValue.ToString(), font));
+                    pdfTable.AddCell(cell);
                 }
             }
 
-            // Thêm bảng vào tài liệu
             document.Add(pdfTable);
-
-            // Đóng tài liệu sau khi đã hoàn thành việc ghi dữ liệu
             document.Close();
-
         }
     }
 }
