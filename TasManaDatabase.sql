@@ -635,7 +635,7 @@ GO
 CREATE PROCEDURE [dbo].[EditHoaDonHangThang]
 	@billID int,
 	@maCanHo VARCHAR(10),
-	@soDienNuocHangThang float,
+	@soDienHangThang float,
 	@soNuocHangThang float,
 	@phiQuanLyHangThang int,
 	@tinhTrangThanhToan NVARCHAR(100),
@@ -644,7 +644,7 @@ CREATE PROCEDURE [dbo].[EditHoaDonHangThang]
 AS
 BEGIN
 	UPDATE ChiPhiHangThang
-	SET soDienHangThang = @soDienNuocHangThang, 
+	SET soDienHangThang = @soDienHangThang, 
 	soNuocHangThang = @soNuocHangThang, 
 	phiQuanLyHangThang = @phiQuanLyHangThang, 
 	tinhTrangThanhToan = @tinhTrangThanhToan, 
@@ -2204,8 +2204,18 @@ CREATE PROCEDURE [dbo].[ThongKeCuDanNguocNgoai]
 AS
 BEGIN
 	SELECT maCuDan as N'Mã cư dân', hoTen as N'Họ tên', SDT as N'Số điện thoại', quocTich as 'Quốc tịch' 
-	FROM CuDan
-	WHERE quocTich != 'vietnam' and quocTich != N'Việt Nam'
+    FROM ChuHo
+    WHERE quocTich != 'vietnam' and quocTich != N'Việt Nam'
+	UNION
+
+    SELECT maCuDan as N'Mã cư dân', hoTen as N'Họ tên', SDT as N'Số điện thoại', quocTich as 'Quốc tịch' 
+    FROM KhachNganNgay
+    WHERE quocTich != 'vietnam' and quocTich != N'Việt Nam'
+	UNION
+
+    SELECT maCuDan as N'Mã cư dân', hoTen as N'Họ tên', SDT as N'Số điện thoại', quocTich as 'Quốc tịch' 
+    FROM NguoiDcUyQuyenChuHo
+    WHERE quocTich != 'vietnam' and quocTich != N'Việt Nam'
 END
 ------------------------------------------------------------------------------------------------------------------------------------------
 GO
@@ -2213,9 +2223,19 @@ GO
 CREATE PROCEDURE [dbo].[ThongKeCuDanVietNam]
 AS
 BEGIN
-	SELECT maCuDan as N'Mã cư dân', hoTen as N'Họ tên', SDT as N'Số điện thoại', quocTich as 'Quốc tịch' 
-	FROM CuDan
-	WHERE quocTich = 'vietnam' or quocTich = N'Việt Nam'
+    SELECT maCuDan as N'Mã cư dân', hoTen as N'Họ tên', SDT as N'Số điện thoại', quocTich as 'Quốc tịch' 
+    FROM ChuHo
+    WHERE quocTich = 'vietnam' OR quocTich = N'Việt Nam'
+	UNION
+
+    SELECT maCuDan as N'Mã cư dân', hoTen as N'Họ tên', SDT as N'Số điện thoại', quocTich as 'Quốc tịch' 
+    FROM KhachNganNgay
+    WHERE quocTich = 'vietnam' OR quocTich = N'Việt Nam'
+	UNION
+
+    SELECT maCuDan as N'Mã cư dân', hoTen as N'Họ tên', SDT as N'Số điện thoại', quocTich as 'Quốc tịch' 
+    FROM NguoiDcUyQuyenChuHo
+    WHERE quocTich = 'vietnam' OR quocTich = N'Việt Nam'
 END
 ------------------------------------------------------------------------------------------------------------------------------------------
 GO
