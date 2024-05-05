@@ -45,7 +45,6 @@ namespace DangNhap
             // 
             // BTN_dagui
             // 
-            resources.ApplyResources(this.BTN_dagui, "BTN_dagui");
             this.BTN_dagui.AnimationHoverSpeed = 0.5F;
             this.BTN_dagui.AnimationSpeed = 0.03F;
             this.BTN_dagui.BackColor = System.Drawing.Color.Transparent;
@@ -53,6 +52,7 @@ namespace DangNhap
             this.BTN_dagui.BorderColor = System.Drawing.Color.Transparent;
             this.BTN_dagui.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_dagui.FocusedColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.BTN_dagui, "BTN_dagui");
             this.BTN_dagui.ForeColor = System.Drawing.Color.White;
             this.BTN_dagui.Image = ((System.Drawing.Image)(resources.GetObject("BTN_dagui.Image")));
             this.BTN_dagui.ImageSize = new System.Drawing.Size(20, 20);
@@ -68,7 +68,6 @@ namespace DangNhap
             // 
             // BTN_quantrong
             // 
-            resources.ApplyResources(this.BTN_quantrong, "BTN_quantrong");
             this.BTN_quantrong.AnimationHoverSpeed = 0.5F;
             this.BTN_quantrong.AnimationSpeed = 0.03F;
             this.BTN_quantrong.BackColor = System.Drawing.Color.Transparent;
@@ -76,6 +75,7 @@ namespace DangNhap
             this.BTN_quantrong.BorderColor = System.Drawing.Color.Transparent;
             this.BTN_quantrong.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_quantrong.FocusedColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.BTN_quantrong, "BTN_quantrong");
             this.BTN_quantrong.ForeColor = System.Drawing.Color.White;
             this.BTN_quantrong.Image = ((System.Drawing.Image)(resources.GetObject("BTN_quantrong.Image")));
             this.BTN_quantrong.ImageSize = new System.Drawing.Size(20, 20);
@@ -91,7 +91,6 @@ namespace DangNhap
             // 
             // BTN_tatca
             // 
-            resources.ApplyResources(this.BTN_tatca, "BTN_tatca");
             this.BTN_tatca.AnimationHoverSpeed = 0.5F;
             this.BTN_tatca.AnimationSpeed = 0.03F;
             this.BTN_tatca.BackColor = System.Drawing.Color.Transparent;
@@ -99,6 +98,7 @@ namespace DangNhap
             this.BTN_tatca.BorderColor = System.Drawing.Color.Transparent;
             this.BTN_tatca.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_tatca.FocusedColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.BTN_tatca, "BTN_tatca");
             this.BTN_tatca.ForeColor = System.Drawing.Color.White;
             this.BTN_tatca.Image = ((System.Drawing.Image)(resources.GetObject("BTN_tatca.Image")));
             this.BTN_tatca.ImageSize = new System.Drawing.Size(20, 20);
@@ -114,7 +114,6 @@ namespace DangNhap
             // 
             // BTN_biensoan
             // 
-            resources.ApplyResources(this.BTN_biensoan, "BTN_biensoan");
             this.BTN_biensoan.AnimationHoverSpeed = 0.5F;
             this.BTN_biensoan.AnimationSpeed = 0.03F;
             this.BTN_biensoan.BackColor = System.Drawing.Color.Transparent;
@@ -123,13 +122,14 @@ namespace DangNhap
             this.BTN_biensoan.BorderSize = 1;
             this.BTN_biensoan.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_biensoan.FocusedColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.BTN_biensoan, "BTN_biensoan");
             this.BTN_biensoan.ForeColor = System.Drawing.Color.Gray;
             this.BTN_biensoan.Image = ((System.Drawing.Image)(resources.GetObject("BTN_biensoan.Image")));
             this.BTN_biensoan.ImageSize = new System.Drawing.Size(20, 20);
             this.BTN_biensoan.Name = "BTN_biensoan";
             this.BTN_biensoan.OnHoverBaseColor = System.Drawing.Color.LightGray;
             this.BTN_biensoan.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.BTN_biensoan.OnHoverForeColor = System.Drawing.Color.LightGray;
+            this.BTN_biensoan.OnHoverForeColor = System.Drawing.Color.DimGray;
             this.BTN_biensoan.OnHoverImage = null;
             this.BTN_biensoan.OnPressedColor = System.Drawing.Color.Black;
             this.BTN_biensoan.Radius = 10;

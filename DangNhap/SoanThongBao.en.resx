@@ -360,6 +360,9 @@
         gg==
 </value>
   </data>
+  <data name="gunaGradientButton1.Text" xml:space="preserve">
+    <value>Send</value>
+  </data>
   <data name="LB_soantin.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -525,7 +528,7 @@
         7/jjjj/s+OWOH+l4K7s/85n/AwcgzALB8zWpAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
 </root>

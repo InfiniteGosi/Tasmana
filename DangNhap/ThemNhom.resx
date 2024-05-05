@@ -192,8 +192,8 @@
   <data name="BTN_xoa.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;LB_maphongban.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="CBB_nhanvien.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -225,9 +225,6 @@
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ThemNhom</value>
   </data>
-  <data name="LB_MaNhom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 234</value>
-  </data>
   <data name="&gt;&gt;panel4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -254,6 +251,9 @@
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
+  </data>
+  <data name="TXB_maNhom.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
   </data>
   <data name="TXB_maNhom.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -409,8 +409,8 @@
         7/jjjj/s+OWOH+l4K7s/85n/AwcgzALB8zWpAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="TXB_maNhom.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;LB_MaNhom.Parent" xml:space="preserve">
+    <value>PN_main</value>
   </data>
   <data name="&gt;&gt;CBB_phongban.Parent" xml:space="preserve">
     <value>PN_main</value>
@@ -454,8 +454,8 @@
   <data name="BTN_xoa.Text" xml:space="preserve">
     <value>Xóa</value>
   </data>
-  <data name="&gt;&gt;BTN_thoat.Type" xml:space="preserve">
-    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  <data name="TXB_maNhom.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
     <value>PN_main</value>
@@ -525,9 +525,6 @@
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="CBB_nhanvien.Location" type="System.Drawing.Point, System.Drawing">
     <value>220, 133</value>
@@ -619,8 +616,11 @@
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>1, 460</value>
   </data>
-  <data name="TXB_maNhom.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
+  <data name="LB_MaNhom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 234</value>
+  </data>
+  <data name="&gt;&gt;BTN_thoat.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
   <data name="&gt;&gt;LB_themmoi.Name" xml:space="preserve">
     <value>LB_themmoi</value>
@@ -643,11 +643,11 @@
   <data name="&gt;&gt;BTN_ok.Name" xml:space="preserve">
     <value>BTN_ok</value>
   </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="&gt;&gt;CBB_nhanvien.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LB_maphongban.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="LB_maphongban.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
@@ -673,13 +673,10 @@
   <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
     <value>PN_main</value>
   </data>
-  <data name="&gt;&gt;LB_MaNhom.Parent" xml:space="preserve">
-    <value>PN_main</value>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>en</value>
   </metadata>
 </root>

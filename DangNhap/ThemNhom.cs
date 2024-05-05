@@ -206,12 +206,12 @@ namespace DangNhap
             }
             if (SaveGroup())
             {
-                MessageBox.Show("Successful change");
+                MessageBox.Show("Added Successfully");
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Change failed");
+                MessageBox.Show("Added Failed");
             }
         }
         private void BTN_ok_Click(object sender, EventArgs e)

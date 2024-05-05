@@ -126,7 +126,7 @@
     <value>Times New Roman, 9pt</value>
   </data>
   <data name="BTN_themnhanvien.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1216, 59</value>
+    <value>1216, 47</value>
   </data>
   <data name="BTN_themnhanvien.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 35</value>
@@ -154,7 +154,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="GGC_danhsachnv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>65, 100</value>
+    <value>65, 88</value>
   </data>
   <data name="GGC_danhsachnv.Size" type="System.Drawing.Size, System.Drawing">
     <value>1281, 599</value>
@@ -184,7 +184,7 @@
     <value>Times New Roman, 9pt</value>
   </data>
   <data name="BTN_themnhom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>761, 59</value>
+    <value>1077, 47</value>
   </data>
   <data name="BTN_themnhom.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 35</value>
@@ -214,7 +214,7 @@
     <value>Times New Roman, 9pt</value>
   </data>
   <data name="BTN_PhongBan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>920, 59</value>
+    <value>799, 47</value>
   </data>
   <data name="BTN_PhongBan.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 35</value>
@@ -256,7 +256,7 @@
 </value>
   </data>
   <data name="BTN_in.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 705</value>
+    <value>281, 693</value>
   </data>
   <data name="BTN_in.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 37</value>
@@ -303,7 +303,7 @@
 </value>
   </data>
   <data name="BTN_PDF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>173, 705</value>
+    <value>173, 693</value>
   </data>
   <data name="BTN_PDF.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 37</value>
@@ -348,7 +348,7 @@
 </value>
   </data>
   <data name="BTN_excel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>65, 705</value>
+    <value>65, 693</value>
   </data>
   <data name="BTN_excel.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 37</value>
@@ -378,7 +378,7 @@
     <value>Times New Roman, 9pt</value>
   </data>
   <data name="BTN_ThemQuanLy.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1072, 59</value>
+    <value>938, 47</value>
   </data>
   <data name="BTN_ThemQuanLy.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 35</value>

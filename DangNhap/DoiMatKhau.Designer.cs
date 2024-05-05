@@ -62,27 +62,27 @@
             // 
             // TXB_mkhientai
             // 
-            resources.ApplyResources(this.TXB_mkhientai, "TXB_mkhientai");
             this.TXB_mkhientai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.TXB_mkhientai.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.TXB_mkhientai, "TXB_mkhientai");
             this.TXB_mkhientai.ForeColor = System.Drawing.Color.White;
             this.TXB_mkhientai.Name = "TXB_mkhientai";
             this.TXB_mkhientai.UseSystemPasswordChar = true;
             // 
             // TXB_mkmoi
             // 
-            resources.ApplyResources(this.TXB_mkmoi, "TXB_mkmoi");
             this.TXB_mkmoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.TXB_mkmoi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.TXB_mkmoi, "TXB_mkmoi");
             this.TXB_mkmoi.ForeColor = System.Drawing.Color.White;
             this.TXB_mkmoi.Name = "TXB_mkmoi";
             this.TXB_mkmoi.UseSystemPasswordChar = true;
             // 
             // TXB_xacnhanmk
             // 
-            resources.ApplyResources(this.TXB_xacnhanmk, "TXB_xacnhanmk");
             this.TXB_xacnhanmk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.TXB_xacnhanmk.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.TXB_xacnhanmk, "TXB_xacnhanmk");
             this.TXB_xacnhanmk.ForeColor = System.Drawing.Color.White;
             this.TXB_xacnhanmk.Name = "TXB_xacnhanmk";
             this.TXB_xacnhanmk.UseSystemPasswordChar = true;
@@ -95,20 +95,20 @@
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // panel3
             // 
-            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
             // label5
@@ -125,31 +125,30 @@
             // 
             // panel4
             // 
-            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
             // panel5
             // 
-            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
             // 
             // panel6
             // 
-            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
             // 
             // panel7
             // 
-            resources.ApplyResources(this.panel7, "panel7");
             this.panel7.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel7, "panel7");
             this.panel7.Name = "panel7";
             // 
             // BTN_luu
             // 
-            resources.ApplyResources(this.BTN_luu, "BTN_luu");
             this.BTN_luu.Animated = true;
             this.BTN_luu.AnimationHoverSpeed = 0.5F;
             this.BTN_luu.AnimationSpeed = 0.03F;
@@ -159,6 +158,7 @@
             this.BTN_luu.BorderColor = System.Drawing.Color.Black;
             this.BTN_luu.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_luu.FocusedColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.BTN_luu, "BTN_luu");
             this.BTN_luu.ForeColor = System.Drawing.Color.White;
             this.BTN_luu.Image = null;
             this.BTN_luu.ImageSize = new System.Drawing.Size(20, 20);
@@ -175,7 +175,6 @@
             // 
             // BTN_close
             // 
-            resources.ApplyResources(this.BTN_close, "BTN_close");
             this.BTN_close.AnimationHoverSpeed = 0.07F;
             this.BTN_close.AnimationSpeed = 0.03F;
             this.BTN_close.BackColor = System.Drawing.Color.Transparent;
@@ -183,6 +182,7 @@
             this.BTN_close.BorderColor = System.Drawing.Color.Black;
             this.BTN_close.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_close.FocusedColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.BTN_close, "BTN_close");
             this.BTN_close.ForeColor = System.Drawing.Color.White;
             this.BTN_close.Image = ((System.Drawing.Image)(resources.GetObject("BTN_close.Image")));
             this.BTN_close.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;

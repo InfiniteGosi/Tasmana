@@ -52,17 +52,17 @@
             // 
             // TXB_employeId
             // 
-            resources.ApplyResources(this.TXB_employeId, "TXB_employeId");
             this.TXB_employeId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.TXB_employeId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.TXB_employeId, "TXB_employeId");
             this.TXB_employeId.ForeColor = System.Drawing.Color.White;
             this.TXB_employeId.Name = "TXB_employeId";
             // 
             // TXB_verify
             // 
-            resources.ApplyResources(this.TXB_verify, "TXB_verify");
             this.TXB_verify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.TXB_verify.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.TXB_verify, "TXB_verify");
             this.TXB_verify.ForeColor = System.Drawing.Color.White;
             this.TXB_verify.Name = "TXB_verify";
             // 
@@ -96,9 +96,9 @@
             // 
             // TXB_email
             // 
-            resources.ApplyResources(this.TXB_email, "TXB_email");
             this.TXB_email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.TXB_email.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.TXB_email, "TXB_email");
             this.TXB_email.ForeColor = System.Drawing.Color.White;
             this.TXB_email.Name = "TXB_email";
             // 
@@ -110,8 +110,8 @@
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // label4
@@ -122,43 +122,42 @@
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // panel3
             // 
-            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
             // panel7
             // 
-            resources.ApplyResources(this.panel7, "panel7");
             this.panel7.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel7, "panel7");
             this.panel7.Name = "panel7";
             // 
             // panel6
             // 
-            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
             // 
             // panel5
             // 
-            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
             // 
             // panel4
             // 
-            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
             // BTN_thoat
             // 
-            resources.ApplyResources(this.BTN_thoat, "BTN_thoat");
             this.BTN_thoat.AnimationHoverSpeed = 0.5F;
             this.BTN_thoat.AnimationSpeed = 0.03F;
             this.BTN_thoat.BackColor = System.Drawing.Color.Transparent;
@@ -167,6 +166,7 @@
             this.BTN_thoat.BorderColor = System.Drawing.Color.DimGray;
             this.BTN_thoat.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_thoat.FocusedColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.BTN_thoat, "BTN_thoat");
             this.BTN_thoat.ForeColor = System.Drawing.Color.Black;
             this.BTN_thoat.Image = ((System.Drawing.Image)(resources.GetObject("BTN_thoat.Image")));
             this.BTN_thoat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;

@@ -117,73 +117,284 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="LB_filedinhkem.Text" xml:space="preserve">
-    <value>File đính kèm:</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Thông báo từ</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TXB_title.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="TXB_title.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 13.8pt, style=Bold</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>916, 683</value>
+  <data name="TXB_title.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 78</value>
   </data>
-  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 682</value>
+  <data name="TXB_title.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="TXB_title.Size" type="System.Drawing.Size, System.Drawing">
+    <value>910, 44</value>
   </data>
-  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1, 682</value>
+  <data name="TXB_title.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="BTN_thoat.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 7.8pt, style=Bold</value>
+  <data name="&gt;&gt;TXB_title.Name" xml:space="preserve">
+    <value>TXB_title</value>
   </data>
-  <data name="LB_filedinhkem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
+  <data name="&gt;&gt;TXB_title.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>915, 1</value>
+  <data name="&gt;&gt;TXB_title.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
-    <value>panel3</value>
+  <data name="&gt;&gt;TXB_title.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="LB_author.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="LB_author.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 13.8pt</value>
   </data>
-  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="LB_author.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 26</value>
+  </data>
+  <data name="LB_author.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 26</value>
+  </data>
+  <data name="LB_author.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="LB_author.Text" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;LB_author.Name" xml:space="preserve">
+    <value>LB_author</value>
   </data>
   <data name="&gt;&gt;LB_author.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;LB_filedinhkem.Parent" xml:space="preserve">
+  <data name="&gt;&gt;LB_author.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="LLB_hienfile.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="&gt;&gt;LB_author.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="TXB_content.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TXB_content.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="TXB_content.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 161</value>
+  </data>
+  <data name="TXB_content.Size" type="System.Drawing.Size, System.Drawing">
+    <value>910, 453</value>
   </data>
   <data name="TXB_content.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
+  <data name="TXB_content.Text" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;TXB_content.Name" xml:space="preserve">
+    <value>TXB_content</value>
+  </data>
+  <data name="&gt;&gt;TXB_content.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TXB_content.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TXB_content.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="LLB_hienfile.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LLB_hienfile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 425</value>
   </data>
   <data name="LLB_hienfile.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 16</value>
   </data>
+  <data name="LLB_hienfile.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="LLB_hienfile.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;LLB_hienfile.Name" xml:space="preserve">
+    <value>LLB_hienfile</value>
+  </data>
+  <data name="&gt;&gt;LLB_hienfile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LLB_hienfile.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LLB_hienfile.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="LB_filedinhkem.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LB_filedinhkem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="LB_filedinhkem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 638</value>
+  </data>
+  <data name="LB_filedinhkem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 22</value>
+  </data>
+  <data name="LB_filedinhkem.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="LB_filedinhkem.Text" xml:space="preserve">
+    <value>File đính kèm:</value>
+  </data>
+  <data name="&gt;&gt;LB_filedinhkem.Name" xml:space="preserve">
+    <value>LB_filedinhkem</value>
+  </data>
+  <data name="&gt;&gt;LB_filedinhkem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LB_filedinhkem.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LB_filedinhkem.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 682</value>
+  </data>
+  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>914, 1</value>
+  </data>
+  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>915, 1</value>
+  </data>
+  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1, 682</value>
+  </data>
+  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="panel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 1</value>
+  </data>
+  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1, 682</value>
+  </data>
+  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>916, 1</value>
+  </data>
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 13.8pt</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 26</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 26</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Thông báo từ</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="BTN_thoat.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 7.8pt, style=Bold</value>
   </data>
   <data name="BTN_thoat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -297,257 +508,49 @@
         7/jjjj/s+OWOH+l4K7s/85n/AwcgzALB8zWpAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="&gt;&gt;LLB_hienfile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BTN_thoat.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="LLB_hienfile.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 13.8pt</value>
-  </data>
-  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;LB_filedinhkem.Name" xml:space="preserve">
-    <value>LB_filedinhkem</value>
-  </data>
-  <data name="LLB_hienfile.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="panel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="TXB_title.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 78</value>
-  </data>
-  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="LB_author.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 26</value>
-  </data>
-  <data name="&gt;&gt;BTN_thoat.Name" xml:space="preserve">
-    <value>BTN_thoat</value>
-  </data>
-  <data name="&gt;&gt;TXB_title.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TXB_title.Name" xml:space="preserve">
-    <value>TXB_title</value>
-  </data>
-  <data name="TXB_title.Size" type="System.Drawing.Size, System.Drawing">
-    <value>910, 44</value>
-  </data>
-  <data name="&gt;&gt;LB_filedinhkem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LB_author.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>ChiTietThongBao</value>
-  </data>
-  <data name="&gt;&gt;TXB_content.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TXB_title.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LB_author.Text" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="LB_author.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 26</value>
-  </data>
-  <data name="TXB_content.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;LB_author.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;BTN_thoat.Type" xml:space="preserve">
-    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="&gt;&gt;LLB_hienfile.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LLB_hienfile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 425</value>
+  <data name="BTN_thoat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>855, 1</value>
   </data>
   <data name="BTN_thoat.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 30</value>
   </data>
-  <data name="&gt;&gt;TXB_content.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="BTN_thoat.TabIndex" type="System.Int32, mscorlib">
+    <value>125</value>
   </data>
-  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
-    <value>50</value>
+  <data name="&gt;&gt;BTN_thoat.Name" xml:space="preserve">
+    <value>BTN_thoat</value>
   </data>
-  <data name="TXB_title.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="TXB_content.Size" type="System.Drawing.Size, System.Drawing">
-    <value>910, 453</value>
-  </data>
-  <data name="panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
+  <data name="&gt;&gt;BTN_thoat.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
   <data name="&gt;&gt;BTN_thoat.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;BTN_thoat.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LB_filedinhkem.AutoSize" type="System.Boolean, mscorlib">
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>en</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>916, 683</value>
   </data>
-  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 1</value>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
-  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="LB_filedinhkem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 638</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 26</value>
-  </data>
-  <data name="&gt;&gt;TXB_content.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
-  <data name="&gt;&gt;TXB_content.Name" xml:space="preserve">
-    <value>TXB_content</value>
-  </data>
-  <data name="TXB_title.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="BTN_thoat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>855, 1</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>52</value>
-  </data>
-  <data name="&gt;&gt;LB_filedinhkem.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>ChiTietThongBao</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ChiTietThongBao</value>
   </data>
-  <data name="&gt;&gt;TXB_title.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="LB_filedinhkem.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="TXB_content.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;LB_author.Name" xml:space="preserve">
-    <value>LB_author</value>
-  </data>
-  <data name="LB_filedinhkem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 22</value>
-  </data>
-  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="TXB_content.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 161</value>
-  </data>
-  <data name="TXB_title.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 13.8pt, style=Bold</value>
-  </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>916, 1</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1, 682</value>
-  </data>
-  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>914, 1</value>
-  </data>
-  <data name="TXB_title.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;LB_author.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="TXB_content.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
-  </data>
-  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
-  </data>
-  <data name="&gt;&gt;LLB_hienfile.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="LB_author.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 26</value>
-  </data>
-  <data name="&gt;&gt;LLB_hienfile.Name" xml:space="preserve">
-    <value>LLB_hienfile</value>
-  </data>
-  <data name="BTN_thoat.TabIndex" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>vi</value>
-  </metadata>
 </root>

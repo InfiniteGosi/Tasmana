@@ -174,8 +174,11 @@
         RK5CYII=
 </value>
   </data>
+  <data name="BTN_ThemQuanLy.Text" xml:space="preserve">
+    <value>Add manager</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
+    <value>NoControl</value>
   </data>
 </root>

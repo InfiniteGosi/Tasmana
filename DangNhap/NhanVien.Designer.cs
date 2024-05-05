@@ -87,8 +87,8 @@ namespace DangNhap
             this.BTN_themnhom.AnimationHoverSpeed = 0.3F;
             this.BTN_themnhom.AnimationSpeed = 0.03F;
             this.BTN_themnhom.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_themnhom.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
-            this.BTN_themnhom.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
+            this.BTN_themnhom.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(196)))), ((int)(((byte)(170)))));
+            this.BTN_themnhom.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(196)))), ((int)(((byte)(170)))));
             this.BTN_themnhom.BorderColor = System.Drawing.Color.Black;
             this.BTN_themnhom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_themnhom.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -98,8 +98,8 @@ namespace DangNhap
             this.BTN_themnhom.Image = null;
             this.BTN_themnhom.ImageSize = new System.Drawing.Size(20, 20);
             this.BTN_themnhom.Name = "BTN_themnhom";
-            this.BTN_themnhom.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(184)))));
-            this.BTN_themnhom.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(184)))));
+            this.BTN_themnhom.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(100)))), ((int)(((byte)(170)))));
+            this.BTN_themnhom.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(100)))), ((int)(((byte)(170)))));
             this.BTN_themnhom.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_themnhom.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_themnhom.OnHoverImage = null;
@@ -218,8 +218,8 @@ namespace DangNhap
             this.BTN_ThemQuanLy.AnimationHoverSpeed = 0.3F;
             this.BTN_ThemQuanLy.AnimationSpeed = 0.03F;
             this.BTN_ThemQuanLy.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_ThemQuanLy.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(156)))), ((int)(((byte)(46)))));
-            this.BTN_ThemQuanLy.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(156)))), ((int)(((byte)(46)))));
+            this.BTN_ThemQuanLy.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(187)))), ((int)(((byte)(225)))));
+            this.BTN_ThemQuanLy.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(187)))), ((int)(((byte)(225)))));
             this.BTN_ThemQuanLy.BorderColor = System.Drawing.Color.White;
             this.BTN_ThemQuanLy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_ThemQuanLy.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -229,8 +229,8 @@ namespace DangNhap
             this.BTN_ThemQuanLy.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_ThemQuanLy.ImageSize = new System.Drawing.Size(20, 20);
             this.BTN_ThemQuanLy.Name = "BTN_ThemQuanLy";
-            this.BTN_ThemQuanLy.OnHoverBaseColor1 = System.Drawing.Color.ForestGreen;
-            this.BTN_ThemQuanLy.OnHoverBaseColor2 = System.Drawing.Color.ForestGreen;
+            this.BTN_ThemQuanLy.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(225)))));
+            this.BTN_ThemQuanLy.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(100)))), ((int)(((byte)(225)))));
             this.BTN_ThemQuanLy.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_ThemQuanLy.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_ThemQuanLy.OnHoverImage = null;
