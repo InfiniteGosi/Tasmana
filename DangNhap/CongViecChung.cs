@@ -342,6 +342,10 @@ namespace DangNhap
                 }
                 else
                     maNhom = record.GetValue("Mã nhóm").ToString();
+                if (string.IsNullOrEmpty(maCongViec))
+                {
+                    return;
+                }
                 Job curJob = JobBLL.Instance.GetJobFromJobID(maCongViec);
                 string noiDungCV = curJob.NoiDung.ToString();
                 string ghiChu = curJob.GhiChu.ToString();
