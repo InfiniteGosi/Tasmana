@@ -246,7 +246,7 @@ namespace DangNhap
                         {
                             DataTable dataTable = GetDataTable(hd);
                             Export export = new Export();
-                            export.ToPDF(dataTable, save.FileName);
+                            export.ToPDF(dataTable, save.FileName,"CÔNG VIỆC");
 
                             MessageBox.Show("Successful", "Info");
                         }

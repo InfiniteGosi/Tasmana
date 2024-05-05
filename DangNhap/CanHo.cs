@@ -250,7 +250,7 @@ namespace DangNhap
                         {
                             DataTable dataTable = GetDataTable();
                             Export export = new Export();
-                            export.ToPDF(dataTable, save.FileName);
+                            export.ToPDF(dataTable, save.FileName, "CĂN HỘ");
 
                             MessageBox.Show("Successful", "Info");
                         }

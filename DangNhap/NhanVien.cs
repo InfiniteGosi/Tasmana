@@ -173,7 +173,7 @@ namespace DangNhap
                         {
                             DataTable dataTable = GetDataTable();
                             Export export = new Export();
-                            export.ToPDF(dataTable, save.FileName);
+                            export.ToPDF(dataTable, save.FileName, "NHÂN VIÊN");
 
                             MessageBox.Show("Successful", "Info");
                         }
