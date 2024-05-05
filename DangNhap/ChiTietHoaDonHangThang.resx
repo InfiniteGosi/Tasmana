@@ -439,6 +439,9 @@
   <data name="LB_NgayGhi.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 22</value>
   </data>
+  <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <data name="LB_tinhTrangThanhToan.TabIndex" type="System.Int32, mscorlib">
     <value>230</value>
   </data>
@@ -463,14 +466,14 @@
   <data name="LB_soNuocHangThang.Size" type="System.Drawing.Size, System.Drawing">
     <value>193, 22</value>
   </data>
-  <data name="&gt;&gt;TXB_MaCanHo.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
   <data name="&gt;&gt;LB_tinhTrangThanhToan.Name" xml:space="preserve">
     <value>LB_tinhTrangThanhToan</value>
   </data>
   <data name="&gt;&gt;LB_soNuocHangThang.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LB_soNuocHangThang.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="CBB_tinhTrangThanhToan.Items1" xml:space="preserve">
     <value>Đã thanh toán</value>
@@ -733,8 +736,8 @@
   <data name="&gt;&gt;LB_phiQuanLy.Name" xml:space="preserve">
     <value>LB_phiQuanLy</value>
   </data>
-  <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="&gt;&gt;TXB_MaCanHo.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <data name="LB_NgayGhi.Text" xml:space="preserve">
     <value>Ngày ghi</value>
@@ -774,9 +777,6 @@
   </data>
   <data name="&gt;&gt;BTN_thoat.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="&gt;&gt;BTN_Edit.Name" xml:space="preserve">
-    <value>BTN_Edit</value>
   </data>
   <data name="&gt;&gt;LB_tinhTrangThanhToan.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -832,8 +832,8 @@
   <data name="&gt;&gt;TXB_soDienHangThang.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;LB_soNuocHangThang.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="LB_BillHangThang.TabIndex" type="System.Int32, mscorlib">
+    <value>220</value>
   </data>
   <data name="&gt;&gt;DTP_ngay.Type" xml:space="preserve">
     <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -862,13 +862,13 @@
   <data name="&gt;&gt;panel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="LB_BillHangThang.TabIndex" type="System.Int32, mscorlib">
-    <value>220</value>
+  <data name="&gt;&gt;BTN_Edit.Name" xml:space="preserve">
+    <value>BTN_Edit</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>en</value>
+    <value>vi</value>
   </metadata>
 </root>

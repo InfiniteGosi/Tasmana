@@ -173,17 +173,32 @@
   <data name="LB_hinhanhcanho.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="LB_hinhanhcanho.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 254</value>
+  </data>
   <data name="LB_hinhanhcanho.Size" type="System.Drawing.Size, System.Drawing">
     <value>108, 22</value>
   </data>
   <data name="LB_hinhanhcanho.Text" xml:space="preserve">
     <value>Mall picture</value>
   </data>
+  <data name="BTN_xoa.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="BTN_luu.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
   <data name="BTN_lichsu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="BTN_lichsu.Text" xml:space="preserve">
+    <value>History</value>
+  </data>
   <data name="BTN_chung.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="BTN_chung.Text" xml:space="preserve">
+    <value>General</value>
   </data>
   <data name="label15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -19134,9 +19149,6 @@
   <data name="PB_hinhcanho.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="LB_macanho.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="LB_khachdangthue.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -19290,8 +19302,5 @@
         ADZUJn97x293/G/Hu/xZx/c/f8vL+oLv6Pj5jj/tmP6BoOntgq90/FbHFzs++/ylAMAgyufpvwv4uY7f
         7/jjjj/s+OWOH+l4K7s/85n/AwcgzALB8zWpAAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
 </root>

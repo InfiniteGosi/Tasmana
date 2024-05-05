@@ -72,7 +72,6 @@
             this.numericUpDownExt5 = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
             this.label17 = new System.Windows.Forms.Label();
             this.numericUpDownExt6 = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
-            this.LB_macanho = new System.Windows.Forms.Label();
             this.TXB_macanho = new System.Windows.Forms.TextBox();
             this.LB_khachdangthue = new System.Windows.Forms.Label();
             this.TXB_khachdangthue = new System.Windows.Forms.TextBox();
@@ -327,15 +326,14 @@
             this.PN_hienthi.Controls.Add(this.label9);
             this.PN_hienthi.Controls.Add(this.NUD_toilet);
             this.PN_hienthi.Controls.Add(this.NUD_phongngu);
-            this.PN_hienthi.Controls.Add(this.label7);
             this.PN_hienthi.Controls.Add(this.LB_hinhanhcanho);
             this.PN_hienthi.Controls.Add(this.PB_hinhcanho);
-            this.PN_hienthi.Controls.Add(this.LB_macanho);
             this.PN_hienthi.Controls.Add(this.TXB_macanho);
             this.PN_hienthi.Controls.Add(this.LB_khachdangthue);
             this.PN_hienthi.Controls.Add(this.TXB_khachdangthue);
             this.PN_hienthi.Controls.Add(this.LB_phongngu);
             this.PN_hienthi.Controls.Add(this.LB_thanhtoan);
+            this.PN_hienthi.Controls.Add(this.label7);
             this.PN_hienthi.Name = "PN_hienthi";
             // 
             // NUD_mucphiql
@@ -502,12 +500,6 @@
             this.numericUpDownExt6.BeforeTouchSize = new System.Drawing.Size(375, 30);
             this.numericUpDownExt6.ForeColor = System.Drawing.Color.White;
             this.numericUpDownExt6.Name = "numericUpDownExt6";
-            // 
-            // LB_macanho
-            // 
-            resources.ApplyResources(this.LB_macanho, "LB_macanho");
-            this.LB_macanho.ForeColor = System.Drawing.Color.White;
-            this.LB_macanho.Name = "LB_macanho";
             // 
             // TXB_macanho
             // 
@@ -682,7 +674,6 @@
         private Syncfusion.Windows.Forms.Tools.NumericUpDownExt numericUpDownExt5;
         private System.Windows.Forms.Label label17;
         private Syncfusion.Windows.Forms.Tools.NumericUpDownExt numericUpDownExt6;
-        private System.Windows.Forms.Label LB_macanho;
         private System.Windows.Forms.TextBox TXB_macanho;
         private System.Windows.Forms.Label LB_khachdangthue;
         private System.Windows.Forms.TextBox TXB_khachdangthue;
