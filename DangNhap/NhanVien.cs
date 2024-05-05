@@ -211,5 +211,19 @@ namespace DangNhap
             ThemPhongBan themPhongBan = new ThemPhongBan();
             themPhongBan.ShowDialog();
         }
+
+        private void BTN_ThemQuanLy_Click(object sender, EventArgs e)
+        {
+            ThemQuanLy th = new ThemQuanLy();
+            th.FormClosed += Th_FormClosed; // Thêm event handler cho sự kiện FormClosed
+            th.ShowDialog();
+        }
+
+        private void Th_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Thực hiện các thao tác sau khi form được đóng
+            // Ví dụ: refresh lại trang hiện tại
+            Refresh();
+        }
     }
 }

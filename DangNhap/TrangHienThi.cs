@@ -23,6 +23,8 @@ namespace DangNhap
         public TrangHienThi(Account currentAccount)
         {
             InitializeComponent();
+            Timer_KTCongViec.Start();
+            appTime = 0;
             this.currentAccount = currentAccount;
         }
         private Form currentFormChild;
@@ -302,9 +304,25 @@ namespace DangNhap
         private void PhanQuyen()
         {
             LB_tendangnhap.Text = $"Hello, {currentAccount.EmployeeId} - {currentAccount.Level}";
-            Timer_KTCongViec.Start();
-            appTime = 0;
-            
+            // kiểm tra có phải là quản lý hay không
+            DataTable listQuanLy = EmployeeBLL.Instance.GetManager();
+            bool isManager = false;
+
+            foreach (DataRow row in listQuanLy.Rows)
+            {
+                if (row["maNhanVien"].ToString().Equals(currentAccount.EmployeeId))
+                {
+                    isManager = true;
+                    break;
+                }
+            }
+
+            if (isManager)
+            {
+                // Là quản lý
+                return;
+            }
+
             // Vệ sinh 
             if (currentAccount.Level.Equals("VS"))
             {

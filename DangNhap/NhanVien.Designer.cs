@@ -37,6 +37,7 @@ namespace DangNhap
             this.BTN_in = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_PDF = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_excel = new Guna.UI.WinForms.GunaGradientButton();
+            this.BTN_ThemQuanLy = new Guna.UI.WinForms.GunaGradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.GGC_danhsachnv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -210,11 +211,40 @@ namespace DangNhap
             this.BTN_excel.TextOffsetX = 3;
             this.BTN_excel.Click += new System.EventHandler(this.BTN_excel_Click);
             // 
+            // BTN_ThemQuanLy
+            // 
+            resources.ApplyResources(this.BTN_ThemQuanLy, "BTN_ThemQuanLy");
+            this.BTN_ThemQuanLy.Animated = true;
+            this.BTN_ThemQuanLy.AnimationHoverSpeed = 0.3F;
+            this.BTN_ThemQuanLy.AnimationSpeed = 0.03F;
+            this.BTN_ThemQuanLy.BackColor = System.Drawing.Color.Transparent;
+            this.BTN_ThemQuanLy.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(156)))), ((int)(((byte)(46)))));
+            this.BTN_ThemQuanLy.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(156)))), ((int)(((byte)(46)))));
+            this.BTN_ThemQuanLy.BorderColor = System.Drawing.Color.White;
+            this.BTN_ThemQuanLy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTN_ThemQuanLy.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BTN_ThemQuanLy.FocusedColor = System.Drawing.Color.Empty;
+            this.BTN_ThemQuanLy.ForeColor = System.Drawing.Color.White;
+            this.BTN_ThemQuanLy.Image = null;
+            this.BTN_ThemQuanLy.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_ThemQuanLy.ImageSize = new System.Drawing.Size(20, 20);
+            this.BTN_ThemQuanLy.Name = "BTN_ThemQuanLy";
+            this.BTN_ThemQuanLy.OnHoverBaseColor1 = System.Drawing.Color.ForestGreen;
+            this.BTN_ThemQuanLy.OnHoverBaseColor2 = System.Drawing.Color.ForestGreen;
+            this.BTN_ThemQuanLy.OnHoverBorderColor = System.Drawing.Color.White;
+            this.BTN_ThemQuanLy.OnHoverForeColor = System.Drawing.Color.White;
+            this.BTN_ThemQuanLy.OnHoverImage = null;
+            this.BTN_ThemQuanLy.OnPressedColor = System.Drawing.Color.Black;
+            this.BTN_ThemQuanLy.Radius = 5;
+            this.BTN_ThemQuanLy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BTN_ThemQuanLy.Click += new System.EventHandler(this.BTN_ThemQuanLy_Click);
+            // 
             // NhanVien
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            this.Controls.Add(this.BTN_ThemQuanLy);
             this.Controls.Add(this.BTN_PhongBan);
             this.Controls.Add(this.BTN_in);
             this.Controls.Add(this.BTN_PDF);
@@ -238,5 +268,6 @@ namespace DangNhap
         private Guna.UI.WinForms.GunaGradientButton BTN_PDF;
         private Guna.UI.WinForms.GunaGradientButton BTN_excel;
         private Guna.UI.WinForms.GunaGradientButton BTN_PhongBan;
+        private Guna.UI.WinForms.GunaGradientButton BTN_ThemQuanLy;
     }
 }
