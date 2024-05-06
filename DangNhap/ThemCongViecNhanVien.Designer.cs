@@ -47,6 +47,7 @@ namespace DangNhap
             this.CBB_nhom = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.CBB_phongban = new System.Windows.Forms.ComboBox();
+            this.BTN_file = new System.Windows.Forms.Button();
             this.LB_quyentruycap = new System.Windows.Forms.Label();
             this.LB_maphongban = new System.Windows.Forms.Label();
             this.LB_noidung = new System.Windows.Forms.Label();
@@ -66,7 +67,6 @@ namespace DangNhap
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.BTN_file = new System.Windows.Forms.Button();
             this.BTN_thoat = new Guna.UI.WinForms.GunaGradientButton();
             this.PN_hienthithemcongviec.SuspendLayout();
             this.SuspendLayout();
@@ -224,6 +224,14 @@ namespace DangNhap
             this.CBB_phongban.Name = "CBB_phongban";
             this.CBB_phongban.SelectedIndexChanged += new System.EventHandler(this.CBB_phongban_SelectedIndexChanged);
             this.CBB_phongban.SelectedValueChanged += new System.EventHandler(this.CBB_phongban_SelectedValueChanged);
+            // 
+            // BTN_file
+            // 
+            resources.ApplyResources(this.BTN_file, "BTN_file");
+            this.BTN_file.ForeColor = System.Drawing.Color.White;
+            this.BTN_file.Name = "BTN_file";
+            this.BTN_file.UseVisualStyleBackColor = true;
+            this.BTN_file.Click += new System.EventHandler(this.BTN_file_Click);
             // 
             // LB_quyentruycap
             // 
@@ -398,14 +406,6 @@ namespace DangNhap
             resources.ApplyResources(this.panel5, "panel5");
             this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel5.Name = "panel5";
-            // 
-            // BTN_file
-            // 
-            resources.ApplyResources(this.BTN_file, "BTN_file");
-            this.BTN_file.ForeColor = System.Drawing.Color.White;
-            this.BTN_file.Name = "BTN_file";
-            this.BTN_file.UseVisualStyleBackColor = true;
-            this.BTN_file.Click += new System.EventHandler(this.BTN_file_Click);
             // 
             // BTN_thoat
             // 

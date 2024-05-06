@@ -64,7 +64,7 @@ namespace DangNhap
 
         private bool GetNgayHoanThanhCongViec()
         {
-            if (CBB_TrangThai.Text.Equals("Hoàn thành"))
+            if (CBB_TrangThai.Text.Equals("Hoàn thành") || CBB_TrangThai.Text.Equals("Completed"))
             {
                 return true;
             }
@@ -74,11 +74,11 @@ namespace DangNhap
         private int GetQuyenTruyCap()
         {
             int ch = 0; // mặc định là riêng tư
-            if (CBB_quyentruycap.SelectedItem.ToString().Equals("Bộ phận"))
+            if (CBB_quyentruycap.SelectedItem.ToString().Equals("Bộ phận") || CBB_quyentruycap.SelectedItem.ToString().Equals("Division"))
             {
                 ch = 1;
             }
-            if (CBB_quyentruycap.SelectedItem.ToString().Equals("Công ty"))
+            if (CBB_quyentruycap.SelectedItem.ToString().Equals("Công ty") || CBB_quyentruycap.SelectedItem.ToString().Equals("Company"))
             {
                 ch = 2;
             }
@@ -111,16 +111,35 @@ namespace DangNhap
         }
         private void BTN_luu_Click(object sender, EventArgs e)
         {
-            if (JobBLL.Instance.EditJobOfEmployee(AddParameterEdit_Job()))
+            //Tiếng Việt
+            if(LB_themcongviec.Text == "CHI TIẾT CÔNG VIỆC")
             {
-                MessageBox.Show("Chỉnh sửa thành công");
-                this.Close();
+                if (JobBLL.Instance.EditJobOfEmployee(AddParameterEdit_Job()))
+                {
+                    MessageBox.Show("Chỉnh sửa thành công");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Chỉnh sửa thất bại");
+                    //this.Close();
+                }
             }
+            //Tiếng Anh
             else
             {
-                MessageBox.Show("Chỉnh sửa thất bại");
-                //this.Close();
+                if (JobBLL.Instance.EditJobOfEmployee(AddParameterEdit_Job()))
+                {
+                    MessageBox.Show("Successful change");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Change failed");
+                    //this.Close();
+                }
             }
+
         }
 
         private Dictionary<string, object> AddParameterDeleteJobOfEmployee()
@@ -133,23 +152,49 @@ namespace DangNhap
         }
         private void gunaGradientButton1_Click(object sender, EventArgs e)
         {
-            // Hiển thị hộp thoại xác nhận trước khi xóa
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa công việc của nhân viên này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-            // Kiểm tra xem người dùng đã chọn Yes hay không
-            if (result == DialogResult.Yes)
+            //Tiếng Việt
+            if(LB_themcongviec.Text == "CHI TIẾT CÔNG VIỆC")
             {
-                // Thực hiện xóa nếu người dùng chọn Yes
-                if (JobBLL.Instance.DeleteJobOfEmployee(AddParameterDeleteJobOfEmployee()))
+                // Hiển thị hộp thoại xác nhận trước khi xóa
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa công việc của nhân viên này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                // Kiểm tra xem người dùng đã chọn Yes hay không
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Xóa thành công");
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Xóa thất bại");
+                    // Thực hiện xóa nếu người dùng chọn Yes
+                    if (JobBLL.Instance.DeleteJobOfEmployee(AddParameterDeleteJobOfEmployee()))
+                    {
+                        MessageBox.Show("Xóa thành công");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại");
+                    }
                 }
             }
+            //Tiếng Anh
+            else
+            {
+                // Hiển thị hộp thoại xác nhận trước khi xóa
+                DialogResult result = MessageBox.Show("Are you sure to delete this task?", "Confirm deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                // Kiểm tra xem người dùng đã chọn Yes hay không
+                if (result == DialogResult.Yes)
+                {
+                    // Thực hiện xóa nếu người dùng chọn Yes
+                    if (JobBLL.Instance.DeleteJobOfEmployee(AddParameterDeleteJobOfEmployee()))
+                    {
+                        MessageBox.Show("Deleted Successfully");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Deleted Failed");
+                    }
+                }
+            }
+            
         }
 
         private void LLB_chitietfile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

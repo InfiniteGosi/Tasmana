@@ -117,12 +117,27 @@ namespace DangNhap
                 }
 
                 // Thiết lập các tiêu đề của cột
-                string[] headers = { "Mã công việc", "Mã nhân viên", "Họ", "Tên", "Mã nhóm", "Mã Bộ phận", "Nội dung", "Mã căn hộ", "Ngày giao", "Ngày cập nhật", "Thời hạn", "Ngày hoàn thành", "Trạng thái", "Ghi chú" };
-                hd = headers;
-                for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                //Tiếng Việt
+                if(LB_loai.Text == "Chọn loại công việc")
                 {
-                    columns[i].HeaderText = headers[i];
+                    string[] headers = { "Mã công việc", "Mã nhân viên", "Họ", "Tên", "Mã nhóm", "Mã Bộ phận", "Nội dung", "Mã căn hộ", "Ngày giao", "Ngày cập nhật", "Thời hạn", "Ngày hoàn thành", "Trạng thái", "Ghi chú" };
+                    hd = headers;
+                    for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                    {
+                        columns[i].HeaderText = headers[i];
+                    }
                 }
+                //Tiếng Anh
+                else
+                {
+                    string[] headers = { "Task ID", "Employee ID", "Family name", "Name", "Group ID", "Division ID", "Content", "Apartment ID", "Received date", "Updated date", "Deadline", "Completed date", "Status", "Notes" };
+                    hd = headers;
+                    for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                    {
+                        columns[i].HeaderText = headers[i];
+                    }
+                }
+
             }
 
             GridDynamicFilter dynamicFilter = new GridDynamicFilter();
@@ -158,12 +173,27 @@ namespace DangNhap
                 }
 
                 // Thiết lập tiêu đề cho các cột
-                string[] headers = { "Mã công việc", "Mã nhóm", "Mã Trưởng nhóm", "Mã Bộ phận", "Nội dung", "Mã căn hộ", "Ngày giao", "Ngày cập nhật", "Thời hạn", "Ngày hoàn thành", "Trạng thái", "Ghi chú" };
-                hd = headers;
-                for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                //Tiếng Việt
+                if(LB_loai.Text == "Chọn loại công việc")
                 {
-                    columns[i].HeaderText = headers[i];
+                    string[] headers = { "Mã công việc", "Mã nhóm", "Mã Trưởng nhóm", "Mã Bộ phận", "Nội dung", "Mã căn hộ", "Ngày giao", "Ngày cập nhật", "Thời hạn", "Ngày hoàn thành", "Trạng thái", "Ghi chú" };
+                    hd = headers;
+                    for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                    {
+                        columns[i].HeaderText = headers[i];
+                    }
                 }
+                //Tiếng Anh
+                else
+                {
+                    string[] headers = { "Task ID", "Group ID", "Group Leader ID", "Division ID", "Content", "Apartment ID", "Received dated", "Updated date", "Deadline", "Completed date", "Status", "Notes" };
+                    hd = headers;
+                    for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                    {
+                        columns[i].HeaderText = headers[i];
+                    }
+                }
+
             }
             GridDynamicFilter dynamicFilter = new GridDynamicFilter();
             dynamicFilter.WireGrid(GGC_hienthicongviec);
@@ -198,12 +228,27 @@ namespace DangNhap
                 }
 
                 // Thiết lập tiêu đề cho các cột
-                string[] headers = { "Mã công việc", "Mã Bộ phận", "Mã quản lý", "Nội dung", "Mã căn hộ", "Ngày giao", "Ngày cập nhật", "Thời hạn", "Ngày hoàn thành", "Trạng thái", "Ghi chú" };
-                hd = headers;
-                for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                //Tiếng Việt
+                if (LB_loai.Text == "Chọn loại công việc")
                 {
-                    columns[i].HeaderText = headers[i];
+                    string[] headers = { "Mã công việc", "Mã Bộ phận", "Mã quản lý", "Nội dung", "Mã căn hộ", "Ngày giao", "Ngày cập nhật", "Thời hạn", "Ngày hoàn thành", "Trạng thái", "Ghi chú" };
+                    hd = headers;
+                    for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                    {
+                        columns[i].HeaderText = headers[i];
+                    }
                 }
+                //Tiếng Anh
+                else
+                {
+                    string[] headers = { "Task ID", "Division ID", "Manager ID", "Content", "Apartment ID", "Received date", "Updated date", "Deadline", "Completed date", "Status", "Notes" };
+                    hd = headers;
+                    for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                    {
+                        columns[i].HeaderText = headers[i];
+                    }
+                }
+
             }
             GridDynamicFilter dynamicFilter = new GridDynamicFilter();
             dynamicFilter.WireGrid(GGC_hienthicongviec);
