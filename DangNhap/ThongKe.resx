@@ -124,6 +124,9 @@
   <data name="&gt;&gt;RBtn_PhongBan.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="DTP_TuNgay.CustomFormat" xml:space="preserve">
+    <value>yyyy-MM-dd HH:MM</value>
+  </data>
   <data name="&gt;&gt;RBtn_PhongBan.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
   </data>
@@ -143,9 +146,6 @@
     <value>Phòng ban</value>
   </data>
   <data name="&gt;&gt;LB_PhongBan.Parent" xml:space="preserve">
-    <value>PN_hienthi</value>
-  </data>
-  <data name="&gt;&gt;GGC_ThongKe.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
   </data>
   <data name="&gt;&gt;PN_hienthi.ZOrder" xml:space="preserve">
@@ -191,11 +191,14 @@
   <data name="LB_ThongBao1.Text" xml:space="preserve">
     <value>Thông tin:</value>
   </data>
-  <data name="RBtn_NhanVien.TabIndex" type="System.Int32, mscorlib">
-    <value>232</value>
-  </data>
   <data name="&gt;&gt;GGC_ThongKe.ZOrder" xml:space="preserve">
     <value>10</value>
+  </data>
+  <data name="BTN_PDF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>766, 377</value>
+  </data>
+  <data name="&gt;&gt;BTN_ThongKe.Name" xml:space="preserve">
+    <value>BTN_ThongKe</value>
   </data>
   <data name="&gt;&gt;elipse_red.Name" xml:space="preserve">
     <value>elipse_red</value>
@@ -217,6 +220,9 @@
   </data>
   <data name="DTP_DenNgay.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="&gt;&gt;BTN_in.Parent" xml:space="preserve">
+    <value>PN_hienthi</value>
   </data>
   <data name="&gt;&gt;BTN_in.Name" xml:space="preserve">
     <value>BTN_in</value>
@@ -290,32 +296,29 @@
   <data name="RBtn_NhanVien.Text" xml:space="preserve">
     <value>Nhân viên</value>
   </data>
+  <data name="RBtn_PhongBan.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="BTN_excel.Location" type="System.Drawing.Point, System.Drawing">
     <value>658, 377</value>
   </data>
   <data name="LB_NhanVien.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
   </data>
-  <data name="Btn_XuatDoThi.Text" xml:space="preserve">
-    <value>Xuất đồ thị</value>
-  </data>
-  <data name="RBtn_Congty.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 79</value>
-  </data>
   <data name="&gt;&gt;C_ThongKe.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="&gt;&gt;BTN_thongkecanho.Name" xml:space="preserve">
+    <value>BTN_thongkecanho</value>
   </data>
   <data name="LB_NhanVien.TabIndex" type="System.Int32, mscorlib">
     <value>236</value>
   </data>
-  <data name="LB_ToiNgay.Text" xml:space="preserve">
-    <value>Tới ngày</value>
-  </data>
   <data name="LB_ToiNgay.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 22</value>
   </data>
-  <data name="LB_LoaiDoThi.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="DTP_TuNgay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 30</value>
   </data>
   <data name="&gt;&gt;BTN_excel.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -326,11 +329,17 @@
   <data name="&gt;&gt;elipse_blue.Name" xml:space="preserve">
     <value>elipse_blue</value>
   </data>
+  <data name="CBB_LoaiDoThi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>263, 24</value>
+  </data>
   <data name="&gt;&gt;Btn_XuatDoThi.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
   </data>
   <data name="RBtn_Congty.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="LB_ThongBao1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="LB_ThongKeCV.Text" xml:space="preserve">
     <value>THỐNG KÊ CÔNG VIỆC</value>
@@ -346,6 +355,9 @@
   </data>
   <data name="BTN_in.Location" type="System.Drawing.Point, System.Drawing">
     <value>874, 377</value>
+  </data>
+  <data name="BTN_thongkecanho.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 26</value>
   </data>
   <data name="&gt;&gt;Btn_XuatDoThi.Name" xml:space="preserve">
     <value>Btn_XuatDoThi</value>
@@ -395,6 +407,9 @@
   <data name="RBtn_Congty.Text" xml:space="preserve">
     <value>Toàn công ty</value>
   </data>
+  <data name="&gt;&gt;LB_ThongKeCV.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;CBB_PhongBan.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -410,6 +425,9 @@
   <data name="$this.Text" xml:space="preserve">
     <value>ThongKe</value>
   </data>
+  <data name="DTP_TuNgay.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
   <data name="GGC_ThongKe.Size" type="System.Drawing.Size, System.Drawing">
     <value>1585, 570</value>
   </data>
@@ -422,8 +440,8 @@
   <data name="&gt;&gt;CBB_NhanVien.Name" xml:space="preserve">
     <value>CBB_NhanVien</value>
   </data>
-  <data name="&gt;&gt;LB_LoaiDoThi.Parent" xml:space="preserve">
-    <value>PN_hienthi</value>
+  <data name="&gt;&gt;LB_ThongKeCV.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;LB_ToiNgay.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -449,9 +467,6 @@
   <data name="&gt;&gt;DTP_TuNgay.Type" xml:space="preserve">
     <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;LB_ThongBao1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;LB_ToiNgay.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -476,11 +491,8 @@
   <data name="C_ThongKe.TabIndex" type="System.Int32, mscorlib">
     <value>246</value>
   </data>
-  <data name="BTN_thongkecongviec.TabIndex" type="System.Int32, mscorlib">
-    <value>248</value>
-  </data>
-  <data name="&gt;&gt;CBB_LoaiDoThi.Name" xml:space="preserve">
-    <value>CBB_LoaiDoThi</value>
+  <data name="BTN_thongkecanho.Text" xml:space="preserve">
+    <value>Căn Hộ</value>
   </data>
   <data name="&gt;&gt;RBtn_NhanVien.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
@@ -527,13 +539,7 @@
   <data name="LB_ThongBao1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
   </data>
-  <data name="&gt;&gt;DTP_DenNgay.Name" xml:space="preserve">
-    <value>DTP_DenNgay</value>
-  </data>
   <data name="&gt;&gt;LB_TuNgay.Parent" xml:space="preserve">
-    <value>PN_hienthi</value>
-  </data>
-  <data name="&gt;&gt;LB_ToiNgay.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
   </data>
   <data name="&gt;&gt;BTN_XepHang.Name" xml:space="preserve">
@@ -542,14 +548,14 @@
   <data name="&gt;&gt;LB_PhongBan.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="&gt;&gt;BTN_XepHang.Type" xml:space="preserve">
-    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
   <data name="&gt;&gt;LB_ToiNgay.Name" xml:space="preserve">
     <value>LB_ToiNgay</value>
   </data>
   <data name="CBB_PhongBan.Location" type="System.Drawing.Point, System.Drawing">
     <value>591, 84</value>
+  </data>
+  <data name="LB_NhanVien.Location" type="System.Drawing.Point, System.Drawing">
+    <value>951, 86</value>
   </data>
   <data name="&gt;&gt;PN_hienthi.Name" xml:space="preserve">
     <value>PN_hienthi</value>
@@ -557,26 +563,23 @@
   <data name="LB_NhanVien.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;BTN_XepHang.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="&gt;&gt;BTN_XepHang.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="LB_ThongKeCV.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 16.2pt, style=Bold</value>
   </data>
-  <data name="BTN_thongkecanho.Text" xml:space="preserve">
-    <value>Căn Hộ</value>
+  <data name="&gt;&gt;LB_ThongBao1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="LB_NhanVien.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 22</value>
   </data>
-  <data name="DTP_DenNgay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 30</value>
+  <data name="&gt;&gt;PN_hienthi.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="CBB_LoaiDoThi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 24</value>
+  <data name="&gt;&gt;GGC_ThongKe.Parent" xml:space="preserve">
+    <value>PN_hienthi</value>
   </data>
   <data name="BTN_PDF.TabIndex" type="System.Int32, mscorlib">
     <value>248</value>
@@ -593,14 +596,17 @@
   <data name="&gt;&gt;BTN_in.Type" xml:space="preserve">
     <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="DTP_TuNgay.TabIndex" type="System.Int32, mscorlib">
-    <value>244</value>
+  <data name="&gt;&gt;LB_ThongBao1.Parent" xml:space="preserve">
+    <value>PN_hienthi</value>
   </data>
   <data name="CBB_LoaiDoThi.Items" xml:space="preserve">
     <value>Pie Chart</value>
   </data>
-  <data name="GGC_ThongKe.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 134</value>
+  <data name="&gt;&gt;CBB_LoaiDoThi.Name" xml:space="preserve">
+    <value>CBB_LoaiDoThi</value>
+  </data>
+  <data name="&gt;&gt;LB_NhanVien.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="LB_ToiNgay.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -626,8 +632,8 @@
   <data name="&gt;&gt;BTN_PDF.Name" xml:space="preserve">
     <value>BTN_PDF</value>
   </data>
-  <data name="BTN_thongkecanho.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 26</value>
+  <data name="&gt;&gt;LB_LoaiDoThi.Parent" xml:space="preserve">
+    <value>PN_hienthi</value>
   </data>
   <data name="BTN_thongkecanho.TabIndex" type="System.Int32, mscorlib">
     <value>229</value>
@@ -641,8 +647,8 @@
   <data name="LB_ToiNgay.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
   </data>
-  <data name="BTN_XepHang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 26</value>
+  <data name="GGC_ThongKe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>41, 134</value>
   </data>
   <data name="&gt;&gt;PN_hienthi.Parent" xml:space="preserve">
     <value>$this</value>
@@ -668,32 +674,26 @@
   <data name="&gt;&gt;GGC_ThongKe.Type" xml:space="preserve">
     <value>Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl, Syncfusion.Grid.Grouping.Windows, Version=25.1462.39.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
-  <data name="&gt;&gt;RBtn_PhongBan.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="RBtn_PhongBan.Location" type="System.Drawing.Point, System.Drawing">
     <value>173, 79</value>
   </data>
   <data name="&gt;&gt;elipse_red.Type" xml:space="preserve">
     <value>Guna.UI.WinForms.GunaElipse, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="&gt;&gt;LB_ThongKeCV.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="DTP_DenNgay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 30</value>
   </data>
   <data name="&gt;&gt;BTN_PDF.Type" xml:space="preserve">
     <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="LB_NhanVien.Location" type="System.Drawing.Point, System.Drawing">
-    <value>951, 86</value>
+  <data name="&gt;&gt;DTP_DenNgay.Name" xml:space="preserve">
+    <value>DTP_DenNgay</value>
   </data>
-  <data name="&gt;&gt;RBtn_NhanVien.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="RBtn_NhanVien.TabIndex" type="System.Int32, mscorlib">
+    <value>232</value>
   </data>
-  <data name="&gt;&gt;LB_ThongKeCV.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="DTP_TuNgay.CustomFormat" xml:space="preserve">
-    <value>yyyy-MM-dd HH:MM</value>
+  <data name="&gt;&gt;BTN_XepHang.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
   <data name="RBtn_PhongBan.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 26</value>
@@ -713,20 +713,17 @@
   <data name="DTP_DenNgay.CustomFormat" xml:space="preserve">
     <value>yyyy-MM-dd HH:MM</value>
   </data>
-  <data name="&gt;&gt;LB_TuNgay.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="BTN_thongkecongviec.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 26</value>
   </data>
   <data name="&gt;&gt;LB_LoaiDoThi.Name" xml:space="preserve">
     <value>LB_LoaiDoThi</value>
   </data>
-  <data name="&gt;&gt;LB_ThongBao1.Parent" xml:space="preserve">
-    <value>PN_hienthi</value>
+  <data name="&gt;&gt;RBtn_PhongBan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;LB_NhanVien.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="BTN_thongkecongviec.TabIndex" type="System.Int32, mscorlib">
+    <value>248</value>
   </data>
   <data name="PN_hienthi.Size" type="System.Drawing.Size, System.Drawing">
     <value>1634, 790</value>
@@ -758,26 +755,26 @@
   <data name="&gt;&gt;RBtn_NhanVien.Name" xml:space="preserve">
     <value>RBtn_NhanVien</value>
   </data>
-  <data name="DTP_TuNgay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 30</value>
+  <data name="&gt;&gt;BTN_XepHang.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="RBtn_NhanVien.Location" type="System.Drawing.Point, System.Drawing">
     <value>329, 79</value>
   </data>
-  <data name="LB_ThongBao1.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;LB_TuNgay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="BTN_XepHang.Text" xml:space="preserve">
     <value>Xếp hạng</value>
   </data>
-  <data name="RBtn_PhongBan.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="LB_ToiNgay.Text" xml:space="preserve">
+    <value>Tới ngày</value>
   </data>
   <data name="&gt;&gt;BTN_excel.Type" xml:space="preserve">
     <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="DTP_TuNgay.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
+  <data name="LB_LoaiDoThi.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="BTN_XepHang.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 9pt</value>
@@ -805,6 +802,9 @@
   </data>
   <data name="CBB_LoaiDoThi.Items2" xml:space="preserve">
     <value>Line Chart</value>
+  </data>
+  <data name="&gt;&gt;LB_TuNgay.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="&gt;&gt;LB_ThongKeCV.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -842,8 +842,8 @@
   <data name="LB_NhanVien.Text" xml:space="preserve">
     <value>Nhân Viên</value>
   </data>
-  <data name="&gt;&gt;PN_hienthi.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="RBtn_Congty.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 79</value>
   </data>
   <data name="LB_TuNgay.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 17</value>
@@ -854,11 +854,11 @@
   <data name="RBtn_NhanVien.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 26</value>
   </data>
-  <data name="&gt;&gt;BTN_in.Parent" xml:space="preserve">
+  <data name="&gt;&gt;LB_ToiNgay.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
   </data>
-  <data name="&gt;&gt;BTN_thongkecanho.Name" xml:space="preserve">
-    <value>BTN_thongkecanho</value>
+  <data name="DTP_TuNgay.TabIndex" type="System.Int32, mscorlib">
+    <value>244</value>
   </data>
   <data name="&gt;&gt;BTN_excel.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
@@ -866,8 +866,8 @@
   <data name="LB_LoaiDoThi.Text" xml:space="preserve">
     <value>Loại đồ thị</value>
   </data>
-  <data name="&gt;&gt;BTN_ThongKe.Name" xml:space="preserve">
-    <value>BTN_ThongKe</value>
+  <data name="Btn_XuatDoThi.Text" xml:space="preserve">
+    <value>Xuất đồ thị</value>
   </data>
   <data name="LB_TuNgay.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -881,8 +881,8 @@
   <data name="&gt;&gt;elipse_green.Type" xml:space="preserve">
     <value>Guna.UI.WinForms.GunaElipse, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="BTN_PDF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>766, 377</value>
+  <data name="&gt;&gt;RBtn_NhanVien.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <data name="BTN_ThongKe.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 28</value>
@@ -890,11 +890,11 @@
   <data name="&gt;&gt;LB_ThongKeCV.Name" xml:space="preserve">
     <value>LB_ThongKeCV</value>
   </data>
-  <data name="&gt;&gt;LB_TuNgay.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="BTN_XepHang.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 26</value>
   </data>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>vi</value>
+    <value>en</value>
   </metadata>
   <metadata name="elipse_red.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>151, 17</value>
@@ -904,6 +904,9 @@
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>81</value>
   </metadata>
   <metadata name="elipse_blue.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
