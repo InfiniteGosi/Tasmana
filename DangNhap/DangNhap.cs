@@ -83,6 +83,7 @@ namespace DangNhap
                     else
                     {
                         LB_Wrong.Text = "Tài khoản đã bị vô hiệu hóa";
+                        LB_Wrong.Visible = true;
                         return;
                     }
                 }
@@ -90,7 +91,6 @@ namespace DangNhap
                 {
                     LB_Wrong.Text = "Mật khẩu không đúng";
                     LB_Wrong.Visible = true;
-                    //LB_error.ForeColor = Color.Red;
                     return;
                 }
             }
