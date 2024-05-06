@@ -203,6 +203,9 @@
   <data name="&gt;&gt;LB_PhiDichVu.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="LLB_hienfile.Text" xml:space="preserve">
+    <value>linkLabel1</value>
+  </data>
   <data name="CBB_manhanvien.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
   </data>
@@ -263,6 +266,9 @@
   </data>
   <data name="LB_thoihan.Text" xml:space="preserve">
     <value>Thời hạn</value>
+  </data>
+  <data name="&gt;&gt;TXB_ghiChu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;PN_hienthithemcongviec.Parent" xml:space="preserve">
     <value>$this</value>
@@ -435,9 +441,6 @@
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>186</value>
   </data>
-  <data name="LLB_hienfile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 16</value>
-  </data>
   <data name="CBB_QuyenTruyCap.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
   </data>
@@ -486,14 +489,17 @@
   <data name="TXB_macanho.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
   </data>
-  <data name="PN_hienthithemcongviec.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="BTN_nhanvien.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <data name="BTN_file.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;panel6.Name" xml:space="preserve">
     <value>panel6</value>
+  </data>
+  <data name="BTN_nhanvien.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
   </data>
   <data name="&gt;&gt;CBB_nhom.Name" xml:space="preserve">
     <value>CBB_nhom</value>
@@ -612,9 +618,6 @@
   <data name="TXB_MaCongViec.TabIndex" type="System.Int32, mscorlib">
     <value>183</value>
   </data>
-  <data name="&gt;&gt;BTN_nhanvien.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="LB_macanho.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -677,9 +680,6 @@
   </data>
   <data name="LB_themcongviec.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 16.2pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;CB_thoihan.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="BTN_thoat.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 30</value>
@@ -870,8 +870,8 @@
   <data name="&gt;&gt;TXB_noidung.Name" xml:space="preserve">
     <value>TXB_noidung</value>
   </data>
-  <data name="LB_PhiDichVu.Text" xml:space="preserve">
-    <value>Phí dịch vụ</value>
+  <data name="&gt;&gt;CB_thoihan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;BTN_thoat.Name" xml:space="preserve">
     <value>BTN_thoat</value>
@@ -897,14 +897,14 @@
   <data name="panel4.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
   </data>
-  <data name="BTN_nhanvien.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="LB_PhiDichVu.Text" xml:space="preserve">
+    <value>Phí dịch vụ</value>
   </data>
   <data name="LB_thoihan.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 22</value>
   </data>
-  <data name="BTN_nhanvien.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
+  <data name="&gt;&gt;BTN_nhanvien.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="LB_noidung.Location" type="System.Drawing.Point, System.Drawing">
     <value>676, 54</value>
@@ -936,8 +936,8 @@
   <data name="&gt;&gt;BTN_nhanvien.Name" xml:space="preserve">
     <value>BTN_nhanvien</value>
   </data>
-  <data name="&gt;&gt;TXB_ghiChu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="LLB_hienfile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 16</value>
   </data>
   <data name="&gt;&gt;BTN_thoat.Type" xml:space="preserve">
     <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
@@ -1083,8 +1083,8 @@
   <data name="DTP_ngay.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
   </data>
-  <data name="LLB_hienfile.Text" xml:space="preserve">
-    <value>linkLabel1</value>
+  <data name="PN_hienthithemcongviec.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="&gt;&gt;BTN_nhanvien.Parent" xml:space="preserve">
     <value>$this</value>

@@ -122,6 +122,9 @@
     <value>NoControl</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="LB_PhiDichVu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>676, 333</value>
+  </data>
   <data name="LB_PhiDichVu.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 22</value>
   </data>
@@ -139,6 +142,15 @@
   </data>
   <data name="CB_thoihan.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="CBB_QuyenTruyCap.Items" xml:space="preserve">
+    <value>Individual</value>
+  </data>
+  <data name="CBB_QuyenTruyCap.Items1" xml:space="preserve">
+    <value>Division</value>
+  </data>
+  <data name="CBB_QuyenTruyCap.Items2" xml:space="preserve">
+    <value>Company</value>
   </data>
   <data name="LLB_hienfile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -377,8 +389,5 @@
         ADZUJn97x293/G/Hu/xZx/c/f8vL+oLv6Pj5jj/tmP6BoOntgq90/FbHFzs++/ylAMAgyufpvwv4uY7f
         7/jjjj/s+OWOH+l4K7s/85n/AwcgzALB8zWpAAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
 </root>

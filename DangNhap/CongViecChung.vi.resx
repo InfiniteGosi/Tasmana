@@ -117,114 +117,49 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CBB_QuyenTruyCap.Items" xml:space="preserve">
-    <value>Company</value>
-  </data>
-  <data name="CBB_QuyenTruyCap.Items1" xml:space="preserve">
-    <value>Division</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="LB_MaCongViec.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="LB_MaCongViec.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 22</value>
-  </data>
-  <data name="LB_MaCongViec.Text" xml:space="preserve">
-    <value>Task ID</value>
-  </data>
-  <data name="LB_quyentruycap.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LB_quyentruycap.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 22</value>
-  </data>
-  <data name="LB_quyentruycap.Text" xml:space="preserve">
-    <value>Access level</value>
-  </data>
-  <data name="LB_maphongban.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LB_maphongban.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 22</value>
-  </data>
-  <data name="LB_maphongban.Text" xml:space="preserve">
-    <value>Division</value>
-  </data>
-  <data name="LB_noidung.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LB_noidung.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 22</value>
-  </data>
-  <data name="LB_noidung.Text" xml:space="preserve">
-    <value>Content</value>
-  </data>
-  <data name="BTN_huy.Text" xml:space="preserve">
-    <value>Restore</value>
-  </data>
-  <data name="BTN_ok.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="LB_macanho.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LB_macanho.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 22</value>
-  </data>
-  <data name="LB_macanho.Text" xml:space="preserve">
-    <value>Apartment ID</value>
-  </data>
-  <data name="LB_thoihan.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LB_thoihan.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 22</value>
-  </data>
-  <data name="LB_thoihan.Text" xml:space="preserve">
-    <value>Deadline</value>
-  </data>
-  <data name="LB_Ghichu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LB_Ghichu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 22</value>
-  </data>
-  <data name="LB_Ghichu.Text" xml:space="preserve">
-    <value>Note</value>
-  </data>
-  <data name="CB_thoihan.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LLB_themfilepb.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LB_PhiDichVu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LB_PhiDichVu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 22</value>
-  </data>
-  <data name="LB_PhiDichVu.Text" xml:space="preserve">
-    <value>Service fee</value>
-  </data>
-  <data name="BTN_file.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BTN_excel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFGSURBVEhL7ZWx
-        SsNQFIZTakHpC+hLVB/ASdTnEHTpKOggOoijL1AsSgfR1UEHURAHoSIFFwdd3HQSFHQR0fj9l79ZgpqE
-        uuWDD879zz33hgxJ9BdxHFdxAS/wzaqex6q3FYMD6niKX3iIS/bI2QnWvT0/DO/hK045SiCbdm/XUT4Y
-        nEA95ZyjFPT0mrSn4Sg7DK3hMw45SkGvhi+46ig7DLWx56XWIzhrhx0r72Hby+ww1MGu6zG8wz63OOpe
-        Fzuqc6EhDbvewgds4Dg+Ysu9gVxwhduhAdQ7ylwP5IJrDE8sVCtzXV5QXvADGtKw6/KCNBrSsOt/u+DS
-        9T6uhAZQ69vUv0D71kMjDwxt4hNWHCWQneGxl8XggEkUi44CrGfwE5uOisMhetfiAJdRX9EPPMeatxWH
-        QyrYxBt8x3vcwOSP9jtR9A0zQKF9qqqYoAAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAf9JREFUWEftlzEoRVEYx19mySSTDDLJLJNBBpNMkkEyyCQZbQaTJEkmk8FgNJok
+        mWSQJBkMkiSDJMPz+x/f4bnn3nef+84rg1/96n3fd865/17XfVepknK5vIhPEbzBXju2dth0irF4wN+F
+        YIMPsIcTBX1Gzz322PH5sNgHWLTWr2HvHZ7hiw4C1d02rg4LYwXYwEF8RXGLXbYkGxbFCrBun4fxDYVu
+        zA63KAsWRPsGrFQ9iu8orrDdRiEMYwU4wTlzHg/Rs29LQxjGClCNM1sawjBGgJYMF1Cc29IQhnUHyIIz
+        Zz+PLl9YK4RhEIDPTdiesM3GDmqZXNNqYwe1D3BprRCGaQE6UQ+VyhtJzNlcrrrOT3bdAQZ14QDNqP4A
+        rmAlusvTLi5m7AgHdbEAgroNj7EfkyHSWLKtX9ArHkDQU4gj7MNqIdbQdn1Dr74Agn5eiG1ssuU/oO8D
+        XFkrhGFeALmFeulIhtADaAr1kzyOQ7bNQV1fAHpSX68nLUQlJ7bVQV08AHXy4h4fIu0vYdK2O6h9gGtr
+        hTAMAvA56+IevQEpRHKNe054qAsH0ItqHj7Epqu+mbVj6gqgO1svmHk+oi7iX0DEgR1TPECtsGcMpxMO
+        27jxAfLgzD8T4MZaIQz/A/yZADs4Eln9hoiaAjSSqgGW0f+L3Si37HJQKn0AqxM8fx1MQc4AAAAASUVO
+        RK5CYII=
 </value>
   </data>
-  <data name="BTN_file.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="BTN_PDF.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAqpJREFUWEe1l0FIFUEcxh8hIiISHUVEQiIiwpOEiEQn6RQeOkSHTh0iokNEhAQS
+        Ih48efQUIdEpOkhEJw8h0iEiIqJDRIcQiYiI6BCv3zfznxp1Z9/svvWDH0/n/83s93ZnZue1itRutw/B
+        FdiEL/DV+BYR2naMbViHMRumnhigF55CXSncGRuuuui84IbxegfLcA/m4S7MwZ2I26A+PyHoF8zYkPmi
+        k769voH0Avqs1FF4V12v/1KIc1bOEx1Oua5es9acJfxLvtsuVQuBedx186r0HPHHjy5W/uPAGAeYtuYs
+        4dccSUkhzpo1LUxxgElrzhJ+Tc4y/YBxsxdLBmf1qhrgpu9Wqg+QntgUuwlwHF7CR/gM2sC0OWmzijVh
+        XfaLYhzgtDV3Lca67Id0Ss8tilkBqA2Atl1941FrTgrPMQhqJMAsaMN6BfPWnBSeoxCUHSD5rKjNgGb1
+        Y1iy5qTwjEJQIwEOw29QiOvWnBSeEQjqPoBE/ZG3taesKSk8BxLgord13uHwHEiAB6DHoM1l0JoLRb3Z
+        ANQGQe//C/AWtCR7rLxP1IYhKDtA2TK8AZ+gB06AwmzAE3gNCnUf3J3hs7kAtOvQoos/g4fwHfS207Yr
+        vQcF0eO5ZH2aCUCblt+Kq/oluAbnoR/6QC8k3QGF0S45Yv1qBfj3MuJvnZKvQXix6Jw4YOWOwls/AJ+6
+        uG6ptl7dan2z5IQrEv6uAkz7f92Fdf6vfO6nT61l6HY4PvV8Ndm01E46Y0XRr1aAtLGiGCv7bVj7WF4m
+        xprwQzqVBtBS0rqWtLH0Wqm2GEOTOLy4/sCQlYqFYdFZvbSj6X+dePUTTNzqQPCpj37SbUHQml0mLUy6
+        C8+dvVnp9HTELlMujNrjr4KW3t6f5VXQsn0DuiP9NnykVusv6k2HR9P7+Z8AAAAASUVORK5CYII=
+</value>
   </data>
-  <data name="BTN_file.Text" xml:space="preserve">
-    <value>Attach file</value>
+  <data name="BTN_in.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAVVJREFUWEftl71KA0EUhbeSkEqsLFJZBPEZxEpCsBAJKa3F1xARCyufRCSlhYVY
+        W/gIKSxTpghyPefOHdkN4+JOZtfC+eAjuzN37j1hIT9Fpgkisg+f4HNDe9YiHjTh8A8YQ9/axIEGB3B9
+        +C2c1ngOPfEBcDg0nJxYSRDs912ZEhcAB38aTtoNgENbsO6Ztx6g3CBEpwHu4M2aQysNgv2kARo34Bl3
+        VMkBfncehXRgDqFn0wDs5ftaRQBsXsEQmwYoc20lVbBx4faDpAxALq3MgYUzuNItkUe4C/f0znEKRw3l
+        GQ97seeD3ol8wokffgiXXAWvUN8tX3UlDb5nD77oipt5xMW53oq8wx0WElyz+C2R378HcL0NOYvMubBw
+        1/UfrSnBrLEbKYtygJHttw5mHbuROUAOkANUA9xDfh90IWeRSoC/QAPMYOjvVBfO7Kn8W4riCzJw4a5u
+        7ohcAAAAAElFTkSuQmCC
+</value>
   </data>
 </root>

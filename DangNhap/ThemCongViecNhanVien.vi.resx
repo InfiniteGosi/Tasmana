@@ -118,14 +118,47 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="LB_quyentruycap.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="LB_PhiDichVu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="LB_quyentruycap.Location" type="System.Drawing.Point, System.Drawing">
-    <value>670, 460</value>
+  <data name="LB_PhiDichVu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>676, 333</value>
   </data>
-  <data name="LB_manhanvien.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="LB_Ghichu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="CB_thoihan.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LLB_hienfile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LB_MaCongViec.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BTN_file.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFGSURBVEhL7ZWx
+        SsNQFIZTakHpC+hLVB/ASdTnEHTpKOggOoijL1AsSgfR1UEHURAHoSIFFwdd3HQSFHQR0fj9l79ZgpqE
+        uuWDD879zz33hgxJ9BdxHFdxAS/wzaqex6q3FYMD6niKX3iIS/bI2QnWvT0/DO/hK045SiCbdm/XUT4Y
+        nEA95ZyjFPT0mrSn4Sg7DK3hMw45SkGvhi+46ig7DLWx56XWIzhrhx0r72Hby+ww1MGu6zG8wz63OOpe
+        Fzuqc6EhDbvewgds4Dg+Ysu9gVxwhduhAdQ7ylwP5IJrDE8sVCtzXV5QXvADGtKw6/KCNBrSsOt/u+DS
+        9T6uhAZQ69vUv0D71kMjDwxt4hNWHCWQneGxl8XggEkUi44CrGfwE5uOisMhetfiAJdRX9EPPMeatxWH
+        QyrYxBt8x3vcwOSP9jtR9A0zQKF9qqqYoAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="BTN_file.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LB_quyentruycap.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LB_maphongban.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="LB_noidung.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -134,52 +167,22 @@
   <data name="LB_macanho.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="LB_macanho.Location" type="System.Drawing.Point, System.Drawing">
-    <value>670, 190</value>
-  </data>
   <data name="LB_thoihan.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LB_manhanvien.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="LB_themcongviec.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="BTN_phongban.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="LB_maphongban.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="BTN_nhanvien.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>670, 370</value>
-  </data>
-  <data name="CBB_TrangThai.Location" type="System.Drawing.Point, System.Drawing">
-    <value>839, 366</value>
-  </data>
-  <data name="LB_macongviec.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="TXB_macanho.Location" type="System.Drawing.Point, System.Drawing">
-    <value>839, 186</value>
-  </data>
-  <data name="LB_Ghichu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LB_Ghichu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>670, 280</value>
-  </data>
-  <data name="TXB_GhiChu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>839, 276</value>
-  </data>
-  <data name="LLB_chitietfile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="CBB_quyentruycap.Location" type="System.Drawing.Point, System.Drawing">
-    <value>839, 456</value>
-  </data>
-  <data name="CB_thoihan.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="BTN_nhom.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="BTN_thoat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -294,25 +297,7 @@
         7/jjjj/s+OWOH+l4K7s/85n/AwcgzALB8zWpAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="LB_PhiDichVu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="TXB_PhiDichVu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>839, 546</value>
-  </data>
-  <data name="BTN_file.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFGSURBVEhL7ZWx
-        SsNQFIZTakHpC+hLVB/ASdTnEHTpKOggOoijL1AsSgfR1UEHURAHoSIFFwdd3HQSFHQR0fj9l79ZgpqE
-        uuWDD879zz33hgxJ9BdxHFdxAS/wzaqex6q3FYMD6niKX3iIS/bI2QnWvT0/DO/hK045SiCbdm/XUT4Y
-        nEA95ZyjFPT0mrSn4Sg7DK3hMw45SkGvhi+46ig7DLWx56XWIzhrhx0r72Hby+ww1MGu6zG8wz63OOpe
-        Fzuqc6EhDbvewgds4Dg+Ysu9gVxwhduhAdQ7ylwP5IJrDE8sVCtzXV5QXvADGtKw6/KCNBrSsOt/u+DS
-        9T6uhAZQ69vUv0D71kMjDwxt4hNWHCWQneGxl8XggEkUi44CrGfwE5uOisMhetfiAJdRX9EPPMeatxWH
-        QyrYxBt8x3vcwOSP9jtR9A0zQKF9qqqYoAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="BTN_file.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
 </root>

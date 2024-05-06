@@ -130,11 +130,11 @@ namespace DangNhap
         private int GetQuyenTruyCap()
         {
             int ch = 0; // mặc định là riêng tư
-            if (CBB_QuyenTruyCap.SelectedItem.ToString().Equals("Bộ phận"))
+            if (CBB_QuyenTruyCap.SelectedItem.ToString().Equals("Bộ phận") || CBB_QuyenTruyCap.SelectedItem.ToString().Equals("Division"))
             {
                 ch = 1;
             }
-            if (CBB_QuyenTruyCap.SelectedItem.ToString().Equals("Công ty"))
+            if (CBB_QuyenTruyCap.SelectedItem.ToString().Equals("Công ty") || CBB_QuyenTruyCap.SelectedItem.ToString().Equals("Company"))
             {
                 ch = 2;
             }
@@ -232,49 +232,96 @@ namespace DangNhap
         }
         private void BTN_ok_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(TXB_noidung.Text))
+            //Tiếng Việt
+            if (LB_maphongban.Text == "Phòng ban")
             {
-                MessageBox.Show("Vui lòng điền nội dung công việc");
-                return;
+                if (string.IsNullOrEmpty(TXB_noidung.Text))
+                {
+                    MessageBox.Show("Vui lòng điền nội dung công việc");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_macanho.Text))
+                {
+                    MessageBox.Show("Vui lòng điền mã căn hộ");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_MaCongViec.Text))
+                {
+                    MessageBox.Show("Vui lòng điền mã công việc");
+                    return;
+                }
+                if (CBB_QuyenTruyCap.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Vui lòng chọn quyền hạn truy cập");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_PhiDichVu.Text))
+                {
+                    MessageBox.Show("Vui lòng điền phí dịch vụ");
+                    return;
+                }
+                if (!IsValidInteger(TXB_PhiDichVu.Text))
+                {
+                    MessageBox.Show("Vui lòng điền phí dịch vụ hợp lệ");
+                    return;
+                }
+                if (SaveCongViec())
+                {
+                    MessageBox.Show("Thêm thành công");
+                    parent.Display_GGC_nhom();
+                    restoreBTN();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại");
+                }
             }
-            if (string.IsNullOrEmpty(TXB_macanho.Text))
-            {
-                MessageBox.Show("Vui lòng điền mã căn hộ");
-                return;
-            }
-            if (string.IsNullOrEmpty(TXB_MaCongViec.Text))
-            {
-                MessageBox.Show("Vui lòng điền mã công việc");
-                return;
-            }
-            if (CBB_QuyenTruyCap.SelectedIndex == -1)
-            {
-                MessageBox.Show("Vui lòng chọn quyền hạn truy cập");
-                return;
-            }
-            if (string.IsNullOrEmpty(TXB_PhiDichVu.Text))
-            {
-                MessageBox.Show("Vui lòng điền phí dịch vụ");
-                return;
-            }
-            if (!IsValidInteger(TXB_PhiDichVu.Text))
-            {
-                MessageBox.Show("Vui lòng điền phí dịch vụ hợp lệ");
-                return;
-            }
-            if (SaveCongViec())
-            {
-                MessageBox.Show("Thêm thành công");
-                parent.Display_GGC_nhom();
-                this.Close();
-            }
+            //Tiếng Anh
             else
             {
-                MessageBox.Show("Thêm thất bại");
+                if (string.IsNullOrEmpty(TXB_noidung.Text))
+                {
+                    MessageBox.Show("Please enter \"Content\"");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_macanho.Text))
+                {
+                    MessageBox.Show("Please enter \"Apartment ID\"");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_MaCongViec.Text))
+                {
+                    MessageBox.Show("Please enter \"Task ID\"");
+                    return;
+                }
+                if (CBB_QuyenTruyCap.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Please select \"Access level\"");
+                    return;
+                }
+                if (string.IsNullOrEmpty(TXB_PhiDichVu.Text))
+                {
+                    MessageBox.Show("Please enter \"Service fee\"");
+                    return;
+                }
+                if (!IsValidInteger(TXB_PhiDichVu.Text))
+                {
+                    MessageBox.Show("\"Service fee\" is invalid");
+                    return;
+                }
+                if (SaveCongViec())
+                {
+                    MessageBox.Show("Added Successfully");
+                    parent.Display_GGC_nhom();
+                    restoreBTN();
+                }
+                else
+                {
+                    MessageBox.Show("Added Failed");
+                }
             }
         }
-
-        private void BTN_huy_Click(object sender, EventArgs e)
+        private void restoreBTN()
         {
             CBB_QuyenTruyCap.SelectedIndex = -1;
             CBB_phongban.SelectedIndex = -1;
@@ -291,7 +338,11 @@ namespace DangNhap
             BTN_file.Enabled = false;
             TXB_ghiChu.Enabled = false;
             CBB_QuyenTruyCap.Enabled = false;
-            TXB_PhiDichVu.Enabled = false;  
+            TXB_PhiDichVu.Enabled = false;
+        }
+        private void BTN_huy_Click(object sender, EventArgs e)
+        {
+            restoreBTN(); 
         }
 
         private void CB_thoihan_CheckedChanged(object sender, EventArgs e)
@@ -312,16 +363,36 @@ namespace DangNhap
         {
             using (OpenFileDialog dlg = new OpenFileDialog() { Filter = "PDF Documents(*.pdf)|*.pdf", ValidateNames = true })
             {
-                if (dlg.ShowDialog() == DialogResult.OK)
+                //Tiếng Việt
+                if (LB_maphongban.Text == "Phòng ban")
                 {
-                    DialogResult dialog = MessageBox.Show("Bạn có chắc muốn upload file này chứ?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (dialog == DialogResult.Yes)
+                    if (dlg.ShowDialog() == DialogResult.OK)
                     {
-                        string file = dlg.FileName;
-                        buffer = File.ReadAllBytes(file);
-                        string[] words = file.Split('\\');
-                        int length = words.Length;
-                        fileName = words[length - 1];
+                        DialogResult dialog = MessageBox.Show("Bạn có chắc muốn upload file này chứ?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (dialog == DialogResult.Yes)
+                        {
+                            string file = dlg.FileName;
+                            buffer = File.ReadAllBytes(file);
+                            string[] words = file.Split('\\');
+                            int length = words.Length;
+                            fileName = words[length - 1];
+                        }
+                    }
+                }
+                //Tiếng Anh
+                else
+                {
+                    if (dlg.ShowDialog() == DialogResult.OK)
+                    {
+                        DialogResult dialog = MessageBox.Show("Are you sure to upload this file?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (dialog == DialogResult.Yes)
+                        {
+                            string file = dlg.FileName;
+                            buffer = File.ReadAllBytes(file);
+                            string[] words = file.Split('\\');
+                            int length = words.Length;
+                            fileName = words[length - 1];
+                        }
                     }
                 }
             }

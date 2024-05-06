@@ -243,6 +243,9 @@
   <data name="LB_noidung.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="BTN_thoat.TabIndex" type="System.Int32, mscorlib">
     <value>123</value>
   </data>
@@ -380,9 +383,6 @@
   </data>
   <data name="&gt;&gt;CBB_quyentruycap.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="CBB_TrangThai.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
   </data>
   <data name="&gt;&gt;TXB_MaNV.Parent" xml:space="preserve">
     <value>$this</value>
@@ -531,8 +531,8 @@
   <data name="&gt;&gt;TXB_macanho.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="gunaGradientButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 35</value>
   </data>
   <data name="TXB_macanho.TabIndex" type="System.Int32, mscorlib">
     <value>183</value>
@@ -558,8 +558,8 @@
   <data name="&gt;&gt;TXB_PhiDichVu.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="BTN_file.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 39</value>
+  <data name="&gt;&gt;TXB_PhongBan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="TXB_noidung.TabIndex" type="System.Int32, mscorlib">
     <value>97</value>
@@ -626,6 +626,9 @@
   </data>
   <data name="LB_PhiDichVu.TabIndex" type="System.Int32, mscorlib">
     <value>242</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="LB_macongviec.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 22</value>
@@ -740,9 +743,6 @@
   </data>
   <data name="&gt;&gt;PN_nen.Name" xml:space="preserve">
     <value>PN_nen</value>
-  </data>
-  <data name="CBB_quyentruycap.TabIndex" type="System.Int32, mscorlib">
-    <value>236</value>
   </data>
   <data name="TXB_GhiChu.Location" type="System.Drawing.Point, System.Drawing">
     <value>839, 284</value>
@@ -894,8 +894,8 @@
   <data name="&gt;&gt;CB_thoihan.Name" xml:space="preserve">
     <value>CB_thoihan</value>
   </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>17</value>
+  <data name="DTP_ngay.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
   </data>
   <data name="&gt;&gt;LB_thoihan.Parent" xml:space="preserve">
     <value>$this</value>
@@ -917,9 +917,6 @@
   </data>
   <data name="&gt;&gt;LLB_chitietfile.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TXB_PhongBan.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="gunaGradientButton1.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 35</value>
@@ -945,8 +942,11 @@
   <data name="TXB_Nhom.Location" type="System.Drawing.Point, System.Drawing">
     <value>185, 191</value>
   </data>
-  <data name="&gt;&gt;LLB_chitietfile.Name" xml:space="preserve">
-    <value>LLB_chitietfile</value>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="CBB_TrangThai.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <data name="&gt;&gt;BTN_thoat.Type" xml:space="preserve">
     <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
@@ -993,6 +993,9 @@
   <data name="&gt;&gt;TXB_macanho.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
+  <data name="BTN_file.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 39</value>
+  </data>
   <data name="LB_maphongban.TabIndex" type="System.Int32, mscorlib">
     <value>115</value>
   </data>
@@ -1014,8 +1017,8 @@
   <data name="&gt;&gt;DTP_gio.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="CBB_quyentruycap.TabIndex" type="System.Int32, mscorlib">
+    <value>236</value>
   </data>
   <data name="&gt;&gt;LB_macongviec.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1031,9 +1034,6 @@
   </data>
   <data name="LB_quyentruycap.Location" type="System.Drawing.Point, System.Drawing">
     <value>670, 476</value>
-  </data>
-  <data name="&gt;&gt;CBB_quyentruycap.Name" xml:space="preserve">
-    <value>CBB_quyentruycap</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
@@ -1067,9 +1067,6 @@
   </data>
   <data name="&gt;&gt;CBB_TrangThai.ZOrder" xml:space="preserve">
     <value>21</value>
-  </data>
-  <data name="DTP_ngay.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
   </data>
   <data name="gunaGradientButton1.TabIndex" type="System.Int32, mscorlib">
     <value>125</value>
@@ -1264,8 +1261,8 @@
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>1, 682</value>
   </data>
-  <data name="gunaGradientButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 35</value>
+  <data name="&gt;&gt;CBB_quyentruycap.Name" xml:space="preserve">
+    <value>CBB_quyentruycap</value>
   </data>
   <data name="&gt;&gt;panel1.Name" xml:space="preserve">
     <value>panel1</value>
@@ -1335,6 +1332,9 @@
   </data>
   <data name="&gt;&gt;TXB_GhiChu.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LLB_chitietfile.Name" xml:space="preserve">
+    <value>LLB_chitietfile</value>
   </data>
   <data name="&gt;&gt;TXB_PhongBan.Parent" xml:space="preserve">
     <value>$this</value>

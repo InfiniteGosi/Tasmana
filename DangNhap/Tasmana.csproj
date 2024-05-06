@@ -623,6 +623,9 @@
       <DependentUpon>CongViecChung.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="CongViecChung.vi.resx">
+      <DependentUpon>CongViecChung.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CuDan.en.resx">
       <DependentUpon>CuDan.cs</DependentUpon>
     </EmbeddedResource>
@@ -715,16 +718,25 @@
       <DependentUpon>ThemCongViecNhanVien.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThemCongViecNhanVien.vi.resx">
+      <DependentUpon>ThemCongViecNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThemCongViecNhom.en.resx">
       <DependentUpon>ThemCongViecNhom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemCongViecNhom.resx">
       <DependentUpon>ThemCongViecNhom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThemCongViecNhom.vi.resx">
+      <DependentUpon>ThemCongViecNhom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThemCongViecPhongBan.en.resx">
       <DependentUpon>ThemCongViecPhongBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemCongViecPhongBan.resx">
+      <DependentUpon>ThemCongViecPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemCongViecPhongBan.vi.resx">
       <DependentUpon>ThemCongViecPhongBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemHoaDonHangThang.en.resx">
