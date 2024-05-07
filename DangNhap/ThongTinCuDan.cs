@@ -18,11 +18,11 @@ namespace DangNhap
 {
     public partial class ThongTinCuDan : Form
     {
-        private CuDan parent;
-        private ChuHo chuHo = null;
-        private NguoiDcUyQuyenChuHo nguoiDcUyQuyen = null;
-        private KhachNganNgay khachNganNgay = null;
-        private int type;
+        private readonly CuDan parent;
+        private readonly ChuHo chuHo = null;
+        private readonly NguoiDcUyQuyenChuHo nguoiDcUyQuyen = null;
+        private readonly KhachNganNgay khachNganNgay = null;
+        private readonly int type;
         public ThongTinCuDan(CuDan parent, int type)
         {
             InitializeComponent();

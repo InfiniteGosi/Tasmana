@@ -17,9 +17,8 @@ namespace DangNhap
 {
     public partial class CongViecChung : Form
     {
-        private List<Job> jobs = new List<Job>();
-        private Account currentAccount;
-        private Employee currentUser;
+        private readonly Account currentAccount;
+        private readonly Employee currentUser;
         private int index = 0;
         private int quyen = 0;
         private string[] hd = null;
@@ -275,7 +274,7 @@ namespace DangNhap
             }
 
             // Lấy dữ liệu từ GridGroupingControl và thêm vào DataTable
-            foreach (GridRecord record in GGC_hienthicongviec.Table.Records)
+            foreach (GridRecord record in GGC_hienthicongviec.Table.Records.Cast<GridRecord>())
             {
                 DataRow row = dt.NewRow();
 
@@ -351,8 +350,10 @@ namespace DangNhap
             GridPrintDocumentAdv gridPrintDocument = new GridPrintDocumentAdv(GGC_hienthicongviec.TableControl);
             PrintDialog printDialog = new PrintDialog();
             gridPrintDocument.ScaleColumnsToFitPage = true;
-            PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog();
-            printPreviewDialog.Document = gridPrintDocument;
+            PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog
+            {
+                Document = gridPrintDocument
+            };
 
             printPreviewDialog.ShowDialog();
             printDialog.Document = gridPrintDocument;

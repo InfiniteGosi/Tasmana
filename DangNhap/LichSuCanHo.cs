@@ -18,7 +18,7 @@ namespace DangNhap
 {
     public partial class LichSuCanHo : Form
     {
-        private Apartment canHoHienTai;
+        private readonly Apartment canHoHienTai;
         public LichSuCanHo()
         {
             InitializeComponent();

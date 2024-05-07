@@ -21,13 +21,13 @@ namespace DangNhap
         }
         public List<Division> GetPhongBan()
         {
-            List<Division> listMaPB = new List<Division>();
+            List<Division> listMaPB;
             listMaPB = DivisionBLL.Instance.GetDivisionList();
             return listMaPB;
         }
         private void ReadPhongBan()
         {
-            List<Division> listPB = new List<Division>();
+            List<Division> listPB;
             CBB_phongban.Enabled = true;
             CBB_phongban.Items.Clear();
             listPB = GetPhongBan();
@@ -38,14 +38,14 @@ namespace DangNhap
         }
         public List<Employee> GetEmployee(string maBoPhan)
         {
-            List<Employee> list = new List<Employee>();
+            List<Employee> list;
             list = EmployeeBLL.Instance.GetEmployeeByDivision(maBoPhan);
             return list;
         }
 
         public void ReadNV()
         {
-            List<Employee> employees = new List<Employee>();
+            List<Employee> employees;
             CBB_nhanvien.Enabled = true;
             CBB_nhanvien.Items.Clear();
             employees = GetEmployee(CBB_phongban.SelectedItem.ToString().Split('-')[0]);

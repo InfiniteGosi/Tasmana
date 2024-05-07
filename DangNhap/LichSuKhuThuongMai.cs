@@ -13,7 +13,7 @@ namespace DangNhap
 {
     public partial class LichSuKhuThuongMai : Form
     {
-        private KhuThuongMai khuThuongMai;
+        private readonly KhuThuongMai khuThuongMai;
         public LichSuKhuThuongMai()
         {
             InitializeComponent();

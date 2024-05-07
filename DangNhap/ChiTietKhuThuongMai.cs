@@ -15,11 +15,11 @@ namespace DangNhap
 {
     public partial class ChiTietKhuThuongMai : Form
     {
-        private CanHo parent;
-        private string maKhuThuongMaiHienTai;
+        private readonly CanHo parent;
+        private readonly string maKhuThuongMaiHienTai;
         private KhuThuongMai khuThuongMai;
         private KhachThueKhuThuongMai khachThue;
-        private Account currentAccount;
+        private readonly Account currentAccount;
         public ChiTietKhuThuongMai()
         {
             InitializeComponent();
@@ -158,10 +158,7 @@ namespace DangNhap
 
         private void BTN_chung_Click(object sender, EventArgs e)
         {
-            if (currentFormChild != null)
-            {
-                currentFormChild.Close();
-            }
+            currentFormChild?.Close();
             BTN_chung.BackColor = Color.FromArgb(51, 53, 55);
             BTN_lichsu.BackColor = Color.Transparent;
         }
@@ -192,6 +189,8 @@ namespace DangNhap
         {
             InitializeValues_KTM();
             MessageBox.Show(KhuThuongMaiBLL.Instance.UpdateKhuThuongMai(AddParemeter_KTM()));
+            parent.DisplayGGC_khuthuongmai();
+            Close();
         }
 
         private void BTN_uploadanh_Click(object sender, EventArgs e)
@@ -213,6 +212,7 @@ namespace DangNhap
             {
                 string deleteMessage = KhuThuongMaiBLL.Instance.DeleteKhuThuongMai(maKhuThuongMaiHienTai);
                 MessageBox.Show(deleteMessage);
+                parent.DisplayGGC_khuthuongmai();
                 Close();
             }
         }

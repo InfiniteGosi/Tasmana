@@ -52,7 +52,7 @@ namespace DangNhap
         // Tải dữ liệu thống kê/ xếp hạng NHÂN VIÊN theo DOANH THU lên GGC_ThongKe 
         private void LoadRatingOfEmployeeByRevenue()
         {
-            DataTable dataSource = new DataTable();
+            DataTable dataSource;
             dataSource = JobBLL.Instance.GetRatingOfEmployeeByRevenue();
             GGC_ThongKe.DataSource = null; // Clear previous data
             GGC_ThongKe.DataSource = dataSource;
@@ -67,7 +67,7 @@ namespace DangNhap
         // Tải dữ liệu thống kê/ xếp hạng NHÂN VIÊN theo TỈ LỆ HOÀN THÀNH CÔNG VIỆC lên GGC_Thongke
         private void LoadRatingOfEmployeeByFinishRate()
         {
-            DataTable dataSource = new DataTable();
+            DataTable dataSource;
             dataSource = JobBLL.Instance.GetRatingOfEmployeeByFinishRate();
             GGC_ThongKe.DataSource = null; // Clear previous data
             GGC_ThongKe.DataSource = dataSource;
@@ -85,7 +85,7 @@ namespace DangNhap
         // Tải dữ liệu thống kê/ xếp hạng NHÂN VIÊN theo SỐ CÔNG VIỆC ĐÃ THỰC HIỆN TRONG KHOẢNG THỜI GIAN
         private void LoadRatingOfEmployeeByFinishedJob()
         {
-            DataTable dataSource = new DataTable();
+            DataTable dataSource;
             DateTime tuNgay = DTP_TuNgay.Value;
             DateTime denNgay = DTP_DenNgay.Value;
             dataSource = JobBLL.Instance.GetRatingOfEmployeeByNumOfFinishedJob(tuNgay, denNgay);
@@ -102,7 +102,7 @@ namespace DangNhap
         // Tải dữ liệu thống kê / Xếp hạng PHÒNG BAN (BỘ PHẬN) theo Doanh thu
         private void LoadRatingOfDivisionByRevenue()
         {
-            DataTable dataSource = new DataTable();
+            DataTable dataSource;
             dataSource = JobBLL.Instance.GetRatingOfDivisionByRevenue();
             GGC_ThongKe.DataSource = null; // Clear previous data
             GGC_ThongKe.DataSource = dataSource;
@@ -118,7 +118,7 @@ namespace DangNhap
         // Tải dữ liệu thống kê / Xếp hạng PHÒNG BAN (BỘ PHẬN) theo Tỉ lệ hoàn thành công việc
         private void LoadRatingOfDivisionByFinishRate()
         {
-            DataTable dataSource = new DataTable();
+            DataTable dataSource;
             dataSource = JobBLL.Instance.GetRatingofDivisionByFinishRate();
             GGC_ThongKe.DataSource = null; // Clear previous data
             GGC_ThongKe.DataSource = dataSource;
@@ -136,7 +136,7 @@ namespace DangNhap
         // Tải dữ liệu thống kê / Xếp hạng PHÒNG BAN (BỘ PHẬN) theo SỐ CÔNG VIỆC ĐÃ THỰC HIỆN TRONG KHOẢNG THỜI GIAN
         private void LoadRatingOfDivisionOfFinishedJob()
         {
-            DataTable dataSource = new DataTable();
+            DataTable dataSource;
             DateTime tuNgay = DTP_TuNgay.Value;
             DateTime denNgay = DTP_DenNgay.Value;
             dataSource = JobBLL.Instance.GetRatingOfDivisionByNumOfFinishedJob(tuNgay, denNgay);
@@ -300,8 +300,10 @@ namespace DangNhap
             GridPrintDocumentAdv gridPrintDocument = new GridPrintDocumentAdv(GGC_ThongKe.TableControl);
             PrintDialog printDialog = new PrintDialog();
             gridPrintDocument.ScaleColumnsToFitPage = true;
-            PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog();
-            printPreviewDialog.Document = gridPrintDocument;
+            PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog
+            {
+                Document = gridPrintDocument
+            };
 
             printPreviewDialog.ShowDialog();
             printDialog.Document = gridPrintDocument;

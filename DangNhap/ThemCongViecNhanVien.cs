@@ -12,8 +12,8 @@ namespace DangNhap
 {
     public partial class ThemCongViecNhanVien : Form
     {
-        private CongViecChung parent;
-        Account currentAccount;
+        private readonly CongViecChung parent;
+        private readonly Account currentAccount;
         public ThemCongViecNhanVien(CongViecChung parent, Account currentAccount)
         {
             InitializeComponent();
@@ -23,10 +23,7 @@ namespace DangNhap
         private Form currentFormChild;
         private void OpenChildForm(Form childForm)
         {
-            if (currentFormChild != null)
-            {
-                currentFormChild.Close();
-            }
+            currentFormChild?.Close();
             currentFormChild = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -44,10 +41,7 @@ namespace DangNhap
 
         private void BTN_nhanvien_Click(object sender, EventArgs e)
         {
-            if (currentFormChild != null)
-            {
-                currentFormChild.Close();
-            }
+            currentFormChild?.Close();
             BTN_nhanvien.BackColor = Color.FromArgb(51, 53, 55);
             BTN_nhom.BackColor = Color.Transparent;
             BTN_phongban.BackColor = Color.Transparent;
@@ -94,13 +88,13 @@ namespace DangNhap
 
         public List<Division> GetPhongBan()
         {
-            List<Division> listMaPB = new List<Division>();
+            List<Division> listMaPB;
             listMaPB = DivisionBLL.Instance.GetDivisionList();
             return listMaPB;
         }
         private void ReadPhongBan()
         {
-            List<Division> listPB = new List<Division>();
+            List<Division> listPB;
             CBB_phongban.Enabled = true;
             CBB_phongban.Items.Clear();
             listPB = GetPhongBan();
@@ -146,7 +140,7 @@ namespace DangNhap
 
         private List<Group> GetNhom(string maBoPhan)
         {
-            List<Group> list = new List<Group>();
+            List<Group> list;
             list = GroupBLL.Instance.GetGroupListByDivisionId(maBoPhan);
             return list;
         }
@@ -155,7 +149,7 @@ namespace DangNhap
             CBB_nhom.Enabled = true;
             CBB_nhom.Items.Clear();
             string maBoPhan = CBB_phongban.SelectedItem.ToString().Split('-')[0];
-            List<Group> listNhom = new List<Group>();
+            List<Group> listNhom;
             listNhom = GetNhom(maBoPhan);
             for (int i = 0; i < listNhom.Count; i++)
             {
@@ -166,15 +160,15 @@ namespace DangNhap
 
         private List<Employee> GetNV(string maNhom)
         {
-            List<Employee> list = new List<Employee>();
+            List<Employee> list;
             list = EmployeeBLL.Instance.GetEmployeesByGroup(maNhom);
             return list;
         }
-        private void readNV()
+        private void ReadNV()
         {
             CBB_manhanvien.Enabled = true;
             CBB_manhanvien.Items.Clear();
-            List<Employee> listNV = new List<Employee>();
+            List<Employee> listNV;
             listNV = GetNV(CBB_nhom.SelectedItem.ToString());
             for (int i = 0; i < listNV.Count; i++)
             {
@@ -192,7 +186,7 @@ namespace DangNhap
         {
             if (CBB_nhom.SelectedIndex != -1)
             {
-                readNV();
+                ReadNV();
             }
         }
 
@@ -241,7 +235,7 @@ namespace DangNhap
             if (CBB_nhom.SelectedIndex != -1)
             {
                 CBB_manhanvien.SelectedIndex = -1;
-                readNV();
+                ReadNV();
             }
         }
 
@@ -381,7 +375,7 @@ namespace DangNhap
                 {
                     MessageBox.Show("Thêm thành công");
                     parent.Display_GGC_nhanvien();
-                    restoreBTN();
+                    RestoreBTN();
                 }
                 else
                 {
@@ -426,7 +420,7 @@ namespace DangNhap
                 {
                     MessageBox.Show("Added Successfully");
                     parent.Display_GGC_nhanvien();
-                    restoreBTN();
+                    RestoreBTN();
                 }
                 else
                 {
@@ -474,7 +468,7 @@ namespace DangNhap
             LLB_hienfile.Text = fileName;
             LLB_hienfile.Show();
         }
-        private void restoreBTN()
+        private void RestoreBTN()
         {
             CBB_QuyenTruyCap.SelectedIndex = -1;
             CBB_phongban.SelectedIndex = -1;
@@ -497,7 +491,7 @@ namespace DangNhap
         }
         private void BTN_huy_Click(object sender, EventArgs e)
         {
-            restoreBTN();
+            RestoreBTN();
         }
 
         private void CB_thoihan_CheckedChanged(object sender, EventArgs e)
