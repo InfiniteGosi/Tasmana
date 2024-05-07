@@ -268,5 +268,29 @@ namespace DangNhap
                 Close();
             }
         }
+
+        //Di chuyển form
+        int mov;
+        int movX;
+        int movY;
+        private void TTKTM_MouseDown(object sender, MouseEventArgs e)
+        {
+            mov = 1;
+            movX = e.X;
+            movY = e.Y;
+        }
+
+        private void TTKTM_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mov == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - movX, MousePosition.Y - movY);
+            }
+        }
+
+        private void TTKTM_MouseUp(object sender, MouseEventArgs e)
+        {
+            mov = 0;
+        }
     }
 }

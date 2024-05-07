@@ -117,20 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="BTN_themcudan.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAZNJREFUSEvtlbFKA0EURVOIpBYLsbAQEQuxCJYiFvkAC/ELrMUPEJvgB1hYhBQp
-        RESs8gEWFhYWKSRFChELKyuRYCXJeu7Lm2WzhjFs2hy4vMndO3d2YCGlGVMxGAyW0XGSJA1U1xot+uPp
-        oHAVdVGeDlrxWHEo0Vv/gRtoXHisOBS9hEIvTdeo7bHi0PdmrePpeKw4lNgNRLiB8Bs8eaw4lDxnCrPl
-        Wj56rDgU3VrrGHjW9JiBNYcWXGW34xDcR32U3kCw7qOqxwzsTbx3pnTidhyCZTa1VS4Jnw9o5C3xKyED
-        Z27HIaiNB8wf2wb81o1G3l7gVSwAZOIHENCGLXTJuuulhq/ryjF1eM3V4BnD0A2Df2qlAYxtgi0VhQ2a
-        uXXLszeRTFj3FJTWURN9o//IHqAXMQ0fjSD/S8Eq+pCDoRGFjB3A3EC7riPkieQa7SH5OzrgVa4CIRRb
-        wz1T5UHzKPsVnesFUjA+h/7E6KvqZbSG0q8Ial49BOOK0++YprDOzryX0xK+/jvC70OvnjEJpdIvxP+m
-        cvkFlW8AAAAASUVORK5CYII=
-</value>
+  <data name="BTN_themcudan.Text" xml:space="preserve">
+    <value>Add resident</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="BTN_in.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -178,8 +168,11 @@
         RK5CYII=
 </value>
   </data>
+  <data name="GGC_cudan.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
   <data name="LB_loai.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 16</value>
+    <value>175, 22</value>
   </data>
   <data name="LB_loai.Text" xml:space="preserve">
     <value>Choose resident type</value>

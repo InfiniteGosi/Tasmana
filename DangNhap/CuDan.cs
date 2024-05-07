@@ -217,14 +217,31 @@ namespace DangNhap
                 }
 
                 //Thiết lập tiêu đề cho các cột
-                string[] headers = { "Mã cư dân", "Mã căn hộ", "Loại cư dân", "Họ tên", "Ngày sinh", "Mã định danh",
-                    "Số điện thoại", "Email", "Quốc tịch", "Số thẻ tạm trú",
-                    "Ngày chuyển vào", "Ngày chuyển đi", "Biển số xe đăng ký",
-                    "Mã cư dân lưu trú cùng", "Tình trạng công nợ", "Dữ liệu thú nuôi"};
-                for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                //Tiếng Việt
+                if(LB_loai.Text == "Chọn loại cư dân")
                 {
-                    columns[i].HeaderText = headers[i];
+                    string[] headers = { "Mã cư dân", "Mã căn hộ", "Loại cư dân", "Họ tên", "Ngày sinh", "Mã định danh",
+                        "Số điện thoại", "Email", "Quốc tịch", "Số thẻ tạm trú",
+                        "Ngày chuyển vào", "Ngày chuyển đi", "Biển số xe đăng ký",
+                        "Mã cư dân lưu trú cùng", "Tình trạng công nợ", "Dữ liệu thú nuôi"};
+                    for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                    {
+                        columns[i].HeaderText = headers[i];
+                    }
                 }
+                //Tiếng Anh
+                else
+                {
+                    string[] headers = { "Resident ID", "Apartment ID", "Resident type", "Name", "Birth", "Crendential number",
+                        "Phone", "Email", "Nationality", "Temp residency num",
+                        "Date of moving in", "Date of moving out", "Driver plate",
+                        "Relative resident ID", "Debt status", "Pet"};
+                    for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                    {
+                        columns[i].HeaderText = headers[i];
+                    }
+                }
+                
             }
             GridDynamicFilter dynamicFilter = new GridDynamicFilter();
             dynamicFilter.WireGrid(GGC_cudan);
@@ -255,13 +272,29 @@ namespace DangNhap
                 }
 
                 // Thiết lập tiêu đề cho các cột
-                string[] headers = { "Mã khách đang thuê", "Tên công ty", "Họ tên người đại diện", "Mã nhân viên phụ trách", 
-                    "Số điện thoại", "Email", "Ngày ký họp đồng thuê", "Ngày chuyển vào", "Ngày chuyển đi", "Phí quản lý",
-                    "Mô tả khu vực cho thuê", "Biển số xe đăng ký"};
-                for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                //Tiếng Việt
+                if (LB_loai.Text == "Chọn loại cư dân")
                 {
-                    columns[i].HeaderText = headers[i];
+                    string[] headers = { "Mã khách đang thuê", "Tên công ty", "Họ tên người đại diện", "Mã nhân viên phụ trách",
+                        "Số điện thoại", "Email", "Ngày ký họp đồng thuê", "Ngày chuyển vào", "Ngày chuyển đi", "Phí quản lý",
+                        "Mô tả khu vực cho thuê", "Biển số xe đăng ký"};
+                    for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                    {
+                        columns[i].HeaderText = headers[i];
+                    }
                 }
+                //Tiếng Anh
+                else 
+                {
+                    string[] headers = { "Hiring resident ID", "Company name", "Representator name", "Employee ID in chargeh",
+                        "Phone", "Email", "Date of signing contact", "Date of moving in", "Date of moving out", "Management fee",
+                        "Hiring area description", "Driver plate"};
+                    for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                    {
+                        columns[i].HeaderText = headers[i];
+                    }
+                }
+
             }
             GridDynamicFilter dynamicFilter = new GridDynamicFilter();
             dynamicFilter.WireGrid(GGC_cudan);

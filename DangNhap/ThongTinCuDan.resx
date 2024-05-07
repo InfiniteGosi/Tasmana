@@ -122,10 +122,13 @@
     <value>Times New Roman, 12pt</value>
   </data>
   <data name="LB_tamtru.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 649</value>
+    <value>33, 641</value>
   </data>
   <data name="&gt;&gt;label15.Name" xml:space="preserve">
     <value>label15</value>
+  </data>
+  <data name="DTP_bangiao.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="LB_dinhdanh.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -144,8 +147,8 @@
   <data name="label15.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
   </data>
-  <data name="LB_emacd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="LB_ediennuoc.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="TXB_loaixe.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
@@ -177,20 +180,17 @@
   <data name="LB_bienso.TabIndex" type="System.Int32, mscorlib">
     <value>254</value>
   </data>
-  <data name="&gt;&gt;DTP_bangiao.ZOrder" xml:space="preserve">
-    <value>27</value>
-  </data>
   <data name="&gt;&gt;label14.Parent" xml:space="preserve">
     <value>panel1</value>
-  </data>
-  <data name="LB_etamtru.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="LB_nguoithan.TabIndex" type="System.Int32, mscorlib">
     <value>256</value>
   </data>
   <data name="LB_email.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 22</value>
+  </data>
+  <data name="TXB_macanho.Size" type="System.Drawing.Size, System.Drawing">
+    <value>375, 30</value>
   </data>
   <data name="LB_equoctich.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -202,10 +202,10 @@
     <value>NoControl</value>
   </data>
   <data name="TXB_loaixe.Location" type="System.Drawing.Point, System.Drawing">
-    <value>936, 584</value>
+    <value>941, 571</value>
   </data>
   <data name="LB_eloaixe.Location" type="System.Drawing.Point, System.Drawing">
-    <value>933, 618</value>
+    <value>941, 604</value>
   </data>
   <data name="&gt;&gt;LB_di.ZOrder" xml:space="preserve">
     <value>26</value>
@@ -217,7 +217,7 @@
     <value>Times New Roman, 12pt</value>
   </data>
   <data name="LB_bangiao.Location" type="System.Drawing.Point, System.Drawing">
-    <value>682, 181</value>
+    <value>688, 179</value>
   </data>
   <data name="&gt;&gt;LB_etinhtrangxe.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -230,6 +230,12 @@
   </data>
   <data name="TXB_quoctich.Size" type="System.Drawing.Size, System.Drawing">
     <value>375, 30</value>
+  </data>
+  <data name="LB_tinhtrangxe.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="DTP_ngaysinh.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
   </data>
   <data name="textBox3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
@@ -247,13 +253,13 @@
     <value>Times New Roman, 12pt</value>
   </data>
   <data name="DTP_ngaysinh.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 378</value>
+    <value>181, 372</value>
   </data>
   <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
     <value>-617, 9</value>
   </data>
   <data name="TXB_macd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 173</value>
+    <value>181, 171</value>
   </data>
   <data name="&gt;&gt;LB_bienso.ZOrder" xml:space="preserve">
     <value>21</value>
@@ -268,7 +274,7 @@
     <value>PN_hienthi</value>
   </data>
   <data name="LB_loaixe.Location" type="System.Drawing.Point, System.Drawing">
-    <value>689, 584</value>
+    <value>688, 575</value>
   </data>
   <data name="LB_bangiao.TabIndex" type="System.Int32, mscorlib">
     <value>245</value>
@@ -285,11 +291,17 @@
   <data name="&gt;&gt;LB_quoctich.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;LB_sdt.ZOrder" xml:space="preserve">
+    <value>43</value>
+  </data>
   <data name="&gt;&gt;TXB_diennuoc.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;TXB_madinhdanh.ZOrder" xml:space="preserve">
     <value>46</value>
+  </data>
+  <data name="DTP_ngaysinh.CalendarFont" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
   </data>
   <data name="&gt;&gt;LB_email.Name" xml:space="preserve">
     <value>LB_email</value>
@@ -330,11 +342,20 @@
   <data name="LB_loaixe.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
   </data>
+  <data name="&gt;&gt;DTP_ngaysinh.Name" xml:space="preserve">
+    <value>DTP_ngaysinh</value>
+  </data>
+  <data name="label15.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
   <data name="TXB_hovaten.TabIndex" type="System.Int32, mscorlib">
     <value>216</value>
   </data>
   <data name="LB_macd.TabIndex" type="System.Int32, mscorlib">
     <value>243</value>
+  </data>
+  <data name="DTP_vao.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
   </data>
   <data name="BTN_xoa.Text" xml:space="preserve">
     <value>Xóa</value>
@@ -356,9 +377,6 @@
   </data>
   <data name="LB_etinhtrangxe.Text" xml:space="preserve">
     <value>Vui lòng nhập tình trạng phương tiện</value>
-  </data>
-  <data name="label12.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
   </data>
   <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
     <value>52</value>
@@ -388,7 +406,7 @@
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="LB_eloaicd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>178, 143</value>
+    <value>181, 142</value>
   </data>
   <data name="&gt;&gt;label16.Name" xml:space="preserve">
     <value>label16</value>
@@ -403,7 +421,7 @@
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="CBB_loaicd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>181, 111</value>
+    <value>181, 109</value>
   </data>
   <data name="&gt;&gt;LB_congno.Name" xml:space="preserve">
     <value>LB_congno</value>
@@ -426,6 +444,9 @@
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="LB_ttcd.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
   </data>
@@ -433,7 +454,7 @@
     <value>Họ và tên</value>
   </data>
   <data name="LB_hoten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 238</value>
+    <value>33, 245</value>
   </data>
   <data name="LB_loaixe.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -451,16 +472,16 @@
     <value>213</value>
   </data>
   <data name="LB_email.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 592</value>
+    <value>33, 575</value>
   </data>
   <data name="&gt;&gt;LB_congno.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="LB_nguoithan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>682, 319</value>
+    <value>688, 311</value>
   </data>
   <data name="TXB_diennuoc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>936, 243</value>
+    <value>941, 241</value>
   </data>
   <data name="LB_congno.Text" xml:space="preserve">
     <value>Tình trạng công nợ</value>
@@ -478,7 +499,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="LB_dinhdanh.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 448</value>
+    <value>33, 443</value>
   </data>
   <data name="&gt;&gt;LB_ediennuoc.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -522,6 +543,9 @@
   <data name="panel5.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
   </data>
+  <data name="&gt;&gt;TXB_bienso.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
   <data name="&gt;&gt;label12.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
@@ -540,11 +564,17 @@
   <data name="&gt;&gt;numericUpDownExt4.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Số lượng toilet</value>
+  </data>
   <data name="BTN_luu.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 9pt</value>
   </data>
   <data name="LB_loaicudan.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 22</value>
+  </data>
+  <data name="&gt;&gt;LB_emacd.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="&gt;&gt;numericUpDownExt4.Type" xml:space="preserve">
     <value>Syncfusion.Windows.Forms.Tools.NumericUpDownExt, Syncfusion.Tools.Windows, Version=25.1462.39.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
@@ -553,7 +583,7 @@
     <value>PN_hienthi</value>
   </data>
   <data name="TXB_thunuoi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>937, 445</value>
+    <value>941, 439</value>
   </data>
   <data name="&gt;&gt;TXB_quoctich.ZOrder" xml:space="preserve">
     <value>34</value>
@@ -583,25 +613,25 @@
     <value>320, 78</value>
   </data>
   <data name="LB_etinhtrangxe.Location" type="System.Drawing.Point, System.Drawing">
-    <value>933, 682</value>
+    <value>941, 670</value>
   </data>
-  <data name="&gt;&gt;PN_hienthi.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="LB_tinhtrangxe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>688, 641</value>
   </data>
   <data name="&gt;&gt;BTN_thoat.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="CBB_nguoithan.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
   <data name="CBB_nguoithan.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 24</value>
+    <value>393, 30</value>
   </data>
   <data name="&gt;&gt;LB_vao.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;LB_vao.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
-  </data>
-  <data name="label17.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="LB_equoctich.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 10.8pt</value>
@@ -626,9 +656,6 @@
   </data>
   <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>1, 600</value>
-  </data>
-  <data name="LB_tinhtrangxe.Location" type="System.Drawing.Point, System.Drawing">
-    <value>688, 652</value>
   </data>
   <data name="&gt;&gt;LB_eemail.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
@@ -684,11 +711,11 @@
   <data name="&gt;&gt;DTP_ngaysinh.ZOrder" xml:space="preserve">
     <value>28</value>
   </data>
-  <data name="TXB_tinhtrangxe.Location" type="System.Drawing.Point, System.Drawing">
-    <value>936, 649</value>
+  <data name="&gt;&gt;TXB_macanho.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="LB_quoctich.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 310</value>
+    <value>33, 311</value>
   </data>
   <data name="&gt;&gt;BTN_xoa.Parent" xml:space="preserve">
     <value>$this</value>
@@ -702,8 +729,8 @@
   <data name="LB_eemail.Text" xml:space="preserve">
     <value>Vui lòng nhập email</value>
   </data>
-  <data name="label15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;TXB_thunuoi.Name" xml:space="preserve">
+    <value>TXB_thunuoi</value>
   </data>
   <data name="LB_emacd.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -735,6 +762,9 @@
   <data name="&gt;&gt;LB_vao.Name" xml:space="preserve">
     <value>LB_vao</value>
   </data>
+  <data name="LB_vao.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 22</value>
+  </data>
   <data name="textBox4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
   </data>
@@ -742,7 +772,7 @@
     <value>Times New Roman, 10.8pt</value>
   </data>
   <data name="LB_etamtru.Location" type="System.Drawing.Point, System.Drawing">
-    <value>178, 679</value>
+    <value>181, 665</value>
   </data>
   <data name="LB_etamtru.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 10.8pt</value>
@@ -768,14 +798,17 @@
   <data name="LB_ttcd.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 16.2pt, style=Bold</value>
   </data>
-  <data name="CBB_nguoithan.TabIndex" type="System.Int32, mscorlib">
-    <value>279</value>
+  <data name="&gt;&gt;TXB_quoctich.Name" xml:space="preserve">
+    <value>TXB_quoctich</value>
   </data>
   <data name="LB_eemail.Size" type="System.Drawing.Size, System.Drawing">
     <value>151, 20</value>
   </data>
   <data name="&gt;&gt;TXB_email.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LB_email.ZOrder" xml:space="preserve">
+    <value>39</value>
   </data>
   <data name="LB_loaicudan.Text" xml:space="preserve">
     <value>Loại cư dân</value>
@@ -786,14 +819,17 @@
   <data name="panel4.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
   </data>
+  <data name="NUD_congno.Location" type="System.Drawing.Point, System.Drawing">
+    <value>941, 377</value>
+  </data>
   <data name="&gt;&gt;label17.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="LB_thunuoi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>682, 448</value>
+    <value>688, 443</value>
   </data>
   <data name="TXB_sdt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 511</value>
+    <value>181, 498</value>
   </data>
   <data name="&gt;&gt;TXB_sdt.ZOrder" xml:space="preserve">
     <value>44</value>
@@ -801,8 +837,8 @@
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>1, 839</value>
   </data>
-  <data name="comboBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>183</value>
+  <data name="LB_hoten.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
   </data>
   <data name="LB_sdt.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 22</value>
@@ -812,6 +848,9 @@
   </data>
   <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
+  </data>
+  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
+    <value>panel3</value>
   </data>
   <data name="&gt;&gt;CBB_loaicd.Name" xml:space="preserve">
     <value>CBB_loaicd</value>
@@ -861,7 +900,7 @@
   <data name="&gt;&gt;BTN_luu.Type" xml:space="preserve">
     <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="LB_quoctich.AutoSize" type="System.Boolean, mscorlib">
+  <data name="label17.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="&gt;&gt;numericUpDownExt6.Parent" xml:space="preserve">
@@ -875,9 +914,6 @@
   </data>
   <data name="LB_tinhtrangxe.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="DTP_vao.TabIndex" type="System.Int32, mscorlib">
-    <value>250</value>
   </data>
   <data name="&gt;&gt;DTP_vao.Type" xml:space="preserve">
     <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -922,7 +958,7 @@
     <value>375, 30</value>
   </data>
   <data name="TXB_macanho.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 43</value>
+    <value>181, 43</value>
   </data>
   <data name="LB_eemail.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -946,7 +982,7 @@
     <value>True</value>
   </data>
   <data name="DTP_di.Size" type="System.Drawing.Size, System.Drawing">
-    <value>262, 22</value>
+    <value>393, 30</value>
   </data>
   <data name="LB_etinhtrangxe.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -958,7 +994,7 @@
     <value>Times New Roman, 12pt</value>
   </data>
   <data name="DTP_bangiao.Size" type="System.Drawing.Size, System.Drawing">
-    <value>262, 22</value>
+    <value>393, 30</value>
   </data>
   <data name="LB_bienso.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
@@ -1000,10 +1036,10 @@
     <value>51</value>
   </data>
   <data name="TXB_quoctich.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 307</value>
+    <value>181, 305</value>
   </data>
-  <data name="&gt;&gt;numericUpDownExt5.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.NumericUpDownExt, Syncfusion.Tools.Windows, Version=25.1462.39.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="LB_emacd.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1012,7 +1048,7 @@
     <value>LB_ttcd</value>
   </data>
   <data name="LB_ehoten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>178, 271</value>
+    <value>181, 271</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>212</value>
@@ -1029,9 +1065,6 @@
   <data name="LB_vao.TabIndex" type="System.Int32, mscorlib">
     <value>227</value>
   </data>
-  <data name="TXB_email.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 584</value>
-  </data>
   <data name="TXB_diennuoc.TabIndex" type="System.Int32, mscorlib">
     <value>253</value>
   </data>
@@ -1044,8 +1077,8 @@
   <data name="LB_quoctich.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 22</value>
   </data>
-  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 22</value>
+  <data name="LB_emacanho.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;TXB_email.Name" xml:space="preserve">
     <value>TXB_email</value>
@@ -1102,13 +1135,13 @@
     <value>18</value>
   </data>
   <data name="LB_emacd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>178, 206</value>
+    <value>181, 204</value>
   </data>
   <data name="LB_thunuoi.Text" xml:space="preserve">
     <value>Thú nuôi</value>
   </data>
   <data name="CBB_loaicd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>376, 24</value>
+    <value>375, 30</value>
   </data>
   <data name="&gt;&gt;LB_loaicudan.Name" xml:space="preserve">
     <value>LB_loaicudan</value>
@@ -1155,14 +1188,8 @@
   <data name="&gt;&gt;LB_sdt.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
   </data>
-  <data name="LB_ngaysinh.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="&gt;&gt;TXB_macanho.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="LB_bangiao.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
@@ -1173,8 +1200,8 @@
   <data name="textBox4.Location" type="System.Drawing.Point, System.Drawing">
     <value>-456, 147</value>
   </data>
-  <data name="LB_congno.Location" type="System.Drawing.Point, System.Drawing">
-    <value>682, 392</value>
+  <data name="&gt;&gt;LB_di.Name" xml:space="preserve">
+    <value>LB_di</value>
   </data>
   <data name="comboBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>375, 30</value>
@@ -1189,13 +1216,10 @@
     <value>True</value>
   </data>
   <data name="CBB_nguoithan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>941, 330</value>
+    <value>941, 310</value>
   </data>
   <data name="LB_ehoten.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 20</value>
-  </data>
-  <data name="&gt;&gt;LB_dinhdanh.ZOrder" xml:space="preserve">
-    <value>45</value>
   </data>
   <data name="&gt;&gt;LB_etamtru.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1221,14 +1245,14 @@
   <data name="&gt;&gt;TXB_macd.Name" xml:space="preserve">
     <value>TXB_macd</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>ThongTinCuDan</value>
-  </data>
   <data name="LB_ttcd.Size" type="System.Drawing.Size, System.Drawing">
     <value>288, 32</value>
   </data>
   <data name="&gt;&gt;LB_loaixe.Name" xml:space="preserve">
     <value>LB_loaixe</value>
+  </data>
+  <data name="LB_di.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
   </data>
   <data name="LB_dinhdanh.TabIndex" type="System.Int32, mscorlib">
     <value>219</value>
@@ -1252,10 +1276,10 @@
     <value>42</value>
   </data>
   <data name="LB_esdt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>178, 553</value>
+    <value>181, 531</value>
   </data>
-  <data name="TXB_email.Size" type="System.Drawing.Size, System.Drawing">
-    <value>375, 30</value>
+  <data name="label12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
   </data>
   <data name="LB_tamtru.TabIndex" type="System.Int32, mscorlib">
     <value>223</value>
@@ -1287,14 +1311,17 @@
   <data name="LB_emacd.Text" xml:space="preserve">
     <value>Vui lòng nhập mã cư dân</value>
   </data>
+  <data name="comboBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>183</value>
+  </data>
   <data name="&gt;&gt;LB_dinhdanh.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;panel2.Name" xml:space="preserve">
     <value>panel2</value>
   </data>
-  <data name="BTN_xoa.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 35</value>
+  <data name="&gt;&gt;DTP_bangiao.ZOrder" xml:space="preserve">
+    <value>27</value>
   </data>
   <data name="&gt;&gt;BTN_thoat.Type" xml:space="preserve">
     <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
@@ -1305,17 +1332,14 @@
   <data name="LB_etinhtrangxe.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;TXB_bienso.ZOrder" xml:space="preserve">
-    <value>20</value>
+  <data name="&gt;&gt;numericUpDownExt5.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.NumericUpDownExt, Syncfusion.Tools.Windows, Version=25.1462.39.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
   <data name="&gt;&gt;LB_loaicudan.ZOrder" xml:space="preserve">
     <value>32</value>
   </data>
   <data name="&gt;&gt;TXB_macd.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
-  </data>
-  <data name="LB_hoten.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
   </data>
   <data name="BTN_thoat.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 7.8pt, style=Bold</value>
@@ -10859,11 +10883,8 @@
   <data name="&gt;&gt;DTP_vao.Name" xml:space="preserve">
     <value>DTP_vao</value>
   </data>
-  <data name="&gt;&gt;LB_equoctich.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="LB_ecccd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>178, 473</value>
+    <value>181, 464</value>
   </data>
   <data name="LB_emacanho.Size" type="System.Drawing.Size, System.Drawing">
     <value>188, 20</value>
@@ -10874,11 +10895,8 @@
   <data name="&gt;&gt;LB_eloaixe.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="label14.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label16.Text" xml:space="preserve">
-    <value>Số lượng toilet</value>
+  <data name="LB_quoctich.TabIndex" type="System.Int32, mscorlib">
+    <value>237</value>
   </data>
   <data name="LB_eemail.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -10886,11 +10904,14 @@
   <data name="&gt;&gt;LB_diennuoc.ZOrder" xml:space="preserve">
     <value>23</value>
   </data>
+  <data name="&gt;&gt;panel8.Name" xml:space="preserve">
+    <value>panel8</value>
+  </data>
   <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="label15.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
+  <data name="LB_etamtru.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="panel8.TabIndex" type="System.Int32, mscorlib">
     <value>212</value>
@@ -10926,7 +10947,7 @@
     <value>194, 22</value>
   </data>
   <data name="LB_ediennuoc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>933, 276</value>
+    <value>941, 274</value>
   </data>
   <data name="&gt;&gt;LB_tinhtrangxe.ZOrder" xml:space="preserve">
     <value>16</value>
@@ -10950,7 +10971,7 @@
     <value>NoControl</value>
   </data>
   <data name="LB_loaicudan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 116</value>
+    <value>33, 113</value>
   </data>
   <data name="LB_tamtru.Text" xml:space="preserve">
     <value>Số thẻ tạm trú</value>
@@ -10979,9 +11000,6 @@
   <data name="&gt;&gt;numericUpDownExt4.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="DTP_vao.Size" type="System.Drawing.Size, System.Drawing">
-    <value>262, 22</value>
-  </data>
   <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -10993,9 +11011,6 @@
   </data>
   <data name="&gt;&gt;label15.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LB_quoctich.TabIndex" type="System.Int32, mscorlib">
-    <value>237</value>
   </data>
   <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
     <value>1, 600</value>
@@ -11025,7 +11040,7 @@
     <value>LB_diennuoc</value>
   </data>
   <data name="LB_di.Location" type="System.Drawing.Point, System.Drawing">
-    <value>682, 113</value>
+    <value>688, 113</value>
   </data>
   <data name="&gt;&gt;panel5.Name" xml:space="preserve">
     <value>panel5</value>
@@ -11037,7 +11052,10 @@
     <value>panel1</value>
   </data>
   <data name="TXB_hovaten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 238</value>
+    <value>181, 238</value>
+  </data>
+  <data name="CBB_nguoithan.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <data name="LB_thunuoi.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -11051,11 +11069,17 @@
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>1394, 1</value>
   </data>
+  <data name="&gt;&gt;LB_equoctich.Parent" xml:space="preserve">
+    <value>PN_hienthi</value>
+  </data>
   <data name="&gt;&gt;textBox4.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;LB_di.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
+  </data>
+  <data name="NUD_congno.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
   </data>
   <data name="LB_di.TabIndex" type="System.Int32, mscorlib">
     <value>249</value>
@@ -11087,8 +11111,11 @@
   <data name="&gt;&gt;textBox4.Name" xml:space="preserve">
     <value>textBox4</value>
   </data>
-  <data name="&gt;&gt;LB_email.ZOrder" xml:space="preserve">
-    <value>39</value>
+  <data name="LB_congno.Location" type="System.Drawing.Point, System.Drawing">
+    <value>688, 377</value>
+  </data>
+  <data name="TXB_email.Size" type="System.Drawing.Size, System.Drawing">
+    <value>375, 30</value>
   </data>
   <data name="&gt;&gt;label14.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -11109,28 +11136,19 @@
     <value>PN_hienthi</value>
   </data>
   <data name="LB_bienso.Location" type="System.Drawing.Point, System.Drawing">
-    <value>689, 511</value>
+    <value>688, 509</value>
   </data>
   <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 22</value>
   </data>
-  <data name="LB_ngaysinh.Text" xml:space="preserve">
-    <value>Ngày sinh</value>
-  </data>
   <data name="&gt;&gt;LB_ecccd.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
-  </data>
-  <data name="LB_loaicudan.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;LB_ehoten.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="TXB_sdt.TabIndex" type="System.Int32, mscorlib">
     <value>222</value>
-  </data>
-  <data name="&gt;&gt;LB_esdt.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;LB_bangiao.Name" xml:space="preserve">
     <value>LB_bangiao</value>
@@ -11178,7 +11196,7 @@
     <value>650, 38</value>
   </data>
   <data name="LB_ngaysinh.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 379</value>
+    <value>33, 377</value>
   </data>
   <data name="LB_etinhtrangxe.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 10.8pt</value>
@@ -11219,9 +11237,6 @@
   <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="LB_ediennuoc.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="LB_di.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -11237,14 +11252,14 @@
   <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;LB_di.Name" xml:space="preserve">
-    <value>LB_di</value>
-  </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="TXB_email.Location" type="System.Drawing.Point, System.Drawing">
+    <value>181, 565</value>
   </data>
   <data name="&gt;&gt;LB_macd.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Chủ hộ hiện tại</value>
   </data>
   <data name="LB_ngaysinh.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
@@ -11263,6 +11278,9 @@
   </data>
   <data name="&gt;&gt;label18.Name" xml:space="preserve">
     <value>label18</value>
+  </data>
+  <data name="CBB_loaicd.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
     <value>-614, 374</value>
@@ -11285,6 +11303,9 @@
   <data name="&gt;&gt;panel8.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
+  <data name="DTP_di.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
   <data name="&gt;&gt;LB_tamtru.ZOrder" xml:space="preserve">
     <value>41</value>
   </data>
@@ -11302,9 +11323,6 @@
   </data>
   <data name="&gt;&gt;label18.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LB_vao.Location" type="System.Drawing.Point, System.Drawing">
-    <value>682, 53</value>
   </data>
   <data name="LB_ehoten.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -11451,20 +11469,20 @@
   <data name="&gt;&gt;LB_nguoithan.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
-  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
   <data name="textBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>-456, 7</value>
   </data>
   <data name="&gt;&gt;LB_ehoten.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="TXB_loaixe.TabIndex" type="System.Int32, mscorlib">
+    <value>259</value>
+  </data>
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="TXB_madinhdanh.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 440</value>
+    <value>181, 431</value>
   </data>
   <data name="TXB_sdt.Size" type="System.Drawing.Size, System.Drawing">
     <value>375, 30</value>
@@ -11472,14 +11490,17 @@
   <data name="TXB_sothetamtru.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
   </data>
+  <data name="LB_quoctich.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;DTP_di.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
-  <data name="LB_emacanho.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="DTP_vao.TabIndex" type="System.Int32, mscorlib">
+    <value>250</value>
   </data>
   <data name="LB_sdt.Text" xml:space="preserve">
     <value>Số điện thoại</value>
@@ -11488,7 +11509,7 @@
     <value>PN_hienthi</value>
   </data>
   <data name="TXB_bienso.Location" type="System.Drawing.Point, System.Drawing">
-    <value>937, 511</value>
+    <value>941, 505</value>
   </data>
   <data name="&gt;&gt;CBB_nguoithan.Name" xml:space="preserve">
     <value>CBB_nguoithan</value>
@@ -11509,7 +11530,7 @@
     <value>Times New Roman, 12pt</value>
   </data>
   <data name="LB_eemail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>178, 617</value>
+    <value>181, 598</value>
   </data>
   <data name="&gt;&gt;LB_ecccd.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -11538,11 +11559,11 @@
   <data name="LB_etamtru.TabIndex" type="System.Int32, mscorlib">
     <value>271</value>
   </data>
-  <data name="&gt;&gt;DTP_ngaysinh.Name" xml:space="preserve">
-    <value>DTP_ngaysinh</value>
+  <data name="label14.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="TXB_macanho.Size" type="System.Drawing.Size, System.Drawing">
-    <value>375, 30</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>ThongTinCuDan</value>
   </data>
   <data name="LB_emacanho.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -11557,13 +11578,10 @@
     <value>19</value>
   </data>
   <data name="DTP_di.Location" type="System.Drawing.Point, System.Drawing">
-    <value>937, 116</value>
+    <value>941, 113</value>
   </data>
   <data name="numericUpDownExt5.Location" type="System.Drawing.Point, System.Drawing">
     <value>320, 7</value>
-  </data>
-  <data name="&gt;&gt;TXB_quoctich.Name" xml:space="preserve">
-    <value>TXB_quoctich</value>
   </data>
   <data name="TXB_thunuoi.Size" type="System.Drawing.Size, System.Drawing">
     <value>393, 30</value>
@@ -11596,7 +11614,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="LB_emacanho.Location" type="System.Drawing.Point, System.Drawing">
-    <value>178, 76</value>
+    <value>181, 76</value>
   </data>
   <data name="&gt;&gt;LB_eloaicd.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
@@ -11609,6 +11627,9 @@
   </data>
   <data name="LB_ecccd.TabIndex" type="System.Int32, mscorlib">
     <value>268</value>
+  </data>
+  <data name="LB_emacd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="TXB_quoctich.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
@@ -11632,16 +11653,16 @@
     <value>NoControl</value>
   </data>
   <data name="TXB_sothetamtru.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 646</value>
+    <value>181, 632</value>
   </data>
   <data name="BTN_luu.TabIndex" type="System.Int32, mscorlib">
     <value>212</value>
   </data>
-  <data name="TXB_loaixe.TabIndex" type="System.Int32, mscorlib">
-    <value>259</value>
+  <data name="CBB_nguoithan.TabIndex" type="System.Int32, mscorlib">
+    <value>279</value>
   </data>
-  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
-    <value>panel3</value>
+  <data name="&gt;&gt;TXB_bienso.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;TXB_loaixe.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -11660,6 +11681,9 @@
   </data>
   <data name="&gt;&gt;TXB_sothetamtru.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
+  </data>
+  <data name="BTN_xoa.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 35</value>
   </data>
   <data name="PN_hienthi.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -11694,8 +11718,8 @@
   <data name="LB_email.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;LB_emacd.ZOrder" xml:space="preserve">
-    <value>11</value>
+  <data name="LB_ngaysinh.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="LB_di.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -11706,9 +11730,6 @@
   <data name="&gt;&gt;NUD_congno.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
   </data>
-  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="&gt;&gt;TXB_email.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
   </data>
@@ -11718,6 +11739,9 @@
   <data name="&gt;&gt;LB_eemail.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;PN_hienthi.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;numericUpDownExt4.Name" xml:space="preserve">
     <value>numericUpDownExt4</value>
   </data>
@@ -11725,7 +11749,7 @@
     <value>Times New Roman, 12pt</value>
   </data>
   <data name="LB_sdt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 514</value>
+    <value>33, 509</value>
   </data>
   <data name="&gt;&gt;LB_loaixe.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
@@ -11751,26 +11775,26 @@
   <data name="PN_hienthi.Size" type="System.Drawing.Size, System.Drawing">
     <value>1391, 708</value>
   </data>
-  <data name="&gt;&gt;panel8.Name" xml:space="preserve">
-    <value>panel8</value>
+  <data name="LB_ngaysinh.Text" xml:space="preserve">
+    <value>Ngày sinh</value>
   </data>
   <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="LB_macd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 181</value>
+    <value>33, 179</value>
   </data>
-  <data name="NUD_congno.Location" type="System.Drawing.Point, System.Drawing">
-    <value>937, 392</value>
+  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
   <data name="NUD_congno.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 22</value>
+    <value>393, 30</value>
   </data>
-  <data name="&gt;&gt;LB_equoctich.Parent" xml:space="preserve">
-    <value>PN_hienthi</value>
+  <data name="LB_loaicudan.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;TXB_thunuoi.Name" xml:space="preserve">
-    <value>TXB_thunuoi</value>
+  <data name="label15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="LB_eloaixe.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -11781,8 +11805,8 @@
   <data name="&gt;&gt;LB_macd.ZOrder" xml:space="preserve">
     <value>30</value>
   </data>
-  <data name="LB_di.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
+  <data name="LB_vao.Location" type="System.Drawing.Point, System.Drawing">
+    <value>688, 47</value>
   </data>
   <data name="LB_ttcd.Text" xml:space="preserve">
     <value>THÔNG TIN CƯ DÂN</value>
@@ -11803,7 +11827,7 @@
     <value>PN_hienthi</value>
   </data>
   <data name="DTP_vao.Location" type="System.Drawing.Point, System.Drawing">
-    <value>936, 62</value>
+    <value>941, 47</value>
   </data>
   <data name="LB_congno.Size" type="System.Drawing.Size, System.Drawing">
     <value>157, 22</value>
@@ -11821,16 +11845,22 @@
     <value>1350, 1</value>
   </data>
   <data name="LB_diennuoc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>682, 251</value>
+    <value>688, 245</value>
+  </data>
+  <data name="TXB_madinhdanh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>375, 30</value>
   </data>
   <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
   </data>
-  <data name="LB_vao.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 22</value>
+  <data name="&gt;&gt;LB_esdt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="LB_nguoithan.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="TXB_tinhtrangxe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>941, 637</value>
   </data>
   <data name="textBox3.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -11871,11 +11901,14 @@
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 22</value>
   </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
   <data name="&gt;&gt;PN_hienthi.Name" xml:space="preserve">
     <value>PN_hienthi</value>
   </data>
-  <data name="label13.Text" xml:space="preserve">
-    <value>Chủ hộ hiện tại</value>
+  <data name="CBB_loaicd.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
   </data>
   <data name="&gt;&gt;TXB_diennuoc.Parent" xml:space="preserve">
     <value>PN_hienthi</value>
@@ -11889,8 +11922,8 @@
   <data name="LB_diennuoc.Size" type="System.Drawing.Size, System.Drawing">
     <value>228, 22</value>
   </data>
-  <data name="&gt;&gt;TXB_bienso.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 22</value>
   </data>
   <data name="&gt;&gt;label18.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -11902,7 +11935,7 @@
     <value>192, 20</value>
   </data>
   <data name="DTP_ngaysinh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>262, 22</value>
+    <value>375, 30</value>
   </data>
   <data name="&gt;&gt;panel4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -11913,8 +11946,8 @@
   <data name="LB_nguoithan.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="TXB_madinhdanh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>375, 30</value>
+  <data name="DTP_vao.Size" type="System.Drawing.Size, System.Drawing">
+    <value>393, 30</value>
   </data>
   <data name="LB_emacanho.TabIndex" type="System.Int32, mscorlib">
     <value>263</value>
@@ -11926,10 +11959,10 @@
     <value>171</value>
   </data>
   <data name="LB_equoctich.Location" type="System.Drawing.Point, System.Drawing">
-    <value>178, 340</value>
+    <value>181, 338</value>
   </data>
-  <data name="LB_tinhtrangxe.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
+  <data name="&gt;&gt;LB_equoctich.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;panel7.Name" xml:space="preserve">
     <value>panel7</value>
@@ -11937,8 +11970,8 @@
   <data name="label15.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;LB_sdt.ZOrder" xml:space="preserve">
-    <value>43</value>
+  <data name="&gt;&gt;LB_dinhdanh.ZOrder" xml:space="preserve">
+    <value>45</value>
   </data>
   <data name="&gt;&gt;comboBox2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -11980,12 +12013,12 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="DTP_bangiao.Location" type="System.Drawing.Point, System.Drawing">
-    <value>936, 181</value>
+    <value>941, 179</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>vi</value>
+    <value>en</value>
   </metadata>
 </root>

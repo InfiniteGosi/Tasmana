@@ -95,8 +95,8 @@
             // 
             // CBB_MaCanHo
             // 
-            this.CBB_MaCanHo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             resources.ApplyResources(this.CBB_MaCanHo, "CBB_MaCanHo");
+            this.CBB_MaCanHo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.CBB_MaCanHo.ForeColor = System.Drawing.Color.White;
             this.CBB_MaCanHo.FormattingEnabled = true;
             this.CBB_MaCanHo.Name = "CBB_MaCanHo";
@@ -109,8 +109,8 @@
             // 
             // TXB_soNuocHangThang
             // 
-            this.TXB_soNuocHangThang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             resources.ApplyResources(this.TXB_soNuocHangThang, "TXB_soNuocHangThang");
+            this.TXB_soNuocHangThang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_soNuocHangThang.ForeColor = System.Drawing.Color.White;
             this.TXB_soNuocHangThang.Name = "TXB_soNuocHangThang";
             // 
@@ -122,17 +122,17 @@
             // 
             // TXB_soDienHangThang
             // 
-            this.TXB_soDienHangThang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             resources.ApplyResources(this.TXB_soDienHangThang, "TXB_soDienHangThang");
+            this.TXB_soDienHangThang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_soDienHangThang.ForeColor = System.Drawing.Color.White;
             this.TXB_soDienHangThang.Name = "TXB_soDienHangThang";
             // 
             // DTP_ngay
             // 
+            resources.ApplyResources(this.DTP_ngay, "DTP_ngay");
             this.DTP_ngay.CalendarMonthBackground = System.Drawing.Color.Black;
             this.DTP_ngay.CalendarTitleBackColor = System.Drawing.SystemColors.AppWorkspace;
             this.DTP_ngay.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            resources.ApplyResources(this.DTP_ngay, "DTP_ngay");
             this.DTP_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DTP_ngay.Name = "DTP_ngay";
             // 
@@ -150,8 +150,8 @@
             // 
             // CBB_tinhTrangThanhToan
             // 
-            this.CBB_tinhTrangThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             resources.ApplyResources(this.CBB_tinhTrangThanhToan, "CBB_tinhTrangThanhToan");
+            this.CBB_tinhTrangThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.CBB_tinhTrangThanhToan.ForeColor = System.Drawing.Color.White;
             this.CBB_tinhTrangThanhToan.FormattingEnabled = true;
             this.CBB_tinhTrangThanhToan.Items.AddRange(new object[] {
@@ -167,33 +167,33 @@
             // 
             // TXB_phiQuanLy
             // 
-            this.TXB_phiQuanLy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             resources.ApplyResources(this.TXB_phiQuanLy, "TXB_phiQuanLy");
+            this.TXB_phiQuanLy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_phiQuanLy.ForeColor = System.Drawing.Color.White;
             this.TXB_phiQuanLy.Name = "TXB_phiQuanLy";
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Name = "panel4";
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Name = "panel3";
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Name = "panel2";
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Name = "panel5";
             // 
             // panel1

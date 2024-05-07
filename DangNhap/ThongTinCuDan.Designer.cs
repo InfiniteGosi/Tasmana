@@ -212,12 +212,16 @@ namespace DangNhap
             // CBB_nguoithan
             // 
             resources.ApplyResources(this.CBB_nguoithan, "CBB_nguoithan");
+            this.CBB_nguoithan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.CBB_nguoithan.ForeColor = System.Drawing.Color.White;
             this.CBB_nguoithan.FormattingEnabled = true;
             this.CBB_nguoithan.Name = "CBB_nguoithan";
             // 
             // CBB_loaicd
             // 
             resources.ApplyResources(this.CBB_loaicd, "CBB_loaicd");
+            this.CBB_loaicd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.CBB_loaicd.ForeColor = System.Drawing.Color.White;
             this.CBB_loaicd.FormattingEnabled = true;
             this.CBB_loaicd.Items.AddRange(new object[] {
             resources.GetString("CBB_loaicd.Items"),
@@ -303,6 +307,8 @@ namespace DangNhap
             // NUD_congno
             // 
             resources.ApplyResources(this.NUD_congno, "NUD_congno");
+            this.NUD_congno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.NUD_congno.ForeColor = System.Drawing.Color.White;
             this.NUD_congno.Maximum = new decimal(new int[] {
             -1530494977,
             232830,
@@ -690,6 +696,7 @@ namespace DangNhap
             this.BTN_xoa.BaseColor2 = System.Drawing.Color.Transparent;
             this.BTN_xoa.BorderColor = System.Drawing.Color.Red;
             this.BTN_xoa.BorderSize = 1;
+            this.BTN_xoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_xoa.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_xoa.FocusedColor = System.Drawing.Color.Empty;
             this.BTN_xoa.ForeColor = System.Drawing.Color.Red;
@@ -722,6 +729,7 @@ namespace DangNhap
             this.BTN_luu.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.BTN_luu.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.BTN_luu.BorderColor = System.Drawing.Color.Black;
+            this.BTN_luu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_luu.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_luu.FocusedColor = System.Drawing.Color.Empty;
             this.BTN_luu.ForeColor = System.Drawing.Color.White;
@@ -782,6 +790,9 @@ namespace DangNhap
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ThongTinCuDan";
             this.Load += new System.EventHandler(this.ThongTinCuDan_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TTCD_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TTCD_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TTCD_MouseUp);
             this.PN_hienthi.ResumeLayout(false);
             this.PN_hienthi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_congno)).EndInit();

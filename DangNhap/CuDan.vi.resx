@@ -118,19 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="BTN_themcudan.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAZNJREFUSEvtlbFKA0EURVOIpBYLsbAQEQuxCJYiFvkAC/ELrMUPEJvgB1hYhBQp
-        RESs8gEWFhYWKSRFChELKyuRYCXJeu7Lm2WzhjFs2hy4vMndO3d2YCGlGVMxGAyW0XGSJA1U1xot+uPp
-        oHAVdVGeDlrxWHEo0Vv/gRtoXHisOBS9hEIvTdeo7bHi0PdmrePpeKw4lNgNRLiB8Bs8eaw4lDxnCrPl
-        Wj56rDgU3VrrGHjW9JiBNYcWXGW34xDcR32U3kCw7qOqxwzsTbx3pnTidhyCZTa1VS4Jnw9o5C3xKyED
-        Z27HIaiNB8wf2wb81o1G3l7gVSwAZOIHENCGLXTJuuulhq/ryjF1eM3V4BnD0A2Df2qlAYxtgi0VhQ2a
-        uXXLszeRTFj3FJTWURN9o//IHqAXMQ0fjSD/S8Eq+pCDoRGFjB3A3EC7riPkieQa7SH5OzrgVa4CIRRb
-        wz1T5UHzKPsVnesFUjA+h/7E6KvqZbSG0q8Ial49BOOK0++YprDOzryX0xK+/jvC70OvnjEJpdIvxP+m
-        cvkFlW8AAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="BTN_in.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -175,18 +162,8 @@
         RK5CYII=
 </value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="GGC_cudan.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="CBB_choice.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 43</value>
-  </data>
-  <data name="CBB_choice.Size" type="System.Drawing.Size, System.Drawing">
-    <value>380, 24</value>
-  </data>
   <data name="LB_loai.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 24</value>
+    <value>61, 27</value>
   </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
