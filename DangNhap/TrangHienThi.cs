@@ -385,6 +385,11 @@ namespace DangNhap
         private void TrangHienThi_Load(object sender, EventArgs e)
         {
             // Set Default Language
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("vi");
+            Controls.Clear();
+            UpdateWindowsState();
+            InitializeComponent();
+            //Phân Quyền
             PhanQuyen();
         }
 
