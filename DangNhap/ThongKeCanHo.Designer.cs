@@ -93,9 +93,10 @@
             this.Btn_XuatDoThi.AnimationHoverSpeed = 0.5F;
             this.Btn_XuatDoThi.AnimationSpeed = 0.03F;
             this.Btn_XuatDoThi.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_XuatDoThi.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
-            this.Btn_XuatDoThi.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
+            this.Btn_XuatDoThi.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(209)))), ((int)(((byte)(101)))));
+            this.Btn_XuatDoThi.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(196)))), ((int)(((byte)(83)))));
             this.Btn_XuatDoThi.BorderColor = System.Drawing.Color.Black;
+            this.Btn_XuatDoThi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_XuatDoThi.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Btn_XuatDoThi.FocusedColor = System.Drawing.Color.Empty;
             this.Btn_XuatDoThi.ForeColor = System.Drawing.Color.White;
@@ -103,8 +104,8 @@
             this.Btn_XuatDoThi.Image = null;
             this.Btn_XuatDoThi.ImageSize = new System.Drawing.Size(20, 20);
             this.Btn_XuatDoThi.Name = "Btn_XuatDoThi";
-            this.Btn_XuatDoThi.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
-            this.Btn_XuatDoThi.OnHoverBaseColor2 = System.Drawing.Color.Navy;
+            this.Btn_XuatDoThi.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(169)))), ((int)(((byte)(101)))));
+            this.Btn_XuatDoThi.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(83)))));
             this.Btn_XuatDoThi.OnHoverBorderColor = System.Drawing.Color.White;
             this.Btn_XuatDoThi.OnHoverForeColor = System.Drawing.Color.White;
             this.Btn_XuatDoThi.OnHoverImage = null;
@@ -122,6 +123,7 @@
             this.BTN_ThongKe.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.BTN_ThongKe.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.BTN_ThongKe.BorderColor = System.Drawing.Color.Black;
+            this.BTN_ThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_ThongKe.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_ThongKe.FocusedColor = System.Drawing.Color.Empty;
             this.BTN_ThongKe.ForeColor = System.Drawing.Color.White;
@@ -142,6 +144,8 @@
             // CBB_DuLieuTK
             // 
             resources.ApplyResources(this.CBB_DuLieuTK, "CBB_DuLieuTK");
+            this.CBB_DuLieuTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.CBB_DuLieuTK.ForeColor = System.Drawing.Color.White;
             this.CBB_DuLieuTK.FormattingEnabled = true;
             this.CBB_DuLieuTK.Items.AddRange(new object[] {
             resources.GetString("CBB_DuLieuTK.Items"),
@@ -164,6 +168,8 @@
             // CBB_DuLieuMuonThongKe
             // 
             resources.ApplyResources(this.CBB_DuLieuMuonThongKe, "CBB_DuLieuMuonThongKe");
+            this.CBB_DuLieuMuonThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.CBB_DuLieuMuonThongKe.ForeColor = System.Drawing.Color.White;
             this.CBB_DuLieuMuonThongKe.FormattingEnabled = true;
             this.CBB_DuLieuMuonThongKe.Name = "CBB_DuLieuMuonThongKe";
             this.CBB_DuLieuMuonThongKe.SelectedValueChanged += new System.EventHandler(this.CBB_DuLieuMuonThongKe_SelectedValueChanged);
@@ -171,6 +177,8 @@
             // CBB_LoaiThoiGian
             // 
             resources.ApplyResources(this.CBB_LoaiThoiGian, "CBB_LoaiThoiGian");
+            this.CBB_LoaiThoiGian.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.CBB_LoaiThoiGian.ForeColor = System.Drawing.Color.White;
             this.CBB_LoaiThoiGian.FormattingEnabled = true;
             this.CBB_LoaiThoiGian.Name = "CBB_LoaiThoiGian";
             this.CBB_LoaiThoiGian.SelectedValueChanged += new System.EventHandler(this.CBB_LoaiThoiGian_SelectedValueChanged);
@@ -184,6 +192,8 @@
             // CBB_Nam
             // 
             resources.ApplyResources(this.CBB_Nam, "CBB_Nam");
+            this.CBB_Nam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.CBB_Nam.ForeColor = System.Drawing.Color.White;
             this.CBB_Nam.FormattingEnabled = true;
             this.CBB_Nam.Name = "CBB_Nam";
             this.CBB_Nam.SelectedValueChanged += new System.EventHandler(this.CBB_Nam_SelectedValueChanged);
@@ -197,6 +207,8 @@
             // CBB_ThoiGian
             // 
             resources.ApplyResources(this.CBB_ThoiGian, "CBB_ThoiGian");
+            this.CBB_ThoiGian.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.CBB_ThoiGian.ForeColor = System.Drawing.Color.White;
             this.CBB_ThoiGian.FormattingEnabled = true;
             this.CBB_ThoiGian.Name = "CBB_ThoiGian";
             this.CBB_ThoiGian.SelectedValueChanged += new System.EventHandler(this.CBB_ThoiGian_SelectedValueChanged);
@@ -216,6 +228,7 @@
             this.BTN_in.BaseColor2 = System.Drawing.Color.DimGray;
             this.BTN_in.BorderColor = System.Drawing.Color.White;
             this.BTN_in.BorderSize = 1;
+            this.BTN_in.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_in.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_in.FocusedColor = System.Drawing.Color.Empty;
             this.BTN_in.ForeColor = System.Drawing.Color.White;
@@ -223,8 +236,8 @@
             this.BTN_in.ImageSize = new System.Drawing.Size(15, 15);
             this.BTN_in.Name = "BTN_in";
             this.BTN_in.OnHoverBaseColor1 = System.Drawing.Color.DimGray;
-            this.BTN_in.OnHoverBaseColor2 = System.Drawing.Color.Silver;
-            this.BTN_in.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.BTN_in.OnHoverBaseColor2 = System.Drawing.Color.DimGray;
+            this.BTN_in.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_in.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_in.OnHoverImage = null;
             this.BTN_in.OnPressedColor = System.Drawing.Color.Black;
@@ -240,15 +253,16 @@
             this.BTN_PDF.BaseColor2 = System.Drawing.Color.Coral;
             this.BTN_PDF.BorderColor = System.Drawing.Color.White;
             this.BTN_PDF.BorderSize = 1;
+            this.BTN_PDF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_PDF.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_PDF.FocusedColor = System.Drawing.Color.Empty;
             this.BTN_PDF.ForeColor = System.Drawing.Color.White;
             this.BTN_PDF.Image = ((System.Drawing.Image)(resources.GetObject("BTN_PDF.Image")));
             this.BTN_PDF.ImageSize = new System.Drawing.Size(15, 15);
             this.BTN_PDF.Name = "BTN_PDF";
-            this.BTN_PDF.OnHoverBaseColor1 = System.Drawing.Color.Coral;
-            this.BTN_PDF.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(131)))), ((int)(((byte)(18)))));
-            this.BTN_PDF.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.BTN_PDF.OnHoverBaseColor1 = System.Drawing.Color.OrangeRed;
+            this.BTN_PDF.OnHoverBaseColor2 = System.Drawing.Color.OrangeRed;
+            this.BTN_PDF.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_PDF.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_PDF.OnHoverImage = null;
             this.BTN_PDF.OnPressedColor = System.Drawing.Color.Black;
@@ -264,15 +278,16 @@
             this.BTN_excel.BaseColor2 = System.Drawing.Color.Green;
             this.BTN_excel.BorderColor = System.Drawing.Color.White;
             this.BTN_excel.BorderSize = 1;
+            this.BTN_excel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_excel.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_excel.FocusedColor = System.Drawing.Color.Empty;
             this.BTN_excel.ForeColor = System.Drawing.Color.White;
             this.BTN_excel.Image = ((System.Drawing.Image)(resources.GetObject("BTN_excel.Image")));
             this.BTN_excel.ImageSize = new System.Drawing.Size(15, 15);
             this.BTN_excel.Name = "BTN_excel";
-            this.BTN_excel.OnHoverBaseColor1 = System.Drawing.Color.Green;
-            this.BTN_excel.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(95)))), ((int)(((byte)(45)))));
-            this.BTN_excel.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.BTN_excel.OnHoverBaseColor1 = System.Drawing.Color.ForestGreen;
+            this.BTN_excel.OnHoverBaseColor2 = System.Drawing.Color.ForestGreen;
+            this.BTN_excel.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_excel.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_excel.OnHoverImage = null;
             this.BTN_excel.OnPressedColor = System.Drawing.Color.Black;
@@ -288,22 +303,22 @@
             this.Controls.Add(this.BTN_PDF);
             this.Controls.Add(this.BTN_excel);
             this.Controls.Add(this.CBB_ThoiGian);
-            this.Controls.Add(this.LB_TimeOption);
             this.Controls.Add(this.CBB_Nam);
-            this.Controls.Add(this.LB_Nam);
             this.Controls.Add(this.CBB_LoaiThoiGian);
             this.Controls.Add(this.LB_ThoiGianTK);
             this.Controls.Add(this.CBB_DuLieuMuonThongKe);
-            this.Controls.Add(this.LB_DuLieuThongKe);
             this.Controls.Add(this.DTP_TuNgay);
-            this.Controls.Add(this.LB_TuNgay);
-            this.Controls.Add(this.LB_ToiNgay);
             this.Controls.Add(this.DTP_DenNgay);
             this.Controls.Add(this.GGC_ThongKe);
             this.Controls.Add(this.CBB_DuLieuTK);
-            this.Controls.Add(this.LB_MucTieuThongKe);
             this.Controls.Add(this.BTN_ThongKe);
             this.Controls.Add(this.Btn_XuatDoThi);
+            this.Controls.Add(this.LB_DuLieuThongKe);
+            this.Controls.Add(this.LB_MucTieuThongKe);
+            this.Controls.Add(this.LB_TimeOption);
+            this.Controls.Add(this.LB_Nam);
+            this.Controls.Add(this.LB_TuNgay);
+            this.Controls.Add(this.LB_ToiNgay);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ThongKeCanHo";
             ((System.ComponentModel.ISupportInitialize)(this.GGC_ThongKe)).EndInit();

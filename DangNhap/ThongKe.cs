@@ -552,7 +552,14 @@ namespace DangNhap
         private void BTN_thongkecanho_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ThongKeCanHo());
-            LB_ThongKeCV.Text = "THỐNG KÊ CĂN HỘ";
+            if (BTN_thongkecongviec.Text == "Task")
+            {
+                LB_ThongKeCV.Text = "APARTMENT STATISTICS";
+            }
+            else
+            {
+                LB_ThongKeCV.Text = "THỐNG KÊ CĂN HỘ";
+            }
         }
 
         private void BTN_thongkecongviec_Click(object sender, EventArgs e)
@@ -561,13 +568,28 @@ namespace DangNhap
             {
                 currentFormChild.Close();
             }
-            LB_ThongKeCV.Text = "THỐNG KÊ CÔNG VIỆC";
+            if(BTN_thongkecongviec.Text == "Task")
+            {
+                LB_ThongKeCV.Text = "TASK STATISTICS";
+            }
+            else
+            {
+                LB_ThongKeCV.Text = "THỐNG KÊ CÔNG VIỆC";
+            }
+            
         }
 
         private void BTN_XepHang_Click(object sender, EventArgs e)
         {
             OpenChildForm(new XepHang());
-            LB_ThongKeCV.Text = "BẢNG XẾP HẠNG";
+            if (BTN_thongkecongviec.Text == "Task")
+            {
+                LB_ThongKeCV.Text = "RANK";
+            }
+            else
+            {
+                LB_ThongKeCV.Text = "BẢNG XẾP HẠNG";
+            }
         }
         private DataTable GetDataTable()
         {

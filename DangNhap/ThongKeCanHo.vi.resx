@@ -124,30 +124,63 @@
   <data name="LB_ToiNgay.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="GGC_ThongKe.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="GGC_ThongKe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 148</value>
+  </data>
+  <data name="GGC_ThongKe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1460, 574</value>
+  </data>
+  <data name="Btn_XuatDoThi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1206, 728</value>
+  </data>
+  <data name="BTN_ThongKe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1341, 728</value>
+  </data>
+  <data name="CBB_DuLieuTK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>582, 20</value>
   </data>
   <data name="LB_MucTieuThongKe.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="LB_MucTieuThongKe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 24</value>
+  </data>
   <data name="LB_DuLieuThongKe.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="LB_DuLieuThongKe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 85</value>
+  </data>
+  <data name="CBB_DuLieuMuonThongKe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>582, 81</value>
+  </data>
+  <data name="CBB_LoaiThoiGian.Location" type="System.Drawing.Point, System.Drawing">
+    <value>846, 81</value>
   </data>
   <data name="LB_ThoiGianTK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="LB_ThoiGianTK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>842, 24</value>
+  </data>
+  <data name="CBB_Nam.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1240, 81</value>
+  </data>
   <data name="LB_Nam.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="LB_Nam.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1109, 85</value>
+  </data>
+  <data name="CBB_ThoiGian.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1240, 20</value>
   </data>
   <data name="LB_TimeOption.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="BTN_in.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="BTN_in.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.2pt</value>
+  <data name="LB_TimeOption.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1109, 24</value>
   </data>
   <data name="BTN_in.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -160,21 +193,6 @@
         1/UfrSnBrLEbKYtygJHttw5mHbuROUAOkANUA9xDfh90IWeRSoC/QAPMYOjvVBfO7Kn8W4riCzJw4a5u
         7ohcAAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="BTN_in.Location" type="System.Drawing.Point, System.Drawing">
-    <value>260, 705</value>
-  </data>
-  <data name="BTN_in.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 37</value>
-  </data>
-  <data name="BTN_in.Text" xml:space="preserve">
-    <value>In</value>
-  </data>
-  <data name="BTN_PDF.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="BTN_PDF.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.2pt</value>
   </data>
   <data name="BTN_PDF.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -193,21 +211,6 @@
         C8+dvVnp9HTELlMujNrjr4KW3t6f5VXQsn0DuiP9NnykVusv6k2HR9P7+Z8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="BTN_PDF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>152, 705</value>
-  </data>
-  <data name="BTN_PDF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 37</value>
-  </data>
-  <data name="BTN_PDF.Text" xml:space="preserve">
-    <value>PDF</value>
-  </data>
-  <data name="BTN_excel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="BTN_excel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.2pt</value>
-  </data>
   <data name="BTN_excel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -222,14 +225,5 @@
         27jxAfLgzD8T4MZaIQz/A/yZADs4Eln9hoiaAjSSqgGW0f+L3Si37HJQKn0AqxM8fx1MQc4AAAAASUVO
         RK5CYII=
 </value>
-  </data>
-  <data name="BTN_excel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 705</value>
-  </data>
-  <data name="BTN_excel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 37</value>
-  </data>
-  <data name="BTN_excel.Text" xml:space="preserve">
-    <value>Excel</value>
   </data>
 </root>

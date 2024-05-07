@@ -66,12 +66,11 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.CBB_ngonngu = new System.Windows.Forms.ComboBox();
             this.BTN_thongtin = new Guna.UI.WinForms.GunaButton();
             this.BTN_square = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_x = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PB_language = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox3)).BeginInit();
@@ -80,7 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.P_logotasmana)).BeginInit();
             this.PN_main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_language)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -466,17 +465,6 @@
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.Name = "panel8";
             // 
-            // CBB_ngonngu
-            // 
-            resources.ApplyResources(this.CBB_ngonngu, "CBB_ngonngu");
-            this.CBB_ngonngu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
-            this.CBB_ngonngu.ForeColor = System.Drawing.Color.White;
-            this.CBB_ngonngu.Items.AddRange(new object[] {
-            resources.GetString("CBB_ngonngu.Items"),
-            resources.GetString("CBB_ngonngu.Items1")});
-            this.CBB_ngonngu.Name = "CBB_ngonngu";
-            this.CBB_ngonngu.SelectedIndexChanged += new System.EventHandler(this.CBB_ngonngu_SelectedIndexChanged);
-            // 
             // BTN_thongtin
             // 
             resources.ApplyResources(this.BTN_thongtin, "BTN_thongtin");
@@ -572,19 +560,19 @@
             this.gunaGradientButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaGradientButton1.Click += new System.EventHandler(this.gunaGradientButton1_Click);
             // 
-            // pictureBox1
+            // PB_language
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
+            resources.ApplyResources(this.PB_language, "PB_language");
+            this.PB_language.Name = "PB_language";
+            this.PB_language.TabStop = false;
+            this.PB_language.Click += new System.EventHandler(this.PB_language_Click);
             // 
             // TrangHienThi
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.CBB_ngonngu);
+            this.Controls.Add(this.PB_language);
             this.Controls.Add(this.gunaGradientButton1);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
@@ -611,7 +599,7 @@
             this.PN_main.ResumeLayout(false);
             this.PN_main.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_language)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -658,7 +646,6 @@
         private System.Windows.Forms.Label LB_SoCV_CoCapNhat;
         private System.Windows.Forms.Label LB_CapNhat;
         private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox4;
-        private System.Windows.Forms.ComboBox CBB_ngonngu;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PB_language;
     }
 }

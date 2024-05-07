@@ -385,27 +385,9 @@ namespace DangNhap
         private void TrangHienThi_Load(object sender, EventArgs e)
         {
             // Set Default Language
-            CBB_ngonngu.SelectedIndex = 0;
             PhanQuyen();
         }
 
-        
-
-        int currentLanguage = -1;
-        private void UpdateLanguageEn()
-        {
-            LB_tendangnhap.Text = $"Hello, {currentAccount.EmployeeId} - {currentAccount.Level}";
-            // Show current used language
-            currentLanguage = 1;
-            CBB_ngonngu.SelectedIndex = 1;
-        }
-        private void UpdateLanguageVi()
-        {
-            LB_tendangnhap.Text = $"Xin chào, {currentAccount.EmployeeId} - {currentAccount.Level}";
-            // Show current used language
-            currentLanguage = 0;
-            CBB_ngonngu.SelectedIndex = 0;
-        }
         private void UpdateWindowsState()
         { 
             if(this.WindowState == FormWindowState.Maximized)
@@ -414,21 +396,15 @@ namespace DangNhap
             }
         }
 
-        private void CBB_ngonngu_SelectedIndexChanged(object sender, EventArgs e)
+        private void PB_language_Click(object sender, EventArgs e)
         {
-            // prevent infinite loop
-            if (currentLanguage == CBB_ngonngu.SelectedIndex)
-                return;
-            switch (CBB_ngonngu.SelectedIndex)
+            if(BTN_congviec.Text == "Công Việc")
             {
-                case 0:
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("vi");
-                    UpdateLanguageVi();
-                    break;
-                case 1:
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
-                    UpdateLanguageEn();
-                    break;
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+            }
+            else
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("vi");
             }
             Controls.Clear();
             UpdateWindowsState();
