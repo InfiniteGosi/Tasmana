@@ -118,15 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="GGC_ThongKe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 142</value>
+  </data>
   <data name="GGC_ThongKe.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1621, 535</value>
+    <value>1457, 609</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="BTN_in.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
+  <data name="CBB_TieuChiXepHang.Location" type="System.Drawing.Point, System.Drawing">
+    <value>760, 81</value>
   </data>
-  <data name="BTN_in.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.2pt</value>
+  <data name="LB_XepHangTheo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>605, 85</value>
   </data>
   <data name="BTN_in.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -139,21 +141,6 @@
         1/UfrSnBrLEbKYtygJHttw5mHbuROUAOkANUA9xDfh90IWeRSoC/QAPMYOjvVBfO7Kn8W4riCzJw4a5u
         7ohcAAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="BTN_in.Location" type="System.Drawing.Point, System.Drawing">
-    <value>277, 735</value>
-  </data>
-  <data name="BTN_in.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 37</value>
-  </data>
-  <data name="BTN_in.Text" xml:space="preserve">
-    <value>In</value>
-  </data>
-  <data name="BTN_PDF.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="BTN_PDF.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.2pt</value>
   </data>
   <data name="BTN_PDF.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -172,21 +159,6 @@
         C8+dvVnp9HTELlMujNrjr4KW3t6f5VXQsn0DuiP9NnykVusv6k2HR9P7+Z8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="BTN_PDF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>169, 735</value>
-  </data>
-  <data name="BTN_PDF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 37</value>
-  </data>
-  <data name="BTN_PDF.Text" xml:space="preserve">
-    <value>PDF</value>
-  </data>
-  <data name="BTN_excel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="BTN_excel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.2pt</value>
-  </data>
   <data name="BTN_excel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -201,14 +173,5 @@
         27jxAfLgzD8T4MZaIQz/A/yZADs4Eln9hoiaAjSSqgGW0f+L3Si37HJQKn0AqxM8fx1MQc4AAAAASUVO
         RK5CYII=
 </value>
-  </data>
-  <data name="BTN_excel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 735</value>
-  </data>
-  <data name="BTN_excel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 37</value>
-  </data>
-  <data name="BTN_excel.Text" xml:space="preserve">
-    <value>Excel</value>
   </data>
 </root>

@@ -48,8 +48,6 @@ namespace DangNhap
             this.CBB_LoaiDoThi = new System.Windows.Forms.ComboBox();
             this.Btn_XuatDoThi = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_ThongKe = new Guna.UI.WinForms.GunaGradientButton();
-            this.LB_NhanVien = new System.Windows.Forms.Label();
-            this.LB_PhongBan = new System.Windows.Forms.Label();
             this.CBB_NhanVien = new System.Windows.Forms.ComboBox();
             this.CBB_PhongBan = new System.Windows.Forms.ComboBox();
             this.RBtn_NhanVien = new System.Windows.Forms.RadioButton();
@@ -60,6 +58,8 @@ namespace DangNhap
             this.BTN_in = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_PDF = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_excel = new Guna.UI.WinForms.GunaGradientButton();
+            this.LB_Nhanvien = new System.Windows.Forms.Label();
+            this.LB_Bophan = new System.Windows.Forms.Label();
             this.BTN_thongkecongviec = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_XepHang = new Guna.UI.WinForms.GunaGradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.C_ThongKe)).BeginInit();
@@ -90,23 +90,24 @@ namespace DangNhap
             // 
             // BTN_thongkecanho
             // 
-            resources.ApplyResources(this.BTN_thongkecanho, "BTN_thongkecanho");
             this.BTN_thongkecanho.Animated = true;
-            this.BTN_thongkecanho.AnimationHoverSpeed = 0.5F;
+            this.BTN_thongkecanho.AnimationHoverSpeed = 0.3F;
             this.BTN_thongkecanho.AnimationSpeed = 0.03F;
             this.BTN_thongkecanho.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_thongkecanho.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.BTN_thongkecanho.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTN_thongkecanho.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(115)))), ((int)(((byte)(73)))));
+            this.BTN_thongkecanho.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(115)))), ((int)(((byte)(73)))));
             this.BTN_thongkecanho.BorderColor = System.Drawing.Color.Black;
+            this.BTN_thongkecanho.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_thongkecanho.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_thongkecanho.FocusedColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.BTN_thongkecanho, "BTN_thongkecanho");
             this.BTN_thongkecanho.ForeColor = System.Drawing.Color.White;
             this.BTN_thongkecanho.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.BTN_thongkecanho.Image = null;
             this.BTN_thongkecanho.ImageSize = new System.Drawing.Size(20, 20);
             this.BTN_thongkecanho.Name = "BTN_thongkecanho";
-            this.BTN_thongkecanho.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.BTN_thongkecanho.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTN_thongkecanho.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(60)))), ((int)(((byte)(73)))));
+            this.BTN_thongkecanho.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(60)))), ((int)(((byte)(73)))));
             this.BTN_thongkecanho.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_thongkecanho.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_thongkecanho.OnHoverImage = null;
@@ -144,8 +145,8 @@ namespace DangNhap
             // 
             // GGC_ThongKe
             // 
-            resources.ApplyResources(this.GGC_ThongKe, "GGC_ThongKe");
             this.GGC_ThongKe.AlphaBlendSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            resources.ApplyResources(this.GGC_ThongKe, "GGC_ThongKe");
             this.GGC_ThongKe.BackColor = System.Drawing.SystemColors.Window;
             this.GGC_ThongKe.Name = "GGC_ThongKe";
             this.GGC_ThongKe.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
@@ -169,7 +170,9 @@ namespace DangNhap
             // 
             // CBB_LoaiDoThi
             // 
+            this.CBB_LoaiDoThi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             resources.ApplyResources(this.CBB_LoaiDoThi, "CBB_LoaiDoThi");
+            this.CBB_LoaiDoThi.ForeColor = System.Drawing.Color.White;
             this.CBB_LoaiDoThi.FormattingEnabled = true;
             this.CBB_LoaiDoThi.Items.AddRange(new object[] {
             resources.GetString("CBB_LoaiDoThi.Items"),
@@ -184,9 +187,10 @@ namespace DangNhap
             this.Btn_XuatDoThi.AnimationHoverSpeed = 0.5F;
             this.Btn_XuatDoThi.AnimationSpeed = 0.03F;
             this.Btn_XuatDoThi.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_XuatDoThi.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
-            this.Btn_XuatDoThi.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
+            this.Btn_XuatDoThi.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(209)))), ((int)(((byte)(101)))));
+            this.Btn_XuatDoThi.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(196)))), ((int)(((byte)(83)))));
             this.Btn_XuatDoThi.BorderColor = System.Drawing.Color.Black;
+            this.Btn_XuatDoThi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_XuatDoThi.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Btn_XuatDoThi.FocusedColor = System.Drawing.Color.Empty;
             this.Btn_XuatDoThi.ForeColor = System.Drawing.Color.White;
@@ -194,8 +198,8 @@ namespace DangNhap
             this.Btn_XuatDoThi.Image = null;
             this.Btn_XuatDoThi.ImageSize = new System.Drawing.Size(20, 20);
             this.Btn_XuatDoThi.Name = "Btn_XuatDoThi";
-            this.Btn_XuatDoThi.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
-            this.Btn_XuatDoThi.OnHoverBaseColor2 = System.Drawing.Color.Navy;
+            this.Btn_XuatDoThi.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(169)))), ((int)(((byte)(101)))));
+            this.Btn_XuatDoThi.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(83)))));
             this.Btn_XuatDoThi.OnHoverBorderColor = System.Drawing.Color.White;
             this.Btn_XuatDoThi.OnHoverForeColor = System.Drawing.Color.White;
             this.Btn_XuatDoThi.OnHoverImage = null;
@@ -211,9 +215,10 @@ namespace DangNhap
             this.BTN_ThongKe.AnimationHoverSpeed = 0.5F;
             this.BTN_ThongKe.AnimationSpeed = 0.03F;
             this.BTN_ThongKe.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_ThongKe.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.BTN_ThongKe.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.BTN_ThongKe.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.BTN_ThongKe.BorderColor = System.Drawing.Color.Black;
+            this.BTN_ThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_ThongKe.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_ThongKe.FocusedColor = System.Drawing.Color.Empty;
             this.BTN_ThongKe.ForeColor = System.Drawing.Color.White;
@@ -221,8 +226,8 @@ namespace DangNhap
             this.BTN_ThongKe.Image = null;
             this.BTN_ThongKe.ImageSize = new System.Drawing.Size(20, 20);
             this.BTN_ThongKe.Name = "BTN_ThongKe";
-            this.BTN_ThongKe.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
-            this.BTN_ThongKe.OnHoverBaseColor2 = System.Drawing.Color.Navy;
+            this.BTN_ThongKe.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(184)))));
+            this.BTN_ThongKe.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(184)))));
             this.BTN_ThongKe.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_ThongKe.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_ThongKe.OnHoverImage = null;
@@ -231,27 +236,19 @@ namespace DangNhap
             this.BTN_ThongKe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_ThongKe.Click += new System.EventHandler(this.BTN_ThongKe_Click);
             // 
-            // LB_NhanVien
-            // 
-            resources.ApplyResources(this.LB_NhanVien, "LB_NhanVien");
-            this.LB_NhanVien.ForeColor = System.Drawing.Color.White;
-            this.LB_NhanVien.Name = "LB_NhanVien";
-            // 
-            // LB_PhongBan
-            // 
-            resources.ApplyResources(this.LB_PhongBan, "LB_PhongBan");
-            this.LB_PhongBan.ForeColor = System.Drawing.Color.White;
-            this.LB_PhongBan.Name = "LB_PhongBan";
-            // 
             // CBB_NhanVien
             // 
+            this.CBB_NhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             resources.ApplyResources(this.CBB_NhanVien, "CBB_NhanVien");
+            this.CBB_NhanVien.ForeColor = System.Drawing.Color.White;
             this.CBB_NhanVien.FormattingEnabled = true;
             this.CBB_NhanVien.Name = "CBB_NhanVien";
             // 
             // CBB_PhongBan
             // 
+            this.CBB_PhongBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             resources.ApplyResources(this.CBB_PhongBan, "CBB_PhongBan");
+            this.CBB_PhongBan.ForeColor = System.Drawing.Color.White;
             this.CBB_PhongBan.FormattingEnabled = true;
             this.CBB_PhongBan.Name = "CBB_PhongBan";
             this.CBB_PhongBan.SelectedValueChanged += new System.EventHandler(this.CBB_PhongBan_SelectedValueChanged);
@@ -294,22 +291,22 @@ namespace DangNhap
             this.PN_hienthi.Controls.Add(this.BTN_PDF);
             this.PN_hienthi.Controls.Add(this.BTN_excel);
             this.PN_hienthi.Controls.Add(this.DTP_TuNgay);
-            this.PN_hienthi.Controls.Add(this.LB_TuNgay);
             this.PN_hienthi.Controls.Add(this.C_ThongKe);
-            this.PN_hienthi.Controls.Add(this.LB_ToiNgay);
             this.PN_hienthi.Controls.Add(this.DTP_DenNgay);
-            this.PN_hienthi.Controls.Add(this.RBtn_PhongBan);
-            this.PN_hienthi.Controls.Add(this.RBtn_NhanVien);
             this.PN_hienthi.Controls.Add(this.GGC_ThongKe);
             this.PN_hienthi.Controls.Add(this.CBB_PhongBan);
-            this.PN_hienthi.Controls.Add(this.RBtn_Congty);
             this.PN_hienthi.Controls.Add(this.CBB_NhanVien);
-            this.PN_hienthi.Controls.Add(this.LB_PhongBan);
-            this.PN_hienthi.Controls.Add(this.LB_LoaiDoThi);
-            this.PN_hienthi.Controls.Add(this.LB_NhanVien);
             this.PN_hienthi.Controls.Add(this.CBB_LoaiDoThi);
             this.PN_hienthi.Controls.Add(this.BTN_ThongKe);
             this.PN_hienthi.Controls.Add(this.Btn_XuatDoThi);
+            this.PN_hienthi.Controls.Add(this.LB_Nhanvien);
+            this.PN_hienthi.Controls.Add(this.LB_Bophan);
+            this.PN_hienthi.Controls.Add(this.LB_TuNgay);
+            this.PN_hienthi.Controls.Add(this.LB_ToiNgay);
+            this.PN_hienthi.Controls.Add(this.RBtn_PhongBan);
+            this.PN_hienthi.Controls.Add(this.RBtn_NhanVien);
+            this.PN_hienthi.Controls.Add(this.RBtn_Congty);
+            this.PN_hienthi.Controls.Add(this.LB_LoaiDoThi);
             this.PN_hienthi.Name = "PN_hienthi";
             // 
             // BTN_in
@@ -328,8 +325,8 @@ namespace DangNhap
             this.BTN_in.ImageSize = new System.Drawing.Size(15, 15);
             this.BTN_in.Name = "BTN_in";
             this.BTN_in.OnHoverBaseColor1 = System.Drawing.Color.DimGray;
-            this.BTN_in.OnHoverBaseColor2 = System.Drawing.Color.Silver;
-            this.BTN_in.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.BTN_in.OnHoverBaseColor2 = System.Drawing.Color.DimGray;
+            this.BTN_in.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_in.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_in.OnHoverImage = null;
             this.BTN_in.OnPressedColor = System.Drawing.Color.Black;
@@ -351,9 +348,9 @@ namespace DangNhap
             this.BTN_PDF.Image = ((System.Drawing.Image)(resources.GetObject("BTN_PDF.Image")));
             this.BTN_PDF.ImageSize = new System.Drawing.Size(15, 15);
             this.BTN_PDF.Name = "BTN_PDF";
-            this.BTN_PDF.OnHoverBaseColor1 = System.Drawing.Color.Coral;
-            this.BTN_PDF.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(131)))), ((int)(((byte)(18)))));
-            this.BTN_PDF.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.BTN_PDF.OnHoverBaseColor1 = System.Drawing.Color.OrangeRed;
+            this.BTN_PDF.OnHoverBaseColor2 = System.Drawing.Color.OrangeRed;
+            this.BTN_PDF.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_PDF.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_PDF.OnHoverImage = null;
             this.BTN_PDF.OnPressedColor = System.Drawing.Color.Black;
@@ -375,34 +372,47 @@ namespace DangNhap
             this.BTN_excel.Image = ((System.Drawing.Image)(resources.GetObject("BTN_excel.Image")));
             this.BTN_excel.ImageSize = new System.Drawing.Size(15, 15);
             this.BTN_excel.Name = "BTN_excel";
-            this.BTN_excel.OnHoverBaseColor1 = System.Drawing.Color.Green;
-            this.BTN_excel.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(95)))), ((int)(((byte)(45)))));
-            this.BTN_excel.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.BTN_excel.OnHoverBaseColor1 = System.Drawing.Color.ForestGreen;
+            this.BTN_excel.OnHoverBaseColor2 = System.Drawing.Color.ForestGreen;
+            this.BTN_excel.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_excel.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_excel.OnHoverImage = null;
             this.BTN_excel.OnPressedColor = System.Drawing.Color.Black;
             this.BTN_excel.TextOffsetX = 3;
             this.BTN_excel.Click += new System.EventHandler(this.BTN_excel_Click);
             // 
+            // LB_Nhanvien
+            // 
+            resources.ApplyResources(this.LB_Nhanvien, "LB_Nhanvien");
+            this.LB_Nhanvien.ForeColor = System.Drawing.Color.White;
+            this.LB_Nhanvien.Name = "LB_Nhanvien";
+            // 
+            // LB_Bophan
+            // 
+            resources.ApplyResources(this.LB_Bophan, "LB_Bophan");
+            this.LB_Bophan.ForeColor = System.Drawing.Color.White;
+            this.LB_Bophan.Name = "LB_Bophan";
+            // 
             // BTN_thongkecongviec
             // 
-            resources.ApplyResources(this.BTN_thongkecongviec, "BTN_thongkecongviec");
             this.BTN_thongkecongviec.Animated = true;
-            this.BTN_thongkecongviec.AnimationHoverSpeed = 0.5F;
+            this.BTN_thongkecongviec.AnimationHoverSpeed = 0.3F;
             this.BTN_thongkecongviec.AnimationSpeed = 0.03F;
             this.BTN_thongkecongviec.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_thongkecongviec.BaseColor1 = System.Drawing.Color.Yellow;
-            this.BTN_thongkecongviec.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BTN_thongkecongviec.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(98)))), ((int)(((byte)(165)))));
+            this.BTN_thongkecongviec.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(98)))), ((int)(((byte)(165)))));
             this.BTN_thongkecongviec.BorderColor = System.Drawing.Color.Black;
+            this.BTN_thongkecongviec.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_thongkecongviec.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_thongkecongviec.FocusedColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.BTN_thongkecongviec, "BTN_thongkecongviec");
             this.BTN_thongkecongviec.ForeColor = System.Drawing.Color.White;
             this.BTN_thongkecongviec.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.BTN_thongkecongviec.Image = null;
             this.BTN_thongkecongviec.ImageSize = new System.Drawing.Size(20, 20);
             this.BTN_thongkecongviec.Name = "BTN_thongkecongviec";
-            this.BTN_thongkecongviec.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.BTN_thongkecongviec.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTN_thongkecongviec.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(48)))), ((int)(((byte)(165)))));
+            this.BTN_thongkecongviec.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(48)))), ((int)(((byte)(165)))));
             this.BTN_thongkecongviec.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_thongkecongviec.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_thongkecongviec.OnHoverImage = null;
@@ -413,23 +423,24 @@ namespace DangNhap
             // 
             // BTN_XepHang
             // 
-            resources.ApplyResources(this.BTN_XepHang, "BTN_XepHang");
             this.BTN_XepHang.Animated = true;
-            this.BTN_XepHang.AnimationHoverSpeed = 0.5F;
+            this.BTN_XepHang.AnimationHoverSpeed = 0.3F;
             this.BTN_XepHang.AnimationSpeed = 0.03F;
             this.BTN_XepHang.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_XepHang.BaseColor1 = System.Drawing.Color.Red;
-            this.BTN_XepHang.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTN_XepHang.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(198)))), ((int)(((byte)(185)))));
+            this.BTN_XepHang.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(198)))), ((int)(((byte)(185)))));
             this.BTN_XepHang.BorderColor = System.Drawing.Color.Black;
+            this.BTN_XepHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_XepHang.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_XepHang.FocusedColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.BTN_XepHang, "BTN_XepHang");
             this.BTN_XepHang.ForeColor = System.Drawing.Color.White;
             this.BTN_XepHang.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.BTN_XepHang.Image = null;
             this.BTN_XepHang.ImageSize = new System.Drawing.Size(20, 20);
             this.BTN_XepHang.Name = "BTN_XepHang";
-            this.BTN_XepHang.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.BTN_XepHang.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTN_XepHang.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(148)))), ((int)(((byte)(185)))));
+            this.BTN_XepHang.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(148)))), ((int)(((byte)(185)))));
             this.BTN_XepHang.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_XepHang.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_XepHang.OnHoverImage = null;
@@ -475,8 +486,6 @@ namespace DangNhap
         private System.Windows.Forms.ComboBox CBB_LoaiDoThi;
         private Guna.UI.WinForms.GunaGradientButton Btn_XuatDoThi;
         private Guna.UI.WinForms.GunaGradientButton BTN_ThongKe;
-        private System.Windows.Forms.Label LB_NhanVien;
-        private System.Windows.Forms.Label LB_PhongBan;
         private System.Windows.Forms.ComboBox CBB_NhanVien;
         private System.Windows.Forms.ComboBox CBB_PhongBan;
         private System.Windows.Forms.RadioButton RBtn_NhanVien;
@@ -489,5 +498,7 @@ namespace DangNhap
         private Guna.UI.WinForms.GunaGradientButton BTN_in;
         private Guna.UI.WinForms.GunaGradientButton BTN_PDF;
         private Guna.UI.WinForms.GunaGradientButton BTN_excel;
+        private System.Windows.Forms.Label LB_Nhanvien;
+        private System.Windows.Forms.Label LB_Bophan;
     }
 }

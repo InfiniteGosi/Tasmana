@@ -59,12 +59,13 @@
             // 
             resources.ApplyResources(this.BTN_XepHang, "BTN_XepHang");
             this.BTN_XepHang.Animated = true;
-            this.BTN_XepHang.AnimationHoverSpeed = 0.5F;
+            this.BTN_XepHang.AnimationHoverSpeed = 0.3F;
             this.BTN_XepHang.AnimationSpeed = 0.03F;
             this.BTN_XepHang.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_XepHang.BaseColor1 = System.Drawing.Color.Red;
-            this.BTN_XepHang.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTN_XepHang.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(84)))), ((int)(((byte)(95)))));
+            this.BTN_XepHang.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(34)))), ((int)(((byte)(95)))));
             this.BTN_XepHang.BorderColor = System.Drawing.Color.Black;
+            this.BTN_XepHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_XepHang.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_XepHang.FocusedColor = System.Drawing.Color.Empty;
             this.BTN_XepHang.ForeColor = System.Drawing.Color.White;
@@ -125,6 +126,8 @@
             // CBB_TieuChiXepHang
             // 
             resources.ApplyResources(this.CBB_TieuChiXepHang, "CBB_TieuChiXepHang");
+            this.CBB_TieuChiXepHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.CBB_TieuChiXepHang.ForeColor = System.Drawing.Color.White;
             this.CBB_TieuChiXepHang.FormattingEnabled = true;
             this.CBB_TieuChiXepHang.Items.AddRange(new object[] {
             resources.GetString("CBB_TieuChiXepHang.Items"),
@@ -147,6 +150,7 @@
             this.BTN_in.BaseColor2 = System.Drawing.Color.DimGray;
             this.BTN_in.BorderColor = System.Drawing.Color.White;
             this.BTN_in.BorderSize = 1;
+            this.BTN_in.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_in.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_in.FocusedColor = System.Drawing.Color.Empty;
             this.BTN_in.ForeColor = System.Drawing.Color.White;
@@ -155,7 +159,7 @@
             this.BTN_in.Name = "BTN_in";
             this.BTN_in.OnHoverBaseColor1 = System.Drawing.Color.DimGray;
             this.BTN_in.OnHoverBaseColor2 = System.Drawing.Color.Silver;
-            this.BTN_in.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.BTN_in.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_in.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_in.OnHoverImage = null;
             this.BTN_in.OnPressedColor = System.Drawing.Color.Black;
@@ -171,6 +175,7 @@
             this.BTN_PDF.BaseColor2 = System.Drawing.Color.Coral;
             this.BTN_PDF.BorderColor = System.Drawing.Color.White;
             this.BTN_PDF.BorderSize = 1;
+            this.BTN_PDF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_PDF.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_PDF.FocusedColor = System.Drawing.Color.Empty;
             this.BTN_PDF.ForeColor = System.Drawing.Color.White;
@@ -179,7 +184,7 @@
             this.BTN_PDF.Name = "BTN_PDF";
             this.BTN_PDF.OnHoverBaseColor1 = System.Drawing.Color.Coral;
             this.BTN_PDF.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(131)))), ((int)(((byte)(18)))));
-            this.BTN_PDF.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.BTN_PDF.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_PDF.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_PDF.OnHoverImage = null;
             this.BTN_PDF.OnPressedColor = System.Drawing.Color.Black;
@@ -195,6 +200,7 @@
             this.BTN_excel.BaseColor2 = System.Drawing.Color.Green;
             this.BTN_excel.BorderColor = System.Drawing.Color.White;
             this.BTN_excel.BorderSize = 1;
+            this.BTN_excel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_excel.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_excel.FocusedColor = System.Drawing.Color.Empty;
             this.BTN_excel.ForeColor = System.Drawing.Color.White;
@@ -203,7 +209,7 @@
             this.BTN_excel.Name = "BTN_excel";
             this.BTN_excel.OnHoverBaseColor1 = System.Drawing.Color.Green;
             this.BTN_excel.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(95)))), ((int)(((byte)(45)))));
-            this.BTN_excel.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.BTN_excel.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_excel.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_excel.OnHoverImage = null;
             this.BTN_excel.OnPressedColor = System.Drawing.Color.Black;
