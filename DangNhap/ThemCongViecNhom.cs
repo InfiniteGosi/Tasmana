@@ -16,8 +16,8 @@ namespace DangNhap
 {
     public partial class ThemCongViecNhom : Form
     {
-        private CongViecChung parent;
-        Account currentAccount;
+        private readonly CongViecChung parent;
+        private readonly Account currentAccount;
         public ThemCongViecNhom(CongViecChung parent, Account currentAccount)
         {
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace DangNhap
 
         private List<Division> GetPhongBan()
         {
-            List<Division> list = new List<Division>();
+            List<Division> list;
             list = DivisionBLL.Instance.GetDivisionList();
             return list;
         }
@@ -78,7 +78,7 @@ namespace DangNhap
 
         private List<Group> GetGroups()
         {
-            List <Group> list = new List<Group>();
+            List <Group> list;
             string maBoPhan = CBB_phongban.SelectedItem.ToString().Split('-')[0];
             list = GroupBLL.Instance.GetGroupListByDivisionId(maBoPhan);
             return list;
@@ -269,7 +269,7 @@ namespace DangNhap
                 {
                     MessageBox.Show("Thêm thành công");
                     parent.Display_GGC_nhom();
-                    restoreBTN();
+                    RestoreBTN();
                 }
                 else
                 {
@@ -313,7 +313,7 @@ namespace DangNhap
                 {
                     MessageBox.Show("Added Successfully");
                     parent.Display_GGC_nhom();
-                    restoreBTN();
+                    RestoreBTN();
                 }
                 else
                 {
@@ -321,7 +321,7 @@ namespace DangNhap
                 }
             }
         }
-        private void restoreBTN()
+        private void RestoreBTN()
         {
             CBB_QuyenTruyCap.SelectedIndex = -1;
             CBB_phongban.SelectedIndex = -1;
@@ -342,7 +342,7 @@ namespace DangNhap
         }
         private void BTN_huy_Click(object sender, EventArgs e)
         {
-            restoreBTN(); 
+            RestoreBTN(); 
         }
 
         private void CB_thoihan_CheckedChanged(object sender, EventArgs e)

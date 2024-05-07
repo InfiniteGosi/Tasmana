@@ -17,7 +17,7 @@ namespace DangNhap
 {
     public partial class ChiTietCongViec : Form
     {
-        private Account currentAccount;
+        private readonly Account currentAccount;
         public ChiTietCongViec(Account currentAccount)
         {
             InitializeComponent();

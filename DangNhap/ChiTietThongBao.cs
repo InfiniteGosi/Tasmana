@@ -14,7 +14,7 @@ namespace DangNhap
 {
     public partial class ChiTietThongBao : Form
     {
-        private Notice notice;
+        private readonly Notice notice;
         public ChiTietThongBao(Notice notice)
         {
             InitializeComponent();

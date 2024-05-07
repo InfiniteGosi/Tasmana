@@ -28,7 +28,7 @@ namespace DangNhap
             int num = rdn.Next(10000, 99999);
             return num;
         }
-        int num = RandomCode();
+        private readonly int num = RandomCode();
         private void GetEmployeeByEmployeeId(string maNhanVien)
         {
             employee = EmployeeBLL.Instance.GetEmployeeByEmployeeId(maNhanVien);
@@ -66,12 +66,14 @@ namespace DangNhap
             message.From = new MailAddress(from);
             message.Subject = "Hệ thống xác nhận mã tự động Tasmana";
             message.Body = "Mã xác nhận của anh/chị là: " + num.ToString();
-            SmtpClient smtp = new SmtpClient("smtp.gmail.com");
-            smtp.UseDefaultCredentials = false;
-            smtp.EnableSsl = true;
-            smtp.Port = 587;
-            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-            smtp.Credentials = new NetworkCredential(from, pass);
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com")
+            {
+                UseDefaultCredentials = false,
+                EnableSsl = true,
+                Port = 587,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                Credentials = new NetworkCredential(from, pass)
+            };
             try
             {
                 smtp.Send(message);

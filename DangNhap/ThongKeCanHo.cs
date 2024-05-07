@@ -87,7 +87,7 @@ namespace DangNhap
 
         private void LoadApartment()
         {
-            List<Apartment> list = new List<Apartment>();   
+            List<Apartment> list;   
             list = ApartmentBLL.Instance.GetApartmentList();
             CBB_LoaiThoiGian.Items.Clear();
             CBB_LoaiThoiGian.Items.Add("Tất cả");
@@ -261,8 +261,8 @@ namespace DangNhap
                     // Get the selected month (assuming it's in the format "Tháng x")
                     string selectedMonth = CBB_ThoiGian.SelectedItem.ToString();
 
-                    int monthNumber; // This will store the month number
-                    if (int.TryParse(selectedMonth.Substring(6), out monthNumber))
+                    // This will store the month number
+                    if (int.TryParse(selectedMonth.Substring(6), out int monthNumber))
                     {
                         // Set the start date to the first day of the selected month and year
                         DateTime startDate = new DateTime(selectedYear, monthNumber, 1);
@@ -280,9 +280,8 @@ namespace DangNhap
                 {
                     // Get the selected quarter (assuming it's in the format "Quý x")
                     string selectedQuarter = CBB_ThoiGian.SelectedItem.ToString();
-                    int quarterNumber; // This will store the quarter number
 
-                    if (int.TryParse(selectedQuarter.Substring(4), out quarterNumber))
+                    if (int.TryParse(selectedQuarter.Substring(4), out int quarterNumber))
                     {
                         // Calculate the start and end months of the selected quarter
                         int startMonth = (quarterNumber - 1) * 3 + 1; // First month of the quarter
@@ -443,7 +442,7 @@ namespace DangNhap
         // Load Công nợ của tất cả căn hộ
         private void LoadDebtOfAllApartments()
         {
-            DataTable dataSource = new DataTable();
+            DataTable dataSource;
             dataSource = ApartmentBLL.Instance.GetDebtOfAllApartments();
             // Clear old data
             GGC_ThongKe.DataSource = null;
@@ -458,7 +457,7 @@ namespace DangNhap
         // Load Công nợ của một căn hộ nhất định
         private void LoadDebtOfApartment(string maCanHo)
         {
-            DataTable dataSource = new DataTable();
+            DataTable dataSource;
             dataSource = ApartmentBLL.Instance.GetDebtOfApartment(maCanHo);
             GGC_ThongKe.DataSource = null;
             GGC_ThongKe.DataSource = dataSource;
@@ -472,7 +471,7 @@ namespace DangNhap
         // Load danh sách yêu cầu
         private void LoadRequestList()
         {
-            DataTable dataSource = new DataTable();
+            DataTable dataSource;
             dataSource = ApartmentBLL.Instance.GetRequestList();
             GGC_ThongKe.DataSource = null;
             GGC_ThongKe.DataSource = dataSource;
@@ -494,7 +493,7 @@ namespace DangNhap
             // Clear old data
             GGC_ThongKe.DataSource = null;
 
-            DataTable dataSource = new DataTable();
+            DataTable dataSource;
             dataSource = ApartmentBLL.Instance.GetElectricity_WaterCost(tuNgay, denNgay);
             GGC_ThongKe.DataSource = dataSource;
 
@@ -512,7 +511,7 @@ namespace DangNhap
             DateTime denNgay = DTP_DenNgay.Value;
             // Clear old data
             GGC_ThongKe.DataSource = null;
-            DataTable dataSource = new DataTable();
+            DataTable dataSource;
             dataSource = ApartmentBLL.Instance.GetManagementFee(tuNgay, denNgay);
             GGC_ThongKe.DataSource = dataSource;
 
@@ -529,7 +528,7 @@ namespace DangNhap
             DateTime denNgay = DTP_DenNgay.Value;
             // Clear old data
             GGC_ThongKe.DataSource = null;
-            DataTable dataSource = new DataTable();
+            DataTable dataSource;
             dataSource = ApartmentBLL.Instance.GetServiceFee(tuNgay, denNgay);
             GGC_ThongKe.DataSource = dataSource;
 
@@ -544,7 +543,7 @@ namespace DangNhap
         private void LoadStateOfApartments()
         {
             GGC_ThongKe.DataSource = null;
-            DataTable dataSource = new DataTable();
+            DataTable dataSource;
             dataSource = ApartmentBLL.Instance.GetStateOfApartments(CBB_LoaiThoiGian.SelectedItem.ToString());
             GGC_ThongKe.DataSource = dataSource;
             if(dataSource.Rows.Count > 0)
@@ -558,7 +557,7 @@ namespace DangNhap
         private void LoadALLEmployeesOfApartments()
         {
             GGC_ThongKe.DataSource = null;
-            DataTable dataSource = new DataTable();
+            DataTable dataSource;
             dataSource = ApartmentBLL.Instance.GetAllEmployessOfApartments();
             GGC_ThongKe.DataSource = dataSource;
             if(dataSource.Rows.Count > 0)
@@ -574,7 +573,7 @@ namespace DangNhap
         private void LoadEmployeesOfApartment(string maCanHo)
         {
             GGC_ThongKe.DataSource = null;
-            DataTable dataSource = new DataTable();
+            DataTable dataSource;
             dataSource = ApartmentBLL.Instance.GetEmployeesOfSpecificApartment(maCanHo);
             GGC_ThongKe.DataSource = dataSource;
             if (dataSource.Rows.Count > 0)
@@ -590,7 +589,7 @@ namespace DangNhap
         private void LoadForeigner()
         {
             GGC_ThongKe.DataSource = null;
-            DataTable dataSource = new DataTable();
+            DataTable dataSource;
             dataSource = ResidentBLL.Instance.GetAllForeignNational();
             GGC_ThongKe.DataSource = dataSource;
             LoadGGC();
@@ -599,7 +598,7 @@ namespace DangNhap
         private void LoadVietnameses()
         {
             GGC_ThongKe.DataSource = null;
-            DataTable dataSource = new DataTable();
+            DataTable dataSource;
             dataSource = ResidentBLL.Instance.GetVietResidents();
             GGC_ThongKe.DataSource = dataSource;
             LoadGGC();
@@ -928,8 +927,10 @@ namespace DangNhap
             GridPrintDocumentAdv gridPrintDocument = new GridPrintDocumentAdv(GGC_ThongKe.TableControl);
             PrintDialog printDialog = new PrintDialog();
             gridPrintDocument.ScaleColumnsToFitPage = true;
-            PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog();
-            printPreviewDialog.Document = gridPrintDocument;
+            PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog
+            {
+                Document = gridPrintDocument
+            };
 
             printPreviewDialog.ShowDialog();
             printDialog.Document = gridPrintDocument;

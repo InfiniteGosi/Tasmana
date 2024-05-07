@@ -412,12 +412,6 @@
     <Compile Include="FaceDetectLogin.Designer.cs">
       <DependentUpon>FaceDetectLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="HeThongBanDo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HeThongBanDo.Designer.cs">
-      <DependentUpon>HeThongBanDo.cs</DependentUpon>
-    </Compile>
     <Compile Include="LichSuCanHo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -649,9 +643,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FaceDetectLogin.resx">
       <DependentUpon>FaceDetectLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HeThongBanDo.resx">
-      <DependentUpon>HeThongBanDo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LichSuCanHo.en.resx">
       <DependentUpon>LichSuCanHo.cs</DependentUpon>

@@ -21,7 +21,7 @@ namespace DangNhap
 
         private void LoadCanHo()
         {
-            List<Apartment> list = new List<Apartment>();
+            List<Apartment> list;
             list = ApartmentBLL.Instance.GetApartmentList();
             foreach (Apartment a in list)
             {

@@ -22,11 +22,11 @@ namespace DangNhap
 {
     public partial class ChiTietCanHo : Form
     {
-        private CanHo parent;
-        private string maCanHoHienTai;
+        private readonly CanHo parent;
+        private readonly string maCanHoHienTai;
         private Apartment canHoHienTai;
         private ChuHo chuHo;
-        private Account currentAccount;
+        private readonly Account currentAccount;
         //private readonly string[] arrLoai = { "PENTHOUSE", "01", "02", "03", "04", "04", "05", "06", "07", "08", "09", "10", "11" };
         private readonly string[] arrTinhTrang = { "Chưa bán", "Đã bán", "Chưa bàn giao - Cư dân đang ở", "Đã bàn giao - trống" };
         public ChiTietCanHo()
@@ -101,10 +101,7 @@ namespace DangNhap
 
         private void BTN_chung_Click(object sender, EventArgs e)
         {
-            if (currentFormChild != null)
-            {
-                currentFormChild.Close();
-            }
+            currentFormChild?.Close();
             BTN_chung.BackColor = Color.FromArgb(51, 53, 55);
             BTN_lichsu.BackColor = Color.Transparent;
         }
@@ -284,7 +281,7 @@ namespace DangNhap
 
         private void BTN_xoa_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa khu thương mại này?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa căn hộ này?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {

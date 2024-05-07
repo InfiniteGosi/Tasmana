@@ -113,13 +113,14 @@ namespace DangNhap
             Font titleFont = new Font(baseFont, 20, Font.BOLD);
 
             // Create a paragraph with the title
-            Paragraph titleParagraph = new Paragraph(title, titleFont);
+            Paragraph titleParagraph = new Paragraph(title, titleFont)
+            {
+                // Set alignment to center
+                Alignment = iTextSharp.text.Element.ALIGN_CENTER,
 
-            // Set alignment to center
-            titleParagraph.Alignment = iTextSharp.text.Element.ALIGN_CENTER;
-
-            // Add some space between title and table
-            titleParagraph.SpacingAfter = 10f;
+                // Add some space between title and table
+                SpacingAfter = 10f
+            };
 
             // Add the paragraph to the document
             document.Add(titleParagraph);

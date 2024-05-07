@@ -17,8 +17,8 @@ namespace DangNhap
 {
     public partial class SoanThongBao : Form
     {
-        private Account currentAccount;
-        private Employee currentUser;
+        private readonly Account currentAccount;
+        private readonly Employee currentUser;
         private byte[] buffer = null;
         private string fileName = null;
         private string fileExten = null;
@@ -173,12 +173,14 @@ namespace DangNhap
                             message.From = new MailAddress(from);
                             message.Subject = $"Thông báo/Báo cáo từ {currentUser.MaNhanVien}";
                             message.Body = $"Bạn vừa nhận được 1 thông báo/báo cáo từ {currentUser.Ho} {currentUser.Ten} \nVui lòng đăng nhập vào phần mềm Tasmana để xem chi tiết";
-                            SmtpClient smtp = new SmtpClient("smtp.gmail.com");
-                            smtp.UseDefaultCredentials = false;
-                            smtp.EnableSsl = true;
-                            smtp.Port = 587;
-                            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                            smtp.Credentials = new NetworkCredential(from, pass);
+                            SmtpClient smtp = new SmtpClient("smtp.gmail.com")
+                            {
+                                UseDefaultCredentials = false,
+                                EnableSsl = true,
+                                Port = 587,
+                                DeliveryMethod = SmtpDeliveryMethod.Network,
+                                Credentials = new NetworkCredential(from, pass)
+                            };
                             try
                             {
                                 smtp.Send(message);
@@ -214,12 +216,14 @@ namespace DangNhap
                                     message.From = new MailAddress(from);
                                     message.Subject = $"Thông báo/Báo cáo từ {currentUser.MaNhanVien}";
                                     message.Body = $"Bạn vừa nhận được 1 thông báo/báo cáo từ {currentUser.Ho} {currentUser.Ten} \nVui lòng đăng nhập vào phần mềm Tasmana để xem chi tiết";
-                                    SmtpClient smtp = new SmtpClient("smtp.gmail.com");
-                                    smtp.UseDefaultCredentials = false;
-                                    smtp.EnableSsl = true;
-                                    smtp.Port = 587;
-                                    smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                                    smtp.Credentials = new NetworkCredential(from, pass);
+                                    SmtpClient smtp = new SmtpClient("smtp.gmail.com")
+                                    {
+                                        UseDefaultCredentials = false,
+                                        EnableSsl = true,
+                                        Port = 587,
+                                        DeliveryMethod = SmtpDeliveryMethod.Network,
+                                        Credentials = new NetworkCredential(from, pass)
+                                    };
                                     try
                                     {
                                         smtp.Send(message);
@@ -259,12 +263,14 @@ namespace DangNhap
                                     message.From = new MailAddress(from);
                                     message.Subject = $"Thông báo/Báo cáo từ {currentUser.MaNhanVien}";
                                     message.Body = $"Bạn vừa nhận được 1 thông báo/báo cáo từ {currentUser.Ho} {currentUser.Ten} \nVui lòng đăng nhập vào phần mềm Tasmana để xem chi tiết";
-                                    SmtpClient smtp = new SmtpClient("smtp.gmail.com");
-                                    smtp.UseDefaultCredentials = false;
-                                    smtp.EnableSsl = true;
-                                    smtp.Port = 587;
-                                    smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                                    smtp.Credentials = new NetworkCredential(from, pass);
+                                    SmtpClient smtp = new SmtpClient("smtp.gmail.com")
+                                    {
+                                        UseDefaultCredentials = false,
+                                        EnableSsl = true,
+                                        Port = 587,
+                                        DeliveryMethod = SmtpDeliveryMethod.Network,
+                                        Credentials = new NetworkCredential(from, pass)
+                                    };
                                     try
                                     {
                                         smtp.Send(message);
@@ -301,12 +307,14 @@ namespace DangNhap
                                 message.From = new MailAddress(from);
                                 message.Subject = $"Bạn vừa nhận được 1 thông báo/báo cáo từ {currentUser.MaNhanVien}";
                                 message.Body = $"Bạn vừa nhận được 1 thông báo/báo cáo từ {currentUser.Ho} {currentUser.Ten} \nVui lòng đăng nhập vào phần mềm Tasmana để xem chi tiết";
-                                SmtpClient smtp = new SmtpClient("smtp.gmail.com");
-                                smtp.UseDefaultCredentials = false;
-                                smtp.EnableSsl = true;
-                                smtp.Port = 587;
-                                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                                smtp.Credentials = new NetworkCredential(from, pass);
+                                SmtpClient smtp = new SmtpClient("smtp.gmail.com")
+                                {
+                                    UseDefaultCredentials = false,
+                                    EnableSsl = true,
+                                    Port = 587,
+                                    DeliveryMethod = SmtpDeliveryMethod.Network,
+                                    Credentials = new NetworkCredential(from, pass)
+                                };
                                 try
                                 {
                                     smtp.Send(message);

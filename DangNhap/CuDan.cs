@@ -21,7 +21,7 @@ namespace DangNhap
     public partial class CuDan : Form
     {
         private int index = 0;
-        Account currentAccount;
+        private readonly Account currentAccount;
         public CuDan(Account currentAccount)
         {
             SyncfusionLicenseProvider.RegisterLicense("MzIxOTI2MkAzMjM1MmUzMDJlMzBORkJZeFRVdUQxeERjT2xkWC9vdFgxS29wUmREOU9CZVdENkRUN0lrSStVPQ==;Mgo+DSMBaFt6QHFqVkNrXVNbdV5dVGpAd0N3RGlcdlR1fUUmHVdTRHRbQlliS3xTck1hW35Wcnc=");
@@ -426,7 +426,7 @@ namespace DangNhap
             }
 
             // Lấy dữ liệu từ GridGroupingControl và thêm vào DataTable
-            foreach (GridRecord record in GGC_cudan.Table.Records)
+            foreach (GridRecord record in GGC_cudan.Table.Records.Cast<GridRecord>())
             {
                 DataRow row = dt.NewRow();
 

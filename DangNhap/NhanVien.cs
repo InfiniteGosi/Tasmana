@@ -18,7 +18,7 @@ namespace DangNhap
     {
         private string[] headers = null;
         private Employee nhanVienChiTiet;
-        private List<Employee> employees = new List<Employee>();
+        private List<Employee> employees;
         public NhanVien()
         {
             SyncfusionLicenseProvider.RegisterLicense("MzIxOTI2MkAzMjM1MmUzMDJlMzBORkJZeFRVdUQxeERjT2xkWC9vdFgxS29wUmREOU9CZVdENkRUN0lrSStVPQ==;Mgo+DSMBaFt6QHFqVkNrXVNbdV5dVGpAd0N3RGlcdlR1fUUmHVdTRHRbQlliS3xTck1hW35Wcnc=");
@@ -197,8 +197,10 @@ namespace DangNhap
             GridPrintDocumentAdv gridPrintDocument = new GridPrintDocumentAdv(GGC_danhsachnv.TableControl);
             PrintDialog printDialog = new PrintDialog();
             gridPrintDocument.ScaleColumnsToFitPage = true;
-            PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog();
-            printPreviewDialog.Document = gridPrintDocument;
+            PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog
+            {
+                Document = gridPrintDocument
+            };
 
             printPreviewDialog.ShowDialog();
             printDialog.Document = gridPrintDocument;

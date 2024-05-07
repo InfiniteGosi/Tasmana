@@ -17,8 +17,8 @@ namespace DangNhap
 {
     public partial class ThongTinKhachThueKTM : Form
     {
-        private CuDan parent;
-        private KhachThueKhuThuongMai khachKTM = null;
+        private readonly CuDan parent;
+        private readonly KhachThueKhuThuongMai khachKTM = null;
         public ThongTinKhachThueKTM(CuDan parent, KhachThueKhuThuongMai khachKTM)
         {
             InitializeComponent();
