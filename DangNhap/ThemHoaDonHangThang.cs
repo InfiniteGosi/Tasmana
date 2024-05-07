@@ -35,7 +35,7 @@ namespace DangNhap
         }
         private bool CheckPayState()
         {
-            if (CBB_tinhTrangThanhToan.SelectedItem.Equals("Đã thanh toán"))
+            if (CBB_tinhTrangThanhToan.SelectedItem.Equals("Đã thanh toán") || CBB_tinhTrangThanhToan.SelectedItem.Equals("Paid"))
             {
                 return true;
             }

@@ -125,13 +125,10 @@
     <value>RESIDENT INFORMATION</value>
   </data>
   <data name="CBB_nguoithan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>937, 320</value>
+    <value>941, 307</value>
   </data>
   <data name="CBB_loaicd.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 111</value>
-  </data>
-  <data name="CBB_loaicd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>375, 24</value>
   </data>
   <data name="LB_etinhtrangxe.Size" type="System.Drawing.Size, System.Drawing">
     <value>197, 20</value>
@@ -232,6 +229,9 @@
   <data name="LB_emacanho.Text" xml:space="preserve">
     <value>Please enter apartment ID</value>
   </data>
+  <data name="NUD_congno.Location" type="System.Drawing.Point, System.Drawing">
+    <value>941, 373</value>
+  </data>
   <data name="LB_tinhtrangxe.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 22</value>
   </data>
@@ -262,14 +262,20 @@
   <data name="LB_diennuoc.Text" xml:space="preserve">
     <value>Water and electricity number</value>
   </data>
+  <data name="DTP_di.Location" type="System.Drawing.Point, System.Drawing">
+    <value>941, 109</value>
+  </data>
   <data name="DTP_vao.Location" type="System.Drawing.Point, System.Drawing">
-    <value>933, 53</value>
+    <value>941, 43</value>
   </data>
   <data name="LB_di.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 22</value>
   </data>
   <data name="LB_di.Text" xml:space="preserve">
     <value>Date of moving out</value>
+  </data>
+  <data name="DTP_bangiao.Location" type="System.Drawing.Point, System.Drawing">
+    <value>941, 175</value>
   </data>
   <data name="DTP_ngaysinh.Location" type="System.Drawing.Point, System.Drawing">
     <value>212, 378</value>
@@ -304,9 +310,6 @@
   <data name="TXB_quoctich.Location" type="System.Drawing.Point, System.Drawing">
     <value>211, 307</value>
   </data>
-  <data name="LB_thunuoi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>688, 448</value>
-  </data>
   <data name="LB_thunuoi.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 22</value>
   </data>
@@ -314,7 +317,7 @@
     <value>Pet</value>
   </data>
   <data name="LB_congno.Location" type="System.Drawing.Point, System.Drawing">
-    <value>689, 390</value>
+    <value>689, 377</value>
   </data>
   <data name="LB_congno.Size" type="System.Drawing.Size, System.Drawing">
     <value>97, 22</value>
@@ -351,9 +354,6 @@
   </data>
   <data name="TXB_sdt.Location" type="System.Drawing.Point, System.Drawing">
     <value>211, 511</value>
-  </data>
-  <data name="LB_dinhdanh.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 443</value>
   </data>
   <data name="LB_dinhdanh.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 22</value>
@@ -9836,6 +9836,12 @@
         6VOxeO5IlAAoq7Ob+bds1uFQY9y40hkPli/G84fLANL9+Pe3D+P7Z/fiL3+oxrOHs/HHexPx/MFkfPdk
         Kv76++l4tTULTJXi1bNi/H1rJn74eip+2CqwbzFebhXi/5eYkqkqw4ApAAAAAElFTkSuQmCC
 </value>
+  </data>
+  <data name="BTN_xoa.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="BTN_luu.Text" xml:space="preserve">
+    <value>Save</value>
   </data>
   <data name="BTN_thoat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

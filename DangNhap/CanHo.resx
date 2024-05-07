@@ -134,8 +134,8 @@
   <data name="&gt;&gt;LB_loai.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;CBB_choice.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;BTN_PDF.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -158,6 +158,9 @@
   </data>
   <data name="CBB_choice.Size" type="System.Drawing.Size, System.Drawing">
     <value>212, 30</value>
+  </data>
+  <data name="&gt;&gt;BTN_excel.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
   <data name="CBB_choice.TabIndex" type="System.Int32, mscorlib">
     <value>176</value>
@@ -185,6 +188,9 @@
   </data>
   <data name="BTN_in.TabIndex" type="System.Int32, mscorlib">
     <value>175</value>
+  </data>
+  <data name="&gt;&gt;CBB_choice.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="BTN_XemHoaDon.Location" type="System.Drawing.Point, System.Drawing">
     <value>1152, 47</value>
@@ -218,12 +224,6 @@
   </data>
   <data name="&gt;&gt;BTN_in.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LB_loai.Text" xml:space="preserve">
-    <value>Chọn loại bất động sản</value>
   </data>
   <data name="&gt;&gt;LB_loai.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -293,9 +293,6 @@
   <data name="&gt;&gt;GGC_canho.Type" xml:space="preserve">
     <value>Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl, Syncfusion.Grid.Grouping.Windows, Version=25.1462.39.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
   </data>
-  <data name="GGC_danhsachnv.TabIndex" type="System.Int32, mscorlib">
-    <value>121</value>
-  </data>
   <data name="BTN_excel.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 37</value>
   </data>
@@ -353,11 +350,11 @@
   <data name="BTN_in.Location" type="System.Drawing.Point, System.Drawing">
     <value>281, 693</value>
   </data>
-  <data name="&gt;&gt;GGC_canho.Parent" xml:space="preserve">
+  <data name="&gt;&gt;LB_loai.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="CBB_choice.Items1" xml:space="preserve">
-    <value>Khu thương mại</value>
+  <data name="LB_loai.Text" xml:space="preserve">
+    <value>Chọn loại bất động sản</value>
   </data>
   <data name="BTN_in.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -380,8 +377,8 @@
   <data name="&gt;&gt;BTN_in.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;LB_loai.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="GGC_danhsachnv.TabIndex" type="System.Int32, mscorlib">
+    <value>121</value>
   </data>
   <data name="&gt;&gt;GGC_danhsachnv.Type" xml:space="preserve">
     <value>Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl, Syncfusion.Grid.Grouping.Windows, Version=25.1462.39.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
@@ -389,14 +386,17 @@
   <data name="BTN_PDF.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 37</value>
   </data>
+  <data name="&gt;&gt;GGC_canho.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="BTN_excel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
   <data name="GGC_danhsachnv.Size" type="System.Drawing.Size, System.Drawing">
     <value>1248, 404</value>
   </data>
-  <data name="&gt;&gt;BTN_excel.Type" xml:space="preserve">
-    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  <data name="CBB_choice.Items1" xml:space="preserve">
+    <value>Khu thương mại</value>
   </data>
   <data name="BTN_excel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

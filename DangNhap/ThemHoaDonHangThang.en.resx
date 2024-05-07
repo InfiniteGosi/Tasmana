@@ -173,6 +173,12 @@
   <data name="LB_tinhTrangThanhToan.Text" xml:space="preserve">
     <value>Payment status</value>
   </data>
+  <data name="CBB_tinhTrangThanhToan.Items" xml:space="preserve">
+    <value>Unpaid</value>
+  </data>
+  <data name="CBB_tinhTrangThanhToan.Items1" xml:space="preserve">
+    <value>Paid</value>
+  </data>
   <data name="LB_phiQuanLy.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>

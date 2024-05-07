@@ -78,6 +78,7 @@ namespace DangNhap
             this.label13 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -91,14 +92,13 @@ namespace DangNhap
             this.BTN_luu = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_xoa = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_thoat = new Guna.UI.WinForms.GunaGradientButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PN_hienthi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_phiql)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -190,6 +190,8 @@ namespace DangNhap
             // CBB_manv
             // 
             resources.ApplyResources(this.CBB_manv, "CBB_manv");
+            this.CBB_manv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.CBB_manv.ForeColor = System.Drawing.Color.White;
             this.CBB_manv.FormattingEnabled = true;
             this.CBB_manv.Name = "CBB_manv";
             // 
@@ -238,6 +240,8 @@ namespace DangNhap
             // NUD_phiql
             // 
             resources.ApplyResources(this.NUD_phiql, "NUD_phiql");
+            this.NUD_phiql.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
+            this.NUD_phiql.ForeColor = System.Drawing.Color.White;
             this.NUD_phiql.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -462,6 +466,12 @@ namespace DangNhap
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Name = "comboBox2";
             // 
+            // pictureBox2
+            // 
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
             // label14
             // 
             resources.ApplyResources(this.label14, "label14");
@@ -536,9 +546,10 @@ namespace DangNhap
             this.BTN_luu.AnimationHoverSpeed = 0.5F;
             this.BTN_luu.AnimationSpeed = 0.03F;
             this.BTN_luu.BackColor = System.Drawing.Color.Transparent;
-            this.BTN_luu.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.BTN_luu.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.BTN_luu.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
             this.BTN_luu.BorderColor = System.Drawing.Color.Black;
+            this.BTN_luu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_luu.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_luu.FocusedColor = System.Drawing.Color.Empty;
             this.BTN_luu.ForeColor = System.Drawing.Color.White;
@@ -546,8 +557,8 @@ namespace DangNhap
             this.BTN_luu.Image = null;
             this.BTN_luu.ImageSize = new System.Drawing.Size(20, 20);
             this.BTN_luu.Name = "BTN_luu";
-            this.BTN_luu.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
-            this.BTN_luu.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(184)))));
+            this.BTN_luu.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(184)))));
+            this.BTN_luu.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(184)))));
             this.BTN_luu.OnHoverBorderColor = System.Drawing.Color.White;
             this.BTN_luu.OnHoverForeColor = System.Drawing.Color.White;
             this.BTN_luu.OnHoverImage = null;
@@ -567,6 +578,7 @@ namespace DangNhap
             this.BTN_xoa.BaseColor2 = System.Drawing.Color.Transparent;
             this.BTN_xoa.BorderColor = System.Drawing.Color.Red;
             this.BTN_xoa.BorderSize = 1;
+            this.BTN_xoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_xoa.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_xoa.FocusedColor = System.Drawing.Color.Empty;
             this.BTN_xoa.ForeColor = System.Drawing.Color.Red;
@@ -608,12 +620,6 @@ namespace DangNhap
             this.BTN_thoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_thoat.Click += new System.EventHandler(this.BTN_thoat_Click);
             // 
-            // pictureBox2
-            // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            // 
             // ThongTinKhachThueKTM
             // 
             resources.ApplyResources(this, "$this");
@@ -632,15 +638,18 @@ namespace DangNhap
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ThongTinKhachThueKTM";
             this.Load += new System.EventHandler(this.ThongTinCuDan_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TTKTM_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TTKTM_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TTKTM_MouseUp);
             this.PN_hienthi.ResumeLayout(false);
             this.PN_hienthi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_phiql)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExt6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -123,10 +123,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="GGC_BillHangThang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>58, 128</value>
+    <value>17, 97</value>
   </data>
   <data name="GGC_BillHangThang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1291, 568</value>
+    <value>1362, 526</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="GGC_BillHangThang.TabIndex" type="System.Int32, mscorlib">
@@ -154,7 +154,7 @@
     <value>Times New Roman, 9pt</value>
   </data>
   <data name="BTN_ThemBill.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1220, 87</value>
+    <value>1255, 56</value>
   </data>
   <data name="BTN_ThemBill.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 35</value>
@@ -182,6 +182,9 @@
   </data>
   <data name="LB_BillHangThang.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 16.2pt, style=Bold</value>
+  </data>
+  <data name="LB_BillHangThang.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="LB_BillHangThang.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 16</value>
@@ -214,7 +217,7 @@
     <value>1395, 1</value>
   </data>
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1, 759</value>
+    <value>1, 633</value>
   </data>
   <data name="panel4.TabIndex" type="System.Int32, mscorlib">
     <value>223</value>
@@ -238,7 +241,7 @@
     <value>0, 1</value>
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1, 759</value>
+    <value>1, 633</value>
   </data>
   <data name="panel3.TabIndex" type="System.Int32, mscorlib">
     <value>222</value>
@@ -283,7 +286,7 @@
     <value>Bottom</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 760</value>
+    <value>0, 634</value>
   </data>
   <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>1396, 1</value>
@@ -449,7 +452,10 @@
     <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1396, 761</value>
+    <value>1396, 635</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

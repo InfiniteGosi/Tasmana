@@ -55,17 +55,37 @@ namespace DangNhap
             // Clear old DataSource
             GGC_BillHangThang.DataSource = null;
             GGC_BillHangThang.DataSource = datasource;
-            if(datasource.Rows.Count > 0 )
+            //Tiếng Việt
+            if(LB_BillHangThang.Text == "HÓA ĐƠN HÀNG THÁNG")
             {
-                GGC_BillHangThang.TableDescriptor.Columns[0].HeaderText = "Mã hóa đơn";
-                GGC_BillHangThang.TableDescriptor.Columns[1].HeaderText = "Mã căn hộ";
-                GGC_BillHangThang.TableDescriptor.Columns[2].HeaderText = "Số điện hàng tháng";
-                GGC_BillHangThang.TableDescriptor.Columns[3].HeaderText = "Chỉ số nước hàng tháng";
-                GGC_BillHangThang.TableDescriptor.Columns[4].HeaderText = "Phí quản lý hàng tháng";
-                GGC_BillHangThang.TableDescriptor.Columns[5].HeaderText = "Tình trạng thanh toán";
-                GGC_BillHangThang.TableDescriptor.Columns[6].HeaderText = "Ngày ghi";
-                GGC_BillHangThang.TableDescriptor.Columns[7].HeaderText = "Ngày thanh toán";
+                if(datasource.Rows.Count > 0 )
+                {
+                    GGC_BillHangThang.TableDescriptor.Columns[0].HeaderText = "Mã hóa đơn";
+                    GGC_BillHangThang.TableDescriptor.Columns[1].HeaderText = "Mã căn hộ";
+                    GGC_BillHangThang.TableDescriptor.Columns[2].HeaderText = "Số điện hàng tháng";
+                    GGC_BillHangThang.TableDescriptor.Columns[3].HeaderText = "Chỉ số nước hàng tháng";
+                    GGC_BillHangThang.TableDescriptor.Columns[4].HeaderText = "Phí quản lý hàng tháng";
+                    GGC_BillHangThang.TableDescriptor.Columns[5].HeaderText = "Tình trạng thanh toán";
+                    GGC_BillHangThang.TableDescriptor.Columns[6].HeaderText = "Ngày ghi";
+                    GGC_BillHangThang.TableDescriptor.Columns[7].HeaderText = "Ngày thanh toán";
+                }
             }
+            //Tiếng Anh
+            else
+            {
+                if (datasource.Rows.Count > 0)
+                {
+                    GGC_BillHangThang.TableDescriptor.Columns[0].HeaderText = "Bill ID";
+                    GGC_BillHangThang.TableDescriptor.Columns[1].HeaderText = "Apartment ID";
+                    GGC_BillHangThang.TableDescriptor.Columns[2].HeaderText = "Monthly electricity number";
+                    GGC_BillHangThang.TableDescriptor.Columns[3].HeaderText = "Monthly water numberg";
+                    GGC_BillHangThang.TableDescriptor.Columns[4].HeaderText = "Monthly management fee";
+                    GGC_BillHangThang.TableDescriptor.Columns[5].HeaderText = "Payment status";
+                    GGC_BillHangThang.TableDescriptor.Columns[6].HeaderText = "Check date";
+                    GGC_BillHangThang.TableDescriptor.Columns[7].HeaderText = "Payment date";
+                }
+            }
+            
             SizeGGC();
         }
         private void ChiPhiHangThang_Load(object sender, EventArgs e)
