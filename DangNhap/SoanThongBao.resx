@@ -249,6 +249,75 @@
   <data name="&gt;&gt;LB_den.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="&gt;&gt;LLB_hienfile.Name" xml:space="preserve">
+    <value>LLB_hienfile</value>
+  </data>
+  <data name="&gt;&gt;LLB_hienfile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LLB_hienfile.Parent" xml:space="preserve">
+    <value>PN_hienthi</value>
+  </data>
+  <data name="&gt;&gt;LLB_hienfile.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;BTN_file.Name" xml:space="preserve">
+    <value>BTN_file</value>
+  </data>
+  <data name="&gt;&gt;BTN_file.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BTN_file.Parent" xml:space="preserve">
+    <value>PN_hienthi</value>
+  </data>
+  <data name="&gt;&gt;BTN_file.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;gunaGradientButton1.Name" xml:space="preserve">
+    <value>gunaGradientButton1</value>
+  </data>
+  <data name="&gt;&gt;gunaGradientButton1.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaGradientButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;gunaGradientButton1.Parent" xml:space="preserve">
+    <value>PN_hienthi</value>
+  </data>
+  <data name="&gt;&gt;gunaGradientButton1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;TXB_noidung.Name" xml:space="preserve">
+    <value>TXB_noidung</value>
+  </data>
+  <data name="&gt;&gt;TXB_noidung.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TXB_noidung.Parent" xml:space="preserve">
+    <value>PN_hienthi</value>
+  </data>
+  <data name="&gt;&gt;TXB_noidung.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="PN_hienthi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 198</value>
+  </data>
+  <data name="PN_hienthi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>913, 482</value>
+  </data>
+  <data name="PN_hienthi.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;PN_hienthi.Name" xml:space="preserve">
+    <value>PN_hienthi</value>
+  </data>
+  <data name="&gt;&gt;PN_hienthi.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PN_hienthi.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PN_hienthi.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
   <data name="LLB_hienfile.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -381,27 +450,6 @@
   <data name="&gt;&gt;TXB_noidung.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="PN_hienthi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 198</value>
-  </data>
-  <data name="PN_hienthi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>913, 482</value>
-  </data>
-  <data name="PN_hienthi.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;PN_hienthi.Name" xml:space="preserve">
-    <value>PN_hienthi</value>
-  </data>
-  <data name="&gt;&gt;PN_hienthi.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PN_hienthi.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;PN_hienthi.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
   <data name="TXB_tieude.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 10.8pt</value>
   </data>
@@ -506,13 +554,13 @@
 </value>
   </data>
   <data name="MSCBB_thongbao.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+    <value>Times New Roman, 12pt</value>
   </data>
   <data name="MSCBB_thongbao.Location" type="System.Drawing.Point, System.Drawing">
     <value>123, 68</value>
   </data>
   <data name="MSCBB_thongbao.Size" type="System.Drawing.Size, System.Drawing">
-    <value>579, 35</value>
+    <value>579, 31</value>
   </data>
   <data name="MSCBB_thongbao.TabIndex" type="System.Int32, mscorlib">
     <value>125</value>

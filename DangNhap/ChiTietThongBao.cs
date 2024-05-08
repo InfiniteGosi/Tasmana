@@ -23,8 +23,11 @@ namespace DangNhap
             TXB_title.Text = notice.Title;
             LB_author.Text = $"{notice.Author} {notice.Date}";
             if(notice.File != null)
+            {
                 LLB_hienfile.Text = notice.FileName;
                 LLB_hienfile.Visible = true;
+            }
+
         }
 
         private void LLB_hienfile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

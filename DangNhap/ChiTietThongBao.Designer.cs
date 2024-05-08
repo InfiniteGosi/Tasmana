@@ -44,8 +44,8 @@
             // 
             // TXB_title
             // 
-            this.TXB_title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             resources.ApplyResources(this.TXB_title, "TXB_title");
+            this.TXB_title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
             this.TXB_title.ForeColor = System.Drawing.Color.White;
             this.TXB_title.Name = "TXB_title";
             // 
@@ -57,16 +57,19 @@
             // 
             // TXB_content
             // 
-            this.TXB_content.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             resources.ApplyResources(this.TXB_content, "TXB_content");
+            this.TXB_content.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
             this.TXB_content.ForeColor = System.Drawing.Color.Black;
             this.TXB_content.Name = "TXB_content";
             // 
             // LLB_hienfile
             // 
             resources.ApplyResources(this.LLB_hienfile, "LLB_hienfile");
-            this.LLB_hienfile.LinkColor = System.Drawing.Color.Black;
+            this.LLB_hienfile.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(13)))), ((int)(((byte)(14)))));
+            this.LLB_hienfile.ForeColor = System.Drawing.Color.Black;
+            this.LLB_hienfile.LinkColor = System.Drawing.Color.White;
             this.LLB_hienfile.Name = "LLB_hienfile";
+            this.LLB_hienfile.TabStop = true;
             this.LLB_hienfile.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LLB_hienfile_LinkClicked);
             // 
             // LB_filedinhkem
@@ -77,26 +80,26 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Name = "panel5";
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Name = "panel4";
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Name = "panel3";
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Name = "panel2";
             // 
             // label1
@@ -107,6 +110,7 @@
             // 
             // BTN_thoat
             // 
+            resources.ApplyResources(this.BTN_thoat, "BTN_thoat");
             this.BTN_thoat.AnimationHoverSpeed = 0.5F;
             this.BTN_thoat.AnimationSpeed = 0.03F;
             this.BTN_thoat.BackColor = System.Drawing.Color.Transparent;
@@ -115,7 +119,6 @@
             this.BTN_thoat.BorderColor = System.Drawing.Color.DimGray;
             this.BTN_thoat.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BTN_thoat.FocusedColor = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.BTN_thoat, "BTN_thoat");
             this.BTN_thoat.ForeColor = System.Drawing.Color.Black;
             this.BTN_thoat.Image = ((System.Drawing.Image)(resources.GetObject("BTN_thoat.Image")));
             this.BTN_thoat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;

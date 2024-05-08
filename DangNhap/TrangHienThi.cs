@@ -419,5 +419,11 @@ namespace DangNhap
             // Load lại tình trạng công việc
             CountJobState();
         }
+
+        private void PB_question_Click(object sender, EventArgs e)
+        {
+            CauHoiThuongGap chtg = new CauHoiThuongGap();
+            chtg.ShowDialog();
+        }
     }
 }
