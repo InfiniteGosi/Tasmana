@@ -26,6 +26,7 @@ namespace DangNhap
             {
                 LLB_hienfile.Text = notice.FileName;
                 LLB_hienfile.Visible = true;
+                LB_filedinhkem.Visible = true;
             }
 
         }
