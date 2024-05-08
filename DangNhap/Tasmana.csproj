@@ -344,6 +344,12 @@
     <Compile Include="CanHo.Designer.cs">
       <DependentUpon>CanHo.cs</DependentUpon>
     </Compile>
+    <Compile Include="CauHoiThuongGap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CauHoiThuongGap.Designer.cs">
+      <DependentUpon>CauHoiThuongGap.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChiPhiHangThang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -548,6 +554,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CanHo.vi.resx">
       <DependentUpon>CanHo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CauHoiThuongGap.resx">
+      <DependentUpon>CauHoiThuongGap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChiPhiHangThang.en.resx">
       <DependentUpon>ChiPhiHangThang.cs</DependentUpon>

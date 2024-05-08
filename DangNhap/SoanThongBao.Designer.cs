@@ -36,6 +36,8 @@
             this.LB_den = new System.Windows.Forms.Label();
             this.PN_hienthi = new System.Windows.Forms.Panel();
             this.LLB_hienfile = new System.Windows.Forms.LinkLabel();
+            this.BTN_file = new System.Windows.Forms.Button();
+            this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
             this.TXB_noidung = new System.Windows.Forms.TextBox();
             this.TXB_tieude = new System.Windows.Forms.TextBox();
             this.LB_soantin = new System.Windows.Forms.Label();
@@ -43,8 +45,6 @@
             this.MSCBB_thongbao = new Syncfusion.Windows.Forms.Tools.MultiSelectionComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.CB_priority = new System.Windows.Forms.CheckBox();
-            this.BTN_file = new System.Windows.Forms.Button();
-            this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_thoat = new Guna.UI.WinForms.GunaGradientButton();
             this.PN_hienthi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MSCBB_thongbao)).BeginInit();
@@ -97,63 +97,6 @@
             this.LLB_hienfile.Name = "LLB_hienfile";
             this.LLB_hienfile.TabStop = true;
             // 
-            // TXB_noidung
-            // 
-            this.TXB_noidung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
-            this.TXB_noidung.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.TXB_noidung, "TXB_noidung");
-            this.TXB_noidung.ForeColor = System.Drawing.Color.White;
-            this.TXB_noidung.Name = "TXB_noidung";
-            // 
-            // TXB_tieude
-            // 
-            this.TXB_tieude.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
-            resources.ApplyResources(this.TXB_tieude, "TXB_tieude");
-            this.TXB_tieude.ForeColor = System.Drawing.Color.White;
-            this.TXB_tieude.Name = "TXB_tieude";
-            // 
-            // LB_soantin
-            // 
-            resources.ApplyResources(this.LB_soantin, "LB_soantin");
-            this.LB_soantin.ForeColor = System.Drawing.Color.White;
-            this.LB_soantin.Name = "LB_soantin";
-            // 
-            // LB_tieude
-            // 
-            resources.ApplyResources(this.LB_tieude, "LB_tieude");
-            this.LB_tieude.ForeColor = System.Drawing.Color.White;
-            this.LB_tieude.Name = "LB_tieude";
-            // 
-            // MSCBB_thongbao
-            // 
-            this.MSCBB_thongbao.AutoSizeMode = Syncfusion.Windows.Forms.Tools.AutoSizeModes.None;
-            this.MSCBB_thongbao.BeforeTouchSize = new System.Drawing.Size(579, 35);
-            this.MSCBB_thongbao.ButtonStyle = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
-            this.MSCBB_thongbao.DataSource = ((object)(resources.GetObject("MSCBB_thongbao.DataSource")));
-            this.MSCBB_thongbao.FlatBorderColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.MSCBB_thongbao, "MSCBB_thongbao");
-            this.MSCBB_thongbao.MetroColor = System.Drawing.Color.White;
-            this.MSCBB_thongbao.Name = "MSCBB_thongbao";
-            this.MSCBB_thongbao.ShowCheckBox = true;
-            this.MSCBB_thongbao.ShowGroups = true;
-            this.MSCBB_thongbao.ThemeName = "Metro";
-            this.MSCBB_thongbao.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.MSCBB_thongbao.UseVisualStyle = true;
-            this.MSCBB_thongbao.VisualItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(40)))));
-            this.MSCBB_thongbao.VisualItemForeColor = System.Drawing.Color.White;
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Name = "label1";
-            // 
-            // CB_priority
-            // 
-            resources.ApplyResources(this.CB_priority, "CB_priority");
-            this.CB_priority.Name = "CB_priority";
-            this.CB_priority.UseVisualStyleBackColor = true;
-            // 
             // BTN_file
             // 
             resources.ApplyResources(this.BTN_file, "BTN_file");
@@ -188,6 +131,63 @@
             this.gunaGradientButton1.Radius = 5;
             this.gunaGradientButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaGradientButton1.Click += new System.EventHandler(this.gunaGradientButton1_Click);
+            // 
+            // TXB_noidung
+            // 
+            this.TXB_noidung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            this.TXB_noidung.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.TXB_noidung, "TXB_noidung");
+            this.TXB_noidung.ForeColor = System.Drawing.Color.White;
+            this.TXB_noidung.Name = "TXB_noidung";
+            // 
+            // TXB_tieude
+            // 
+            this.TXB_tieude.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            resources.ApplyResources(this.TXB_tieude, "TXB_tieude");
+            this.TXB_tieude.ForeColor = System.Drawing.Color.White;
+            this.TXB_tieude.Name = "TXB_tieude";
+            // 
+            // LB_soantin
+            // 
+            resources.ApplyResources(this.LB_soantin, "LB_soantin");
+            this.LB_soantin.ForeColor = System.Drawing.Color.White;
+            this.LB_soantin.Name = "LB_soantin";
+            // 
+            // LB_tieude
+            // 
+            resources.ApplyResources(this.LB_tieude, "LB_tieude");
+            this.LB_tieude.ForeColor = System.Drawing.Color.White;
+            this.LB_tieude.Name = "LB_tieude";
+            // 
+            // MSCBB_thongbao
+            // 
+            this.MSCBB_thongbao.AutoSizeMode = Syncfusion.Windows.Forms.Tools.AutoSizeModes.None;
+            this.MSCBB_thongbao.BeforeTouchSize = new System.Drawing.Size(579, 31);
+            this.MSCBB_thongbao.ButtonStyle = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
+            this.MSCBB_thongbao.DataSource = ((object)(resources.GetObject("MSCBB_thongbao.DataSource")));
+            this.MSCBB_thongbao.FlatBorderColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.MSCBB_thongbao, "MSCBB_thongbao");
+            this.MSCBB_thongbao.MetroColor = System.Drawing.Color.White;
+            this.MSCBB_thongbao.Name = "MSCBB_thongbao";
+            this.MSCBB_thongbao.ShowCheckBox = true;
+            this.MSCBB_thongbao.ShowGroups = true;
+            this.MSCBB_thongbao.ThemeName = "Metro";
+            this.MSCBB_thongbao.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.MSCBB_thongbao.UseVisualStyle = true;
+            this.MSCBB_thongbao.VisualItemBorderColor = System.Drawing.Color.DimGray;
+            this.MSCBB_thongbao.VisualItemForeColor = System.Drawing.Color.Black;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Name = "label1";
+            // 
+            // CB_priority
+            // 
+            resources.ApplyResources(this.CB_priority, "CB_priority");
+            this.CB_priority.Name = "CB_priority";
+            this.CB_priority.UseVisualStyleBackColor = true;
             // 
             // BTN_thoat
             // 

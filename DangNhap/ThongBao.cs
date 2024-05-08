@@ -28,7 +28,7 @@ namespace DangNhap
         private void BTN_biensoan_Click(object sender, EventArgs e)
         {
             SoanThongBao stb = new SoanThongBao(currentAccount);
-            stb.Show();
+            stb.ShowDialog();
         }
         private Dictionary<string, object> AddParameter(string maBoPhan, string maNhom, string maNhanVien)
         {
