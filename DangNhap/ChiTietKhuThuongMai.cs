@@ -206,14 +206,31 @@ namespace DangNhap
 
         private void BTN_xoa_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa khu thương mại này?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
+            //Tiếng Viêtk
+            if (BTN_xoa.Text == "Xóa")
             {
-                string deleteMessage = KhuThuongMaiBLL.Instance.DeleteKhuThuongMai(maKhuThuongMaiHienTai);
-                MessageBox.Show(deleteMessage);
-                parent.DisplayGGC_khuthuongmai();
-                Close();
+                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa khu thương mại này?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    string deleteMessage = KhuThuongMaiBLL.Instance.DeleteKhuThuongMai(maKhuThuongMaiHienTai);
+                    MessageBox.Show(deleteMessage);
+                    parent.DisplayGGC_khuthuongmai();
+                    Close();
+                }
+            }
+            //Tiếng Anh
+            else
+            {
+                DialogResult result = MessageBox.Show("Are you sure to delete this mall?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    string deleteMessage = KhuThuongMaiBLL.Instance.DeleteKhuThuongMai(maKhuThuongMaiHienTai);
+                    MessageBox.Show(deleteMessage);
+                    parent.DisplayGGC_khuthuongmai();
+                    Close();
+                }
             }
         }
     }

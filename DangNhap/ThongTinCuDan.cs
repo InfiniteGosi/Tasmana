@@ -245,42 +245,87 @@ namespace DangNhap
 
         private void BTN_xoa_Click(object sender, EventArgs e)
         {
-            if (chuHo != null && nguoiDcUyQuyen == null && khachNganNgay == null)
+            //Tiếng Việt
+            if(BTN_xoa.Text == "Xóa")
             {
-                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa cư dân này?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
+                if (chuHo != null && nguoiDcUyQuyen == null && khachNganNgay == null)
                 {
-                    string deleteMessage = ChuHoBLL.Instance.DeleteChuHo(chuHo.MaCuDan, chuHo.BienSoXeDangKy);
-                    MessageBox.Show(deleteMessage);
-                    parent.DisplayGGC_chuho();
-                    Close();
+                    DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa cư dân này?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        string deleteMessage = ChuHoBLL.Instance.DeleteChuHo(chuHo.MaCuDan, chuHo.BienSoXeDangKy);
+                        MessageBox.Show(deleteMessage);
+                        parent.DisplayGGC_chuho();
+                        Close();
+                    }
+                }
+                else if (chuHo == null && nguoiDcUyQuyen != null && khachNganNgay == null)
+                {
+                    DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa cư dân này?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        string deleteMessage = NguoiDcUyQuyenChuHoBLL.Instance.DeleteNguoiUyQuyen(nguoiDcUyQuyen.MaCuDan, nguoiDcUyQuyen.BienSoXeDangKy);
+                        MessageBox.Show(deleteMessage);
+                        parent.DisplayGGC_uyquyen();
+                        Close();
+                    }
+                }
+                else if (chuHo == null && nguoiDcUyQuyen == null && khachNganNgay != null)
+                {
+                    DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa cư dân này?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        string deleteMessage = KhachNganNgayBLL.Instance.DeleteKhachNganNgay(khachNganNgay.MaCuDan, khachNganNgay.BienSoXeDangKy);
+                        MessageBox.Show(deleteMessage);
+                        parent.DisplayGGC_khachnganngay();
+                        Close();
+                    }
                 }
             }
-            else if (chuHo == null && nguoiDcUyQuyen != null && khachNganNgay == null)
+            //Tiếng Anh
+            else
             {
-                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa cư dân này?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
+                if (chuHo != null && nguoiDcUyQuyen == null && khachNganNgay == null)
                 {
-                    string deleteMessage = NguoiDcUyQuyenChuHoBLL.Instance.DeleteNguoiUyQuyen(nguoiDcUyQuyen.MaCuDan, nguoiDcUyQuyen.BienSoXeDangKy);
-                    MessageBox.Show(deleteMessage);
-                    parent.DisplayGGC_uyquyen();
-                    Close();
+                    DialogResult result = MessageBox.Show("Are you sure to delete this resident?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        string deleteMessage = ChuHoBLL.Instance.DeleteChuHo(chuHo.MaCuDan, chuHo.BienSoXeDangKy);
+                        MessageBox.Show(deleteMessage);
+                        parent.DisplayGGC_chuho();
+                        Close();
+                    }
+                }
+                else if (chuHo == null && nguoiDcUyQuyen != null && khachNganNgay == null)
+                {
+                    DialogResult result = MessageBox.Show("Are you sure to delete this resident?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        string deleteMessage = NguoiDcUyQuyenChuHoBLL.Instance.DeleteNguoiUyQuyen(nguoiDcUyQuyen.MaCuDan, nguoiDcUyQuyen.BienSoXeDangKy);
+                        MessageBox.Show(deleteMessage);
+                        parent.DisplayGGC_uyquyen();
+                        Close();
+                    }
+                }
+                else if (chuHo == null && nguoiDcUyQuyen == null && khachNganNgay != null)
+                {
+                    DialogResult result = MessageBox.Show("Are you sure to delete this resident?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        string deleteMessage = KhachNganNgayBLL.Instance.DeleteKhachNganNgay(khachNganNgay.MaCuDan, khachNganNgay.BienSoXeDangKy);
+                        MessageBox.Show(deleteMessage);
+                        parent.DisplayGGC_khachnganngay();
+                        Close();
+                    }
                 }
             }
-            else if (chuHo == null && nguoiDcUyQuyen == null && khachNganNgay != null)
-            {
-                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa cư dân này?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                if (result == DialogResult.Yes)
-                {
-                    string deleteMessage = KhachNganNgayBLL.Instance.DeleteKhachNganNgay(khachNganNgay.MaCuDan, khachNganNgay.BienSoXeDangKy);
-                    MessageBox.Show(deleteMessage);
-                    parent.DisplayGGC_khachnganngay();
-                    Close();
-                }
-            }
         }
         private object[] values_ch;
         private void InitializeValues_CH()
