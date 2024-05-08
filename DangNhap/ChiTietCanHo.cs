@@ -281,14 +281,31 @@ namespace DangNhap
 
         private void BTN_xoa_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa căn hộ này?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
+            //Tiếng Việt
+            if(BTN_xoa.Text == "Xóa")
             {
-                string deleteMessage = ApartmentBLL.Instance.DeleteApartment(maCanHoHienTai);
-                MessageBox.Show(deleteMessage);
-                Close();
+                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa căn hộ này?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    string deleteMessage = ApartmentBLL.Instance.DeleteApartment(maCanHoHienTai);
+                    MessageBox.Show(deleteMessage);
+                    Close();
+                }
             }
+            //Tiếng Anh
+            else
+            {
+                DialogResult result = MessageBox.Show("Are you sure to delete this apartment?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    string deleteMessage = ApartmentBLL.Instance.DeleteApartment(maCanHoHienTai);
+                    MessageBox.Show(deleteMessage);
+                    Close();
+                }
+            }
+
         }
     }
 }

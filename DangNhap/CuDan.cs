@@ -100,14 +100,31 @@ namespace DangNhap
                 }
 
                 // Thiết lập tiêu đề cho các cột
-                string[] headers = { "Mã cư dân", "Mã căn hộ", "Loại cư dân", "Họ tên", "Ngày sinh", "Mã định danh", 
-                    "Số điện thoại", "Email", "Quốc tịch", "Số thẻ tạm trú", 
-                    "Ngày nhân bàn giao căn hộ", "Ngày chuyển vào", "Ngày chuyển đi", 
-                    "Số điện nước ngày bàn giao", "Biển số xe đăng ký", "Mã cư dân bàn giao", 
-                    "Mã cư dân lưu trú cùng", "Tình trạng công nợ", "Dữ liệu thú nuôi"};
-                for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                //Tiếng Việt
+                if (LB_loai.Text == "Chọn loại cư dân")
                 {
-                    columns[i].HeaderText = headers[i];
+                    string[] headers = { "Mã cư dân", "Mã căn hộ", "Loại cư dân", "Họ tên", "Ngày sinh", "Mã định danh",
+                    "Số điện thoại", "Email", "Quốc tịch", "Số thẻ tạm trú",
+                    "Ngày nhân bàn giao căn hộ", "Ngày chuyển vào", "Ngày chuyển đi",
+                    "Số điện nước ngày bàn giao", "Biển số xe đăng ký", "Mã cư dân bàn giao",
+                    "Mã cư dân lưu trú cùng", "Tình trạng công nợ", "Dữ liệu thú nuôi"};
+                    for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                    {
+                        columns[i].HeaderText = headers[i];
+                    }
+                }
+                //Tiếng Anh
+                else
+                {
+                    string[] headers = { "Resident ID", "Apartment ID", "Resident type", "Name", "Birth", "Crendential number",
+                        "Phone", "Email", "Nationality", "Temp residency num",
+                        "Date of releasing", "Date of moving in", "Date of moving out",
+                        "Water and electricity number", "Driver plate", "Handover resident ID",
+                        "Relative resident ID", "Debt status", "Pet"};
+                    for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                    {
+                        columns[i].HeaderText = headers[i];
+                    }
                 }
             }
             GridDynamicFilter dynamicFilter = new GridDynamicFilter();
@@ -159,13 +176,29 @@ namespace DangNhap
                 }
 
                 //Thiết lập tiêu đề cho các cột
-                string[] headers = { "Mã cư dân", "Mã căn hộ", "Loại cư dân", "Họ tên", "Ngày sinh", "Mã định danh",
+                //Tiếng Việt
+                if (LB_loai.Text == "Chọn loại cư dân")
+                {
+                    string[] headers = { "Mã cư dân", "Mã căn hộ", "Loại cư dân", "Họ tên", "Ngày sinh", "Mã định danh",
                     "Số điện thoại", "Email", "Quốc tịch", "Số thẻ tạm trú",
                     "Ngày chuyển vào", "Ngày chuyển đi", "Biển số xe đăng ký",
                     "Mã cư dân lưu trú cùng", "Tình trạng công nợ", "Dữ liệu thú nuôi"};
-                for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                    for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                    {
+                        columns[i].HeaderText = headers[i];
+                    }
+                }
+                //Tiếng Anh
+                else
                 {
-                    columns[i].HeaderText = headers[i];
+                    string[] headers = { "Resident ID", "Apartment ID", "Resident type", "Name", "Birth", "Crendential number",
+                        "Phone", "Email", "Nationality", "Temp residency num",
+                        "Date of moving in", "Date of moving out", "Driver plate",
+                        "Relative resident ID", "Debt status", "Pet"};
+                    for (int i = 0; i < columns.Count && i < headers.Length; i++)
+                    {
+                        columns[i].HeaderText = headers[i];
+                    }
                 }
             }
             GridDynamicFilter dynamicFilter = new GridDynamicFilter();
@@ -361,6 +394,7 @@ namespace DangNhap
                     string loaiCuDan = record.GetValue("LoaiCuDan").ToString();
                     string maCuDan = record.GetValue("MaCuDan").ToString();
                     string maCanHo = record.GetValue("MaCanHo").ToString();
+                    //Tiếng Việt
                     switch (loaiCuDan)
                     {
                         case "Chủ hộ":
@@ -377,7 +411,7 @@ namespace DangNhap
                             ttcd = new ThongTinCuDan(this, KhachNganNgayBLL.Instance.GetKhachNganNgayByMaCuDan(maCuDan, maCanHo));
                             ttcd.ShowDialog();
                             break;
-                    }
+                    }             
                 }
             }
         }

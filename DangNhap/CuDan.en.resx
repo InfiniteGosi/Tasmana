@@ -171,6 +171,21 @@
   <data name="GGC_cudan.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 9pt</value>
   </data>
+  <data name="CBB_choice.Items" xml:space="preserve">
+    <value>Apartment Owners</value>
+  </data>
+  <data name="CBB_choice.Items1" xml:space="preserve">
+    <value>Handed over</value>
+  </data>
+  <data name="CBB_choice.Items2" xml:space="preserve">
+    <value>Employees of the apartment owner / Tenants / Walk-in guests</value>
+  </data>
+  <data name="CBB_choice.Items3" xml:space="preserve">
+    <value>Mall tenants</value>
+  </data>
+  <data name="CBB_choice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>528, 30</value>
+  </data>
   <data name="LB_loai.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 22</value>
   </data>
