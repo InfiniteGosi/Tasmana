@@ -19,7 +19,7 @@ namespace DangNhap
         // Khởi tạo các giá trị, biến
         private int appTime;
         private bool isClosed = true;
-        private Account currentAccount;
+        private readonly Account currentAccount;
         public TrangHienThi(Account currentAccount)
         {
             InitializeComponent();
@@ -250,6 +250,7 @@ namespace DangNhap
         {
             NTFIcon_ThongBaoCV.Visible = true;
             NTFIcon_ThongBaoCV.ShowBalloonTip(Constraint.NotifyTimeOut, title, content, ToolTipIcon.Info);
+            NTFIcon_ThongBaoCV.Dispose();
         }
 
         private void CountJobState()

@@ -50,5 +50,13 @@ namespace BLL
             DataTable dt = ResidentDAO.Instance.CheckMaCuDan(maCuDan);
             return (bool)dt.Rows[0]["exists_flag"];
         }
+        public bool AddCuDan(Dictionary<string, object> parameters)
+        {
+            return ResidentDAO.Instance.AddCuDan(parameters);
+        }
+        public bool DeleteCuDan(string maCuDan)
+        {
+            return ResidentDAO.Instance.DeleteCuDan(maCuDan);
+        }
     }
 }

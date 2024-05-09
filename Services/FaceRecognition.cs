@@ -18,19 +18,19 @@ namespace Services
 {
     public class FaceRecognition
     {
-        private double distance = 1E+19;
+        private readonly double distance = 1E+19;
 
-        private CascadeClassifier CascadeClassifier = new CascadeClassifier(Environment.CurrentDirectory + "/Haarcascade/haarcascade_frontalface_alt.xml");
+        private readonly CascadeClassifier CascadeClassifier = new CascadeClassifier(Environment.CurrentDirectory + "/Haarcascade/haarcascade_frontalface_alt.xml");
 
         private Image<Bgr, byte> Frame = null;
 
         private Capture camera;
 
-        private Mat mat = new Mat();
+        private readonly Mat mat = new Mat();
 
-        private List<Image<Gray, byte>> trainedFaces = new List<Image<Gray, byte>>();
+        private readonly List<Image<Gray, byte>> trainedFaces = new List<Image<Gray, byte>>();
 
-        private List<int> PersonLabs = new List<int>();
+        private readonly List<int> PersonLabs = new List<int>();
 
         private bool isEnable_SaveImage = false;
 
@@ -44,7 +44,7 @@ namespace Services
 
         public bool isTrained = false;
 
-        private List<string> Names = new List<string>();
+        private readonly List<string> Names = new List<string>();
 
         private EigenFaceRecognizer eigenFaceRecognizer;
 

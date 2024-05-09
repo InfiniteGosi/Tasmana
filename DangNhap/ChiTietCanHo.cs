@@ -203,7 +203,10 @@ namespace DangNhap
                 {
                     TXB_chuho.Text = chuHo.MaCuDan + "_" + chuHo.HoTen;
                 }
-                string tenKhachDangThue = KhachNganNgayBLL.Instance.GetNameByMaCuDan(canHoHienTai.LichSuGiaoDich.MaKhachDangThue);
+                string tenKhachDangThue = "";
+                if (canHoHienTai.LichSuGiaoDich != null)
+                    tenKhachDangThue = KhachNganNgayBLL.Instance.GetNameByMaCuDan(canHoHienTai.LichSuGiaoDich.MaKhachDangThue);
+                
                 if (!string.IsNullOrEmpty(tenKhachDangThue))
                     TXB_khachdangthue.Text = canHoHienTai.LichSuGiaoDich.MaKhachDangThue + "_" + tenKhachDangThue;
                 NUD_vitritang.Value = canHoHienTai.ViTriTang;

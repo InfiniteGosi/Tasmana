@@ -408,12 +408,6 @@ INSERT INTO PhongBan VALUES('XD', N'Xây Dựng', '02645816328', '@BCMP_XD@gmail
 INSERT INTO Nhom VALUES('VSN01', 'VS-002', 'VS')
 INSERT INTO Nhom VALUES('VSN02', 'VS-002', 'VS')
 
---insert into CEO values('GD-001')
-
-SELECT * FROM PhongBan
-SELECT * FROM Nhom
-
-
 -- Insert thông tin tài khoản
 INSERT INTO NhanVien VALUES('GD-001', 'jd@gmail.com', 'Ho', 'Khang', '111111111', '1/1/2002', 1, 'TP.HCM', '123456', 'Full-time', N'Độc thân', '1111111', 1, '2024-01-01', '2025-12-31', 'TP.HCM', N'Địa chỉ thường trú GD-001', N'Tốt', null, null)
 INSERT INTO NhanVien VALUES('VS-002', 'VS002@gmail.com', 'Vu', 'Quang', '1321312', '1/2/2004', 1, 'TP.HCM', '1234576', 'Part-time', N'Độc thân', '1111211', 1, '2024-01-01', '2025-12-31', 'TP.HCM', 'Chua co', N'Tốt', 'VS','VSN02')
@@ -441,7 +435,12 @@ INSERT INTO TaiKhoan VALUES('VS-003.AN.0123456669', '123', 'VS-003', 0, 0)
 SELECT * FROM TaiKhoan
 SELECT * FROM NhanVien
 
+insert into CEO values('GD-001')
+
+SELECT * FROM PhongBan
+SELECT * FROM Nhom
 -- Insert dữ liệu mẫu cư dân
+
 INSERT INTO CuDan VALUES('CD-001','Nguyen Thi An','2024-01-01','195052003','0987654331','nguyenthian@example.com', '9126543','2024-01-01','2022-01-01', 35, 0, 'dog', 'vietnam', null);
 INSERT INTO CuDan VALUES('CD-002','Tran Van Binh','1980-09-10','198092035','0124456789','tranvanbinh@example.com', '1234567','2024-01-02','2022-01-02', 35, 0, 'dog', 'vietnam', null);
 INSERT INTO CuDan VALUES('CD-003','Le Thi Mai','1999-12-25','139312253','0365947412','lethimai@example.com', '9871235','2024-01-03','2022-01-03', 35, 0, 'dog', 'vietnam', null);
@@ -468,35 +467,322 @@ INSERT INTO CuDan VALUES('CD-023','Le Thi Kimm','1987-03-10','198703103','536598
 INSERT INTO CuDan VALUES('CD-024','Pham Van Sonn','1997-10-15','199710153','0941234567','phamvanson2@example.com', '1237893','2024-01-15','2022-01-15', 13, 0, 'cat', 'china', null);
 select * from CuDan
 
-
 -- Insert Dữ liệu thử của căn hộ
 INSERT INTO CanHo VALUES ('WPHA', 100.5, 100, 36, 5, 2, NULL, 2000000, 2, N'Chưa bán', 50,'CD-001');
 INSERT INTO CanHo VALUES ('WPHB', 90.2, 100, 36, 5, 1, NULL, 1500000, 1, N'Đã bán', 75, 'CD-002');
 INSERT INTO CanHo VALUES ('WPHC', 110.8, 100, 37, 5, 2, NULL, 2500000, 2, N'Đã bán', 50, 'CD-003');
 INSERT INTO CanHo VALUES ('WPHD', 80.0, 100, 37, 5, 1, NULL, 200000, 1, N'Đã bán', 25, 'CD-004');
-INSERT INTO CanHo VALUES ('W3501', 80.0, 100, 35, 5, 1, NULL, 100000, 1, N'Chưa bán', 10, 'CD-005');
-INSERT INTO CanHo VALUES ('W3502', 80.0, 100, 35, 5, 1, NULL, 1800000, 1, N'Chưa bàn giao - Cư dân đang ở', 15, 'CD-006');
-INSERT INTO CanHo VALUES ('W3503', 80.0, 100, 35, 5, 1, NULL, 310000, 1, N'Đã bàn giao - trống', 0, NULL);
-INSERT INTO CanHo VALUES ('W3504', 80.0, 100, 35, 5, 1, NULL, 1800000, 1, N'Đã bàn giao - trống', 0, NULL);
+
+INSERT INTO CanHo VALUES ('W3501', 80.0, 100, 35, 3, 1, NULL, 100000, 1, N'Chưa bán', 10, 'CD-005');
+INSERT INTO CanHo VALUES ('W3502', 80.0, 100, 35, 3, 1, NULL, 1800000, 1, N'Chưa bàn giao - Cư dân đang ở', 15, 'CD-006');
+INSERT INTO CanHo VALUES ('W3503', 80.0, 100, 35, 1, 1, NULL, 310000, 1, N'Đã bàn giao - trống', 0, NULL);
+INSERT INTO CanHo VALUES ('W3504', 80.0, 100, 35, 2, 1, NULL, 1800000, 1, N'Đã bàn giao - trống', 0, NULL);
 INSERT INTO CanHo VALUES ('W3505', 110, 100, 35, 2, 3, NULL, 200, 3, N'Đã bàn giao - trống', 15, NULL);
 INSERT INTO CanHo VALUES ('W3506', 75, 100, 35, 1, 1, NULL, 130, 3, N'Đã bàn giao - trống', 15, NULL);
 INSERT INTO CanHo VALUES ('W3507', 100, 100, 35, 3, 2, NULL, 170, 3, N'Đã bàn giao - trống', 15, NULL);
 INSERT INTO CanHo VALUES ('W3508', 90, 100, 35, 3, 1, NULL, 160, 3, N'Đã bàn giao - trống', 15, NULL);
 INSERT INTO CanHo VALUES ('W3509', 80, 100, 35, 1, 2, NULL, 140, 3, N'Đã bàn giao - trống', 15, NULL);
-INSERT INTO CanHo VALUES ('W3510', 80.0, 100, 35, 5, 1, NULL, 18000000, 1, N'Chưa bàn giao - Cư dân đang ở', 25, 'CD-009');
+INSERT INTO CanHo VALUES ('W3510', 80.0, 100, 35, 1, 1, NULL, 18000000, 1, N'Chưa bàn giao - Cư dân đang ở', 25, 'CD-009');
+INSERT INTO CanHo VALUES ('W3511', 80.0, 100, 35, 3, 1, NULL, 150000, 1, N'Chưa bán', 0, NULL);
 
-INSERT INTO CanHo VALUES ('W3401', 60, 34, 3, 2, 1, NULL, 100, 3, N'Đã bàn giao - trống', 15, NULL);
-INSERT INTO CanHo VALUES ('W3402', 110, 34, 3, 2, 1, NULL, 150, 3, N'Đã bàn giao - trống', 15, NULL);
-INSERT INTO CanHo VALUES ('W3403', 130, 34, 1, 3, 1, NULL, 180, 3, N'Đã bàn giao - trống', 15, NULL);
-INSERT INTO CanHo VALUES ('W3404', 140, 34, 2, 2, 1, NULL, 190, 3, N'Đã bàn giao - trống', 15, NULL);
-INSERT INTO CanHo VALUES ('W3405', 90, 34, 2, 3, 1, NULL, 200, 3, N'Đã bàn giao - trống', 15, NULL);
-INSERT INTO CanHo VALUES ('W3406', 70, 34, 1, 1, 1, NULL, 130, 3, N'Đã bàn giao - trống', 15, NULL);
-INSERT INTO CanHo VALUES ('W3407', 80, 34, 3, 2, 1, NULL, 170, 3, N'Đã bàn giao - trống', 15, NULL);
-INSERT INTO CanHo VALUES ('W3408', 100, 34, 3, 1, 1, NULL, 160, 3, N'Đã bàn giao - trống', 15, NULL);
-INSERT INTO CanHo VALUES ('W3409', 150, 34, 1, 2, 1, NULL, 140, 3, N'Đã bàn giao - trống', 15, NULL);
-INSERT INTO CanHo VALUES ('W3410', 120, 34, 1, 3, 1, NULL, 195, 3, N'Đã bàn giao - trống', 15, NULL);
-INSERT INTO CanHo VALUES ('W3411', 80, 34, 3, 2, 1, NULL, 155, 3, N'Đã bàn giao - trống', 15, NULL);
+INSERT INTO CanHo VALUES ('W3401', 60, 100, 34, 3, 1, NULL, 100, 3, N'Đã bàn giao - trống', 15, NULL);
+INSERT INTO CanHo VALUES ('W3402', 110, 100, 34, 3, 1, NULL, 150, 3, N'Đã bàn giao - trống', 15, NULL);
+INSERT INTO CanHo VALUES ('W3403', 130, 100, 34, 1, 1, NULL, 180, 3, N'Đã bàn giao - trống', 15, NULL);
+INSERT INTO CanHo VALUES ('W3404', 140, 100, 34, 2, 1, NULL, 190, 3, N'Đã bàn giao - trống', 15, NULL);
+INSERT INTO CanHo VALUES ('W3405', 90, 100, 34, 2, 1, NULL, 200, 3, N'Đã bàn giao - trống', 15, NULL);
+INSERT INTO CanHo VALUES ('W3406', 70, 100, 34, 1,  1, NULL, 130, 3, N'Đã bàn giao - trống', 15, NULL);
+INSERT INTO CanHo VALUES ('W3407', 80, 100, 34, 3, 1, NULL, 170, 3, N'Đã bàn giao - trống', 15, NULL);
+INSERT INTO CanHo VALUES ('W3408', 100, 100, 34, 3, 1, NULL, 160, 3, N'Đã bàn giao - trống', 15, NULL);
+INSERT INTO CanHo VALUES ('W3409', 150, 100, 34, 1, 1, NULL, 140, 3, N'Đã bàn giao - trống', 15, NULL);
+INSERT INTO CanHo VALUES ('W3410', 120, 100, 34, 1, 1, NULL, 195, 3, N'Đã bàn giao - trống', 15, NULL);
+INSERT INTO CanHo VALUES ('W3411', 80, 100, 34, 3, 1, NULL, 155, 3, N'Đã bàn giao - trống', 15, NULL);
+
+-- Insert statements for W3301 to W3311 with specified values
+INSERT INTO CanHo VALUES ('W3301', 60, 100, 33, 3, 3, NULL, 100, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3302', 110, 100, 33, 3, 3, NULL, 150, 2, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3303', 130, 100, 33, 1, 1, NULL, 180, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3304', 140, 100, 33, 2, 2, NULL, 190, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3305', 90, 100, 33, 2, 2, NULL, 200, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3306', 70, 100, 33, 1, 1, NULL, 130, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3307', 80, 100, 33, 3, 3, NULL, 170, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3308', 100, 100, 33, 3, 3, NULL, 160, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3309', 150, 100, 33, 1, 1, NULL, 140, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3310', 120, 100, 33, 1, 1, NULL, 195, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3311', 80, 100, 33, 3, 3, NULL, 155, 3, N'Chưa bán', 0, NULL);
+
+-- Insert statements for W3201 to W3211 with random second values between 60 and 150, constant third value of 32, and specified
+INSERT INTO CanHo VALUES ('W3201', 60, 100, 32, 3, 3, NULL, 100, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3202', 110, 100, 32, 3, 3, NULL, 150, 2, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3203', 130, 100, 32, 1, 1, NULL, 180, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3204', 140, 100, 32, 2, 2, NULL, 190, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3205', 90, 100, 32, 2, 2, NULL, 200, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3206', 70, 100, 32, 1, 1, NULL, 130, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3207', 80, 100, 32, 3, 3, NULL, 170, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3208', 100, 100, 32, 3, 3, NULL, 160, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3209', 150, 100, 32, 1, 1, NULL, 140, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3210', 120, 100, 32, 1, 1, NULL, 195, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3211', 80, 100, 32, 3, 3, NULL, 155, 3, N'Chưa bán', 0, NULL);
+
+-- Insert statements for W3101 to W3111 with random second values between 60 and 150, constant third value of 32, and specified
+INSERT INTO CanHo VALUES ('W3101', 60, 100, 31, 3, 3, NULL, 100, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3102', 110, 100, 31, 3, 3, NULL, 150, 2, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3103', 130, 100, 31, 1, 1, NULL, 180, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3104', 140, 100, 31, 2, 2, NULL, 190, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3105', 90, 100, 31, 2, 2, NULL, 200, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3106', 70, 100, 31, 1, 1, NULL, 130, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3107', 80, 100, 31, 3, 3, NULL, 170, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3108', 100, 100, 31, 3, 3, NULL, 160, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3109', 150, 100, 31, 1, 1, NULL, 140, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3110', 120, 100, 31, 1, 1, NULL, 195, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3111', 80, 100, 31, 3, 3, NULL, 155, 3, N'Chưa bán', 0, NULL);
+
+-- W30
+INSERT INTO CanHo VALUES ('W3001', 60, 100, 30, 3, 3, NULL, 100, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3002', 110, 100, 30, 3, 3, NULL, 150, 2, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3003', 130, 100, 30, 1, 1, NULL, 180, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3004', 140, 100, 30, 2, 2, NULL, 190, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3005', 90, 100, 30, 2, 2, NULL, 200, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3006', 70, 100, 30, 1, 1, NULL, 130, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3007', 80, 100, 30, 3, 3, NULL, 170, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3008', 100, 100, 30, 3, 3, NULL, 160, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3009', 150, 100, 30, 1, 1, NULL, 140, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3010', 120, 100, 30, 1, 1, NULL, 195, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W3011', 80, 100, 30, 3, 3, NULL, 155, 3, N'Chưa bán', 0, NULL);
+
+-- W29
+INSERT INTO CanHo VALUES ('W2901', 60, 100, 29, 3, 3, NULL, 100, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2902', 110, 100, 29, 3, 3, NULL, 150, 2, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2903', 130, 100, 29, 1, 1, NULL, 180, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2904', 140, 100, 29, 2, 2, NULL, 190, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2905', 90, 100, 29, 2, 2, NULL, 200, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2906', 70, 100, 29, 1, 1, NULL, 130, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2907', 80, 100, 29, 3, 3, NULL, 170, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2908', 100, 100, 29, 3, 3, NULL, 160, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2909', 150, 100, 29, 1, 1, NULL, 140, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2910', 120, 100, 29, 1, 1, NULL, 195, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2911', 80, 100, 29, 3, 3, NULL, 155, 3, N'Chưa bán', 0, NULL);
+
+-- W28
+INSERT INTO CanHo VALUES ('W2801', 60, 100, 28, 3, 3, NULL, 100, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2802', 110, 100, 28, 3, 3, NULL, 150, 2, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2803', 130, 100, 28, 1, 1, NULL, 180, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2804', 140, 100, 28, 2, 2, NULL, 190, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2805', 90, 100, 28, 2, 2, NULL, 200, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2806', 70, 100, 28, 1, 1, NULL, 130, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2807', 80, 100, 28, 3, 3, NULL, 170, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2808', 100, 100, 28, 3, 3, NULL, 160, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2809', 150, 100, 28, 1, 1, NULL, 140, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2810', 120, 100, 28, 1, 1, NULL, 195, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2811', 80, 100, 28, 3, 3, NULL, 155, 3, N'Chưa bán', 0, NULL);
+
+-- W27
+INSERT INTO CanHo VALUES ('W2701', 60, 100, 27, 3, 3, NULL, 100, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2702', 110, 100, 27, 3, 3, NULL, 150, 2, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2703', 130, 100, 27, 1, 1, NULL, 180, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2704', 140, 100, 27, 2, 2, NULL, 190, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2705', 90, 100, 27, 2, 2, NULL, 200, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2706', 70, 100, 27, 1, 1, NULL, 130, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2707', 80, 100, 27, 3, 3, NULL, 170, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2708', 100, 100, 27, 3, 3, NULL, 160, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2709', 150, 100, 27, 1, 1, NULL, 140, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2710', 120, 100, 27, 1, 1, NULL, 195, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2711', 80, 100, 27, 3, 3, NULL, 155, 3, N'Chưa bán', 0, NULL);
+
+-- W26
+INSERT INTO CanHo VALUES ('W2601', 60, 100, 26, 3, 3, NULL, 100, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2602', 110, 100, 26, 3, 3, NULL, 150, 2, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2603', 130, 100, 26, 1, 1, NULL, 180, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2604', 140, 100, 26, 2, 2, NULL, 190, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2605', 90, 100, 26, 2, 2, NULL, 200, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2606', 70, 100, 26, 1, 1, NULL, 130, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2607', 80, 100, 26, 3, 3, NULL, 170, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2608', 100, 100, 26, 3, 3, NULL, 160, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2609', 150, 100, 26, 1, 1, NULL, 140, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2610', 120, 100, 26, 1, 1, NULL, 195, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2611', 80, 100, 26, 3, 3, NULL, 155, 3, N'Chưa bán', 0, NULL);
+
+-- W25
+INSERT INTO CanHo VALUES ('W2501', 60, 100, 25, 3, 3, NULL, 100, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2502', 110, 100, 25, 3, 3, NULL, 150, 2, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2503', 130, 100, 25, 1, 1, NULL, 180, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2504', 140, 100, 25, 2, 2, NULL, 190, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2505', 90, 100, 25, 2, 2, NULL, 200, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2506', 70, 100, 25, 1, 1, NULL, 130, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2507', 80, 100, 25, 3, 3, NULL, 170, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2508', 100, 100, 25, 3, 3, NULL, 160, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2509', 150, 100, 25, 1, 1, NULL, 140, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2510', 120, 100, 25, 1, 1, NULL, 195, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2511', 80, 100, 25, 3, 3, NULL, 155, 3, N'Chưa bán', 0, NULL);
+
+-- W24
+INSERT INTO CanHo VALUES ('W2401', 60, 100, 24, 3, 3, NULL, 100, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2402', 110, 100, 24, 3, 3, NULL, 150, 2, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2403', 130, 100, 24, 1, 1, NULL, 180, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2404', 140, 100, 24, 2, 2, NULL, 190, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2405', 90, 100, 24, 2, 2, NULL, 200, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2406', 70, 100, 24, 1, 1, NULL, 130, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2407', 80, 100, 24, 3, 3, NULL, 170, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2408', 100, 100, 24, 3, 3, NULL, 160, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2409', 150, 100, 24, 1, 1, NULL, 140, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2410', 120, 100, 24, 1, 1, NULL, 195, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2411', 80, 100, 24, 3, 3, NULL, 155, 3, N'Chưa bán', 0, NULL);
+
+-- W23
+INSERT INTO CanHo VALUES ('W2301', 60, 100, 23, 3, 3, NULL, 100, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2302', 110, 100, 23, 3, 3, NULL, 150, 2, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2303', 130, 100, 23, 1, 1, NULL, 180, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2304', 140, 100, 23, 2, 2, NULL, 190, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2305', 90, 100, 23, 2, 2, NULL, 200, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2306', 70, 100, 23, 1, 1, NULL, 130, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2307', 80, 100, 23, 3, 3, NULL, 170, 3, N'Chưa bán', 0, NULL);
+
+-- W22
+INSERT INTO CanHo VALUES ('W2201', 60, 100, 22, 3, 3, NULL, 100, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2202', 110, 100, 22, 3, 3, NULL, 150, 2, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2203', 130, 100, 22, 1, 1, NULL, 180, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2204', 140, 100, 22, 2, 2, NULL, 190, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2205', 90, 100, 22, 2, 2, NULL, 200, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2206', 70, 100, 22, 1, 1, NULL, 130, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2207', 80, 100, 22, 3, 3, NULL, 170, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2208', 100, 100, 22, 3, 3, NULL, 160, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2209', 150, 100, 22, 2, 1, NULL, 140, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2210', 120, 100, 22, 2, 1, NULL, 195, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2211', 80, 100, 22, 3, 3, NULL, 155, 3, N'Chưa bán', 0, NULL);
+
+-- W21
+INSERT INTO CanHo VALUES ('W2101', 60, 100, 21, 3, 3, NULL, 100, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2102', 110, 100, 21, 3, 3, NULL, 150, 2, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2103', 130, 100, 21, 1, 1, NULL, 180, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2104', 140, 100, 21, 2, 2, NULL, 190, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2105', 90, 100, 21, 2, 2, NULL, 200, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2106', 70, 100, 21, 1, 1, NULL, 130, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2107', 80, 100, 21, 3, 3, NULL, 170, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2108', 100, 100, 21, 3, 3, NULL, 160, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2109', 150, 100, 21, 2, 1, NULL, 140, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2110', 120, 100, 21, 2, 1, NULL, 195, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2111', 80, 100, 21, 3, 3, NULL, 155, 3, N'Chưa bán', 0, NULL);
+
+-- W20
+INSERT INTO CanHo VALUES ('W2001', 60, 100, 20, 3, 3, NULL, 100, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2002', 110, 100, 20, 3, 3, NULL, 150, 2, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2003', 130, 100, 20, 1, 1, NULL, 180, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2004', 140, 100, 20, 2, 2, NULL, 190, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2005', 90, 100, 20, 2, 2, NULL, 200, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2006', 70, 100, 20, 1, 1, NULL, 130, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2007', 80, 100, 20, 3, 3, NULL, 170, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2008', 100, 100, 20, 3, 3, NULL, 160, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2009', 150, 100, 20, 2, 1, NULL, 140, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2010', 120, 100, 20, 2, 1, NULL, 195, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W2011', 80, 100, 20, 3, 3, NULL, 155, 3, N'Chưa bán', 0, NULL);
+
+-- W19
+INSERT INTO CanHo VALUES ('W1901', 60, 100, 19, 3, 3, NULL, 100, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1902', 110, 100, 19, 3, 3, NULL, 150, 2, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1903', 130, 100, 19, 1, 1, NULL, 180, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1904', 140, 100, 19, 2, 2, NULL, 190, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1905', 90, 100, 19, 2, 2, NULL, 200, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1906', 70, 100, 19, 1, 1, NULL, 130, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1907', 80, 100, 19, 3, 3, NULL, 170, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1908', 100, 100, 19, 3, 3, NULL, 160, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1909', 150, 100, 19, 2, 1, NULL, 140, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1910', 120, 100, 19, 2, 1, NULL, 195, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1911', 80, 100, 19, 3, 3, NULL, 155, 3, N'Chưa bán', 0, NULL);
+
+-- W18
+INSERT INTO CanHo VALUES ('W1801', 60, 100, 18, 3, 3, NULL, 100, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1802', 110, 100, 18, 3, 3, NULL, 150, 2, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1803', 130, 100, 18, 1, 1, NULL, 180, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1804', 140, 100, 18, 2, 2, NULL, 190, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1805', 90, 100, 18, 2, 2, NULL, 200, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1806', 70, 100, 18, 1, 1, NULL, 130, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1807', 80, 100, 18, 3, 3, NULL, 170, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1808', 100, 100, 18, 3, 3, NULL, 160, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1809', 150, 100, 18, 2, 1, NULL, 140, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1810', 120, 100, 18, 2, 1, NULL, 195, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1811', 80, 100, 18, 3, 3, NULL, 155, 3, N'Chưa bán', 0, NULL);
+
+-- W17
+INSERT INTO CanHo VALUES ('W1701', 60, 100, 17, 3, 3, NULL, 100, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1702', 110, 100, 17, 3, 3, NULL, 150, 2, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1703', 130, 100, 17, 1, 1, NULL, 180, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1704', 140, 100, 17, 2, 2, NULL, 190, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1705', 90, 100, 17, 2, 2, NULL, 200, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1706', 70, 100, 17, 1, 1, NULL, 130, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1707', 80, 100, 17, 3, 3, NULL, 170, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1708', 100, 100, 17, 3, 3, NULL, 160, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1709', 150, 100, 17, 2, 1, NULL, 140, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1710', 120, 100, 17, 2, 1, NULL, 195, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1711', 80, 100, 17, 3, 3, NULL, 155, 3, N'Chưa bán', 0, NULL);
+
+-- W16
+INSERT INTO CanHo VALUES ('W1601', 60, 100, 16, 3, 3, NULL, 100, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1602', 110, 100, 16, 3, 3, NULL, 150, 2, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1603', 130, 100, 16, 1, 1, NULL, 180, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1604', 140, 100, 16, 2, 2, NULL, 190, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1605', 90, 100, 16, 2, 2, NULL, 200, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1606', 70, 100, 16, 1, 1, NULL, 130, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1607', 80, 100, 16, 3, 3, NULL, 170, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1608', 100, 100, 16, 3, 3, NULL, 160, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1609', 150, 100, 16, 2, 1, NULL, 140, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1610', 120, 100, 16, 2, 1, NULL, 195, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1611', 80, 100, 16, 3, 3, NULL, 155, 3, N'Chưa bán', 0, NULL);
+
+-- W15
+INSERT INTO CanHo VALUES ('W1501', 60, 100, 15, 3, 3, NULL, 100, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1502', 110, 100, 15, 3, 3, NULL, 150, 2, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1503', 130, 100, 15, 1, 1, NULL, 180, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1504', 140, 100, 15, 2, 2, NULL, 190, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1505', 90, 100, 15, 2, 2, NULL, 200, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1506', 70, 100, 15, 1, 1, NULL, 130, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1507', 80, 100, 15, 3, 3, NULL, 170, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1508', 100, 100, 15, 3, 3, NULL, 160, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1509', 150, 100, 15, 2, 1, NULL, 140, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1510', 120, 100, 15, 2, 1, NULL, 195, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1511', 80, 100, 15, 3, 3, NULL, 155, 3, N'Chưa bán', 0, NULL);
+
+-- W14
+INSERT INTO CanHo VALUES ('W1401', 60, 100, 14, 3, 3, NULL, 100, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1402', 110, 100, 14, 3, 3, NULL, 150, 2, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1403', 130, 100, 14, 1, 1, NULL, 180, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1404', 140, 100, 14, 2, 2, NULL, 190, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1405', 90, 100, 14, 2, 2, NULL, 200, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1406', 70, 100, 14, 1, 1, NULL, 130, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1407', 80, 100, 14, 3, 3, NULL, 170, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1408', 100, 100, 14, 3, 3, NULL, 160, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1409', 150, 100, 14, 2, 1, NULL, 140, 1, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1410', 120, 100, 14, 2, 1, NULL, 195, 3, N'Chưa bán', 0, NULL);
+INSERT INTO CanHo VALUES ('W1411', 80, 100, 14, 3, 3, NULL, 155, 3, N'Chưa bán', 0, NULL);
+
 select * from CanHo
+
+INSERT INTO ChuHo VALUES('CD-001', 'WPHA', N'Chủ hộ', N'Nguyen Dan', '1980-05-10', '123426739', '0123456489', 'test@example.com', N'Việt Nam', '1234367890', '2023-01-01', '2023-01-01', NULL, 50.5, '51J9', 'CD-016', NULL, 20000000, N'Mèo');
+INSERT INTO ChuHo VALUES('CD-002', 'WPHB', N'Chủ hộ', N'Hoang Thi Thanh', '1980-05-10', '223456739', '0123156789', 'xoadi@example.com', N'Việt Nam', '2234567890', '2023-01-01', '2023-01-01', NULL, 50.5, '57G2', 'CD-016', NULL, 20000000, N'Mèo');
+INSERT INTO ChuHo VALUES('CD-003', 'WPHC', N'Chủ hộ', N'Nguyen An', '1980-05-10', '123436789', '0123456719', 'annguyen@example.com', N'Việt Nam', '3234567890', '2023-01-01', '2023-01-01', NULL, 50.5, '62G4', 'CD-016', NULL, 20000000, N'Mèo');
+INSERT INTO ChuHo VALUES('CD-004', 'WPHD', N'Chủ hộ', N'Thi Thao', '1980-05-10', '123256789', '0123456589', 'nguyenthanh@example.com', N'Việt Nam', '4234567890', '2023-01-01', '2023-01-01', NULL, 50.5, '72L3', 'CD-016', NULL, 20000000, N'Mèo');
+INSERT INTO ChuHo VALUES('CD-005', 'W3501', N'Chủ hộ', N'Hoang Thi Thu', '1980-05-10', '124456789', '0123455789', 'nguyenvana@example.com', N'Việt Nam', '5234567890', '2023-01-01', '2023-01-01', NULL, 50.5, '93M2', 'CD-016', NULL, 20000000, N'Mèo');
+INSERT INTO ChuHo VALUES('CD-006', 'W3502', N'Chủ hộ', N'Vu Duc Trung', '1975-08-20', '987654321', '0987654321', 'phamthib@example.com', N'Việt Nam', '0987654321', '2023-02-01', '2023-02-01', NULL, 45.3, '81L8', 'CD-016', NULL, 0, N'Cún con');
+INSERT INTO ChuHo VALUES('CD-009', 'W3510', N'Chủ hộ', N'Le Van Huy', '1990-03-15', '246810235', '1369852471', 'tranan@example.com', N'Việt Nam', '0369252471', '2023-03-01', '2023-03-01', NULL, 60.2, NULL, 'CD-015', 'CD-017', 150000, N'Cún con');
+select * from ChuHo
+
+
+
+-- Do not delete
+INSERT INTO NguoiDcUyQuyenChuHo VALUES('CD-007', 'W3504', N'Người được ủy quyền của chủ hộ', N'Nguyen Thi An', '1988-11-05', '369852147', '0369852472', 'lethid@example.com', N'Việt Nam', '0369852472', '2023-04-01', NULL, NULL, '40P5', 0, N'Chó');
+INSERT INTO NguoiDcUyQuyenChuHo VALUES('CD-008', 'W3505', N'Người được ủy quyền của chủ hộ', N'Tran Van Binh', '1982-07-25', '159263478', '0987654322', 'huynhvane@example.com', N'Việt Nam', '0987654322', '2023-05-01', NULL, 'CD-018', '62G4', 0, N'Mèo');
+INSERT INTO NguoiDcUyQuyenChuHo VALUES('CD-010', 'W3506', N'Người được ủy quyền của chủ hộ', N'Le Thi Mai', '1970-12-30', '753159246', '0123456780', 'dangthif@example.com', N'Việt Nam', '0123456780', '2023-06-01', '2023-06-01', 'CD-019', '81L8', 1500000, NULL);
+INSERT INTO NguoiDcUyQuyenChuHo VALUES('CD-011', 'W3507', N'Người được ủy quyền của chủ hộ', N'Le Van Minh', '1970-12-30', '753151246', '1123456780', 'danga@example.com', N'Việt Nam', '0222456780', '2023-06-01', '2023-06-01', 'CD-020', '93M2', 1500000, NULL);
+select * from NguoiDcUyQuyenChuHo
+
+
+INSERT INTO KhachNganNgay VALUES ('CD-017', 'W3501', N'Khách ngắn ngày', N'Nguyen Van A', '1990-01-15', '123456', '0901234567', 'nguoimau@email.com', N'Việt Nam', '12345678', '2024-04-28', NULL, NULL, '93M2', 20000, N'Chó');
+INSERT INTO KhachNganNgay VALUES ('CD-018', 'W3502', N'Khách vãng lai', N'Nguyen Van C', '1985-05-20', '987654', '0909876543', 'ky.su@email.com', N'Việt Nam', '87654321', '2024-04-29', NULL, NULL, '92H3', 3684000, N'Chó');
+INSERT INTO KhachNganNgay VALUES ('CD-021', 'W3510', N'Khách ngắn ngày', N'Nguyen Van B', '1988-10-10', '333333', '0987654321', 'ke.toan@email.com', N'Việt Nam', '33333333', '2024-04-30', NULL, NULL, '88N1', 100000, N'Chó');
+INSERT INTO KhachNganNgay VALUES ('CD-012', 'WPHA', N'Nhân viên của chủ hộ', N'Nguyen Van D', '1983-12-25', '555555', '0902234567', 'dev@email.com', N'Việt Nam', '55555555', '2024-05-01', NULL, NULL, '81L8', 0, N'Mèo');
+INSERT INTO KhachNganNgay VALUES ('CD-013', 'WPHB', N'Khách vãng lai', N'Nguyen Van E', '1995-08-12', '111111', '0912345678', 'lam.dep@email.com', N'Việt Nam', '11111111', '2024-05-02', NULL, NULL, '76T5', 2000000, N'Chó');
+INSERT INTO KhachNganNgay VALUES ('CD-014', 'WPHC', N'Khách ngắn ngày', N'Nguyen Van A', '2000-03-05', '222222', '0967654321', 'hoc.sinh@email.com', N'Việt Nam', '22222222', '2024-05-03', NULL, NULL, '40P5', 0, N'Chó');
+INSERT INTO KhachNganNgay VALUES ('CD-015', 'WPHD', N'Nhân viên của chủ hộ', N'Nguyen Van F', '1999-07-20', '999999', '0909999999', 'du.hoc.sinh@email.com', N'Việt Nam', '99999999', '2024-05-04', NULL, NULL, '75K3', 1500000, N'Chó');
+select * from KhachNganNgay 
+
 
 insert into LichSuGiaoDich values('WPHA', 'CD-001', 'CD-021', 'CD-012', '1-1-2023', '1-1-2024', 100000000)
 insert into LichSuGiaoDich values('WPHB', 'CD-002', 'CD-014', 'CD-013', '1-1-2023', '1-1-2024', 400000000)
@@ -568,36 +854,6 @@ insert into LichSuGiaoDichKhuThuongMai values('KTM3', 'K01', '1-1-2023', '1-1-20
 insert into LichSuGiaoDichKhuThuongMai values('KTM4', 'K02', '1-1-2023', '1-1-2024', 600000000)
 insert into LichSuGiaoDichKhuThuongMai values('KTM5', 'K02', '1-1-2023', '1-1-2024', 200000000)
 select * from LichSuGiaoDichKhuThuongMai
-
-
-INSERT INTO ChuHo VALUES('CD-001', 'WPHA', N'Chủ hộ', N'Nguyen Dan', '1980-05-10', '123426739', '0123456489', 'test@example.com', N'Việt Nam', '1234367890', '2023-01-01', '2023-01-01', NULL, 50.5, '51J9', 'CD-016', NULL, 20000000, N'Mèo');
-INSERT INTO ChuHo VALUES('CD-002', 'WPHB', N'Chủ hộ', N'Hoang Thi Thanh', '1980-05-10', '223456739', '0123156789', 'xoadi@example.com', N'Việt Nam', '2234567890', '2023-01-01', '2023-01-01', NULL, 50.5, '57G2', 'CD-016', NULL, 20000000, N'Mèo');
-INSERT INTO ChuHo VALUES('CD-003', 'WPHC', N'Chủ hộ', N'Nguyen An', '1980-05-10', '123436789', '0123456719', 'annguyen@example.com', N'Việt Nam', '3234567890', '2023-01-01', '2023-01-01', NULL, 50.5, '62G4', 'CD-016', NULL, 20000000, N'Mèo');
-INSERT INTO ChuHo VALUES('CD-004', 'WPHD', N'Chủ hộ', N'Thi Thao', '1980-05-10', '123256789', '0123456589', 'nguyenthanh@example.com', N'Việt Nam', '4234567890', '2023-01-01', '2023-01-01', NULL, 50.5, '72L3', 'CD-016', NULL, 20000000, N'Mèo');
-INSERT INTO ChuHo VALUES('CD-005', 'W3501', N'Chủ hộ', N'Hoang Thi Thu', '1980-05-10', '124456789', '0123455789', 'nguyenvana@example.com', N'Việt Nam', '5234567890', '2023-01-01', '2023-01-01', NULL, 50.5, '93M2', 'CD-016', NULL, 20000000, N'Mèo');
-INSERT INTO ChuHo VALUES('CD-006', 'W3502', N'Chủ hộ', N'Vu Duc Trung', '1975-08-20', '987654321', '0987654321', 'phamthib@example.com', N'Việt Nam', '0987654321', '2023-02-01', '2023-02-01', NULL, 45.3, '81L8', 'CD-016', NULL, 0, N'Cún con');
-INSERT INTO ChuHo VALUES('CD-009', 'W3510', N'Chủ hộ', N'Le Van Huy', '1990-03-15', '246810235', '1369852471', 'tranan@example.com', N'Việt Nam', '0369252471', '2023-03-01', '2023-03-01', NULL, 60.2, NULL, 'CD-015', 'CD-017', 150000, N'Cún con');
-select * from ChuHo
-
-
-
--- Do not delete
-INSERT INTO NguoiDcUyQuyenChuHo VALUES('CD-007', 'W3504', N'Người được ủy quyền của chủ hộ', N'Nguyen Thi An', '1988-11-05', '369852147', '0369852472', 'lethid@example.com', N'Việt Nam', '0369852472', '2023-04-01', NULL, NULL, '40P5', 0, N'Chó');
-INSERT INTO NguoiDcUyQuyenChuHo VALUES('CD-008', 'W3505', N'Người được ủy quyền của chủ hộ', N'Tran Van Binh', '1982-07-25', '159263478', '0987654322', 'huynhvane@example.com', N'Việt Nam', '0987654322', '2023-05-01', NULL, 'CD-018', '62G4', 0, N'Mèo');
-INSERT INTO NguoiDcUyQuyenChuHo VALUES('CD-010', 'W3506', N'Người được ủy quyền của chủ hộ', N'Le Thi Mai', '1970-12-30', '753159246', '0123456780', 'dangthif@example.com', N'Việt Nam', '0123456780', '2023-06-01', '2023-06-01', 'CD-019', '81L8', 1500000, NULL);
-INSERT INTO NguoiDcUyQuyenChuHo VALUES('CD-011', 'W3507', N'Người được ủy quyền của chủ hộ', N'Le Van Minh', '1970-12-30', '753151246', '1123456780', 'danga@example.com', N'Việt Nam', '0222456780', '2023-06-01', '2023-06-01', 'CD-020', '93M2', 1500000, NULL);
-select * from NguoiDcUyQuyenChuHo
-
-
-INSERT INTO KhachNganNgay VALUES ('CD-017', 'W3501', N'Khách ngắn ngày', N'Nguyen Van A', '1990-01-15', '123456', '0901234567', 'nguoimau@email.com', N'Việt Nam', '12345678', '2024-04-28', NULL, NULL, '93M2', 20000, N'Chó');
-INSERT INTO KhachNganNgay VALUES ('CD-018', 'W3502', N'Khách vãng lai', N'Nguyen Van C', '1985-05-20', '987654', '0909876543', 'ky.su@email.com', N'Việt Nam', '87654321', '2024-04-29', NULL, NULL, '92H3', 3684000, N'Chó');
-INSERT INTO KhachNganNgay VALUES ('CD-021', 'W3510', N'Khách ngắn ngày', N'Nguyen Van B', '1988-10-10', '333333', '0987654321', 'ke.toan@email.com', N'Việt Nam', '33333333', '2024-04-30', NULL, NULL, '88N1', 100000, N'Chó');
-INSERT INTO KhachNganNgay VALUES ('CD-012', 'WPHA', N'Nhân viên của chủ hộ', N'Nguyen Van D', '1983-12-25', '555555', '0902234567', 'dev@email.com', N'Việt Nam', '55555555', '2024-05-01', NULL, NULL, '81L8', 0, N'Mèo');
-INSERT INTO KhachNganNgay VALUES ('CD-013', 'WPHB', N'Khách vãng lai', N'Nguyen Van E', '1995-08-12', '111111', '0912345678', 'lam.dep@email.com', N'Việt Nam', '11111111', '2024-05-02', NULL, NULL, '76T5', 2000000, N'Chó');
-INSERT INTO KhachNganNgay VALUES ('CD-014', 'WPHC', N'Khách ngắn ngày', N'Nguyen Van A', '2000-03-05', '222222', '0967654321', 'hoc.sinh@email.com', N'Việt Nam', '22222222', '2024-05-03', NULL, NULL, '40P5', 0, N'Chó');
-INSERT INTO KhachNganNgay VALUES ('CD-015', 'WPHD', N'Nhân viên của chủ hộ', N'Nguyen Van F', '1999-07-20', '999999', '0909999999', 'du.hoc.sinh@email.com', N'Việt Nam', '99999999', '2024-05-04', NULL, NULL, '75K3', 1500000, N'Chó');
-select * from KhachNganNgay 
-
 
 -- Insert mẫu công việc
 INSERT INTO CongViec VALUES('CV1', N'Quét nhà', '2024-04-08 9:12:00','2024-04-04 12:30:00',null, '2024-04-08 9:12:00',N'Chưa bắt đầu',null,2,100000)
@@ -2431,4 +2687,50 @@ BEGIN
 	INSERT INTO QuanLy
 	VALUES (@maNhanVien, @maBoPhan)
 END
+GO
+-- Procedure Thêm cư dân
+CREATE PROCEDURE [dbo].[AddCuDan]
+  @maCuDan VARCHAR(10),
+  @hoTen NVARCHAR(100),
+  @ngaySinh DATE,
+  @maDinhDanh VARCHAR(20),
+  @SDT VARCHAR(20),
+  @email VARCHAR(100),
+  @soTheTamTru VARCHAR(20),
+  @ngayChuyenVao DATE,
+  @ngayChuyenDi DATE,
+  @soDienNuocHangThang FLOAT,
+  @tinhTrangCongNo FLOAT,
+  @duLieuDangKyThuNuoi NVARCHAR(100),
+  @quocTich NVARCHAR(50),
+  @maCuDanNguoiThan VARCHAR(10)
+AS
+BEGIN
+  SET NOCOUNT ON;
+  IF NOT EXISTS (SELECT 1 FROM CuDan WHERE maCuDan = @maCuDan)
+  BEGIN
+    INSERT INTO CuDan (
+      maCuDan, hoTen, ngaySinh, maDinhDanh, SDT, email, soTheTamTru, ngayChuyenVao,
+      ngayChuyenDi, soDienNuocHangThang, tinhTrangCongNo, duLieuDangKyThuNuoi,
+      quocTich, maCuDanNguoiThan
+    )
+    VALUES (
+      @maCuDan, @hoTen, @ngaySinh, @maDinhDanh, @SDT, @email,
+      @soTheTamTru, @ngayChuyenVao, @ngayChuyenDi, @soDienNuocHangThang,
+      @tinhTrangCongNo, @duLieuDangKyThuNuoi, @quocTich, @maCuDanNguoiThan
+    );
+  END
+END
+
+GO
+
+-- Procedure Xóa Cư dân
+CREATE PROCEDURE [dbo].[DeleteCuDan]
+	  @maCuDan VARCHAR(10)
+AS
+BEGIN
+	DELETE From CuDan
+	WHERE maCuDan = @maCuDan
+END
+
 GO

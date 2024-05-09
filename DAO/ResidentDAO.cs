@@ -43,5 +43,16 @@ namespace DAO
             string query = $"DECLARE @exists BIT; EXEC [dbo].[KiemTraTrungMaCuDan] @maCuDan = '{maCuDan}', @exists = @exists OUTPUT; SELECT @exists AS exists_flag;";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public bool AddCuDan(Dictionary<string, object> parameters)
+        {
+            int result = DataProvider.Instance.ExecuteStoredProcedure("AddCuDan", parameters);
+            return result > 0;
+        }
+
+        public bool DeleteCuDan(string maCuDan)
+        {
+            string query = $"exec DeleteCuDan @maCuDan = '{maCuDan}'";
+            return DataProvider.Instance.ExecuteNonQuery(query) > 0;
+        }
     }
 }

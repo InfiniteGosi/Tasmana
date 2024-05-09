@@ -255,6 +255,7 @@ namespace DangNhap
                     if (result == DialogResult.Yes)
                     {
                         string deleteMessage = ChuHoBLL.Instance.DeleteChuHo(chuHo.MaCuDan, chuHo.BienSoXeDangKy);
+                        ResidentBLL.Instance.DeleteCuDan(chuHo.MaCuDan);
                         MessageBox.Show(deleteMessage);
                         parent.DisplayGGC_chuho();
                         Close();
@@ -267,6 +268,7 @@ namespace DangNhap
                     if (result == DialogResult.Yes)
                     {
                         string deleteMessage = NguoiDcUyQuyenChuHoBLL.Instance.DeleteNguoiUyQuyen(nguoiDcUyQuyen.MaCuDan, nguoiDcUyQuyen.BienSoXeDangKy);
+                        ResidentBLL.Instance.DeleteCuDan(nguoiDcUyQuyen.MaCuDan);
                         MessageBox.Show(deleteMessage);
                         parent.DisplayGGC_uyquyen();
                         Close();
@@ -279,6 +281,7 @@ namespace DangNhap
                     if (result == DialogResult.Yes)
                     {
                         string deleteMessage = KhachNganNgayBLL.Instance.DeleteKhachNganNgay(khachNganNgay.MaCuDan, khachNganNgay.BienSoXeDangKy);
+                        ResidentBLL.Instance.DeleteCuDan(khachNganNgay.MaCuDan);
                         MessageBox.Show(deleteMessage);
                         parent.DisplayGGC_khachnganngay();
                         Close();
@@ -295,6 +298,7 @@ namespace DangNhap
                     if (result == DialogResult.Yes)
                     {
                         string deleteMessage = ChuHoBLL.Instance.DeleteChuHo(chuHo.MaCuDan, chuHo.BienSoXeDangKy);
+                        ResidentBLL.Instance.DeleteCuDan(chuHo.MaCuDan);
                         MessageBox.Show(deleteMessage);
                         parent.DisplayGGC_chuho();
                         Close();
@@ -307,6 +311,7 @@ namespace DangNhap
                     if (result == DialogResult.Yes)
                     {
                         string deleteMessage = NguoiDcUyQuyenChuHoBLL.Instance.DeleteNguoiUyQuyen(nguoiDcUyQuyen.MaCuDan, nguoiDcUyQuyen.BienSoXeDangKy);
+                        ResidentBLL.Instance.DeleteCuDan(nguoiDcUyQuyen.MaCuDan);
                         MessageBox.Show(deleteMessage);
                         parent.DisplayGGC_uyquyen();
                         Close();
@@ -319,6 +324,7 @@ namespace DangNhap
                     if (result == DialogResult.Yes)
                     {
                         string deleteMessage = KhachNganNgayBLL.Instance.DeleteKhachNganNgay(khachNganNgay.MaCuDan, khachNganNgay.BienSoXeDangKy);
+                        ResidentBLL.Instance.DeleteCuDan(khachNganNgay.MaCuDan);
                         MessageBox.Show(deleteMessage);
                         parent.DisplayGGC_khachnganngay();
                         Close();
@@ -378,6 +384,30 @@ namespace DangNhap
                 { "@maCuDanLuuTruCung", values_ch[16] },
                 { "@tinhTrangCongNo", values_ch[17] },
                 { "@duLieuDangKyThuNuoi", values_ch[18] }
+
+            };
+            return dict;
+        }
+
+        // Tạo Dictionary cho Cư dân
+        private Dictionary<string, object> AddParameter_CuDan_CH()
+        {
+            Dictionary<string, object> dict = new Dictionary<string, object>
+            {
+                { "@maCuDan", values_ch[0] },
+                { "@hoTen", values_ch[3] },
+                { "@ngaySinh", values_ch[4] },
+                { "@maDinhDanh", values_ch[5] },
+                { "@SDT", values_ch[6] },
+                { "@email", values_ch[7] },
+                { "@soTheTamTru", values_ch[9] },
+                { "@ngayChuyenVao", values_ch[11] },
+                { "@ngayChuyenDi", values_ch[12] },
+                { "@soDienNuocHangThang", values_ch[13] },
+                { "@tinhTrangCongNo", values_ch[17] },
+                { "@duLieuDangKyThuNuoi", values_ch[18] },
+                { "@quocTich", values_ch[8] },
+                { "@maCuDanNguoiThan", values_ch[16] },
 
             };
             return dict;
@@ -473,6 +503,7 @@ namespace DangNhap
             else
             {
                 InitializeValues_CH();
+                ResidentBLL.Instance.AddCuDan(AddParameter_CuDan_CH());
                 MessageBox.Show(ChuHoBLL.Instance.AddChuHo(AddParameter_CH()));
                 if (!string.IsNullOrEmpty(TXB_bienso.Text))
                 {
@@ -528,6 +559,30 @@ namespace DangNhap
             };
             return dict;
         }
+
+        private Dictionary<string, object> AddParameter_CuDan_Both()
+        {
+            double temp = 0;
+            Dictionary<string, object> dict = new Dictionary<string, object>
+            {
+                { "@maCuDan", values_both[0] },
+                { "@hoTen", values_both[3] },
+                { "@ngaySinh", values_both[4] },
+                { "@maDinhDanh", values_both[5] },
+                { "@SDT", values_both[6] },
+                { "@email", values_both[7] },
+                { "@soTheTamTru", values_both[9] },
+                { "@ngayChuyenVao", values_both[10] },
+                { "@ngayChuyenDi", values_both[11] },
+                { "@soDienNuocHangThang", temp},
+                { "@tinhTrangCongNo", values_both[14] },
+                { "@duLieuDangKyThuNuoi", values_both[15] },
+                { "@quocTich", values_both[8] },
+                { "@maCuDanNguoiThan", values_both[12] },      
+            };
+            return dict;
+        }
+
         private void ThemUyQuyen()
         {
             int error = 0;
@@ -591,7 +646,9 @@ namespace DangNhap
             else
             {
                 InitializeValues_Both();
+                ResidentBLL.Instance.AddCuDan(AddParameter_CuDan_Both());
                 MessageBox.Show(NguoiDcUyQuyenChuHoBLL.Instance.AddNguoiUyQuyen(AddParameter_Both()));
+                
                 if (!string.IsNullOrEmpty(TXB_bienso.Text))
                 {
                     InitializeValues_PT();
@@ -663,6 +720,7 @@ namespace DangNhap
             else
             {
                 InitializeValues_Both();
+                ResidentBLL.Instance.AddCuDan(AddParameter_CuDan_Both());
                 MessageBox.Show(KhachNganNgayBLL.Instance.AddKhachNganNgay(AddParameter_Both()));
                 if (!string.IsNullOrEmpty(TXB_bienso.Text))
                 {
