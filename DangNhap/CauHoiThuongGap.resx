@@ -230,4 +230,25 @@
         7/jjjj/s+OWOH+l4K7s/85n/AwcgzALB8zWpAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>      Đối với chức năng in ấn có thể xảy ra lỗi do không tìm được máy in hoặc in không được. Nếu gặp những vấn đề trên vui lòng hãy sử dụng chức năng in có trong các phần mềm excel để thay thế chức năng in của phần mềm. Rất xin lỗi quý khách hàng vì sự thiếu sót này. 
+</value>
+  </data>
+  <data name="textBox2.Text" xml:space="preserve">
+    <value>      Lỗi này có thể đến từ việc thời gian hiển thị ở góc màn hình bên dưới trên máy tính bạn bị hiển thị sai dẫn tới việc phần mềm cũng xác định sai giờ. Để khắc phục, bạn có thể chỉnh sửa lại đồng hồ trên máy tính hợp lý để phần mềm cũng có thể xác định chính xác. Nếu sau khi sửa vẫn phát sinh lỗi thì quý khách có thể liên lạc với chúng tôi để trực tiếp xác nhận và chỉnh sửa lỗi.</value>
+  </data>
+  <data name="textBox3.Text" xml:space="preserve">
+    <value>      Chức năng này vẫn đang trong quá trình phát triển nên có thể sẽ không thể nhận dạng được người lạ. Nếu được hãy hạn chế đưa người ngoài sử dụng chức năng này vì có thể nhận đến nhận dạng sai và ảnh hưởng đến bảo mật thông tin của tài khoản.
+</value>
+  </data>
+  <data name="textBox5.Text" xml:space="preserve">
+    <value>      Dữ liệu cư dân có những vấn đề về việc thêm cư dân bình thường. Rất xin lỗi quý khách về vấn đề này, phần mềm chỉ có thể thêm được các cư dân là cư dân đặc biệt như Chủ hộ / Khách ngắn ngày/ Khách thuê khu thương mại/ Người được ủy quyền chủ hộ.
+
+</value>
+  </data>
+  <data name="textBox6.Text" xml:space="preserve">
+    <value>      Nếu ngoài các lỗi trên, trong khi sử dụng mà phát hiện ra các lỗi khác, quý khách vui lòng liên hệ trực tiếp đến bộ phận hỗ trợ để được hỗ trợ kịp thời và khắc phục trong thời gian ngắn nhất.
+
+</value>
+  </data>
 </root>
