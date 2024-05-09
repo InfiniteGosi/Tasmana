@@ -110,7 +110,7 @@
             this.BTN_thoat.Image = ((System.Drawing.Image)(resources.GetObject("BTN_thoat.Image")));
             this.BTN_thoat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BTN_thoat.ImageSize = new System.Drawing.Size(10, 10);
-            this.BTN_thoat.Location = new System.Drawing.Point(847, 1);
+            this.BTN_thoat.Location = new System.Drawing.Point(850, 1);
             this.BTN_thoat.Name = "BTN_thoat";
             this.BTN_thoat.OnHoverBaseColor1 = System.Drawing.Color.Red;
             this.BTN_thoat.OnHoverBaseColor2 = System.Drawing.Color.Red;
@@ -288,7 +288,6 @@
             this.textBox7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.ForeColor = System.Drawing.Color.White;
             this.textBox7.Location = new System.Drawing.Point(28, 1084);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 3, 30, 3);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(832, 98);
@@ -359,9 +358,9 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.White;
-            this.panel11.Location = new System.Drawing.Point(68, 83);
+            this.panel11.Location = new System.Drawing.Point(71, 83);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(759, 1);
+            this.panel11.Size = new System.Drawing.Size(790, 1);
             this.panel11.TabIndex = 147;
             // 
             // CauHoiThuongGap
