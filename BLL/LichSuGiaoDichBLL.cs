@@ -22,6 +22,8 @@ namespace BLL
         public LichSuGiaoDich GetLichSuByApartmentId(string maCanHo)
         {
             DataTable dt = LichSuGiaoDichDAO.Instance.GetLichSuByApartmenId(maCanHo);
+            if (dt.Rows.Count == 0) return null;
+
             string maCuDanHienTai = dt.Rows[0]["maCuDanHienTai"] != DBNull.Value
             ? dt.Rows[0]["maCuDanHienTai"].ToString()
             : string.Empty;

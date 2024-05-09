@@ -33,33 +33,22 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.LB_SoCV_CoCapNhat = new System.Windows.Forms.Label();
             this.LB_CapNhat = new System.Windows.Forms.Label();
+            this.gunaCirclePictureBox4 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.LB_SoCV_TreHan = new System.Windows.Forms.Label();
             this.LB_SoCV_DangTienHanh = new System.Windows.Forms.Label();
             this.LB_SoCongViecCBD = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.gunaCirclePictureBox3 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.gunaCirclePictureBox2 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.LB_chuabatdau = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.LB_tendangnhap = new System.Windows.Forms.Label();
-            this.Timer_KTCongViec = new System.Windows.Forms.Timer(this.components);
-            this.NTFIcon_ThongBaoCV = new System.Windows.Forms.NotifyIcon(this.components);
-            this.PN_main = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.PB_question = new System.Windows.Forms.PictureBox();
-            this.PB_language = new System.Windows.Forms.PictureBox();
-            this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
-            this.gunaCirclePictureBox4 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.gunaCirclePictureBox3 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.gunaCirclePictureBox2 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.BTN_nhanvien = new Guna.UI.WinForms.GunaButton();
             this.BTN_congviec = new Guna.UI.WinForms.GunaButton();
             this.BTN_cudan = new Guna.UI.WinForms.GunaButton();
@@ -68,20 +57,31 @@
             this.BTN_logout = new Guna.UI.WinForms.GunaButton();
             this.BTN_thongke = new Guna.UI.WinForms.GunaButton();
             this.P_logotasmana = new Guna.UI.WinForms.GunaPictureBox();
+            this.LB_tendangnhap = new System.Windows.Forms.Label();
+            this.Timer_KTCongViec = new System.Windows.Forms.Timer(this.components);
+            this.NTFIcon_ThongBaoCV = new System.Windows.Forms.NotifyIcon(this.components);
+            this.PN_main = new System.Windows.Forms.Panel();
             this.gunaPictureBox3 = new Guna.UI.WinForms.GunaPictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.PB_question = new System.Windows.Forms.PictureBox();
+            this.PB_language = new System.Windows.Forms.PictureBox();
+            this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_thongtin = new Guna.UI.WinForms.GunaButton();
             this.BTN_square = new Guna.UI.WinForms.GunaGradientButton();
             this.BTN_x = new Guna.UI.WinForms.GunaGradientButton();
             this.panel1.SuspendLayout();
-            this.PN_main.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_question)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_language)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P_logotasmana)).BeginInit();
+            this.PN_main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_question)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_language)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -128,6 +128,14 @@
             this.LB_CapNhat.ForeColor = System.Drawing.Color.White;
             this.LB_CapNhat.Name = "LB_CapNhat";
             // 
+            // gunaCirclePictureBox4
+            // 
+            this.gunaCirclePictureBox4.BaseColor = System.Drawing.Color.Orange;
+            resources.ApplyResources(this.gunaCirclePictureBox4, "gunaCirclePictureBox4");
+            this.gunaCirclePictureBox4.Name = "gunaCirclePictureBox4";
+            this.gunaCirclePictureBox4.TabStop = false;
+            this.gunaCirclePictureBox4.UseTransfarantBackground = false;
+            // 
             // LB_SoCV_TreHan
             // 
             resources.ApplyResources(this.LB_SoCV_TreHan, "LB_SoCV_TreHan");
@@ -164,6 +172,30 @@
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel9.Name = "panel9";
             // 
+            // gunaCirclePictureBox3
+            // 
+            this.gunaCirclePictureBox3.BaseColor = System.Drawing.Color.Lime;
+            resources.ApplyResources(this.gunaCirclePictureBox3, "gunaCirclePictureBox3");
+            this.gunaCirclePictureBox3.Name = "gunaCirclePictureBox3";
+            this.gunaCirclePictureBox3.TabStop = false;
+            this.gunaCirclePictureBox3.UseTransfarantBackground = false;
+            // 
+            // gunaCirclePictureBox2
+            // 
+            this.gunaCirclePictureBox2.BaseColor = System.Drawing.Color.Red;
+            resources.ApplyResources(this.gunaCirclePictureBox2, "gunaCirclePictureBox2");
+            this.gunaCirclePictureBox2.Name = "gunaCirclePictureBox2";
+            this.gunaCirclePictureBox2.TabStop = false;
+            this.gunaCirclePictureBox2.UseTransfarantBackground = false;
+            // 
+            // gunaCirclePictureBox1
+            // 
+            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.Silver;
+            resources.ApplyResources(this.gunaCirclePictureBox1, "gunaCirclePictureBox1");
+            this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
+            this.gunaCirclePictureBox1.TabStop = false;
+            this.gunaCirclePictureBox1.UseTransfarantBackground = false;
+            // 
             // label3
             // 
             resources.ApplyResources(this.label3, "label3");
@@ -199,128 +231,6 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
-            // 
-            // LB_tendangnhap
-            // 
-            resources.ApplyResources(this.LB_tendangnhap, "LB_tendangnhap");
-            this.LB_tendangnhap.BackColor = System.Drawing.Color.Transparent;
-            this.LB_tendangnhap.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.LB_tendangnhap.Name = "LB_tendangnhap";
-            // 
-            // Timer_KTCongViec
-            // 
-            this.Timer_KTCongViec.Enabled = true;
-            this.Timer_KTCongViec.Interval = 1000;
-            this.Timer_KTCongViec.Tick += new System.EventHandler(this.Timer_KTCongViec_Tick);
-            // 
-            // NTFIcon_ThongBaoCV
-            // 
-            this.NTFIcon_ThongBaoCV.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            resources.ApplyResources(this.NTFIcon_ThongBaoCV, "NTFIcon_ThongBaoCV");
-            // 
-            // PN_main
-            // 
-            resources.ApplyResources(this.PN_main, "PN_main");
-            this.PN_main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
-            this.PN_main.Controls.Add(this.gunaPictureBox3);
-            this.PN_main.Controls.Add(this.label1);
-            this.PN_main.Name = "PN_main";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Name = "label1";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.panel6, "panel6");
-            this.panel6.Name = "panel6";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.panel7, "panel7");
-            this.panel7.Name = "panel7";
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.panel8, "panel8");
-            this.panel8.Name = "panel8";
-            // 
-            // PB_question
-            // 
-            resources.ApplyResources(this.PB_question, "PB_question");
-            this.PB_question.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PB_question.Name = "PB_question";
-            this.PB_question.TabStop = false;
-            this.PB_question.Click += new System.EventHandler(this.PB_question_Click);
-            // 
-            // PB_language
-            // 
-            resources.ApplyResources(this.PB_language, "PB_language");
-            this.PB_language.Name = "PB_language";
-            this.PB_language.TabStop = false;
-            this.PB_language.Click += new System.EventHandler(this.PB_language_Click);
-            // 
-            // gunaGradientButton1
-            // 
-            resources.ApplyResources(this.gunaGradientButton1, "gunaGradientButton1");
-            this.gunaGradientButton1.AnimationHoverSpeed = 1F;
-            this.gunaGradientButton1.AnimationSpeed = 1F;
-            this.gunaGradientButton1.BaseColor1 = System.Drawing.Color.Transparent;
-            this.gunaGradientButton1.BaseColor2 = System.Drawing.Color.Transparent;
-            this.gunaGradientButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton1.ForeColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton1.Image")));
-            this.gunaGradientButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaGradientButton1.ImageSize = new System.Drawing.Size(25, 20);
-            this.gunaGradientButton1.Name = "gunaGradientButton1";
-            this.gunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.Silver;
-            this.gunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.Silver;
-            this.gunaGradientButton1.OnHoverBorderColor = System.Drawing.Color.White;
-            this.gunaGradientButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton1.OnHoverImage = null;
-            this.gunaGradientButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaGradientButton1.Click += new System.EventHandler(this.gunaGradientButton1_Click);
-            // 
-            // gunaCirclePictureBox4
-            // 
-            this.gunaCirclePictureBox4.BaseColor = System.Drawing.Color.Orange;
-            resources.ApplyResources(this.gunaCirclePictureBox4, "gunaCirclePictureBox4");
-            this.gunaCirclePictureBox4.Name = "gunaCirclePictureBox4";
-            this.gunaCirclePictureBox4.TabStop = false;
-            this.gunaCirclePictureBox4.UseTransfarantBackground = false;
-            // 
-            // gunaCirclePictureBox3
-            // 
-            this.gunaCirclePictureBox3.BaseColor = System.Drawing.Color.Lime;
-            resources.ApplyResources(this.gunaCirclePictureBox3, "gunaCirclePictureBox3");
-            this.gunaCirclePictureBox3.Name = "gunaCirclePictureBox3";
-            this.gunaCirclePictureBox3.TabStop = false;
-            this.gunaCirclePictureBox3.UseTransfarantBackground = false;
-            // 
-            // gunaCirclePictureBox2
-            // 
-            this.gunaCirclePictureBox2.BaseColor = System.Drawing.Color.Red;
-            resources.ApplyResources(this.gunaCirclePictureBox2, "gunaCirclePictureBox2");
-            this.gunaCirclePictureBox2.Name = "gunaCirclePictureBox2";
-            this.gunaCirclePictureBox2.TabStop = false;
-            this.gunaCirclePictureBox2.UseTransfarantBackground = false;
-            // 
-            // gunaCirclePictureBox1
-            // 
-            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.Silver;
-            resources.ApplyResources(this.gunaCirclePictureBox1, "gunaCirclePictureBox1");
-            this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
-            this.gunaCirclePictureBox1.TabStop = false;
-            this.gunaCirclePictureBox1.UseTransfarantBackground = false;
             // 
             // BTN_nhanvien
             // 
@@ -498,6 +408,32 @@
             this.P_logotasmana.Name = "P_logotasmana";
             this.P_logotasmana.TabStop = false;
             // 
+            // LB_tendangnhap
+            // 
+            resources.ApplyResources(this.LB_tendangnhap, "LB_tendangnhap");
+            this.LB_tendangnhap.BackColor = System.Drawing.Color.Transparent;
+            this.LB_tendangnhap.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LB_tendangnhap.Name = "LB_tendangnhap";
+            // 
+            // Timer_KTCongViec
+            // 
+            this.Timer_KTCongViec.Enabled = true;
+            this.Timer_KTCongViec.Interval = 1000;
+            this.Timer_KTCongViec.Tick += new System.EventHandler(this.Timer_KTCongViec_Tick);
+            // 
+            // NTFIcon_ThongBaoCV
+            // 
+            this.NTFIcon_ThongBaoCV.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            resources.ApplyResources(this.NTFIcon_ThongBaoCV, "NTFIcon_ThongBaoCV");
+            // 
+            // PN_main
+            // 
+            resources.ApplyResources(this.PN_main, "PN_main");
+            this.PN_main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(31)))), ((int)(((byte)(33)))));
+            this.PN_main.Controls.Add(this.gunaPictureBox3);
+            this.PN_main.Controls.Add(this.label1);
+            this.PN_main.Name = "PN_main";
+            // 
             // gunaPictureBox3
             // 
             resources.ApplyResources(this.gunaPictureBox3, "gunaPictureBox3");
@@ -505,6 +441,70 @@
             this.gunaPictureBox3.BaseColor = System.Drawing.Color.Transparent;
             this.gunaPictureBox3.Name = "gunaPictureBox3";
             this.gunaPictureBox3.TabStop = false;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Name = "label1";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel6, "panel6");
+            this.panel6.Name = "panel6";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel7, "panel7");
+            this.panel7.Name = "panel7";
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel8, "panel8");
+            this.panel8.Name = "panel8";
+            // 
+            // PB_question
+            // 
+            resources.ApplyResources(this.PB_question, "PB_question");
+            this.PB_question.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PB_question.Name = "PB_question";
+            this.PB_question.TabStop = false;
+            this.PB_question.Click += new System.EventHandler(this.PB_question_Click);
+            // 
+            // PB_language
+            // 
+            resources.ApplyResources(this.PB_language, "PB_language");
+            this.PB_language.Name = "PB_language";
+            this.PB_language.TabStop = false;
+            this.PB_language.Click += new System.EventHandler(this.PB_language_Click);
+            // 
+            // gunaGradientButton1
+            // 
+            resources.ApplyResources(this.gunaGradientButton1, "gunaGradientButton1");
+            this.gunaGradientButton1.AnimationHoverSpeed = 1F;
+            this.gunaGradientButton1.AnimationSpeed = 1F;
+            this.gunaGradientButton1.BaseColor1 = System.Drawing.Color.Transparent;
+            this.gunaGradientButton1.BaseColor2 = System.Drawing.Color.Transparent;
+            this.gunaGradientButton1.BorderColor = System.Drawing.Color.Black;
+            this.gunaGradientButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaGradientButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaGradientButton1.ForeColor = System.Drawing.Color.Black;
+            this.gunaGradientButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton1.Image")));
+            this.gunaGradientButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaGradientButton1.ImageSize = new System.Drawing.Size(25, 20);
+            this.gunaGradientButton1.Name = "gunaGradientButton1";
+            this.gunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.Silver;
+            this.gunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.Silver;
+            this.gunaGradientButton1.OnHoverBorderColor = System.Drawing.Color.White;
+            this.gunaGradientButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaGradientButton1.OnHoverImage = null;
+            this.gunaGradientButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaGradientButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaGradientButton1.Click += new System.EventHandler(this.gunaGradientButton1_Click);
             // 
             // BTN_thongtin
             // 
@@ -602,16 +602,16 @@
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TrangHienThi_MouseUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.PN_main.ResumeLayout(false);
-            this.PN_main.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_question)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_language)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P_logotasmana)).EndInit();
+            this.PN_main.ResumeLayout(false);
+            this.PN_main.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_question)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_language)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
