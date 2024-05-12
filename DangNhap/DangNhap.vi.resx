@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BT_DangNhap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>644, 528</value>
+  </data>
   <data name="BTN_close.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -229,6 +232,16 @@
         ADZUJn97x293/G/Hu/xZx/c/f8vL+oLv6Pj5jj/tmP6BoOntgq90/FbHFzs++/ylAMAgyufpvwv4uY7f
         7/jjjj/s+OWOH+l4K7s/85n/AwcgzALB8zWpAAAAAElFTkSuQmCC
 </value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BTN_facelogin.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="BTN_facelogin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>644, 590</value>
+  </data>
+  <data name="BTN_facelogin.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="BTN_show.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -116,7 +116,7 @@ namespace DangNhap
             if (khuThuongMai.SoDoMatBang != null)
                 PB_hinhcanho.Image = khuThuongMai.SoDoMatBang;
             else
-                PB_hinhcanho.Image = Properties.Resources.DefaulCanHoImage;
+                PB_hinhcanho.Image = Tasmana.Properties.Resources.DefaulCanHoImage;
         }
 
         private void OpenChildForm(Form childForm)
