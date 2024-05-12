@@ -118,8 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>963, 1</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>964, 669</value>
   </data>
   <data name="&gt;&gt;panel3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -127,8 +127,8 @@
   <data name="&gt;&gt;gunaPictureBox3.Type" xml:space="preserve">
     <value>Guna.UI.WinForms.GunaPictureBox, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="&gt;&gt;BTN_hide.Name" xml:space="preserve">
+    <value>BTN_hide</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panel6.TabIndex" type="System.Int32, mscorlib">
@@ -168,8 +168,8 @@
   <data name="BTN_show.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="TB_MatKhau.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
-    <value>*</value>
+  <data name="LB_dangnhap.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;panel3.Name" xml:space="preserve">
     <value>panel3</value>
@@ -192,17 +192,14 @@
   <data name="LB_id.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 22</value>
   </data>
-  <data name="BTN_hide.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 7.8pt</value>
-  </data>
   <data name="&gt;&gt;BTN_close.Type" xml:space="preserve">
     <value>Guna.UI.WinForms.GunaButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
   <data name="&gt;&gt;LB_quenpw.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="BTN_close.Location" type="System.Drawing.Point, System.Drawing">
-    <value>908, 2</value>
+  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>963, 1</value>
   </data>
   <data name="gunaPictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1789,8 +1786,8 @@
   <data name="CBBB_manguoidung.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
   </data>
-  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;CHB_luuid.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1879,11 +1876,8 @@
   <data name="&gt;&gt;BTN_show.Name" xml:space="preserve">
     <value>BTN_show</value>
   </data>
-  <data name="&gt;&gt;BTN_hide.Name" xml:space="preserve">
-    <value>BTN_hide</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>964, 669</value>
+  <data name="&gt;&gt;gunaPictureBox3.ZOrder" xml:space="preserve">
+    <value>21</value>
   </data>
   <data name="LB_quenpw.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2084,9 +2078,6 @@
   <data name="&gt;&gt;BTN_facelogin.Name" xml:space="preserve">
     <value>BTN_facelogin</value>
   </data>
-  <data name="LB_dangnhap.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="BT_DangNhap.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 56</value>
   </data>
@@ -2102,14 +2093,11 @@
   <data name="TB_MatKhau.Size" type="System.Drawing.Size, System.Drawing">
     <value>420, 26</value>
   </data>
-  <data name="&gt;&gt;gunaPictureBox3.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
   <data name="&gt;&gt;LB_tasmana.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
+  <data name="BTN_hide.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 7.8pt</value>
   </data>
   <data name="BTN_show.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2198,8 +2186,8 @@
   <data name="CHB_luuid.Size" type="System.Drawing.Size, System.Drawing">
     <value>163, 23</value>
   </data>
-  <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;LB_dangnhap.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="LB_welcometo.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 24pt</value>
@@ -2215,6 +2203,9 @@
   </data>
   <data name="&gt;&gt;BT_DangNhap.Name" xml:space="preserve">
     <value>BT_DangNhap</value>
+  </data>
+  <data name="TB_MatKhau.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>*</value>
   </data>
   <data name="LB_dangnhap.Size" type="System.Drawing.Size, System.Drawing">
     <value>183, 32</value>
@@ -6403,6 +6394,9 @@
   </data>
   <data name="LB_pw.Text" xml:space="preserve">
     <value>Mật khẩu</value>
+  </data>
+  <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="LB_id.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -22981,7 +22975,7 @@
   <data name="CBBB_manguoidung.Size" type="System.Drawing.Size, System.Drawing">
     <value>452, 30</value>
   </data>
-  <data name="&gt;&gt;LB_dangnhap.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="LB_dangnhap.Text" xml:space="preserve">
@@ -23001,6 +22995,9 @@
   </data>
   <data name="&gt;&gt;LB_tasmana.Name" xml:space="preserve">
     <value>LB_tasmana</value>
+  </data>
+  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="LB_tasmana.Location" type="System.Drawing.Point, System.Drawing">
     <value>77, 276</value>
@@ -23067,6 +23064,9 @@
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>1, 669</value>
+  </data>
+  <data name="BTN_close.Location" type="System.Drawing.Point, System.Drawing">
+    <value>908, 2</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

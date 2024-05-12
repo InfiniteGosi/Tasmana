@@ -109,6 +109,9 @@ namespace DangNhap
         private object[] values_ch;
         private void InitializeValues_CH()
         {
+            string chuhoParts = TXB_chuho.Text.Split('_')[0];
+            string chuhoValue = !string.IsNullOrEmpty(TXB_chuho.Text) ? chuhoParts : null;
+
             values_ch = new object[]
             {
                 TXB_macanho.Text,
@@ -122,7 +125,7 @@ namespace DangNhap
                 (int)NUD_thangmay.Value,
                 CBB_tinhtrang.SelectedItem.ToString(),
                 (int)NUD_thanhtoan.Value,
-                TXB_chuho.Text.Split('_')[0]
+                chuhoValue
             };
         }
         private Dictionary<string, object> AddParemeter_CH()
@@ -222,7 +225,7 @@ namespace DangNhap
                 if (canHoHienTai.SoDoMatBang != null)
                     PB_hinhcanho.Image = canHoHienTai.SoDoMatBang;
                 else
-                    PB_hinhcanho.Image = Properties.Resources.DefaulCanHoImage;
+                    PB_hinhcanho.Image = Tasmana.Properties.Resources.DefaulCanHoImage;
             }
         }
 

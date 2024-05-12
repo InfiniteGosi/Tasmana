@@ -30,6 +30,8 @@ namespace DangNhap
         }
         private void DisplayLichSu()
         {
+            if (canHoHienTai.LichSuGiaoDich == null)
+                return;
             TXB_congno.Text = canHoHienTai.LichSuGiaoDich.TinhTrangCongNo.ToString();
             TXB_dv.Text = canHoHienTai.LichSuGiaoDich.LichSuNopPhiDichVu.ToString();
             TXB_doxe.Text = canHoHienTai.LichSuGiaoDich.LichSuDangKyDoXe.ToString();

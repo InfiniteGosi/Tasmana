@@ -21,7 +21,8 @@ namespace DAO
         }
         private DataProvider() { }
 
-        private readonly string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=Tasmana;Integrated Security=True;TrustServerCertificate=True";
+        // private readonly string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=Tasmana;Integrated Security=True;TrustServerCertificate=True";
+        private readonly string connectionSTR = System.Configuration.ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
 
         // Dùng để chạy câu query bình thường hoặc stored procedure
         public DataTable ExecuteQuery(string query, object[] parameter = null)
