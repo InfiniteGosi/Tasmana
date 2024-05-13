@@ -60,7 +60,7 @@
     <ApplicationIcon>Tasmana.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
@@ -913,7 +913,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Tasmana_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -973,22 +972,22 @@
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.NetCore.CoreRuntime.8.0.x64">
       <Visible>False</Visible>
-      <ProductName>.NET Runtime 8.0.1 %28x64%29</ProductName>
+      <ProductName>.NET Runtime 8.0.3 %28x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.NetCore.CoreRuntime.8.0.x86">
       <Visible>False</Visible>
-      <ProductName>.NET Runtime 8.0.1 %28x86%29</ProductName>
+      <ProductName>.NET Runtime 8.0.3 %28x86%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.NetCore.DesktopRuntime.8.0.x64">
       <Visible>False</Visible>
-      <ProductName>.NET Desktop Runtime 8.0.1 %28x64%29</ProductName>
+      <ProductName>.NET Desktop Runtime 8.0.3 %28x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.NetCore.DesktopRuntime.8.0.x86">
       <Visible>False</Visible>
-      <ProductName>.NET Desktop Runtime 8.0.1 %28x86%29</ProductName>
+      <ProductName>.NET Desktop Runtime 8.0.3 %28x86%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.SqlServer.SqlLocalDB.15.0">

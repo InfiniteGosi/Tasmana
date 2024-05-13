@@ -426,5 +426,33 @@ namespace DangNhap
             CauHoiThuongGap chtg = new CauHoiThuongGap();
             chtg.ShowDialog();
         }
+
+        private void P_logotasmana_Click(object sender, EventArgs e)
+        {
+            if(currentFormChild != null)
+            {
+                currentFormChild.Close();
+            }
+            BTN_canho.BackColor = Color.Transparent;
+            BTN_thongbao.BackColor = Color.Transparent;
+            BTN_thongke.BackColor = Color.Transparent;
+            BTN_nhanvien.BackColor = Color.Transparent;
+            BTN_cudan.BackColor = Color.Transparent;
+            BTN_congviec.BackColor = Color.Transparent;
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            if (currentFormChild != null)
+            {
+                currentFormChild.Close();
+            }
+            BTN_canho.BackColor = Color.Transparent;
+            BTN_thongbao.BackColor = Color.Transparent;
+            BTN_thongke.BackColor = Color.Transparent;
+            BTN_nhanvien.BackColor = Color.Transparent;
+            BTN_cudan.BackColor = Color.Transparent;
+            BTN_congviec.BackColor = Color.Transparent;
+        }
     }
 }
