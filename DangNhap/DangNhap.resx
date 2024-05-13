@@ -158,9 +158,6 @@
   <data name="LB_welcometo.Text" xml:space="preserve">
     <value>Welcome to</value>
   </data>
-  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="&gt;&gt;LB_tasmana.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -194,6 +191,9 @@
   </data>
   <data name="&gt;&gt;BTN_close.Type" xml:space="preserve">
     <value>Guna.UI.WinForms.GunaButton, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="LB_tasmana.Size" type="System.Drawing.Size, System.Drawing">
+    <value>327, 68</value>
   </data>
   <data name="&gt;&gt;LB_quenpw.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1735,6 +1735,9 @@
   <data name="LB_tasmana.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 36pt, style=Bold</value>
   </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
   <data name="&gt;&gt;LB_pw.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -1786,8 +1789,8 @@
   <data name="CBBB_manguoidung.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
   </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
+  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;CHB_luuid.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1869,9 +1872,6 @@
   </data>
   <data name="&gt;&gt;LB_id.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LB_Wrong.Text" xml:space="preserve">
-    <value>label1</value>
   </data>
   <data name="&gt;&gt;BTN_show.Name" xml:space="preserve">
     <value>BTN_show</value>
@@ -2150,8 +2150,8 @@
   <data name="&gt;&gt;BTN_hide.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="LB_tasmana.Size" type="System.Drawing.Size, System.Drawing">
-    <value>327, 68</value>
+  <data name="LB_Wrong.Text" xml:space="preserve">
+    <value>label1</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 668</value>
@@ -2186,8 +2186,11 @@
   <data name="CHB_luuid.Size" type="System.Drawing.Size, System.Drawing">
     <value>163, 23</value>
   </data>
-  <data name="&gt;&gt;LB_dangnhap.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="LB_welcometo.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 24pt</value>
@@ -6394,9 +6397,6 @@
   </data>
   <data name="LB_pw.Text" xml:space="preserve">
     <value>Mật khẩu</value>
-  </data>
-  <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
-    <value>7</value>
   </data>
   <data name="LB_id.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -22975,7 +22975,7 @@
   <data name="CBBB_manguoidung.Size" type="System.Drawing.Size, System.Drawing">
     <value>452, 30</value>
   </data>
-  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
+  <data name="&gt;&gt;LB_dangnhap.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="LB_dangnhap.Text" xml:space="preserve">
@@ -23044,8 +23044,8 @@
   <data name="LB_quenpw.Location" type="System.Drawing.Point, System.Drawing">
     <value>823, 379</value>
   </data>
-  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
+  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;BTN_facelogin.Parent" xml:space="preserve">
     <value>$this</value>
@@ -23072,6 +23072,6 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>en</value>
+    <value>vi</value>
   </metadata>
 </root>

@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="BT_DangNhap.Location" type="System.Drawing.Point, System.Drawing">
-    <value>649, 520</value>
+    <value>532, 516</value>
   </data>
   <data name="BT_DangNhap.Text" xml:space="preserve">
     <value>Login</value>
@@ -269,15 +269,8 @@
   <data name="CHB_luuid.Text" xml:space="preserve">
     <value>Remember User ID</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="BTN_facelogin.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="BTN_facelogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>649, 601</value>
-  </data>
-  <data name="BTN_facelogin.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+    <value>759, 516</value>
   </data>
   <data name="BTN_show.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

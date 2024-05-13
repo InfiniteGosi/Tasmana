@@ -8989,51 +8989,6 @@
   <data name="PN_main.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="&gt;&gt;gunaPictureBox3.Name" xml:space="preserve">
-    <value>gunaPictureBox3</value>
-  </data>
-  <data name="&gt;&gt;gunaPictureBox3.Type" xml:space="preserve">
-    <value>Guna.UI.WinForms.GunaPictureBox, Guna.UI, Version=1.9.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="&gt;&gt;gunaPictureBox3.Parent" xml:space="preserve">
-    <value>PN_main</value>
-  </data>
-  <data name="&gt;&gt;gunaPictureBox3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>PN_main</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="PN_main.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 63</value>
-  </data>
-  <data name="PN_main.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1189, 622</value>
-  </data>
-  <data name="PN_main.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="&gt;&gt;PN_main.Name" xml:space="preserve">
-    <value>PN_main</value>
-  </data>
-  <data name="&gt;&gt;PN_main.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PN_main.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;PN_main.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
   <data name="gunaPictureBox3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
@@ -10628,6 +10583,27 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="PN_main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 63</value>
+  </data>
+  <data name="PN_main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1189, 622</value>
+  </data>
+  <data name="PN_main.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;PN_main.Name" xml:space="preserve">
+    <value>PN_main</value>
+  </data>
+  <data name="&gt;&gt;PN_main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PN_main.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PN_main.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
   <data name="panel6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
   </data>
@@ -10706,7 +10682,7 @@
   <data name="PB_question.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAEfHSURBVHhe7d0H
+        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAEfHSURBVHhe7d0H
         tCVVtfXx1wnoJjTQQBMVkJwkqigZJCiCgAgmJCcJ8kBR1E9UHkkQMPvMGFBEAREDoGAkSJBoemRQRHKO
         8s1ZtRo63Ns3nnPWrvr/xphjNJcb1q6zdp17z6na+78A5PbCCy9MUBZX1lS2VN6q7KscqRynfEE5QzlX
         uVD5g3Kl8nflVuWBmfKMMjN/bObP89f6e/h7+Xv6e/tnfFfxz/TPdg2uxTW5NtfoWidE+QAAYGZ6opyq

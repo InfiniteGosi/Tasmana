@@ -65,6 +65,8 @@ namespace DangNhap
             try
             {
                 string credential = faceRec.GetCredential();
+                if (string.IsNullOrEmpty(credential))
+                    return;
                 userId = credential.Split('_')[0];
                 pwd = credential.Split('_')[1];
             }

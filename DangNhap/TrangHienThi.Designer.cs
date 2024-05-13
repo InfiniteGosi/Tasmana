@@ -159,6 +159,7 @@
             resources.ApplyResources(this.label4, "label4");
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label4.Name = "label4";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel2
             // 
@@ -407,6 +408,7 @@
             resources.ApplyResources(this.P_logotasmana, "P_logotasmana");
             this.P_logotasmana.Name = "P_logotasmana";
             this.P_logotasmana.TabStop = false;
+            this.P_logotasmana.Click += new System.EventHandler(this.P_logotasmana_Click);
             // 
             // LB_tendangnhap
             // 
