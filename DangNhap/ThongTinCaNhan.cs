@@ -196,8 +196,13 @@ namespace DangNhap
             string output = $"{TXB_manv.Text.Trim()}.{ten.Trim()}.{TXB_sdt.Text.Trim()}";
             TXB_manguoidung.Text = output;
         }
+        // Kiểm tra email hợp lệ
+        private bool CheckValidEmail(string email)
+        {
+            Regex reg = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", RegexOptions.IgnoreCase);
+            return reg.IsMatch(email);
+        }
         // Kiểm tra các trường hợp khi ấn nút lưu
-
         private void BTN_luu_Click(object sender, EventArgs e)
         {
             int error = 0;
@@ -269,6 +274,11 @@ namespace DangNhap
             if (string.IsNullOrEmpty(TXB_matkhau.Text))
             {
                 LB_emk.Visible = true;
+                error++;
+            }
+            if (!CheckValidEmail(TXB_email.Text))
+            {
+                MessageBox.Show("Không đúng định dạng email");
                 error++;
             }
             if (error > 0)
