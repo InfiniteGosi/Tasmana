@@ -10,6 +10,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -141,6 +142,11 @@ namespace DangNhap
             };
             return dict;
         }
+        private bool CheckValidEmail(string email)
+        {
+            Regex reg = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", RegexOptions.IgnoreCase);
+            return reg.IsMatch(email);
+        }
         private void BTN_luu_Click(object sender, EventArgs e)
         {
             int error = 0;
@@ -181,6 +187,11 @@ namespace DangNhap
                     LB_errortinhtrangxe.Visible = true;
                     error++;
                 }
+            }
+            if (!CheckValidEmail(TXB_email.Text))
+            {
+                MessageBox.Show("Không đúng định dạng email");
+                error++;
             }
             if (error > 0)
             {
