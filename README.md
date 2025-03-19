@@ -1,7 +1,9 @@
-# Tóm tắt
-Phần mềm quản lý công việc khách sạn Tasmana cho công ty BCMP Korea trong khuôn khổ môn học Công nghệ phần mềm.
-# Chức năng
-Quản lý nhân viên, quản lý công việc nhân viên, nhóm, phòng ban, quản lý thông tin căn hộ, cư dân.
-Thống kê doanh thu, hiệu quả làm việc của công ty.
+# Summary
+The Tasmana hotel task management software for BCMP Korea as part of the Software Engineering course.
+# Features
+Manage employees, employee tasks, teams, and departments. Manage apartment and resident information.
+Generate statistics on revenue and company performance.
+# Stack
+ADO.NET, SQL Server, Visual Studio
 # Demo
 https://youtu.be/PmkwOFpQXfA
